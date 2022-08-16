@@ -4,6 +4,8 @@ This is the repository for the **WordPress Advanced Administration Handbook**
 
 ## File Structure
 
+Based on [WordPress Advanced Administration Handbook](https://docs.google.com/document/d/1fVIw3DztzyVY18RDPCGk-kDYTO6gzHtx81o7aitGijo/)
+
 ```markdown
 - [README](README.md)
 - [LICENSE](LICENSE)
