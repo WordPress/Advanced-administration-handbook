@@ -1,4 +1,4 @@
-# WordPress Hosting Handbook
+# WordPress Advanced Administration Handbook
 
 This is the repository for the **WordPress Advanced Administration Handbook**
 
