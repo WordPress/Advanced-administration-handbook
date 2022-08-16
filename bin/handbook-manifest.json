@@ -1,0 +1,68 @@
+{
+    "index": {
+        "title": "WordPress Advanced Administration Handbook",
+        "slug": "handbook",
+        "markdown_source": "https:\/\/github.com\/zzap\/WordPress-Advanced-administration-handbook\/blob\/master\/index.md",
+        "parent": null
+    },
+    "before-install": {
+        "title": "Before You Install",
+        "slug": "before-install",
+        "markdown_source": "https:\/\/github.com\/zzap\/WordPress-Advanced-administration-handbook\/blob\/master\/before-install.md",
+        "parent": null
+    },
+    "server": {
+        "title": "Server configuration",
+        "slug": "server",
+        "markdown_source": "https:\/\/github.com\/zzap\/WordPress-Advanced-administration-handbook\/blob\/master\/server.md",
+        "parent": null
+    },
+    "wordpress": {
+        "title": "WordPress configuration",
+        "slug": "wordpress",
+        "markdown_source": "https:\/\/github.com\/zzap\/WordPress-Advanced-administration-handbook\/blob\/master\/wordpress.md",
+        "parent": null
+    },
+    "upgrade": {
+        "title": "Upgrading / Migration",
+        "slug": "upgrade",
+        "markdown_source": "https:\/\/github.com\/zzap\/WordPress-Advanced-administration-handbook\/blob\/master\/upgrade.md",
+        "parent": null
+    },
+    "multisite": {
+        "title": "WordPress Multisite / Network",
+        "slug": "multisite",
+        "markdown_source": "https:\/\/github.com\/zzap\/WordPress-Advanced-administration-handbook\/blob\/master\/multisite.md",
+        "parent": null
+    },
+    "plugins": {
+        "title": "Plugins",
+        "slug": "plugins",
+        "markdown_source": "https:\/\/github.com\/zzap\/WordPress-Advanced-administration-handbook\/blob\/master\/plugins.md",
+        "parent": null
+    },
+    "themes": {
+        "title": "Themes",
+        "slug": "themes",
+        "markdown_source": "https:\/\/github.com\/zzap\/WordPress-Advanced-administration-handbook\/blob\/master\/themes.md",
+        "parent": null
+    },
+    "security": {
+        "title": "Security",
+        "slug": "security",
+        "markdown_source": "https:\/\/github.com\/zzap\/WordPress-Advanced-administration-handbook\/blob\/master\/security.md",
+        "parent": null
+    },
+    "performance": {
+        "title": "Performance / Optimization",
+        "slug": "performance",
+        "markdown_source": "https:\/\/github.com\/zzap\/WordPress-Advanced-administration-handbook\/blob\/master\/performance.md",
+        "parent": null
+    },
+    "debug": {
+        "title": "Debugging WordPress",
+        "slug": "debug",
+        "markdown_source": "https:\/\/github.com\/zzap\/WordPress-Advanced-administration-handbook\/blob\/master\/debug.md",
+        "parent": null
+    }
+}
