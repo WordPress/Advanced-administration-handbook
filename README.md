@@ -74,7 +74,7 @@ Based on [WordPress Advanced Administration Handbook](https://docs.google.com/do
     - Cache
     - Optimization
   - [Debugging WordPress](debug.md)
-    - Debugging in WordPress
+    - [Debugging in WordPress](debug/debug-wordpress.md)
     - Debugging a WordPress Network
     - Test Driving WordPress
     - Using Your Browser to Diagnose JavaScript Errors
