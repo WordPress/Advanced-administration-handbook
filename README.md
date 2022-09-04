@@ -32,7 +32,7 @@ Based on [WordPress Advanced Administration Handbook](https://docs.google.com/do
   - [WordPress configuration](wordpress.md)
     - wp-config.php
       - Editing wp-config.php
-    - Site Architecture
+    - [Site Architecture](wordpress/site-architecture.md)
     - Cookies
     - Update Services
     - Editing Files
