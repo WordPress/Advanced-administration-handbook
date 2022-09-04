@@ -11,15 +11,15 @@ Based on [WordPress Advanced Administration Handbook](https://docs.google.com/do
 - [LICENSE](LICENSE)
 - [CODE_OF_CONDUCT](CODE_OF_CONDUCT.md)
 - [WordPress Advanced Administration Handbook](index.md)
-  - [Before You Install](before-install.md)
-    - Creating Database for WordPress
+  - [Before You Install](before-install/index.md)
+    - [Creating Database for WordPress](before-install/creating-database.md)
     - How to install WordPress
       - Installing WordPress at popular Hosting Companies
     - Running a Development Copy of WordPress
       - Installing WordPress on your own Computer
     - Installing WordPress in your language
     - Installing Multiple WordPress Instances
-  - [Server configuration](server.md)
+  - [Server configuration](server/index.md)
     - Changing File Permissions
     - Finding Server Info
       - Giving WordPress Its Own Directory
@@ -29,7 +29,7 @@ Based on [WordPress Advanced Administration Handbook](https://docs.google.com/do
       - Nginx
     - Control Panels
       - Using cPanel
-  - [WordPress configuration](wordpress.md)
+  - [WordPress configuration](wordpress/index.md)
     - [wp-config.php](wordpress/wp-config.md)
       - Editing wp-config.php
     - [Site Architecture](wordpress/site-architecture.md)
@@ -38,7 +38,7 @@ Based on [WordPress Advanced Administration Handbook](https://docs.google.com/do
     - Editing Files
     - [CSS](wordpress/css.md)
     - Multilingual WordPress
-  - [Upgrading / Migration](upgrade.md)
+  - [Upgrading / Migration](upgrade/index.md)
     - FTP Clients
       - Using FileZilla
     - phpMyAdmin
@@ -48,7 +48,7 @@ Based on [WordPress Advanced Administration Handbook](https://docs.google.com/do
       - Changing The Site URL
       - Migrating multiple blogs into WordPress multisite
       - Moving WordPress
-  - [WordPress Multisite / Network](multisite.md)
+  - [WordPress Multisite / Network](multisite/index.md)
     - Before You Create A Network
     - Create A Network
     - WordPress Multisite Domain Mapping
@@ -56,10 +56,10 @@ Based on [WordPress Advanced Administration Handbook](https://docs.google.com/do
     - Network Admin
       - Network Admin Sites Screen
       - Network Admin Updates Screen
-  - [Plugins](plugins.md)
+  - [Plugins](plugins/index.md)
     - Must Use Plugins
-  - [Themes](themes.md)
-  - [Security](security.md)
+  - [Themes](themes/index.md)
+  - [Security](security/index.md)
     - Backups
       - Backing Up Your Database
       - Backing Up Your WordPress Files
@@ -71,13 +71,13 @@ Based on [WordPress Advanced Administration Handbook](https://docs.google.com/do
       - Hardening WordPress
       - Brute Force Attacks
       - Two Step Authentication
-  - [Performance / Optimization](performance.md)
+  - [Performance / Optimization](performance/index.md)
     - Cache
     - Optimization
-  - [Debugging WordPress](debug.md)
+  - [Debugging WordPress](debug/index.md)
     - [Debugging in WordPress](debug/debug-wordpress.md)
     - Debugging a WordPress Network
     - Test Driving WordPress
     - Using Your Browser to Diagnose JavaScript Errors
-  - [Resources](resources.md)
+  - [Resources](resources/index.md)
 ```
