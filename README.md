@@ -78,4 +78,5 @@ Based on [WordPress Advanced Administration Handbook](https://docs.google.com/do
     - Debugging a WordPress Network
     - Test Driving WordPress
     - Using Your Browser to Diagnose JavaScript Errors
+  - [Resources](resources.md)
 ```
