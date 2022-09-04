@@ -36,6 +36,7 @@ Based on [WordPress Advanced Administration Handbook](https://docs.google.com/do
     - Cookies
     - Update Services
     - Editing Files
+    - [CSS](wordpress/css.md)
     - Multilingual WordPress
   - [Upgrading / Migration](upgrade.md)
     - FTP Clients
