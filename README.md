@@ -30,7 +30,7 @@ Based on [WordPress Advanced Administration Handbook](https://docs.google.com/do
     - Control Panels
       - Using cPanel
   - [WordPress configuration](wordpress.md)
-    - wp-config.php
+    - [wp-config.php](wordpress/wp-config.md)
       - Editing wp-config.php
     - [Site Architecture](wordpress/site-architecture.md)
     - Cookies
