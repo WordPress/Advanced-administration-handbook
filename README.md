@@ -59,26 +59,26 @@ Based on [WordPress Advanced Administration Handbook](https://docs.google.com/do
       - Network Admin Sites Screen
       - Network Admin Updates Screen
   - [Plugins](plugins/index.md)
-    - Must Use Plugins
+    - [Must Use Plugins](plugins/mu-plugins.md)
   - [Themes](themes/index.md)
   - [Security](security/index.md)
-    - Backups
+    - [Backups](security/backup.md)
       - Backing Up Your Database
       - Backing Up Your WordPress Files
       - Configuring Automatic Background Updates
       - Restoring Your Database From Backup
-    - Security
+    - [Security](security/security.md)
       - Why should I use HTTPS
       - Administration Over SSL
       - Hardening WordPress
       - Brute Force Attacks
       - Two Step Authentication
   - [Performance / Optimization](performance/index.md)
-    - Cache
-    - Optimization
+    - [Cache](performance/cache.md)
+    - [Optimization](performance/optimization.md)
   - [Debugging WordPress](debug/index.md)
     - [Debugging in WordPress](debug/debug-wordpress.md)
-    - Debugging a WordPress Network
-    - Test Driving WordPress
-    - Using Your Browser to Diagnose JavaScript Errors
+    - [Debugging a WordPress Network](debug/debug-network.md)
+    - [Using Your Browser to Diagnose JavaScript Errors](debug/debug-javascript.md)
+    - [Test Driving WordPress](debug/test-driving.md)
   - [Resources](resources/index.md)
