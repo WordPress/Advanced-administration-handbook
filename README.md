@@ -34,27 +34,28 @@ Based on [WordPress Advanced Administration Handbook](https://docs.google.com/do
     - [wp-config.php](wordpress/wp-config.md)
       - Editing wp-config.php
     - [Site Architecture](wordpress/site-architecture.md)
-    - Cookies
-    - Update Services
-    - Editing Files
+    - [Cookies](wordpress/cookies.md)
+    - [Update Services](wordpress/update-services.md)
+    - [Editing Files](wordpress/edit-files.md)
     - [CSS](wordpress/css.md)
-    - Multilingual WordPress
+    - [Multilingual WordPress](wordpress/multilingual.md)
+    - [oEmbed](wordpress/oembed.md)
   - [Upgrading / Migration](upgrade/index.md)
-    - FTP Clients
+    - [FTP Clients](upgrade/ftp.md)
       - Using FileZilla
-    - phpMyAdmin
-    - Upgrading
+    - [phpMyAdmin](upgrade/phpmyadmin.md)
+    - [Upgrading](upgrade/upgrading.md)
       - Upgrading WordPress – Extended Instructions
-    - Migration
+    - [Migration](upgrade/migrating.md)
       - Changing The Site URL
       - Migrating multiple blogs into WordPress multisite
       - Moving WordPress
   - [WordPress Multisite / Network](multisite/index.md)
-    - Before You Create A Network
-    - Create A Network
-    - WordPress Multisite Domain Mapping
-    - Multisite Network Administration
-    - Network Admin
+    - [Before You Create A Network](multisite/prepare-network.md)
+    - [Create A Network](multisite/create-network.md)
+    - [WordPress Multisite Domain Mapping](multisite/domain-mapping.md)
+    - [Multisite Network Administration](multisite/administration.md)
+    - [Network Admin](multisite/admin.md)
       - Network Admin Sites Screen
       - Network Admin Updates Screen
   - [Plugins](plugins/index.md)
