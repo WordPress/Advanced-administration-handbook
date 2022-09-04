@@ -6,29 +6,30 @@ This is the repository for the **WordPress Advanced Administration Handbook**
 
 Based on [WordPress Advanced Administration Handbook](https://docs.google.com/document/d/1fVIw3DztzyVY18RDPCGk-kDYTO6gzHtx81o7aitGijo/)
 
-```markdown
 - [README](README.md)
 - [LICENSE](LICENSE)
 - [CODE_OF_CONDUCT](CODE_OF_CONDUCT.md)
 - [WordPress Advanced Administration Handbook](index.md)
   - [Before You Install](before-install/index.md)
     - [Creating Database for WordPress](before-install/creating-database.md)
-    - How to install WordPress
+    - [How to install WordPress](before-install/howto-install.md)
       - Installing WordPress at popular Hosting Companies
-    - Running a Development Copy of WordPress
+    - [Running a Development Copy of WordPress](before-install/development.md)
       - Installing WordPress on your own Computer
-    - Installing WordPress in your language
-    - Installing Multiple WordPress Instances
+    - [Installing WordPress in your language](before-install/in-your-language.md)
+    - [Installing Multiple WordPress Instances](before-install/multiple-instances.md)
   - [Server configuration](server/index.md)
-    - Changing File Permissions
-    - Finding Server Info
-      - Giving WordPress Its Own Directory
-    - Configuring Wildcard Subdomains
-    - Emptying a Database Table
-    - Web servers
+    - [Changing File Permissions](server/file-permissions.md)
+    - [Finding Server Info](server/server-info.md)
+    - [Giving WordPress Its Own Directory](server/wordpress-in-directory.md)
+    - [Configuring Wildcard Subdomains](server/subdomains-wildcard.md)
+    - [Emptying a Database Table](server/empty-database.md)
+    - [Web servers](server/web-server.md)
+      - Apache HTTPD
       - Nginx
-    - Control Panels
+    - [Control Panels](server/control-panel.md)
       - Using cPanel
+      - Using Plesk
   - [WordPress configuration](wordpress/index.md)
     - [wp-config.php](wordpress/wp-config.md)
       - Editing wp-config.php
@@ -80,4 +81,3 @@ Based on [WordPress Advanced Administration Handbook](https://docs.google.com/do
     - Test Driving WordPress
     - Using Your Browser to Diagnose JavaScript Errors
   - [Resources](resources/index.md)
-```
