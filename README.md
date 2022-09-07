@@ -6,76 +6,79 @@ This is the repository for the **WordPress Advanced Administration Handbook**
 
 Based on [WordPress Advanced Administration Handbook](https://docs.google.com/document/d/1fVIw3DztzyVY18RDPCGk-kDYTO6gzHtx81o7aitGijo/)
 
-```markdown
 - [README](README.md)
 - [LICENSE](LICENSE)
 - [CODE_OF_CONDUCT](CODE_OF_CONDUCT.md)
 - [WordPress Advanced Administration Handbook](index.md)
-  - [Before You Install](before-install.md)
-    - Creating Database for WordPress
-    - How to install WordPress
+  - [Before You Install](before-install/index.md)
+    - [Creating Database for WordPress](before-install/creating-database.md)
+    - [How to install WordPress](before-install/howto-install.md)
       - Installing WordPress at popular Hosting Companies
-    - Running a Development Copy of WordPress
+    - [Running a Development Copy of WordPress](before-install/development.md)
       - Installing WordPress on your own Computer
-    - Installing WordPress in your language
-    - Installing Multiple WordPress Instances
-  - [Server configuration](server.md)
-    - Changing File Permissions
-    - Finding Server Info
-      - Giving WordPress Its Own Directory
-    - Configuring Wildcard Subdomains
-    - Emptying a Database Table
-    - Web servers
+    - [Installing WordPress in your language](before-install/in-your-language.md)
+    - [Installing Multiple WordPress Instances](before-install/multiple-instances.md)
+  - [Server configuration](server/index.md)
+    - [Changing File Permissions](server/file-permissions.md)
+    - [Finding Server Info](server/server-info.md)
+    - [Giving WordPress Its Own Directory](server/wordpress-in-directory.md)
+    - [Configuring Wildcard Subdomains](server/subdomains-wildcard.md)
+    - [Emptying a Database Table](server/empty-database.md)
+    - [Web servers](server/web-server.md)
+      - Apache HTTPD
       - Nginx
-    - Control Panels
+    - [Control Panels](server/control-panel.md)
       - Using cPanel
-  - [WordPress configuration](wordpress.md)
-    - wp-config.php
+      - Using Plesk
+  - [WordPress configuration](wordpress/index.md)
+    - [wp-config.php](wordpress/wp-config.md)
       - Editing wp-config.php
-    - Site Architecture
-    - Cookies
-    - Update Services
-    - Editing Files
-    - Multilingual WordPress
-  - [Upgrading / Migration](upgrade.md)
-    - FTP Clients
+    - [Site Architecture](wordpress/site-architecture.md)
+    - [Cookies](wordpress/cookies.md)
+    - [Update Services](wordpress/update-services.md)
+    - [Editing Files](wordpress/edit-files.md)
+    - [CSS](wordpress/css.md)
+    - [Multilingual WordPress](wordpress/multilingual.md)
+    - [oEmbed](wordpress/oembed.md)
+  - [Upgrading / Migration](upgrade/index.md)
+    - [FTP Clients](upgrade/ftp.md)
       - Using FileZilla
-    - phpMyAdmin
-    - Upgrading
+    - [phpMyAdmin](upgrade/phpmyadmin.md)
+    - [Upgrading](upgrade/upgrading.md)
       - Upgrading WordPress – Extended Instructions
-    - Migration
+    - [Migration](upgrade/migrating.md)
       - Changing The Site URL
       - Migrating multiple blogs into WordPress multisite
       - Moving WordPress
-  - [WordPress Multisite / Network](multisite.md)
-    - Before You Create A Network
-    - Create A Network
-    - WordPress Multisite Domain Mapping
-    - Multisite Network Administration
-    - Network Admin
+  - [WordPress Multisite / Network](multisite/index.md)
+    - [Before You Create A Network](multisite/prepare-network.md)
+    - [Create A Network](multisite/create-network.md)
+    - [WordPress Multisite Domain Mapping](multisite/domain-mapping.md)
+    - [Multisite Network Administration](multisite/administration.md)
+    - [Network Admin](multisite/admin.md)
       - Network Admin Sites Screen
       - Network Admin Updates Screen
-  - [Plugins](plugins.md)
-    - Must Use Plugins
-  - [Themes](themes.md)
-  - [Security](security.md)
-    - Backups
+  - [Plugins](plugins/index.md)
+    - [Must Use Plugins](plugins/mu-plugins.md)
+  - [Themes](themes/index.md)
+  - [Security](security/index.md)
+    - [Backups](security/backup.md)
       - Backing Up Your Database
       - Backing Up Your WordPress Files
       - Configuring Automatic Background Updates
       - Restoring Your Database From Backup
-    - Security
+    - [Security](security/security.md)
       - Why should I use HTTPS
       - Administration Over SSL
       - Hardening WordPress
       - Brute Force Attacks
       - Two Step Authentication
-  - [Performance / Optimization](performance.md)
-    - Cache
-    - Optimization
-  - [Debugging WordPress](debug.md)
-    - Debugging in WordPress
-    - Debugging a WordPress Network
-    - Test Driving WordPress
-    - Using Your Browser to Diagnose JavaScript Errors
-```
+  - [Performance / Optimization](performance/index.md)
+    - [Cache](performance/cache.md)
+    - [Optimization](performance/optimization.md)
+  - [Debugging WordPress](debug/index.md)
+    - [Debugging in WordPress](debug/debug-wordpress.md)
+    - [Debugging a WordPress Network](debug/debug-network.md)
+    - [Using Your Browser to Diagnose JavaScript Errors](debug/debug-javascript.md)
+    - [Test Driving WordPress](debug/test-driving.md)
+  - [Resources](resources/index.md)
