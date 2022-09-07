@@ -2,6 +2,13 @@
 
 This is the repository for the **WordPress Advanced Administration Handbook**
 
+## Roadmap
+- [x] Phase 0: Create an initial structure to understand the categorization.
+- [x] Phase 1: Create the empty-files with a link inside, so there is all the structure.
+- [ ] Phase 2: Add the content (only copying from the original page and create the content structure).
+- [ ] Phase 3: Check and improve the content.
+- [ ] Phase 4: Publish a first version of the Advanced Admin Documentation.
+
 ## File Structure
 
 Based on [WordPress Advanced Administration Handbook](https://docs.google.com/document/d/1fVIw3DztzyVY18RDPCGk-kDYTO6gzHtx81o7aitGijo/)
