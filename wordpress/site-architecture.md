@@ -46,12 +46,12 @@ These are the main containers in which the most important parts of the page are 
 
 ```
 <body>
-<div id="rap">
-<h1 id="header"></h1>
-<div id="content"></div>
-<div id="menu"></div>
-<p class="credit"></p>
-</div>
+  <div id="rap">
+    <h1 id="header"></h1>
+    <div id="content"></div>
+    <div id="menu"></div>
+    <p class="credit"></p>
+  </div>
 </body>
 ```
 
@@ -59,12 +59,12 @@ These are the main containers in which the most important parts of the page are 
 
 ```
 <body>
-<div id="page">
-<div id="header"></div>
-<div id="content" class="narrowcolumn"></div>
-<div id="sidebar"></div>
-<div id="footer"></div>
-</div><!-- end page -->
+  <div id="page">
+    <div id="header"></div>
+    <div id="content" class="narrowcolumn"></div>
+    <div id="sidebar"></div>
+    <div id="footer"></div>
+  </div><!-- end page -->
 </body>
 ```
 
@@ -152,10 +152,10 @@ The Classic Theme hosts containers for the Date, Title, Post Meta Data, Post Con
 The post CSS class selector applies the post styles to this container. It is important to note that the post class selector also has an ID which is generated automatically by WordPress. Here is an example of the code that can be used to display a class selector's ID:
 
 ```
-<div class="post" id="post-<?php the\_ID(); ?>">
+<div class="post" id="post-<?php the_ID(); ?>">
 ```
 
-The use of the template tag [the\_ID()](https://codex.wordpress.org/Template_Tags/the_ID "Template Tags/the ID") displays the ID number for the post. This unique identifier can be used for internal page links as well as for styles. For instance, an individual post could have a style for post-1, as well as for post-2. While it is a bit excessive to feature a style for every post, there may be a post or two that you need to have look a little different. Some plugins may use this identifier to automatically change the look of different posts, too.
+The use of the template tag [the_ID()](https://codex.wordpress.org/Template_Tags/the_ID "Template Tags/the ID") displays the ID number for the post. This unique identifier can be used for internal page links as well as for styles. For instance, an individual post could have a style for post-1, as well as for post-2. While it is a bit excessive to feature a style for every post, there may be a post or two that you need to have look a little different. Some plugins may use this identifier to automatically change the look of different posts, too.
 
 The content container for the Default Theme features a **multi-post view** (e.g. for the front page, categories, archives, and searches) as well as a **single post view** for single posts. The multi-post view looks like this:
 
@@ -262,43 +262,32 @@ Comments may be featured in the single post view (using the comments.php templat
     </li>
   </ol>
   <p>
-    <a href='http://example.com/archives/name-of-post/feed/'>
-    <abbr title="Really Simple Syndication">RSS</abbr> feed for comments on this post.</a>
-    <a href="http://example.com/name-of-post/trackback/" rel="trackback">
-    TrackBack <abbr title="Uniform Resource Identifier">URI</abbr>
-    </a>
+    <a href='http://example.com/archives/name-of-post/feed/'><abbr title="Really Simple Syndication">RSS</abbr> feed for comments on this post.</a>
+    <a href="http://example.com/name-of-post/trackback/" rel="trackback">TrackBack <abbr title="Uniform Resource Identifier">URI</abbr></a>
   </p>
   <h2 id="postcomment">Leave a comment</h2>
-  <form action="http://example.com/blog/wp-comments-post.php"
-method="post" id="commentform">
+  <form action="http://example.com/blog/wp-comments-post.php" method="post" id="commentform">
     <p>
-      <input type="text" name="author" id="author" value="" size="22" tabindex="1" />
-      <label for="author">
-      <small>Name (required)</small>
-      </label>
+      <input type="text" name="author" id="author" value="" size="22" tabindex="1">
+      <label for="author"><small>Name (required)</small></label>
     </p>
     <p>
-      <input type="text" name="email" id="email" value="" size="22" tabindex="2" />
-      <label for="email">
-      <small>Mail (will not be published) required)</small>
-      </label>
+      <input type="text" name="email" id="email" value="" size="22" tabindex="2">
+      <label for="email"><small>Mail (will not be published) required)</small></label>
     </p>
     <p>
-      <input type="text" name="url" id="url" value="" size="22" tabindex="3" />
-      <label for="url">
-      <small>Website</small>
-      </label>
+      <input type="text" name="url" id="url" value="" size="22" tabindex="3">
+      <label for="url"><small>Website</small></label>
     </p>
     <p>
       <small><strong>XHTML:</strong> List of Tags you can use in comments</small>
     </p>
     <p>
-      <textarea name="comment" id="comment" cols="100%" rows="10" tabindex="4">
-      </textarea>
+      <textarea name="comment" id="comment" cols="100%" rows="10" tabindex="4"></textarea>
     </p>
     <p>
-      <input name="submit" type="submit" id="submit" tabindex="5" value="Submit Comment" />
-      <input type="hidden" name="comment\_post\_ID" value="1" />
+      <input name="submit" type="submit" id="submit" tabindex="5" value="Submit Comment">
+      <input type="hidden" name="comment_post_ID" value="1">
     </p>
   </form>
 </div>
@@ -306,59 +295,59 @@ method="post" id="commentform">
 
 While individual sections of the comments feature styling reference, the Classic Theme has no general comment division or group style reference, one could be easily added.
 
-#comments h2
+**#comments h2**
 
-Styles the title at the top of the comments list which says "Comments 4 Leave a Comment", with the latter part of the sentence in a link that jumps to <h2 id="postcomment">Leave a comment</h2>.
+Styles the title at the top of the comments list which says "Comments 4 Leave a Comment", with the latter part of the sentence in a link that jumps to `<h2 id="postcomment">Leave a comment</h2>`.
 
-#comment-n 
+**#comment-n**
 
 Comments are given a unique ID number, signified here by the letter n. This allows them to be styled individually.
 
-#comments ol 
+**#comments ol**
 
 This begins the **ordered list** of the comments, counting down from one, and sets the overall style of the comments list.
 
-#comments li 
+**#comments li**
 
 Style reference for each comment on the list.
 
-#comments p 
+**#comments p**
 
 This paragraph tag styles the actual comments on the comment list.
 
-#comment cite 
+**#comment cite**
 
 This use of the cite controls the look of the commenter's name. It usually states "Name says:" in the comments list.
 
-#comments h2 or #postcomment 
+**#comments h2** or **#postcomment**
 
 The h2 heading can be styled two ways, as #comments h2 or #postcomment. The latter is used by the "Leave a Comment" link from the top of the comments section, too.
 
-#commentform 
+**#commentform**
 
 Style reference for the overall "form" for inputting comments. Each input area has it's own ID.
 
-#author 
+**#author**
 
 ID reference for the comment author's input area.
 
-#comments small 
+**#comments small**
 
 The <small> tag is used in several places in the Classic Theme. This usage surrounds the text in the **comment submit form** and the text for the **list of tags** that can be used in the comment.
 
-#email 
+**#email**
 
 ID reference for the comment author's email.
 
-#url 
+**#url**
 
 ID reference for the comment author's URL.
 
-#comment 
+**#comment**
 
 ID reference for the comment input textarea. It does not style the final generated comment, just the input box.
 
-#comment #submit 
+**#comment #submit**
 
 There are two submit buttons in the Classic Theme, for search and comment submissions. This is the submit comment button.
 
@@ -372,11 +361,11 @@ The Default Theme comments feature a loop query within the comments.php and comm
   <li class="alt" id="comment-1">
     <cite>
       <a href="http://example.org/" rel="external nofollow">Mr WordPress</a>
-    </cite> Says:<br />
+    </cite> Says:<br>
     <small class="commentmetadata">
       <a href="#comment-1" title="">Date and Time</a>
-     </small>
-      <p>Hi, this is a comment.</p>
+    </small>
+    <p>Hi, this is a comment.</p>
   </li>
 </ol>
 <h3 id="respond">Leave a Reply</h3>
@@ -408,7 +397,7 @@ The Default Theme comments feature a loop query within the comments.php and comm
   </p>
   <p>
     <input name="submit" id="submit" tabindex="5" value="Submit Comment" type="submit">
-    <input name="comment\_post\_ID" value="1" type="hidden">
+    <input name="comment_post_ID" value="1" type="hidden">
   </p>
 </form>
 </div>
@@ -416,75 +405,75 @@ The Default Theme comments feature a loop query within the comments.php and comm
 
 While individual sections of the comments feature styling reference, the Default Theme has no general comment division or group style reference, though one could be easily added.
 
-h3 #comments
+**h3 #comments**
 
-Styles the <h3> tag for the "number of responses to the post" heading.
+Styles the `<h3>` tag for the "number of responses to the post" heading.
 
-#commentlist ol 
+**#commentlist ol**
 
 Styles the "ordered list" of the comments list.
 
-.alt li and #comment-n 
+**.alt li** and **#comment-n**
 
 The comment list items have two style references. The first one is the class alt and the second is the comment ID number signified here by the letter n. This allows them to be styled individually.
 
-cite 
+**cite**
 
 The tag cite frames the "Name says:" and link to the comment author's URL.
 
-.commentmetadata small 
+**.commentmetadata small**
 
-The <small> tag has a class of commentmetadata which allows the date and time of the post to be styled.
+The `<small>` tag has a class of commentmetadata which allows the date and time of the post to be styled.
 
-ol #commentlist p 
+**ol #commentlist p**
 
 Styles the paragraph within the ordered list of comments.
 
-#respond h3 
+**#respond h3**
 
 Styles the heading for "Leave a Reply".
 
-#commentform 
+**#commentform**
 
 Style reference for the overall "form" for inputting comments. Each input area has it's own ID.
 
-#author 
+**#author**
 
 ID reference for the comment author's input area.
 
-#comments small 
+**#comments small**
 
-The <small> tag is used in several places in the Classic Theme. This usage surrounds the text in the **comment submit form _and the text for the_** _list of tags'_ that can be used in the comment.
+The `<small>` tag is used in several places in the Classic Theme. This usage surrounds the text in the **comment submit form _and the text for the_** _list of tags'_ that can be used in the comment.
 
-#email 
+**#email**
 
 ID reference for the comment author's email.
 
-#url 
+**#url**
 
 ID reference for the comment author's URL.
 
-#comment 
+**#comment**
 
 ID reference for the comment input textarea. It does not style the final generated comment, just the input box.
 
-#comment #submit 
+**#comment #submit**
 
 There are two submit buttons in the Classic Theme, for search and comment submissions. This is the submit comment button.
 
 ##### Popup Comments
 
-The Classic and Default Themes' comments-popup.php template file is essentially the same. They use the layout for the [Classic Theme comment structure](#Default_Theme_Comments). While the Classic Theme uses <h2> headings and the Default Theme uses <h3> headings for the title headings in their comments, in the comments-popup.php template file, they both use the <h2> heading tag.
+The Classic and Default Themes' `comments-popup.php` template file is essentially the same. They use the layout for the [Classic Theme comment structure](#Default_Theme_Comments). While the Classic Theme uses `<h2>` headings and the Default Theme uses `<h3>` headings for the title headings in their comments, in the comments-popup.php template file, they both use the `<h2>` heading tag.
 
 ```
 <body id="commentspopup">
-<h1 id="header"></h1>
-<h2 id="comments">Comments</h2>
-....Classic Theme commment section.....
-...Classic Theme footer....
+  <h1 id="header"></h1>
+  <h2 id="comments">Comments</h2>
+  ....Classic Theme commment section.....
+  ...Classic Theme footer....
 ```
 
-The body tag sets the style for the overall page with #commentspopup. The h2 heading begins the comments section.
+The body tag sets the style for the overall page with `#commentspopup`. The `<h2>` heading begins the comments section.
 
 If you make modifications to the structure of the tags within the header and footer of the overall Theme, ensure those structural changes are applied to the comments popup template, especially if you will be [releasing the Theme to the public](https://codex.wordpress.org/Designing_Themes_for_Public_Release "Designing Themes for Public Release").
 
@@ -501,8 +490,8 @@ The Classic Theme sidebar looks like this, with the links removed for simplifica
   <ul>
     <li class="pagenav">Pages
       <ul>
-        <li class="page\_item">Contact</li>
-        <li class="page\_item">About</li>
+        <li class="page_item">Contact</li>
+        <li class="page_item">About</li>
       </ul>
     </li>
     <li id="linkcat-1"><h2>Blogroll</h2>
@@ -522,8 +511,8 @@ The Classic Theme sidebar looks like this, with the links removed for simplifica
       <label for="s">Search:</label>   
       <form id="searchform" method="get" action="/index.php">
         <div>
-          <input type="text" name="s" id="s" size="15" /><br />
-          <input type="submit" id="searchsubmit" value="Search" />
+          <input type="text" name="s" id="s" size="15"><br>
+          <input type="submit" id="searchsubmit" value="Search">
         </div>
       </form>
     </li>
@@ -550,17 +539,17 @@ Most of these are self-explanatory. Each set of links has its own CSS selector: 
 
 #### Pages and Link Categories
 
-The [Pages](https://codex.wordpress.org/Pages "Pages") and [Links](https://codex.wordpress.org/Links_Manager "Links Manager") category, labeled "Blogroll", uses the [<?php get\_links\_list(); ?>](https://codex.wordpress.org/Template_Tags/get_links_list "Template Tags/get links list") and [<?php wp\_list\_pages(); ?>](https://codex.wordpress.org/Template_Tags/wp_list_pages "Template Tags/wp list pages") template tags which automatically generates a heading.
+The [Pages](https://codex.wordpress.org/Pages "Pages") and [Links](https://codex.wordpress.org/Links_Manager "Links Manager") category, labeled "Blogroll", uses the [<?php get_links_list(); ?>](https://codex.wordpress.org/Template_Tags/get_links_list "Template Tags/get links list") and [<?php wp_list_pages(); ?>](https://codex.wordpress.org/Template_Tags/wp_list_pages "Template Tags/wp list pages") template tags which automatically generates a heading.
 
 For the **Links** category, it generates an h2 heading for that set of links. This means you can style the menu h2 heading to look differently from the rest of the headings, or, if you want them to all look the same, make sure that the menu h2 style _matches_ the rest of the category styles which are not automatically generated.
 
-The **Pages** template tag generates pagenav as the heading and then identifies the pages in a new way. As a general list viewed on multi-post and single post views, the Page list items feature a class="page\_item" to style those links. When viewing an individual Page, that Page's link will change to class="current\_page\_item", which can then be styled to look differently from the rest of the Page links.
+The **Pages** template tag generates pagenav as the heading and then identifies the pages in a new way. As a general list viewed on multi-post and single post views, the Page list items feature a class="page_item" to style those links. When viewing an individual Page, that Page's link will change to class="current_page_item", which can then be styled to look differently from the rest of the Page links.
 
 #### Categories, Archives, and Meta
 
-The other sidebar section titles, _categories_, _archives_, _meta_, and others, do not use template tags which generate their own titles. These are set inside of PHP statements which "print" the text on the page. While these could be put inside of [heading tags](https://codex.wordpress.org/Designing_Headings "Designing Headings"), WordPress uses the \_e() function to display or "echo" the text titles while also marking the text as a possible target for language translation. If you will be [developing your theme](https://codex.wordpress.org/Theme_Development "Theme Development") for [public release](https://codex.wordpress.org/Designing_Themes_for_Public_Release "Designing Themes for Public Release"), using the echo functions is highly recommended.
+The other sidebar section titles, _categories_, _archives_, _meta_, and others, do not use template tags which generate their own titles. These are set inside of PHP statements which "print" the text on the page. While these could be put inside of [heading tags](https://codex.wordpress.org/Designing_Headings "Designing Headings"), WordPress uses the `_e()` function to display or `echo` the text titles while also marking the text as a possible target for language translation. If you will be [developing your theme](https://codex.wordpress.org/Theme_Development "Theme Development") for [public release](https://codex.wordpress.org/Designing_Themes_for_Public_Release "Designing Themes for Public Release"), using the echo functions is highly recommended.
 
-You can style these individually or all the same. Some Themes, like the Default Theme, put all these in <h2> headings so the list headings will all look the same. Therefore, they may or may not use style references for each section. You may add them if you need them to change the look of each section of links.
+You can style these individually or all the same. Some Themes, like the Default Theme, put all these in `<h2>` headings so the list headings will all look the same. Therefore, they may or may not use style references for each section. You may add them if you need them to change the look of each section of links.
 
 #### Search Form
 
@@ -571,34 +560,34 @@ The search form is found within the searchform.php. It may be found in different
   <label for="s">Search:</label>   
   <form id="searchform" method="get" action="/index.php">
     <div>
-      <input type="text" name="s" id="s" size="15" /><br />
-      <input type="submit" id="searchsubmit" value="Search" />
+      <input type="text" name="s" id="s" size="15"><br>
+      <input type="submit" id="searchsubmit" value="Search">
     </div>
   </form>
 </li>
 ```
 
-#search 
+**#search**
 
 The overall style for the search form.
 
-#search label 
+**#search label**
 
 Used to style the label tag, if necessary.
 
-#searchform 
+**#searchform**
 
 Used to style the form itself.
 
-#search div 
+**#search div**
 
 This unlabeled div is a child container of the parent container search and maybe styled from within that selector.
 
-#searchform input 
+**#searchform input**
 
 To style the input area for the search, this selector combination will work.
 
-#searchsubmit 
+**#searchsubmit**
 
 _Used by the Default Theme_, this selector may be used to style the **search** or **submit** button.
 
@@ -617,12 +606,7 @@ The footer is found within the footer.php template file. In both the Default and
 ```
 <p class="credit">
   <!--15 queries. 0.152 seconds. -->
-  <cite>
-    Powered by <a href='http://wordpress.org' 
-    title='Powered by WordPress, state-of-the-art 
-    semantic personal publishing platform.'>
-    <strong>WordPress</strong></a>
-  </cite>
+  <cite>Powered by <a href='http://wordpress.org' title='Powered by WordPress, state-of-the-art semantic personal publishing platform.'> <strong>WordPress</strong></a></cite>
 </p>
 </div>
 ```
@@ -632,21 +616,16 @@ The footer's content is styled with the credit class and the paragraph and cite 
 The tag displays the number of mysql queries used on the page and the time it took for the page to load, in HTML commented code. It is there for the administrator's convenience and use. It is only visible within the page's source code. If you would like to display this visible on the page, remove the [comments](https://codex.wordpress.org/Commenting_Code "Commenting Code"). It's look will be influenced by the credit class style of the paragraph tag. On the template file, it looks like this:
 
 ```
-<!--<?php echo $wpdb->num\_queries; ?> queries. 
-<?php timer\_stop(1); ?> seconds. -->
+<!--<?php echo $wpdb->num_queries; ?> queries. 
+<?php timer_stop(1); ?> seconds. -->
 ```
 
 **Default Theme**
 
 ```
 <div id="footer">
-  <p>Blogging in the WordPress World 
-    is proudly powered by 
-    <a href="http://wordpress.org/">WordPress</a><br />
-    <a href="feed:http://example.com/feed/">Entries (RSS)</a>
-    and 
-    <a href="feed:http://example.com/comments/feed/">
-    Comments (RSS)</a>.
+  <p>Blogging in the WordPress World is proudly powered by <a href="http://wordpress.org/">WordPress</a><br>
+    <a href="feed:http://example.com/feed/">Entries (RSS)</a> and <a href="feed:http://example.com/comments/feed/"> Comments (RSS)</a>.
     <!-- 18 queries. 0.186 seconds. -->
   </p>
 </div>
@@ -654,7 +633,7 @@ The tag displays the number of mysql queries used on the page and the time it to
 
 The Default Theme's footer is styled by the footer ID and the paragraph tag. While the footer area itself maybe styled by the footer, the paragraph tag controls the text within it. To style the paragraph tag differently within the footer than the rest of your page:
 
-#footer p {styles}
+**#footer p {styles}**
 
 ## Resources
 
@@ -670,4 +649,5 @@ The Default Theme's footer is styled by the footer ID and the paragraph tag. Whi
 
 ## Changelog
 
+- 2022-09-11: Check the content and format.
 - 2022-09-04: Created from [Site Architecture 1.5](https://codex.wordpress.org/Site_Architecture_1.5) ticket [Github](https://github.com/WordPress/Documentation-Issue-Tracker/issues/332).
