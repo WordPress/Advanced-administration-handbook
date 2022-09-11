@@ -14,9 +14,8 @@ Why use FileZilla? Because, like WordPress, it is released under the GPL. So, it
 2. [Setting Permissions](https://wordpress.org/support/article/changing-file-permissions/)
 3. [FileZilla’s Extensive Documentation](https://wiki.filezilla-project.org/Documentation)
 
-Want to try a different FTP or SFTP client? [Find more on Wikipedia.](http://en.wikipedia.org/wiki/Comparison_of_FTP_clients)
+Want to try a different FTP or SFTP client? [Find more on Wikipedia](http://en.wikipedia.org/wiki/Comparison_of_FTP_clients).
 
 ## Changelog
 
-- 2022-09-04: Nothing here, yet.
 - 2022-09-11: Copied content from https://wordpress.org/support/article/ftp-clients/. Minor copy-editing.
