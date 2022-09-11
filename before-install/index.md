@@ -23,4 +23,4 @@ Now you are all set to go on to [Installation](https://wordpress.org/support/art
 
 ## Changelog
 
-- 2022-08-16: Nothing here, yet.
+- 2022-09-11: Migrated original content, added minor adjustments
