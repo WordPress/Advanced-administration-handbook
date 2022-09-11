@@ -22,6 +22,7 @@ require WPMU_PLUGIN_DIR.'/my-plugin/my-plugin.php';
 ```
 
 ## History and Naming
+
 The _mu-plugins_ directory was originally implemented by WPMU (Multi-User) to offer site admins an easy way to activate plugins by default on all blogs in the farm. There was a need for this feature because at the time the multi-user-specific code did not offer ways of achieving this effect using the site admin section (today the renamed “Multisite WordPress” has features to manage plugins from inside the admin).
 
 The code handling /mu-plugins/ was merged into the main WordPress code on 03/07/09 with [this changeset](https://core.trac.wordpress.org/changeset/10737) a full 10 months before the wpmu codebase was initially merged, and all WP sites could take advantage of autoloaded plugins, whether they had MU/Multisite enabled or not. The feature is useful for all types of WP installations depending on circumstances, so this makes sense.
@@ -36,5 +37,4 @@ Thus “Must-Use” is effectively a [Backronym](http://en.wikipedia.org/wiki/Ba
 
 ## Changelog
 
-- 2022-09-04: Nothing here, yet.
-- 2022-09-11: Copied content from  https://wordpress.org/support/article/must-use-plugins/. Minor additions and copy-editing.
+- 2022-09-11: Copied content from [Original Page](https://wordpress.org/support/article/must-use-plugins/). Minor additions and copy-editing.
