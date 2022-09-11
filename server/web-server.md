@@ -23,7 +23,7 @@ When talking about Nginx, it is important to know that there are multiple ways t
 
 ### Generic and Multi-Site Support
 
-To make WordPress work with Nginx you have to configure the backend php-cgi. The options available are ‘fastcgi’ or ‘php-fpm’. Here, php-fpm is being used because it is included with PHP 5.3+, so installing it is straightforward.
+To make WordPress work with Nginx you have to configure the backend php-cgi. The options available are `fastcgi` or `php-fpm`. Here, `php-fpm` is being used because it is included with PHP 5.3+, so installing it is straightforward.
 
 The Nginx configuration has been broken up into five separate files and is heavily commented on to make each option easier to understand. The [author](https://wordpress.org/support/users/bigsite) also made a best effort attempting to follow “best practices” for Nginx configurations.
 
@@ -69,7 +69,7 @@ http {
 }
 ```
 
-This is a bit different from standard nginx.conf files. This configuration follows the Ubuntu/Debian method of declaring enabled sites for maximum flexibility – using ‘sites-available’ to store the config and then symlink to the config file from ‘sites-enabled’.
+This is a bit different from standard `nginx.conf` files. This configuration follows the Ubuntu/Debian method of declaring enabled sites for maximum flexibility – using `sites-available` to store the config and then symlink to the config file from `sites-enabled`.
 
 #### Per Site configuration
 
@@ -98,7 +98,7 @@ server {
 }
 ```
 
-Splitting sections of the configuration into multiple files allows the same logic to be reused over and over. A ‘global’ subdirectory is used to add extra rules for general purpose use (either /etc/nginx/conf/global/ or /etc/nginx/global/ depending on how your nginx install is set up).
+Splitting sections of the configuration into multiple files allows the same logic to be reused over and over. A `global` subdirectory is used to add extra rules for general purpose use (either `/etc/nginx/conf/global/` or `/etc/nginx/global/` depending on how your nginx install is set up).
 
 #### Global restrictions file
 
@@ -241,10 +241,11 @@ server {
 }
 ```
 
-NGINX provides 2 special directive: X-Accel-Redirect and map. Using these 2 directives, one can eliminate performance hit for static-file serving on WordPress multisite network.
+NGINX provides 2 special directive: `X-Accel-Redirect` and `map`. Using these 2 directives, one can eliminate performance hit for static-file serving on WordPress multisite network.
 
 #### WordPress Multisite subdomains rules
 
+```
 map $http_host $blogid {
     default -999;
 
@@ -287,8 +288,9 @@ server {
 
     #add some rules for static content expiry-headers here
 }
+```
 
-Ref: [https://www.nginx.com/nginx-wiki/build/dirhtml/start/topics/recipes/wordpress](https://www.nginx.com/nginx-wiki/build/dirhtml/start/topics/recipes/wordpress).
+Ref: [Nginx recipes for wordpress](https://www.nginx.com/nginx-wiki/build/dirhtml/start/topics/recipes/wordpress).
 
 #### HTTPS in Nginx
 
@@ -375,11 +377,11 @@ location / {
 
 *Experimental modifications:*
 
-If you are using HTTPS, the latest development version of WP Super Cache may use a different directory structure to differentiate between HTTP and HTTPS. try_files line may look like below:
+If you are using HTTPS, the latest development version of WP Super Cache may use a different directory structure to differentiate between HTTP and HTTPS. `try_files` line may look like below:
 
 ```
 location / {
-    try_files /wp-content/cache/supercache/$http_host/$cache_uri/index-https.html $uri $uri/ /index.php?$args ;
+    try_files /wp-content/cache/supercache/$http_host/$cache_uri/index-https.html $uri $uri/ /index.php?$args;
 }
 ```
 
@@ -464,7 +466,7 @@ location / {
 
 #### Nginx fastcgi_cache
 
-Nginx can perform caching on its own end to reduce the load on your server. When you want to use Nginx’s built-in fastcgi_cache, you better compile Nginx with [fastcgi_cache_purge](https://github.com/FRiCKLE/ngx_cache_purge) module. It will help Nginx purge the cache for a page when it gets edited. On the WordPress side, you need to install a plugin like [Nginx Helper](https://wordpress.org/plugins/nginx-helper) to utilize fastcgi_cache_purge feature.
+Nginx can perform caching on its own end to reduce the load on your server. When you want to use Nginx’s built-in fastcgi_cache, you better compile Nginx with [fastcgi_cache_purge](https://github.com/FRiCKLE/ngx_cache_purge) module. It will help Nginx purge the cache for a page when it gets edited. On the WordPress side, you need to install a plugin like [Nginx Helper](https://wordpress.org/plugins/nginx-helper) to utilize `fastcgi_cache_purge` feature.
 
 Config will look like below:
 
@@ -504,7 +506,7 @@ if ($http_cookie ~* "comment_author|wordpress_[a-f0-9]+|wp-postpass|wordpress_no
 
 *Then make changes to PHP handling block*
 
-Just add this to the following php block. Note the line `fastcgi_cache_valid 200 60m;` which tells nginx only to cache 200 responses(normal pages), which means that redirects are not cached. This is important for multilanguage sites where, if not implemented, Nginx would cache the main URL in one language instead of redirecting users to their respective content according to their language.
+Just add this to the following php block. Note the line `fastcgi_cache_valid 200 60m;` which tells nginx only to cache 200 responses (normal pages), which means that redirects are not cached. This is important for multilanguage sites where, if not implemented, Nginx would cache the main URL in one language instead of redirecting users to their respective content according to their language.
 
 ```
 fastcgi_cache_bypass $no_cache;
@@ -548,13 +550,13 @@ location ~ /purge(/.*) {
 }
 ```
 
-If you get an ‘unknown directive “fastcgi_cache_purge”‘ error check that your Nginx installation has fastcgi_cache_purge module.
+If you get an "unknown directive `fastcgi_cache_purge`" error check that your Nginx installation has `fastcgi_cache_purge` module.
 
 ### Better Performance for Static Files in Multisite
 
-By default, on a Multisite setup, a static file request brings php into picture i.e. ms-files.php file. You can get much better performance using Nginx Map{..} directive.
+By default, on a Multisite setup, a static file request brings PHP into picture i.e. `ms-files.php` file. You can get much better performance using Nginx `Map{...}` directive.
 
-In Nginx config for your site, above server{..} block, add a section as follows:
+In Nginx config for your site, above `server{...}` block, add a section as follows:
 
 ```
 map $http_host $blogid {
@@ -566,7 +568,7 @@ map $http_host $blogid {
 }
 ```
 
-It is just a list of site-names and blog-ids. You can use [Nginx helper](https://wordpress.org/plugins/nginx-helper) to get such a list of site-name/blog-id pairs. This plugin will also generate a map.conf file, which you can directly include in the map{} section like this:
+It is just a list of site-names and blog-ids. You can use [Nginx helper](https://wordpress.org/plugins/nginx-helper) to get such a list of site-name/blog-id pairs. This plugin will also generate a `map.conf` file, which you can directly include in the `map{...}` section like this:
 
 ```
 map $http_host $blogid {
@@ -576,7 +578,7 @@ map $http_host $blogid {
 }
 ```
 
-After creating a map{..} section, you just need to make one more change in your Nginx config so requests for /files/ will be first processed using Nginx map{..}:
+After creating a `map{...}` section, you just need to make one more change in your Nginx config so requests for `/files/` will be first processed using Nginx `map{...}`:
 
 ```
 location ~ ^/files/(.*)$ {
@@ -595,13 +597,13 @@ location ~ ^/files/(.*)$ {
 
 ### Notes
 
-A couple of final but important notes: This whole setup assumes that the root of the site is the blog and that all files that will be referenced reside on the host. If you put the blog in a subdirectory such as /blog, then the rules will have to be modified. Perhaps someone can take these rules and make it possible to, for instance, use a:
+A couple of final but important notes: This whole setup assumes that the root of the site is the blog and that all files that will be referenced reside on the host. If you put the blog in a subdirectory such as `/blog`, then the rules will have to be modified. Perhaps someone can take these rules and make it possible to, for instance, use a:
 
 ```
 set $wp_subdir "/blog";
 ```
 
-directive in the main ‘server’ block and have it automatically apply to the generic WP rules.
+directive in the main `server` block and have it automatically apply to the generic WP rules.
 
 ### Warning
 
