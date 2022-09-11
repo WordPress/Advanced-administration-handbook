@@ -9,40 +9,40 @@ For non-programmers or general users, these options can be used to show detailed
 The following code, inserted in your [wp-config.php](/support/article/editing-wp-config-php/) file, will log all errors, notices, and warnings to a file called debug.log in the wp-content directory. It will also hide the errors so they do not interrupt page generation.
 
 ```
-// Enable WP\_DEBUG mode
-define( 'WP\_DEBUG', true );
+// Enable WP_DEBUG mode
+define( 'WP_DEBUG', true );
 ```
 
 ```
 // Enable Debug logging to the /wp-content/debug.log file
-define( 'WP\_DEBUG\_LOG', true );
+define( 'WP_DEBUG\LOG', true );
 ```
 
 ```
 // Disable display of errors and warnings
-define( 'WP\_DEBUG\_DISPLAY', false );
-@ini\_set( 'display\_errors', 0 );
+define( 'WP_DEBUG_DISPLAY', false );
+@ini_set( 'display_errors', 0 );
 ```
 
 ```
 // Use dev versions of core JS and CSS files (only needed if you are modifying these core files)
-define( 'SCRIPT\_DEBUG', true );
+define( 'SCRIPT_DEBUG', true );
 ```
 
 **NOTE**: You must insert this **BEFORE** `/* That's all, stop editing! Happy blogging. */` in the [wp-config.php](/support/article/editing-wp-config-php/) file.
 
-## [WP\_DEBUG](#wp_debug)
+## [WP_DEBUG](#wp_debug)
 
 `WP_DEBUG` is a PHP constant (a permanent global variable) that can be used to trigger the “debug” mode throughout WordPress. It is assumed to be false by default and is usually set to true in the [wp-config.php](/support/article/editing-wp-config-php/) file on development copies of WordPress.
 
 ```
 // This enables debugging.
-define( 'WP\_DEBUG', true );
+define( 'WP_DEBUG', true );
 ```
 
 ```
 // This disables debugging.  
-define( 'WP\_DEBUG', false );
+define( 'WP_DEBUG', false );
 ```
 
 **Note**: The `true` and `false` values in the example are not surrounded by apostrophes (‘) because they are boolean (true/false) values. If you set constants to `'false'`, they will be interpreted as true because the quotes make it a string rather than a boolean.
@@ -59,7 +59,7 @@ Showing all PHP notices and warnings often results in error messages for things 
 
 Enabling `WP_DEBUG` will also cause notices about deprecated functions and arguments within WordPress that are being used on your site. These are functions or function arguments that have not been removed from the core code yet but are slated for deletion in the near future. Deprecation notices often indicate the new function that should be used instead.
 
-## [WP\_DEBUG\_LOG](#wp_debug_log)
+## [WP_DEBUG_LOG](#wp_debug_log)
 
 `WP_DEBUG_LOG` is a companion to WP\_DEBUG that causes all errors to also be saved to a debug.log log file This is useful if you want to review all notices later or need to view notices generated off-screen (e.g. during an AJAX request or wp-cron run).
 
@@ -68,26 +68,24 @@ Note that this allows you to write to log file using PHP’s built in `error_log
 When set to `true`, the log is saved to `debug.log` in the content directory (usually `wp-content/debug.log`) within your site’s filesystem. Alternatively, you can set it to a valid file path to have the file saved elsewhere.
 
 ```
-define( 'WP\_DEBUG\_LOG', true );
-```
+define( 'WP_DEBUG_LOG', true );
 -or-
-```
-define( 'WP\_DEBUG\_LOG', '/tmp/wp-errors.log' );
+define( 'WP_DEBUG_LOG', '/tmp/wp-errors.log' );
 ```
 
 **Note**: for `WP_DEBUG_LOG` to do anything, `WP_DEBUG` must be enabled (true). Remember you can turn off `WP_DEBUG_DISPLAY` independently.
 
-## [WP\_DEBUG\_DISPLAY](#wp_debug_display)
+## [WP_DEBUG_DISPLAY](#wp_debug_display)
 
 `WP_DEBUG_DISPLAY` is another companion to `WP_DEBUG` that controls whether debug messages are shown inside the HTML of pages or not. The default is ‘true’ which shows errors and warnings as they are generated. Setting this to false will hide all errors. This should be used in conjunction with `WP_DEBUG_LOG` so that errors can be reviewed later.
 
 ```
-define( 'WP\_DEBUG\_DISPLAY', false );
+define( 'WP_DEBUG_DISPLAY', false );
 ```
 
 **Note**: for `WP_DEBUG_DISPLAY` to do anything, `WP_DEBUG` must be enabled (true). Remember you can control `WP_DEBUG_LOG` independently.
 
-## [SCRIPT\_DEBUG](#script_debug)
+## [SCRIPT_DEBUG](#script_debug)
 
 `SCRIPT_DEBUG` is a related constant that will force WordPress to use the “dev” versions of core CSS and JavaScript files rather than the minified versions that are normally loaded. This is useful when you are testing modifications to any built-in .js or .css files. Default is false.
 
