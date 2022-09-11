@@ -4,7 +4,6 @@ ORIGINAL CONTENT:
 * https://wordpress.org/support/article/wordpress-backups/
 * https://wordpress.org/support/article/backing-up-your-database/
 * https://wordpress.org/support/article/backing-up-your-wordpress-files/
-* https://wordpress.org/support/article/configuring-automatic-background-updates/
 * https://wordpress.org/support/article/restoring-your-database-from-backup/
 
 ## Changelog
