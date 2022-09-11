@@ -1,9 +1,8 @@
 # Upgrading WordPress
 
 ORIGINAL CONTENT:
+* https://wordpress.org/support/article/configuring-automatic-background-updates/
 * https://wordpress.org/support/article/upgrading-wordpress-extended-instructions/
-
-
 
 ## Changelog
 
