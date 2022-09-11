@@ -183,8 +183,12 @@ Various plugins exist to take automatic scheduled backups of your WordPress data
 * [Using FileZilla](https://wordpress.org/support/article/using-filezilla/)
 
 
-
-
+=======
+ORIGINAL CONTENT:
+* https://wordpress.org/support/article/wordpress-backups/
+* https://wordpress.org/support/article/backing-up-your-database/
+* https://wordpress.org/support/article/backing-up-your-wordpress-files/
+* https://wordpress.org/support/article/restoring-your-database-from-backup/
 
 ## Changelog
 
