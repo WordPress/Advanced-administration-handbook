@@ -97,3 +97,7 @@ Based on [WordPress Advanced Administration Handbook](https://docs.google.com/do
     - [Using Your Browser to Diagnose JavaScript Errors](debug/debug-javascript.md)
     - [Test Driving WordPress](debug/test-driving.md)
   - [Resources](resources/index.md)
+
+## Some recommendations
+
+- When using an example domain, please, use _example.com_, _example.net_, _example.org_, _example.info_, or _example.biz_ (and whatever subdomain you want). The country domains have their own example names, like _dominio.es_, that probably need check. See [RFC 2606](https://www.rfc-editor.org/rfc/rfc2606), [.INFO Reserved Strings](https://www.icann.org/en/registry-agreements/info/info-registry-agreement--list-of-reserved-tld-strings-26-5-2010-en), [.BIZ Reserved Strings](https://www.icann.org/en/registry-agreements/biz/biz-registry-agreement--list-of-reserved-tld-strings-19-6-2009-en).
