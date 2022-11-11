@@ -2,7 +2,9 @@
 
 What version of [PHP](https://wordpress.org/support/article/glossary#php) are you using? What server software is your site host using? What version of [MySQL](https://wordpress.org/support/article/glossary#mysql) do you have? What operating system does your site host use?
 
-[IMG] ALT= Top of PHP Info test file results
+![php73win_phpinfo](https://user-images.githubusercontent.com/1508963/201365720-3a13ccab-c44c-43f2-8326-e3a997c5acfa.jpg)
+
+ALT= Top of PHP Info test file results
 
 These are questions often asked by WordPress users as they prepare to [install WordPress](https://wordpress.org/support/article/how-to-install-wordpress/). Other times, these questions are asked while troubleshooting a problem with a WordPress installation. But don’t spend at lot of time searching your site, or your host’s site, for the answers—there’s a very easy way to get that information.
 
