@@ -28,12 +28,13 @@ http://example.com/sffdsajk234.php
 
 The result will be several pages long and it will contain a ton of information. Though your data may be in a different order, for the most part, you just need the summary items that lists things like this:
 
-|---|---|
-| PHP | Version 7.3.0 |
-| System | Windows NT DESKTOP-LK01DAN 10.0 build 17763 (Windows 10) i586 |
-| Build Date | Dec 6 2018 01:51:18 |
-| Server API | Apache 2.0 Handler |
-| Apache Version | Apache/2.4.37 (Win32) OpenSSL/1.1.1a PHP/7.3.0 |
+|                |                                                               |
+| -------------- | ------------------------------------------------------------- |
+| PHP            | Version 7.3.0                                                 |
+| System         | Windows NT DESKTOP-LK01DAN 10.0 build 17763 (Windows 10) i586 |
+| Build Date     | Dec 6 2018 01:51:18                                           |
+| Server API     | Apache 2.0 Handler                                            |
+| Apache Version | Apache/2.4.37 (Win32) OpenSSL/1.1.1a PHP/7.3.0                |
 
 That’s it. Make sure you remember to delete the file once you’re done with it, because leaving it there could help hackers compromise your server.
 
