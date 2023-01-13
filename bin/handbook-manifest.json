@@ -83,6 +83,12 @@
         "markdown_source": "https:\/\/github.com\/WordPress\/WordPress-Advanced-administration-handbook\/blob\/master\/server\/web-server.md",
         "parent": "server"
     },
+    "server\/web-server\/nginx": {
+        "title": "Nginx",
+        "slug": "nginx",
+        "markdown_source": "https:\/\/github.com\/WordPress\/WordPress-Advanced-administration-handbook\/blob\/master\/server\/nginx.md",
+        "parent": "web-server"
+    },
     "server\/control-panel": {
         "title": "Control Panels",
         "slug": "control-panel",
