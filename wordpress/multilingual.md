@@ -1,10 +1,122 @@
 # Multilingual WordPress
 
-ORIGINAL CONTENT:
-* https://wordpress.org/support/article/multilingual-wordpress/
+WordPress does not support a bilingual or multilingual blog out-of-the-box. There are however Plugins developed by the WordPress community which will allow you to create a multilingual blog easily.
 
+Creating a mulitlingual blog is basically installing WordPress in more than one language and letting the Plugin switch between them. This includes installing .mo languages files which most Plugins will require you to do manually. See [Installing WordPress in Your Language](https://wordpress.org/support/article/installing-wordpress-in-your-language/) for details.
 
+The free [WPGlobus](https://wordpress.org/plugins/wpglobus/), [Polylang](https://wordpress.org/plugins/polylang/), [qTranslate-X](https://wordpress.org/plugins/qtranslate-x/), [xili-language](https://wordpress.org/plugins/xili-language/) or [Sublanguage](https://wordpress.org/plugins/sublanguage/) plugins are installable on standalone WordPress sites. For multisite WordPress (one website per language), you can try [Multisite Language Switcher](https://wordpress.org/plugins/multisite-language-switcher/), [Zanto](https://wordpress.org/plugins/zanto/) or [Multilingual Press](https://wordpress.org/plugins/multilingual-press/) or purchase [WPML](https://wpml.org/).
+
+## Different types of multilingual plugins {#different-types-of-multilingual-plugins}
+
+There are a few basic types of multilingual Plugins:
+
+1. Manage multilingual posts in one post per language (e.g. [WPML](https://wpml.org/) – paid, [xili-language](https://wordpress.org/plugins/xili-language/), [Polylang](https://wordpress.org/plugins/polylang/), [Bogo](https://wordpress.org/plugins/bogo/) or [Sublanguage](https://wordpress.org/plugins/sublanguage/)). Translations are then linked together, indicating that one page is the translation of another.
+2. Store all languages alternatives for each post in the same post (e.g. [qTranslate-X](https://wordpress.org/plugins/qtranslate-x/), [WPGlobus](https://wordpress.org/plugins/wpglobus/)).
+3. Manage translations on the generated page instead of using a post context (e.g. [Transposh](https://wordpress.org/plugins/transposh-translation-filter-for-wordpress) and [Global Translator](https://wordpress.org/plugins/global-translator/)).
+4. Plugins like [Multisite Language Switcher](https://wordpress.org/plugins/multisite-language-switcher/), [Multilingual Press](https://wordpress.org/plugins/multilingual-press/), and [Zanto](https://wordpress.org/plugins/zanto/), link together separate WordPress network (multisite) installations for each language by pinging back and forth.
+
+### One language per post {#one-language-per-post}
+
+Multilingual plugins that assign a single language per post will let the user select the post’s language and add translations as new posts (same for pages, tag and categories).
+
+Then, different versions of the same content are linked together to form translation groups. This grouping allows users to switch the display language.
+
+Pros:
+
+1. The database contents for posts remain unmodified (easy install and uninstall).
+2. Everything gets translated by default. If a post includes custom fields, they’re attached to that post, so they are already associated with the language.
+3. Some plugins use – for theme’s displayed terms – the language files (.mo) delivered with localizable themes. In WordPress, localization is based in [GNU gettext](https://make.wordpress.org/polyglots/handbook/#Localization_Technology) technology. So when a single post is in french, plugin switch all the terms of the theme in the same language (here french). The files can be completed with the specific terms of the site (categories titles, widget, links…). No need to re-translate all, just add specific terms and translations in target languages.
+4. Other plugins that analyze contents (like related posts) keep working correctly.
+
+Cons:
+
+1. More complex architecture. The plugin needs to hook to many WordPress functions and filter them so that only contents that matches the language is returned.
+2. Additional tables are required by some plugins – normally, to hold the translation grouping. Newer plugins likely use a custom taxonomy or post meta fields instead.
+3. May cause excessive database grow and slow performance as a result. A WooCommerce-based site having a 100,000 products will have 500,000 records after translating to 5 languages. All product metas (could be tens of those per product, and also transients will be duplicated, too, so the database might become huge).
+
+### All languages in a single post {#all-languages-in-a-single-post}
+
+Multilingual plugins that hold all the language contents in the same post use language meta tags to distinguish between contents in different languages. When the post is displayed, it’s first processed and only the active language content remains.
+
+Pros:
+
+1. Side by side editing is easily implemented.
+2. Less things to break. There are no additional tables and much fewer things to modify in WordPress.
+3. The search will find the same post, regardless on which language you used for the keyword.
+4. Number of records in the database stays the same.
+
+Cons:
+
+1. Uninstall can be complicated, as the database needs to be cleaned from multilingual contents.
+2. Post permalinks may not be translatable.
+
+### Manage translations on the generated page {#manage-translations-on-the-generated-page}
+
+Multilingual plugins that use the content pages generated by WordPress and perform translation on those pages. When any page is displayed on WordPress the plugin (either offline or online) attempts to create a translated version of the page using machine translation. Later on that translation can be manually changed or modified.
+
+Pros:
+
+1. Installation is simple and translation for any content on the page is provided.
+2. Editing the translation can be done with ease.
+
+Cons:
+
+1. Automatic translation is not good enough and pages on the site might be badly translated.
+2. There’s a strong coupling between content and translation, and changes in the original content might break the translation.
+
+### Plugins that direct you to external translation services {#plugins-that-direct-you-to-external-translation-services}
+
+Those Multilingual plugins are normally used to create a widget that creates a shortcut for using online translation services (such as Google Translate). The content is auto translated on demand by the third party engine.
+
+Pros:
+
+1. Installation is simple and translation for any content on the page is provided.
+2. It is quite clear that the translation process is automated, so the users expectations are lowered.
+
+Cons:
+
+1. Automatic translation is not good enough and pages on the site might be badly translated.
+2. Without the ability to change the translation those plugins limit the ability of the content publisher to provide quality translated content.
+
+### Each language in its own WordPress installation {#each-language-in-its-own-wordpress-installation}
+
+A separate site is created for each language you want to translate into (e.g. in a [WordPress Multisite](https://wordpress.org/support/article/create-a-network/) installation). All the sites need to run the same theme and plugin. When a translation is saved source posts get pinged by translation posts and the system keeps a separate table with the translation relationships.
+
+Pros:
+
+1. Each language site is a regular WordPress install with regular posts (postmeta and external db is used for translation data)
+2. If you turn off the plugin the content continues to work fine, albeit without knowledge of its sources/translations.
+
+Cons:
+
+1. Separate sites create more management needs which might be undesirable.
+
+## Language negotiation {#language-negotiation}
+
+Language negotiation means how to determine the language in which users see the site.
+
+Regardless of the solution for storing multilingual contents, multilingual plugins also need to be able to choose which language to display in.
+
+Normally, the URL indicates the display language. Different URL strategies for encoding language information are:
+
+* Add the language name as a parameter: example.com/?lang=en or example.com/?lang=es
+* Add virtual ‘directories’ as language names: example.com/en/ or example.com/es/
+* Use different domains for different languages: www.example.com or es.example.com
+
+## How to choose the right multilingual solution {#how-to-choose-the-right-multilingual-solution}
+
+Choosing the most suitable multilingual Plugin for your needs will take some time. See the [WordPress Plugin Directory](https://wordpress.org/plugins/search/multilingual) for a list of multilingual Plugins.
+
+There is not only one way but a way adapted to the content strategy, the data-model, the number of posts and pages, and the behavior/experience expected by visitors. And for WordPress Network (multisite), a good knowledge of server administration is required.
+
+In any case, installing a multilingual plugin is a big change for any site. It would be a good idea to first create a test site and verify that everything works correctly between all the required plugins and the theme and only then install.
+
+Since many multilingual plugins change the database significantly, doing a [database backup](https://wordpress.org/support/article/backing-up-your-database/) is required before experimenting.
+
+## Related {#related}
+
+* [WordPress in Your Language](https://wordpress.org/support/article/installing-wordpress-in-your-language/)
 
 ## Changelog
 
-- 2022-09-04: Nothing here, yet.
+- 2022-10-25: Copied the [original content](https://wordpress.org/support/article/multilingual-wordpress/)
