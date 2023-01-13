@@ -245,6 +245,12 @@
         "markdown_source": "https:\/\/github.com\/WordPress\/WordPress-Advanced-administration-handbook\/blob\/master\/security\/index.md",
         "parent": "handbook"
     },
+    "security\/logging-in": {
+        "title": "Your password",
+        "slug": "logging-in",
+        "markdown_source": "https:\/\/github.com\/WordPress\/WordPress-Advanced-administration-handbook\/blob\/master\/security\/logging-in.md",
+        "parent": "security"
+    },
     "security\/backup": {
         "title": "Backups",
         "slug": "backup",

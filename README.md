@@ -64,6 +64,7 @@ Based on [WordPress Advanced Administration Handbook](https://docs.google.com/do
     - [Must Use Plugins](plugins/mu-plugins.md)
   - [Themes](themes/index.md)
   - [Security](security/index.md)
+		- [Your password](security/logging-in.md)
     - [Backups](security/backup.md)
     - [Security](security/security.md)
   - [Performance / Optimization](performance/index.md)
