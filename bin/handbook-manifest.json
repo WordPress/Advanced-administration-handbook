@@ -41,6 +41,12 @@
 		"markdown_source": "https:\/\/github.com\/WordPress\/WordPress-Advanced-administration-handbook\/blob\/master\/before-install\/multiple-instances.md",
 		"parent": "before-install"
 	},
+	"before-install\/popular-providers": {
+		"title": "Install WordPress at popular providers",
+		"slug": "popular-providers",
+		"markdown_source": "https:\/\/github.com\/WordPress\/WordPress-Advanced-administration-handbook\/blob\/master\/before-install\/popular-providers.md",
+		"parent": "before-install"
+	},
 	"server": {
 		"title": "Server configuration",
 		"slug": "server",
@@ -137,6 +143,12 @@
 		"markdown_source": "https:\/\/github.com\/WordPress\/WordPress-Advanced-administration-handbook\/blob\/master\/wordpress\/css.md",
 		"parent": "wordpress"
 	},
+	"wordpress\/feed": {
+		"title": "Feeds",
+		"slug": "feed",
+		"markdown_source": "https:\/\/github.com\/WordPress\/WordPress-Advanced-administration-handbook\/blob\/master\/wordpress\/feed.md",
+		"parent": "wordpress"
+	},
 	"wordpress\/multilingual": {
 		"title": "Multilingual WordPress",
 		"slug": "multilingual",
@@ -147,6 +159,18 @@
 		"title": "oEmbed",
 		"slug": "oembed",
 		"markdown_source": "https:\/\/github.com\/WordPress\/WordPress-Advanced-administration-handbook\/blob\/master\/wordpress\/oembed.md",
+		"parent": "wordpress"
+	},
+	"wordpress\/loopback": {
+		"title": "Loopbacks",
+		"slug": "loopback",
+		"markdown_source": "https:\/\/github.com\/WordPress\/WordPress-Advanced-administration-handbook\/blob\/master\/wordpress\/loopback.md",
+		"parent": "wordpress"
+	},
+	"wordpress\/common-errors": {
+		"title": "Common errors",
+		"slug": "common-errors",
+		"markdown_source": "https:\/\/github.com\/WordPress\/WordPress-Advanced-administration-handbook\/blob\/master\/wordpress\/common-errors.md",
 		"parent": "wordpress"
 	},
 	"upgrade": {
@@ -219,6 +243,12 @@
 		"title": "Network Admin",
 		"slug": "admin",
 		"markdown_source": "https:\/\/github.com\/WordPress\/WordPress-Advanced-administration-handbook\/blob\/master\/multisite\/admin.md",
+		"parent": "multisite"
+	},
+	"multisite\/sites-multisite": {
+		"title": "Migrate WordPress sites into WordPress Multisite",
+		"slug": "sites-multisite",
+		"markdown_source": "https:\/\/github.com\/WordPress\/WordPress-Advanced-administration-handbook\/blob\/master\/multisite\/sites-multisite.md",
 		"parent": "multisite"
 	},
 	"plugins": {
