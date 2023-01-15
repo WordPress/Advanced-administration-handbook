@@ -1,16 +1,16 @@
 # wp-config.php
 
 TEMPORALLY NOTE: this may link for the simple part, to:
-* https://developer.wordpress.org/apis/wp-config-php/
-* https://wordpress.org/support/article/debugging-in-wordpress/
+* https://developer.wordpress.org/advanced-administration/wordpress/wp-config/
+* https://developer.wordpress.org/advanced-administration/debug/debug-wordpress/
 
 ## Advanced Options {#advanced-options}
 
-The following sections may contain advanced information and some changes might result in unforeseen issues. Please make sure you practice [regular backups](https://wordpress.org/support/article/wordpress-backups/) and know how to restore them before modifying these settings.
+The following sections may contain advanced information and some changes might result in unforeseen issues. Please make sure you practice [regular backups](https://developer.wordpress.org/advanced-administration/security/backup/) and know how to restore them before modifying these settings.
 
 ### table_prefix {#table-prefix}]
 
-The **$table_prefix** is the value placed in the front of your database tables. Change the value if you want to use something other than **wp_** for your database prefix. Typically this is changed if you are [installing multiple WordPress blogs](https://wordpress.org/support/article/installing-multiple-blogs/) in the same database, as is done with the multisite feature.
+The **$table_prefix** is the value placed in the front of your database tables. Change the value if you want to use something other than **wp_** for your database prefix. Typically this is changed if you are [installing multiple WordPress blogs](https://developer.wordpress.org/advanced-administration/before-install/multiple-instances/) in the same database, as is done with the multisite feature.
 
 It is possible to have multiple installations in one database if you give each a unique prefix. Keep security in mind if you choose to do this.
 
@@ -50,7 +50,7 @@ Similar to WP_SITEURL, WP_HOME _overrides the [wp_options table](https://codex.
 define( 'WP_HOME', 'http://example.com/wordpress' );
 ```
 
-If you are using the technique described in [Giving WordPress Its Own Directory](https://wordpress.org/support/article/giving-wordpress-its-own-directory/) then follow the example below. Remember, you will also be placing an `index.php` in your web-root directory if you use a setting like this.
+If you are using the technique described in [Giving WordPress Its Own Directory](https://developer.wordpress.org/advanced-administration/server/wordpress-in-directory/) then follow the example below. Remember, you will also be placing an `index.php` in your web-root directory if you use a setting like this.
 
 ```
 define( 'WP_HOME', 'http://example.com' );
@@ -108,7 +108,7 @@ $theme_root = WP_CONTENT_DIR . '/themes';
 
 However, you can register additional theme directories using [register_theme_directory](https://developer.wordpress.org/reference/functions/register_theme_directory/).
 
-See how to [move the wp-content](https://wordpress.org/support/article/editing-wp-config-php/) folder. For more details how the themes folder is determined, see `wp-includes/theme.php`.
+See how to [move the wp-content](https://developer.wordpress.org/advanced-administration/wordpress/wp-config/) folder. For more details how the themes folder is determined, see `wp-includes/theme.php`.
 
 ### Moving uploads folder {#moving-uploads-folder}
 
@@ -221,7 +221,7 @@ Note: When `development` is returned by [wp_get_environment_type()](https://deve
 
 ### SCRIPT_DEBUG {#script-debug}
 
-[SCRIPT_DEBUG](https://wordpress.org/support/article/debugging-in-wordpress/) is a related constant that will force WordPress to use the "dev" versions of scripts and stylesheets in `wp-includes/js`, `wp-includes/css`, `wp-admin/js`, and `wp-admin/css` will be loaded instead of the `.min.css` and `.min.js` versions.. If you are planning on modifying some of WordPress' built-in JavaScript or Cascading Style Sheets, you should add the following code to your config file:
+[SCRIPT_DEBUG](https://developer.wordpress.org/advanced-administration/debug/debug-wordpress/) is a related constant that will force WordPress to use the "dev" versions of scripts and stylesheets in `wp-includes/js`, `wp-includes/css`, `wp-admin/js`, and `wp-admin/css` will be loaded instead of the `.min.css` and `.min.js` versions.. If you are planning on modifying some of WordPress' built-in JavaScript or Cascading Style Sheets, you should add the following code to your config file:
 
 ```
 define( 'SCRIPT_DEBUG', true );
@@ -614,7 +614,7 @@ define( 'DISALLOW_FILE_MODS', true );
 
 **Note:** WordPress [Version 4.0](https://codex.wordpress.org/Version_4.0) deprecated FORCE_SSL_LOGIN. Please use FORCE_SSL_ADMIN.
 
-FORCE_SSL_ADMIN is for when you want to secure logins and the admin area so that both passwords and cookies are never sent in the clear. See also [Administration_Over_SSL](https://wordpress.org/support/article/administration-over-ssl/) for more details.
+FORCE_SSL_ADMIN is for when you want to secure logins and the admin area so that both passwords and cookies are never sent in the clear. See also [HTTPS](https://developer.wordpress.org/advanced-administration/security/https/) for more details.
 
 ```
 define( 'FORCE_SSL_ADMIN', true );

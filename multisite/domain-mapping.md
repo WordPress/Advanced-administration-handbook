@@ -30,9 +30,9 @@ define( 'COOKIE_DOMAIN', $_SERVER['HTTP_HOST'] );
 
 ## Related Articles {#related-articles}
 
-1. [Create A Network](https://wordpress.org/support/article/create-a-network/)
-2. [MultiSite Network Administration](https://wordpress.org/support/article/multisite-network-administration/)
-3. [Installing Multiple Blogs](https://wordpress.org/support/article/installing-multiple-blogs/)
+1. [Create A Network](https://developer.wordpress.org/advanced-administration/multisite/create-network/)
+2. [MultiSite Network Administration](https://developer.wordpress.org/advanced-administration/multisite/administration/)
+3. [Installing Multiple Blogs](https://developer.wordpress.org/advanced-administration/before-install/multiple-instances/)
 
 ## Changelog
 

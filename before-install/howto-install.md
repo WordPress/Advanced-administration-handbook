@@ -4,8 +4,8 @@ WordPress is well-known for its ease of installation. Under most circumstances, 
 
 ## Things to Know Before Installing WordPress
 
-Before you begin the install, there are a few things you need to have and do. Refer the article [Before You Install.](https://wordpress.org/support/article/before-you-install/)
-If you need multiple WordPress instances, refer [Installing Multiple WordPress Instances.](https://wordpress.org/support/article/installing-multiple-blogs/)
+Before you begin the install, there are a few things you need to have and do. Refer the article [Before You Install](https://developer.wordpress.org/advanced-administration/before-install/).
+If you need multiple WordPress instances, refer [Installing Multiple WordPress Instances.](https://developer.wordpress.org/advanced-administration/before-install/multiple-instances/)
 
 ## Basic Instructions
 
@@ -13,7 +13,7 @@ Here's the quick version of the instructions for those who are already comfortab
 
 1. Download and unzip the WordPress package if you haven't already.
 2. Create a database for WordPress on your web server, as well as a [MySQL](https://wordpress.org/support/article/glossary/#mysql) (or MariaDB) user who has all privileges for accessing and modifying it.
-3. (Optional) Find and rename `wp-config-sample.php` to `wp-config.php`, then edit the file [(see Editing wp-config.php)](https://wordpress.org/support/article/editing-wp-config-php/) and add your database information.
+3. (Optional) Find and rename `wp-config-sample.php` to `wp-config.php`, then edit the file [(see Editing wp-config.php)](https://developer.wordpress.org/advanced-administration/wordpress/wp-config/) and add your database information.
 **Note:** If you are not comfortable with renaming files, step 3 is optional and you can skip it as the install program will create the `wp-config.php` file for you.
 4. Upload the WordPress files to the desired location on your web server:
     - If you want to integrate WordPress into the root of your domain (e.g. `http://example.com/`), move or upload all contents of the unzipped WordPress directory (excluding the WordPress directory itself) into the root directory of your web server.
@@ -43,7 +43,7 @@ Download and unzip the WordPress package from [wordpress.org/download/](https://
 
 If you are using a [hosting provider](https://wordpress.org/support/article/glossary/#hosting-provider), you may already have a WordPress database set up for you, or there may be an automated setup solution to do so. Check your hosting provider's support pages or your control panel for clues about whether or not you'll need to create one manually.
 
-If you determine that you'll need to create one manually, follow the instructions for Using phpMyAdmin below to create your WordPress username and database. For other tools such as Plesk, cPanel and Using the MySQL Client, refer the article [Creating Database for WordPress.](https://wordpress.org/support/article/creating-database-for-wordpress/)
+If you determine that you'll need to create one manually, follow the instructions for Using phpMyAdmin below to create your WordPress username and database. For other tools such as Plesk, cPanel and Using the MySQL Client, refer the article [Creating Database for WordPress.](https://developer.wordpress.org/advanced-administration/before-install/creating-database/)
 
 If you have only one database and it is already in use, you can install WordPress in it – just make sure to have a distinctive prefix for your tables to avoid over-writing any existing database tables.
 
@@ -75,11 +75,11 @@ _**Note:** These instructions are written for phpMyAdmin 4.4; the phpMyAdmin use
 ### Step 3: Set up wp-config.php {#detailed-step-3}
 You can either create and edit the wp-config.php file yourself, or you can skip this step and let WordPress try to do this itself when you run the installation script (step 5). (you'll still need to tell WordPress your database information).
 
-(For more extensive details, and step by step instructions for creating the configuration file and your secret key for password security, please see [Editing wp-config.php.](https://wordpress.org/support/article/editing-wp-config-php/))
+(For more extensive details, and step by step instructions for creating the configuration file and your secret key for password security, please see [Editing wp-config.php](https://developer.wordpress.org/advanced-administration/wordpress/wp-config/)).
 
 Return to where you extracted the WordPress package in Step 1, rename the file wp-config-sample.php to wp-config.php, and open it in a text editor.
 
-[Enter your database information](https://wordpress.org/support/article/editing-wp-config-php/#configure-database-settings) under the section labeled
+[Enter your database information](https://developer.wordpress.org/advanced-administration/wordpress/wp-config/#configure-database-settings) under the section labeled
 
 ```
  // ** MySQL settings - You can get this info from your web host ** //
@@ -92,13 +92,13 @@ Return to where you extracted the WordPress package in Step 1, rename the file w
 **DB_PASSWORD** 
     The password you chose for the WordPress username in Step 2.
 **DB_HOST** 
-    The hostname you determined in Step 2 (usually localhost, but not always; see [some possible DB_HOST values](https://wordpress.org/support/article/editing-wp-config-php/#set-database-host)). If a port, socket, or pipe is necessary, append a colon (:) and then the relevant information to the hostname.
+    The hostname you determined in Step 2 (usually localhost, but not always; see [some possible DB_HOST values](https://developer.wordpress.org/advanced-administration/wordpress/wp-config/#set-database-host)). If a port, socket, or pipe is necessary, append a colon (:) and then the relevant information to the hostname.
 **DB_CHARSET**
-The database character set, normally should not be changed (see [Editing wp-config.php](https://wordpress.org/support/article/editing-wp-config-php/)).
+The database character set, normally should not be changed (see [Editing wp-config.php](https://developer.wordpress.org/advanced-administration/wordpress/wp-config/)).
 **DB_COLLATE**
-The database collation should normally be left blank (see [Editing wp-config.php](https://wordpress.org/support/article/editing-wp-config-php/)).
+The database collation should normally be left blank (see [Editing wp-config.php](https://developer.wordpress.org/advanced-administration/wordpress/wp-config/)).
 
-[Enter your secret key values](https://wordpress.org/support/article/editing-wp-config-php/) under the section labeled
+[Enter your secret key values](https://developer.wordpress.org/advanced-administration/wordpress/wp-config/) under the section labeled
 ```
   * Authentication Unique Keys and Salts.
 ```
@@ -131,7 +131,7 @@ Point a web browser to start the installation script.
 
 #### Setup configuration file
 
-If WordPress can't find the wp-config.php file, it will tell you and offer to try to create and edit the file itself. (You can also do this directly by loading `wp-admin/setup-config.php` in your web browser.) WordPress will ask you the database details and write them to a new wp-config.php file. If this works, you can go ahead with the installation; otherwise, go back and [create, edit, and upload the wp-config.php file yourself (step 3).](https://wordpress.org/support/article/how-to-install-wordpress/#step-3-set-up-wp-config-php)
+If WordPress can't find the wp-config.php file, it will tell you and offer to try to create and edit the file itself. (You can also do this directly by loading `wp-admin/setup-config.php` in your web browser.) WordPress will ask you the database details and write them to a new wp-config.php file. If this works, you can go ahead with the installation; otherwise, go back and [create, edit, and upload the wp-config.php file yourself (step 3).](https://developer.wordpress.org/advanced-administration/before-install/howto-install/#step-3-set-up-wp-config-php)
 
 ![The WordPress setup screen](https://wordpress.org/support/files/2018/10/install-step3_v47.png)
 

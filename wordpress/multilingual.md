@@ -2,7 +2,7 @@
 
 WordPress does not support a bilingual or multilingual blog out-of-the-box. There are however Plugins developed by the WordPress community which will allow you to create a multilingual blog easily.
 
-Creating a mulitlingual blog is basically installing WordPress in more than one language and letting the Plugin switch between them. This includes installing .mo languages files which most Plugins will require you to do manually. See [Installing WordPress in Your Language](https://wordpress.org/support/article/installing-wordpress-in-your-language/) for details.
+Creating a mulitlingual blog is basically installing WordPress in more than one language and letting the Plugin switch between them. This includes installing .mo languages files which most Plugins will require you to do manually. See [Installing WordPress in Your Language](https://developer.wordpress.org/advanced-administration/before-install/in-your-language/) for details.
 
 The free [WPGlobus](https://wordpress.org/plugins/wpglobus/), [Polylang](https://wordpress.org/plugins/polylang/), [qTranslate-X](https://wordpress.org/plugins/qtranslate-x/), [xili-language](https://wordpress.org/plugins/xili-language/) or [Sublanguage](https://wordpress.org/plugins/sublanguage/) plugins are installable on standalone WordPress sites. For multisite WordPress (one website per language), you can try [Multisite Language Switcher](https://wordpress.org/plugins/multisite-language-switcher/), [Zanto](https://wordpress.org/plugins/zanto/) or [Multilingual Press](https://wordpress.org/plugins/multilingual-press/) or purchase [WPML](https://wpml.org/).
 
@@ -80,7 +80,7 @@ Cons:
 
 ### Each language in its own WordPress installation {#each-language-in-its-own-wordpress-installation}
 
-A separate site is created for each language you want to translate into (e.g. in a [WordPress Multisite](https://wordpress.org/support/article/create-a-network/) installation). All the sites need to run the same theme and plugin. When a translation is saved source posts get pinged by translation posts and the system keeps a separate table with the translation relationships.
+A separate site is created for each language you want to translate into (e.g. in a [WordPress Multisite](https://developer.wordpress.org/advanced-administration/multisite/create-network/) installation). All the sites need to run the same theme and plugin. When a translation is saved source posts get pinged by translation posts and the system keeps a separate table with the translation relationships.
 
 Pros:
 
@@ -111,11 +111,11 @@ There is not only one way but a way adapted to the content strategy, the data-mo
 
 In any case, installing a multilingual plugin is a big change for any site. It would be a good idea to first create a test site and verify that everything works correctly between all the required plugins and the theme and only then install.
 
-Since many multilingual plugins change the database significantly, doing a [database backup](https://wordpress.org/support/article/backing-up-your-database/) is required before experimenting.
+Since many multilingual plugins change the database significantly, doing a [database backup](https://developer.wordpress.org/advanced-administration/security/backup/database/) is required before experimenting.
 
 ## Related {#related}
 
-* [WordPress in Your Language](https://wordpress.org/support/article/installing-wordpress-in-your-language/)
+* [WordPress in Your Language](https://developer.wordpress.org/advanced-administration/before-install/in-your-language/)
 
 ## Changelog
 

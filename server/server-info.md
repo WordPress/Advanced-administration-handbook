@@ -6,7 +6,7 @@ What version of [PHP](https://wordpress.org/support/article/glossary#php) are yo
 
 ALT= Top of PHP Info test file results
 
-These are questions often asked by WordPress users as they prepare to [install WordPress](https://wordpress.org/support/article/how-to-install-wordpress/). Other times, these questions are asked while troubleshooting a problem with a WordPress installation. But don’t spend at lot of time searching your site, or your host’s site, for the answers—there’s a very easy way to get that information.
+These are questions often asked by WordPress users as they prepare to [install WordPress](https://developer.wordpress.org/advanced-administration/before-install/howto-install/). Other times, these questions are asked while troubleshooting a problem with a WordPress installation. But don’t spend at lot of time searching your site, or your host’s site, for the answers—there’s a very easy way to get that information.
 
 The easiest way to collect the information is to make use of a PHP function called phpinfo(). The phpinfo() function will query your (or your host’s) server and generate a report with a long list of data. Note: Remember to bookmark this page, because, in the future, a volunteer in the [WordPress Support Forum](https://www.wordpress.org/support/forums/) may ask you to use this method to get information to assist them in troubleshooting a question you asked on the Support Forum.
 

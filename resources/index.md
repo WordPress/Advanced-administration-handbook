@@ -34,7 +34,7 @@ Beyond that, these are some resources you might find helpful for each of the lan
 
 ## CSS
 
-If this is your first time using CSS with WordPress, [this document](https://wordpress.org/support/article/css/) provides a fantastic overview
+If this is your first time using CSS with WordPress, [this document](https://developer.wordpress.org/advanced-administration/wordpress/css/) provides a fantastic overview
 
 Other than that, these are some solid resources for you to review:
 

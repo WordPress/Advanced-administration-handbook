@@ -598,7 +598,7 @@ directive in the main ‘server’ block and have it automagically apply to the 
 
 ## Warning
 
-A typo in [Global restrictions file](https://wordpress.org/support/article/nginx/#global-restrictions-file) can create loopholes. To test if your “uploads” directory is really protected, create a PHP file with some content (example: <?php phpinfo(); ?>), upload it to “uploads” directory (or one of its sub-directories), then try to access (execute) it from your browser.
+A typo in [Global restrictions file](https://developer.wordpress.org/advanced-administration/server/web-server/nginx/#global-restrictions-file) can create loopholes. To test if your “uploads” directory is really protected, create a PHP file with some content (example: <?php phpinfo(); ?>), upload it to “uploads” directory (or one of its sub-directories), then try to access (execute) it from your browser.
 
 ## Resources
 

@@ -2,9 +2,9 @@
 
 > It is strongly recommended that you backup your database at regular intervals and before an upgrade.
 
-[Restoring your database from backup](https://wordpress.org/support/article/restoring-your-database-from-backup/) is then possible if something goes wrong. 
+[Restoring your database from backup](https://developer.wordpress.org/advanced-administration/security/backup/) is then possible if something goes wrong. 
 
-**NOTE:** Below steps backup core WordPress database that include all your posts, pages and comments, but DO NOT backup the files and folders such as images, theme files on the server. For whole WordPress site backup, refer [WordPress Backups](https://wordpress.org/support/article/wordpress-backups/).
+**NOTE:** Below steps backup core WordPress database that include all your posts, pages and comments, but DO NOT backup the files and folders such as images, theme files on the server. For whole WordPress site backup, refer [WordPress Backups](https://developer.wordpress.org/advanced-administration/security/backup/).
 
 ### Backup using cPanel X {#backup-using-cpanel-x}
 
@@ -14,7 +14,7 @@ There is no need to unzip this file to restore it. Using the same cPanel program
 
 ### Using phpMyAdmin {#using-phpmyadmin}
 
-[phpMyAdmin](https://wordpress.org/support/article/phpmyadmin/) is the name of the program used to manipulate your database.
+[phpMyAdmin](https://developer.wordpress.org/advanced-administration/upgrade/phpmyadmin/) is the name of the program used to manipulate your database.
 
 Information below has been tried and tested using phpMyAdmin version 4.4.13 connects to MySQL version 5.6.28 running on Linux.
 
@@ -177,7 +177,7 @@ In addition to MySQL Workbench, there are many GUI tools that let you backup (ex
 
 | Name | OS (Paid edition) | OS (Free edition) | |
 |---|---|---|
-| [MySQL Workbench](http://www.mysql.com/products/workbench/) | Windows/Mac/Linux | Windows/Mac/Linux | See [above](https://wordpress.org/support/article/backing-up-your-database/#Using_MySQL_Workbench) |
+| [MySQL Workbench](http://www.mysql.com/products/workbench/) | Windows/Mac/Linux | Windows/Mac/Linux | See [above](https://developer.wordpress.org/advanced-administration/security/backup/database/#Using_MySQL_Workbench) |
 | [EMS SQL Management Studio for MySQL](http://sqlmanager.net/en/products/studio/mysql) | Windows | | |
 | [Aqua Data Studio](http://www.aquafold.com/) | Windows/Mac/Linux | Windows/Mac/Linux (14 days trial) | Available in 9 languages |
 | [Navicat for MySQL](https://www.navicat.com/en/products/navicat-for-mysql) | Windows/Mac/Linux | Windows/Mac/Linux (14 days trial) | Available in 8 languages |
@@ -214,12 +214,12 @@ The instructions below are for the plugin called [WP-DB-Backup:](https://wordpre
 
 #### Restoring the Data {#restoring-the-data}
 
-The file created is a standard SQL file. If you want information about how to upload that file, look at [Restoring Your Database From Backup](https://wordpress.org/support/article/restoring-your-database-from-backup/).
+The file created is a standard SQL file. If you want information about how to upload that file, look at [Restoring Your Database From Backup](https://developer.wordpress.org/advanced-administration/security/backup/).
 
 ### More Resources {#more-resources}
 
 * [Backup Plugins on the official WordPress.org repository](https://wordpress.org/plugins/search.php?q=backup)
-* [WordPress Backups](https://wordpress.org/support/article/wordpress-backups/)
+* [WordPress Backups](https://developer.wordpress.org/advanced-administration/security/backup/)
 
 ### External Resources {#external-resources}
 
@@ -229,9 +229,9 @@ The file created is a standard SQL file. If you want information about how to up
 
 ### Using phpMyAdmin {#using-phpmyadmin}
 
-[phpMyAdmin](https://wordpress.org/support/article/phpmyadmin/) is a program used to manipulate databases remotely through a web interface. A good hosting package will have this included. For information on backing up your WordPress database, see [Backing Up Your Database](https://wordpress.org/support/article/backing-up-your-database/).
+[phpMyAdmin](https://developer.wordpress.org/advanced-administration/upgrade/phpmyadmin/) is a program used to manipulate databases remotely through a web interface. A good hosting package will have this included. For information on backing up your WordPress database, see [Backing Up Your Database](https://developer.wordpress.org/advanced-administration/security/backup/database/).
 
-Information here has been tested using [phpMyAdmin](https://wordpress.org/support/article/phpmyadmin/) 4.0.5 running on Unix.
+Information here has been tested using [phpMyAdmin](https://developer.wordpress.org/advanced-administration/upgrade/phpmyadmin/) 4.0.5 running on Unix.
 
 The following instructions will **replace** your current database with the backup, **reverting** your database to the state it was in when you backed up.
 
@@ -239,7 +239,7 @@ The following instructions will **replace** your current database with the backu
 
 Using phpMyAdmin, follow the steps below to restore a MySQL/MariaDB database.
 
-1. Login to [phpMyAdmin](https://wordpress.org/support/article/phpmyadmin/).
+1. Login to [phpMyAdmin](https://developer.wordpress.org/advanced-administration/upgrade/phpmyadmin/).
 2. Click "Databases" and select the database that you will be importing your data into.
 3. You will then see either a list of tables already inside that database or a screen that says no tables exist. This depends on your setup.
 4. Across the top of the screen will be a row of tabs. Click the **Import** tab.
@@ -256,7 +256,7 @@ If you get an error message, your best bet is to post to the [WordPress support 
 
 The restore process consists of unarchiving your archived database dump, and importing it into your MySQL/MariaDB database.
 
-Assuming your backup is a `.bz2` file, created using instructions similar to those given for [Backing up your database using MySQL/MariaDB commands](https://wordpress.org/support/article/backing-up-your-database/#using-straight-mysqlmariadb-commands), the following steps will guide you through restoring your database:
+Assuming your backup is a `.bz2` file, created using instructions similar to those given for [Backing up your database using MySQL/MariaDB commands](https://developer.wordpress.org/advanced-administration/security/backup/database/#using-straight-mysqlmariadb-commands), the following steps will guide you through restoring your database:
 
 1. Unzip your `.bz2` file:
 
@@ -282,4 +282,4 @@ user@linux:~/files/blog>
 
 ## Changelog
 
-- 2022-10-25: Original content from [Backing Up Your Database](https://wordpress.org/support/article/backing-up-your-database/).
+- 2022-10-25: Original content from [Backing Up Your Database](https://developer.wordpress.org/advanced-administration/security/backup/database/).

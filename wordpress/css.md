@@ -4,7 +4,7 @@ WordPress relies heavily on the presentation styles within CSS. With the use of�
 
 [CSS](https://wordpress.org/support/article/glossary/#css) stands for **Cascading Style Sheets**. It allows you to store style presentation information (like colors and layout) separate from your HTML structure. This allows precision control of your website layout and makes your pages faster and easier to update.
 
-This article briefly describes the use of CSS in WordPress, and lists some references for further information. For information on CSS itself, see [Know Your Sources#CSS](https://codex.wordpress.org/Know_Your_Sources#CSS).
+This article briefly describes the use of CSS in WordPress, and lists some references for further information. For information on CSS itself, see [Resources for Building on WordPress#CSS](https://developer.wordpress.org/advanced-administration/resources/#CSS).
 
 ## [WordPress and CSS](#wordpress-and-css)
 
@@ -12,7 +12,7 @@ WordPress Themes use a combination of [template files](https://codex.wordpress.
 
 ### [Template Files](#template-files)
 
-[Template files](https://codex.wordpress.org/Stepping_Into_Templates) are the building blocks which come together to create your site. In the [WordPress Theme structure](https://codex.wordpress.org/Site_Architecture_1.5), the header, sidebar, content, and footer are all contained within individual files. They join together to create your page. This allows you to customize the building blocks. For example, in the default WordPress Theme, the multi-post view found on the front page, category, [archives](https://codex.wordpress.org/Creating_an_Archive_Index), and [search](https://codex.wordpress.org/Creating_a_Search_Page) web pages on your site, the sidebar is present. Click on any post, you will be taken to the single post view and the sidebar will now be gone. You can [choose which parts and pieces appear](https://codex.wordpress.org/The_Loop_in_Action) on your page, and customize them individually, allowing for a different header or sidebar to appear on all pages within a specific category. And more. For a more extensive introduction to Templates, see [Stepping Into Templates](https://codex.wordpress.org/Stepping_Into_Templates).
+[Template files](https://codex.wordpress.org/Stepping_Into_Templates) are the building blocks which come together to create your site. In the [WordPress Theme structure](https://developer.wordpress.org/advanced-administration/wordpress/site-architecture/), the header, sidebar, content, and footer are all contained within individual files. They join together to create your page. This allows you to customize the building blocks. For example, in the default WordPress Theme, the multi-post view found on the front page, category, [archives](https://codex.wordpress.org/Creating_an_Archive_Index), and [search](https://codex.wordpress.org/Creating_a_Search_Page) web pages on your site, the sidebar is present. Click on any post, you will be taken to the single post view and the sidebar will now be gone. You can [choose which parts and pieces appear](https://codex.wordpress.org/The_Loop_in_Action) on your page, and customize them individually, allowing for a different header or sidebar to appear on all pages within a specific category. And more. For a more extensive introduction to Templates, see [Stepping Into Templates](https://codex.wordpress.org/Stepping_Into_Templates).
 
 ### [Template Tags](#template-tags)
 
@@ -181,7 +181,7 @@ If you are having some problems or questions about your WordPress Theme or layou
 * [CSS Fixing Browser Bugs](https://codex.wordpress.org/CSS_Fixing_Browser_Bugs)
 * [CSS Coding Standards](https://developer.wordpress.org/coding-standards/wordpress-coding-standards/css/)
 * [CSS Shorthand](https://codex.wordpress.org/CSS_Shorthand)
-* [Know Your Sources#CSS](https://codex.wordpress.org/Know_Your_Sources#CSS)
+* [Resources for Building on WordPress#CSS](https://developer.wordpress.org/advanced-administration/resources/#CSS)
 * [Conditional Comment CSS](https://codex.wordpress.org/Conditional_Comment_CSS)
 * [Validating a Website](https://codex.wordpress.org/Validating_a_Website)
 

@@ -90,7 +90,7 @@ Your web host should be making sure that their network is not compromised by att
 
 Many potential vulnerabilities can be avoided with good security habits. A strong password is an important aspect of this.
 
-The goal with your password is to make it hard for other people to guess and hard for a [brute force attack](https://wordpress.org/support/article/brute-force-attacks/) to succeed. Many [automatic password generators](http://www.google.com/?q=password+generator) are available that can be used to create secure passwords.
+The goal with your password is to make it hard for other people to guess and hard for a [brute force attack](https://developer.wordpress.org/advanced-administration/security/brute-force/) to succeed. Many [automatic password generators](http://www.google.com/?q=password+generator) are available that can be used to create secure passwords.
 
 WordPress also features a password strength meter which is shown when changing your password in WordPress. Use this when changing your password to ensure its strength is adequate.
 
@@ -103,7 +103,7 @@ Things to avoid when choosing a password:
 
 A strong password is necessary not just to protect your blog content. A hacker who gains access to your administrator account is able to install malicious scripts that can potentially compromise your entire server.
 
-In addition to using a strong password, it's a good idea to enable [two-step authentication](https://wordpress.org/support/article/two-step-authentication/) as an additional security measure.
+In addition to using a strong password, it's a good idea to enable [two-step authentication](https://developer.wordpress.org/advanced-administration/security/mfa/) as an additional security measure.
 
 ### FTP {#ftp}
 
@@ -279,7 +279,7 @@ A way to avoid using such a plugin is to use [custom page templates](https://wor
 
 ### Data Backups {#data-backups}
 
-Back up your data regularly, including your MySQL databases. See the main article: [Backing Up Your Database](https://wordpress.org/support/article/backing-up-your-database/).
+Back up your data regularly, including your MySQL databases. See the main article: [Backing Up Your Database](https://developer.wordpress.org/advanced-administration/security/backup/database/).
 
 Data integrity is critical for trusted backups. Encrypting the backup, keeping an independent record of MD5 hashes for each backup file, and/or placing backups on read-only media increases your confidence that your data has not been tampered with.
 

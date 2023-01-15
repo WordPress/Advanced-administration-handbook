@@ -74,7 +74,7 @@ To combat accidents, errors, or even hacking, you may wish to disable the abilit
 
 To edit files offline, you can use any of the [recommended text editors](#text-editors) to create and edit files, and an [FTP client](/support/article/ftp-clients/) to upload them. Make sure to view the results in your browser, to see if the desired changes have taken effect.
 
-**Note:** It is not recommended to change WordPress core files other than [wp-config.php](https://wordpress.org/support/article/editing-wp-config-php/). If you must change anything else, take notes about your changes, and store a copy of these notes in a text file in your WordPress root directory. You should also make a backup copy of your WordPress core files, for future reference and upgrades.
+**Note:** It is not recommended to change WordPress core files other than [wp-config.php](https://developer.wordpress.org/advanced-administration/wordpress/wp-config/). If you must change anything else, take notes about your changes, and store a copy of these notes in a text file in your WordPress root directory. You should also make a backup copy of your WordPress core files, for future reference and upgrades.
 
 ## Using Text Editors
 

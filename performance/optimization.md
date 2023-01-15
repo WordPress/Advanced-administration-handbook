@@ -50,7 +50,7 @@ The amount of traffic on your server and how it's configured to handle the load 
 
 If configured properly, most hosting solutions can handle very high traffic amounts. Offloading traffic to other servers can also reduce server load.
 
-Abusive traffic such as login [Brute Force attacks](https://wordpress.org/support/article/brute-force-attacks/), image hotlinking (other sites linking to your image files from high traffic pages) or DoS attacks can also increase server load. Identifying and blocking these attacks is very important.
+Abusive traffic such as login [Brute Force attacks](https://developer.wordpress.org/advanced-administration/security/brute-force/), image hotlinking (other sites linking to your image files from high traffic pages) or DoS attacks can also increase server load. Identifying and blocking these attacks is very important.
 
 #### Software version & performance
 

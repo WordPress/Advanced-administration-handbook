@@ -10,8 +10,8 @@ FTP or “File Transfer Protocol” has been the most widely used transfer proto
 
 Why use FileZilla? Because, like WordPress, it is released under the GPL. So, it is not just free, it is staying that way, too. The following pages will show you how to setup and use Filezilla:
 
-1. [Setting up FileZilla for Your Website](https://wordpress.org/support/article/using-filezilla/)
-2. [Setting Permissions](https://wordpress.org/support/article/changing-file-permissions/)
+1. [Setting up FileZilla for Your Website](https://developer.wordpress.org/advanced-administration/upgrade/ftp/filezilla/)
+2. [Setting Permissions](https://developer.wordpress.org/advanced-administration/server/file-permissions/)
 3. [FileZilla’s Extensive Documentation](https://wiki.filezilla-project.org/Documentation)
 
 Want to try a different FTP or SFTP client? [Find more on Wikipedia](http://en.wikipedia.org/wiki/Comparison_of_FTP_clients).

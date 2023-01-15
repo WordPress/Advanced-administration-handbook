@@ -135,8 +135,8 @@ if ( defined( 'RELOCATE' ) AND RELOCATE ) {
 
 If you know how to access phpMyAdmin on your host, then you can edit these values directly to get your site up and running again.
 
-1. [Backup your database](https://wordpress.org/support/article/backing-up-your-database/) and save the copy off-site.
-2. Login to [phpMyAdmin](https://wordpress.org/support/article/phpmyadmin/).
+1. [Backup your database](https://developer.wordpress.org/advanced-administration/security/backup/database/) and save the copy off-site.
+2. Login to [phpMyAdmin](https://developer.wordpress.org/advanced-administration/upgrade/phpmyadmin/).
 3. Click the link to your **Databases**.
 4. A list of your databases will appear. Choose the one that is your WordPress database.
 5. All the tables in your database will appear on the screen.
@@ -159,7 +159,7 @@ When moving sites from one location to another, it is sometimes necessary to man
 
 This is presented here as information only. This data may not be complete or accurate.
 
-You should read the [Moving WordPress](https://wordpress.org/support/article/moving-wordpress/) article first, if attempting to move WordPress from one system to another. 
+You should read the [Moving WordPress](https://developer.wordpress.org/advanced-administration/upgrade/migrating/) article first, if attempting to move WordPress from one system to another. 
 
 #### Altering Table Prefixes
 
@@ -186,7 +186,7 @@ You will need to update your WordPress configuration file if your database has m
   - you have changed the database user name
 2. Make a backup copy of your `wp-config.php` file.
 3. Open the `wp-config.php` file in a [text editor](https://codex.wordpress.org/Glossary#Text_editor).
-4. Review its contents. In particular, you are looking for the [database host entry](https://wordpress.org/support/article/editing-wp-config-php/#set-database-host).
+4. Review its contents. In particular, you are looking for the [database host entry](https://developer.wordpress.org/advanced-administration/wordpress/wp-config/#set-database-host).
 5. Save the file.
 6. At this point, your WordPress blog should be working.  
 
@@ -211,7 +211,7 @@ After changing the information in your Administration > Settings > General panel
 8. Save the file.
 9. Test those redirects to ensure they are working.
 
-If you make a mistake, you can [Restore Your Database](https://wordpress.org/support/article/restoring-your-database-from-backup/) from your backup and try this again. So make sure it is right the first time.
+If you make a mistake, you can [Restore Your Database](https://developer.wordpress.org/advanced-administration/security/backup/) from your backup and try this again. So make sure it is right the first time.
 
 #### Additional items of note
 
@@ -246,7 +246,7 @@ If the default uploads folder needs to be changed to a different location, then 
 
 #### Multi-site notes
 
-See [Moving WordPress Multisite](https://wordpress.org/support/article/moving-wordpress/#moving-wordpress-multisite)
+See [Moving WordPress Multisite](https://developer.wordpress.org/advanced-administration/upgrade/migrating/#moving-wordpress-multisite)
 
 #### wp-cli
 
@@ -266,14 +266,14 @@ Whether you are moving WordPress to a new server or to a different location on y
 
 ## Moving to a New Server
 
-If you are moving WordPress from one server to another, begin by backing up your WordPress directory, images, plugins, and other files on your site as well as the database. See [WordPress Backups](https://wordpress.org/support/article/wordpress-backups/) and [Backing Up Your Database](https://wordpress.org/support/article/backing-up-your-database/).
+If you are moving WordPress from one server to another, begin by backing up your WordPress directory, images, plugins, and other files on your site as well as the database. See [WordPress Backups](https://developer.wordpress.org/advanced-administration/security/backup/) and [Backing Up Your Database](https://developer.wordpress.org/advanced-administration/security/backup/database/).
 
 ### Keeping Your Domain Name and URLs
 
 Moving your domain without changing the Home and Site URLs of your WordPress site is very simple, and in most cases can be done by moving the files.
 
 - If database and URL remain the same, you can move by just copying your files and database.
-- If database name or user changes, [edit wp-config.php](https://wordpress.org/support/article/editing-wp-config-php/) to have the correct values.
+- If database name or user changes, [edit wp-config.php](https://developer.wordpress.org/advanced-administration/wordpress/wp-config/) to have the correct values.
 - If you want to test before you switch, you must temporarily change "siteurl" and "home" in the database table "wp_options" (through phpMyAdmin or similar).
 - If you had any kind of rewrites (permalinks) setup you must disable .htaccess and reconfigure permalinks when it goes live.
 
@@ -365,13 +365,13 @@ update_option('home', 'http://your.domain.name/the/path' );
 
 You're done. Test your site to make sure that it works right. If the change involves a new address for your site, make sure you let people know the new address, and consider adding some redirection instructions in your `.htaccess` file to guide visitors to the new location.
 
-[Changing The Site URL](https://wordpress.org/support/article/changing-the-site-url/) also provides the details of this process.
+[Changing The Site URL](https://developer.wordpress.org/advanced-administration/upgrade/migrating/) also provides the details of this process.
 
 
 ## Managing Your Old Site
 
 ### Shutting It Down
-1. Download a copy of the main wordpress files from your OLD site to your hard drive and [edit wp-config.php](https://wordpress.org/support/article/editing-wp-config-php/) to suit the new server.
+1. Download a copy of the main wordpress files from your OLD site to your hard drive and [edit wp-config.php](https://developer.wordpress.org/advanced-administration/wordpress/wp-config/) to suit the new server.
 2. Go back to your OLD site and go to [Administration](https://wordpress.org/support/article/administration-screens/) > [Settings](https://wordpress.org/support/article/administration-screens/#settings-configuration-settings) > [General](https://wordpress.org/support/article/settings-general-screen/) screen and change the URL (both of them) to that of your new site.
 3. Login on your server, go to phpMyAdmin, export as file, and save your database (but keep the old one just in case). Now, upload this new database and the copy of the wordpress core files with the edited wp-config.php to your new server. That's it!
 
@@ -385,7 +385,7 @@ _Part A – Activating Your New Site_
 3. Go back to your OLD site and go to options and change the url (both of them) to that of your new site.
 4. Again, download your entire WordPress installation to your hard drive. Name the folder appropriately to indicate that this is your NEW site's installation.
 5. Download your database once again (but keep the old one). Upload this database to your new server. It will be easiest if you use the same database name and you create a user with the same login credentials on your new server as on your old server.
-6. If you used a different database name and/or user (see previous step), [edit wp-config.php](https://wordpress.org/support/article/editing-wp-config-php/) in your NEW site's installation folder appropriately.
+6. If you used a different database name and/or user (see previous step), [edit wp-config.php](https://developer.wordpress.org/advanced-administration/wordpress/wp-config/) in your NEW site's installation folder appropriately.
 7. Upload the NEW site's installation folder to your new site. Presto, your NEW site should be working!
 
 _Part B – Restoring Your Old Site_
@@ -409,7 +409,7 @@ _Note: using this method, if there are some articles in the new site (like Hello
 
 ## Moving WordPress Multisite
 
-[Multisite](https://wordpress.org/support/article/create-a-network/) is somewhat more complicated to move, as the database itself has multiple references to the server name as well as the folder locations. If you're simply moving to a new server with the same domain name, you can copy the files and database over, exactly as you would a traditional install.
+[Multisite](https://developer.wordpress.org/advanced-administration/multisite/create-network/) is somewhat more complicated to move, as the database itself has multiple references to the server name as well as the folder locations. If you're simply moving to a new server with the same domain name, you can copy the files and database over, exactly as you would a traditional install.
 
 If, instead, you are changing domains, then the best way to move Multisite is to move the files, edit the `.htaccess` and `wp-config.php` (if the folder name containing Multisite changed), and then manually edit the database. Search for all instances of your domain name, and change them as needed. This step cannot yet be easily automated. It's safe to search/replace any of the `wp_x_posts` tables, however do not attempt blanket search/replace without the [Search and Replace for WordPress Databases](https://github.com/interconnectit/Search-Replace-DB) script (aka the interconnectit script).
 
@@ -461,10 +461,10 @@ It's also a good idea to first delete all quarantined spam comments as these wil
 **Note:** Widget configuration and blog/plugin settings are NOT exported in this method. If you are migrating within a single hosting account, make note of those settings at this stage, because when you delete the old domain, they will disappear.
 
 #### Install WordPress
-Install WordPress. Follow the instructions for [Installing WordPress](https://wordpress.org/support/article/how-to-install-wordpress/).
+Install WordPress. Follow the instructions for [Installing WordPress](https://developer.wordpress.org/advanced-administration/before-install/howto-install/).
 
 #### Activate multisite
-Activate multi-site in your WordPress install. This involves editing `wp-config.php` a couple of times. You need to use the subdomain, not the subdirectory, option. See the instructions on how to [Create A Network](https://wordpress.org/support/article/create-a-network/).
+Activate multi-site in your WordPress install. This involves editing `wp-config.php` a couple of times. You need to use the subdomain, not the subdirectory, option. See the instructions on how to [Create A Network](https://developer.wordpress.org/advanced-administration/multisite/create-network/).
 
 #### Create blogs for each site you want to import
 Create blogs for each of the sites you want to host at separate domains. For example, `importedblogdotorg.mydomain.com`.

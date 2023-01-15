@@ -4,11 +4,11 @@
 
 If you have reached this page, chances are you have received an error in your [WordPress network](https://wordpress.org/support/articles/glossary#network). This failure occurs when WordPress cannot find one or more of the global tables for the network in the [database](https://codex.wordpress.org/Database_Description).
 
-On some shared webhosts, the host has disabled the functionality from running. It is always best to check with your webhost **before** [creating a network](https://wordpress.org/support/article/editing-wp-config-php/) to make sure your webhost account fulfills the technical requirements.
+On some shared webhosts, the host has disabled the functionality from running. It is always best to check with your webhost **before** [creating a network](https://developer.wordpress.org/advanced-administration/wordpress/wp-config/) to make sure your webhost account fulfills the technical requirements.
 
 ## If You just installed your network {#if-you-just-installed-your-network}
 
-Check your [wp-config.php](https://wordpress.org/support/article/editing-wp-config-php/) file for :
+Check your [wp-config.php](https://developer.wordpress.org/advanced-administration/wordpress/wp-config/) file for :
 
 * correct database details
 * `SUBDOMAIN_INSTALL` constant

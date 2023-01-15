@@ -12,7 +12,7 @@ Let's first look at the third type, multiple WordPress instances with multiple d
 
 ## Multiple WordPress Instances with Multiple Databases {#multiple-wordpress-instances-with-multiple-databases}
 
-You'll need a separate [MySQL database](https://wordpress.org/support/article/glossary/#mysql) for each blog you plan to install. If you have not yet created these, [basic instructions are found here](https://wordpress.org/support/article/how-to-install-wordpress/#step-2-create-the-database-and-a-user).
+You'll need a separate [MySQL database](https://wordpress.org/support/article/glossary/#mysql) for each blog you plan to install. If you have not yet created these, [basic instructions are found here](https://developer.wordpress.org/advanced-administration/before-install/howto-install/#step-2-create-the-database-and-a-user).
 
 The [wp-config.php](/support/article/editing-wp-config-php/) file will vary for each installation. The lines to change are the following:
 
@@ -24,7 +24,7 @@ define('DB_PASSWORD', 'password'); // ... and password
 
 `DB_NAME` is the name of the individual database created for that blog. If you are using different user logins for each database, edit `DB_USER` and `DB_PASSWORD` to reflect this as well.
 
-Upload each [wp-config.php](https://wordpress.org/support/article/editing-wp-config-php/) file to its specific root/installation directory, and run the installation. See [Installing WordPress](https://wordpress.org/support/article/how-to-install-wordpress/) for more information.
+Upload each [wp-config.php](https://developer.wordpress.org/advanced-administration/wordpress/wp-config/) file to its specific root/installation directory, and run the installation. See [Installing WordPress](https://developer.wordpress.org/advanced-administration/before-install/howto-install/) for more information.
 
 ## The Multisite Feature {#the-multisite-feature}
 
@@ -38,14 +38,14 @@ The multisite feature appears to be simpler than other types of multiple WordPre
 
 ## Multiple WordPress Instances with a Single Database {#multiple-wordpress-instances-with-a-single-database}
 
-As with the multiple-database solution described above, the [wp-config.php](https://wordpress.org/support/article/editing-wp-config-php/) file will vary for each installation. In this case, however, only a single line is unique to each blog:
+As with the multiple-database solution described above, the [wp-config.php](https://developer.wordpress.org/advanced-administration/wordpress/wp-config/) file will vary for each installation. In this case, however, only a single line is unique to each blog:
 
 ```
 $table_prefix = 'wp_'; // example: 'wp_' or 'b2' or 'mylogin_' 
 ```
 
 By default, WordPress assigns the table prefix `wp_` to its [MySQL database](https://wordpress.org/support/article/glossary/#mysql) tables, but this prefix can be anything you choose. This allows you to create unique identifiers for each blog in your database. For example, let's say you have three blogs to set up, with the names _Main_, _Projects_, and _Test_. You should substitute the prefix `wp_` in each blog's  
-[wp-config.php](https://wordpress.org/support/article/editing-wp-config-php/):
+[wp-config.php](https://developer.wordpress.org/advanced-administration/wordpress/wp-config/):
 
 **Main blog:**
 ```
@@ -64,12 +64,12 @@ $table_prefix = 'test_';
 
 As noted, you may use a prefix of your own making. Those provided here are for example only.
 
-Upload each [wp-config.php](https://wordpress.org/support/article/editing-wp-config-php/) file to its specific root/installation directory, and run the installation. See [Installing WordPress](https://wordpress.org/support/article/how-to-install-wordpress/) for more information.
+Upload each [wp-config.php](https://developer.wordpress.org/advanced-administration/wordpress/wp-config/) file to its specific root/installation directory, and run the installation. See [Installing WordPress](https://developer.wordpress.org/advanced-administration/before-install/howto-install/) for more information.
 
 ## Multiple Databases, Same Users {#multiple-databases-same-users}
 
 You can use the same userbase for all your blogs on the same domain by defining the `CUSTOM_USER_TABLE` and optionally the `CUSTOM_USER_META_TABLE` constants to point to the same `wp_your_blog_users` and `wp_your_blog_usermeta` tables.  
-See [Editing wp-config.php/Custom User and Usermeta Tables](https://wordpress.org/support/article/editing-wp-config-php/#custom-user-and-usermeta-tables).
+See [Editing wp-config.php/Custom User and Usermeta Tables](https://developer.wordpress.org/advanced-administration/wordpress/wp-config/#custom-user-and-usermeta-tables).
 
 ## Changelog
 

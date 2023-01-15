@@ -68,7 +68,7 @@ Most website hosts provide software to back up your site. Check with your host t
 
 **Copy Your Files to Your Desktop**
 
-Using [FTP Clients](https://wordpress.org/support/article/ftp-clients/) or [UNIX Shell Skills](https://codex.wordpress.org/UNIX%20Shell%20Skills) you can copy the files to a folder on your computer. Once there, you can compress them into a zip file to save space, allowing you to keep several versions.
+Using [FTP Clients](https://developer.wordpress.org/advanced-administration/upgrade/ftp/) or [UNIX Shell Skills](https://codex.wordpress.org/UNIX%20Shell%20Skills) you can copy the files to a folder on your computer. Once there, you can compress them into a zip file to save space, allowing you to keep several versions.
 
 Remember, keep at least three backups on file, just in case one is corrupted or lost, and store them in different places and on different mediums (such as CD's, DVDs or hard drives).
 
@@ -78,7 +78,7 @@ Back up your WordPress database regularly, and always before an upgrade or a mov
 
 #### Accessing phpMyAdmin
 
-See [phpMyAdmin](https://wordpress.org/support/article/phpmyadmin/) for more information on phpMyAdmin.
+See [phpMyAdmin](https://developer.wordpress.org/advanced-administration/upgrade/phpmyadmin/) for more information on phpMyAdmin.
 
 While familiarity with phpMyAdmin is not necessary to back up your WordPress database, these instructions should take you step-by-step through the process of finding phpMyAdmin on your server. Then you can follow the instructions below as a simple and easy backup. For more detailed instructions, see Backing Up Your Database.
 
@@ -91,7 +91,7 @@ While familiarity with phpMyAdmin is not necessary to back up your WordPress dat
 
 ##### Plesk
 
-On your Websites & Domains screen, click Open button corresponding to the database you have set up during the [WordPress installation](https://wordpress.org/support/article/how-to-install-wordpress/). This will open **phpMyAdmin** interface:
+On your Websites & Domains screen, click Open button corresponding to the database you have set up during the [WordPress installation](https://developer.wordpress.org/advanced-administration/before-install/howto-install/). This will open **phpMyAdmin** interface:
 
 ![image](https://user-images.githubusercontent.com/8250598/189548052-05143263-7980-45b5-b2dc-23fc5a8b19fd.png)
 
@@ -174,19 +174,19 @@ Various plugins exist to take automatic scheduled backups of your WordPress data
 
 * [FTP Backups](http://www.guyrutenberg.com/2010/02/28/improved-ftp-backup-for-wordpress/) – How to automate backing up to an FTP server
 * [Incremental Backups](http://www.guyrutenberg.com/2013/03/28/incremental-wordpress-backups-using-duply-duplicity/) – How to make encrypted incremental backups using duplicity
-* [Using phpMyAdmin with WordPress](https://wordpress.org/support/article/phpmyadmin/)
+* [Using phpMyAdmin with WordPress](https://developer.wordpress.org/advanced-administration/upgrade/phpmyadmin/)
 
 #### Backup Tools
 
-* [Using phpMyAdmin](https://wordpress.org/support/article/phpmyadmin/)
-* [FTP Clients](https://wordpress.org/support/article/ftp-clients/)
-* [Using FileZilla](https://wordpress.org/support/article/using-filezilla/)
+* [Using phpMyAdmin](https://developer.wordpress.org/advanced-administration/upgrade/phpmyadmin/)
+* [FTP Clients](https://developer.wordpress.org/advanced-administration/upgrade/ftp/)
+* [Using FileZilla](https://developer.wordpress.org/advanced-administration/upgrade/ftp/filezilla/)
 
 
 ### Read Further {#read-further}
 
-* [WordPress Backups](https://wordpress.org/support/article/wordpress-backups/)
-* [Upgrading WordPress Extended](https://wordpress.org/support/article/upgrading-wordpress-extended-instructions/)
+* [WordPress Backups](https://developer.wordpress.org/advanced-administration/security/backup/)
+* [Upgrading WordPress Extended](https://developer.wordpress.org/advanced-administration/upgrade/upgrading/)
 
 ## Changelog
 

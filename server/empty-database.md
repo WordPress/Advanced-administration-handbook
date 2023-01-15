@@ -2,13 +2,13 @@
 
 Plugins which generate site statistics for you can rapidly create large amounts of data — every visitor causes something to be written to the database. Ordinarily, this is not a problem, but if your database size is limited by your host it could be. Also, if you are moving the database for whatever reason, its size will impact the export and import time. This page will show you how to empty a table, thus resetting its contents and size to zero. This does not stop the statistics plugins from working or otherwise damage your database.
 
-[phpMyAdmin](https://wordpress.org/support/article/phpmyadmin/) is the name of the program used to manipulate your database. A good hosting package will have this included. [Accessing phpMyAdmin](https://wordpress.org/support/article/wordpress-backups/#accessing-phpmyadmin) offers information on accessing phpMyAdmin under various server control panels.
+[phpMyAdmin](https://developer.wordpress.org/advanced-administration/upgrade/phpmyadmin/) is the name of the program used to manipulate your database. A good hosting package will have this included. [Accessing phpMyAdmin](https://developer.wordpress.org/advanced-administration/security/backup/#accessing-phpmyadmin) offers information on accessing phpMyAdmin under various server control panels.
 
 The procedure outlined in this article has been tried and tested using phpMyAdmin versions 2.5.3 and 2.5.7 pl1 running on Unix.
 
 **Note:** When making significant changes like this to your database, you should always create a BACKUP!
 
-See [WordPress Backups](https://wordpress.org/support/article/wordpress-backups/) and [Backing_Up_Your_Database](https://wordpress.org/support/article/backing-up-your-database/) for details.
+See [WordPress Backups](https://developer.wordpress.org/advanced-administration/security/backup/) and [Backing Up Your Database](https://developer.wordpress.org/advanced-administration/security/backup/database/) for details.
 
 ## The Process
 

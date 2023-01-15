@@ -1,6 +1,6 @@
 # Before You Create A Network
 
-This section outlines some requirements to consider before you begin [creating a multisite network](https://wordpress.org/support/article/create-a-network/).
+This section outlines some requirements to consider before you begin [creating a multisite network](https://developer.wordpress.org/advanced-administration/multisite/create-network/).
 
 ## Do you really need a network? {#do-you-really-need-a-network}
 
@@ -91,7 +91,7 @@ When you install a multisite network you start from an existing WordPress instal
 
 ### Be Aware {#be-aware}
 
-[Giving WordPress its own directory](https://wordpress.org/support/article/giving-wordpress-its-own-directory/) works with Multisite as of 3.5, however you must make the 'own directory' changes before you activate Multisite.
+[Giving WordPress its own directory](https://developer.wordpress.org/advanced-administration/server/wordpress-in-directory/) works with Multisite as of 3.5, however you must make the 'own directory' changes before you activate Multisite.
 
 While it's not recommended to use www in your domain URL, if you chose to do so and plan to use _subdomains_ for multisite, make sure that **both** the site address and the WordPress address are the same. Also keep in mind some hosts will default to showing this sort of URL:
 
@@ -113,7 +113,7 @@ You _cannot choose **Sub-domain** Install_ (for a domain-based network) in the f
 
 (Note that you can create a domain-based network on your local machine for testing purposes by using your hosts file to map some other hostnames to the IP address 127.0.0.1, so that you never have to use the hostname `localhost`.)
 
-You _cannot choose **Sub-directory** Install_ (for a path-based network) if your existing WordPress installation has been set up for more than a month, due to issues with existing permalinks. (This problem will be fixed in a future version. See [Switching network types](https://wordpress.org/support/article/multisite-network-administration/#switching-network-types) for more information.)
+You _cannot choose **Sub-directory** Install_ (for a path-based network) if your existing WordPress installation has been set up for more than a month, due to issues with existing permalinks. (This problem will be fixed in a future version. See [Switching network types](https://developer.wordpress.org/advanced-administration/multisite/administration/#switching-network-types) for more information.)
 
 _See `wp-admin/network.php` for more detail)_
 

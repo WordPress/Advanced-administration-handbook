@@ -4,7 +4,7 @@
 
 **The Network Admin Screen** is the central access point to the various options necessary to administer the [Multisite (or Network)](https://wordpress.org/support/article/glossary#multisite)capabilities of WordPress. The information below is directed specifically for Network Administrators. Other users should see [Administration Screens](https://wordpress.org/support/article/administration-screens/) for information on using WordPress.
 
-The Network Admin link is only visible after you [Create A Network](https://wordpress.org/support/article/create-a-network/). The menu will appear in the upper right of the menu bar, and is only visible to super admins. It has been moved to a separate location with the admin area, and is available from the admin area of any site, as long as you are logged in as the super admin user.
+The Network Admin link is only visible after you [Create A Network](https://developer.wordpress.org/advanced-administration/multisite/create-network/). The menu will appear in the upper right of the menu bar, and is only visible to super admins. It has been moved to a separate location with the admin area, and is available from the admin area of any site, as long as you are logged in as the super admin user.
 
 When visiting Network Admin you will see the Dashboard screen. This looks similar to a site dashboard, with one additional widget, and the site specific widgets removed. The Right Now widget has quick links to the Create a Site and Create a User screens, as well as search boxes to quickly find sites and users.
 
@@ -18,7 +18,7 @@ The Dashboard is information central and tells you about your network sites, pro
 
 Use the [Network Admin Sites Screen](https://wordpress.org/support/articles/network-admin-sites/screen) to review and manage the various sites that are part of your network. These sites will be either subdirectory or subdomain sites as determined by how the network was configured. From this screen you can access Info, Users, Themes, and Settings for each site in your Network.
 
-Use the [Add New Sites Screen](https://wordpress.org/support/article/network-admin-sites-screen/#add-site) to add new sites to your network.
+Use the [Add New Sites Screen](https://developer.wordpress.org/advanced-administration/multisite/admin/#add-site) to add new sites to your network.
 
 ### Users {#users}
 
@@ -44,11 +44,11 @@ Using the [Plugin Editor](https://codex.wordpress.org/Network_Admin_Plugins_Scr
 
 The [Network Admin Settings Screen](https://codex.wordpress.org/Network_Admin_Settings_Screen) is where a network admin sets and changes settings for the network as a whole. The first site is the main site in the network and network settings are pulled from that original site's options.
 
-Also, [Network Setup](https://codex.wordpress.org/Network_Admin_Settings_Screen#Network_Setup) information that was used when [Creating the Network](https://wordpress.org/support/article/create-a-network/) can be accessed.
+Also, [Network Setup](https://codex.wordpress.org/Network_Admin_Settings_Screen#Network_Setup) information that was used when [Creating the Network](https://developer.wordpress.org/advanced-administration/multisite/create-network/) can be accessed.
 
 ### Updates {#updates}
 
-The [Network Admin Updates Screen](https://wordpress.org/support/article/network-admin-updates-screen/) controls update process of both network and sites. In the [Available Updates Screen](https://wordpress.org/support/article/network-admin-updates-screen/#available-updates), you can update WordPress core, themes and plugins. After you updates to the latest version of WordPress, you can upgrade all the sites on your network from [Upgrade Network Screen](https://wordpress.org/support/article/network-admin-updates-screen/#upgrade-network).  
+The [Network Admin Updates Screen](https://developer.wordpress.org/advanced-administration/multisite/admin/) controls update process of both network and sites. In the [Available Updates Screen](https://wordpress.org/support/article/network-admin-updates-screen/#available-updates), you can update WordPress core, themes and plugins. After you updates to the latest version of WordPress, you can upgrade all the sites on your network from [Upgrade Network Screen](https://wordpress.org/support/article/network-admin-updates-screen/#upgrade-network).  
 
 ## Network Admin Sites Screen
 
@@ -94,7 +94,7 @@ _Edit Site – Super Admin_
 
 ## Network Admin Updates Screen
 
-The **Network Admin Updates Screen** controls update process in the network. If an update is available, you'll see a notification appear in the Toolbar and navigation menu. Keeping your site updated is important for security. It also makes the internet a safer place for you and your readers. There are two screens under the [Network Admin](https://wordpress.org/support/article/network-admin/) > [Updates](https://wordpress.org/support/article/network-admin/#updates). In the default [Available Updates Screen](#available-updates), you can update WordPress, themes and plugins. After you updates to the latest version of WordPress, you can upgrade all the sites on your network from [Upgrade Network Screen](#upgrade-nework).
+The **Network Admin Updates Screen** controls update process in the network. If an update is available, you'll see a notification appear in the Toolbar and navigation menu. Keeping your site updated is important for security. It also makes the internet a safer place for you and your readers. There are two screens under the [Network Admin](https://developer.wordpress.org/advanced-administration/multisite/admin/) > [Updates](https://wordpress.org/support/article/network-admin/#updates). In the default [Available Updates Screen](#available-updates), you can update WordPress, themes and plugins. After you updates to the latest version of WordPress, you can upgrade all the sites on your network from [Upgrade Network Screen](#upgrade-nework).
 
 ### Available Updates {#available-updates}
 

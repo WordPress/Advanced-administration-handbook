@@ -32,11 +32,11 @@ Modern two-step authentication more frequently relies on a user's smartphone tha
 
 The most familiar form of authentication is the knowledge factor, or password. As old as [Open Sesame](http://en.wikipedia.org/wiki/Open_Sesame_(phrase)), passwords have long been a standard for anonymous authentication. In order for a knowledge factor to work, both parties need to know the password, but other parties must not be able to find or guess it.
 
-The first challenge is in exchanging the password with the trusted party safely. On the web, when you register for a new site, your password needs to be sent to that site's servers and might be intercepted in the process (which is why you should always check for SSL when registering or logging in — [Administration Over SSL](https://wordpress.org/support/article/administration-over-ssl/)).
+The first challenge is in exchanging the password with the trusted party safely. On the web, when you register for a new site, your password needs to be sent to that site's servers and might be intercepted in the process (which is why you should always check for SSL when registering or logging in — [HTTPS](https://developer.wordpress.org/advanced-administration/security/https/)).
 
 Once the password has been received, it must be kept secret. The user shouldn't write it down or use it anywhere else, and the site needs to carefully guard its database to ensure that hackers can't access the passwords.
 
-Finally, the password needs to be verified. When a user visits the site, they need to be able to provide the password and have it verified against the stored copy. This exchange can also be intercepted (and so should always be done over SSL — [Administration Over SSL](https://wordpress.org/support/article/administration-over-ssl/)) and exposes the user to another risk.
+Finally, the password needs to be verified. When a user visits the site, they need to be able to provide the password and have it verified against the stored copy. This exchange can also be intercepted (and so should always be done over SSL — [HTTPS](https://developer.wordpress.org/advanced-administration/security/https/)) and exposes the user to another risk.
 
 #### Benefits {#benefits}
 
@@ -60,7 +60,7 @@ You can [search for two-step authentication plugins](https://wordpress.org/plugi
 
 ### Related {#related}
 
-* [Brute Force Attacks](https://wordpress.org/support/article/brute-force-attacks/)
+* [Brute Force Attacks](https://developer.wordpress.org/advanced-administration/security/brute-force/)
 
 ## Changelog
 

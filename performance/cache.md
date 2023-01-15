@@ -1,6 +1,6 @@
 # Cache
 
-This article is part of a series on [WordPress Optimization](https://wordpress.org/support/article/optimization/).
+This article is part of a series on [WordPress Optimization](https://developer.wordpress.org/advanced-administration/performance/optimization/).
 
 WordPress caching is the fastest way to improve performance. If your site is getting hit **right now** install [W3 Total Cache](https://wordpress.org/plugins/w3-total-cache/), [WP Super Cache](https://wordpress.org/plugins/wp-super-cache/) or [Cache Enabler](https://wordpress.org/extend/plugins/cache-enabler/).
 

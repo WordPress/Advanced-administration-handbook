@@ -1,6 +1,6 @@
 # Multisite Network Administration
 
-Once you've [created a Multisite Network](https://wordpress.org/support/article/create-a-network/), there are some additional things you might need to know about advanced administration, due to the additional complexity of a Multisite. Even if you're familiar with WordPress, the location and behavior of Multisite Network Administration can be confusing.
+Once you've [created a Multisite Network](https://developer.wordpress.org/advanced-administration/multisite/create-network/), there are some additional things you might need to know about advanced administration, due to the additional complexity of a Multisite. Even if you're familiar with WordPress, the location and behavior of Multisite Network Administration can be confusing.
 
 ## User Access & Capabilities {#user-access-capabilities}
 
@@ -207,7 +207,7 @@ Before WordPress 4.5, domain mapping requires a domain mapping plugin. In WordPr
 
 ## Moving Multisite {#moving-multisite}
 
-Moving Multisite is more complicated than moving a single install. Please read [Moving WordPress Multisite](https://wordpress.org/support/article/moving-wordpress/#moving-wordpress-multisite) before continuing.
+Moving Multisite is more complicated than moving a single install. Please read [Moving WordPress Multisite](https://developer.wordpress.org/advanced-administration/upgrade/migrating/#moving-wordpress-multisite) before continuing.
 
 ## Importing into a Network {#importing-into-a-network}
 
