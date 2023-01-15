@@ -650,4 +650,4 @@ The Default Theme's footer is styled by the footer ID and the paragraph tag. Whi
 ## Changelog
 
 - 2022-09-11: Check the content and format.
-- 2022-09-04: Created from [Site Architecture 1.5](https://codex.wordpress.org/Site_Architecture_1.5) ticket [Github](https://github.com/WordPress/Documentation-Issue-Tracker/issues/332).
+- 2022-09-04: Original content from [Site Architecture 1.5](https://codex.wordpress.org/Site_Architecture_1.5); ticket [Github](https://github.com/WordPress/Documentation-Issue-Tracker/issues/332).

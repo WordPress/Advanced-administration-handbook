@@ -36,4 +36,4 @@ By default, editing the Ping Services for a WordPress Multisite network site is 
 
 ## Changelog
 
-- 2022-09-11: Migrated content from [Update Services](https://wordpress.org/support/article/update-services/)
+- 2022-09-11: Original content from [Update Services](https://wordpress.org/support/article/update-services/).

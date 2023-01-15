@@ -63,4 +63,4 @@ Please include the below information:
 
 ## Changelog
 
-- 2022-09-11: Copied content from https://wordpress.org/support/article/using-your-browser-to-diagnose-javascript-errors/. Consolidated Developer Tools instuctions, removed IE documentation.
+- 2022-09-11: Original content from [Using Your Browser to Diagnose JavaScript Errors](https://wordpress.org/support/article/using-your-browser-to-diagnose-javascript-errors/). Consolidated Developer Tools instuctions, removed IE documentation.

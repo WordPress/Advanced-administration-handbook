@@ -951,4 +951,4 @@ You can [search for two-step authentication plugins](https://wordpress.org/plugi
 
 ## Changelog
 
-- 2022-10-25: Copying the [original content](https://wordpress.org/support/article/why-should-i-use-https/), and [original content](https://wordpress.org/support/article/administration-over-ssl/), and [original content](https://wordpress.org/support/article/hardening-wordpress/), and [original content](https://wordpress.org/support/article/brute-force-attacks/), and [original content](https://wordpress.org/support/article/two-step-authentication/).
+- 2022-10-25: Original content from [Why should I use HTTPS](https://wordpress.org/support/article/why-should-i-use-https/), and [Administration Over SSL](https://wordpress.org/support/article/administration-over-ssl/), and [Hardening WordPress](https://wordpress.org/support/article/hardening-wordpress/), and [Brute Force Attacks](https://wordpress.org/support/article/brute-force-attacks/), and [Two Step Authentication](https://wordpress.org/support/article/two-step-authentication/).

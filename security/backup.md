@@ -519,5 +519,5 @@ Normally, there would be no need to copy the WordPress core files, as you can re
 
 ## Changelog
 
-- 2022-10-25: Copying the [original content](https://wordpress.org/support/article/backing-up-your-database/), and [original content](https://wordpress.org/support/article/backing-up-your-wordpress-files/), and [originial content](https://wordpress.org/support/article/restoring-your-database-from-backup/).
-- 2022-09-11: Added the [wordpress backup content](https://wordpress.org/support/article/wordpress-backups/)
+- 2022-10-25: Original content from [Backing Up Your Database](https://wordpress.org/support/article/backing-up-your-database/), and [Backing Up Your WordPress Files](https://wordpress.org/support/article/backing-up-your-wordpress-files/), and [Restoring Your Database From Backup](https://wordpress.org/support/article/restoring-your-database-from-backup/).
+- 2022-09-11: Original content from [WordPress Backups](https://wordpress.org/support/article/wordpress-backups/).

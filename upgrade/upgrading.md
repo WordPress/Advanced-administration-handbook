@@ -365,4 +365,4 @@ apply_filters( 'auto_core_update_send_email', true, $type, $core_update, $result
 
 ## Changelog
 
-- 2022-10-25: Copying the [original content](https://wordpress.org/support/article/configuring-automatic-background-updates/) and [original content](https://wordpress.org/support/article/upgrading-wordpress-extended-instructions/)
+- 2022-10-25: Original content from [Configuring Automatic Background Updates](https://wordpress.org/support/article/configuring-automatic-background-updates/), and [Upgrading WordPress – Extended Instructions](https://wordpress.org/support/article/upgrading-wordpress-extended-instructions/).

@@ -255,9 +255,6 @@ Coming soon – how to move your test site from your computer back live onto you
 - [Test themes on a live blog with Theme Test Drive](http://www.prelovac.com/vladimir/wordpress-plugins/theme-test-drive)
 - [qSandbox.com – Create a free WordPress test site to try (new) plugins and themes](http://qsandbox.com/)
 
-
-
-
 ## Changelog
 
-- 2022-09-11: Added to handbook.
+- 2022-09-11: Original content from [Test driving WordPress](https://wordpress.org/support/article/test-driving-wordpress/).

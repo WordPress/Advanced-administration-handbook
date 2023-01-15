@@ -36,4 +36,4 @@ The oEmbed discovery content for "link" and "photo" types is not quite so heavil
 
 ## Changelog
 
-- 2022-09-11: Created the content from the [source](https://docs.google.com/document/d/1ni59ohlSHeCH_BwRtxUXzGY1LLWqFiaaGQFcCjh_2rQ/)
+- 2022-09-11: Added content from [oEmbed](https://docs.google.com/document/d/1ni59ohlSHeCH_BwRtxUXzGY1LLWqFiaaGQFcCjh_2rQ/).

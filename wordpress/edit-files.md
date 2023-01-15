@@ -128,4 +128,4 @@ The following [text editors](/support/article/glossary#text-editor) are accept
 
 ## Changelog
 
-- 2022-09-11: Created the content from source [Editing Files](https://wordpress.org/support/article/editing-files/)
+- 2022-09-11: Original content from [Editing Files](https://wordpress.org/support/article/editing-files/).

@@ -60,5 +60,4 @@ Look at the top area of FileZilla main window and check the messages.
 
 ## Changelog
 
-- 2022-09-11 Migrated from https://wordpress.org/support/article/using-filezilla/
-
+- 2022-09-11: Original content from [Using FileZilla](https://wordpress.org/support/article/using-filezilla/).

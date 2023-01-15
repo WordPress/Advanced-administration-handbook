@@ -304,4 +304,4 @@ usage:  setenforce \[ Enforcing | Permissive | 1 | 0 \]
 
 ## Changelog
 
-- 2022-09-11: Content from [Changing File Permissions](https://wordpress.org/support/article/changing-file-permissions/)
+- 2022-09-11: Original content from [Changing File Permissions](https://wordpress.org/support/article/changing-file-permissions/).

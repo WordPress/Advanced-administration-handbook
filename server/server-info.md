@@ -46,4 +46,4 @@ That’s it. Make sure you remember to delete the file once you’re done with i
 
 ## Changelog
 
-- 2022-11-11: First move from [the old handbook](https://wordpress.org/support/article/finding-server-info/).
+- 2022-11-11: Original content from [Finding Server Info](https://wordpress.org/support/article/finding-server-info/).

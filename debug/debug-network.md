@@ -115,4 +115,4 @@ One or more database tables are unavailable. The database may need to be repaire
 
 ## Changelog
 
-- 2022-10-21: Copying from [original content](https://wordpress.org/support/article/debugging-a-wordpress-network/).
+- 2022-10-21: Original content from [Debugging a WordPress Network](https://wordpress.org/support/article/debugging-a-wordpress-network/).

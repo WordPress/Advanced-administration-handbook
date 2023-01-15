@@ -74,4 +74,4 @@ Other than that, these are some solid resources for you to review:
 
 ## Changelog
 
-- 2022-09-04: Created, based on [Github](https://github.com/WordPress/Documentation-Issue-Tracker/issues/328#issuecomment-1144870008).
+- 2022-09-04: Original content from [Know Your Sources](https://codex.wordpress.org/Know_Your_Sources), based on ticket [Github](https://github.com/WordPress/Documentation-Issue-Tracker/issues/328#issuecomment-1144870008).

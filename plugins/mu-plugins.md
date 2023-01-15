@@ -37,4 +37,4 @@ Thus “Must-Use” is effectively a [Backronym](http://en.wikipedia.org/wiki/Ba
 
 ## Changelog
 
-- 2022-09-11: Copied content from [Original Page](https://wordpress.org/support/article/must-use-plugins/). Minor additions and copy-editing.
+- 2022-09-11: Original content from [Must Use Plugins](https://wordpress.org/support/article/must-use-plugins/). Minor additions and copy-editing.

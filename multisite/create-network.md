@@ -113,4 +113,4 @@ For help troubleshooting:
 
 ## Changelog
 
-- 2022-10-21: Copying [original content](https://wordpress.org/support/article/create-a-network/).
+- 2022-10-21: Original content from [Create A Network](https://wordpress.org/support/article/create-a-network/).

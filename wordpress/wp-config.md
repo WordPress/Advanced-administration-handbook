@@ -677,4 +677,4 @@ To save the file, choose **File > Save As > wp-config.php** and save the file in
 ## Changelog
 
 - 2022-10-25: Fix content and links.
-- 2022-09-04: Created from [wp-config.php](https://developer.wordpress.org/apis/wp-config-php/) ticket [Github](https://github.com/WordPress/Documentation-Issue-Tracker/issues/349).
+- 2022-09-04: Original content from [wp-config.php](https://developer.wordpress.org/apis/wp-config-php/); ticket [Github](https://github.com/WordPress/Documentation-Issue-Tracker/issues/349).

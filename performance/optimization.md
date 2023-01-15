@@ -279,4 +279,4 @@ If you use a Persistent Object Cache, options (whether autoloaded or not) load f
 
 ## Changelog
 
-- 2022-09-11: Copied from original [Optimization](https://wordpress.org/support/article/optimization/).
+- 2022-09-11: Original content from [Optimization](https://wordpress.org/support/article/optimization/).

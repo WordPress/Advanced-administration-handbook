@@ -36,4 +36,4 @@ Adding an opcode cache like [Opcache](https://www.php.net/manual/en/book.opcache
 
 ## Changelog
 
-- 2022-09-04: Copying the [original content](https://wordpress.org/support/article/optimization-caching/).
+- 2022-09-04: Original content from [Optimization – Caching](https://wordpress.org/support/article/optimization-caching/).

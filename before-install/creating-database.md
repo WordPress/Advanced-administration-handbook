@@ -105,4 +105,4 @@ In MySQL Management, click on the small words: **Create new database**. Here you
 
 ## Changelog
 
-- 2022-09-11: Copies from [Creating Database for WordPress](https://wordpress.org/support/article/creating-database-for-wordpress/)
+- 2022-09-11: Original content from [Creating Database for WordPress](https://wordpress.org/support/article/creating-database-for-wordpress/).

@@ -119,4 +119,4 @@ _See `wp-admin/network.php` for more detail)_
 
 ## Changelog
 
-- 2022-10-21: Copying from [original content](https://wordpress.org/support/article/before-you-create-a-network/).
+- 2022-10-21: Original content from [Before You Create A Network](https://wordpress.org/support/article/before-you-create-a-network/).

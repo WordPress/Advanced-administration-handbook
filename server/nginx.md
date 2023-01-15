@@ -632,4 +632,4 @@ For WordPress Nginx scripted installation [CentminMod](http://centminmod.com/ngi
 
 ## Changelog
 
-- 2022-10-25: First move from [the old handbook](https://wordpress.org/support/article/nginx/).
+- 2022-10-25: Original content from [Nginx](https://wordpress.org/support/article/nginx/).

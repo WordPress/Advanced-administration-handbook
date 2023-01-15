@@ -124,4 +124,4 @@ There are many [debugging plugins](https://wordpress.org/plugins/search.php?q=de
 
 ## Changelog
 
-- 2022-09-11: Created from [Debugging in WordPress](https://wordpress.org/support/article/debugging-in-wordpress/) ticket from [Github](https://github.com/WordPress/Documentation-Issue-Tracker/issues/349)
+- 2022-09-11: Original content from [Debugging in WordPress](https://wordpress.org/support/article/debugging-in-wordpress/); ticket from [Github](https://github.com/WordPress/Documentation-Issue-Tracker/issues/349).

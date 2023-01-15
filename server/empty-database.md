@@ -38,4 +38,4 @@ See [WordPress Backups](https://wordpress.org/support/article/wordpress-backups/
 
 ## Changelog
 
-- 2022-09-11: Created from [Emptying a Database Table](https://wordpress.org/support/article/emptying-a-database-table/)
+- 2022-09-11: Original content from [Emptying a Database Table](https://wordpress.org/support/article/emptying-a-database-table/).

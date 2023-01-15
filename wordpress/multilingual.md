@@ -119,4 +119,4 @@ Since many multilingual plugins change the database significantly, doing a [data
 
 ## Changelog
 
-- 2022-10-25: Copied the [original content](https://wordpress.org/support/article/multilingual-wordpress/)
+- 2022-10-25: Original content from [Multilingual WordPress](https://wordpress.org/support/article/multilingual-wordpress/).

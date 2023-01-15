@@ -502,4 +502,4 @@ Another option might be the [Internet Archive Wayback Machine](https://archive.o
 
 ## Changelog
 
-- 2022-09-11: Edited and pasted from Support docs. 
+- 2022-09-11: Original content from [Changing The Site URL](https://wordpress.org/support/article/changing-the-site-url/), and [Moving WordPress](https://wordpress.org/support/article/moving-wordpress/).

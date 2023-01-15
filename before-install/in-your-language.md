@@ -60,5 +60,4 @@ If you want to add translations for terms that are still displaying in English a
 
 ## Changelog
 
-- 2022-09-11: Created the content from the source [Installing WordPress in your language
-](https://wordpress.org/support/article/installing-wordpress-in-your-language/)
+- 2022-09-11: Original content from [Installing WordPress in your language](https://wordpress.org/support/article/installing-wordpress-in-your-language/).

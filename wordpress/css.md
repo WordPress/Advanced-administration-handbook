@@ -187,4 +187,4 @@ If you are having some problems or questions about your WordPress Theme or layou
 
 ## Changelog
 
-- 2022-09-04: Created from [CSS](https://wordpress.org/support/article/css/) ticket [Github](https://github.com/WordPress/Documentation-Issue-Tracker/issues/424)
+- 2022-09-04: Original content from [CSS](https://wordpress.org/support/article/css/); ticket [Github](https://github.com/WordPress/Documentation-Issue-Tracker/issues/424).

@@ -50,5 +50,4 @@ The commenter cookies are set to expire a little under one year from the time th
 
 ## Changelog
 
-- 2022-09-04: Nothing here, yet.
-- 2022-09-11: Migrated original content, added minor adjustments
+- 2022-09-11: Original content from [Cookies](https://wordpress.org/support/article/cookies/); added minor adjustments.

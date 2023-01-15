@@ -227,5 +227,4 @@ If you use the Rich Text Editor on a blog that's installed in a subdirectory, an
 
 - 2022-09-14: Added alt tags to all images.
 - 2022-09-14: cleared up a link refering to the [utf8mb4 article](https://make.wordpress.org/core/2015/04/02/the-utf8mb4-upgrade/)
-- 2022-09-14: moved over content [from original source](https://wordpress.org/support/article/how-to-install-wordpress/)
-- 2022-09-04: Nothing here, yet.
+- 2022-09-14: Original content from [How to install WordPress](https://wordpress.org/support/article/how-to-install-wordpress/)

@@ -80,4 +80,4 @@ The following links explains how to change specific directories within WordPress
 
 ## Changelog
 
-- 2022-09-11: Created from source [Giving WordPress Its Own Directory](https://wordpress.org/support/article/giving-wordpress-its-own-directory/)
+- 2022-09-11: Original content from [Giving WordPress Its Own Directory](https://wordpress.org/support/article/giving-wordpress-its-own-directory/).

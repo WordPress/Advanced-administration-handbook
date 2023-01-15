@@ -126,4 +126,4 @@ If a version update to core has not happened, clicking this button won't affect 
 
 ## Changelog
 
-- 2022-10-21: Copying original content [1](https://wordpress.org/support/article/network-admin/), [2](https://wordpress.org/support/article/network-admin-sites-screen/) and [3](https://wordpress.org/support/article/network-admin-updates-screen/)
+- 2022-10-21: Original content from [Network Admin](https://wordpress.org/support/article/network-admin/), [Network Admin Sites Screen](https://wordpress.org/support/article/network-admin-sites-screen/), and [Network Admin Updates Screen](https://wordpress.org/support/article/network-admin-updates-screen/).

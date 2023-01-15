@@ -73,4 +73,4 @@ See [Editing wp-config.php/Custom User and Usermeta Tables](https://wordpress.or
 
 ## Changelog
 
-- 2022-10-21: Copying [original content](https://wordpress.org/support/article/installing-multiple-blogs/)
+- 2022-10-21: Original content from [Installing Multiple WordPress Instances](https://wordpress.org/support/article/installing-multiple-blogs/).

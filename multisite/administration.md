@@ -215,4 +215,4 @@ When you've created your WordPress Network for importing other sites, you need t
 
 ## Changelog
 
-- 2022-10-25: Copying from the [original content](https://wordpress.org/support/article/multisite-network-administration/)
+- 2022-10-25: Original content from [Multisite Network Administration](https://wordpress.org/support/article/multisite-network-administration/).
