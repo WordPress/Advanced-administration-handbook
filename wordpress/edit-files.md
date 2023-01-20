@@ -1,12 +1,12 @@
 # Editing Files
 
-There are times when you will need to edit WordPress files, especially if you want to make changes in your [WordPress Theme](/support/article/using-themes/). WordPress features a [built-in editor](#using-the-theme-editor-and-plugin-editor) that allows you to edit files online, using any internet browser. You can also edit files copied or stored on your computer, and then upload them to your site using an [FTP client](/support/article/ftp-clients/).
+There are times when you will need to edit WordPress files, especially if you want to make changes in your [WordPress Theme](https://wordpress.org/documentation/article/worik-with-themes/). WordPress features a [built-in editor](https://wordpress.org/documentation/article/editing-files/#using-the-theme-file-editor-and-plugin-file-editor) that allows you to edit files online, using any internet browser. You can also edit files copied or stored on your computer, and then upload them to your site using an [FTP client](https://wordpress.org/documentation/article/ftp-clients/).
 
 Before editing any of your WordPress files, be sure to do the following:
 
-* Work from copies of backup files when possible, and make sure that you [backup your information](/support/article/wordpress-backups/) frequently–while you work, and whenever you make changes. Remember to keep your backups in a safe place!
-* When working online, you need to set the appropriate [file permissions](/support/article/changing-file-permissions/), so that you can modify and save files. If you see a note at the bottom of the WordPress editor panel that says **“If this file was writable you could edit it…”** this means that you need to change the file permissions before you can make any changes.
-* When making changes to files outside of the built-in plugin and theme editors, use a [text editor](/support/article/glossary#text-editor). **It is strongly advisable not to use a word processing program.** Word processors change quote marks to characters, they sometimes convert specific characters, and they can also add in unwanted code. These changes can cause files to break. (For similar reasons, it is also inadvisable to use certain HTML generator programs.)
+* Work from copies of backup files when possible, and make sure that you [backup your information](https://wordpress.org/documentation/article/wordpress-backups/) frequently–while you work, and whenever you make changes. Remember to keep your backups in a safe place!
+* When working online, you need to set the appropriate [file permissions](https://wordpress.org/documentation/article/changing-file-permissions/), so that you can modify and save files. If you see a note at the bottom of the WordPress editor panel that says **“If this file was writable you could edit it…”** this means that you need to change the file permissions before you can make any changes.
+* When making changes to files outside of the built-in plugin and theme editors, use a [text editor](https://wordpress.org/documentation/article/wordpress-glossary/#text-editor). **It is strongly advisable not to use a word processing program.** Word processors change quote marks to characters, they sometimes convert specific characters, and they can also add in unwanted code. These changes can cause files to break. (For similar reasons, it is also inadvisable to use certain HTML generator programs.)
 
 ## Using the Theme File Editor and Plugin File Editor
 
@@ -18,7 +18,7 @@ Please note that, depending on the level of user privileges that you have, you m
 
 You can find these editors in the following places depending on your theme:
 
-* If you are using a [Block theme](https://wordpress.org/support/article/block-themes/), both the Theme and Plugin File Editor will be listed under Tools.
+* If you are using a [Block theme](https://wordpress.org/documentation/article/block-themes/), both the Theme and Plugin File Editor will be listed under Tools.
 * If you are using a Classic theme, the Theme File Editor will be listed under Appearance and the Plugin File Editor will be listed under Plugins.
 
 You can view a file in either of these editors by accessing it from the right hand sidebar navigation.
@@ -29,11 +29,11 @@ Be aware that if the theme you edit is updated, your changes will be overwritten
 
 ### What Files Can Be Edited?
 
-The following file types (if [writable](/support/article/changing-file-permissions/)) can be edited in the plugin editor that is built into the WordPress administrative panel:
+The following file types (if [writable](https://wordpress.org/documentation/article/changing-file-permissions/)) can be edited in the plugin editor that is built into the WordPress administrative panel:
 
-* [HTML](/support/article/glossary#html)
-* [PHP](/support/article/glossary#php)
-* [CSS](/support/article/glossary#css)
+* [HTML](https://wordpress.org/support/article/glossary#html)
+* [PHP](https://wordpress.org/support/article/glossary#php)
+* [CSS](https://wordpress.org/support/article/glossary#css)
 * TXT (and related text-like files such as RTF)
 
 In the theme editor, only writable PHP and CSS files can be edited.
@@ -56,7 +56,7 @@ Hint: Use your browser's internal search bar to help find code within the visual
 
 #### File Permissions
 
-To edit a file using the built-in WordPress plugin and theme editors, the permissions for that file must be set to writable (at least 604). You can [change the permissions](/support/article/changing-file-permissions/) on files by using an [FTP client program](/support/article/ftp-clients/), a web-based file manager provided by your host, or from the [command-line](/support/article/glossary#shell) using SSH (secure shell). Your options depend on the type of access your host offers.
+To edit a file using the built-in WordPress plugin and theme editors, the permissions for that file must be set to writable (at least 604). You can [change the permissions](https://wordpress.org/support/article/changing-file-permissions/) on files by using an [FTP client program](https://wordpress.org/support/article/ftp-clients/), a web-based file manager provided by your host, or from the [command-line](https://wordpress.org/support/article/glossary#shell) using SSH (secure shell). Your options depend on the type of access your host offers.
 
 #### Make a Mistake? Use Backup Files
 
@@ -68,19 +68,19 @@ No backup? Download a fresh copy of the file you edited from the original source
 
 By default, any user that logs in with administrative permissions can access the WordPress plugin and theme editors, and change any theme or plugin file on your site in real-time.
 
-To combat accidents, errors, or even hacking, you may wish to disable the ability to edit files within the WordPress theme by adding the [DISALLOW_FILE_EDIT](/support/article/editing-wp-config-php/#disable-the-plugin-and-theme-editor) function to your `wp-config.php` file.
+To combat accidents, errors, or even hacking, you may wish to disable the ability to edit files within the WordPress theme by adding the [DISALLOW_FILE_EDIT](https://wordpress.org/documentation/article/editing-wp-config-php/#disable-the-plugin-and-theme-editor) function to your 'wp-config.php' file.
 
 ## Editing Files Offline
 
-To edit files offline, you can use any of the [recommended text editors](#text-editors) to create and edit files, and an [FTP client](/support/article/ftp-clients/) to upload them. Make sure to view the results in your browser, to see if the desired changes have taken effect.
+To edit files offline, you can use any of the [recommended text editors](https://wordpress.org/documentation/article/editing-files/#text-editors) to create and edit files, and an [FTP client](https://wordpress.org/documentation/article/ftp-clients/) to upload them. Make sure to view the results in your browser, to see if the desired changes have taken effect.
 
-**Note:** It is not recommended to change WordPress core files other than [wp-config.php](https://developer.wordpress.org/advanced-administration/wordpress/wp-config/). If you must change anything else, take notes about your changes, and store a copy of these notes in a text file in your WordPress root directory. You should also make a backup copy of your WordPress core files, for future reference and upgrades.
+**Note:** It is not recommended to change WordPress core files other than [wp-config.php](https://wordpress.org/documentation/article/editing-wp-config-php/). If you must change anything else, take notes about your changes, and store a copy of these notes in a text file in your WordPress root directory. You should also make a backup copy of your WordPress core files, for future reference and upgrades.
 
 ## Using Text Editors
 
 ### Editors to Avoid
 
-**Note:** If you use an external editor such as a word-processor to create and edit files, this can corrupt the file you are editing. See [text editor](/support/article/glossary#text-editor) in the glossary for a short explanation as to why you should avoid these editors.
+**Note:** If you use an external editor such as a word-processor to create and edit files, this can corrupt the file you are editing. See [text editor](https://wordpress.org/documentation/article/wordpress-glossary/#text-editor) in the glossary for a short explanation as to why you should avoid these editors.
 
 Editors to avoid include:
 
@@ -104,28 +104,27 @@ To use **Adobe Dreamweaver** or **Microsoft FrontPage**, keep these guideline
 
 ### Text Editors
 
-The following [text editors](/support/article/glossary#text-editor) are acceptable for file editing:
+The following [text editors](https://wordpress.org/documentation/article/wordpress-glossary/#text-editor) are acceptable for file editing:
 
 * [Atom](https://atom.io/) (macOS, Windows, Linux, Open Source, Free)
-* [BBEdit](http://www.barebones.com/products/bbedit/index.shtml) (macOS, $)
+* [BBEdit](http://www.barebones.com/products/bbedit/index.html) (macOS, $)
 * [Crimson Editor](http://www.crimsoneditor.com/) (Windows, Free)
-* [EditPad](http://www.jgsoft.com/editpad) (Windows)
-* [EditPlus](http://www.editplus.com/) (Windows)
-* [emacs](http://www.gnu.org/software/emacs/emacs.html) (Unices, Windows, macOS, Open Source, Free)
+* [EditPad](https://www.editpadpro.com/) (Windows)
+* [EditPlus](https://www.editplus.com/) (Windows)
+* [emacs](https://www.gnu.org/software/emacs/emacs.html) (Unices, Windows, macOS, Open Source, Free)
 * [JEdit](http://jedit.org/) (macOS, Windows, Linux)
-* [Kwrite](http://www.kde-apps.org/content/show.php?content=9901) (Unices)
-* [Notepad++](http://notepad-plus.sourceforge.net/) (Windows, Open Source, Free)
-* [Notepad2](http://www.flos-freeware.ch/notepad2.html) (Windows, Free)
+* [Notepad++](https://notepad-plus-plus.org/) (Windows, Open Source, Free)
 * [PSPad](http://www.pspad.com/) (Windows, Free)
 * [Smultron](https://www.peterborgapps.com/smultron/) (macOS, $)
 * [SubEthaEdit](https://apps.apple.com/us/app/subethaedit/id728530824) (macOS, Open Source, Free)
-* [Sublime Text](http://www.sublimetext.com/3) (Windows, Linux, macOS, $)
+* [Sublime Text](http://www.sublimetext.com/download) (Windows, Linux, macOS, $)
 * [TextEdit](https://en.wikipedia.org/wiki/TextEdit) (included with macOS)
-* [TextMate](http://www.macromates.com/) (macOS, $)
-* [TextPad](http://www.textpad.com/) (Windows)
-* [UltraEdit-32](http://www.ultraedit.com/) (Windows, Linux, macOS, $)
-* [vim](http://www.vim.org/) (Unices, Windows, macOS, Open Source, Free)
+* [TextMate](https://macromates.com/) (macOS, $)
+* [TextPad](https://www.textpad.com/home) (Windows)
+* [UltraEdit-32](https://www.ultraedit.com/) (Windows, Linux, macOS, $)
+* [vim](https://www.vim.org/) (Unices, Windows, macOS, Open Source, Free)
 
 ## Changelog
 
 - 2022-09-11: Original content from [Editing Files](https://wordpress.org/support/article/editing-files/).
+- 2023-01-20: Updated broken links. Removed non existing text editors.
