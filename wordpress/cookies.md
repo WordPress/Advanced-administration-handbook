@@ -18,9 +18,9 @@ You can find information on how to manage those for the most popular browsers he
 
 Users are those people who have registered an account with the WordPress site.
 
-On login, WordPress uses the `wordpress_[hash]` cookie to store your authentication details. Its use is limited to the Administration Screen area, /wp-admin/
+On login, WordPress uses the `wordpress_[hash]` cookie to store your authentication details. Its use is limited to the Administration Screen area, `/wp-admin/`.
 
-After login, WordPress sets the `wordpress_logged_in_[hash]` cookie, which indicates when you’re logged in, and who you are, for most interface use.
+After login, WordPress sets the `wordpress_logged_in_[hash]` cookie, which indicates when you're logged in, and who you are, for most interface use.
 
 WordPress also sets a few `wp-settings-{time}-[UID]` cookies. The number on the end is your individual user ID from the users database table. This is used to customize your view of admin interface, and possibly also the main site interface.
 
@@ -28,7 +28,7 @@ The cookies length can be adjusted with the `auth_cookie_expiration` hook. An ex
 
 ### Non-Version-Specific Data
 
-The actual cookies contain _hashed_ data, so you don't have to worry about someone gleaning your username and password by reading the cookie data. A _hash_ is the result of a specific mathematical formula applied to some input data (in this case your `user name` and `password`, respectively). It's quite hard to reverse a _hash_ (bordering on practical infeasibility with today’s computers). This means it is very difficult to take a _hash_ and _"unhash"_ it to find the original input data.
+The actual cookies contain _hashed_ data, so you don't have to worry about someone gleaning your username and password by reading the cookie data. A _hash_ is the result of a specific mathematical formula applied to some input data (in this case your `user name` and `password`, respectively). It's quite hard to reverse a _hash_ (bordering on practical infeasibility with today's computers). This means it is very difficult to take a _hash_ and _"unhash"_ it to find the original input data.
 
 WordPress uses the two cookies to bypass the password entry portion of `wp-login.php`. If WordPress recognizes that you have valid, non-expired cookies, you go directly to the [WordPress Administration Screen](https://wordpress.org/support/article/administration-screens). If you don't have the cookies, or they're expired, or in some other way invalid (like you edited them manually for some reason), WordPress will require you to log in again, in order to obtain new cookies.
 
@@ -48,7 +48,7 @@ The commenter cookies are set to expire a little under one year from the time th
 - [RFC2965](http://www.faqs.org/rfcs/rfc2965)
 - [PHP cookie documentation](http://www.php.net/manual/en/features.cookies.php)
 
-
 ## Changelog
 
+- 2022-09-20: Minor adjustments.
 - 2022-09-11: Original content from [Cookies](https://wordpress.org/support/article/cookies/); added minor adjustments.
