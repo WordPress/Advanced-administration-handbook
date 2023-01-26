@@ -34,7 +34,7 @@ When dealing with very high traffic situations it may be necessary to employ mul
 
 The WordPress database can be easily moved to a different server and only requires a small change to the config file. Likewise images and other static files can be moved to alternative servers (see content offloading).
 
-[Amazon's Elastic Load Balancer](https://aws.amazon.com/elasticloadbalancing/) can help spread traffic across multiple web servers but requires a higher level of expertise. If you're employing multiple database servers, the [HyperDB]([https://codex.wordpress.org/HyperDB) class provides a drop-in replacement for the standard [WPDB](https://codex.wordpress.org/Class_Reference/wpdb) class, and can handle multiple database servers in both replicated and partitioned structures.
+[Amazon's Elastic Load Balancer](https://aws.amazon.com/elasticloadbalancing/) can help spread traffic across multiple web servers but requires a higher level of expertise. If you're employing multiple database servers, the [HyperDB](https://codex.wordpress.org/HyperDB) class provides a drop-in replacement for the standard [WPDB](https://developer.wordpress.org/reference/classes/wpdb/) class, and can handle multiple database servers in both replicated and partitioned structures.
 
 #### Hardware Performance
 
@@ -236,7 +236,7 @@ It's also important to compress your media files – namely images. The [WP Smus
 
 The [WP Optimize](https://wordpress.org/plugins/wp-optimize/) plugin can help you reduce extra clutter in your database.
 
-You can also instruct WordPress to [minimize the number of revisions](https://codex.wordpress.org/Revisions) that it saves of your posts and pages.
+You can also instruct WordPress to [minimize the number of revisions](https://wordpress.org/documentation/article/revisions/) that it saves of your posts and pages.
 
 ### Adding Servers
 
@@ -279,4 +279,4 @@ If you use a Persistent Object Cache, options (whether autoloaded or not) load f
 
 ## Changelog
 
-- 2022-09-11: Original content from [Optimization](https://wordpress.org/support/article/optimization/).
+- 2022-09-11: Original content from [Optimization](https://wordpress.org/documentation/article/optimization/).

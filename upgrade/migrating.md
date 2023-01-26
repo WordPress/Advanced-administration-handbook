@@ -185,14 +185,14 @@ You will need to update your WordPress configuration file if your database has m
   - you have renamed your database
   - you have changed the database user name
 2. Make a backup copy of your `wp-config.php` file.
-3. Open the `wp-config.php` file in a [text editor](https://codex.wordpress.org/Glossary#Text_editor).
+3. Open the `wp-config.php` file in a [text editor](https://wordpress.org/documentation/article/wordpress-glossary/#Text_editor).
 4. Review its contents. In particular, you are looking for the [database host entry](https://developer.wordpress.org/advanced-administration/wordpress/wp-config/#set-database-host).
 5. Save the file.
 6. At this point, your WordPress blog should be working.  
 
 #### Verify the Profile
 
-1. In your [Administration](https://wordpress.org/support/article/administration-screens/) > [Settings](https://wordpress.org/support/article/administration-screens/#general) > [General](https://wordpress.org/support/article/settings-general-screen/) panel, you will verify that the changes you made in Changing the URL above, are correct.
+1. In your [Administration](https://wordpress.org/documentation/article/administration-screens/) > [Settings](https://wordpress.org/documentation/article/administration-screens/#general) > [General](https://wordpress.org/documentation/article/settings-general-screen/) panel, you will verify that the changes you made in Changing the URL above, are correct.
 2. Verify that the reference in your **WordPress Address (URL)** contains the new address.
 3. Verify that the reference in your **Site Address (URL)** contains the new address.
 4. If you have made changes, click **Save Changes**.
@@ -202,7 +202,7 @@ You will need to update your WordPress configuration file if your database has m
 After changing the information in your Administration > Settings > General panel, you will need to update your .htaccess file if you are using Permalinks or any rewrites or redirects. 
 
 1. **Make a backup copy** of your `.htaccess` file. This is not a recommendation but a requirement.
-2. Open the `.htaccess` file in a [text editor](https://wordpress.org/support/article/glossary/#text-editor).
+2. Open the `.htaccess` file in a [text editor](https://wordpress.org/documentation/article/glossary/#text-editor).
 3. Review its contents, looking for any custom rewrites or redirects you entered. **Copy** these to another text file for safe keeping.
 4. Close the file.
 5. Follow the instructions on the Permalinks SubPanel for updating your Permalinks to the `.htaccess` file.
@@ -310,16 +310,16 @@ Here are the step-by-step instructions to move your WordPress site to a new loca
 
 1. Create the new location using one of these two options:
    - If you will be moving your WordPress core files to a new directory, create the new directory.
-   - If you want to move WordPress to your root directory, make sure all `index.php`, [.htaccess](https://wordpress.org/support/article/glossary/#htaccess), and other files that might be copied over are backed up and/or moved, and that the root directory is ready for the new WordPress files.
+   - If you want to move WordPress to your root directory, make sure all `index.php`, [.htaccess](https://wordpress.org/documentation/article/glossary/#htaccess), and other files that might be copied over are backed up and/or moved, and that the root directory is ready for the new WordPress files.
 2. Log in to your site.
-3. Go to the [Administration](https://wordpress.org/support/article/administration-screens/) > [Settings](https://wordpress.org/support/article/administration-screens/#settings-configuration-settings) > [General](https://wordpress.org/support/article/settings-general-screen/) screen.
+3. Go to the [Administration](https://wordpress.org/documentation/article/administration-screens/) > [Settings](https://wordpress.org/documentation/article/administration-screens/#settings-configuration-settings) > [General](https://wordpress.org/documentation/article/settings-general-screen/) screen.
 4. In the box for **WordPress Address (URL)**: change the address to the new location of your main WordPress core files.
 5. In the box for **Site Address (URL)**: change the address to the new location, which should match the WordPress (your public site) address.
 6. Click **Save Changes**.
 7. (Do not try to open/view your site now!)
 8. Move your WordPress core files to the new location. This includes the files found within the original directory, such as http://example.com/wordpress, and all the sub-directories, to the new location.
 9. Now, try to open your site by going to yourdomain.com/wp-admin. Note, you may need to go to yourdomain.com/wp-login.php
-10. If you are using [Permalinks](https://wordpress.org/support/article/using-permalinks/), go to the Administration > Settings > [Permalinks](https://wordpress.org/support/article/settings-permalinks-screen/) panel and update your Permalink structure to your [.htaccess](https://wordpress.org/support/article/glossary/#htaccess), file, which should be in the same directory as the main `index.php` file.
+10. If you are using [Permalinks](https://wordpress.org/documentation/article/using-permalinks/), go to the Administration > Settings > [Permalinks](https://wordpress.org/documentation/article/settings-permalinks-screen/) panel and update your Permalink structure to your [.htaccess](https://wordpress.org/documentation/article/glossary/#htaccess), file, which should be in the same directory as the main `index.php` file.
 11. Existing image/media links uploaded media will refer to the old folder and must be updated with the new location. You can do this with the [Better Search Replace](https://wordpress.org/plugins/better-search-replace/) or [Velvet Blues Update URLs](https://wordpress.org/plugins/velvet-blues-update-urls/) plugins, [WP-CLI's search-replace](http://wp-cli.org/commands/search-replace/) if your hosting provider (or you) have installed WP-CLI, manually in your SQL database, or by using the 3rd party database updating tool [Search and Replace Databases Script](https://interconnectit.com/products/search-and-replace-for-wordpress-databases/) * **Note:** this script is best used by experienced developers.
 12. In some cases your permissions may have changed, depending on your ISP. Watch for any files with "0000" permissions and change them back to "0644".
 13. If your theme supports menus, links to your home page may still have the old subdirectory embedded in them. Go to Appearance > Menus and update them.
@@ -372,7 +372,7 @@ You're done. Test your site to make sure that it works right. If the change invo
 
 ### Shutting It Down
 1. Download a copy of the main wordpress files from your OLD site to your hard drive and [edit wp-config.php](https://developer.wordpress.org/advanced-administration/wordpress/wp-config/) to suit the new server.
-2. Go back to your OLD site and go to [Administration](https://wordpress.org/support/article/administration-screens/) > [Settings](https://wordpress.org/support/article/administration-screens/#settings-configuration-settings) > [General](https://wordpress.org/support/article/settings-general-screen/) screen and change the URL (both of them) to that of your new site.
+2. Go back to your OLD site and go to [Administration](https://wordpress.org/documentation/article/administration-screens/) > [Settings](https://wordpress.org/documentation/article/administration-screens/#settings-configuration-settings) > [General](https://wordpress.org/documentation/article/settings-general-screen/) screen and change the URL (both of them) to that of your new site.
 3. Login on your server, go to phpMyAdmin, export as file, and save your database (but keep the old one just in case). Now, upload this new database and the copy of the wordpress core files with the edited wp-config.php to your new server. That's it!
 
 #### Keeping it Running
@@ -450,7 +450,7 @@ This tutorial assumes that you are hosting WordPress on a server using cPanel. I
 Generate a full site backup in cPanel. It might also help to copy all the files on the server via FTP, so that you can easily access the files for plugins and themes, which you'll need in a later step.
 
 #### Export from your existing WordPress installs
-In each of your existing WordPress installations, go Tools > Export in WordPress. Download the WXR files that contain all your posts and pages for each site. See the instructions on the [Tools Export Screen](https://wordpress.org/support/article/tools-export-screen/).
+In each of your existing WordPress installations, go Tools > Export in WordPress. Download the WXR files that contain all your posts and pages for each site. See the instructions on the [Tools Export Screen](https://wordpress.org/documentation/article/tools-export-screen/).
 
 Make sure that your export file actually has all the posts and pages. You can verify this by looking at the last entry of the exported file using a text editor. The last entry should be the most recent post.
 
@@ -502,4 +502,4 @@ Another option might be the [Internet Archive Wayback Machine](https://archive.o
 
 ## Changelog
 
-- 2022-09-11: Original content from [Changing The Site URL](https://wordpress.org/support/article/changing-the-site-url/), and [Moving WordPress](https://wordpress.org/support/article/moving-wordpress/).
+- 2022-09-11: Original content from [Changing The Site URL](https://wordpress.org/documentation/article/changing-the-site-url/), and [Moving WordPress](https://wordpress.org/documentation/article/moving-wordpress/).

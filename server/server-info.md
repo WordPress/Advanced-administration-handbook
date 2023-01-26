@@ -1,6 +1,6 @@
 # Finding Server Info
 
-What version of [PHP](https://wordpress.org/support/article/glossary#php) are you using? What server software is your site host using? What version of [MySQL](https://wordpress.org/support/article/glossary#mysql) do you have? What operating system does your site host use?
+What version of [PHP](https://wordpress.org/documentation/article/glossary#php) are you using? What server software is your site host using? What version of [MySQL](https://wordpress.org/documentation/article/glossary#mysql) do you have? What operating system does your site host use?
 
 ![php73win_phpinfo](https://user-images.githubusercontent.com/1508963/201365720-3a13ccab-c44c-43f2-8326-e3a997c5acfa.jpg)
 
@@ -46,4 +46,4 @@ That’s it. Make sure you remember to delete the file once you’re done with i
 
 ## Changelog
 
-- 2022-11-11: Original content from [Finding Server Info](https://wordpress.org/support/article/finding-server-info/).
+- 2022-11-11: Original content from [Finding Server Info](https://wordpress.org/documentation/article/finding-server-info/).

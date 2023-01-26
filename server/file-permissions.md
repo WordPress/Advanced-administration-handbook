@@ -57,7 +57,7 @@ Typically, all core WordPress files should be writable only by your user account
 
 If you want to use the built-in theme editor, all files need to be group writable. Try using it before modifying file permissions, it should work. (This may be true if different users uploaded the WordPress package and the Plugin or Theme. This wouldn't be a problem for Plugin and Themes installed via the admin. When uploading files with different ftp users group writable is needed. On shared hosting, make sure the group is exclusive to users you trust... the apache user shouldn't be in the group and shouldn't own files.)
 
-Some plugins require the `/wp-content/` folder be made writeable, but in such cases they will let you know during installation. In some cases, this may require assigning 755 permissions. The same is true for `/wp-content/cache/` and maybe `/wp-content/uploads/` (if you're using [MultiSite](https://codex.wordpress.org/MultiSite) you may also need to do this for `/wp-content/blogs.dir/`)
+Some plugins require the `/wp-content/` folder be made writeable, but in such cases they will let you know during installation. In some cases, this may require assigning 755 permissions. The same is true for `/wp-content/cache/` and maybe `/wp-content/uploads/` (if you're using [MultiSite](https://developer.wordpress.org/advanced-administration/multisite/create-network/) you may also need to do this for `/wp-content/blogs.dir/`)
 
 Additional directories under /wp-content/ should be documented by whatever plugin / theme requires them. Permissions will vary.
 
@@ -106,31 +106,31 @@ Popular methods used by sysadmins for this setup are:
 
 ## Using an FTP Client
 
-[FTP programs](/support/article/ftp-clients/) ("clients") allow you to set permissions for files and directories on your remote host. This function is often called `chmod` or `set permissions` in the program menu.
+[FTP programs](https://developer.wordpress.org/advanced-administration/upgrade/ftp/) ("clients") allow you to set permissions for files and directories on your remote host. This function is often called `chmod` or `set permissions` in the program menu.
 
-In [WordPress install](/support/article/how-to-install-wordpress/), two files that you will probably want to alter are the index page, and the css which controls the layout. Here's how you change index.php – _the process is the same for any file_.
+In [WordPress install](https://developer.wordpress.org/advanced-administration/before-install/howto-install/), two files that you will probably want to alter are the index page, and the css which controls the layout. Here's how you change index.php – _the process is the same for any file_.
 
 In the screenshot below, look at the last column – that shows the permissions. It looks a bit confusing, but for now just note the sequence of letters.   
 
-[![](https://wordpress.org/support/files/2019/02/podz_filezilla_12.gif)](https://codex.wordpress.org/File:podz_filezilla_12.gif)
+[![](https://wordpress.org/documentation/files/2019/02/podz_filezilla_12.gif)](https://wordpress.org/documentation/files/2019/02/podz_filezilla_12.gif)
 Initial permissions
 
 Right-click 'index.php' and select 'File Permissions'
 A popup screen will appear.
 
-[![](https://wordpress.org/support/files/2019/02/podz_filezilla_13.gif)](https://codex.wordpress.org/File:podz_filezilla_13.gif)
+[![](https://wordpress.org/documentation/files/2019/02/podz_filezilla_13.gif)](https://wordpress.org/documentation/files/2019/02/podz_filezilla_13.gif)
 Altering file permissions
 
 Don't worry about the check boxes. Just delete the 'Numeric value:' and enter the number you need – in this case it's 666. Then click OK.   
 
-[![](https://wordpress.org/support/files/2019/02/podz_filezilla_14.gif)](https://codex.wordpress.org/File:podz_filezilla_14.gif)
+[![](https://wordpress.org/documentation/files/2019/02/podz_filezilla_14.gif)](https://wordpress.org/documentation/files/2019/02/podz_filezilla_14.gif)
 Permissions have been altered.
 
 You can now see that the file permissions have been changed.
 
 ### Unhide the hidden files
 
-By default, most [FTP Clients](/support/article/ftp-clients/), including [FileZilla](http://filezilla.sourceforge.net/), keep hidden files, those files beginning with a period (.), from being displayed. But, at some point, you may need to see your hidden files so that you can change the permissions on that file. For example, you may need to make your [.htaccess](/support/article/glossary#htaccess) file, the file that controls [permalinks](/support/article/using-permalinks/), writeable.
+By default, most [FTP Clients](https://developer.wordpress.org/advanced-administration/upgrade/ftp/), including [FileZilla](http://filezilla.sourceforge.net/), keep hidden files, those files beginning with a period (.), from being displayed. But, at some point, you may need to see your hidden files so that you can change the permissions on that file. For example, you may need to make your [.htaccess](https://wordpress.org/documentation/article/glossary#htaccess) file, the file that controls [permalinks](https://wordpress.org/documentation/article/using-permalinks/), writeable.
 
 To display hidden files in FileZilla, in it is necessary to select 'View' from the top menu, then select 'Show hidden files'. The screen display of files will refresh and any previously hidden file should come into view.
 
@@ -163,7 +163,7 @@ If those fail to allow you to write, try them all again in order, except this ti
 
 `chmod` is a unix command that means "**ch**ange **mod**e" on a file. The `-R` flag means to apply the change to every file and directory inside of `wp-content`. 766 is the mode we are changing the directory to, it means that the directory is readable and writable by WordPress and any and all other users on your system. Finally, we have the name of the directory we are going to modify, `wp-content`. If 766 doesn't work, you can try 777, which makes all files and folders readable, writable, and executable by all users, groups, and processes.
 
-If you use [Permalinks](/support/article/using-permalinks/) you should also change permissions of .htaccess to make sure that WordPress can update it when you change settings such as adding a new page, redirect, category, etc.. which requires updating the .htaccess file when mod_rewrite Permalinks are being used.
+If you use [Permalinks](https://wordpress.org/documentation/article/using-permalinks/) you should also change permissions of .htaccess to make sure that WordPress can update it when you change settings such as adding a new page, redirect, category, etc.. which requires updating the .htaccess file when mod_rewrite Permalinks are being used.
 
 1. Go to the main directory of WordPress
 2. Enter `chmod -v 666 .htaccess`
@@ -304,4 +304,4 @@ usage:  setenforce \[ Enforcing | Permissive | 1 | 0 \]
 
 ## Changelog
 
-- 2022-09-11: Original content from [Changing File Permissions](https://wordpress.org/support/article/changing-file-permissions/).
+- 2022-09-11: Original content from [Changing File Permissions](https://wordpress.org/documentation/article/changing-file-permissions/).

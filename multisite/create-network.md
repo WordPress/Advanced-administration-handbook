@@ -1,6 +1,6 @@
 # Create A Network
 
-You have the ability to create a [network](https://wordpress.org/support/article/glossary/#network) of [sites](https://wordpress.org/support/article/glossary/#site) by using the [multisite](https://wordpress.org/support/article/glossary/#multisite) feature. This article contains instructions for creating a multisite network. It is advised to read the post "[Before you Create a Network](https://developer.wordpress.org/advanced-administration/multisite/prepare-network/)" first, as it contains important information about planning your network.
+You have the ability to create a [network](https://wordpress.org/documentation/article/glossary/#network) of [sites](https://wordpress.org/documentation/article/glossary/#site) by using the [multisite](https://wordpress.org/documentation/article/glossary/#multisite) feature. This article contains instructions for creating a multisite network. It is advised to read the post "[Before you Create a Network](https://developer.wordpress.org/advanced-administration/multisite/prepare-network/)" first, as it contains important information about planning your network.
 
 A multisite network can be very similar to your own personal version of WordPress.com. End users of your network can create their own sites on demand, just like end users of WordPress.com can create blogs on demand. If you do not have any need to allow end users to create their own sites on demand, you can create a multisite network in which only you, the administrator, can add new sites.
 
@@ -18,7 +18,7 @@ This guide describes how to install manually WordPress Multisite in your current
 
 Your existing WordPress site will be updated when creating a network. Unless this is a fresh install and you have nothing to lose, please [backup your database and files](https://developer.wordpress.org/advanced-administration/security/backup/).
 
-Verify that [Pretty Permalinks](https://wordpress.org/support/article/using-permalinks/) work on your single WP instance.
+Verify that [Pretty Permalinks](https://wordpress.org/documentation/article/using-permalinks/) work on your single WP instance.
 
 Also deactivate all active plugins. You can reactivate them again after the network is created.
 
@@ -41,7 +41,7 @@ You will need to refresh your browser to continue.
 
 The previous step enables the **Network Setup** item in your **Tools menu**. Use that menu item to go to the **Create a Network of WordPress Sites** screen.
 
-To see an example of the Create a Network of WordPress Sites screen, look at [Administration](https://wordpress.org/support/article/administration-screens/) > [Tools](https://wordpress.org/support/article/administration-screens/#tools-managing-your-blog) > [Network Setup](https://wordpress.org/support/article/tools-network-screen/). The screen does not look exactly the same in all circumstances. The example shown is for an installation on `localhost`, which restricts the options available.
+To see an example of the Create a Network of WordPress Sites screen, look at [Administration](https://wordpress.org/documentation/article/administration-screens/) > [Tools](https://wordpress.org/documentation/article/administration-screens/#tools-managing-your-blog) > [Network Setup](https://wordpress.org/documentation/article/tools-network-screen/). The screen does not look exactly the same in all circumstances. The example shown is for an installation on `localhost`, which restricts the options available.
 
 [![Create a Network of WordPress Sites page](https://i0.wp.com/wordpress.org/support/files/2018/11/network-create.png?fit=1024%2C743&ssl=1)](https://i0.wp.com/wordpress.org/support/files/2018/11/network-create.png?fit=1024%2C743&ssl=1)
 _Create a Network of WordPress Sites page_
@@ -65,7 +65,7 @@ These are filled in automatically, but you can make changes. Server Address The 
 
 Double-check the details and press the **Install** button.
 
-**Note:** The installer may perform a check for wildcard subdomains when you have not configured them yet, or when you do not need them at all. Ignore the warning if it does not apply to your network. See the [Server Requirements](https://developer.wordpress.org/advanced-administration/multisite/prepare-network/#server-requirements) section in [Before You Create A Network](https://wordpress.org/support/article/before-you-create-a-network/) for information about wildcard subdomains.
+**Note:** The installer may perform a check for wildcard subdomains when you have not configured them yet, or when you do not need them at all. Ignore the warning if it does not apply to your network. See the [Server Requirements](https://developer.wordpress.org/advanced-administration/multisite/prepare-network/#server-requirements) section in [Before You Create A Network](https://developer.wordpress.org/advanced-administration/multisite/prepare-network/) for information about wildcard subdomains.
 
 ## Step 4: Enabling the Network {#step-4-enabling-the-network}
 
@@ -89,9 +89,9 @@ After completing these steps, log in again using the link provided. You might ha
 
 At the left of your WordPress toolbar, **My Sites** is now the second item. There, all your sites are listed, with handy fly-out menus, as well as a **Network Admin** menu item. Under **Network Admin** you can use the **Dashboard** item to go to the Network Dashboard screen.
 
-Go to the [Settings Screen](https://developer.wordpress.org/advanced-administration/multisite/admin/) to configure network options, and the [Sites Screen](https://codex.wordpress.org/Network_Admin#Sites) to manage your sites.
+Go to the [Settings Screen](https://developer.wordpress.org/advanced-administration/multisite/admin/) to configure network options, and the [Sites Screen](https://developer.wordpress.org/advanced-administration/multisite/admin/#Sites) to manage your sites.
 
-For more information, see: [Network Admin](https://codex.wordpress.org/Network_Admin)
+For more information, see: [Network Admin](https://developer.wordpress.org/advanced-administration/multisite/admin/)
 
 [Upgraded and can't find the Network Admin menu?](https://developer.wordpress.org/advanced-administration/multisite/administration/#network-admin-link-location)
 
@@ -103,14 +103,14 @@ Read [Multisite Network Administration](https://developer.wordpress.org/advanced
 
 For help troubleshooting:
 
-* [Debugging a WordPress Network](https://codex.wordpress.org/Debugging_a_WordPress_Network)
+* [Debugging a WordPress Network](https://developer.wordpress.org/advanced-administration/debug/debug-network/)
 
 ## Related Articles {#related-articles}
 
-* [Hosting WordPress](https://wordpress.org/support/article/hosting-wordpress/)
+* [Hosting WordPress](https://wordpress.org/documentation/article/hosting-wordpress/)
 * [Installing Multiple Blogs](https://developer.wordpress.org/advanced-administration/before-install/multiple-instances/)
 * [How to adapt my plugin to Multisite?](http://stackoverflow.com/questions/13960514/how-to-adapt-my-plugin-to-multisite/)
 
 ## Changelog
 
-- 2022-10-21: Original content from [Create A Network](https://wordpress.org/support/article/create-a-network/).
+- 2022-10-21: Original content from [Create A Network](https://wordpress.org/documentation/article/create-a-network/).

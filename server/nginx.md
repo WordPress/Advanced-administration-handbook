@@ -18,7 +18,7 @@ This guide is not going to cover how to install and configure Nginx, so this ass
 
 To make WordPress work with Nginx you have to configure the backend php-cgi. The options available are `fastcgi` or `php-fpm`. Here, php-fpm is being used because it is included with PHP 5.3+, so installing it is straight forward.
 
-The Nginx configuration has been broken up into five distinct files and is heavily commented to make each option easier to understand. The [author](https://wordpress.org/support/profile/bigsite) also made a best-effort attempting to follow “best practices” for nginx configurations.
+The Nginx configuration has been broken up into five distinct files and is heavily commented to make each option easier to understand. The [author](https://wordpress.org/support/users/bigsite/) also made a best-effort attempting to follow “best practices” for nginx configurations.
 
 ### Main (generic) startup file
 
@@ -604,7 +604,7 @@ A typo in [Global restrictions file](https://developer.wordpress.org/advanced-ad
 
 ### Reference
 
-- [nginx + php-fpm + PHP APC + WordPress multisite (subdirectory) + WP Super Cache](https://wordpress.org/support/topic/nginx-php-fpm-php-apc-wordpress-multisite-subdirectory-wp-super-cache)
+- [nginx + php-fpm + PHP APC + WordPress multisite (subdirectory) + WP Super Cache](https://wordpress.org/support/topic/nginx-php-fpm-php-apc-wordpress-multisite-subdirectory-wp-super-cache/).
 
 ### External Links
 
@@ -632,4 +632,4 @@ For WordPress Nginx scripted installation [CentminMod](http://centminmod.com/ngi
 
 ## Changelog
 
-- 2022-10-25: Original content from [Nginx](https://wordpress.org/support/article/nginx/).
+- 2022-10-25: Original content from [Nginx](https://wordpress.org/documentation/article/nginx/).

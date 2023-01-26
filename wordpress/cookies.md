@@ -30,7 +30,7 @@ The cookies length can be adjusted with the `auth_cookie_expiration` hook. An ex
 
 The actual cookies contain _hashed_ data, so you don't have to worry about someone gleaning your username and password by reading the cookie data. A _hash_ is the result of a specific mathematical formula applied to some input data (in this case your `user name` and `password`, respectively). It's quite hard to reverse a _hash_ (bordering on practical infeasibility with today's computers). This means it is very difficult to take a _hash_ and _"unhash"_ it to find the original input data.
 
-WordPress uses the two cookies to bypass the password entry portion of `wp-login.php`. If WordPress recognizes that you have valid, non-expired cookies, you go directly to the [WordPress Administration Screen](https://wordpress.org/support/article/administration-screens). If you don't have the cookies, or they're expired, or in some other way invalid (like you edited them manually for some reason), WordPress will require you to log in again, in order to obtain new cookies.
+WordPress uses the two cookies to bypass the password entry portion of `wp-login.php`. If WordPress recognizes that you have valid, non-expired cookies, you go directly to the [WordPress Administration Screen](https://wordpress.org/documentation/article/administration-screens). If you don't have the cookies, or they're expired, or in some other way invalid (like you edited them manually for some reason), WordPress will require you to log in again, in order to obtain new cookies.
 
 ## Commenter's Cookie
 
@@ -51,4 +51,4 @@ The commenter cookies are set to expire a little under one year from the time th
 ## Changelog
 
 - 2022-09-20: Minor adjustments.
-- 2022-09-11: Original content from [Cookies](https://wordpress.org/support/article/cookies/); added minor adjustments.
+- 2022-09-11: Original content from [Cookies](https://wordpress.org/documentation/article/cookies/); added minor adjustments.

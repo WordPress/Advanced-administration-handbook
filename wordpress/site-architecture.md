@@ -4,7 +4,7 @@ The following is a description of the general site architecture for WordPress 1.
 
 ## Template Driven Pages
 
-Before we get to the [core structure](#Core_Structure) of the WordPress page architecture, you need to understand that WordPress uses [template files](https://codex.wordpress.org/Templates "Templates") to generate the final page "look" and content. For example, when viewing the front page of your WordPress site, you are actually viewing several template files:
+Before we get to the [core structure](#Core_Structure) of the WordPress page architecture, you need to understand that WordPress uses [template files](https://codex.wordpress.org/Templates) to generate the final page "look" and content. For example, when viewing the front page of your WordPress site, you are actually viewing several template files:
 
 * index.php
 * header.php
@@ -82,7 +82,7 @@ Some themes may add a second, third, or even fourth sidebar, creating a column e
 
 ### The Modular Template Files
 
-Based on the premise of building blocks, WordPress themes divide the core structure into individual blocks called [template files](https://codex.wordpress.org/Templates "Templates"). These are the template files:
+Based on the premise of building blocks, WordPress themes divide the core structure into individual blocks called [template files](https://codex.wordpress.org/Templates). These are the template files:
 
 * Header - header.php
 * Sidebar/Menu - sidebar.php
@@ -91,9 +91,9 @@ Based on the premise of building blocks, WordPress themes divide the core struct
 
 In each of these template files, it is possible to use the body div as an all-encompassing container for content.
 
-When viewing a web page that uses a particular WordPress theme, the specific template files generated are dependent upon the user's request. If a user clicks on a category tag, the category template will be used. If the user views a [page](https://codex.wordpress.org/Pages "Pages"), the page template will be used.
+When viewing a web page that uses a particular WordPress theme, the specific template files generated are dependent upon the user's request. If a user clicks on a category tag, the category template will be used. If the user views a [page](https://wordpress.org/documentation/article/create-pages/), the page template will be used.
 
-When these core template files are loaded in combination with the [WordPress Loop](https://codex.wordpress.org/The_Loop "The Loop") and queries, a variety of templates can be generated. This allows web page developers to create individual and unique styles for each specific template.
+When these core template files are loaded in combination with the [WordPress Loop](https://codex.wordpress.org/The_Loop) and queries, a variety of templates can be generated. This allows web page developers to create individual and unique styles for each specific template.
 
 ## Interior Structures
 
@@ -120,11 +120,11 @@ The Default Theme has a more complex header code:
 </div>
 ```
 
-While the styles for the Classic Theme are found within the theme's style.css file, styles for the Default Theme are found both within the style.css file and the <head> of the header.php [template file](https://codex.wordpress.org/Templates "Templates"). Working with these styles is extensively covered in the article [Designing Headers](https://codex.wordpress.org/Designing_Headers "Designing Headers").
+While the styles for the Classic Theme are found within the theme's style.css file, styles for the Default Theme are found both within the style.css file and the <head> of the header.php [template file](https://codex.wordpress.org/Templates). Working with these styles is extensively covered in the article [Designing Headers](https://codex.wordpress.org/Designing_Headers).
 
 ### Content
 
-The content container in WordPress plays a critical role, because it holds the [WordPress Loop](https://codex.wordpress.org/The_Loop "The Loop"). The WordPress Loop processes each post that will be displayed on the current page. These posts are then formatted according to how they match specific criteria within the Loop tags.
+The content container in WordPress plays a critical role, because it holds the [WordPress Loop](https://codex.wordpress.org/The_Loop). The WordPress Loop processes each post that will be displayed on the current page. These posts are then formatted according to how they match specific criteria within the Loop tags.
 
   
 The Classic Theme has the simplest content structure:
@@ -155,7 +155,7 @@ The post CSS class selector applies the post styles to this container. It is imp
 <div class="post" id="post-<?php the_ID(); ?>">
 ```
 
-The use of the template tag [the_ID()](https://codex.wordpress.org/Template_Tags/the_ID "Template Tags/the ID") displays the ID number for the post. This unique identifier can be used for internal page links as well as for styles. For instance, an individual post could have a style for post-1, as well as for post-2. While it is a bit excessive to feature a style for every post, there may be a post or two that you need to have look a little different. Some plugins may use this identifier to automatically change the look of different posts, too.
+The use of the template tag [the_ID()](https://developer.wordpress.org/reference/functions/the_ID/) displays the ID number for the post. This unique identifier can be used for internal page links as well as for styles. For instance, an individual post could have a style for post-1, as well as for post-2. While it is a bit excessive to feature a style for every post, there may be a post or two that you need to have look a little different. Some plugins may use this identifier to automatically change the look of different posts, too.
 
 The content container for the Default Theme features a **multi-post view** (e.g. for the front page, categories, archives, and searches) as well as a **single post view** for single posts. The multi-post view looks like this:
 
@@ -214,13 +214,13 @@ The post content is styled with a combination of the styles within the entry CSS
 <p class="postmetadata">Post Meta Data Section</p> 
 ```
 
-The [Post Meta Data Section](https://codex.wordpress.org/Post_Meta_Data_Section "Post Meta Data Section") contains data details about the post, such as the date, time, and categories the post belongs to.
+The [Post Meta Data Section](https://codex.wordpress.org/Post_Meta_Data_Section) contains data details about the post, such as the date, time, and categories the post belongs to.
 
 ```
 <div class="navigation"> 
 ```
 
-The [Next and Previous Links](https://codex.wordpress.org/Next_and_Previous_Links "Next and Previous Links") are styled in the navigation div. They also include classes for alignleft (for the Previous Post) and alignright (for the Next Post in chronological order).
+The [Next and Previous Links](https://codex.wordpress.org/Next_and_Previous_Links) are styled in the navigation div. They also include classes for alignleft (for the Previous Post) and alignright (for the Next Post in chronological order).
 
 These elements are shifted around in the **single post view** content structure:
 
@@ -475,11 +475,11 @@ The Classic and Default Themes' `comments-popup.php` template file is essentiall
 
 The body tag sets the style for the overall page with `#commentspopup`. The `<h2>` heading begins the comments section.
 
-If you make modifications to the structure of the tags within the header and footer of the overall Theme, ensure those structural changes are applied to the comments popup template, especially if you will be [releasing the Theme to the public](https://codex.wordpress.org/Designing_Themes_for_Public_Release "Designing Themes for Public Release").
+If you make modifications to the structure of the tags within the header and footer of the overall Theme, ensure those structural changes are applied to the comments popup template, especially if you will be [releasing the Theme to the public](https://codex.wordpress.org/Designing_Themes_for_Public_Release).
 
 ### Sidebar
 
-As you saw with the Default Theme, the sidebar can be visible or not, depending upon the template file in use. The sidebar, in general, can be simple or complex. WordPress Themes often feature information within the sidebar in **nested lists**. There is a step-by-step guide for the sidebar at [Customizing Your Sidebar](https://codex.wordpress.org/Customizing_Your_Sidebar "Customizing Your Sidebar") and more information on [Styling Lists with CSS](https://codex.wordpress.org/Styling_Lists_with_CSS "Styling Lists with CSS"), too.
+As you saw with the Default Theme, the sidebar can be visible or not, depending upon the template file in use. The sidebar, in general, can be simple or complex. WordPress Themes often feature information within the sidebar in **nested lists**. There is a step-by-step guide for the sidebar at [Customizing Your Sidebar](https://codex.wordpress.org/Customizing_Your_Sidebar) and more information on [Styling Lists with CSS](https://codex.wordpress.org/Styling_Lists_with_CSS), too.
 
 In general, the WordPress sidebar features titles of the various sections within a list, with the section items in a nested list below the title.
 
@@ -535,11 +535,11 @@ The Classic Theme sidebar looks like this, with the links removed for simplifica
 </div>
 ```
 
-Most of these are self-explanatory. Each set of links has its own CSS selector: [Pages](https://codex.wordpress.org/Pages "Pages"), categories, archives, search, and meta.
+Most of these are self-explanatory. Each set of links has its own CSS selector: [Pages](https://wordpress.org/documentation/article/create-pages/), categories, archives, search, and meta.
 
 #### Pages and Link Categories
 
-The [Pages](https://codex.wordpress.org/Pages "Pages") and [Links](https://codex.wordpress.org/Links_Manager "Links Manager") category, labeled "Blogroll", uses the [<?php get_links_list(); ?>](https://codex.wordpress.org/Template_Tags/get_links_list "Template Tags/get links list") and [<?php wp_list_pages(); ?>](https://codex.wordpress.org/Template_Tags/wp_list_pages "Template Tags/wp list pages") template tags which automatically generates a heading.
+The [Pages](https://wordpress.org/documentation/article/create-pages/) and [Links](https://codex.wordpress.org/Links_Manager) category, labeled "Blogroll", uses the [<?php get_links_list(); ?>](https://developer.wordpress.org/reference/functions/get_links_list/) and [<?php wp_list_pages(); ?>](https://developer.wordpress.org/reference/functions/wp_list_pages/) template tags which automatically generates a heading.
 
 For the **Links** category, it generates an h2 heading for that set of links. This means you can style the menu h2 heading to look differently from the rest of the headings, or, if you want them to all look the same, make sure that the menu h2 style _matches_ the rest of the category styles which are not automatically generated.
 
@@ -547,7 +547,7 @@ The **Pages** template tag generates pagenav as the heading and then identifies 
 
 #### Categories, Archives, and Meta
 
-The other sidebar section titles, _categories_, _archives_, _meta_, and others, do not use template tags which generate their own titles. These are set inside of PHP statements which "print" the text on the page. While these could be put inside of [heading tags](https://codex.wordpress.org/Designing_Headings "Designing Headings"), WordPress uses the `_e()` function to display or `echo` the text titles while also marking the text as a possible target for language translation. If you will be [developing your theme](https://codex.wordpress.org/Theme_Development "Theme Development") for [public release](https://codex.wordpress.org/Designing_Themes_for_Public_Release "Designing Themes for Public Release"), using the echo functions is highly recommended.
+The other sidebar section titles, _categories_, _archives_, _meta_, and others, do not use template tags which generate their own titles. These are set inside of PHP statements which "print" the text on the page. While these could be put inside of [heading tags](https://codex.wordpress.org/Designing_Headings), WordPress uses the `_e()` function to display or `echo` the text titles while also marking the text as a possible target for language translation. If you will be [developing your theme](https://codex.wordpress.org/Theme_Development) for [public release](https://codex.wordpress.org/Designing_Themes_for_Public_Release), using the echo functions is highly recommended.
 
 You can style these individually or all the same. Some Themes, like the Default Theme, put all these in `<h2>` headings so the list headings will all look the same. Therefore, they may or may not use style references for each section. You may add them if you need them to change the look of each section of links.
 
@@ -595,7 +595,7 @@ The search form area, input, and button can be styled in many ways, or left with
 
 #### Meta Feed Links
 
-The Meta links may be shown as text or icons representing the various links. The XHTML and CSS validation links may use the W3 icons. The various Feeds can also be represented as icons. Or left as text. It's up to you. Use of the feeds within your sidebar with text or icons is covered by the article [WordPress Feeds](https://codex.wordpress.org/WordPress_Feeds "WordPress Feeds").
+The Meta links may be shown as text or icons representing the various links. The XHTML and CSS validation links may use the W3 icons. The various Feeds can also be represented as icons. Or left as text. It's up to you. Use of the feeds within your sidebar with text or icons is covered by the article [WordPress Feeds](https://wordpress.org/documentation/article/wordpress-feeds/).
 
 ### Footer
 
@@ -613,7 +613,7 @@ The footer is found within the footer.php template file. In both the Default and
 
 The footer's content is styled with the credit class and the paragraph and cite tags.
 
-The tag displays the number of mysql queries used on the page and the time it took for the page to load, in HTML commented code. It is there for the administrator's convenience and use. It is only visible within the page's source code. If you would like to display this visible on the page, remove the [comments](https://codex.wordpress.org/Commenting_Code "Commenting Code"). It's look will be influenced by the credit class style of the paragraph tag. On the template file, it looks like this:
+The tag displays the number of mysql queries used on the page and the time it took for the page to load, in HTML commented code. It is there for the administrator's convenience and use. It is only visible within the page's source code. If you would like to display this visible on the page, remove the [comments](https://codex.wordpress.org/Commenting_Code). It's look will be influenced by the credit class style of the paragraph tag. On the template file, it looks like this:
 
 ```
 <!--<?php echo $wpdb->num_queries; ?> queries. 
@@ -637,15 +637,15 @@ The Default Theme's footer is styled by the footer ID and the paragraph tag. Whi
 
 ## Resources
 
-* [CSS](https://codex.wordpress.org/CSS "CSS")
-* [Finding Your CSS Styles](https://codex.wordpress.org/Finding_Your_CSS_Styles "Finding Your CSS Styles")
-* [CSS Troubleshooting](https://codex.wordpress.org/CSS_Troubleshooting "CSS Troubleshooting")
-* [Using Themes](https://codex.wordpress.org/Using_Themes "Using Themes")
-* [Theme Development](https://codex.wordpress.org/Theme_Development "Theme Development")
-* [Designing Themes for Public Release](https://codex.wordpress.org/Designing_Themes_for_Public_Release "Designing Themes for Public Release")
-* [WordPress Lessons](https://codex.wordpress.org/WordPress_Lessons "WordPress Lessons")
-* [Blog Design and Layout](https://codex.wordpress.org/Blog_Design_and_Layout "Blog Design and Layout")
-* [Stepping Into Template Tags](https://codex.wordpress.org/Stepping_Into_Template_Tags "Stepping Into Template Tags")
+* [CSS](https://developer.wordpress.org/advanced-administration/wordpress/css/)
+* [Finding Your CSS Styles](https://codex.wordpress.org/Finding_Your_CSS_Styles)
+* [CSS Troubleshooting](https://codex.wordpress.org/CSS_Troubleshooting)
+* [Using Themes](https://wordpress.org/documentation/article/worik-with-themes/)
+* [Theme Development](https://codex.wordpress.org/Theme_Development)
+* [Designing Themes for Public Release](https://codex.wordpress.org/Designing_Themes_for_Public_Release)
+* [WordPress Lessons](https://learn.wordpress.org/)
+* [Blog Design and Layout](https://codex.wordpress.org/Blog_Design_and_Layout)
+* [Stepping Into Template Tags](https://codex.wordpress.org/Stepping_Into_Template_Tags)
 
 ## Changelog
 

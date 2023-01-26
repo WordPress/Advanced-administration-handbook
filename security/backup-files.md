@@ -13,7 +13,7 @@ Your WordPress site consists of the following files:
 * Javascripts, PHP scripts, and other code files
 * Additional Files and Static Web Pages
 
-Everything that has anything to do with the look and feel of your site is in a file somewhere and needs to be backed up. Additionally, you must back up all of your files in your WordPress directory (including subdirectories) and your [`.htaccess`](https://codex.wordpress.org/Glossary#.htaccess) file.
+Everything that has anything to do with the look and feel of your site is in a file somewhere and needs to be backed up. Additionally, you must back up all of your files in your WordPress directory (including subdirectories) and your [`.htaccess`](https://wordpress.org/documentation/article/wordpress-glossary/#.htaccess) file.
 
 While most hosts back up the entire server, including your site, it is better that you back up your own files. The easiest method is to use an [FTP program](https://developer.wordpress.org/advanced-administration/upgrade/ftp/) to download all of your WordPress files from your host to your local computer.
 
@@ -42,10 +42,10 @@ Most website hosts provide software to back up your site. Check with your host t
 
 **Copy Your Files to Your Desktop**
 
-Using [FTP Clients](https://developer.wordpress.org/advanced-administration/upgrade/ftp/) or [UNIX Shell Skills](https://codex.wordpress.org/UNIX Shell Skills) you can copy the files to a folder on your computer. Once there, you can zip or compress them into a zip file to save space, allowing you to keep several versions.
+Using [FTP Clients](https://developer.wordpress.org/advanced-administration/upgrade/ftp/) or [UNIX Shell Skills](https://codex.wordpress.org/UNIX_Shell_Skills) you can copy the files to a folder on your computer. Once there, you can zip or compress them into a zip file to save space, allowing you to keep several versions.
 
 Normally, there would be no need to copy the WordPress core files, as you can replace them from a fresh download of the WordPress zip file. The important files to back up would be your wp-config.php file, which contains your settings and your wp-content directory (plus its contents) which contains all your theme and plugin files.
 
 ## Changelog
 
-- 2022-10-25: Original content from [Backing Up Your WordPress Files](https://wordpress.org/support/article/backing-up-your-wordpress-files/).
+- 2022-10-25: Original content from [Backing Up Your WordPress Files](https://wordpress.org/documentation/article/backing-up-your-wordpress-files/).

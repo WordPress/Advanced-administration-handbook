@@ -1,8 +1,8 @@
 # CSS
 
-WordPress relies heavily on the presentation styles within CSS. With the use of [Themes](https://wordpress.org/support/article/using-themes/), you have an almost infinite choice of layout options. WordPress Themes make it easy to change your website’s appearance, and open up the field to help you [create your own Theme](https://codex.wordpress.org/Theme_Development) and page layout.
+WordPress relies heavily on the presentation styles within CSS. With the use of [Themes](https://wordpress.org/documentation/article/using-themes/), you have an almost infinite choice of layout options. WordPress Themes make it easy to change your website’s appearance, and open up the field to help you [create your own Theme](https://codex.wordpress.org/Theme_Development) and page layout.
 
-[CSS](https://wordpress.org/support/article/glossary/#css) stands for **Cascading Style Sheets**. It allows you to store style presentation information (like colors and layout) separate from your HTML structure. This allows precision control of your website layout and makes your pages faster and easier to update.
+[CSS](https://wordpress.org/documentation/article/glossary/#css) stands for **Cascading Style Sheets**. It allows you to store style presentation information (like colors and layout) separate from your HTML structure. This allows precision control of your website layout and makes your pages faster and easier to update.
 
 This article briefly describes the use of CSS in WordPress, and lists some references for further information. For information on CSS itself, see [Resources for Building on WordPress#CSS](https://developer.wordpress.org/advanced-administration/resources/#CSS).
 
@@ -24,7 +24,7 @@ The CSS file is where it all comes together. On every template file within your 
 
 ## [Custom CSS in WordPress](#custom-css-in-wordpress)
 
-Starting with WordPress 4.7, you can now add custom CSS to your own theme from the [Appearance Customize Screen](https://wordpress.org/support/article/appearance-customize-screen/), without the need for additional plugins or directly editing themes and child themes. Just choose the **Additional CSS** tab when customizing your current theme to get started!
+Starting with WordPress 4.7, you can now add custom CSS to your own theme from the [Appearance Customize Screen](https://wordpress.org/documentation/article/appearance-customize-screen/), without the need for additional plugins or directly editing themes and child themes. Just choose the **Additional CSS** tab when customizing your current theme to get started!
 
 Any CSS changes you make will appear in the preview, just like other changes made in the customizer, this means you have time to tweak and perfect the look of your site, without actually changing anything until you are happy with it all!
 
@@ -162,7 +162,7 @@ Each Theme should have these or similar styles in its `style.css` file to be a
 
 To help you understand more about how CSS works in relationship to your web page, you may wish to read some of the articles cited in these lists:
 
-* [Using Themes](https://wordpress.org/support/article/using-themes/) – There are also many advanced articles in this list.
+* [Using Themes](https://wordpress.org/documentation/article/using-themes/) – There are also many advanced articles in this list.
 * [Templates](https://codex.wordpress.org/Templates) – Comprehensive list of WordPress Theme and Template articles.
 * [Theme Development](https://codex.wordpress.org/Theme_Development) – WordPress Theme Development guide and code standards.
 
@@ -170,7 +170,7 @@ To help you understand more about how CSS works in relationship to your web page
 
 If you are having some problems or questions about your WordPress Theme or layout, begin by checking the website of the Theme author to see if there is an upgrade or whether there are answers to your questions. Here are some other resources:
 
-* [Lessons on Designing Your WordPress Site](https://wordpress.org/support/article/wordpress-lessons/)
+* [Lessons on Designing Your WordPress Site](https://wordpress.org/documentation/article/wordpress-lessons/)
 * [Site Design and Layout](https://codex.wordpress.org/Site_Design_and_Layout) – Comprehensive list of resources related to site design in WordPress.
 * [FAQ Layout and Design](https://codex.wordpress.org/FAQ_Layout_and_Design)
 
@@ -187,4 +187,4 @@ If you are having some problems or questions about your WordPress Theme or layou
 
 ## Changelog
 
-- 2022-09-04: Original content from [CSS](https://wordpress.org/support/article/css/); ticket [Github](https://github.com/WordPress/Documentation-Issue-Tracker/issues/424).
+- 2022-09-04: Original content from [CSS](https://wordpress.org/documentation/article/css/); ticket [Github](https://github.com/WordPress/Documentation-Issue-Tracker/issues/424).

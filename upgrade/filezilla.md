@@ -4,7 +4,7 @@
 
 FileZilla may be used to manage your WordPress site by uploading and downloading files and images. This article will guide you through the process of installing and using FileZilla FTP-client to manage your WordPress site.
 
-![Screenshot of the FileZilla application](https://wordpress.org/support/files/2018/11/podz_filezilla_1-768x513.gif)
+![Screenshot of the FileZilla application](https://wordpress.org/documentation/files/2018/11/podz_filezilla_1-768x513.gif)
 
 For more information about FileZilla, view the [list of features](https://filezilla-project.org/client_features.php) at the official site.
 
@@ -34,7 +34,7 @@ To register the FTP server, follow below steps:
 7. Enter password. Remember that the password might be case sensitive.
 8. Click OK.
 
-![Screenshot of the FileZilla site manager window.](https://wordpress.org/support/files/2018/11/podz_filezilla_3-768x446.gif)
+![Screenshot of the FileZilla site manager window.](https://wordpress.org/documentation/files/2018/11/podz_filezilla_3-768x446.gif)
 
 ## Connecting
 
@@ -60,4 +60,4 @@ Look at the top area of FileZilla main window and check the messages.
 
 ## Changelog
 
-- 2022-09-11: Original content from [Using FileZilla](https://wordpress.org/support/article/using-filezilla/).
+- 2022-09-11: Original content from [Using FileZilla](https://wordpress.org/documentation/article/using-filezilla/).

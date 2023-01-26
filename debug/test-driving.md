@@ -6,7 +6,7 @@ You have several choices.
 
 ### Creating a Sandbox
 
-Do this for test driving your WordPress Theme and style sheet, allowing you to develop your [WordPress Theme](https://wordpress.org/support/article/using-themes/) on your computer. This limits you to only working on CSS and not using plugins and other power features of WordPress. This is best for just styling a page.
+Do this for test driving your WordPress Theme and style sheet, allowing you to develop your [WordPress Theme](https://wordpress.org/documentation/article/using-themes/) on your computer. This limits you to only working on CSS and not using plugins and other power features of WordPress. This is best for just styling a page.
 
 ### Hiding Your WordPress Test Area
 
@@ -20,7 +20,7 @@ If you are determined to put WordPress through its paces, you can install WordPr
 
 A **Sandbox** is a term related to the sandbox you might have played in and built sand castles in as a child. It is a playground for working on concepts and exploring your imagination. A WordPress Sandbox is basically a copy of a generated page on a WordPress site that is saved to your hard drive for you to play with as you develop your final theme and look for your site.
 
-WordPress uses different [template files](https://codex.wordpress.org/Templates) to generate different views on your site. In general, there is the **front page view**, the **single post view**, and the **multi-post view**, used for categories, archives, and search. For more information on the structure of WordPress Themes, see [Site Architecture 1.5](https://codex.wordpress.org/Site%20Architecture%201.5). As different page views use different CSS styles, at the least you need to put three page views in your sandbox following these instructions.
+WordPress uses different [template files](https://codex.wordpress.org/Templates) to generate different views on your site. In general, there is the **front page view**, the **single post view**, and the **multi-post view**, used for categories, archives, and search. For more information on the structure of WordPress Themes, see [Site Architecture 1.5](https://developer.wordpress.org/advanced-administration/wordpress/site-architecture/). As different page views use different CSS styles, at the least you need to put three page views in your sandbox following these instructions.
 
 1. Choose the WordPress Theme you want to work from in your Appearance screen of your Administration Screen.
 2. From your initial or test WordPress site, view one of the following page views:
@@ -57,7 +57,7 @@ To test this, double click on one of the pages in that folder to view it in your
 
 Now, you have a sandbox to play in.
 
-To use your sandbox, have two programs open. One is your text editor with the style.css file and the other is your browser with the page you are working on in view. Make a change in your style sheet, save it, then do a [total refresh](https://codex.wordpress.org/I%20Make%20Changes%20and%20Nothing%20Happens) or your browser screen and look at what changes. Then repeat the process. When you are done with one page, go to the next page and check those changes and add more if necessary.
+To use your sandbox, have two programs open. One is your text editor with the style.css file and the other is your browser with the page you are working on in view. Make a change in your style sheet, save it, then do a [total refresh](https://wordpress.org/support/topic/i-make-changes-and-nothing-happens/) or your browser screen and look at what changes. Then repeat the process. When you are done with one page, go to the next page and check those changes and add more if necessary.
 
 ### Sandbox Tips
 
@@ -186,7 +186,7 @@ As the WordPress database normally stands, there are statistics tables which con
 2. From the main login screen, select **Databases**.
 3. Choose the name of your WordPress database.
 4. From the tags at the top of the screen, choose **Export**.
-5. In the frame at the top of the [Export section](https://wordpress.org/support/files/2018/11/phpmyadmin-export-tab.jpg) you will see a list of tables in your database.
+5. In the frame at the top of the [Export section](https://wordpress.org/documentation/files/2018/11/phpmyadmin-export-tab.jpg) you will see a list of tables in your database.
 6. You will need to choose only those tables that correspond to your WordPress install. They will be the ones with the `table_prefix` found in your `wp-config.php` file. If you only have WordPress installed, then choose **Select All** from the left column.
 7. Make sure the SQL button is selected.
 8. On the right side of the panel, make sure the following boxes are checked.
@@ -201,7 +201,7 @@ As the WordPress database normally stands, there are statistics tables which con
 - You should be prompted for a file to download. Save the file to your computer. Depending on the database size, this may take a few moments.
 
 ### Download WordPress
-Now, download your entire WordPress site to your computer. This is usually done with an [FTP client program](https://codex.wordpress.org/FTP_Clients). Make sure you include all core WordPress files within your root or WordPress directory, including the `index.php`.
+Now, download your entire WordPress site to your computer. This is usually done with an [FTP client program](https://developer.wordpress.org/advanced-administration/upgrade/ftp/). Make sure you include all core WordPress files within your root or WordPress directory, including the `index.php`.
 
 You should now have in your computer two items:
 
@@ -213,7 +213,7 @@ Copy the backup files again to somewhere safe on your machine so you work on a c
 ### Install Basic XAMPP
 
 1. Install XAMPP. By default, it will install to `C:\xampp`.
-2. Go to `C:\xampp\apache\conf` and open the file called `httpd.conf` in a [text editor](https://codex.wordpress.org/Glossary#Text%20editor).
+2. Go to `C:\xampp\apache\conf` and open the file called `httpd.conf` in a [text editor](https://wordpress.org/documentation/article/wordpress-glossary/#Text%20editor).
 3. About line 166 you will find: `#LoadModule rewrite_module modules/mod_rewrite.so`.
 4. Remove the # and save the file (this switches `mod_rewrite` on).
 5. Create a folder inside `C:\xampp\htdocs`. This will be for WordPress.
@@ -257,4 +257,4 @@ Coming soon – how to move your test site from your computer back live onto you
 
 ## Changelog
 
-- 2022-09-11: Original content from [Test driving WordPress](https://wordpress.org/support/article/test-driving-wordpress/).
+- 2022-09-11: Original content from [Test driving WordPress](https://wordpress.org/documentation/article/test-driving-wordpress/).

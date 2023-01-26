@@ -18,4 +18,4 @@ Want to try a different FTP or SFTP client? [Find more on Wikipedia](http://en.w
 
 ## Changelog
 
-- 2022-09-11: Original content from [FTP Clients](https://wordpress.org/support/article/ftp-clients/). Minor copy-editing.
+- 2022-09-11: Original content from [FTP Clients](https://wordpress.org/documentation/article/ftp-clients/). Minor copy-editing.

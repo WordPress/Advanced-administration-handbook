@@ -64,4 +64,4 @@ You can [search for two-step authentication plugins](https://wordpress.org/plugi
 
 ## Changelog
 
-- 2022-10-25: Original content from [Two Step Authentication](https://wordpress.org/support/article/two-step-authentication/).
+- 2022-10-25: Original content from [Two Step Authentication](https://wordpress.org/documentation/article/two-step-authentication/).

@@ -6,7 +6,7 @@ For non-programmers or general users, these options can be used to show detailed
 
 ## Example wp-config.php for Debugging
 
-The following code, inserted in your [wp-config.php](/support/article/editing-wp-config-php/) file, will log all errors, notices, and warnings to a file called `debug.log` in the wp-content directory. It will also hide the errors so they do not interrupt page generation.
+The following code, inserted in your [wp-config.php](https://wordpress.org/documentation/article/editing-wp-config-php/) file, will log all errors, notices, and warnings to a file called `debug.log` in the wp-content directory. It will also hide the errors so they do not interrupt page generation.
 
 ```
 // Enable WP_DEBUG mode
@@ -29,11 +29,11 @@ define( 'WP_DEBUG_DISPLAY', false );
 define( 'SCRIPT_DEBUG', true );
 ```
 
-**NOTE**: You must insert this **BEFORE** `/* That's all, stop editing! Happy blogging. */` in the [wp-config.php](/support/article/editing-wp-config-php/) file.
+**NOTE**: You must insert this **BEFORE** `/* That's all, stop editing! Happy blogging. */` in the [wp-config.php](https://wordpress.org/documentation/article/editing-wp-config-php/) file.
 
 ## WP_DEBUG
 
-`WP_DEBUG` is a PHP constant (a permanent global variable) that can be used to trigger the "debug" mode throughout WordPress. It is assumed to be false by default and is usually set to true in the [wp-config.php](/support/article/editing-wp-config-php/) file on development copies of WordPress.
+`WP_DEBUG` is a PHP constant (a permanent global variable) that can be used to trigger the "debug" mode throughout WordPress. It is assumed to be false by default and is usually set to true in the [wp-config.php](https://wordpress.org/documentation/article/editing-wp-config-php/) file on development copies of WordPress.
 
 ```
 // This enables debugging.
@@ -124,4 +124,4 @@ There are many [debugging plugins](https://wordpress.org/plugins/search.php?q=de
 
 ## Changelog
 
-- 2022-09-11: Original content from [Debugging in WordPress](https://wordpress.org/support/article/debugging-in-wordpress/); ticket from [Github](https://github.com/WordPress/Documentation-Issue-Tracker/issues/349).
+- 2022-09-11: Original content from [Debugging in WordPress](https://wordpress.org/documentation/article/debugging-in-wordpress/); ticket from [Github](https://github.com/WordPress/Documentation-Issue-Tracker/issues/349).

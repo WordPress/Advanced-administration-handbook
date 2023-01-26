@@ -2,7 +2,7 @@
 
 Many people want WordPress to power their website's root (e.g. `https://example.com`) but they don't want all of the WordPress files cluttering up their root directory. WordPress allows you to install it into a subdirectory, but have your website served from the website root.
 
-As of [Version 3.5](https://codex.wordpress.org/Version_3.5), Multisite users may use all of the functionality listed below. If you are running a version of WordPress older than 3.5, please update before installing a Multisite WordPress install on a subdirectory.
+As of [Version 3.5](https://wordpress.org/documentation/wordpress-version/version-3-5/), Multisite users may use all of the functionality listed below. If you are running a version of WordPress older than 3.5, please update before installing a Multisite WordPress install on a subdirectory.
 
 **Note to theme/plugin developers:** this will not separate your code from WordPress. Themes and plugins will still reside under `wp-content` folder.
 
@@ -40,16 +40,16 @@ That's all 🙂
 _(p.s. If you've already installed WP in subdirectory, some steps might be already done automatically)._
 
 1. Create the new location for the core WordPress files to be stored (we will use `/wordpress` in our examples). (On linux, use `mkdir wordpress` from your `www` directory. You'll probably want to use `chown apache:apache` on the `wordpress` directory you created.)
-2. Go to the [General](/support/article/administration-screens/#settings-configuration-settings) Screen.
+2. Go to the [General](https://wordpress.org/documentation/article/administration-screens/#settings-configuration-settings) Screen.
 3. In **WordPress address (URL):** set the address of your main WordPress core files. Example: `http://example.com/wordpress`
 4. In **Site address (URL):** set root directory's URL. Example: `http://example.com`
 5. Click **Save Changes**. (Do not worry about the errors that happen now! Continue reading)
 6. Now move your WordPress core files (from root directory) to the subdirectory.
-7. Copy (NOT MOVE!) the `index.php` and `.htaccess` files from the WordPress directory into the root directory of your site (Blog address). The `.htaccess` file is invisible, so you may have to set your FTP client to [show hidden files](https://codex.wordpress.org/Changing_File_Permissions#Unhide_the_hidden_files). If you are not using [pretty permalinks](/support/article/using-permalinks/#using-pretty-permalinks), then you may not have a .`htaccess` file. _**If you are running WordPress on a Windows (IIS) server** and are using pretty permalinks, you'll have a `web.config` rather than a `.htaccess` file in your WordPress directory. For the `index.php` file the instructions remain the same, copy (don't move) the index.php file to your root directory. The `web.config` file, must be treated differently than the `.htaccess` file so you must MOVE (DON'T COPY) the `web.config` file to your root directory._
-8. Open your root directory's `index.php` file in a [text editor](/support/article/glossary#text-editor)
+7. Copy (NOT MOVE!) the `index.php` and `.htaccess` files from the WordPress directory into the root directory of your site (Blog address). The `.htaccess` file is invisible, so you may have to set your FTP client to [show hidden files](https://developer.wordpress.org/advanced-administration/server/file-permissions/#Unhide_the_hidden_files). If you are not using [pretty permalinks](https://wordpress.org/documentation/article/using-permalinks/#using-pretty-permalinks), then you may not have a .`htaccess` file. _**If you are running WordPress on a Windows (IIS) server** and are using pretty permalinks, you'll have a `web.config` rather than a `.htaccess` file in your WordPress directory. For the `index.php` file the instructions remain the same, copy (don't move) the index.php file to your root directory. The `web.config` file, must be treated differently than the `.htaccess` file so you must MOVE (DON'T COPY) the `web.config` file to your root directory._
+8. Open your root directory's `index.php` file in a [text editor](https://wordpress.org/documentation/article/glossary#text-editor)
 9. Change the following and save the file. Change the line that says:`require dirname( __FILE__ ) . '/wp-blog-header.php';`to the following, using your directory name for the WordPress core files: `require dirname( __FILE__ ) . '/wordpress/wp-blog-header.php';`
 10. Login to the new location. It might now be `http://example.com/wordpress/wp-admin/`
-11. If you have set up [Permalinks](/support/article/using-permalinks/), go to the [Permalinks Screen](/support/article/administration-screens/#permalinks) and update your Permalink structure. WordPress will automatically update your `.htaccess` file if it has the appropriate file permissions. If WordPress can't write to your `.htaccess` file, it will display the new rewrite rules to you, which you should manually copy into your `.htaccess` file (in the same directory as the main `index.php` file.)
+11. If you have set up [Permalinks](https://wordpress.org/documentation/article/using-permalinks/), go to the [Permalinks Screen](https://wordpress.org/documentation/article/administration-screens/#permalinks) and update your Permalink structure. WordPress will automatically update your `.htaccess` file if it has the appropriate file permissions. If WordPress can't write to your `.htaccess` file, it will display the new rewrite rules to you, which you should manually copy into your `.htaccess` file (in the same directory as the main `index.php` file.)
 
 ### .htaccess modification
 
@@ -69,10 +69,10 @@ Note: This code comes from Site 5's post here: [How to Redirect Your Domain to a
 
 The following links explains how to change specific directories within WordPress:
 
-* [Moving wp-content folder](/support/article/editing-wp-config-php/#moving-wp-content-folder)
-* [Moving Plugin Folder](/support/article/editing-wp-config-php/#moving-plugin-folder)
-* [Moving Themes Folder](/support/article/editing-wp-config-php/#moving-themes-folder)
-* [Moving Uploads Folder](/support/article/editing-wp-config-php/#moving-uploads-folder)
+* [Moving wp-content folder](https://wordpress.org/documentation/article/editing-wp-config-php/#moving-wp-content-folder)
+* [Moving Plugin Folder](https://wordpress.org/documentation/article/editing-wp-config-php/#moving-plugin-folder)
+* [Moving Themes Folder](https://wordpress.org/documentation/article/editing-wp-config-php/#moving-themes-folder)
+* [Moving Uploads Folder](https://wordpress.org/documentation/article/editing-wp-config-php/#moving-uploads-folder)
 
 ## See also
 
@@ -80,4 +80,4 @@ The following links explains how to change specific directories within WordPress
 
 ## Changelog
 
-- 2022-09-11: Original content from [Giving WordPress Its Own Directory](https://wordpress.org/support/article/giving-wordpress-its-own-directory/).
+- 2022-09-11: Original content from [Giving WordPress Its Own Directory](https://wordpress.org/documentation/article/giving-wordpress-its-own-directory/).

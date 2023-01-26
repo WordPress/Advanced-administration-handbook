@@ -1,6 +1,6 @@
 # Update Services
 
-Update Services are tools you can use to let other people know you've updated your blog. WordPress automatically notifies popular Update Services that you've updated your blog by sending a [XML-RPC](http://www.xmlrpc.com/) [ping](https://wordpress.org/support/article/glossary/#pingback) each time you create or update a post. In turn, Update Services process the ping and updates their proprietary indices with _your_ update. 
+Update Services are tools you can use to let other people know you've updated your blog. WordPress automatically notifies popular Update Services that you've updated your blog by sending a [XML-RPC](http://www.xmlrpc.com/) [ping](https://wordpress.org/documentation/article/glossary/#pingback) each time you create or update a post. In turn, Update Services process the ping and updates their proprietary indices with _your_ update. 
 
 ## Common Usage
 
@@ -9,9 +9,9 @@ Most people use [Ping-o-Matic](https://pingomatic.com/) which, with just one "pi
 > Ping-O-Matic is a service to update different search engines that your blog has updated.
 > We regularly check downstream services to make sure that they're legit and still work. So while it may appear like we have fewer services, they're the most important ones.
 
-If you do not want the update services to be pinged, remove all the update service URIs listed under "Update Services" on the [Settings](https://wordpress.org/support/article/administration-screens/#settings-configuration-settings)->[Writing](https://wordpress.org/support/article/settings-writing-screen/) administration screen of your WordPress installation.
+If you do not want the update services to be pinged, remove all the update service URIs listed under "Update Services" on the [Settings](https://wordpress.org/documentation/article/administration-screens/#settings-configuration-settings)->[Writing](https://wordpress.org/documentation/article/settings-writing-screen/) administration screen of your WordPress installation.
 
-![Screenshot of the Update Services screen.](https://wordpress.org/support/files/2018/10/update_service.png)
+![Screenshot of the Update Services screen.](https://wordpress.org/documentation/files/2018/10/update_service.png)
 
 Certain web hosts – particularly free ones – disable the PHP functions used to alert update services. If your web host prevents pings, you should stop WordPress from attempting to ping.
 
@@ -36,4 +36,4 @@ By default, editing the Ping Services for a WordPress Multisite network site is 
 
 ## Changelog
 
-- 2022-09-11: Original content from [Update Services](https://wordpress.org/support/article/update-services/).
+- 2022-09-11: Original content from [Update Services](https://wordpress.org/documentation/article/update-services/).

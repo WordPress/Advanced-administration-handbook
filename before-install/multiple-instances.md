@@ -6,15 +6,15 @@ If you need multiple WordPress instances, there are three types of installations
 2. Single Database: multiple WordPress instances sharing a single database instance.
 3. Multiple Databases: multiple WordPress instances with each instance using its own databases instance.
 
-![](https://wordpress.org/support/files/2022/06/multisite_db_layout-1024x469.jpg)
+![](https://wordpress.org/documentation/files/2022/06/multisite_db_layout-1024x469.jpg)
 
 Let's first look at the third type, multiple WordPress instances with multiple databases, because it has the same installation process as the single WordPress site except there are multiple sites.
 
 ## Multiple WordPress Instances with Multiple Databases {#multiple-wordpress-instances-with-multiple-databases}
 
-You'll need a separate [MySQL database](https://wordpress.org/support/article/glossary/#mysql) for each blog you plan to install. If you have not yet created these, [basic instructions are found here](https://developer.wordpress.org/advanced-administration/before-install/howto-install/#step-2-create-the-database-and-a-user).
+You'll need a separate [MySQL database](https://wordpress.org/documentation/article/glossary/#mysql) for each blog you plan to install. If you have not yet created these, [basic instructions are found here](https://developer.wordpress.org/advanced-administration/before-install/howto-install/#step-2-create-the-database-and-a-user).
 
-The [wp-config.php](/support/article/editing-wp-config-php/) file will vary for each installation. The lines to change are the following:
+The [wp-config.php](https://wordpress.org/documentation/article/editing-wp-config-php/) file will vary for each installation. The lines to change are the following:
 
 ```
 define('DB_NAME', 'wordpress');    // The name of the database
@@ -32,9 +32,9 @@ If you want multiple sites to use WordPress, you can use the multisite feature t
 
 The multisite feature appears to be simpler than other types of multiple WordPress installations, but there are some considerations and restrictions. Refer to the following documents for more detailed information:
 
-* [Before You Create A Network](/support/article/before-you-create-a-network/)
-* [Create A Network](/support/article/create-a-network/)
-* [Multisite Network Administration](/support/article/multisite-network-administration/)
+* [Before You Create A Network](https://developer.wordpress.org/advanced-administration/multisite/prepare-network/)
+* [Create A Network](https://developer.wordpress.org/advanced-administration/multisite/create-network/)
+* [Multisite Network Administration](https://developer.wordpress.org/advanced-administration/multisite/administration/)
 
 ## Multiple WordPress Instances with a Single Database {#multiple-wordpress-instances-with-a-single-database}
 
@@ -44,7 +44,7 @@ As with the multiple-database solution described above, the [wp-config.php](http
 $table_prefix = 'wp_'; // example: 'wp_' or 'b2' or 'mylogin_' 
 ```
 
-By default, WordPress assigns the table prefix `wp_` to its [MySQL database](https://wordpress.org/support/article/glossary/#mysql) tables, but this prefix can be anything you choose. This allows you to create unique identifiers for each blog in your database. For example, let's say you have three blogs to set up, with the names _Main_, _Projects_, and _Test_. You should substitute the prefix `wp_` in each blog's  
+By default, WordPress assigns the table prefix `wp_` to its [MySQL database](https://wordpress.org/documentation/article/glossary/#mysql) tables, but this prefix can be anything you choose. This allows you to create unique identifiers for each blog in your database. For example, let's say you have three blogs to set up, with the names _Main_, _Projects_, and _Test_. You should substitute the prefix `wp_` in each blog's  
 [wp-config.php](https://developer.wordpress.org/advanced-administration/wordpress/wp-config/):
 
 **Main blog:**
@@ -73,4 +73,4 @@ See [Editing wp-config.php/Custom User and Usermeta Tables](https://developer.wo
 
 ## Changelog
 
-- 2022-10-21: Original content from [Installing Multiple WordPress Instances](https://wordpress.org/support/article/installing-multiple-blogs/).
+- 2022-10-21: Original content from [Installing Multiple WordPress Instances](https://wordpress.org/documentation/article/installing-multiple-blogs/).
