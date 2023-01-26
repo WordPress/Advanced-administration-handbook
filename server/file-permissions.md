@@ -1,6 +1,6 @@
 # Changing File Permissions
 
-On computer file systems, different files and directories have **permissions** that specify who and what can read, write, modify and access them. This is important because WordPress may need access to write to files in your `wp-content` directory to enable certain functions.
+On most file systems, different files and directories have **permissions** that specify who and what can read, write, modify and access them. This is important because WordPress may need access to write to files in your `wp-content` directory to enable certain functions.
 
 ## Permission Modes
 
@@ -13,9 +13,9 @@ r+w+x  r+x    r+x
 
 The permission mode is computed by adding up the following values for the user, the file group, and for everyone else. The diagram shows how.
 
-* **R**ead 4 – Allowed to read files
-* **W**rite 2 – Allowed to write/modify files
-* e**X**ecute1 – Read/write/delete/modify/directory
+* **R**ead - 4 – Allowed to read files
+* **W**rite - 2 – Allowed to write/modify files
+* e**X**ecute - 1 – Read/write/delete/modify/directory
 
 ```
  7      4      4
@@ -25,6 +25,8 @@ r+w+x  r      r
 ```
 
 ### Example Permission Modes
+
+The most common combinations for the file permissions you might encounter while working with WordPress:
 
 | Mode | Str Perms | Explanation |
 | ---- | --------- | ----------- |
@@ -41,11 +43,11 @@ r+w+x  r      r
 
 ## Permission Scheme for WordPress
 
-Permissions will be different from host to host, so this guide only details general principles. It cannot cover all cases. This guide applies to servers running a standard setup (note, for shared hosting using "suexec" methods, see below).
+Permissions will be different from host to host, so this guide only details general principles. It cannot cover all cases so please don't take this guide as complete. This guide applies to servers running a standard setup (note, for shared hosting using "suexec" methods, see below).
 
-Typically, all files should be owned by your user (ftp) account on your web server, and should be writable by that account. On shared hosts, files should never be owned by the webserver process itself (sometimes this is **www**, or **apache**, or **nobody** user).
+Typically, all files should be owned by your user (sftp) account on your web server, and should be writable by that account. On shared hosts, files should never be owned by the webserver process itself (sometimes this is **www**, or **apache**, or **nobody** user) or by the **root** user.
 
-Any file that needs write access from WordPress should be owned or group-owned by the user account used by WordPress (which may be different than the server account). For example, you may have a user account that lets you FTP files back and forth to your server, but your server itself may run using a separate user, in a separate usergroup, such as **dhapache** or **nobody**. If WordPress is running as the FTP account, that account needs to have write access, i.e., be the owner of the files, or belong to a group that has write access. In the latter case, that would mean permissions are set more permissively than default (for example, 775 rather than 755 for folders, and 664 instead of 644).
+Any file that needs write access from WordPress should be owned or group-owned by the user account used by WordPress (which may be different than the server account). For example, you may have a user account that lets you SFTP files back and forth to your server, but your server itself may run using a separate user, in a separate usergroup, such as **dhapache** or **nobody**. If WordPress is running as the SFTP account, that account needs to have write access, i.e., be the owner of the files, or belong to a group that has write access. In the latter case, that would mean permissions are set more permissively than default (for example, 775 rather than 755 for folders, and 664 instead of 644 for files).
 
 The file and folder permissions of WordPress should be the same for most users, depending on the type of installation you performed and the umask settings of your system environment at the time of install.
 
@@ -53,7 +55,7 @@ The file and folder permissions of WordPress should be the same for most users, 
 
 **NOTE:** If you installed WordPress yourself, you likely DO need to modify file permissions. Some files and directories should be "hardened" with stricter permissions, specifically, the wp-config.php file. This file is initially created with 644 permissions, and it's a hazard to leave it like that. See Security and Hardening.
 
-Typically, all core WordPress files should be writable only by your user account (or the httpd account, if different). (Sometimes though, multiple ftp accounts are used to manage an install, and if all ftp users are known and trusted, i.e., not a shared host, then assigning group writable may be appropriate. Ask your server admin for more info.) However, if you utilize mod_rewrite Permalinks or other `.htaccess` features you should make sure that WordPress can also write to your `/.htaccess` file.
+Typically, all core WordPress files should be writable only by your user account (or the httpd account, if different). (Sometimes though, multiple sftp accounts are used to manage an install, and if all sftp users are known and trusted, i.e., not a shared host, then assigning group writable may be appropriate. Ask your server admin for more info.) However, if you utilize mod_rewrite Permalinks or other `.htaccess` features you should make sure that WordPress can also write to your `/.htaccess` file.
 
 If you want to use the built-in theme editor, all files need to be group writable. Try using it before modifying file permissions, it should work. (This may be true if different users uploaded the WordPress package and the Plugin or Theme. This wouldn't be a problem for Plugin and Themes installed via the admin. When uploading files with different ftp users group writable is needed. On shared hosting, make sure the group is exclusive to users you trust... the apache user shouldn't be in the group and shouldn't own files.)
 
