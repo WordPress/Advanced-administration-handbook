@@ -1,3 +1,11 @@
+# Editing wp-config.php
+
+One of the most important files in your WordPress installation is the `wp-config.php` file. This file is located in the root of your WordPress file directory and contains your website’s base configuration details, such as database connection information.
+
+When you first download WordPress, the `wp-config.php` file isn’t included. The WordPress setup process will create a `wp-config.php` file for you based on the information you provide in the [installation](https://wordpress.org/documentation/article/how-to-install-wordpress/) process.
+
+It is unlikely that a non-developer would have to edit the wp-config.php file, in the case you are acting on trouble shooting steps provided by a technical person or by your webhost, this [page](https://developer.wordpress.org/apis/wp-config-php/) should help.
+
 # wp-config.php
 
 TEMPORALLY NOTE: this may link for the simple part, to:
@@ -678,3 +686,4 @@ To save the file, choose **File > Save As > wp-config.php** and save the file in
 
 - 2022-10-25: Fix content and links.
 - 2022-09-04: Original content from [wp-config.php](https://developer.wordpress.org/apis/wp-config-php/); ticket [Github](https://github.com/WordPress/Documentation-Issue-Tracker/issues/349).
+- 2023-01-20: Add content to the start from [documentation](https://wordpress.org/documentation/article/editing-wp-config-php/) ticket [Github](https://github.com/WordPress/Advanced-administration-handbook/issues/89)
