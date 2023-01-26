@@ -2,7 +2,7 @@
 
 Must-use plugins (a.k.a. mu-plugins) are plugins installed in a special directory inside the content folder and which are automatically enabled on all sites in the installation. Must-use plugins do not show in the default list of plugins on the Plugins page of wp-admin (although they do appear in a special Must-Use section) and cannot be disabled except by removing the plugin file from the must-use directory, which is found in **wp-content/mu-plugins** by default. For web hosts, mu-plugins are commonly used to add support for host-specific features, especially those where their absence could break the site.
 
-To change the default directory manually, define `WPMU_PLUGIN_DIR` and `WPMU_PLUGIN_URL` in [wp-config.php](https://codex.wordpress.org/Editing_wp-config.php).
+To change the default directory manually, define `WPMU_PLUGIN_DIR` and `WPMU_PLUGIN_URL` in [wp-config.php](https://wordpress.org/documentation/article/editing-wp-config-php/).
 
 ## Features
 * Always on, no need to enable via admin and users cannot disable by accident.
@@ -29,7 +29,7 @@ The code handling /mu-plugins/ was merged into the main WordPress code on 03/07/
 
 In this process the name “mu plugins” became a misnomer because it did not apply exclusively to multisite installs and because “MU” was not even being used anymore to refer to WP installations with multiple blogs. Despite this, the name was kept and **re-interpreted to mean “must-use plugins”**, i.e. these are plugins that must always be used, thus they are autoloaded on all sites regardless of the settings in the Plugins pane of wp-admin.
 
-Thus “Must-Use” is effectively a [Backronym](http://en.wikipedia.org/wiki/Backronym), like [PHP](https://codex.wordpress.org/Glossary#PHP) (which originally meant “Personal Home Page” but was later re-interpreted as meaning “PHP Hypertext Preprocessor”, which is also a [Recursive Acronym](http://en.wikipedia.org/wiki/Recursive_acronym)).
+Thus “Must-Use” is effectively a [Backronym](http://en.wikipedia.org/wiki/Backronym), like [PHP](https://wordpress.org/documentation/article/wordpress-glossary/#PHP) (which originally meant “Personal Home Page” but was later re-interpreted as meaning “PHP Hypertext Preprocessor”, which is also a [Recursive Acronym](http://en.wikipedia.org/wiki/Recursive_acronym)).
 
 ## Source Code
 * `get_mu_plugins()` is located in [wp-admin/includes/plugin.php](https://core.trac.wordpress.org/browser/tags/4.5.3/src/wp-admin/includes/plugin.php#L0).
@@ -37,4 +37,4 @@ Thus “Must-Use” is effectively a [Backronym](http://en.wikipedia.org/wiki/Ba
 
 ## Changelog
 
-- 2022-09-11: Original content from [Must Use Plugins](https://wordpress.org/support/article/must-use-plugins/). Minor additions and copy-editing.
+- 2022-09-11: Original content from [Must Use Plugins](https://wordpress.org/documentation/article/must-use-plugins/). Minor additions and copy-editing.

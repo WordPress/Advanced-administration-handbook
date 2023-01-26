@@ -1,6 +1,6 @@
 # How to install WordPress
 
-WordPress is well-known for its ease of installation. Under most circumstances, installing WordPress is a very simple process and takes less than five minutes to complete. [Many web hosts](#) now offer [tools (e.g. Fantastico) to automatically install WordPress](https://wordpress.org/support/article/automated-installation/) for you. However, if you wish to install WordPress yourself, the following guide will help.
+WordPress is well-known for its ease of installation. Under most circumstances, installing WordPress is a very simple process and takes less than five minutes to complete. [Many web hosts](#) now offer [tools (e.g. Fantastico) to automatically install WordPress](https://wordpress.org/documentation/article/automated-installation/) for you. However, if you wish to install WordPress yourself, the following guide will help.
 
 ## Things to Know Before Installing WordPress
 
@@ -12,7 +12,7 @@ If you need multiple WordPress instances, refer [Installing Multiple WordPress I
 Here's the quick version of the instructions for those who are already comfortable with performing such installations. More [detailed instructions](#detailed-instructions) follow.
 
 1. Download and unzip the WordPress package if you haven't already.
-2. Create a database for WordPress on your web server, as well as a [MySQL](https://wordpress.org/support/article/glossary/#mysql) (or MariaDB) user who has all privileges for accessing and modifying it.
+2. Create a database for WordPress on your web server, as well as a [MySQL](https://wordpress.org/documentation/article/glossary/#mysql) (or MariaDB) user who has all privileges for accessing and modifying it.
 3. (Optional) Find and rename `wp-config-sample.php` to `wp-config.php`, then edit the file [(see Editing wp-config.php)](https://developer.wordpress.org/advanced-administration/wordpress/wp-config/) and add your database information.
 **Note:** If you are not comfortable with renaming files, step 3 is optional and you can skip it as the install program will create the `wp-config.php` file for you.
 4. Upload the WordPress files to the desired location on your web server:
@@ -32,7 +32,7 @@ Download and unzip the WordPress package from [wordpress.org/download/](https://
 
 - If you will be uploading WordPress to a remote web server, download the WordPress package to your computer with a web browser and unzip the package.
 - If you will be using FTP, skip to the next step – uploading files is covered later.
-- If you have [shell](https://wordpress.org/support/article/glossary/#shell) access to your web server, and are comfortable using console-based tools, you may wish to download WordPress directly to your [web server](https://wordpress.org/support/article/glossary/#web-server) using wget (or lynx or another console-based web browser) if you want to avoid [FTPing](https://wordpress.org/support/article/glossary/#ftp):
+- If you have [shell](https://wordpress.org/documentation/article/glossary/#shell) access to your web server, and are comfortable using console-based tools, you may wish to download WordPress directly to your [web server](https://wordpress.org/documentation/article/glossary/#web-server) using wget (or lynx or another console-based web browser) if you want to avoid [FTPing](https://wordpress.org/documentation/article/glossary/#ftp):
     - `wget https://wordpress.org/latest.tar.gz`
     - Then extract the package using:
     - `tar -xzvf latest.tar.gz`
@@ -41,7 +41,7 @@ Download and unzip the WordPress package from [wordpress.org/download/](https://
 
 ### Step 2: Download and Extract {#detailed-step-2}
 
-If you are using a [hosting provider](https://wordpress.org/support/article/glossary/#hosting-provider), you may already have a WordPress database set up for you, or there may be an automated setup solution to do so. Check your hosting provider's support pages or your control panel for clues about whether or not you'll need to create one manually.
+If you are using a [hosting provider](https://wordpress.org/documentation/article/glossary/#hosting-provider), you may already have a WordPress database set up for you, or there may be an automated setup solution to do so. Check your hosting provider's support pages or your control panel for clues about whether or not you'll need to create one manually.
 
 If you determine that you'll need to create one manually, follow the instructions for Using phpMyAdmin below to create your WordPress username and database. For other tools such as Plesk, cPanel and Using the MySQL Client, refer the article [Creating Database for WordPress.](https://developer.wordpress.org/advanced-administration/before-install/creating-database/)
 
@@ -49,13 +49,13 @@ If you have only one database and it is already in use, you can install WordPres
 
 #### Using phpMyAdmin
 
-If your web server has [phpMyAdmin](https://wordpress.org/support/article/glossary/#phpmyadmin) installed, you may follow these instructions to create your WordPress username and database. If you work on your own computer, on most Linux distributions you can install PhpMyAdmin automatically.
+If your web server has [phpMyAdmin](https://wordpress.org/documentation/article/glossary/#phpmyadmin) installed, you may follow these instructions to create your WordPress username and database. If you work on your own computer, on most Linux distributions you can install PhpMyAdmin automatically.
 
 _**Note:** These instructions are written for phpMyAdmin 4.4; the phpMyAdmin user interface can vary slightly between versions._
 
 1. If a database relating to WordPress does not already exist in the **Database** dropdown on the left, create one:
     1. Choose a name for your WordPress database: '`wordpress`' or '`blog`' are good, but most hosting services (especially shared hosting) will require a name beginning with your username and an underscore, so, even if you work on your own computer, we advise that you check your hosting service requirements so that you can follow them on your own server and be able to transfer your database without modification. Enter the chosen database name in the **Create database** field and choose the best collation for your language and encoding. In most cases it's better to choose in the "utf8_" series and, if you don't find your language, to choose "utf8mb4_general_ci" [(Refer this article about upgrading to utf8mb4)](https://make.wordpress.org/core/2015/04/02/the-utf8mb4-upgrade/).
-    ![Creating a database in phpMyAdmin 4.4](https://wordpress.org/support/files/2018/10/phpMyAdmin_create_database_4.4.jpg)
+    ![Creating a database in phpMyAdmin 4.4](https://wordpress.org/documentation/files/2018/10/phpMyAdmin_create_database_4.4.jpg)
     2. Click the **phpMyAdmin** icon in the upper left to return to the main page, then click the **Users** tab. If a user relating to WordPress does not already exist in the list of users, create one:
     ![Create user in phpMyAdmin 4.4](https://codex.wordpress.org/images/2/26/users.jpg)
         1. Click **Add user**.
@@ -69,7 +69,7 @@ _**Note:** These instructions are written for phpMyAdmin 4.4; the phpMyAdmin use
         9. The page will refresh with privileges for that database. Click **Check All** to select all privileges, and click **Go**.
         10. On the resulting page, make note of the host name listed after **Server**: at the top of the page. (This will usually be **localhost**.)
 
-    ![Make sure the server is localhost](https://wordpress.org/support/files/2018/10/phpMyAdmin_server_info_4.4.jpg)
+    ![Make sure the server is localhost](https://wordpress.org/documentation/files/2018/10/phpMyAdmin_server_info_4.4.jpg)
 
 
 ### Step 3: Set up wp-config.php {#detailed-step-3}
@@ -110,17 +110,17 @@ Now you will need to decide where on your domain you'd like your WordPress-power
 - In the root directory of your website. (For example, `http://example.com/`)
 - In a subdirectory of your website. (For example, `http://example.com/blog/`)
 
-_**Note:** The location of your root web directory in the filesystem on your [web server](https://wordpress.org/support/article/glossary/#web-server) will vary across [hosting providers](https://wordpress.org/support/article/glossary/#hosting-provider) and operating systems. Check with your hosting provider or system administrator if you do not know where this is._
+_**Note:** The location of your root web directory in the filesystem on your [web server](https://wordpress.org/documentation/article/glossary/#web-server) will vary across [hosting providers](https://wordpress.org/documentation/article/glossary/#hosting-provider) and operating systems. Check with your hosting provider or system administrator if you do not know where this is._
 
 #### In the Root Directory
 
-- If you need to upload your files to your web server, use an [FTP](https://wordpress.org/support/article/glossary/#ftp) client to upload all the contents of the wordpress directory (but not the directory itself) into the root directory of your website.
-If your files are already on your web server, and you are using [shell](https://wordpress.org/support/article/glossary/#shell) access to install WordPress, move all of the contents of the wordpress directory (but not the directory itself) into the root directory of your website.
+- If you need to upload your files to your web server, use an [FTP](https://wordpress.org/documentation/article/glossary/#ftp) client to upload all the contents of the wordpress directory (but not the directory itself) into the root directory of your website.
+If your files are already on your web server, and you are using [shell](https://wordpress.org/documentation/article/glossary/#shell) access to install WordPress, move all of the contents of the wordpress directory (but not the directory itself) into the root directory of your website.
 
 #### In a Subdirectory
 
-- If you need to upload your files to your web server, rename the wordpress directory to your desired name, then use an [FTP](https://wordpress.org/support/article/glossary/#ftp) client to upload the directory to your desired location within the root directory of your website.
-- If your files are already on your web server, and you are using [shell](https://wordpress.org/support/article/glossary/#shell) access to install WordPress, move the wordpress directory to your desired location within the root directory of your website, and rename the directory to your desired name.
+- If you need to upload your files to your web server, rename the wordpress directory to your desired name, then use an [FTP](https://wordpress.org/documentation/article/glossary/#ftp) client to upload the directory to your desired location within the root directory of your website.
+- If your files are already on your web server, and you are using [shell](https://wordpress.org/documentation/article/glossary/#shell) access to install WordPress, move the wordpress directory to your desired location within the root directory of your website, and rename the directory to your desired name.
 
 ### Step 5: Run the Install Script
 
@@ -133,13 +133,13 @@ Point a web browser to start the installation script.
 
 If WordPress can't find the wp-config.php file, it will tell you and offer to try to create and edit the file itself. (You can also do this directly by loading `wp-admin/setup-config.php` in your web browser.) WordPress will ask you the database details and write them to a new wp-config.php file. If this works, you can go ahead with the installation; otherwise, go back and [create, edit, and upload the wp-config.php file yourself (step 3).](https://developer.wordpress.org/advanced-administration/before-install/howto-install/#step-3-set-up-wp-config-php)
 
-![The WordPress setup screen](https://wordpress.org/support/files/2018/10/install-step3_v47.png)
+![The WordPress setup screen](https://wordpress.org/documentation/files/2018/10/install-step3_v47.png)
 
 #### Finishing installation
 
-The following screenshots show how the installation progresses. Notice that in entering the details screen, you enter your site title, your desired user name, your choice of a password (twice), and your e-mail address. Also displayed is a check-box asking if you would like your blog to appear in search engines like Google and DuckDuckGo. Leave the box unchecked if you would like your blog to be visible to everyone, including search engines, and check the box if you want to block search engines, but allow normal visitors. Note all this information can be changed later in your [Administration Screen](https://wordpress.org/support/article/administration-screens/).
+The following screenshots show how the installation progresses. Notice that in entering the details screen, you enter your site title, your desired user name, your choice of a password (twice), and your e-mail address. Also displayed is a check-box asking if you would like your blog to appear in search engines like Google and DuckDuckGo. Leave the box unchecked if you would like your blog to be visible to everyone, including search engines, and check the box if you want to block search engines, but allow normal visitors. Note all this information can be changed later in your [Administration Screen](https://wordpress.org/documentation/article/administration-screens/).
 
-![The WordPress installation screen](https://wordpress.org/support/files/2018/10/install-step5_v47.png)
+![The WordPress installation screen](https://wordpress.org/documentation/files/2018/10/install-step5_v47.png)
 
 If you successfully install the WordPress, login prompt will be displayed.
 
@@ -185,7 +185,7 @@ In less than 5 minutes from now, you will have your blog ready on your domain. Y
 
 ## Common installation problems
 
-The following are some of the most common installation problems. For more information and troubleshooting for problems with your WordPress installation, check out [FAQ Installation](https://wordpress.org/support/article/faq-installation/) and [FAQ Troubleshooting](https://wordpress.org/support/article/faq-troubleshooting/).
+The following are some of the most common installation problems. For more information and troubleshooting for problems with your WordPress installation, check out [FAQ Installation](https://wordpress.org/documentation/article/faq-installation/) and [FAQ Troubleshooting](https://wordpress.org/documentation/article/faq-troubleshooting/).
 
 **I see a directory listing rather than a web page.**
 
@@ -195,8 +195,8 @@ The web server needs to be told to view index.php by default. In Apache, use the
 
 You probably introduced a syntax error in editing wp-config.php.
 
-1. Download wp-config.php (if you don't have [shell](https://wordpress.org/support/article/glossary/#shell) access).
-2. Open it in a [text editor](https://wordpress.org/support/article/glossary/#text-editor).
+1. Download wp-config.php (if you don't have [shell](https://wordpress.org/documentation/article/glossary/#shell) access).
+2. Open it in a [text editor](https://wordpress.org/documentation/article/glossary/#text-editor).
 3. Check that the first line contains nothing but <?php, and that there is **no** text before it (not even whitespace).
 4. Check that the last line contains nothing but ?>, and that there is no text after it (not even whitespace).
 5. If your text editor saves as Unicode, make sure it adds **no byte order mark (BOM)**. Most Unicode-enabled text editors do not inform the user whether or not it adds a BOM to files; if so, try using a different text editor.
@@ -204,7 +204,7 @@ You probably introduced a syntax error in editing wp-config.php.
 
 **My page comes out gibberish. When I look at the source I see a lot of "`<?php ?>`" tags.**
 
-If the `<?php ?>` tags are being sent to the browser, it means your [PHP](https://wordpress.org/support/article/glossary/#php) is not working properly. All PHP code is supposed to be executed before the server sends the resulting [HTML](https://wordpress.org/support/article/glossary/#html) to your web browser. (That's why it's called a preprocessor.) Make sure your web server meets the requirements to run WordPress, that PHP is installed and configured properly, or contact your hosting provider or system administrator for assistance.
+If the `<?php ?>` tags are being sent to the browser, it means your [PHP](https://wordpress.org/documentation/article/glossary/#php) is not working properly. All PHP code is supposed to be executed before the server sends the resulting [HTML](https://wordpress.org/documentation/article/glossary/#html) to your web browser. (That's why it's called a preprocessor.) Make sure your web server meets the requirements to run WordPress, that PHP is installed and configured properly, or contact your hosting provider or system administrator for assistance.
 
 **I keep getting an `Error connecting to database` message but I'm sure my configuration is correct.**
 
@@ -227,4 +227,4 @@ If you use the Rich Text Editor on a blog that's installed in a subdirectory, an
 
 - 2022-09-14: Added alt tags to all images.
 - 2022-09-14: cleared up a link refering to the [utf8mb4 article](https://make.wordpress.org/core/2015/04/02/the-utf8mb4-upgrade/)
-- 2022-09-14: Original content from [How to install WordPress](https://wordpress.org/support/article/how-to-install-wordpress/)
+- 2022-09-14: Original content from [How to install WordPress](https://wordpress.org/documentation/article/how-to-install-wordpress/)

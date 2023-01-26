@@ -72,7 +72,7 @@ define( 'SUBDOMAIN_INSTALL', false );
 
 You'll also have to change your `.htaccess` to the new setup. You can go to Network Admin — Settings — Network Setup to find the new `.htaccess` rules, or see below.
 
-Note that per the [Settings Requirements](https://codex.wordpress.org/Before_You_Create_A_Network#WordPress_Settings_Requirements) you cannot switch from **Sub-directory** to **Sub-domain** when running on `127.0.0.1` or `localhost`. This can potentially cause an endless loop of reauth=1 on your root site due to cookie handling.
+Note that per the [Settings Requirements](https://developer.wordpress.org/advanced-administration/multisite/prepare-network/#WordPress_Settings_Requirements) you cannot switch from **Sub-directory** to **Sub-domain** when running on `127.0.0.1` or `localhost`. This can potentially cause an endless loop of reauth=1 on your root site due to cookie handling.
 
 ## Apache Virtual Hosts and Mod Rewrite {#apache-virtual-hosts-and-mod-rewrite}
 
@@ -93,7 +93,7 @@ In some instances, you will need to add All to your AllowOverride for all htacce
 
 ## .htaccess and Mod Rewrite {#htaccess-and-mod-rewrite}
 
-Unlike Single Site WordPress, which can work with "ugly" [Permalinks](https://codex.wordpress.org/Using_Permalinks) and thus does not need Mod Rewrite, MultiSite _requires_ its use to format URLs for your subsites. This necessitates the use of an .htaccess file, the format of which will be slightly different if you're using SubFolders or SubDomains. The examples below are the standard .htaccess entries for WordPress SubFolders and SubDomains, when WordPress is installed in the root folder of your website. If you have WordPress in its own folder, you will need to change the value for RewriteBase appropriately.
+Unlike Single Site WordPress, which can work with "ugly" [Permalinks](https://wordpress.org/documentation/article/customize-permalinks/) and thus does not need Mod Rewrite, MultiSite _requires_ its use to format URLs for your subsites. This necessitates the use of an .htaccess file, the format of which will be slightly different if you're using SubFolders or SubDomains. The examples below are the standard .htaccess entries for WordPress SubFolders and SubDomains, when WordPress is installed in the root folder of your website. If you have WordPress in its own folder, you will need to change the value for RewriteBase appropriately.
 
 As a reminder, these are **EXAMPLES** and work in most, but not all, installs.
 
@@ -203,7 +203,7 @@ The Network Admin Link has moved with each major release of WordPress, as this i
 
 ## Domain Mapping {#domain-mapping}
 
-Before WordPress 4.5, domain mapping requires a domain mapping plugin. In WordPress 4.5+, domain mapping is a native feature in Multisites. Learn how to use this feature at [WordPress Multisite Domain Mapping](https://codex.wordpress.org/WordPress_Multisite_Domain_Mapping)
+Before WordPress 4.5, domain mapping requires a domain mapping plugin. In WordPress 4.5+, domain mapping is a native feature in Multisites. Learn how to use this feature at [WordPress Multisite Domain Mapping](https://developer.wordpress.org/advanced-administration/multisite/domain-mapping/)
 
 ## Moving Multisite {#moving-multisite}
 
@@ -211,8 +211,8 @@ Moving Multisite is more complicated than moving a single install. Please read [
 
 ## Importing into a Network {#importing-into-a-network}
 
-When you've created your WordPress Network for importing other sites, you need to look at the [Migrating Multiple Blogs into WordPress Multisite](https://codex.wordpress.org/Migrating_Multiple_Blogs_into_WordPress_3.0_Multisite) article.
+When you've created your WordPress Network for importing other sites, you need to look at the [Migrating Multiple Blogs into WordPress Multisite](https://wordpress.org/documentation/article/migrating-multiple-blogs-into-wordpress-multisite/) article.
 
 ## Changelog
 
-- 2022-10-25: Original content from [Multisite Network Administration](https://wordpress.org/support/article/multisite-network-administration/).
+- 2022-10-25: Original content from [Multisite Network Administration](https://wordpress.org/documentation/article/multisite-network-administration/).

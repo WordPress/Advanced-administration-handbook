@@ -15,7 +15,7 @@ Make note of any browsers you are experiencing the error in. You can use this in
 
 ## Step 2: Enable SCRIPT_DEBUG
 
-You need to turn on [script debugging](https://wordpress.org/support/article/debugging-in-wordpress#SCRIPT_DEBUG). Open `wp-config.php` and add the following line before "That's all, stop editing! Happy blogging".
+You need to turn on [script debugging](https://wordpress.org/documentation/article/debugging-in-wordpress#SCRIPT_DEBUG). Open `wp-config.php` and add the following line before "That's all, stop editing! Happy blogging".
 
 ```
 define('SCRIPT_DEBUG', true);
@@ -40,7 +40,7 @@ Check to see if you are still having an issue.
 
 Often, the text of the error will already be visible in the console. It may look similar to this:
 
-![Screenshot of an example developer tools error page.](https://wordpress.org/support/files/2020/07/chrome-devtools.png)
+![Screenshot of an example developer tools error page.](https://wordpress.org/documentation/files/2020/07/chrome-devtools.png)
 
 The image above shows the error to be in `jquery.js on line 2`, however remember to copy the whole stack information! Just saying what line is less helpful that showing context.
 
@@ -48,7 +48,7 @@ If no errors are displayed, reload the page; many errors occur only when the pag
 
 ## Step 4: Reporting
 
-Now that you have diagnosed your error, you should make your support forum request. Go to the [troubleshooting forum](https://wordpress.org/support/forum/how-to-and-troubleshooting).
+Now that you have diagnosed your error, you should make your support forum request. Go to the [troubleshooting forum](https://wordpress.org/documentation/forum/how-to-and-troubleshooting).
 
 If your problem is with a specific theme or plugin, you can access their dedicated support forum by visiting `https://wordpress.org/support/plugin/PLUGINNAME` or `https://wordpress.org/support/theme/THEMENAME`.
 
@@ -63,4 +63,4 @@ Please include the below information:
 
 ## Changelog
 
-- 2022-09-11: Original content from [Using Your Browser to Diagnose JavaScript Errors](https://wordpress.org/support/article/using-your-browser-to-diagnose-javascript-errors/). Consolidated Developer Tools instuctions, removed IE documentation.
+- 2022-09-11: Original content from [Using Your Browser to Diagnose JavaScript Errors](https://wordpress.org/documentation/article/using-your-browser-to-diagnose-javascript-errors/). Consolidated Developer Tools instuctions, removed IE documentation.

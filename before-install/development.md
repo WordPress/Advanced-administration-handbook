@@ -80,4 +80,4 @@ function test_localhosts( ) {
 
 ## Changelog
 
-- 2022-09-27: Original content from [Running a development copy of wordpress](https://wordpress.org/support/article/running-a-development-copy-of-wordpress/) and [installing wordpress on your own computer](https://wordpress.org/support/article/installing-wordpress-on-your-own-computer/).
+- 2022-09-27: Original content from [Running a development copy of wordpress](https://wordpress.org/documentation/article/running-a-development-copy-of-wordpress/) and [installing wordpress on your own computer](https://wordpress.org/documentation/article/installing-wordpress-on-your-own-computer/).

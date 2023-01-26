@@ -36,4 +36,4 @@ define( 'COOKIE_DOMAIN', $_SERVER['HTTP_HOST'] );
 
 ## Changelog
 
-- 2022-10-25: Original content from [WordPress Multisite Domain Mapping](https://wordpress.org/support/article/wordpress-multisite-domain-mapping/).
+- 2022-10-25: Original content from [WordPress Multisite Domain Mapping](https://wordpress.org/documentation/article/wordpress-multisite-domain-mapping/).

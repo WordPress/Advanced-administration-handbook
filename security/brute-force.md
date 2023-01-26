@@ -35,7 +35,7 @@ Things to avoid when choosing a password:
 
 A strong password is necessary not just to protect your blog content. A hacker who gains access to your administrator account is able to install malicious scripts that can potentially compromise your entire server.
 
-To further increase the strength of your password, you can enable [Two Step Authentication](https://codex.wordpress.org/Two Step Authentication) to further protect your blog.
+To further increase the strength of your password, you can enable [Two Step Authentication](https://developer.wordpress.org/advanced-administration/security/mfa/) to further protect your blog.
 
 #### Plugins {#plugins}
 
@@ -284,4 +284,4 @@ Services like CloudFlare and Sucuri CloudProxy can also help mitigate these atta
 
 ## Changelog
 
-- 2022-10-25: Original content from [Brute Force Attacks](https://wordpress.org/support/article/brute-force-attacks/).
+- 2022-10-25: Original content from [Brute Force Attacks](https://wordpress.org/documentation/article/brute-force-attacks/).

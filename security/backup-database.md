@@ -18,7 +18,7 @@ There is no need to unzip this file to restore it. Using the same cPanel program
 
 Information below has been tried and tested using phpMyAdmin version 4.4.13 connects to MySQL version 5.6.28 running on Linux.
 
-[![phpmyadmin_top](https://wordpress.org/support/files/2018/11/phpmyadmin_top.jpg)](https://wordpress.org/support/files/2018/11/phpmyadmin_top.jpg)
+[![phpmyadmin_top](https://wordpress.org/documentation/files/2018/11/phpmyadmin_top.jpg)](https://wordpress.org/documentation/files/2018/11/phpmyadmin_top.jpg)
 
 #### Quick backup process {#quick-backup-process}
 
@@ -28,17 +28,17 @@ When you backup all tables in the WordPress database without compression, you ca
 2. From the left side window, select your WordPress database. In this example, the name of database is "wp".
 3. The right side window will show you all the tables inside your WordPress database. Click the 'Export' tab on the top set of tabs.
 
-[![](https://wordpress.org/support/files/2018/11/phpmyadmin_dbtop.jpg)](https://wordpress.org/support/files/2018/11/phpmyadmin_dbtop.jpg)
+[![](https://wordpress.org/documentation/files/2018/11/phpmyadmin_dbtop.jpg)](https://wordpress.org/documentation/files/2018/11/phpmyadmin_dbtop.jpg)
 
 4. Ensure that the Quick option is selected, and click 'Go' and you should be prompted for a file to download. Save the file to your computer. Depending on the database size, this may take a few moments.
 
-[![phpmyadmin_quick_export](https://wordpress.org/support/files/2018/11/phpmyadmin_quick_export.jpg)](https://wordpress.org/support/files/2018/11/phpmyadmin_quick_export.jpg)
+[![phpmyadmin_quick_export](https://wordpress.org/documentation/files/2018/11/phpmyadmin_quick_export.jpg)](https://wordpress.org/documentation/files/2018/11/phpmyadmin_quick_export.jpg)
 
 #### Custom backup process {#custom-backup-process}
 
 If you want to change default behavior, select Custom backup.  In above Step 4, select Custom option. Detailed options are displayed.
 
-[![phpmyadmin_custom_export](https://wordpress.org/support/files/2018/11/phpmyadmin_custom_export.jpg)](https://wordpress.org/support/files/2018/11/phpmyadmin_custom_export.jpg)
+[![phpmyadmin_custom_export](https://wordpress.org/documentation/files/2018/11/phpmyadmin_custom_export.jpg)](https://wordpress.org/documentation/files/2018/11/phpmyadmin_custom_export.jpg)
 
 ##### The Table section {#the-table-section}
 
@@ -50,7 +50,7 @@ If you only have your WordPress blog installed, leave it as is (or click 'Select
 
 Select 'zipped' or 'gzipped' from Compression box to compress the data.  
 
-[![phpmyadmin_export_output](https://wordpress.org/support/files/2018/11/phpmyadmin_export_output.jpg)](https://wordpress.org/support/files/2018/11/phpmyadmin_export_output.jpg)
+[![phpmyadmin_export_output](https://wordpress.org/documentation/files/2018/11/phpmyadmin_export_output.jpg)](https://wordpress.org/documentation/files/2018/11/phpmyadmin_export_output.jpg)
 
 ##### The Format section {#the-format-section}
 
@@ -58,19 +58,19 @@ Ensure that the SQL is selected. Unlike CSV or other data formats, this option e
 
 In the Format-specific options section, leave options as they are.
 
-[![phpmyadmin_export_formatspecific](https://wordpress.org/support/files/2018/11/phpmyadmin_export_formatspecific.jpg)](https://wordpress.org/support/files/2018/11/phpmyadmin_export_formatspecific.jpg)
+[![phpmyadmin_export_formatspecific](https://wordpress.org/documentation/files/2018/11/phpmyadmin_export_formatspecific.jpg)](https://wordpress.org/documentation/files/2018/11/phpmyadmin_export_formatspecific.jpg)
 
 ##### The Object creation options section {#the-object-creation-options-section}
 
 Select Add DROP TABLE / VIEW / PROCEDURE / FUNCTION / EVENT / TRIGGER statement. Before table creation on target database, it will call DROP statement to delete the old existing table if it exist.
 
-[![phpmyadmin_export_object](https://wordpress.org/support/files/2018/11/phpmyadmin_export_object.jpg)](https://wordpress.org/support/files/2018/11/phpmyadmin_export_object.jpg)
+[![phpmyadmin_export_object](https://wordpress.org/documentation/files/2018/11/phpmyadmin_export_object.jpg)](https://wordpress.org/documentation/files/2018/11/phpmyadmin_export_object.jpg)
 
 ### The Data creation options section {#the-data-creation-options-section}
 
 Leave options as they are.
 
-[![phpmyadmin_export_data](https://wordpress.org/support/files/2018/11/phpmyadmin_export_data.jpg)](https://wordpress.org/support/files/2018/11/phpmyadmin_export_data.jpg)
+[![phpmyadmin_export_data](https://wordpress.org/documentation/files/2018/11/phpmyadmin_export_data.jpg)](https://wordpress.org/documentation/files/2018/11/phpmyadmin_export_data.jpg)
 
 Now click 'Go' at the bottom of the window and you should be prompted for a file to download. Save the file to your computer. Depending on the database size, this may take a few moments.
 
@@ -143,7 +143,7 @@ You can perform most of those tasks using a command line interface such as that 
 
 Information below has been tried and tested using MySQL Workbench version 6.3.6 connects to MySQL version 5.6.28 running on Linux.
 
-[![mysql_workbench_top](https://wordpress.org/support/files/2018/11/mysql_workbench_top.jpg)](https://wordpress.org/support/files/2018/11/mysql_workbench_top.jpg)
+[![mysql_workbench_top](https://wordpress.org/documentation/files/2018/11/mysql_workbench_top.jpg)](https://wordpress.org/documentation/files/2018/11/mysql_workbench_top.jpg)
 
 #### Backing Up the Database {#backing-up-the-database}
 
@@ -153,13 +153,13 @@ This assumes you have already installed MySQL Workbench and set it up so that yo
 2. Click your database instance if it is displayed on the top page. Or, Click Database -> Connect Database from top menu, enter required information and Click OK.
 3. Click Data Export in left side window.
 
-[![mysql_workbench_export](https://wordpress.org/support/files/2018/11/mysql_workbench_export.jpg)](https://wordpress.org/support/files/2018/11/mysql_workbench_export.jpg)
+[![mysql_workbench_export](https://wordpress.org/documentation/files/2018/11/mysql_workbench_export.jpg)](https://wordpress.org/documentation/files/2018/11/mysql_workbench_export.jpg)
 
 1. Select your WordPress databases that you want to backup.
 2. Specify target directory on Export Options. You need write permissions in the directory to which you are writing the backup.
 3. Click Start Export on the lower right of the window.
 
-[![mysql_workbench_export2](https://wordpress.org/support/files/2018/11/mysql_workbench_export2.jpg)](https://wordpress.org/support/files/2018/11/mysql_workbench_export2.jpg)
+[![mysql_workbench_export2](https://wordpress.org/documentation/files/2018/11/mysql_workbench_export2.jpg)](https://wordpress.org/documentation/files/2018/11/mysql_workbench_export2.jpg)
 
 #### Restoring From a Backup {#restoring-from-a-backup}
 
@@ -169,7 +169,7 @@ This assumes you have already installed MySQL Workbench and set it up so that yo
 4. Specify folder where you have backup files. Click "…" at the right of Import from Dump Project Folder, select backup folder, and click Open.
 5. Click Start Import on the lower right of the window. The database restore will commence.
 
-[![mysql_workbench_import](https://wordpress.org/support/files/2018/11/mysql_workbench_import.jpg)](https://wordpress.org/support/files/2018/11/mysql_workbench_import.jpg)
+[![mysql_workbench_import](https://wordpress.org/documentation/files/2018/11/mysql_workbench_import.jpg)](https://wordpress.org/documentation/files/2018/11/mysql_workbench_import.jpg)
 
 ### MySQL GUI Tools {#mysql-gui-tools}
 
@@ -195,22 +195,22 @@ The instructions below are for the plugin called [WP-DB-Backup:](https://wordpre
 
 #### Installation {#installation}
 
-1. Search for "WP-DB-Backup" on [Administration](https://wordpress.org/support/article/administration-screens/) > [Plugins](https://wordpress.org/support/article/administration-screens/#plugins-add-functionality-to-your-blog) > [Add New](https://wordpress.org/support/article/administration-screens/#add-new-plugins).
+1. Search for "WP-DB-Backup" on [Administration](https://wordpress.org/documentation/article/administration-screens/) > [Plugins](https://wordpress.org/documentation/article/administration-screens/#plugins-add-functionality-to-your-blog) > [Add New](https://wordpress.org/documentation/article/administration-screens/#add-new-plugins).
 2. Click Install Now.
 3. Activate the plugin.
 
 #### Backing up {#backing-up}
 
-1. Navigate to [Administration](https://wordpress.org/support/article/administration-screens/) > [Tools](https://wordpress.org/support/article/administration-screens/#tools-managing-your-blog) > Backup
+1. Navigate to [Administration](https://wordpress.org/documentation/article/administration-screens/) > [Tools](https://wordpress.org/documentation/article/administration-screens/#tools-managing-your-blog) > Backup
 2. Core WordPress tables will always be backed up. Select some options from Tables section.
 
-[![wp-db-backup_table](https://wordpress.org/support/files/2018/11/wp-db-backup_table.jpg)](https://wordpress.org/support/files/2018/11/wp-db-backup_table.jpg)
+[![wp-db-backup_table](https://wordpress.org/documentation/files/2018/11/wp-db-backup_table.jpg)](https://wordpress.org/documentation/files/2018/11/wp-db-backup_table.jpg)
 
 3. Select the Backup Options; the backup can be downloaded, or emailed.
 
 4. Finally, click on the Backup Now! button to actually perform the backup. You can also schedule regular backups.
 
-[![wp-db-backup_settings](https://wordpress.org/support/files/2018/11/wp-db-backup_settings.jpg)](https://wordpress.org/support/files/2018/11/wp-db-backup_settings.jpg)
+[![wp-db-backup_settings](https://wordpress.org/documentation/files/2018/11/wp-db-backup_settings.jpg)](https://wordpress.org/documentation/files/2018/11/wp-db-backup_settings.jpg)
 
 #### Restoring the Data {#restoring-the-data}
 
@@ -250,7 +250,7 @@ Using phpMyAdmin, follow the steps below to restore a MySQL/MariaDB database.
 
 Now grab a coffee. This bit takes a while. Eventually you will see a success screen.
 
-If you get an error message, your best bet is to post to the [WordPress support forums](https://wordpress.org/support/) to get help.
+If you get an error message, your best bet is to post to the [WordPress support forums](https://wordpress.org/documentation/) to get help.
 
 ### Using MySQL/MariaDB Commands {#using-mysql-mariadb-commands}
 

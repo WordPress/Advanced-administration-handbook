@@ -12,7 +12,7 @@ Generate a full site backup in cPanel. It might also help to copy all the files 
 
 ### Export from your existing WordPress installs`{#export-from-your-existing-wordpress-installs}
 
-In each of your existing WordPress installations, go Tools > Export in WordPress. Download the WXR files that contain all your posts and pages for each site. See the instructions on the [Tools Export Screen](https://wordpress.org/support/article/tools-export-screen/).
+In each of your existing WordPress installations, go Tools > Export in WordPress. Download the WXR files that contain all your posts and pages for each site. See the instructions on the [Tools Export Screen](https://wordpress.org/documentation/article/tools-export-screen/).
 
 Make sure that your export file actually has all the posts and pages. You can verify this by looking at the last entry of the exported file using a text editor. The last entry should be the most recent post.
 
@@ -24,11 +24,11 @@ Note: widget configuration and blog/plugin settings are NOT exported in this met
 
 ### Install WordPress {#install-wordpress}
 
-Install WordPress. Follow the instructions for [Installing WordPress](https://wordpress.org/support/article/how-to-install-wordpress/).
+Install WordPress. Follow the instructions for [Installing WordPress](https://developer.wordpress.org/advanced-administration/before-install/howto-install/).
 
 ### Activate multisite {#activate-multisite}
 
-Activate multi-site in your WordPress install. This involves editing wp-config.php a couple of times. You need to use the subdomain, not the subdirectory, option. See the instructions on how to [Create A Network](https://wordpress.org/support/article/create-a-network/).
+Activate multi-site in your WordPress install. This involves editing wp-config.php a couple of times. You need to use the subdomain, not the subdirectory, option. See the instructions on how to [Create A Network](https://developer.wordpress.org/advanced-administration/multisite/create-network/).
 
 ### Create blogs for each site you want to import {#create-blogs-for-each-site-you-want-to-import}
 
@@ -62,7 +62,7 @@ You may run into trouble with the PHP configuration on your host. There are two 
 
 There are a couple ways to solve it. One is to ask your hosting provider to up the limits, even temporarily. The other is to put a php.ini file in your `/wp-admin/` and `/wp-includes` directories that ups the limits for you (php.ini files are not recursive, so it has to be in those directories). Something like a 10 MB upload limit and a 128 MB memory limit should work, but check with your hosting provider first so that you don't violate the terms of your agreement.
 
-Search the [WordPress forum support](https://wordpress.org/support/forums/) for help with PHP configuration problems.
+Search the [WordPress forum support](https://wordpress.org/documentation/forums/) for help with PHP configuration problems.
 
 ### Converting add-on domains to parked domains {#converting-add-on-domains-to-parked-domains}
 

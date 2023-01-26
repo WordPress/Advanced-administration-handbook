@@ -2,7 +2,7 @@
 
 ## Debugging a WordPress Network {#debugging-a-wordpress-network}
 
-If you have reached this page, chances are you have received an error in your [WordPress network](https://wordpress.org/support/articles/glossary#network). This failure occurs when WordPress cannot find one or more of the global tables for the network in the [database](https://codex.wordpress.org/Database_Description).
+If you have reached this page, chances are you have received an error in your [WordPress network](https://wordpress.org/documentation/articles/glossary#network). This failure occurs when WordPress cannot find one or more of the global tables for the network in the [database](https://codex.wordpress.org/Database_Description).
 
 On some shared webhosts, the host has disabled the functionality from running. It is always best to check with your webhost **before** [creating a network](https://developer.wordpress.org/advanced-administration/wordpress/wp-config/) to make sure your webhost account fulfills the technical requirements.
 
@@ -107,12 +107,12 @@ One or more database tables are unavailable. The database may need to be repaire
 
 ## Related Articles {#related-articles}
 
-* [Create A Network](https://wordpress.org/support/article/create-a-network/)
+* [Create A Network](https://developer.wordpress.org/advanced-administration/multisite/create-network/)
 
 ## External Links {#external-links}
 
-* [WordPress › Support » Multisite](https://wordpress.org/support/forum/multisite)
+* [WordPress › Support » Multisite](https://wordpress.org/documentation/forum/multisite)
 
 ## Changelog
 
-- 2022-10-21: Original content from [Debugging a WordPress Network](https://wordpress.org/support/article/debugging-a-wordpress-network/).
+- 2022-10-21: Original content from [Debugging a WordPress Network](https://wordpress.org/documentation/article/debugging-a-wordpress-network/).

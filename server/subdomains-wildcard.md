@@ -1,6 +1,6 @@
 # Configuring Wildcard Subdomains
 
-Wildcard subdomains are useful to allow end users of a domain-based WordPress [multisite](https://wordpress.org/documentation/article/wordpress-glossary/#multisite) network to create new sites on demand. In this type of network each new site has its own subdomain, and the wildcard configuration means that those subdomains do not have to be configured individually. For information on how to create a multisite network, see: [Create A Network](https://wordpress.org/support/article/create-a-network/).
+Wildcard subdomains are useful to allow end users of a domain-based WordPress [multisite](https://wordpress.org/documentation/article/wordpress-glossary/#multisite) network to create new sites on demand. In this type of network each new site has its own subdomain, and the wildcard configuration means that those subdomains do not have to be configured individually. For information on how to create a multisite network, see: [Create A Network](https://developer.wordpress.org/advanced-administration/multisite/create-network/).
 
 This page contains some examples of how to configure wildcard subdomains in different circumstances. If you cannot determine how to set up wildcard subdomains on your particular web server, *contact your webhost* for directions.
 

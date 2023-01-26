@@ -58,7 +58,7 @@ Like many modern software packages, WordPress is updated regularly to address ne
 
 #### Updating WordPress {#updating-wordpress}
 
-Main article: [Updating WordPress](https://codex.wordpress.org/Updating_WordPress).
+Main article: [Updating WordPress](https://wordpress.org/documentation/article/updating-wordpress/).
 
 The latest version of WordPress is always available from the main WordPress website at `https://wordpress.org`. Official releases are not available from other sites — **never** download or install WordPress from any website other than `https://wordpress.org`.
 
@@ -70,15 +70,15 @@ If you are an administrator in charge of more than one WordPress installation, c
 
 #### Reporting Security Issues {#reporting-security-issues}
 
-If you think you have found a security flaw in WordPress, you can help by reporting the issue. See the [Security FAQ](https://codex.wordpress.org/Security FAQ) for information on how to report security issues.
+If you think you have found a security flaw in WordPress, you can help by reporting the issue. See the [Security FAQ](https://make.wordpress.org/core/handbook/testing/reporting-security-vulnerabilities/) for information on how to report security issues.
 
-If you think you have found a bug, report it. See [Submitting Bugs](https://codex.wordpress.org/Submitting Bugs) for how to do this. You might have uncovered a vulnerability, or a bug that could lead to one.
+If you think you have found a bug, report it. See [Submitting Bugs](https://make.wordpress.org/core/handbook/testing/reporting-bugs/) for how to do this. You might have uncovered a vulnerability, or a bug that could lead to one.
 
 ### Web Server Vulnerabilities {#web-server-vulnerabilities}
 
 The web server running WordPress, and the software on it, can have vulnerabilities. Therefore, make sure you are running secure, stable versions of your web server and the software on it, or make sure you are using a trusted host that takes care of these things for you.
 
-If you're on a shared server (one that hosts other websites besides your own) and a website on the same server is compromised, your website can potentially be compromised too even if you follow everything in this guide. Be sure to ask your [web host](https://wordpress.org/support/article/glossary/#Hosting_provider) what security precautions they take.
+If you're on a shared server (one that hosts other websites besides your own) and a website on the same server is compromised, your website can potentially be compromised too even if you follow everything in this guide. Be sure to ask your [web host](https://wordpress.org/documentation/article/glossary/#Hosting_provider) what security precautions they take.
 
 ### Network Vulnerabilities {#network-vulnerabilities}
 
@@ -171,7 +171,7 @@ When you tell WordPress to perform an automatic update, all file operations are 
 
 ### Database Security {#database-security}
 
-If you run multiple blogs on the same server, it is wise to consider keeping them in separate databases each managed by a different user. This is best accomplished when performing the initial [WordPress installation](https://codex.wordpress.org/Installing_WordPress). This is a containment strategy: if an intruder successfully cracks one WordPress installation, this makes it that much harder to alter your other blogs.
+If you run multiple blogs on the same server, it is wise to consider keeping them in separate databases each managed by a different user. This is best accomplished when performing the initial [WordPress installation](https://developer.wordpress.org/advanced-administration/before-install/howto-install/). This is a containment strategy: if an intruder successfully cracks one WordPress installation, this makes it that much harder to alter your other blogs.
 
 If you administer MySQL yourself, ensure that you understand your MySQL configuration and that unneeded features (such as accepting remote TCP connections) are disabled. See [Secure MySQL Database Design](http://www.securityfocus.com/infocus/1667) for a nice introduction.
 
@@ -189,14 +189,14 @@ Therefore any other database structure and administration privileges, such as DR
 
 Adding server-side password protection (such as [BasicAuth](http://en.wikipedia.org/wiki/Basic_access_authentication)) to `/wp-admin/` adds a second layer of protection around your blog's admin area, the login screen, and your files. This forces an attacker or bot to attack this second layer of protection instead of your actual admin files. Many WordPress attacks are carried out autonomously by malicious software bots.
 
-Simply securing the `wp-admin/` directory might also break some WordPress functionality, such as the AJAX handler at `wp-admin/admin-ajax.php`. See the [Resources](https://codex.wordpress.org/#Resources) section for more documentation on how to password protect your `wp-admin/` directory properly.
+Simply securing the `wp-admin/` directory might also break some WordPress functionality, such as the AJAX handler at `wp-admin/admin-ajax.php`. See the [Resources](https://developer.wordpress.org/advanced-administration/resources/) section for more documentation on how to password protect your `wp-admin/` directory properly.
 
 The most common attacks against a WordPress blog usually fall into two categories.
 
 1. Sending specially-crafted HTTP requests to your server with specific exploit payloads for specific vulnerabilities. These include old/outdated plugins and software.
 2. Attempting to gain access to your blog by using "brute-force" password guessing.
 
-The ultimate implementation of this "second layer" password protection is to require an HTTPS SSL encrypted connection for administration, so that all communication and sensitive data is encrypted. _See [Administration Over SSL](https://codex.wordpress.org/Administration_Over_SSL)._
+The ultimate implementation of this "second layer" password protection is to require an HTTPS SSL encrypted connection for administration, so that all communication and sensitive data is encrypted. _See [Administration Over SSL](https://developer.wordpress.org/advanced-administration/security/https/)._
 
 ### Securing wp-includes {#securing-wp-includes}
 
@@ -262,19 +262,19 @@ Additionally, these third parties service providers function as Content Distribu
 
 #### Plugins that need write access {#plugins-that-need-write-access}
 
-If a plugin wants write access to your WordPress files and directories, please read the code to make sure it is legit or check with someone you trust. Possible places to check are the [Support Forums](https://codex.wordpress.org/Using_the_Support_Forums) and [IRC Channel](https://codex.wordpress.org/IRC).
+If a plugin wants write access to your WordPress files and directories, please read the code to make sure it is legit or check with someone you trust. Possible places to check are the [Support Forums](https://wordpress.org/support/welcome/) and [IRC Channel](https://make.wordpress.org/support/handbook/appendix/other-support-locations/introduction-to-irc/).
 
 #### Code execution plugins {#code-execution-plugins}
 
 As we said, part of the goal of hardening WordPress is containing the damage done if there is a successful attack. Plugins which allow arbitrary PHP or other code to execute from entries in a database effectively magnify the possibility of damage in the event of a successful attack.
 
-A way to avoid using such a plugin is to use [custom page templates](https://wordpress.org/support/article/pages/#Creating_your_own_Page_Templates) that call the function. Part of the security this affords is active only when you [disallow file editing within WordPress](#File_Permissions).
+A way to avoid using such a plugin is to use [custom page templates](https://wordpress.org/documentation/article/pages/#Creating_your_own_Page_Templates) that call the function. Part of the security this affords is active only when you [disallow file editing within WordPress](#File_Permissions).
 
 ### Security through obscurity {#security-through-obscurity}
 
 [Security through obscurity](http://en.wikipedia.org/wiki/Security_through_obscurity) is generally an unsound primary strategy. However, there are areas in WordPress where obscuring information _might_ help with security:
 
-1. **Rename the administrative account:** When creating an administrative account, avoid easily guessed terms such as `admin` or `webmaster` as usernames because they are typically subject to attacks first. On an existing WordPress install you may rename the existing account in the MySQL command-line client with a command like `UPDATE wp_users SET user_login = 'newuser' WHERE user_login = 'admin';`, or by using a MySQL frontend like [phpMyAdmin](https://codex.wordpress.org/phpMyAdmin).
+1. **Rename the administrative account:** When creating an administrative account, avoid easily guessed terms such as `admin` or `webmaster` as usernames because they are typically subject to attacks first. On an existing WordPress install you may rename the existing account in the MySQL command-line client with a command like `UPDATE wp_users SET user_login = 'newuser' WHERE user_login = 'admin';`, or by using a MySQL frontend like [phpMyAdmin](https://developer.wordpress.org/advanced-administration/upgrade/phpmyadmin/).
 2. **Change the table_prefix:** Many published WordPress-specific SQL-injection attacks make the assumption that the table_prefix is `wp_`, the default. Changing this can block at least some SQL injection attacks.
 
 ### Data Backups {#data-backups}
@@ -373,11 +373,11 @@ If the attacker tries to deface your site or add malware, you can also detect th
 
 ### See Also {#see-also}
 
-* [Security FAQ](https://codex.wordpress.org/Security FAQ)
-* [FAQ – My site was hacked](https://codex.wordpress.org/FAQ_My_site_was_hacked)
-* [Brute Force Attacks](https://codex.wordpress.org/Brute Force Attacks)
+* [Security FAQ](https://make.wordpress.org/core/handbook/testing/reporting-security-vulnerabilities/)
+* [FAQ – My site was hacked](https://wordpress.org/documentation/article/faq-my-site-was-hacked/)
+* [Brute Force Attacks](https://developer.wordpress.org/advanced-administration/security/brute-force/)
 * [WordPress Security Whitepaper](https://wordpress.org/about/security/)
 
 ## Changelog
 
-- 2022-10-25: Original content from [Hardening WordPress](https://wordpress.org/support/article/hardening-wordpress/).
+- 2022-10-25: Original content from [Hardening WordPress](https://wordpress.org/documentation/article/hardening-wordpress/).

@@ -4,7 +4,7 @@ HTTPS is an encrypted communication protocol — essentially, a more secure way 
 
 If a site's using HTTPS, you'll see a little padlock icon in the address field, just as in the screenshot below:
 
-![Screenshot of the "secure site" padlock icon](https://wordpress.org/support/files/2019/03/image.png)
+![Screenshot of the "secure site" padlock icon](https://wordpress.org/documentation/files/2019/03/image.png)
 
 Here are the most common reasons you might want to use HTTPS on your own site:
 
@@ -24,9 +24,9 @@ In turn, you don't want browsers suggesting you might be that kind of shady site
 
 ## Administration Over HTTPS
 
-To easily enable (and enforce) WordPress administration over SSL, there are two constants that you can define in your site's [wp-config.php](https://codex.wordpress.org/Editing_wp-config.php) file. It is not sufficient to define these constants in a plugin file; they must be defined in your [wp-config.php](https://codex.wordpress.org/Editing_wp-config.php) file. You must also already have SSL configured on the server and a (virtual) host configured for the secure server before your site will work properly with these constants set to true.
+To easily enable (and enforce) WordPress administration over SSL, there are two constants that you can define in your site's [wp-config.php](https://wordpress.org/documentation/article/editing-wp-config-php/) file. It is not sufficient to define these constants in a plugin file; they must be defined in your [wp-config.php](https://wordpress.org/documentation/article/editing-wp-config-php/) file. You must also already have SSL configured on the server and a (virtual) host configured for the secure server before your site will work properly with these constants set to true.
 
-**Note:** `FORCE_SSL_LOGIN` was deprecated in [Version 4.0](https://codex.wordpress.org/Version 4.0). Please use `FORCE_SSL_ADMIN`.
+**Note:** `FORCE_SSL_LOGIN` was deprecated in [Version 4.0](https://wordpress.org/documentation/wordpress-version/version-4-0/). Please use `FORCE_SSL_ADMIN`.
 
 ### To Force HTTPS Logins and HTTPS Admin Access {#to-force-ssl-logins-and-ssl-admin-access}
 
@@ -92,7 +92,7 @@ An important idea in this block is using `THE_REQUEST`, which ensures only actua
 
 These rewrite rules are optional. They disable access to the public site over a secure connection. If you wish to remain logged in to the public portion of your site using the plugin below, you must _not_ add these rules, as the plugin disables the cookie over unencrypted connections.
 
-The secure virtual host should have two rewrite rules in an .htaccess file or in the virtual host declaration (see [Using Permalinks](https://codex.wordpress.org/Using Permalinks) for more on rewriting):
+The secure virtual host should have two rewrite rules in an .htaccess file or in the virtual host declaration (see [Using Permalinks](https://wordpress.org/documentation/article/customize-permalinks/) for more on rewriting):
 
 ```
 RewriteRule !^/wp-admin/(.*) - [C]
@@ -198,7 +198,7 @@ RewriteRule . /index.php [L]
 
 #### Summary {#summary}
 
-This method does _not_ fix some [inherent security risks](https://wordpress.org/support/topic/24558#post-154136) in WordPress, nor does it protect you against man-in-the-middle attacks or other risks that can cripple secure connections.
+This method does _not_ fix some [inherent security risks](https://wordpress.org/support/topic/securing-loginphp-with-ssl/) in WordPress, nor does it protect you against man-in-the-middle attacks or other risks that can cripple secure connections.
 
 However, this _should_ make it much harder for a malicious person to steal your cookies and/or authentication headers and use them to impersonate you and gain access to wp-admin. It also obfuscates the ability to sniff your content, which could be important for legal blogs which may have drafts of documents that need strict protection.
 
@@ -221,4 +221,4 @@ The author assumes (but hasn't checked) that if the user has stored cookies/told
 
 ## Changelog
 
-- 2022-10-25: Original content from [Why should I use HTTPS](https://wordpress.org/support/article/why-should-i-use-https/), and [Administration Over SSL](https://wordpress.org/support/article/administration-over-ssl/).
+- 2022-10-25: Original content from [Why should I use HTTPS](https://wordpress.org/documentation/article/why-should-i-use-https/), and [Administration Over SSL](https://wordpress.org/documentation/article/administration-over-ssl/).
