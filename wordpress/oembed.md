@@ -30,11 +30,11 @@ As of version 4.4, WordPress supports oEmbed discovery, but has severe limitatio
 
 Specifically, the HTML and Video content is filtered to only allow links, blockquotes, and iframes, and these are additionally filtered to prevent insertion of malicious content. The HTML is then modified to be sandboxed and to have additional security restrictions placed on them as well.
 
-However, if you feel you are knowledgeable enough to not require this level of safety, you can give unfiltered_html users (Administrators and Editors) the ability to embed from websites that have oEmbed discovery tags in their `<head>`.
+However, if you feel you are knowledgeable enough to not require this level of safety, you can give `unfiltered_html` users (Administrators and Editors) the ability to embed from websites that have oEmbed discovery tags in their `<head>`.
 
 The oEmbed discovery content for "link" and "photo" types is not quite so heavily filtered in this manner; however, it is properly escaped for security and to prevent any malicious content from being displayed on the site
 
 ## Changelog
 
+- 2023-01-25: Review and Update Content. Linked list of whitelisted providers.
 - 2022-09-11: Added content from [oEmbed](https://docs.google.com/document/d/1ni59ohlSHeCH_BwRtxUXzGY1LLWqFiaaGQFcCjh_2rQ/).
-- 2023-01-25: Review and Update Content. Linked list of whitelisted providers 
