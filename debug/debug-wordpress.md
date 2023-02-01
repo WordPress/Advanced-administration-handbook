@@ -4,6 +4,8 @@ Debugging PHP code is part of any project, but WordPress comes with specific deb
 
 For non-programmers or general users, these options can be used to show detailed information about errors.
 
+**NOTE**: Prior to making any modifications to your website, verify that you have either utilized a staging environment or taken an appropriate backup of your site.
+
 ## Example wp-config.php for Debugging
 
 The following code, inserted in your [wp-config.php](https://wordpress.org/documentation/article/editing-wp-config-php/) file, will log all errors, notices, and warnings to a file called `debug.log` in the wp-content directory. It will also hide the errors so they do not interrupt page generation.
@@ -54,6 +56,32 @@ It is not recommended to use `WP_DEBUG` or the other debug tools on live sites; 
 Enabling `WP_DEBUG` will cause all PHP errors, notices and warnings to be displayed. This is likely to modify the default behavior of PHP which only displays fatal errors and/or shows a white screen of death when errors are reached.
 
 Showing all PHP notices and warnings often results in error messages for things that don’t seem broken, but do not follow proper data validation conventions inside PHP. These warnings are easy to fix once the relevant code has been identified, and the resulting code is almost always more bug-resistant and easier to maintain.
+
+### Custom PHP Debugging
+
+If it is necessary to log non-error information for debugging purposes, PHP does offer the `error_log` function for this purpose. However, this method does not provide properly formatted output by default.
+
+To address this you may add an additional function on your site to handle formatting either by creating a [custom plugin](https://developer.wordpress.org/plugins/plugin-basics/) or using a snippet by leveraging the [Code Snippets](https://wordpress.org/plugins/code-snippets/) plugin. The function will act as a wrapper for the `error_log` using `print_r`  to format arrays and objects correctly before logging them. 
+
+Below is an example function that requires `WP_DEBUG` to be enabled.
+```
+function write_log($data) {
+    if ( true === WP_DEBUG ) {
+        if ( is_array( $data ) || is_object( $data ) ) {
+            error_log( print_r( $data, true ) );
+        } else {
+            error_log( $data );
+        }
+    }
+}
+```
+Usage Examples:
+```
+write_log('DEBUG TEXT');
+write_log($variable);
+```
+
+**Note**: It is not recommended to add custom code like the above example in `functions.php` to avoid maintenance, security, performance, compatibility and code organization issues.  
 
 ### Deprecated Functions and Arguments
 
@@ -114,14 +142,19 @@ The array is stored in the global `$wpdb->queries`.
 There are many [debugging plugins](https://wordpress.org/plugins/search.php?q=debug) for WordPress that show more information about the internals, either for a specific component or in general. Here are some examples:
 
 * [Query Monitor](https://wordpress.org/plugins/query-monitor/)
+    * Query Monitor is described as ‘the developer tools panel for WordPress’. It enables debugging of database queries, PHP errors, hooks and actions, block editor blocks, enqueued scripts and stylesheets, HTTP API calls, and more.
+    As well as the above it includes some advanced features such as debugging of Ajax calls, REST API calls, and user capability checks. It provides the ability to narrow down much of its output by plugin or theme, allowing you to quickly determine poorly performing plugins, themes, or functions.
 * [Debug Bar](https://wordpress.org/plugins/debug-bar/)
+    * Debug Bar adds a debug menu to the admin bar that shows query, cache, and other helpful debugging information. When WP_DEBUG is enabled it also tracks PHP Warnings and Notices to make them easier to find.
 * [Log Deprecated Notices](https://wordpress.org/plugins/log-deprecated-notices/)
+    * Log Deprecated Notices tool logs the usage of deprecated files, functions, and arguments, helping to pinpoint where deprecated elements are being used and presenting a replacement option if it exists. 
 
 ## External Resources
 
 * [WordPress 'wp-config.php' file Generator](http://generatewp.com/wp-config/)
 * ['No White Screen' plugin: Display the error instead of a white screen](https://github.com/stracker-phil/wp-no-white-screen/)
-
+* ['What Are WordPress Error Logs and How Do You Use Them?'](https://pressidium.com/blog/what-are-wordpress-error-logs-and-how-do-you-use-them/)
 ## Changelog
 
+- 2023-02-01: Updated original content.
 - 2022-09-11: Original content from [Debugging in WordPress](https://wordpress.org/documentation/article/debugging-in-wordpress/); ticket from [Github](https://github.com/WordPress/Documentation-Issue-Tracker/issues/349).
