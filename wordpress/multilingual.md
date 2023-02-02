@@ -2,7 +2,7 @@
 
 WordPress does not support a bilingual or multilingual blog out-of-the-box. There are however Plugins developed by the WordPress community which will allow you to create a multilingual blog easily.
 
-Creating a mulitlingual blog is basically installing WordPress in more than one language and letting the Plugin switch between them. This includes installing .mo languages files which most Plugins will require you to do manually. See [Installing WordPress in Your Language](https://developer.wordpress.org/advanced-administration/before-install/in-your-language/) for details.
+Creating a multilingual blog is basically installing WordPress in more than one language and letting the Plugin switch between them. This includes installing .mo languages files which most Plugins will require you to do manually. See [Installing WordPress in Your Language](https://developer.wordpress.org/advanced-administration/before-install/in-your-language/) for details.
 
 The free [WPGlobus](https://wordpress.org/plugins/wpglobus/), [Polylang](https://wordpress.org/plugins/polylang/), [qTranslate-X](https://wordpress.org/plugins/qtranslate-x/), [xili-language](https://wordpress.org/plugins/xili-language/) or [Sublanguage](https://wordpress.org/plugins/sublanguage/) plugins are installable on standalone WordPress sites. For multisite WordPress (one website per language), you can try [Multisite Language Switcher](https://wordpress.org/plugins/multisite-language-switcher/), [Zanto](https://wordpress.org/plugins/zanto/) or [Multilingual Press](https://wordpress.org/plugins/multilingual-press/) or purchase [WPML](https://wpml.org/).
 

@@ -10,7 +10,7 @@ To change the default directory manually, define `WPMU_PLUGIN_DIR` and `WPMU_PLU
 * Loaded by PHP, in alphabetical order, before normal plugins, meaning API hooks added in an mu-plugin apply to all other plugins even if they run hooked-functions in the global namespace.
 
 ## Caveats
-Despite its suitability for many special cases, the mu-plugins system is not always ideal and has several downsides that make it innapropriate in certain circumstances. Below are several important caveats to keep in mind:
+Despite its suitability for many special cases, the mu-plugins system is not always ideal and has several downsides that make it inappropriate in certain circumstances. Below are several important caveats to keep in mind:
 
 * Plugins in the must-use directory will not appear in the update notifications nor show their update status on the plugins page, so you are responsible for learning about and performing updates on your own.
 * Activation hooks are not executed in plugins added to the must-use plugins folder. These hooks are used by many plugins to run installation code that sets up the plugin initially and/or uninstall code that cleans up when the plugin is deleted. Plugins depending on these hooks may not function in the mu-plugins folder, and as such all plugins should be carefully tested specifically in the mu-plugins directory before being deployed to a live site.

@@ -34,7 +34,7 @@ In Step 3, you assign the user to the database and you assign the necessary data
 
 ### Step 4. Complete the task {#step-4-complete-the-task}
 
-In this step, you are notified that the user was addeed to the database. You have successfully created the database, created the user, and assigned privileges to that user.
+In this step, you are notified that the user was added to the database. You have successfully created the database, created the user, and assigned privileges to that user.
 
 [![Step 4. Complete the task](https://i3.wp.com/wordpress.org/documentation/files/2018/10/cpanel-createdb-step4.png)](https://wordpress.org/documentation/files/2018/10/cpanel-createdb-step4.png)
 
