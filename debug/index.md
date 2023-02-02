@@ -6,7 +6,7 @@ In this part of the Avdanced Administration Handbook, we will address various as
 
 ## General WordPress Debugging
 
-When it comes to debugging a WordPress site, there are various methods and techniques to use including turning on debugging in the WordPress configuration file, using error logs and the use of debugging plugins. These techniques can help identify and resolve various types of errors such as PHP errors and database errors.
+When it comes to debugging a WordPress site, there are various methods and techniques to use including turning on debugging in the WordPress configuration file, using error logs and the use of debugging plugins. These techniques can help identify and resolve various types of errors such as PHP errors and [database](https://codex.wordpress.org/Database_Description) errors.
 
 ## Javascript Debugging
 
