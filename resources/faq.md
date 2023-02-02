@@ -228,9 +228,9 @@ Or reset your plugins folder via [FTP](https://codex.wordpress.org/FTP%20Clients
 
 ## How to clear the "Briefly unavailable for scheduled maintenance" message after doing automatic upgrade? {#how-to-clear-the-briefly-unavailable-for-scheduled-maintenance-message-after-doing-automatic-upgrade)}
 
-As part of the automatic upgrade WordPress places a file named `.maintenance` in the blog **base** folder (folder that contains the wp-admin folder). If that file exists, then vistors will see the message **Briefly unavailable for scheduled maintenance. Check back in a minute.**
+As part of the automatic upgrade WordPress places a file named `.maintenance` in the blog **base** folder (folder that contains the wp-admin folder). If that file exists, then visitors will see the message **Briefly unavailable for scheduled maintenance. Check back in a minute.**
 
-To stop that message from being displayed to vistors, just delete the `.maintenance` file. The automatic upgrade should be executed again, just in case it failed.
+To stop that message from being displayed to visitors, just delete the `.maintenance` file. The automatic upgrade should be executed again, just in case it failed.
 
 Note the core automatic upgrade feature was added with [Version 2.7](https://codex.wordpress.org/Version%202.7).
 

@@ -214,7 +214,7 @@ If you are receiving an error which says 'parse error: unexpected' this usually 
 
 As with parse errors, "use of an undefined constant" means that you are missing a character. It could be one of the following:
 
-* Missing a $ when referencing a viariable
+* Missing a $ when referencing a variable
 * Missing quotation marks around array keys
 
 ### Database Errors {#database-errors}
