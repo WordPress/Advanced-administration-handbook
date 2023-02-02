@@ -10,11 +10,11 @@ When it comes to debugging a WordPress site, there are various methods and techn
 
 ## Javascript Debugging
 
-JavaScript debugging is essential for ensuring that the site's front-end interactions and user experience are functioning correctly. Using browser dev tools to inspect the source code and diagnose issues with JavaScript along with a few more tips are provided in this setion.
+[JavaScript](https://codex.wordpress.org/Using_Javascript) debugging is essential for ensuring that the site's front-end interactions and user experience are functioning correctly. Using browser dev tools to inspect the source code and diagnose issues with JavaScript along with a few more tips are provided in this setion.
 
 ## WordPress Network Debugging
 
-WordPress network debugging is a required when maintaining a network of WordPress sites; referring to the process of debugging multiple sites that are connected through a single installation of WordPress. This type of setup is often used by organizations that have multiple websites that share a common set of plugins, themes, and users. 
+[WordPress network](https://wordpress.org/documentation/article/multisite-network-administration/) debugging is a required when maintaining a network of WordPress sites; referring to the process of debugging multiple sites that are connected through a single installation of WordPress. This type of setup is often used by organizations that have multiple websites that share a common set of plugins, themes, and users. 
 
 ## Test-driving
 Test-driving refers to the process of testing a website before making it live. This is  process allows developers to identify and resolve any issues or bugs before the site is made available to the public. Test-driving is typically performed in a sandbox environment. Creating sandbox environment is covered in this section.
