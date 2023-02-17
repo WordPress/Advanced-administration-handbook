@@ -31,11 +31,11 @@ define( 'WP_DEBUG_DISPLAY', false );
 define( 'SCRIPT_DEBUG', true );
 ```
 
-**NOTE**: You must insert this **BEFORE** `/* That's all, stop editing! Happy blogging. */` in the [wp-config.php](https://wordpress.org/documentation/article/editing-wp-config-php/) file.
+**NOTE**: You must insert this **BEFORE** `/* That's all, stop editing! Happy blogging. */` in the [wp-config.php](https://developer.wordpress.org/advanced-administration/wordpress/wp-config/) file.
 
 ## WP_DEBUG
 
-`WP_DEBUG` is a PHP constant (a permanent global variable) that can be used to trigger the "debug" mode throughout WordPress. It is assumed to be false by default and is usually set to true in the [wp-config.php](https://wordpress.org/documentation/article/editing-wp-config-php/) file on development copies of WordPress.
+`WP_DEBUG` is a PHP constant (a permanent global variable) that can be used to trigger the "debug" mode throughout WordPress. It is assumed to be false by default and is usually set to true in the [wp-config.php](https://developer.wordpress.org/advanced-administration/wordpress/wp-config/) file on development copies of WordPress.
 
 ```
 // This enables debugging.
