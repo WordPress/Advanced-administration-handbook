@@ -4,11 +4,11 @@
 
 If you have reached this page, chances are you have received an error in your [WordPress network](https://wordpress.org/documentation/article/multisite-network-administration/). This failure occurs when WordPress cannot find one or more of the global tables for the network in the [database](https://codex.wordpress.org/Database_Description).
 
-On some shared webhosts, the host has disabled the functionality from running. It is always best to check with your webhost **before** [creating a network](https://github.com/WordPress/Advanced-administration-handbook/blob/main/multisite/create-network.md) to make sure your webhost account fulfills the technical requirements.
+On some shared webhosts, the host has disabled the functionality from running. It is always best to check with your webhost **before** [creating a network](https://developer.wordpress.org/advanced-administration/multisite/create-network/) to make sure your webhost account fulfills the technical requirements.
 
 ## If You just installed your network
 
-Check your [wp-config.php](https://github.com/WordPress/Advanced-administration-handbook/blob/main/wordpress/wp-config.md) file for :
+Check your [wp-config.php](https://developer.wordpress.org/advanced-administration/wordpress/wp-config/) file for :
 
 * correct database details
 * `SUBDOMAIN_INSTALL` constant
@@ -111,5 +111,5 @@ One or more database tables are unavailable. The database may need to be repaire
 
 ## Changelog
 
-- 2023-02-02: Updated original content
-- 2022-10-21: Original content from [Debugging a WordPress Network](https://wordpress.org/documentation/article/debugging-a-wordpress-network/).
+- 2023-02-17: Updated original content
+- 2022-10-21: Original content from [Debugging a WordPress Network](https://wordpress.org/support/forum/multisite/).
