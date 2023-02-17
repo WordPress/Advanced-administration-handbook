@@ -100,8 +100,18 @@ Based on [WordPress Advanced Administration Handbook](https://docs.google.com/do
 
 ### Example domains
 
-When using an example domain, please, use _example.com_, _example.net_, _example.org_, _example.info_, or _example.biz_ (and whatever subdomain you want). The country domains have their own example names, like _dominio.es_, that probably need check. See [RFC 2606](https://www.rfc-editor.org/rfc/rfc2606), [.INFO Reserved Strings](https://www.icann.org/en/registry-agreements/info/info-registry-agreement--list-of-reserved-tld-strings-26-5-2010-en), [.BIZ Reserved Strings](https://www.icann.org/en/registry-agreements/biz/biz-registry-agreement--list-of-reserved-tld-strings-19-6-2009-en).
+When using an example domain, please, use _example.com_, _example.net_, _example.org_, _example.info_, or _example.biz_ (and whatever subdomain you want).
+
+The country domains have their own example names, like _dominio.es_, that probably need check.
+
+See [RFC 2606](https://www.rfc-editor.org/rfc/rfc2606), [.INFO Reserved Strings](https://www.icann.org/en/registry-agreements/info/info-registry-agreement--list-of-reserved-tld-strings-26-5-2010-en), [.BIZ Reserved Strings](https://www.icann.org/en/registry-agreements/biz/biz-registry-agreement--list-of-reserved-tld-strings-19-6-2009-en).
 
 ### Example IP / IP network / IP range
 
-When using IP addresses, please use TEST-NET-1: 192.0.2.0/24 (192.0.2.0–192.0.2.255), TEST-NET-2: 198.51.100.0/24 (198.51.100.0–198.51.100.255), or TEST-NET-3: 203.0.113.0/24 (203.0.113.0–203.0.113.255). See [RFC 1166](https://datatracker.ietf.org/doc/html/rfc1166).
+When using IP addresses, please use:
+
+- TEST-NET-1: 192.0.2.0/24 (192.0.2.0–192.0.2.255)
+- TEST-NET-2: 198.51.100.0/24 (198.51.100.0–198.51.100.255)
+- TEST-NET-3: 203.0.113.0/24 (203.0.113.0–203.0.113.255)
+
+See [RFC 1166](https://datatracker.ietf.org/doc/html/rfc1166).
