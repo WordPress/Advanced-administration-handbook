@@ -94,6 +94,16 @@ Based on [WordPress Advanced Administration Handbook](https://docs.google.com/do
 
 ## Recommendations
 
+### Style guide
+
+- [WordPress Documentation Style Guide](https://make.wordpress.org/docs/style-guide/)
+  - [General guidelines](https://make.wordpress.org/docs/style-guide/general-guidelines/)
+  - [Language and grammar](https://make.wordpress.org/docs/style-guide/language-grammar/)
+  - [Punctuation](https://make.wordpress.org/docs/style-guide/punctuation/)
+  - [Formatting](https://make.wordpress.org/docs/style-guide/formatting/)
+  - [Linking](https://make.wordpress.org/docs/style-guide/linking/)
+  - [Developer content](https://make.wordpress.org/docs/style-guide/developer-content/)
+
 ### External linking
 
 - [External Linking Policy – "Commercial blogs"](https://make.wordpress.org/docs/2020/07/06/external-linking-policy-commercial-blogs/)
