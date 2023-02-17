@@ -92,7 +92,11 @@ Based on [WordPress Advanced Administration Handbook](https://docs.google.com/do
     - [Test Driving WordPress](debug/test-driving.md) ([🔗](https://developer.wordpress.org/advanced-administration/debug/test-driving/))
   - [Resources](resources/index.md) ([🔗](https://developer.wordpress.org/advanced-administration/resources/))
 
-## Technical recommendations
+## Recommendations
+
+### External linking
+
+- [External Linking Policy – "Commercial blogs"](https://make.wordpress.org/docs/2020/07/06/external-linking-policy-commercial-blogs/)
 
 ### Example domains
 
