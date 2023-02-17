@@ -109,6 +109,10 @@ One or more database tables are unavailable. The database may need to be repaire
 
 * [WordPress Multisite Network: A Complete Guide](https://multilingualpress.org/wordpress-multisite-network/)
 
+## External Links
+
+* [WordPress › Support » Multisite](https://wordpress.org/support/forum/multisite/)
+
 ## Changelog
 
 - 2023-02-17: Updated original content
