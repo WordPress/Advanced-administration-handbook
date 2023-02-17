@@ -116,4 +116,4 @@ One or more database tables are unavailable. The database may need to be repaire
 ## Changelog
 
 - 2023-02-17: Updated original content
-- 2022-10-21: Original content from [Debugging a WordPress Network](https://wordpress.org/support/forum/multisite/).
+- 2022-10-21: Original content from [Debugging a WordPress Network](https://wordpress.org/documentation/article/debugging-a-wordpress-network/).
