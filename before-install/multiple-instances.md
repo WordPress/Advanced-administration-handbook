@@ -33,9 +33,9 @@ If you want multiple sites to use WordPress, you can use the multisite feature t
 
 The multisite feature appears to be simpler than other types of multiple WordPress installations, but there are some considerations and restrictions. Refer to the following documents for more detailed information:
 
-* [Before You Create A Network](/support/article/before-you-create-a-network/)
-* [Create A Network](/support/article/create-a-network/)
-* [Multisite Network Administration](/support/article/multisite-network-administration/)
+* [Before You Create A Network](https://developer.wordpress.org/advanced-administration/multisite/prepare-network/)
+* [Create A Network](https://developer.wordpress.org/advanced-administration/multisite/create-network/)
+* [Multisite Network Administration](https://developer.wordpress.org/advanced-administration/multisite/administration/)
 
 ## Multiple WordPress Instances with a Single Database {#multiple-wordpress-instances-with-a-single-database}
 
