@@ -6,15 +6,15 @@ If you need multiple WordPress instances, there are three types of installations
 2. Single Database: multiple WordPress instances sharing a single database instance.
 3. Multiple Databases: multiple WordPress instances with each instance using its own databases instance.
 
-![](https://wordpress.org/support/files/2022/06/multisite_db_layout-1024x469.jpg)
+![](https://wordpress.org/documentation/files/2022/06/multisite_db_layout-1024x469.jpg)
 
 Let's first look at the third type, multiple WordPress instances with multiple databases, because it has the same installation process as a single WordPress instance.
 
 ## Multiple WordPress Instances with Multiple Databases {#multiple-wordpress-instances-with-multiple-databases}
 
-You'll need a separate [MySQL database](https://wordpress.org/support/article/glossary/#mysql) for each instance you plan to install. If you have not yet created these, [basic instructions are found here](https://developer.wordpress.org/advanced-administration/before-install/howto-install/#step-2-create-the-database-and-a-user).
+You'll need a separate [MySQL database](https://wordpress.org/documentation/article/wordpress-glossary/#mysql) for each instance you plan to install. If you have not yet created these, [basic instructions are found here](https://developer.wordpress.org/advanced-administration/before-install/howto-install/#step-2-create-the-database-and-a-user).
 
-To make sure each WordPress instance connects to the right database you need to add those information to the [wp-config.php](/support/article/editing-wp-config-php/) file. The lines to change are the following:
+To make sure each WordPress instance connects to the right database you need to add those information to the [wp-config.php](https://developer.wordpress.org/advanced-administration/wordpress/wp-config/) file. The lines to change are the following:
 
 ```
 define('DB_NAME', 'wordpress');    // The name of the database
@@ -45,7 +45,7 @@ As with the multiple-database solution described above, the [wp-config.php](http
 $table_prefix = 'wp_'; // example: 'wp_' or 'b2' or 'mylogin_' 
 ```
 
-By default, WordPress assigns the table prefix `wp_` to its [MySQL database](https://wordpress.org/support/article/glossary/#mysql) tables, but this prefix can be anything you choose. This allows you to create unique identifiers for each blog in your database. For example, let's say you have three blogs to set up, with the names _Main_, _Projects_, and _Test_. You should substitute the prefix `wp_` in each blog's  
+By default, WordPress assigns the table prefix `wp_` to its [MySQL database](https://wordpress.org/documentation/article/wordpress-glossary/#mysql) tables, but this prefix can be anything you choose. This allows you to create unique identifiers for each blog in your database. For example, let's say you have three blogs to set up, with the names _Main_, _Projects_, and _Test_. You should substitute the prefix `wp_` in each blog's  
 [wp-config.php](https://developer.wordpress.org/advanced-administration/wordpress/wp-config/):
 
 **Main blog:**
