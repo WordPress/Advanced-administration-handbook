@@ -173,11 +173,9 @@ For your site to use persistent object caching, your hosting provider must offer
 
 ### Further Reading
 
-- [W3 Total Cache Plugin](http://dougal.gunters.org/blog/2009/08/26/w3-total-cache-plugin) (by Dougal Campbell)
-- [Holy Shmoly!: WP Super Cache](http://ocaoimh.ie/wp-super-cache/)
+- [WP Object Cache](https://developer.wordpress.org/reference/classes/wp_object_cache/))
 - [Best Practices for Speeding Up Your Web Site](http://developer.yahoo.com/performance/rules.html) – Expires / Cache-Control Header and ETags (by Yahoo! Developer Network)
 - [WebSiteOptimization.com: Use Server Cache Control to Improve Performance](http://www.websiteoptimization.com/speed/tweak/cache/)
-- [WP Object Cache](https://developer.wordpress.org/reference/classes/wp_object_cache/#persistent-cache-plugins))
 
 ### Content Offloading
 
