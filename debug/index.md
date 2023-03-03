@@ -26,11 +26,7 @@ If you have multiple installations, [Debug network](https://developer.wordpress.
 
 ### Test Driving WordPress
 
-There are times when you need to test changes to your WordPress-powered site out of the public eye. Introducing changes to a live site could adversely affect your readers. You have several choices in [
-
-Test Driving WordPress
-
-](https://developer.wordpress.org/advanced-administration/debug/test-driving/).
+There are times when you need to test changes to your WordPress-powered site out of the public eye. Introducing changes to a live site could adversely affect your readers. You have several choices in [Test Driving WordPress](https://developer.wordpress.org/advanced-administration/debug/test-driving/).
 
 ## Changelog
 
