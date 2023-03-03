@@ -162,14 +162,14 @@ Look into HTTP Cache-Control (specifically `max-age`) and Expires headers, as we
 
 W3 Total Cache integrates support for browser caching and ETags.
 
-#### Persistent Object Cache
+#### Object Caching
 
-A Persistent Object Cache helps speed up page load times by saving on trips to the database from your web server. For example, your site's options data needs to be available for each page view. Without a persistent object cache, your web server must read those options from the database to handle every page view. Those extra trips to the database slow down your web server's response times (TTFB) and can quickly overwhelm your database server during traffic spikes.
+Using a __persistent__ Object Cache helps speed up page load times by saving on trips to the database from your web server. For example, your site's options data needs to be available for each page view. Without a persistent object cache, your web server must read those options from the database to handle every page view. Those extra trips to the database slow down your web server's response times (TTFB) and can quickly overwhelm your database server during traffic spikes.
 
 For your site to use persistent object caching, your hosting provider must offer you a particular type of server, a cache server. Popular cache servers are [Redis](https://redis.io/) and [Memcached](https://memcached.org/). Ask your hosting provider to help you install and configure a persistent object cache, and they will recommend the right plugin, such as:
 
-- [Memcached Object Cache](https://wordpress.org/extend/plugins/memcached/) – Provides a persistent backend for the WordPress object cache. A memcached server and the PECL memcached extension are required.
-- [Redis Object Cache](https://wordpress.org/plugins/redis-cache/) – Provides a consistent Redis object cache backend for WordPress that works with various Redis clients. A Redis Server is required.
+- [Redis Object Cache](https://wordpress.org/plugins/redis-cache/) – Provides a persistent Redis object cache backend for WordPress that works with various Redis clients. A Redis server is required.
+- [Memcached Object Cache](https://wordpress.org/extend/plugins/memcached/) – Provides a persistent Memcached object cache backend for WordPress. A memcached server and the [memcache](https://pecl.php.net/package/memcache) extension are required.
 
 ### Further Reading
 
