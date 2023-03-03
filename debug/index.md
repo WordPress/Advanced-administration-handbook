@@ -30,7 +30,7 @@ If you have a multiple installation, [Debug network](https://github.com/WordPres
 
 There are times when you need to test changes to your WordPress powered site out of the public eye. Making changes to a live site could adversely affect your readers.
 
-You have several choices in [Debug driving](https://github.com/WordPress/Advanced-administration-handbook/blob/main/debug/debug-driving.md "debug driving").
+You have several choices in [Debug driving](https://github.com/WordPress/Advanced-administration-handbook/blob/main/debug/test-driving.md "debug driving").
 
 
 
