@@ -18,15 +18,15 @@ WordPress comes with [specific debug systems](https://github.com/WordPress/Advan
 
 ### Debug JavaScript
 
-If you're having trouble with its interactive functionality, it may be due to JavaScript errors or conflicts. The [Debug JavaScript](https://developer.wordpress.org/advanced-administration/debug/debug-javascript/) will help you.
+If you're having trouble with its interactive functionality, it may be due to JavaScript errors or conflicts. The [Debug JavaScript](https://github.com/WordPress/Advanced-administration-handbook/blob/main/debug/debug-javascript.md) will help you.
 
 ### Debug WordPress Multisite / Network
 
-If you have multiple installations, [Debug network](https://developer.wordpress.org/advanced-administration/debug/debug-network/) will help you if you need to debug it.
+If you have multiple installations, [Debug network](https://github.com/WordPress/Advanced-administration-handbook/blob/main/debug/debug-network.md) will help you if you need to debug it.
 
 ### Test Driving WordPress
 
-There are times when you need to test changes to your WordPress-powered site out of the public eye. Introducing changes to a live site could adversely affect your readers. You have several choices in [Test Driving WordPress](https://developer.wordpress.org/advanced-administration/debug/test-driving/).
+There are times when you need to test changes to your WordPress-powered site out of the public eye. Introducing changes to a live site could adversely affect your readers. You have several choices in [Test Driving WordPress](https://github.com/WordPress/Advanced-administration-handbook/blob/main/debug/test-driving.md).
 
 ## Changelog
 
