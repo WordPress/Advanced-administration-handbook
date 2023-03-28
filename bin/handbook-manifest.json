@@ -143,10 +143,10 @@
 		"markdown_source": "https:\/\/github.com\/WordPress\/Advanced-administration-handbook\/blob\/main\/wordpress\/css.md",
 		"parent": "wordpress"
 	},
-	"wordpress\/feed": {
+	"wordpress\/feeds": {
 		"title": "Feeds",
-		"slug": "feed",
-		"markdown_source": "https:\/\/github.com\/WordPress\/Advanced-administration-handbook\/blob\/main\/wordpress\/feed.md",
+		"slug": "feeds",
+		"markdown_source": "https:\/\/github.com\/WordPress\/Advanced-administration-handbook\/blob\/main\/wordpress\/feeds.md",
 		"parent": "wordpress"
 	},
 	"wordpress\/multilingual": {

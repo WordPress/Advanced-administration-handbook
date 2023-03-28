@@ -52,7 +52,7 @@ Based on [WordPress Advanced Administration Handbook](https://docs.google.com/do
     - [Update Services](wordpress/update-services.md) ([🔗](https://developer.wordpress.org/advanced-administration/wordpress/update-services/))
     - [Editing Files](wordpress/edit-files.md) ([🔗](https://developer.wordpress.org/advanced-administration/wordpress/edit-files/))
     - [CSS](wordpress/css.md) ([🔗](https://developer.wordpress.org/advanced-administration/wordpress/css/))
-    - [Feeds](wordpress/feed.md) ([🔗](https://developer.wordpress.org/advanced-administration/wordpress/feed/))
+    - [Feeds](wordpress/feeds.md) ([🔗](https://developer.wordpress.org/advanced-administration/wordpress/feeds/))
     - [Multilingual WordPress](wordpress/multilingual.md) ([🔗](https://developer.wordpress.org/advanced-administration/wordpress/multilingual/))
     - [oEmbed](wordpress/oembed.md) ([🔗](https://developer.wordpress.org/advanced-administration/wordpress/oembed/))
     - [Loopbacks](wordpress/loopback.md) ([🔗](https://developer.wordpress.org/advanced-administration/wordpress/loopback/))
