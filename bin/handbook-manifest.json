@@ -3,7 +3,8 @@
 		"title": "Advanced Administration Handbook",
 		"slug": "handbook",
 		"markdown_source": "https:\/\/github.com\/WordPress\/Advanced-administration-handbook\/blob\/main\/index.md",
-		"parent": null
+		"parent": null,
+		"order": -1
 	},
 	"before-install": {
 		"title": "Before You Install",
