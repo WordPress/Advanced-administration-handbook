@@ -9,7 +9,7 @@
 		"title": "Before You Install",
 		"slug": "before-install",
 		"markdown_source": "https:\/\/github.com\/WordPress\/Advanced-administration-handbook\/blob\/main\/before-install\/index.md",
-		"parent": "handbook"
+		"parent": null
 	},
 	"before-install\/creating-database": {
 		"title": "Creating Database for WordPress",
@@ -51,7 +51,7 @@
 		"title": "Server configuration",
 		"slug": "server",
 		"markdown_source": "https:\/\/github.com\/WordPress\/Advanced-administration-handbook\/blob\/main\/server\/index.md",
-		"parent": "handbook"
+		"parent": null
 	},
 	"server\/file-permissions": {
 		"title": "Changing File Permissions",
@@ -105,7 +105,7 @@
 		"title": "WordPress configuration",
 		"slug": "wordpress",
 		"markdown_source": "https:\/\/github.com\/WordPress\/Advanced-administration-handbook\/blob\/main\/wordpress\/index.md",
-		"parent": "handbook"
+		"parent": null
 	},
 	"wordpress\/wp-config": {
 		"title": "wp-config.php",
@@ -177,7 +177,7 @@
 		"title": "Upgrading / Migration",
 		"slug": "upgrade",
 		"markdown_source": "https:\/\/github.com\/WordPress\/Advanced-administration-handbook\/blob\/main\/upgrade\/index.md",
-		"parent": "handbook"
+		"parent": null
 	},
 	"upgrade\/ftp": {
 		"title": "FTP Clients",
@@ -213,7 +213,7 @@
 		"title": "WordPress Multisite / Network",
 		"slug": "multisite",
 		"markdown_source": "https:\/\/github.com\/WordPress\/Advanced-administration-handbook\/blob\/main\/multisite\/index.md",
-		"parent": "handbook"
+		"parent": null
 	},
 	"multisite\/prepare-network": {
 		"title": "Before You Create A Network",
@@ -255,7 +255,7 @@
 		"title": "Plugins",
 		"slug": "plugins",
 		"markdown_source": "https:\/\/github.com\/WordPress\/Advanced-administration-handbook\/blob\/main\/plugins\/index.md",
-		"parent": "handbook"
+		"parent": null
 	},
 	"plugins\/mu-plugins": {
 		"title": "Must Use Plugins",
@@ -267,13 +267,13 @@
 		"title": "Themes",
 		"slug": "themes",
 		"markdown_source": "https:\/\/github.com\/WordPress\/Advanced-administration-handbook\/blob\/main\/themes\/index.md",
-		"parent": "handbook"
+		"parent": null
 	},
 	"security": {
 		"title": "Security",
 		"slug": "security",
 		"markdown_source": "https:\/\/github.com\/WordPress\/Advanced-administration-handbook\/blob\/main\/security\/index.md",
-		"parent": "handbook"
+		"parent": null
 	},
 	"security\/logging-in": {
 		"title": "Your password",
@@ -315,7 +315,7 @@
 		"title": "Performance / Optimization",
 		"slug": "performance",
 		"markdown_source": "https:\/\/github.com\/WordPress\/Advanced-administration-handbook\/blob\/main\/performance\/index.md",
-		"parent": "handbook"
+		"parent": null
 	},
 	"performance\/cache": {
 		"title": "Cache",
@@ -333,7 +333,7 @@
 		"title": "Debugging WordPress",
 		"slug": "debug",
 		"markdown_source": "https:\/\/github.com\/WordPress\/Advanced-administration-handbook\/blob\/main\/debug\/index.md",
-		"parent": "handbook"
+		"parent": null
 	},
 	"debug\/debug-wordpress": {
 		"title": "Debugging in WordPress",
@@ -363,6 +363,6 @@
 		"title": "Resources",
 		"slug": "resources",
 		"markdown_source": "https:\/\/github.com\/WordPress\/Advanced-administration-handbook\/blob\/main\/resources\/index.md",
-		"parent": "handbook"
+		"parent": null
 	}
 }
