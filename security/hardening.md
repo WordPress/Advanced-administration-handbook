@@ -274,7 +274,11 @@ A way to avoid using such a plugin is to use [custom page templates](https://wor
 
 [Security through obscurity](http://en.wikipedia.org/wiki/Security_through_obscurity) is generally an unsound primary strategy. However, there are areas in WordPress where obscuring information _might_ help with security:
 
-1. **Rename the administrative account:** When creating an administrative account, avoid easily guessed terms such as `admin` or `webmaster` as usernames because they are typically subject to attacks first. On an existing WordPress install you may rename the existing account in the MySQL command-line client with a command like `UPDATE wp_users SET user_login = 'newuser' WHERE user_login = 'admin';`, or by using a MySQL frontend like [phpMyAdmin](https://developer.wordpress.org/advanced-administration/upgrade/phpmyadmin/).
+1. **Rename the administrative account:** When creating an administrative account, avoid easily guessed terms such as `admin` or `webmaster` as usernames because they are typically subject to attacks first. On an existing WordPress install you may rename the existing account in the MySQL command-line client with a command like:
+```
+UPDATE wp_users SET user_login = 'newuser' WHERE user_login = 'admin';
+```
+or by using a MySQL frontend like [phpMyAdmin](https://developer.wordpress.org/advanced-administration/upgrade/phpmyadmin/).
 2. **Change the table_prefix:** Many published WordPress-specific SQL-injection attacks make the assumption that the table_prefix is `wp_`, the default. Changing this can block at least some SQL injection attacks.
 
 ### Data Backups {#data-backups}
