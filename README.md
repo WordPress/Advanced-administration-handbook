@@ -8,7 +8,7 @@ The **WordPress Advanced Administration Handbook** will be a new section in the 
 - [Project](https://github.com/orgs/WordPress/projects/47)
 - [Inventory](https://github.com/orgs/WordPress/projects/26/views/1)
 - [Tickets](https://github.com/WordPress/Documentation-Issue-Tracker/labels/advanced%20administration)
-- [Handbook](https://github.com/WordPress/WordPress-Advanced-administration-handbook)
+- [Handbook](https://github.com/WordPress/Advanced-administration-handbook)
 - [Meta ticket](https://meta.trac.wordpress.org/ticket/6411)
 
 The future URL for this handbook will be at `https://developer.wordpress.org/advanced-administration/` (by [Meta ticket](https://meta.trac.wordpress.org/ticket/6411)).
@@ -18,8 +18,8 @@ The future URL for this handbook will be at `https://developer.wordpress.org/adv
 - [x] Phase 0: Create an initial structure to understand the categorization.
 - [x] Phase 1: Create the empty-files with a link inside, so there is all the structure.
 - [x] Phase 2: Add the content (only copying from the original page and create the content structure).
-- [ ] Phase 3: Check and improve the content.
-- [ ] Phase 4: Publish a first version of the Advanced Admin Documentation.
+- [x] Phase 3: Publish a first version of the Advanced Admin Documentation.
+- [ ] Phase 4: Check and improve the content.
 
 ## File Structure
 
