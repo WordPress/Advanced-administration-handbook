@@ -33,9 +33,9 @@ Download and unzip the WordPress package from [wordpress.org/download/](https://
 - If you will be uploading WordPress to a remote web server, download the WordPress package to your computer with a web browser and unzip the package.
 - If you will be using FTP, skip to the next step – uploading files is covered later.
 - If you have [shell](https://wordpress.org/documentation/article/glossary/#shell) access to your web server, and are comfortable using console-based tools, you may wish to download WordPress directly to your [web server](https://wordpress.org/documentation/article/glossary/#web-server) using wget (or lynx or another console-based web browser) if you want to avoid [FTPing](https://wordpress.org/documentation/article/glossary/#ftp):
-    - `wget https://wordpress.org/latest.tar.gz`
+    - wget https://wordpress.org/latest.tar.gz
     - Then extract the package using:
-    - `tar -xzvf latest.tar.gz`
+    - tar -xzvf latest.tar.gz
 
     The WordPress package will extract into a folder called wordpress in the same directory that you downloaded latest.tar.gz.
 
@@ -60,7 +60,7 @@ _**Note:** These instructions are written for phpMyAdmin 4.4; the phpMyAdmin use
     ![Create user in phpMyAdmin 4.4](https://codex.wordpress.org/images/2/26/users.jpg)
         1. Click **Add user**.
         2. Choose a username for WordPress ('`wordpress`' is good) and enter it in the **User name** field. (Be sure **Use text field**: is selected from the dropdown.)
-        3. Choose a secure password (ideally containing a combination of upper- and lower-case letters, numbers, and symbols), and enter it in the **Password** field. (Be sure **Use text field**: is selected from the dropdown.) Re-enter the password in the **Re-type**field.
+        3. Choose a secure password (ideally containing a combination of upper- and lower-case letters, numbers, and symbols), and enter it in the **Password** field. (Be sure **Use text field**: is selected from the dropdown.) Re-enter the password in the **Re-type** field.
         4. Write down the username and password you chose.
         5. Leave all options under **Global privileges** at their defaults.
         6. Click **Go**.
@@ -100,7 +100,7 @@ The database collation should normally be left blank (see [Editing wp-config.php
 
 [Enter your secret key values](https://developer.wordpress.org/advanced-administration/wordpress/wp-config/) under the section labeled
 ```
-  * Authentication Unique Keys and Salts.
+/* Authentication Unique Keys and Salts. */
 ```
 Save the `wp-config.php` file.
 
