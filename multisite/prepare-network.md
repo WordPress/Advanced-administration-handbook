@@ -55,7 +55,7 @@ Some server requirements depend on the type of multisite network you want to cre
 
 ### Domain-based {#domain-based}
 
-Also known as 'Subdomain' installs, a Domain-based network uses URLs like `http://subsite.example.com`
+Also known as 'Subdomain' installs, a Domain-based network uses URLs like http://subsite.example.com
 
 A domain-based network maps different domain names to the same directory in the server's file system where WordPress is installed. You can do this in various ways, for example:
 
@@ -79,9 +79,9 @@ For some examples of how to configure wildcard subdomains on various systems, se
 
 ### Path-based {#path-based}
 
-Also known as 'Subfolder' or 'Subdirectory' installs, a path-based network uses URLs like `http://example.com/subsite`
+Also known as 'Subfolder' or 'Subdirectory' installs, a path-based network uses URLs like http://example.com/subsite
 
-If you are using pretty permalinks in your site already, then a path-based network will work as well, and you do not need any of the other information in this section. That said, be aware that your main site will use the following URL pattern for posts: `http://example.com/blog/[postformat]/`
+If you are using pretty permalinks in your site already, then a path-based network will work as well, and you do not need any of the other information in this section. That said, be aware that your main site will use the following URL pattern for posts: http://example.com/blog/[postformat]/
 
 At this time, you **cannot** remove the blog slug without manual configuration to the network options in a non-obvious place. It's not recommended.
 

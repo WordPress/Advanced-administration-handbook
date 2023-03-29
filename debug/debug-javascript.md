@@ -50,7 +50,7 @@ If no errors are displayed, reload the page; many errors occur only when the pag
 
 Now that you have diagnosed your error, you should make your support forum request. Go to the [troubleshooting forum](https://wordpress.org/documentation/forum/how-to-and-troubleshooting).
 
-If your problem is with a specific theme or plugin, you can access their dedicated support forum by visiting `https://wordpress.org/support/plugin/PLUGINNAME` or `https://wordpress.org/support/theme/THEMENAME`.
+If your problem is with a specific theme or plugin, you can access their dedicated support forum by visiting https://wordpress.org/support/plugin/PLUGINNAME or https://wordpress.org/support/theme/THEMENAME.
 
 Please include the below information:
 

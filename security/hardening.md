@@ -60,7 +60,7 @@ Like many modern software packages, WordPress is updated regularly to address ne
 
 Main article: [Updating WordPress](https://wordpress.org/documentation/article/updating-wordpress/).
 
-The latest version of WordPress is always available from the main WordPress website at `https://wordpress.org`. Official releases are not available from other sites — **never** download or install WordPress from any website other than `https://wordpress.org`.
+The latest version of WordPress is always available from the main WordPress website at https://wordpress.org. Official releases are not available from other sites — **never** download or install WordPress from any website other than https://wordpress.org.
 
 Since version 3.7, WordPress has featured automatic updates. Use this functionality to ease the process of keeping up to date. You can also use the WordPress Dashboard to keep informed about updates. Read the entry in the Dashboard or the WordPress Developer Blog to determine what steps you must take to update and remain secure.
 

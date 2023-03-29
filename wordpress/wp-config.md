@@ -52,7 +52,7 @@ define( 'WP_SITEURL', 'http://' . $_SERVER['SERVER_NAME'] . '/path/to/wordpress'
 
 ### Blog address (URL) {#blog-address-url}
 
-Similar to WP_SITEURL, WP_HOME _overrides the [wp_options table](https://codex.wordpress.org/Database_Description#Table:_wp_options) value for_ home _but does not change it in the database._ **home** is the address you want people to type in their browser to reach your WordPress blog. It should include the `http://` part and should not have a slash "**/**" at the end. Adding this in can reduce the number of database calls when loading your site.
+Similar to WP_SITEURL, WP_HOME _overrides the [wp_options table](https://codex.wordpress.org/Database_Description#Table:_wp_options) value for_ home _but does not change it in the database._ **home** is the address you want people to type in their browser to reach your WordPress blog. It should include the `http://` part and should not have a slash "**/**" at the end. Adding this in can reduce the number of database calls when loading your site.
 
 ```
 define( 'WP_HOME', 'http://example.com/wordpress' );

@@ -74,7 +74,7 @@ Please ask your ISP to set up a secure virtual host for you, or if you have admi
 
 ##### Rewrite Rules For The Insecure Host {#rewrite-rules-for-the-insecure-host}
 
-In the `.htaccess` or virtual host stanza in `httpd.conf` for your insecure host, add this rewrite rule to automatically go to the secure host when you browse to `http://mysite.com/wp-admin/` or `http://mysite.com/wp-login.php`
+In the `.htaccess` or virtual host stanza in `httpd.conf` for your insecure host, add this rewrite rule to automatically go to the secure host when you browse to http://example.com/wp-admin/ or http://example.com/wp-login.php
 
 This should go above the main wordpress rewrite block.
 
@@ -103,7 +103,7 @@ The first rule excludes the wp-admin directory from the next rule, which shuffle
 
 ##### Setting WordPress URI {#setting-wordpress-uri}
 
-For some plugins to work, and for other reasons, you may wish to set your WordPress URI in options to reflect the https protocol by making this setting `https://example.com`. Your blog address should not change.
+For some plugins to work, and for other reasons, you may wish to set your WordPress URI in options to reflect the https protocol by making this setting https://example.com. Your blog address should not change.
 
 ##### Example Config Stanzas {#example-config-stanzas}
 
@@ -217,7 +217,7 @@ More testing, preferably with a packet sniffer and some hardcore network analysi
 
 #### Limitations {#limitations}
 
-The author assumes (but hasn't checked) that if the user has stored cookies/told their browser to remember passwords (not based on form fields but if using certain external auth mechanism) and hits `http://www.example.com/wp-admin/`, those packets are sent in the clear and the cookie/auth headers could be intercepted. Therefore, to ensure maximum security, the user should explicitly use the https host or always log in at the beginning of new sessions.
+The author assumes (but hasn't checked) that if the user has stored cookies/told their browser to remember passwords (not based on form fields but if using certain external auth mechanism) and hits http://www.example.com/wp-admin/, those packets are sent in the clear and the cookie/auth headers could be intercepted. Therefore, to ensure maximum security, the user should explicitly use the https host or always log in at the beginning of new sessions.
 
 ## Changelog
 
