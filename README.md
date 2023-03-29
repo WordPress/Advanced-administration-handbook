@@ -8,7 +8,7 @@ The **WordPress Advanced Administration Handbook** will be a new section in the 
 - [Project](https://github.com/orgs/WordPress/projects/47)
 - [Inventory](https://github.com/orgs/WordPress/projects/26/views/1)
 - [Tickets](https://github.com/WordPress/Documentation-Issue-Tracker/labels/advanced%20administration)
-- [Handbook](https://github.com/WordPress/WordPress-Advanced-administration-handbook)
+- [Handbook](https://github.com/WordPress/Advanced-administration-handbook)
 - [Meta ticket](https://meta.trac.wordpress.org/ticket/6411)
 
 The future URL for this handbook will be at `https://developer.wordpress.org/advanced-administration/` (by [Meta ticket](https://meta.trac.wordpress.org/ticket/6411)).
