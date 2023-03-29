@@ -10,7 +10,7 @@ This tutorial assumes that you are hosting WordPress on a server using cPanel. I
 
 Generate a full site backup in cPanel. It might also help to copy all the files on the server via FTP, so that you can easily access the files for plugins and themes, which you'll need in a later step.
 
-### Export from your existing WordPress installs`{#export-from-your-existing-wordpress-installs}
+### Export from your existing WordPress installs {#export-from-your-existing-wordpress-installs}
 
 In each of your existing WordPress installations, go Tools > Export in WordPress. Download the WXR files that contain all your posts and pages for each site. See the instructions on the [Tools Export Screen](https://wordpress.org/documentation/article/tools-export-screen/).
 
