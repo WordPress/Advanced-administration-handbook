@@ -28,7 +28,7 @@ $table_prefix = 'example123_'; // Only numbers, letters, and underscores please!
 
 ### WP_SITEURL {#wp-siteurl}
 
-WP_SITEURL allows the WordPress address (URL) to be defined. The value defined is the address where your WordPress core files reside. It should include the http:// part too. Do not put a slash "**/**" at the end. Setting this value in `wp-config.php` overrides the [wp_options table](https://codex.wordpress.org/Database_Description#Table:_wp_options) value for **siteurl**. Adding this in can reduce the number of database calls when loading your site. **Note:** This will **not** change the database stored value. The URL will revert to the old database value if this line is ever removed from `wp-config`. [Use the **RELOCATE** constant](https://developer.wordpress.org/advanced-administration/upgrade/migrating/) to change the **siteurl** value in the database.
+WP_SITEURL allows the WordPress address (URL) to be defined. The value defined is the address where your WordPress core files reside. It should include the http:// part too. Do not put a slash "**/**" at the end. Setting this value in `wp-config.php` overrides the [wp_options table](https://codex.wordpress.org/Database_Description#Table:_wp_options) value for **siteurl**. Adding this in can reduce the number of database calls when loading your site. **Note:** This will **not** change the database stored value. The URL will revert to the old database value if this line is ever removed from `wp-config`. [Use the **RELOCATE** constant](https://developer.wordpress.org/advanced-administration/upgrade/migrating/) to change the **siteurl** value in the database.
 
 If WordPress is installed into a directory called "wordpress" for the [domain](http://en.wikipedia.org/wiki/Domain_name_system) example.com, define `WP_SITEURL` like this:
 
@@ -200,7 +200,7 @@ define( 'WP_DEBUG_DISPLAY', true );
 
 ### WP_DEBUG {#wp-debug}
 
-The [WP_DEBUG](https://developer.wordpress.org/advanced-administration/debug/debug-wordpress/) option controls the reporting of some errors and warnings and enables use of the WP_DEBUG_DISPLAY and WP_DEBUG_LOG settings. The default boolean value is false.
+The [WP_DEBUG](https://developer.wordpress.org/advanced-administration/debug/debug-wordpress/) option controls the reporting of some errors and warnings and enables use of the WP_DEBUG_DISPLAY and WP_DEBUG_LOG settings. The default boolean value is false.
 
 ```
 define( 'WP_DISABLE_FATAL_ERROR_HANDLER', true ); // 5.2 and later
@@ -630,11 +630,11 @@ define( 'FORCE_SSL_ADMIN', true );
 
 ### Block External URL Requests {#block-external-url-requests}
 
-Block external URL requests by defining WP_HTTP_BLOCK_EXTERNAL as true and this will only allow localhost and your blog to make requests. The constant WP_ACCESSIBLE_HOSTS will allow additional hosts to go through for requests. The format of the WP_ACCESSIBLE_HOSTS constant is a comma separated list of hostnames to allow, wildcard domains are supported, eg \*.wordpress.org will allow for all subdomains of wordpress.org to be contacted.
+Block external URL requests by defining WP_HTTP_BLOCK_EXTERNAL as true and this will only allow localhost and your blog to make requests. The constant WP_ACCESSIBLE_HOSTS will allow additional hosts to go through for requests. The format of the WP_ACCESSIBLE_HOSTS constant is a comma separated list of hostnames to allow, wildcard domains are supported, eg `*.wordpress.org` will allow for all subdomains of wordpress.org to be contacted.
 
 ```
 define( 'WP_HTTP_BLOCK_EXTERNAL', true );
-define( 'WP_ACCESSIBLE_HOSTS', 'api.wordpress.org,\*.github.com' );
+define( 'WP_ACCESSIBLE_HOSTS', 'api.wordpress.org,*.github.com' );
 ```
 
 ### Disable WordPress Auto Updates {#disable-wordpress-auto-updates}
