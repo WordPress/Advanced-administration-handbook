@@ -28,7 +28,7 @@ $table_prefix = 'example123_'; // Only numbers, letters, and underscores please!
 
 ### WP_SITEURL {#wp-siteurl}
 
-WP_SITEURL allows the WordPress address (URL) to be defined. The value defined is the address where your WordPress core files reside. It should include the `http://` part too. Do not put a slash "**/**" at the end. Setting this value in `wp-config.php` overrides the [wp_options table](https://codex.wordpress.org/Database_Description#Table:_wp_options) value for **siteurl**. Adding this in can reduce the number of database calls when loading your site. **Note:** This will **not** change the database stored value. The URL will revert to the old database value if this line is ever removed from `wp-config`. [Use the **RELOCATE** constant](https://developer.wordpress.org/advanced-administration/upgrade/migrating/) to change the **siteurl** value in the database.
+WP_SITEURL allows the WordPress address (URL) to be defined. The value defined is the address where your WordPress core files reside. It should include the http:// part too. Do not put a slash "**/**" at the end. Setting this value in `wp-config.php` overrides the [wp_options table](https://codex.wordpress.org/Database_Description#Table:_wp_options) value for **siteurl**. Adding this in can reduce the number of database calls when loading your site. **Note:** This will **not** change the database stored value. The URL will revert to the old database value if this line is ever removed from `wp-config`. [Use the **RELOCATE** constant](https://developer.wordpress.org/advanced-administration/upgrade/migrating/) to change the **siteurl** value in the database.
 
 If WordPress is installed into a directory called "wordpress" for the [domain](http://en.wikipedia.org/wiki/Domain_name_system) example.com, define `WP_SITEURL` like this:
 
@@ -52,7 +52,7 @@ define( 'WP_SITEURL', 'http://' . $_SERVER['SERVER_NAME'] . '/path/to/wordpress'
 
 ### Blog address (URL) {#blog-address-url}
 
-Similar to WP_SITEURL, WP_HOME _overrides the [wp_options table](https://codex.wordpress.org/Database_Description#Table:_wp_options) value for_ home _but does not change it in the database._ **home** is the address you want people to type in their browser to reach your WordPress blog. It should include the `http://` part and should not have a slash "**/**" at the end. Adding this in can reduce the number of database calls when loading your site.
+Similar to WP_SITEURL, WP_HOME _overrides the [wp_options table](https://codex.wordpress.org/Database_Description#Table:_wp_options) value for_ home _but does not change it in the database._ **home** is the address you want people to type in their browser to reach your WordPress blog. It should include the http:// part and should not have a slash "**/**" at the end. Adding this in can reduce the number of database calls when loading your site.
 
 ```
 define( 'WP_HOME', 'http://example.com/wordpress' );
