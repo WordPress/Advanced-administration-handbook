@@ -157,7 +157,14 @@ In order for WordPress to work, it must have access to an Apache server, MySQL/M
 10. Click **Create** button.
 11. Unzip your WordPress download into the `htdocs` directory `– c:\xampp\htdocs\`.
 12. From the folder, open `wp-config-sample.php` in a text editor.
-13. The connection details you need are as follows: // ** MySQL settings ** // `define('DB_NAME', 'wordpress');` // `The name of the database define('DB_USER', 'root');` // `Your MySQL username define('DB_PASSWORD', '');` // `...and password define('DB_HOST', 'localhost');` // 99% chance you won't need to change this
+13. The connection details you need are as follows:
+```
+// ** MySQL settings ** //
+define('DB_NAME', 'wordpress'); // The name of the database
+define('DB_USER', 'root'); // Your MySQL username
+define('DB_PASSWORD', ''); // ...and password
+define('DB_HOST', 'localhost'); // 99% chance you won't need to change this
+```
 14. Save as `wp-config.php`.
 15. Install by going to http://localhost/wordpress/wp-admin/install.php
 
@@ -221,9 +228,16 @@ Copy the backup files again to somewhere safe on your machine so you work on a c
 5. Create a folder inside `C:\xampp\htdocs`. This will be for WordPress.
 6. Copy all your downloaded WordPress files (not the sql backup) into that directory.
 7. With a text editor, open the file `wp-config.php` on your WordPress install.
-8. Change the details for your new MySQL connection: // ** MySQL settings ** // `define('DB_NAME', 'wordpress');` // `The name of the new database you made define('DB_USER', 'root');` // `keep this as is define('DB_PASSWORD', '');` // `keep this empty define('DB_HOST', 'localhost');` // 99% chance you won't need to change this
+8. Change the details for your new MySQL connection:
+```
+// ** MySQL settings ** //
+define('DB_NAME', 'wordpress'); // The name of the new database you made
+define('DB_USER', 'root'); // keep this as is
+define('DB_PASSWORD', ''); // keep this empty
+define('DB_HOST', 'localhost'); // 99% chance you won't need to change this
+```
 9. Your main `index.php` should be in the `/htdocs` folder or in a subdirectory such as `/htdocs/wordpress/`. Write that down.
-10. Start XAMPP by clicking the orange `xampp_start.exe` or using the console program from Program Files \ApacheFriends\XAMPP\XAMPP Control Panel.
+10. Start XAMPP by clicking the orange `xampp_start.exe` or using the console program from `Program Files \ApacheFriends\XAMPP\XAMPP Control Panel`.
 11. Once it is working, click on link in the left side bar for phpMyAdmin.
 12. Create a database. The name should match the one used in your `wp-config.php` file.
 
