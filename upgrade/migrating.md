@@ -7,7 +7,7 @@ On the `Settings -> General` screen in a single site installation of WordPress, 
 - The "Site Address (URL)" setting is the address you want people to type in their browser to reach your WordPress blog.
 - The "WordPress Address (URL)" setting is the address where your WordPress core files reside.
 
-**Note:** Both settings should include the `http://` part and should not have a slash `/` at the end.
+**Note:** Both settings should include the http:// part and should not have a slash `/` at the end.
 
 Every once in a while, somebody finds a need to manually change (or fix) these settings. Usually this happens when they change one or both and discover that their site no longer works properly. This can leave the user with no easily discoverable way to correct the problem. This article tells you how to change these settings directly.
 
@@ -77,7 +77,7 @@ update_option( 'home', 'http://example.com:port/yourblog');
 
 3. Refresh your web browser using your external site URL:
 
-`http://example.com:port/yourblog`
+http://example.com:port/yourblog
 `$ nano /var/www/books/wp-content/themes/twentyeleven/functions.php`
 
 4. Remove those lines you just added (or comment them out)
@@ -122,7 +122,7 @@ if ( defined( 'RELOCATE' ) AND RELOCATE ) {
 1. Edit the `wp-config.php` file.
 2. After the "define" statements (just before the comment line that says "That's all, stop editing!"), insert a new line, and type: `define('RELOCATE',true);`
 3. Save your `wp-config.php` file.
-4. Open a web browser and manually point it to `wp-login.php` on the new server. For example, if your new site is at `http://www.example.com`, then type `http://www.example.com/wp-login.php` into your browser's address bar.
+4. Open a web browser and manually point it to `wp-login.php` on the new server. For example, if your new site is at http://www.example.com, then type http://www.example.com/wp-login.php into your browser's address bar.
 5. Login as per normal.
 6. Look in your web browser's address bar to verify that you have, indeed, logged in to the correct server. If this is the case, then in the Admin back-end, navigate to `Settings > General` and verify that both the address settings are correct. Remember to Save Changes.
 7. Once this has been fixed, edit `wp-config.php` and either completely remove the line that you added (delete the whole line), comment it out (with `//`) or change the true value to false if you think it's likely you will be relocating again.
@@ -279,12 +279,12 @@ Moving your domain without changing the Home and Site URLs of your WordPress sit
 
 ### Changing Your Domain Name and URLs
 
-Moving a website and changing your domain name or URLs (i.e. from `http://example.com/site` to `http://example.com`, or `http://example.com` to `http://example.net`) requires the following steps – in sequence.
+Moving a website and changing your domain name or URLs (i.e. from http://example.com/site to http://example.com, or http://example.com to http://example.net) requires the following steps – in sequence.
 
 1. Download your existing site files.
 2. Export your database – go in to MySQL and export the database.
 3. Move the backed up files and database into a new folder – somewhere safe – this is your site backup.
-4. Log in to the site you want to move and go to Settings > General, then change the URLs. (ie from `http://example.com/` to `http://example.net`) – save the settings and expect to see a 404 page.
+4. Log in to the site you want to move and go to Settings > General, then change the URLs. (ie from http://example.com/ to http://example.net) – save the settings and expect to see a 404 page.
 5. Download your site files again.
 6. Export the database again.
 7. Edit `wp-config.php` with the new server's MySQL database name, user and password.

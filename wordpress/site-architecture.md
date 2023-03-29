@@ -152,7 +152,7 @@ The Classic Theme hosts containers for the Date, Title, Post Meta Data, Post Con
 The post CSS class selector applies the post styles to this container. It is important to note that the post class selector also has an ID which is generated automatically by WordPress. Here is an example of the code that can be used to display a class selector's ID:
 
 ```
-<div class="post" id="post-<?php the_ID(); ?>">
+<div class="post" id="post-<?php the_ID(); ?>">
 ```
 
 The use of the template tag [the_ID()](https://developer.wordpress.org/reference/functions/the_ID/) displays the ID number for the post. This unique identifier can be used for internal page links as well as for styles. For instance, an individual post could have a style for post-1, as well as for post-2. While it is a bit excessive to feature a style for every post, there may be a post or two that you need to have look a little different. Some plugins may use this identifier to automatically change the look of different posts, too.
@@ -187,37 +187,37 @@ There is a lot going on here. Let's break it down.
 The **multi-post view** features a content container with a class called narrowcolumn, while the **single post view** features a class called widecolumn. The sidebar for the single post view is not generated on that page, allowing the post to be viewed across the width of the entire content area.
 
 ```
-<div class="post" id="post-1"> 
+<div class="post" id="post-1">
 ```
 
 Like the Classic Theme, this division sets up the style for post and the identifier for post-X, with X representing the post's unique ID number. This allows the user to customize the specific post's look.
 
 ```
-<h2>Post Title</h2> 
+<h2>Post Title</h2>
 ```
 
 This encompasses the post's title code, styled by the <h2> tag.
 
 ```
-<small>Date</small> 
+<small>Date</small>
 ```
 
 The date code is surrounded and styled by the small tag.
 
 ```
-<div class="entry"> 
+<div class="entry">
 ```
 
 The post content is styled with a combination of the styles within the entry CSS selectors, and the paragraph tag.
 
 ```
-<p class="postmetadata">Post Meta Data Section</p> 
+<p class="postmetadata">Post Meta Data Section</p>
 ```
 
 The [Post Meta Data Section](https://codex.wordpress.org/Post_Meta_Data_Section) contains data details about the post, such as the date, time, and categories the post belongs to.
 
 ```
-<div class="navigation"> 
+<div class="navigation">
 ```
 
 The [Next and Previous Links](https://codex.wordpress.org/Next_and_Previous_Links) are styled in the navigation div. They also include classes for alignleft (for the Previous Post) and alignright (for the Next Post in chronological order).
@@ -333,7 +333,7 @@ ID reference for the comment author's input area.
 
 **#comments small**
 
-The <small> tag is used in several places in the Classic Theme. This usage surrounds the text in the **comment submit form** and the text for the **list of tags** that can be used in the comment.
+The `<small>` tag is used in several places in the Classic Theme. This usage surrounds the text in the **comment submit form** and the text for the **list of tags** that can be used in the comment.
 
 **#email**
 
@@ -353,7 +353,7 @@ There are two submit buttons in the Classic Theme, for search and comment submis
 
 ##### Default Theme Comments
 
-The Default Theme comments feature a loop query within the comments.php and comments-popup.php which changes some of the information depending upon if comments are open, closed, and any present. If the comments are open or closed and no comments have been made, this information will be displayed within the <h3 id="comments"> tag.
+The Default Theme comments feature a loop query within the comments.php and comments-popup.php which changes some of the information depending upon if comments are open, closed, and any present. If the comments are open or closed and no comments have been made, this information will be displayed within the `<h3 id="comments">` tag.
 
 ```
 <h3 id="comments">One Response to "Hello world!"</h3> 
@@ -616,8 +616,8 @@ The footer's content is styled with the credit class and the paragraph and cite 
 The tag displays the number of mysql queries used on the page and the time it took for the page to load, in HTML commented code. It is there for the administrator's convenience and use. It is only visible within the page's source code. If you would like to display this visible on the page, remove the [comments](https://codex.wordpress.org/Commenting_Code). It's look will be influenced by the credit class style of the paragraph tag. On the template file, it looks like this:
 
 ```
-<!--<?php echo $wpdb->num_queries; ?> queries. 
-<?php timer_stop(1); ?> seconds. -->
+<!--<?php echo $wpdb->num_queries; ?> queries. 
+<?php timer_stop(1); ?> seconds. -->
 ```
 
 **Default Theme**

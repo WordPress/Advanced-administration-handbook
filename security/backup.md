@@ -2,7 +2,7 @@
 
 ## WordPress Backups
 
-> Note: Want to skip the hard stuff? Skip to Automated Solutions such as [WordPress Plugins](https://wordpress.org/plugins/search.php?q=backup) for backups.
+_Note: Want to skip the hard stuff? Skip to Automated Solutions such as [WordPress Plugins](https://wordpress.org/plugins/search.php?q=backup) for backups._
 
 Your WordPress database contains every post, every comment and every link you have on your blog. If your database gets erased or corrupted, you stand to lose everything you have written. There are many reasons why this could happen, and not all are things you can control. With a proper backup of your WordPress database and files, you can quickly restore things back to normal.
 
@@ -17,7 +17,7 @@ Site backups are essential because problems inevitably occur and you need to be 
 
 ### Backup Questions
 
-> Back up your database regularly, and always before an upgrade.
+_Back up your database regularly, and always before an upgrade._
 
 **How often should you back up?**
 

@@ -16,12 +16,12 @@ Here's the quick version of the instructions for those who are already comfortab
 3. (Optional) Find and rename `wp-config-sample.php` to `wp-config.php`, then edit the file [(see Editing wp-config.php)](https://developer.wordpress.org/advanced-administration/wordpress/wp-config/) and add your database information.
 **Note:** If you are not comfortable with renaming files, step 3 is optional and you can skip it as the install program will create the `wp-config.php` file for you.
 4. Upload the WordPress files to the desired location on your web server:
-    - If you want to integrate WordPress into the root of your domain (e.g. `http://example.com/`), move or upload all contents of the unzipped WordPress directory (excluding the WordPress directory itself) into the root directory of your web server.
-    - If you want to have your WordPress installation in its own subdirectory on your website (e.g. `http://example.com/blog/`), create the blog directory on your server and upload the contents of the unzipped WordPress package to the directory via FTP.
+    - If you want to integrate WordPress into the root of your domain (e.g. http://example.com/), move or upload all contents of the unzipped WordPress directory (excluding the WordPress directory itself) into the root directory of your web server.
+    - If you want to have your WordPress installation in its own subdirectory on your website (e.g. http://example.com/blog/), create the blog directory on your server and upload the contents of the unzipped WordPress package to the directory via FTP.
     - **Note:** If your FTP client has an option to convert file names to lower case, make sure it's disabled.
 5. Run the WordPress installation script by accessing the URL in a web browser. This should be the URL where you uploaded the WordPress files.
-- If you installed WordPress in the root directory, you should visit: `http://example.com/`
-- If you installed WordPress in its own subdirectory called blog, for example, you should visit: `http://example.com/blog/`
+- If you installed WordPress in the root directory, you should visit: http://example.com/
+- If you installed WordPress in its own subdirectory called blog, for example, you should visit: http://example.com/blog/
 That's it! WordPress should now be installed.
 
 ## Detailed instructions {#detailed-instructions}
@@ -33,9 +33,9 @@ Download and unzip the WordPress package from [wordpress.org/download/](https://
 - If you will be uploading WordPress to a remote web server, download the WordPress package to your computer with a web browser and unzip the package.
 - If you will be using FTP, skip to the next step – uploading files is covered later.
 - If you have [shell](https://wordpress.org/documentation/article/glossary/#shell) access to your web server, and are comfortable using console-based tools, you may wish to download WordPress directly to your [web server](https://wordpress.org/documentation/article/glossary/#web-server) using wget (or lynx or another console-based web browser) if you want to avoid [FTPing](https://wordpress.org/documentation/article/glossary/#ftp):
-    - `wget https://wordpress.org/latest.tar.gz`
+    - wget https://wordpress.org/latest.tar.gz
     - Then extract the package using:
-    - `tar -xzvf latest.tar.gz`
+    - tar -xzvf latest.tar.gz
 
     The WordPress package will extract into a folder called wordpress in the same directory that you downloaded latest.tar.gz.
 
@@ -60,7 +60,7 @@ _**Note:** These instructions are written for phpMyAdmin 4.4; the phpMyAdmin use
     ![Create user in phpMyAdmin 4.4](https://codex.wordpress.org/images/2/26/users.jpg)
         1. Click **Add user**.
         2. Choose a username for WordPress ('`wordpress`' is good) and enter it in the **User name** field. (Be sure **Use text field**: is selected from the dropdown.)
-        3. Choose a secure password (ideally containing a combination of upper- and lower-case letters, numbers, and symbols), and enter it in the **Password** field. (Be sure **Use text field**: is selected from the dropdown.) Re-enter the password in the **Re-type**field.
+        3. Choose a secure password (ideally containing a combination of upper- and lower-case letters, numbers, and symbols), and enter it in the **Password** field. (Be sure **Use text field**: is selected from the dropdown.) Re-enter the password in the **Re-type** field.
         4. Write down the username and password you chose.
         5. Leave all options under **Global privileges** at their defaults.
         6. Click **Go**.
@@ -100,15 +100,15 @@ The database collation should normally be left blank (see [Editing wp-config.php
 
 [Enter your secret key values](https://developer.wordpress.org/advanced-administration/wordpress/wp-config/) under the section labeled
 ```
-  * Authentication Unique Keys and Salts.
+/* Authentication Unique Keys and Salts. */
 ```
 Save the `wp-config.php` file.
 
 ### Step 4: Upload the files
 
 Now you will need to decide where on your domain you'd like your WordPress-powered site to appear:
-- In the root directory of your website. (For example, `http://example.com/`)
-- In a subdirectory of your website. (For example, `http://example.com/blog/`)
+- In the root directory of your website. (For example, http://example.com/)
+- In a subdirectory of your website. (For example, http://example.com/blog/)
 
 _**Note:** The location of your root web directory in the filesystem on your [web server](https://wordpress.org/documentation/article/glossary/#web-server) will vary across [hosting providers](https://wordpress.org/documentation/article/glossary/#hosting-provider) and operating systems. Check with your hosting provider or system administrator if you do not know where this is._
 
@@ -126,8 +126,8 @@ If your files are already on your web server, and you are using [shell](https://
 
 Point a web browser to start the installation script.
 
-- If you placed the WordPress files in the root directory, you should visit: `http://example.com/wp-admin/install.php`
-- If you placed the WordPress files in a subdirectory called blog, for example, you should visit: `http://example.com/blog/wp-admin/install.php`
+- If you placed the WordPress files in the root directory, you should visit: http://example.com/wp-admin/install.php
+- If you placed the WordPress files in a subdirectory called blog, for example, you should visit: http://example.com/blog/wp-admin/install.php
 
 #### Setup configuration file
 

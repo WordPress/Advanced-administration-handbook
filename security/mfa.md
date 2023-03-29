@@ -14,7 +14,7 @@ Logging in with a password is single-step authentication. It relies only on some
 
 There are three possible ways to identify users.
 
-##### Something You Are {#something-you-are}
+**Something You Are**
 
 There are a lot of properties that are unique to each user and can be used to identify them. The most popular is fingerprints, but retinas, voice, DNA, or anything else specific to an individual will work. This is called biometric information because these pieces of information all belong to a person's biology.
 
@@ -22,13 +22,13 @@ Biometric factors are interesting because they are not easily forged and the use
 
 In 2013, Apple released TouchID which lets users unlock their iPhones using their fingerprints. This technology is interesting because the fingerprints are stored locally on the phone, not in the cloud where they would be easier for hackers to steal. There are still trade-offs with this kind of approach, but it is the most widespread consumer use of biometric authentication to date.
 
-##### Something You Have {#something-you-have}
+**Something You Have**
 
 Also known as the possession factor, users can be identified by the devices which they carry. Traditionally, a company that wanted to enable two-step authentication would distribute secure keychain fobs to users. The keychain fobs would display a new number every 30 seconds, and that number would be needed to be typed along with the password every time a user logged in.
 
 Modern two-step authentication more frequently relies on a user's smartphone than on a new piece of hardware. One common model of this uses SMS in order to provide an easy second factor. When the user enters their password, they are sent a text message with a unique code. By entering that code, after the password, they supposedly prove that they also have their phone. Unfortunately, SMS is not a secure communication channel, so smartphone apps and [plugins](#plugins-for-two-step-authentication) have been developed to create that secure channel.
 
-##### Something You Know {#something-you-know}
+**Something You Know**
 
 The most familiar form of authentication is the knowledge factor, or password. As old as [Open Sesame](http://en.wikipedia.org/wiki/Open_Sesame_(phrase)), passwords have long been a standard for anonymous authentication. In order for a knowledge factor to work, both parties need to know the password, but other parties must not be able to find or guess it.
 

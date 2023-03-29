@@ -60,7 +60,7 @@ Like many modern software packages, WordPress is updated regularly to address ne
 
 Main article: [Updating WordPress](https://wordpress.org/documentation/article/updating-wordpress/).
 
-The latest version of WordPress is always available from the main WordPress website at `https://wordpress.org`. Official releases are not available from other sites — **never** download or install WordPress from any website other than `https://wordpress.org`.
+The latest version of WordPress is always available from the main WordPress website at https://wordpress.org. Official releases are not available from other sites — **never** download or install WordPress from any website other than https://wordpress.org.
 
 Since version 3.7, WordPress has featured automatic updates. Use this functionality to ease the process of keeping up to date. You can also use the WordPress Dashboard to keep informed about updates. Read the entry in the Dashboard or the WordPress Developer Blog to determine what steps you must take to update and remain secure.
 
@@ -274,7 +274,11 @@ A way to avoid using such a plugin is to use [custom page templates](https://wor
 
 [Security through obscurity](http://en.wikipedia.org/wiki/Security_through_obscurity) is generally an unsound primary strategy. However, there are areas in WordPress where obscuring information _might_ help with security:
 
-1. **Rename the administrative account:** When creating an administrative account, avoid easily guessed terms such as `admin` or `webmaster` as usernames because they are typically subject to attacks first. On an existing WordPress install you may rename the existing account in the MySQL command-line client with a command like `UPDATE wp_users SET user_login = 'newuser' WHERE user_login = 'admin';`, or by using a MySQL frontend like [phpMyAdmin](https://developer.wordpress.org/advanced-administration/upgrade/phpmyadmin/).
+1. **Rename the administrative account:** When creating an administrative account, avoid easily guessed terms such as `admin` or `webmaster` as usernames because they are typically subject to attacks first. On an existing WordPress install you may rename the existing account in the MySQL command-line client with a command like:
+```
+UPDATE wp_users SET user_login = 'newuser' WHERE user_login = 'admin';
+```
+or by using a MySQL frontend like [phpMyAdmin](https://developer.wordpress.org/advanced-administration/upgrade/phpmyadmin/).
 2. **Change the table_prefix:** Many published WordPress-specific SQL-injection attacks make the assumption that the table_prefix is `wp_`, the default. Changing this can block at least some SQL injection attacks.
 
 ### Data Backups {#data-backups}

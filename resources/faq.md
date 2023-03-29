@@ -30,7 +30,7 @@ The following are articles that will help you troubleshoot and solve many of you
 
 ## Why do I get an error message about Sending Referrers? {#why-do-i-get-an-error-message-about-sending-referrers}
 
-If you got this message when trying to save a post, consider checking [Administration](https://wordpress.org/documentation/article/administration-screens/) > [Settings](https://wordpress.org/documentation/article/administration-screens/) > [General](https://wordpress.org/documentation/article/settings-general-screen/) and make sure both your **WordPress address (URI)** and the **Blog address (URI)** do not use 'www'. For example, instead of `https://www.example.com` use `https://example.com` in those fields.
+If you got this message when trying to save a post, consider checking [Administration](https://wordpress.org/documentation/article/administration-screens/) > [Settings](https://wordpress.org/documentation/article/administration-screens/) > [General](https://wordpress.org/documentation/article/settings-general-screen/) and make sure both your **WordPress address (URI)** and the **Blog address (URI)** do not use 'www'. For example, instead of https://www.example.com use https://example.com in those fields.
 
 See also:
 
