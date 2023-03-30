@@ -10,360 +10,420 @@
 		"title": "Before You Install",
 		"slug": "before-install",
 		"markdown_source": "https:\/\/github.com\/WordPress\/Advanced-administration-handbook\/blob\/main\/before-install\/index.md",
-		"parent": null
+		"parent": null,
+		"order": 10
 	},
 	"before-install\/creating-database": {
 		"title": "Creating Database for WordPress",
 		"slug": "creating-database",
 		"markdown_source": "https:\/\/github.com\/WordPress\/Advanced-administration-handbook\/blob\/main\/before-install\/creating-database.md",
-		"parent": "before-install"
+		"parent": "before-install",
+		"order": 1
 	},
 	"before-install\/howto-install": {
 		"title": "How to install WordPress",
 		"slug": "howto-install",
 		"markdown_source": "https:\/\/github.com\/WordPress\/Advanced-administration-handbook\/blob\/main\/before-install\/howto-install.md",
-		"parent": "before-install"
+		"parent": "before-install",
+		"order": 2
 	},
 	"before-install\/development": {
 		"title": "Running a Development Copy of WordPress",
 		"slug": "development",
 		"markdown_source": "https:\/\/github.com\/WordPress\/Advanced-administration-handbook\/blob\/main\/before-install\/development.md",
-		"parent": "before-install"
+		"parent": "before-install",
+		"order": 3
 	},
 	"before-install\/in-your-language": {
 		"title": "Installing WordPress in your language",
 		"slug": "in-your-language",
 		"markdown_source": "https:\/\/github.com\/WordPress\/Advanced-administration-handbook\/blob\/main\/before-install\/in-your-language.md",
-		"parent": "before-install"
+		"parent": "before-install",
+		"order": 4
 	},
 	"before-install\/multiple-instances": {
 		"title": "Installing Multiple WordPress Instances",
 		"slug": "multiple-instances",
 		"markdown_source": "https:\/\/github.com\/WordPress\/Advanced-administration-handbook\/blob\/main\/before-install\/multiple-instances.md",
-		"parent": "before-install"
+		"parent": "before-install",
+		"order": 5
 	},
 	"before-install\/popular-providers": {
 		"title": "Install WordPress at popular providers",
 		"slug": "popular-providers",
 		"markdown_source": "https:\/\/github.com\/WordPress\/Advanced-administration-handbook\/blob\/main\/before-install\/popular-providers.md",
-		"parent": "before-install"
+		"parent": "before-install",
+		"order": 6
 	},
 	"server": {
 		"title": "Server configuration",
 		"slug": "server",
 		"markdown_source": "https:\/\/github.com\/WordPress\/Advanced-administration-handbook\/blob\/main\/server\/index.md",
-		"parent": null
+		"parent": null,
+		"order": 20
 	},
 	"server\/file-permissions": {
 		"title": "Changing File Permissions",
 		"slug": "file-permissions",
 		"markdown_source": "https:\/\/github.com\/WordPress\/Advanced-administration-handbook\/blob\/main\/server\/file-permissions.md",
-		"parent": "server"
+		"parent": "server",
+		"order": 1
 	},
 	"server\/server-info": {
 		"title": "Finding Server Info",
 		"slug": "server-info",
 		"markdown_source": "https:\/\/github.com\/WordPress\/Advanced-administration-handbook\/blob\/main\/server\/server-info.md",
-		"parent": "server"
+		"parent": "server",
+		"order": 2
 	},
 	"server\/wordpress-in-directory": {
 		"title": "Giving WordPress Its Own Directory",
 		"slug": "wordpress-in-directory",
 		"markdown_source": "https:\/\/github.com\/WordPress\/Advanced-administration-handbook\/blob\/main\/server\/wordpress-in-directory.md",
-		"parent": "server"
+		"parent": "server",
+		"order": 3
 	},
 	"server\/subdomains-wildcard": {
 		"title": "Configuring Wildcard Subdomains",
 		"slug": "subdomains-wildcard",
 		"markdown_source": "https:\/\/github.com\/WordPress\/Advanced-administration-handbook\/blob\/main\/server\/subdomains-wildcard.md",
-		"parent": "server"
+		"parent": "server",
+		"order": 4
 	},
 	"server\/empty-database": {
 		"title": "Emptying a Database Table",
 		"slug": "empty-database",
 		"markdown_source": "https:\/\/github.com\/WordPress\/Advanced-administration-handbook\/blob\/main\/server\/empty-database.md",
-		"parent": "server"
+		"parent": "server",
+		"order": 5
 	},
 	"server\/web-server": {
 		"title": "Web servers",
 		"slug": "web-server",
 		"markdown_source": "https:\/\/github.com\/WordPress\/Advanced-administration-handbook\/blob\/main\/server\/web-server.md",
-		"parent": "server"
+		"parent": "server",
+		"order": 6
 	},
 	"server\/web-server\/nginx": {
 		"title": "Nginx",
 		"slug": "nginx",
 		"markdown_source": "https:\/\/github.com\/WordPress\/Advanced-administration-handbook\/blob\/main\/server\/nginx.md",
-		"parent": "web-server"
+		"parent": "web-server",
+		"order": 1
 	},
 	"server\/control-panel": {
 		"title": "Control Panels",
 		"slug": "control-panel",
 		"markdown_source": "https:\/\/github.com\/WordPress\/Advanced-administration-handbook\/blob\/main\/server\/control-panel.md",
-		"parent": "server"
+		"parent": "server",
+		"order": 7
 	},
 	"wordpress": {
 		"title": "WordPress configuration",
 		"slug": "wordpress",
 		"markdown_source": "https:\/\/github.com\/WordPress\/Advanced-administration-handbook\/blob\/main\/wordpress\/index.md",
-		"parent": null
+		"parent": null,
+		"order": 30
 	},
 	"wordpress\/wp-config": {
 		"title": "wp-config.php",
 		"slug": "wp-config",
 		"markdown_source": "https:\/\/github.com\/WordPress\/Advanced-administration-handbook\/blob\/main\/wordpress\/wp-config.md",
-		"parent": "wordpress"
+		"parent": "wordpress",
+		"order": 1
 	},
 	"wordpress\/site-architecture": {
 		"title": "Site Architecture",
 		"slug": "site-architecture",
 		"markdown_source": "https:\/\/github.com\/WordPress\/Advanced-administration-handbook\/blob\/main\/wordpress\/site-architecture.md",
-		"parent": "wordpress"
+		"parent": "wordpress",
+		"order": 2
 	},
 	"wordpress\/cookies": {
 		"title": "Cookies",
 		"slug": "cookies",
 		"markdown_source": "https:\/\/github.com\/WordPress\/Advanced-administration-handbook\/blob\/main\/wordpress\/cookies.md",
-		"parent": "wordpress"
+		"parent": "wordpress",
+		"order": 3
 	},
 	"wordpress\/update-services": {
 		"title": "Update Services",
 		"slug": "update-services",
 		"markdown_source": "https:\/\/github.com\/WordPress\/Advanced-administration-handbook\/blob\/main\/wordpress\/update-services.md",
-		"parent": "wordpress"
+		"parent": "wordpress",
+		"order": 4
 	},
 	"wordpress\/edit-files": {
 		"title": "Editing Files",
 		"slug": "edit-files",
 		"markdown_source": "https:\/\/github.com\/WordPress\/Advanced-administration-handbook\/blob\/main\/wordpress\/edit-files.md",
-		"parent": "wordpress"
+		"parent": "wordpress",
+		"order": 5
 	},
 	"wordpress\/css": {
 		"title": "CSS",
 		"slug": "css",
 		"markdown_source": "https:\/\/github.com\/WordPress\/Advanced-administration-handbook\/blob\/main\/wordpress\/css.md",
-		"parent": "wordpress"
+		"parent": "wordpress",
+		"order": 6
 	},
 	"wordpress\/feeds": {
 		"title": "Feeds",
 		"slug": "feeds",
 		"markdown_source": "https:\/\/github.com\/WordPress\/Advanced-administration-handbook\/blob\/main\/wordpress\/feeds.md",
-		"parent": "wordpress"
+		"parent": "wordpress",
+		"order": 7
 	},
 	"wordpress\/multilingual": {
 		"title": "Multilingual WordPress",
 		"slug": "multilingual",
 		"markdown_source": "https:\/\/github.com\/WordPress\/Advanced-administration-handbook\/blob\/main\/wordpress\/multilingual.md",
-		"parent": "wordpress"
+		"parent": "wordpress",
+		"order": 8
 	},
 	"wordpress\/oembed": {
 		"title": "oEmbed",
 		"slug": "oembed",
 		"markdown_source": "https:\/\/github.com\/WordPress\/Advanced-administration-handbook\/blob\/main\/wordpress\/oembed.md",
-		"parent": "wordpress"
+		"parent": "wordpress",
+		"order": 9
 	},
 	"wordpress\/loopback": {
 		"title": "Loopbacks",
 		"slug": "loopback",
 		"markdown_source": "https:\/\/github.com\/WordPress\/Advanced-administration-handbook\/blob\/main\/wordpress\/loopback.md",
-		"parent": "wordpress"
+		"parent": "wordpress",
+		"order": 10
 	},
 	"wordpress\/common-errors": {
 		"title": "Common errors",
 		"slug": "common-errors",
 		"markdown_source": "https:\/\/github.com\/WordPress\/Advanced-administration-handbook\/blob\/main\/wordpress\/common-errors.md",
-		"parent": "wordpress"
+		"parent": "wordpress",
+		"order": 11
 	},
 	"upgrade": {
 		"title": "Upgrading / Migration",
 		"slug": "upgrade",
 		"markdown_source": "https:\/\/github.com\/WordPress\/Advanced-administration-handbook\/blob\/main\/upgrade\/index.md",
-		"parent": null
+		"parent": null,
+		"order": 40
 	},
 	"upgrade\/ftp": {
 		"title": "FTP Clients",
 		"slug": "ftp",
 		"markdown_source": "https:\/\/github.com\/WordPress\/Advanced-administration-handbook\/blob\/main\/upgrade\/ftp.md",
-		"parent": "upgrade"
+		"parent": "upgrade",
+		"order": 1
 	},
 	"upgrade\/ftp\/filezilla": {
 		"title": "Using FileZilla",
 		"slug": "filezilla",
 		"markdown_source": "https:\/\/github.com\/WordPress\/Advanced-administration-handbook\/blob\/main\/upgrade\/filezilla.md",
-		"parent": "ftp"
+		"parent": "ftp",
+		"order": 1
 	},
 	"upgrade\/phpmyadmin": {
 		"title": "phpMyAdmin",
 		"slug": "phpmyadmin",
 		"markdown_source": "https:\/\/github.com\/WordPress\/Advanced-administration-handbook\/blob\/main\/upgrade\/phpmyadmin.md",
-		"parent": "upgrade"
+		"parent": "upgrade",
+		"order": 2
 	},
 	"upgrade\/upgrading": {
 		"title": "Upgrading",
 		"slug": "upgrading",
 		"markdown_source": "https:\/\/github.com\/WordPress\/Advanced-administration-handbook\/blob\/main\/upgrade\/upgrading.md",
-		"parent": "upgrade"
+		"parent": "upgrade",
+		"order": 4
 	},
 	"upgrade\/migrating": {
 		"title": "Migration",
 		"slug": "migrating",
 		"markdown_source": "https:\/\/github.com\/WordPress\/Advanced-administration-handbook\/blob\/main\/upgrade\/migrating.md",
-		"parent": "upgrade"
+		"parent": "upgrade",
+		"order": 5
 	},
 	"multisite": {
 		"title": "WordPress Multisite / Network",
 		"slug": "multisite",
 		"markdown_source": "https:\/\/github.com\/WordPress\/Advanced-administration-handbook\/blob\/main\/multisite\/index.md",
-		"parent": null
+		"parent": null,
+		"order": 50
 	},
 	"multisite\/prepare-network": {
 		"title": "Before You Create A Network",
 		"slug": "prepare-network",
 		"markdown_source": "https:\/\/github.com\/WordPress\/Advanced-administration-handbook\/blob\/main\/multisite\/prepare-network.md",
-		"parent": "multisite"
+		"parent": "multisite",
+		"order": 1
 	},
 	"multisite\/create-network": {
 		"title": "Create A Network",
 		"slug": "create-network",
 		"markdown_source": "https:\/\/github.com\/WordPress\/Advanced-administration-handbook\/blob\/main\/multisite\/create-network.md",
-		"parent": "multisite"
+		"parent": "multisite",
+		"order": 2
 	},
 	"multisite\/domain-mapping": {
 		"title": "WordPress Multisite Domain Mapping",
 		"slug": "domain-mapping",
 		"markdown_source": "https:\/\/github.com\/WordPress\/Advanced-administration-handbook\/blob\/main\/multisite\/domain-mapping.md",
-		"parent": "multisite"
+		"parent": "multisite",
+		"order": 3
 	},
 	"multisite\/administration": {
 		"title": "Multisite Network Administration",
 		"slug": "administration",
 		"markdown_source": "https:\/\/github.com\/WordPress\/Advanced-administration-handbook\/blob\/main\/multisite\/administration.md",
-		"parent": "multisite"
+		"parent": "multisite",
+		"order": 4
 	},
 	"multisite\/admin": {
 		"title": "Network Admin",
 		"slug": "admin",
 		"markdown_source": "https:\/\/github.com\/WordPress\/Advanced-administration-handbook\/blob\/main\/multisite\/admin.md",
-		"parent": "multisite"
+		"parent": "multisite",
+		"order": 5
 	},
 	"multisite\/sites-multisite": {
 		"title": "Migrate WordPress sites into WordPress Multisite",
 		"slug": "sites-multisite",
 		"markdown_source": "https:\/\/github.com\/WordPress\/Advanced-administration-handbook\/blob\/main\/multisite\/sites-multisite.md",
-		"parent": "multisite"
+		"parent": "multisite",
+		"order": 6
 	},
 	"plugins": {
 		"title": "Plugins",
 		"slug": "plugins",
 		"markdown_source": "https:\/\/github.com\/WordPress\/Advanced-administration-handbook\/blob\/main\/plugins\/index.md",
-		"parent": null
+		"parent": null,
+		"order": 60
 	},
 	"plugins\/mu-plugins": {
 		"title": "Must Use Plugins",
 		"slug": "mu-plugins",
 		"markdown_source": "https:\/\/github.com\/WordPress\/Advanced-administration-handbook\/blob\/main\/plugins\/mu-plugins.md",
-		"parent": "plugins"
+		"parent": "plugins",
+		"order": 1
 	},
 	"themes": {
 		"title": "Themes",
 		"slug": "themes",
 		"markdown_source": "https:\/\/github.com\/WordPress\/Advanced-administration-handbook\/blob\/main\/themes\/index.md",
-		"parent": null
+		"parent": null,
+		"order": 70
 	},
 	"security": {
 		"title": "Security",
 		"slug": "security",
 		"markdown_source": "https:\/\/github.com\/WordPress\/Advanced-administration-handbook\/blob\/main\/security\/index.md",
-		"parent": null
+		"parent": null,
+		"order": 80
 	},
 	"security\/logging-in": {
 		"title": "Your password",
 		"slug": "logging-in",
 		"markdown_source": "https:\/\/github.com\/WordPress\/Advanced-administration-handbook\/blob\/main\/security\/logging-in.md",
-		"parent": "security"
+		"parent": "security",
+		"order": 1
 	},
 	"security\/mfa": {
 		"title": "Multi-Factor Authentication",
 		"slug": "mfa",
 		"markdown_source": "https:\/\/github.com\/WordPress\/Advanced-administration-handbook\/blob\/main\/security\/mfa.md",
-		"parent": "security"
+		"parent": "security",
+		"order": 2
 	},
 	"security\/backup": {
 		"title": "Backups",
 		"slug": "backup",
 		"markdown_source": "https:\/\/github.com\/WordPress\/Advanced-administration-handbook\/blob\/main\/security\/backup.md",
-		"parent": "security"
+		"parent": "security",
+		"order": 3
 	},
 	"security\/https": {
 		"title": "HTTPS",
 		"slug": "https",
 		"markdown_source": "https:\/\/github.com\/WordPress\/Advanced-administration-handbook\/blob\/main\/security\/https.md",
-		"parent": "security"
+		"parent": "security",
+		"order": 4
 	},
 	"security\/brute-force": {
 		"title": "Brute Force Attack",
 		"slug": "brute-force",
 		"markdown_source": "https:\/\/github.com\/WordPress\/Advanced-administration-handbook\/blob\/main\/security\/brute-force.md",
-		"parent": "security"
+		"parent": "security",
+		"order": 5
 	},
 	"security\/hardening": {
 		"title": "Hardening WordPress",
 		"slug": "hardening",
 		"markdown_source": "https:\/\/github.com\/WordPress\/Advanced-administration-handbook\/blob\/main\/security\/hardening.md",
-		"parent": "security"
+		"parent": "security",
+		"order": 6
 	},
 	"performance": {
 		"title": "Performance / Optimization",
 		"slug": "performance",
 		"markdown_source": "https:\/\/github.com\/WordPress\/Advanced-administration-handbook\/blob\/main\/performance\/index.md",
-		"parent": null
+		"parent": null,
+		"order": 90
 	},
 	"performance\/cache": {
 		"title": "Cache",
 		"slug": "cache",
 		"markdown_source": "https:\/\/github.com\/WordPress\/Advanced-administration-handbook\/blob\/main\/performance\/cache.md",
-		"parent": "performance"
+		"parent": "performance",
+		"order": 1
 	},
 	"performance\/optimization": {
 		"title": "Optimization",
 		"slug": "optimization",
 		"markdown_source": "https:\/\/github.com\/WordPress\/Advanced-administration-handbook\/blob\/main\/performance\/optimization.md",
-		"parent": "performance"
+		"parent": "performance",
+		"order": 2
 	},
 	"debug": {
 		"title": "Debugging WordPress",
 		"slug": "debug",
 		"markdown_source": "https:\/\/github.com\/WordPress\/Advanced-administration-handbook\/blob\/main\/debug\/index.md",
-		"parent": null
+		"parent": null,
+		"order": 100
 	},
 	"debug\/debug-wordpress": {
 		"title": "Debugging in WordPress",
 		"slug": "debug-wordpress",
 		"markdown_source": "https:\/\/github.com\/WordPress\/Advanced-administration-handbook\/blob\/main\/debug\/debug-wordpress.md",
-		"parent": "debug"
+		"parent": "debug",
+		"order": 1
 	},
 	"debug\/debug-network": {
 		"title": "Debugging a WordPress Network",
 		"slug": "debug-network",
 		"markdown_source": "https:\/\/github.com\/WordPress\/Advanced-administration-handbook\/blob\/main\/debug\/debug-network.md",
-		"parent": "debug"
+		"parent": "debug",
+		"order": 2
 	},
 	"debug\/debug-javascript": {
 		"title": "Using Your Browser to Diagnose JavaScript Errors",
 		"slug": "debug-javascript",
 		"markdown_source": "https:\/\/github.com\/WordPress\/Advanced-administration-handbook\/blob\/main\/debug\/debug-javascript.md",
-		"parent": "debug"
+		"parent": "debug",
+		"order": 3
 	},
 	"debug\/test-driving": {
 		"title": "Test Driving WordPress",
 		"slug": "test-driving",
 		"markdown_source": "https:\/\/github.com\/WordPress\/Advanced-administration-handbook\/blob\/main\/debug\/test-driving.md",
-		"parent": "debug"
+		"parent": "debug",
+		"order": 4
 	},
 	"resources": {
 		"title": "Resources",
 		"slug": "resources",
 		"markdown_source": "https:\/\/github.com\/WordPress\/Advanced-administration-handbook\/blob\/main\/resources\/index.md",
-		"parent": null
+		"parent": null,
+		"order": 110
 	}
 }
