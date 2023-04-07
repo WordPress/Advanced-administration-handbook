@@ -169,7 +169,7 @@ Using a __persistent__ Object Cache helps speed up page load times by saving on 
 For your site to use persistent object caching, your hosting provider must offer you a particular type of server, a cache server. Popular cache servers are [Redis](https://redis.io/) and [Memcached](https://memcached.org/). Ask your hosting provider to help you install and configure a persistent object cache, and they will recommend the right plugin, such as:
 
 - [Redis Object Cache](https://wordpress.org/plugins/redis-cache/) – Provides a persistent Redis object cache backend for WordPress that works with various Redis clients. A Redis server is required.
-- [Memcached Object Cache](https://wordpress.org/extend/plugins/memcached/) – Provides a persistent Memcached object cache backend for WordPress. A memcached server and the [memcache](https://pecl.php.net/package/memcache) extension are required.
+- [Memcached Object Cache](https://wordpress.org/plugins/memcached/) – Provides a persistent Memcached object cache backend for WordPress. A memcached server and the [memcache](https://pecl.php.net/package/memcache) extension are required.
 
 ### Further Reading
 
