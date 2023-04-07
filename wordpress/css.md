@@ -1,5 +1,7 @@
 # CSS
 
+[tip]As of WordPress 6.2, you can add custom CSS in the Styles area of the Site Editor. Learn more about the [site-wide and per-block custom CSS editors](https://wordpress.org/documentation/article/styles-overview/#applying-custom-css).[/tip]
+
 WordPress relies heavily on the presentation styles within CSS. With the use of [Themes](https://wordpress.org/documentation/article/using-themes/), you have an almost infinite choice of layout options. WordPress Themes make it easy to change your website’s appearance, and open up the field to help you [create your own Theme](https://codex.wordpress.org/Theme_Development) and page layout.
 
 [CSS](https://wordpress.org/documentation/article/glossary/#css) stands for **Cascading Style Sheets**. It allows you to store style presentation information (like colors and layout) separate from your HTML structure. This allows precision control of your website layout and makes your pages faster and easier to update.
