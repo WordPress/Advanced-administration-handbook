@@ -40,7 +40,9 @@ WordPress uses different [template files](https://codex.wordpress.org/Templates)
 </style>
 ``` 
 
-`<link rel="stylesheet" type="text/css" media="screen" href="style.css" />`
+```
+<link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+```
 
 Lastly, find all the image files and graphics associated with the style sheet, like background images, icons, bullets, or others, and copy them to your sandbox folder. Links to these items from within your style sheet should have no folders in their links, or link to a subfolder within your sandbox folder, such as:
 
@@ -115,7 +117,7 @@ Using the `.htaccess` file, you need to provide instructions to tell the server 
 
 1. Using a text editor create a blank text file called `.htaccess`.
 2. You need the following information:
-3. - The full path of a directory on your site server that is not accessible to the public (like `http://example.com/public_html/` is accessible but `http://example.com/private/` is not. Use the latter.
+3. - The full path of a directory on your site server that is not accessible to the public (like http://example.com/public_html/ is accessible but http://example.com/private/ is not. Use the latter.
 4. - The name of the secured area such as “Enter Password” or “Secure Area” (this is not important, just simple).
 5. In the file type the following, replacing /full/path/of/directory/ and Security Area with the above information: `AuthUserFile /full/path/of/directory/.htpasswd AuthName "Security Area" AuthType Basic require valid-user`
 6. Save this .htaccess file and upload it to the directory on your server you want hidden and secured. This would be the installation directory for WordPress such as `/wordpress/` or `blog`.
@@ -147,7 +149,7 @@ In order for WordPress to work, it must have access to an Apache server, MySQL/M
 2. This installs by default into `C:/xampplite` or `C:\xampp`.
 3. Start XAMPP from `c:\xampplite` or `c:\xampp`.
 4. You may need to restart your computer to allow apache services to start.
-5. In your browser, go to `http://localhost/xampp`.
+5. In your browser, go to http://localhost/xampp.
 6. In the left column under Tools, click **phpMyAdmin**.
 7. Login is admin.
 8. In **Create new database** enter **wordpress**.
@@ -155,7 +157,14 @@ In order for WordPress to work, it must have access to an Apache server, MySQL/M
 10. Click **Create** button.
 11. Unzip your WordPress download into the `htdocs` directory `– c:\xampp\htdocs\`.
 12. From the folder, open `wp-config-sample.php` in a text editor.
-13. The connection details you need are as follows: // ** MySQL settings ** // `define('DB_NAME', 'wordpress');` // `The name of the database define('DB_USER', 'root');` // `Your MySQL username define('DB_PASSWORD', '');` // `...and password define('DB_HOST', 'localhost');` // 99% chance you won't need to change this
+13. The connection details you need are as follows:
+```
+// ** MySQL settings ** //
+define('DB_NAME', 'wordpress'); // The name of the database
+define('DB_USER', 'root'); // Your MySQL username
+define('DB_PASSWORD', ''); // ...and password
+define('DB_HOST', 'localhost'); // 99% chance you won't need to change this
+```
 14. Save as `wp-config.php`.
 15. Install by going to http://localhost/wordpress/wp-admin/install.php
 
@@ -219,9 +228,16 @@ Copy the backup files again to somewhere safe on your machine so you work on a c
 5. Create a folder inside `C:\xampp\htdocs`. This will be for WordPress.
 6. Copy all your downloaded WordPress files (not the sql backup) into that directory.
 7. With a text editor, open the file `wp-config.php` on your WordPress install.
-8. Change the details for your new MySQL connection: // ** MySQL settings ** // `define('DB_NAME', 'wordpress');` // `The name of the new database you made define('DB_USER', 'root');` // `keep this as is define('DB_PASSWORD', '');` // `keep this empty define('DB_HOST', 'localhost');` // 99% chance you won't need to change this
+8. Change the details for your new MySQL connection:
+```
+// ** MySQL settings ** //
+define('DB_NAME', 'wordpress'); // The name of the new database you made
+define('DB_USER', 'root'); // keep this as is
+define('DB_PASSWORD', ''); // keep this empty
+define('DB_HOST', 'localhost'); // 99% chance you won't need to change this
+```
 9. Your main `index.php` should be in the `/htdocs` folder or in a subdirectory such as `/htdocs/wordpress/`. Write that down.
-10. Start XAMPP by clicking the orange `xampp_start.exe` or using the console program from Program Files \ApacheFriends\XAMPP\XAMPP Control Panel.
+10. Start XAMPP by clicking the orange `xampp_start.exe` or using the console program from `Program Files \ApacheFriends\XAMPP\XAMPP Control Panel`.
 11. Once it is working, click on link in the left side bar for phpMyAdmin.
 12. Create a database. The name should match the one used in your `wp-config.php` file.
 
@@ -230,7 +246,7 @@ Copy the backup files again to somewhere safe on your machine so you work on a c
 Before you begin to import your SQL backup file, you need to change some information inside your `.SQL` file.
 
 1. Using your text editor, open the `.sql` backup database file you downloaded.
-2. Find and replace all the instances of your old URL with your new URL. For instance if your blog address is at `http://example.com/wordpress/`, and your files on your computer are at `/htdocs/wordpress/`, replace it with `http://127.0.0.1/wordpress/`.
+2. Find and replace all the instances of your old URL with your new URL. For instance if your blog address is at http://example.com/wordpress/, and your files on your computer are at `/htdocs/wordpress/`, replace it with http://127.0.0.1/wordpress/.
 3. Click **Save – Do not use Save as**.
 
 ![phpMyAdmin SQL tab](https://user-images.githubusercontent.com/6118303/189546617-26a843c4-e793-4c44-b2a6-13a32b366a8e.png)
@@ -241,9 +257,9 @@ Now it is time to import your sql file. From within the phpMyAdmin on your compu
 
 Once the procedure is complete, your database will be restored and will work just as it did before. If something goes wrong with this last part of the process, it could be that either your backup was corrupted in some way, or something went wrong with the database itself. **Keep your backup files safe!**
 
-If everything so far has gone well, it is now time to visit your blog! In your browser, type in `http://127.0.0.1/wordpress/index.php` or the actual name of the folder you created for your WordPress files.
+If everything so far has gone well, it is now time to visit your blog! In your browser, type in http://127.0.0.1/wordpress/index.php or the actual name of the folder you created for your WordPress files.
 
-If you get a 404, check you have the right place. You do not need to put htdocs or xampp or anything else after the `http://127.0.0.1/` except use your directory name.
+If you get a 404, check you have the right place. You do not need to put htdocs or xampp or anything else after the http://127.0.0.1/ except use your directory name.
 
 WordPress should now function just as it did on the web. You do not need to use the built-in editor in WordPress to alter your files. Just open the files directly in a text editor and edit them as you would any other file. Refreshing your browser’s web page will then show the effects.
 
