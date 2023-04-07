@@ -141,8 +141,8 @@ Note: Make sure the database user name registered to WordPress has permission to
 
 If you want to run the upgrade script manually:
 
-* If WordPress is installed in the root directory, point your browser to: `http://example.com/wp-admin/upgrade.php`
-* If WordPress is installed in its own subdirectory called `blog`, for example, point your browser to: `http://example.com/blog/wp-admin/upgrade.php`
+* If WordPress is installed in the root directory, point your browser to: http://example.com/wp-admin/upgrade.php
+* If WordPress is installed in its own subdirectory called `blog`, for example, point your browser to: http://example.com/blog/wp-admin/upgrade.php
 
 If you experience difficulties with login after your upgrade, it is worth clearing your browser's cookies.
 

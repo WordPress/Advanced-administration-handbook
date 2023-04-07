@@ -6,7 +6,7 @@ For non-programmers or general users, these options can be used to show detailed
 
 ## Example wp-config.php for Debugging
 
-The following code, inserted in your [wp-config.php](https://wordpress.org/documentation/article/editing-wp-config-php/) file, will log all errors, notices, and warnings to a file called `debug.log` in the wp-content directory. It will also hide the errors so they do not interrupt page generation.
+The following code, inserted in your [wp-config.php](https://wordpress.org/documentation/article/editing-wp-config-php/) file, will log all errors, notices, and warnings to a file called `debug.log` in the wp-content directory. It will also hide the errors so they do not interrupt page generation.
 
 ```
 // Enable WP_DEBUG mode
@@ -29,7 +29,11 @@ define( 'WP_DEBUG_DISPLAY', false );
 define( 'SCRIPT_DEBUG', true );
 ```
 
-**NOTE**: You must insert this **BEFORE** `/* That's all, stop editing! Happy blogging. */` in the [wp-config.php](https://wordpress.org/documentation/article/editing-wp-config-php/) file.
+**NOTE**: You must insert this **BEFORE**
+```
+/* That's all, stop editing! Happy blogging. */
+```
+in the [wp-config.php](https://wordpress.org/documentation/article/editing-wp-config-php/) file.
 
 ## WP_DEBUG
 

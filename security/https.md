@@ -72,9 +72,9 @@ You need a (virtual) host configured for the secure server in addition to the no
 
 Please ask your ISP to set up a secure virtual host for you, or if you have administrative access set up your own. Note that [you cannot use name based virtual hosting to identify different SSL servers](http://httpd.apache.org/docs-2.0/ssl/ssl_faq.html#vhosts2).
 
-##### Rewrite Rules For The Insecure Host {#rewrite-rules-for-the-insecure-host}
+**Rewrite Rules For The Insecure Host**
 
-In the `.htaccess` or virtual host stanza in `httpd.conf` for your insecure host, add this rewrite rule to automatically go to the secure host when you browse to `http://mysite.com/wp-admin/` or `http://mysite.com/wp-login.php`
+In the `.htaccess` or virtual host stanza in `httpd.conf` for your insecure host, add this rewrite rule to automatically go to the secure host when you browse to http://example.com/wp-admin/ or http://example.com/wp-login.php
 
 This should go above the main wordpress rewrite block.
 
@@ -88,7 +88,7 @@ If you are using permalink rewrite rules, this line must come before `RewriteRul
 
 An important idea in this block is using `THE_REQUEST`, which ensures only actual http requests are rewritten and not local direct file requests, like an include or fopen.
 
-##### Rewrite Rules For Secure Host (Optional) {#rewrite-rules-for-secure-host-optional}
+**Rewrite Rules For Secure Host (Optional)**
 
 These rewrite rules are optional. They disable access to the public site over a secure connection. If you wish to remain logged in to the public portion of your site using the plugin below, you must _not_ add these rules, as the plugin disables the cookie over unencrypted connections.
 
@@ -101,11 +101,11 @@ RewriteRule ^/(.*) http://www.example.com/$1 [QSA,L]
 
 The first rule excludes the wp-admin directory from the next rule, which shuffles traffic to the secure site over to the insecure site, to keep things nice and seamless for your audience.
 
-##### Setting WordPress URI {#setting-wordpress-uri}
+**Setting WordPress URI**
 
-For some plugins to work, and for other reasons, you may wish to set your WordPress URI in options to reflect the https protocol by making this setting `https://example.com`. Your blog address should not change.
+For some plugins to work, and for other reasons, you may wish to set your WordPress URI in options to reflect the https protocol by making this setting https://example.com. Your blog address should not change.
 
-##### Example Config Stanzas {#example-config-stanzas}
+**Example Config Stanzas**
 
 NOTE: The below config is not 100% compatible with WordPress 2.8+, WordPress 2.8 uses some files from the wp-includes folder. The redirection that the first set of Rewrite rules introduces may cause security warnings for some users. See [#10079](https://core.trac.wordpress.org/ticket/10079) for more information.
 
@@ -129,7 +129,7 @@ NOTE: The below config is not 100% compatible with WordPress 2.8+, WordPress 2.8
 </VirtualHost>
 ```
 
-**Insecure site**
+_Insecure site_
 
 ```
 <VirtualHost *>
@@ -153,23 +153,23 @@ NOTE: The below config is not 100% compatible with WordPress 2.8+, WordPress 2.8
 </VirtualHost>
 ```
 
-##### Rewrite for Login and Registration {#rewrite-for-login-and-registration}
+**Rewrite for Login and Registration**
 
 It is probably a good idea to utilize SSL for user logins and registrations. Consider the following substitute RewriteRules.
 
-###### Insecure
+_Insecure_
 
 ```
 RewriteRule ^/wp-(admin|login|register)(.*) https://www.example.com/wp-$1$2 [C]
 ```
 
-###### Secure
+_Secure_
 
 ```
 RewriteRule !^/wp-(admin|login|register)(.*) - [C]
 ```
 
-##### Rewrite for sites running on port 443 or port 80 {#rewrite-for-sites-running-on-port-443-or-port-80}
+**Rewrite for sites running on port 443 or port 80**
 
 ```
 # BEGIN WordPress
@@ -217,7 +217,7 @@ More testing, preferably with a packet sniffer and some hardcore network analysi
 
 #### Limitations {#limitations}
 
-The author assumes (but hasn't checked) that if the user has stored cookies/told their browser to remember passwords (not based on form fields but if using certain external auth mechanism) and hits `http://www.example.com/wp-admin/`, those packets are sent in the clear and the cookie/auth headers could be intercepted. Therefore, to ensure maximum security, the user should explicitly use the https host or always log in at the beginning of new sessions.
+The author assumes (but hasn't checked) that if the user has stored cookies/told their browser to remember passwords (not based on form fields but if using certain external auth mechanism) and hits http://www.example.com/wp-admin/, those packets are sent in the clear and the cookie/auth headers could be intercepted. Therefore, to ensure maximum security, the user should explicitly use the https host or always log in at the beginning of new sessions.
 
 ## Changelog
 
