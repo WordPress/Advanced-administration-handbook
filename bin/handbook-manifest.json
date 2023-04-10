@@ -300,12 +300,19 @@
 		"parent": null,
 		"order": 60
 	},
+	"plugins\/editor-screen": {
+		"title": "File Editor Screen",
+		"slug": "editor-screen",
+		"markdown_source": "https:\/\/github.com\/WordPress\/Advanced-administration-handbook\/blob\/main\/plugins\/editor-screen.md",
+		"parent": "plugins",
+		"order": 1
+	},
 	"plugins\/mu-plugins": {
 		"title": "Must Use Plugins",
 		"slug": "mu-plugins",
 		"markdown_source": "https:\/\/github.com\/WordPress\/Advanced-administration-handbook\/blob\/main\/plugins\/mu-plugins.md",
 		"parent": "plugins",
-		"order": 1
+		"order": 2
 	},
 	"themes": {
 		"title": "Themes",
