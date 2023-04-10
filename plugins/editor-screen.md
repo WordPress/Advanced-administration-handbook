@@ -7,9 +7,9 @@ You can find this editor in the following places depending on your theme:
 *   If you are using a [Block theme](https://wordpress.org/documentation/article/block-themes/), this editor will be listed under Tools.
 *   If you are using a Classic theme, this editor will be listed under Appearance.
 
-![Edit Plugins Screen](edit-plugins.png)
+![Edit Plugins Screen](https://raw.githubusercontent.com/WordPress/Advanced-administration-handbook/main/assets/edit-plugins.png)
 
-![Edit Plugins warning](edit-plugins-warning.png)
+![Edit Plugins warning](https://raw.githubusercontent.com/WordPress/Advanced-administration-handbook/main/assets/edit-plugins-warning.png)
 
 ## Edit Plugins
 
