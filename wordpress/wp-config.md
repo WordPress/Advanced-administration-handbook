@@ -229,7 +229,7 @@ Note: When `development` is returned by [wp_get_environment_type()](https://deve
 
 ### SCRIPT_DEBUG {#script-debug}
 
-[SCRIPT_DEBUG](https://developer.wordpress.org/advanced-administration/debug/debug-wordpress/) is a related constant that will force WordPress to use the "dev" versions of scripts and stylesheets in `wp-includes/js`, `wp-includes/css`, `wp-admin/js`, and `wp-admin/css` will be loaded instead of the `.min.css` and `.min.js` versions.. If you are planning on modifying some of WordPress' built-in JavaScript or Cascading Style Sheets, you should add the following code to your config file:
+[SCRIPT_DEBUG](https://developer.wordpress.org/advanced-administration/debug/debug-wordpress/) is a related constant that will force WordPress to use the "dev" versions of scripts and stylesheets in `wp-includes/js`, `wp-includes/css`, `wp-admin/js`, and `wp-admin/css` will be loaded instead of the `.min.css` and `.min.js` versions. If you are planning on modifying some of WordPress' built-in JavaScript or Cascading Style Sheets, you should add the following code to your config file:
 
 ```
 define( 'SCRIPT_DEBUG', true );
