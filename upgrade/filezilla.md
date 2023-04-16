@@ -51,7 +51,7 @@ If you had a problem, then it is time to go troubleshooting!
 Look at the top area of FileZilla main window and check the messages.
 
 1. If there was no attempt to connect, then the ftp address is wrong. All it needs is one character to be incorrect and it will fail. Click the red X, break the connection and click the Site Manager to check what you entered.
-2. If it says that the user does not exist or _Incorrect Login_ and so on, check the Site Manager setting and ensure that it reflects what your FTP account and password details provided by your host says, or use the webserver administration interface provided to you by your host to re-check the existence of the FTP account. Check your password carefully. It is case sensitive(capitals and small letters). You may want to ask your web host for some assistance, too.
+2. If it says that the user does not exist or _Incorrect Login_ and so on, check the Site Manager setting and ensure that it reflects what your FTP account and password details provided by your host says, or use the webserver administration interface provided to you by your host to re-check the existence of the FTP account. Check your password carefully. It is case sensitive (capitals and small letters). You may want to ask your web host for some assistance, too.
 3. If it says _Could not retrieve directory listing_ you may need to change the Transfer Setting. From Site Manager, select your FTP Server and click *Transfer Settings*’ tab. Select Passive”’ from Transfer mode and click OK.
 
 ### Resources
