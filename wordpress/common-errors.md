@@ -4,7 +4,7 @@ If you are encountering a WordPress error message or white screen, don't panic. 
 
 This page lists the most common WordPress errors experienced by WordPress users, and provides a starting point for fixing them. At [WordPress Support](https://wordpress.org/documentation/), you will also find links to more detailed pages or forums where a volunteer will be there to help.
 
-## The White Screen of Death {}#the-white-screen-of-death}
+## The White Screen of Death {#the-white-screen-of-death}
 
 Both PHP errors and database errors can manifest as a white screen, a blank screen with no information, commonly known in the WordPress community as the _WordPress White Screen of Death_ (WSOD).
 
