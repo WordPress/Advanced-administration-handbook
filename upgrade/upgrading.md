@@ -4,7 +4,7 @@
 
 This page contains a more detailed version of [the upgrade instructions](https://wordpress.org/documentation/article/updating-wordpress/).
 
-### Detailed Instructions {#detailed-instructions)}
+### Detailed Instructions {#detailed-instructions}
 
 #### Overview of the Upgrade Process {#overview-of-the-upgrade-process}
 
