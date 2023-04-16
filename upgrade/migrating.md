@@ -30,7 +30,7 @@ define( 'WP_SITEURL', 'http://example.com' );
 
 This is not necessarily the best fix, it's just hard-coding the values into the site itself. You won't be able to edit them on the General settings page anymore when using this method.
 
-####Edit functions.php
+#### Edit functions.php
 
 If you have access to the site via FTP, then this method will help you quickly get a site back up and running, if you changed those values incorrectly.
 
