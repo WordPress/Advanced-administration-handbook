@@ -83,7 +83,7 @@ Provide your server's IP address or hostname, enter your root password, or just 
 
 ### WP Toolkit 
 
-WordPress Toolkit is a single management interface that enables you to easily install, configure, and manage WordPress. It is available if the WordPress Toolkit extension is installed in Plesk. WP Toolkit can install, configure, and manage WordPress version 3.7 or later.
+WP Toolkit is a single management interface that enables you to easily install, configure, and manage WordPress. It is available if the WP Toolkit extension is installed in Plesk. WP Toolkit can install, configure, and manage WordPress version 3.7 or later.
 
 ### Installing WordPress
 

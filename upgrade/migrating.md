@@ -30,7 +30,7 @@ define( 'WP_SITEURL', 'http://example.com' );
 
 This is not necessarily the best fix, it's just hard-coding the values into the site itself. You won't be able to edit them on the General settings page anymore when using this method.
 
-####Edit functions.php
+#### Edit functions.php
 
 If you have access to the site via FTP, then this method will help you quickly get a site back up and running, if you changed those values incorrectly.
 
@@ -297,7 +297,7 @@ If you do a search and replace on your entire database to change the URLs, you c
 
 1. Use the [Velvet Blues Update URLs](https://wordpress.org/plugins/velvet-blues-update-urls/) or [Better Search Replace](https://wordpress.org/plugins/better-search-replace/) plugins if you can access your Dashboard.
 2. Use [WP-CLI's search-replace](http://wp-cli.org/commands/search-replace/) if your hosting provider (or you) have installed WP-CLI.
-3. Use the [Search and Replace for WordPress Databases Script](https://interconnectit.com/products/search-and-replace-for-wordpress-databases/) to safely change all instances on your old domain or path to your new one. (** only use this option if you are comfortable with database administration ** )
+3. Use the [Search and Replace for WordPress Databases Script](https://interconnectit.com/products/search-and-replace-for-wordpress-databases/) to safely change all instances on your old domain or path to your new one. (**only use this option if you are comfortable with database administration** )
 
 Note: Only perform a search and replace on the wp_posts table.
 Note: Search and Replace from Interconnectit is a 3rd party script
