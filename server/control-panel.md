@@ -1,18 +1,14 @@
 # Control Panels
 
-This document describes how to install WordPress® in the cPanel & WHM and Plesk control panels using WP Toolkit.
+## WP Toolkit for cPanel & WHM and Plesk
 
-## WP Toolkit 
+WP Toolkit is a single management interface that allows you to install, configure, and manage WordPress® easily. WP Toolkit can install, configure, and manage WordPress versions 4.9 or later.
 
-WP Toolkit is a single management interface that allows you to install, configure, and manage WordPress easily. WP Toolkit can install, configure, and manage WordPress versions 4.9 or later.
-
-cPanel & WHM versions 102 and above install WP Toolkit by default. It is available in Plesk if the server administrator has installed the WP Toolkit extension. The WP Toolkit extension is free with the Web Pro and the Web Host Plesk editions and is available for a fee for the Web Admin edition.
-
-To install WordPress, WP Toolkit retrieves data from wordpress.org. By default, if WP Toolkit cannot establish an initial connection in 15 seconds, it considers wordpress.org unavailable.
+cPanel & WHM versions 102 and above install WP Toolkit by default. WP Toolkit is available in Plesk if the server administrator has installed the WP Toolkit extension.
 
 ## cPanel & WHM
 
-This tutorial provides a step-by-step example of how to install WordPress in cPanel & WHM using WP Toolkit. For other options to install WordPress in cPanel & WHM, read cPanel's [How to Install WordPress with cPanel](https://docs.cpanel.net/knowledge-base/third-party/how-to-install-wordpress-with-cpanel/) documentation.
+This tutorial describes how to install WordPress in the cPanel & WHM control panel using WP Toolkit. For other options to install WordPress in cPanel & WHM, read cPanel's [How to Install WordPress with cPanel](https://docs.cpanel.net/knowledge-base/third-party/how-to-install-wordpress-with-cpanel/) documentation.
 
 To install WordPress via WP Toolkit, perform the following actions:
 
@@ -87,6 +83,6 @@ The controls below give you easy access to the following settings and tools:
 
 ## Changelog
 
-- 2023-04-20: Removed outdated manual instructions from cPanel section and combined common WP Toolkit info for cPanel and Plesk.
+- 2023-04-25: Removed outdated manual instructions from cPanel section and combined common WP Toolkit info for cPanel and Plesk.
 - 2023-01-26: Original copied from [Using cPanel](https://wordpress.org/documentation/article/using-cpanel/).
 - 2022-09-11: Original copied for Plesk.
