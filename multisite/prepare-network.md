@@ -31,7 +31,7 @@ Administration managing sites
 
 You can also choose whether or not to allow end users to create new sites on demand. Domain-based on-demand sites are normally only possible using subdomains like `site1.example.com` and `site2.example.com`. Path-based on-demand sites are also possible.
 
-The multisite installation process uses different terminology. A _sub-domain install_ creates a domain-based network, even though you might use separate mapped domains, and not subdomains, for your sites. A _sub-directory install_ creates a path-based network, even though it does not use file system directories. If you want to use a _sub-domain_ install, you must install WordPress in the root of your webpath (i.e. domain.com) however it does _not_ need to be installed in the root (i.e. /public_html/) if you choose to run WordPress from it's own directory.
+The multisite installation process uses different terminology. A _sub-domain install_ creates a domain-based network, even though you might use separate mapped domains, and not subdomains, for your sites. A _sub-directory install_ creates a path-based network, even though it does not use file system directories. If you want to use a _sub-domain_ install, you must install WordPress in the root of your webpath (i.e. domain.com) however it does _not_ need to be installed in the root (i.e. /public_html/) if you choose to run WordPress from its own directory.
 
 After the multisite network installation is complete, WordPress uses the terminology _domain_ and _path_ for each site's domain and path in the Network Admin user interface. A super admin (that is, a multisite network administrator) can edit sites' domain and path settings, although it is unusual to do this to established sites because it changes their URLs.
 
