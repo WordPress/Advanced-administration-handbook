@@ -157,7 +157,7 @@ chmod -v 766 DIR
 chmod -v 767 DIR
 ```
 
-If those fail to allow you to write, try them all again in order, except this time replace -v with -R, which will recursively change each file located in the folder. If after that you still cant write, you may now try 777.
+If those fail to allow you to write, try them all again in order, except this time replace -v with -R, which will recursively change each file located in the folder. If after that you still can't write, you may now try 777.
 
 ### [About Chmod](#about-chmod)
 

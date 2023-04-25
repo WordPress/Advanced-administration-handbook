@@ -69,7 +69,7 @@ The example shows:
 * _hostname_ will usually be localhost. If you don't know what this value should be, check with your system administrator if you are not the admin for your WordPress host. If you are the system admin, consider using a non-root account to administer your database.
 * _password_ should be a difficult-to-guess password, ideally containing a combination of upper- and lower-case letters, numbers, and symbols. One good way of avoiding the use of a word found in a dictionary is to use the first letter of each word in a phrase that you find easy to remember.
 
-If you need to write these values somewhere, avoid writing them in the system that contains the things protected by them. You need to remember the value used for _databasename_, _wordpressusername_, _hostname_, and _password_. Of course, since they are already in (or will be shortly) your wp-config.php file, there is no need to put them somewhere else, too.
+If you need to write these values somewhere, avoid writing them in the system that contains the things protected by them. You need to remember the value used for _databasename_, _wordpressusername_, _hostname_, and _password_. Of course, since they are already (or will be shortly) in your wp-config.php file, there is no need to put them somewhere else, too.
 
 ## Using Plesk
 
