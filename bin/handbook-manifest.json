@@ -104,12 +104,19 @@
 		"parent": "server",
 		"order": 6
 	},
+	"server\/web-server\/httpd": {
+		"title": "Apache HTTPD / .htaccess",
+		"slug": "httpd",
+		"markdown_source": "https:\/\/github.com\/WordPress\/Advanced-administration-handbook\/blob\/main\/server\/httpd.md",
+		"parent": "web-server",
+		"order": 1
+	},
 	"server\/web-server\/nginx": {
 		"title": "Nginx",
 		"slug": "nginx",
 		"markdown_source": "https:\/\/github.com\/WordPress\/Advanced-administration-handbook\/blob\/main\/server\/nginx.md",
 		"parent": "web-server",
-		"order": 1
+		"order": 2
 	},
 	"server\/control-panel": {
 		"title": "Control Panels",
@@ -139,68 +146,82 @@
 		"parent": "wordpress",
 		"order": 2
 	},
+	"wordpress\/post-formats": {
+		"title": "Post Formats",
+		"slug": "post-formats",
+		"markdown_source": "https:\/\/github.com\/WordPress\/Advanced-administration-handbook\/blob\/main\/wordpress\/post-formats.md",
+		"parent": "wordpress",
+		"order": 3
+	},
 	"wordpress\/cookies": {
 		"title": "Cookies",
 		"slug": "cookies",
 		"markdown_source": "https:\/\/github.com\/WordPress\/Advanced-administration-handbook\/blob\/main\/wordpress\/cookies.md",
 		"parent": "wordpress",
-		"order": 3
+		"order": 4
 	},
 	"wordpress\/update-services": {
 		"title": "Update Services",
 		"slug": "update-services",
 		"markdown_source": "https:\/\/github.com\/WordPress\/Advanced-administration-handbook\/blob\/main\/wordpress\/update-services.md",
 		"parent": "wordpress",
-		"order": 4
+		"order": 5
 	},
 	"wordpress\/edit-files": {
 		"title": "Editing Files",
 		"slug": "edit-files",
 		"markdown_source": "https:\/\/github.com\/WordPress\/Advanced-administration-handbook\/blob\/main\/wordpress\/edit-files.md",
 		"parent": "wordpress",
-		"order": 5
+		"order": 6
 	},
 	"wordpress\/css": {
 		"title": "CSS",
 		"slug": "css",
 		"markdown_source": "https:\/\/github.com\/WordPress\/Advanced-administration-handbook\/blob\/main\/wordpress\/css.md",
 		"parent": "wordpress",
-		"order": 6
+		"order": 7
 	},
 	"wordpress\/feeds": {
 		"title": "Feeds",
 		"slug": "feeds",
 		"markdown_source": "https:\/\/github.com\/WordPress\/Advanced-administration-handbook\/blob\/main\/wordpress\/feeds.md",
 		"parent": "wordpress",
-		"order": 7
+		"order": 8
 	},
 	"wordpress\/multilingual": {
 		"title": "Multilingual WordPress",
 		"slug": "multilingual",
 		"markdown_source": "https:\/\/github.com\/WordPress\/Advanced-administration-handbook\/blob\/main\/wordpress\/multilingual.md",
 		"parent": "wordpress",
-		"order": 8
+		"order": 9
 	},
 	"wordpress\/oembed": {
 		"title": "oEmbed",
 		"slug": "oembed",
 		"markdown_source": "https:\/\/github.com\/WordPress\/Advanced-administration-handbook\/blob\/main\/wordpress\/oembed.md",
 		"parent": "wordpress",
-		"order": 9
+		"order": 10
 	},
 	"wordpress\/loopback": {
 		"title": "Loopbacks",
 		"slug": "loopback",
 		"markdown_source": "https:\/\/github.com\/WordPress\/Advanced-administration-handbook\/blob\/main\/wordpress\/loopback.md",
 		"parent": "wordpress",
-		"order": 10
+		"order": 11
+	},
+	"wordpress\/import": {
+		"title": "Importing Content",
+		"slug": "import",
+		"markdown_source": "https:\/\/github.com\/WordPress\/Advanced-administration-handbook\/blob\/main\/wordpress\/import.md",
+		"parent": "wordpress",
+		"order": 12
 	},
 	"wordpress\/common-errors": {
 		"title": "Common errors",
 		"slug": "common-errors",
 		"markdown_source": "https:\/\/github.com\/WordPress\/Advanced-administration-handbook\/blob\/main\/wordpress\/common-errors.md",
 		"parent": "wordpress",
-		"order": 11
+		"order": 13
 	},
 	"upgrade": {
 		"title": "Upgrading / Migration",
@@ -286,6 +307,13 @@
 		"parent": "multisite",
 		"order": 5
 	},
+	"multisite\/admin\/settings": {
+		"title": "Network Admin",
+		"slug": "settings",
+		"markdown_source": "https:\/\/github.com\/WordPress\/Advanced-administration-handbook\/blob\/main\/multisite\/settings.md",
+		"parent": "admin",
+		"order": 1
+	},
 	"multisite\/sites-multisite": {
 		"title": "Migrate WordPress sites into WordPress Multisite",
 		"slug": "sites-multisite",
@@ -348,6 +376,20 @@
 		"markdown_source": "https:\/\/github.com\/WordPress\/Advanced-administration-handbook\/blob\/main\/security\/backup.md",
 		"parent": "security",
 		"order": 3
+	},
+	"security\/backup\/database": {
+		"title": "Backing Up Your Database",
+		"slug": "database",
+		"markdown_source": "https:\/\/github.com\/WordPress\/Advanced-administration-handbook\/blob\/main\/security\/backup-database.md",
+		"parent": "backup",
+		"order": 1
+	},
+	"security\/backup\/files": {
+		"title": "Backing Up Your WordPress Files",
+		"slug": "files",
+		"markdown_source": "https:\/\/github.com\/WordPress\/Advanced-administration-handbook\/blob\/main\/security\/backup-files.md",
+		"parent": "backup",
+		"order": 2
 	},
 	"security\/https": {
 		"title": "HTTPS",
@@ -432,5 +474,12 @@
 		"markdown_source": "https:\/\/github.com\/WordPress\/Advanced-administration-handbook\/blob\/main\/resources\/index.md",
 		"parent": null,
 		"order": 110
+	},
+	"resources\/faq": {
+		"title": "FAQ Troubleshooting",
+		"slug": "faq",
+		"markdown_source": "https:\/\/github.com\/WordPress\/Advanced-administration-handbook\/blob\/main\/resources\/faq.md",
+		"parent": "resources",
+		"order": 1
 	}
 }

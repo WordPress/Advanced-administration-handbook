@@ -128,7 +128,7 @@ When combined with a system level page cache such as Varnish, this can be quite 
 
 **W3 TOTAL CACHE**
 
-[W3 Total Cache](https://wordpress.org/extend/w3-total-cache/) (W3TC) is the latest generation in WordPress performance plugins, combining the research of [web development authorities](http://developer.yahoo.com/performance/rules.html) to provide an optimal user experience for WordPress sites. These detailed guides walk you through.
+[W3 Total Cache](https://wordpress.org/plugins/w3-total-cache/) (W3TC) is the latest generation in WordPress performance plugins, combining the research of [web development authorities](http://developer.yahoo.com/performance/rules.html) to provide an optimal user experience for WordPress sites. These detailed guides walk you through.
 
 W3TC is unique in its ability to optimize server side and client side performance, adding functionality otherwise unavailable natively:
 

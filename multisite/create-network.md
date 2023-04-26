@@ -28,7 +28,7 @@ If you plan to [run WordPress out of its own directory](https://developer.wordpr
 
 To enable the Network Setup menu item, you must first define multisite in the [wp-config.php](https://developer.wordpress.org/advanced-administration/wordpress/wp-config/) file.
 
-Open up `wp-config.php` and add this line **above** where it says `/* That's all, stop editing! Happy blogging. */`. If it doesn't say that anywhere, then add the line somewhere above the first line that begins with `require` or `include`:
+Open up `wp-config.php` and add this line **above** where it says `/* That's all, stop editing! Happy publishing. */`. If it doesn't say that anywhere, then add the line somewhere above the first line that begins with `require` or `include`:
 
 ```
 /* Multisite */

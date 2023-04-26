@@ -1,6 +1,6 @@
 # FAQ Troubleshooting
 
-## Why can't I see my posts? All I see is Sorry, no posts match your criteria? {#why-cant-i-see-my-posts-all-i-see-is-sorry-no-posts-match-your-criteria}
+## Why can't I see my posts? All I see is Sorry, no posts match your criteria?
 
 Clearing your browser cache and cookies may resolve this problem. Also, check your `search.php` and `index.php` template files for errors.
 
@@ -8,7 +8,7 @@ See also:
 
 * [I Make Changes and Nothing Happens](https://wordpress.org/support/topic/i-make-changes-and-nothing-happens/)
 
-## How do I find more help? {#how-do-i-find-more-help}
+## How do I find more help?
 
 There are various resources that will help you find more help with WordPress, in addition to these [FAQ](https://codex.wordpress.org/FAQ).
 
@@ -18,7 +18,7 @@ There are various resources that will help you find more help with WordPress, in
 * [Resources and Technical Articles about WordPress](https://codex.wordpress.org/Technical%20Articles)
 * [Installation Problems](https://codex.wordpress.org/Troubleshooting#Installation_Problems)
 
-## Where can I find help with the CSS problems I'm having? {#where-can-i-find-help-with-the-css-problems-im-having}
+## Where can I find help with the CSS problems I'm having?
 
 The following are articles that will help you troubleshoot and solve many of your [CSS](https://wordpress.org/documentation/article/css/) problems:
 
@@ -28,7 +28,7 @@ The following are articles that will help you troubleshoot and solve many of you
 * [CSS Troubleshooting](https://codex.wordpress.org/CSS%20Troubleshooting)
 * [WordPress CSS Information and Resources](https://wordpress.org/documentation/article/css/)
 
-## Why do I get an error message about Sending Referrers? {#why-do-i-get-an-error-message-about-sending-referrers}
+## Why do I get an error message about Sending Referrers?
 
 If you got this message when trying to save a post, consider checking [Administration](https://wordpress.org/documentation/article/administration-screens/) > [Settings](https://wordpress.org/documentation/article/administration-screens/) > [General](https://wordpress.org/documentation/article/settings-general-screen/) and make sure both your **WordPress address (URI)** and the **Blog address (URI)** do not use 'www'. For example, instead of https://www.example.com use https://example.com in those fields.
 
@@ -36,13 +36,13 @@ See also:
 
 * [Enable Sending Referrers](https://codex.wordpress.org/Enable%20Sending%20Referrers)
 
-## How do I empty a database table? {#how-do-i-empty-a-database-table}
+## How do I empty a database table?
 
 See also:
 
 * [Emptying a Database Table](https://developer.wordpress.org/advanced-administration/server/empty-database/)
 
-## How do I fix the following error SQL/DB Error errcode 13 Can't create/write to file? {#how-do-i-fix-the-following-error-sql-db-error-errcode-13-cant-create-write-to-file}
+## How do I fix the following error SQL/DB Error errcode 13 Can't create/write to file?
 
 **Problem:** The MySQL variable `tmpdir` is set to a directory that cannot be written to when using PHP to access MySQL.
 
@@ -127,17 +127,17 @@ If the error message states: `Warning: Cannot modify header information - header
 
 In case you've used the function: [wp_redirect()](https://developer.wordpress.org/reference/functions/wp_redirect/) or tried to use a header redirect after the header (or any content at all was sent) that error message will pop. Instead use javascript redirection if needed.
 
-## Why doesn't my "Publish" or "Save Draft" button work? {#why-doesnt-my-publish-or-save-draft-button-work}
+## Why doesn't my "Publish" or "Save Draft" button work?
 
 To resolve this and similar issues, disable your plugins one at a time until you find the source of the issue. Generally, this will be due to two or more plugins trying to use the same resources (for example, JQuery or other Java-based tools).
 
 In addition, it could be that there is a problem with your browser. A common resolution is to empty the browser's cache. Please consult the documentation for your preferred browser to learn how to do this.
 
-## Why can't I see the visual rich editor or Quicktag buttons when using Apple's Safari browser? {#why-cant-i-see-the-visual-rich-editor-or-quicktag-buttons-when-using-apples-safari-browser}
+## Why can't I see the visual rich editor or Quicktag buttons when using Apple's Safari browser?
 
 Update your Safari browser. Early versions of Safari are not supported.
 
-## E-mailed passwords are not being received {#e-mailed-passwords-are-not-being-received}
+## E-mailed passwords are not being received
 
 **Description:** When users try to register with your blog or change their passwords by entering their username and/or email, WordPress indicates that their password has been emailed to them, but it is never received.
 
@@ -161,7 +161,7 @@ If your system email failed the SPF check, you can set up the credentials if you
 
 To get WordPress to send the proper DKIM keys, hook the `'phpmailer_init'` action. You are passed the `$phpmailer` object. Set the necessary properties and return the object. See the class source code for more information. It's on _wp-includes/class-phpmailer.php_.
 
-## I used the Quicktag <!–nextpage–> in a post so why doesn't it work? {#i-used-the-quicktag-nextpage-in-a-post-so-why-doesnt-it-work}
+## I used the Quicktag `nextpage` in a post so why doesn't it work?
 
 In some [Themes](https://wordpress.org/documentation/article/worik-with-themes/), such as the WordPress Classic Theme, you may see the `<!–nextpage–>` work properly on your main page, but other [Themes](https://wordpress.org/documentation/article/worik-with-themes/), such as the WordPress default Theme, may only show the _page break_ when viewing the posts individually. It may be necessary to change your Theme's [template](https://codex.wordpress.org/Templates) _page.php_ or _index.php_ file to make this feature work according to your wishes. You'll need to add the following:
 
@@ -169,7 +169,7 @@ In some [Themes](https://wordpress.org/documentation/article/worik-with-themes/)
 <?php wp_link_pages(); ?>
 ```
 
-## MySQL Error 28 {#mysql-error-28}
+## MySQL Error 28
 
 It could be because:
 
@@ -178,7 +178,7 @@ It could be because:
 
 This is a MySQL error and has nothing to do with WordPress directly; you should contact your host about it. Some users have reported that running a "repair table" command in [phpMyAdmin](https://developer.wordpress.org/advanced-administration/upgrade/phpmyadmin/) fixed the problem.
 
-## Why are the Quote Marks escaped or not escaped? {#why-are-the-quote-marks-escaped-or-not-escaped}
+## Why are the Quote Marks escaped or not escaped?
 
 If you write plugins or make advanced custom templates, you may eventually find yourself dealing with data in the database. WordPress _usually_ manages this data for you in such a way that it is immediately usable. There are circumstances though (especially if you are dealing directly with the database without using WordPress) where you will experience weirdness.
 
@@ -228,7 +228,7 @@ Or reset your plugins folder via [FTP](https://developer.wordpress.org/advanced-
 3. Login to your WordPress administration plugins page (`/wp-admin/plugins.php`) – this will disable any plugin that is "missing".
 4. Via FTP or your host's file manager, rename `plugins.hold` back to `plugins`.
 
-## How to clear the "Briefly unavailable for scheduled maintenance" message after doing automatic upgrade? {#how-to-clear-the-briefly-unavailable-for-scheduled-maintenance-message-after-doing-automatic-upgrade)}
+## How to clear the "Briefly unavailable for scheduled maintenance" message after doing automatic upgrade?
 
 As part of the automatic upgrade WordPress places a file named `.maintenance` in the blog **base** folder (folder that contains the `wp-admin` folder). If that file exists, then visitors will see the message **Briefly unavailable for scheduled maintenance. Check back in a minute.**
 
@@ -236,7 +236,7 @@ To stop that message from being displayed to visitors, just delete the `.mainten
 
 Note the core automatic upgrade feature was added with [Version 2.7](https://wordpress.org/documentation/wordpress-version/version-2-7/).
 
-## How to fix 404 error when using Pretty Permalinks? {#how-to-fix-404-error-when-using-pretty-permalinks}
+## How to fix 404 error when using Pretty Permalinks?
 
 If an error 404 occurs when using the [Pretty Permalink](https://wordpress.org/documentation/article/introduction-to-blogging/#pretty-permalinks) choices such as **Day and Name** in [Administration](https://wordpress.org/documentation/article/administration-screens/) > [Settings](https://wordpress.org/documentation/article/administration-screens/#permalinks) > [Settings_Permalinks_Screen](https://wordpress.org/documentation/article/settings-permalinks-screen/) it could be a result of the **mod_rewrite** module not being activated/installed. The solution is to activate **mod_rewrite** for the Apache web-server. Check the `apache/conf/httpd.conf` file for the line `# LoadModule rewrite_module modules/mod_rewrite.so` and delete the `#` in front of the line. Then stop Apache and start it again. **Note:** you may have to ask your host to activate **mod_rewrite**.
 
@@ -267,12 +267,12 @@ If that doesn't work, try:
 5. Login as 'admin'
 6. Delete 'newadmin' user and assign posts to 'admin'
 
-## Why is the wrong author name displayed for a post on a blog? {#why-is-the-wrong-author-name-displayed-for-a-post-on-a-blog}
+## Why is the wrong author name displayed for a post on a blog?
 
 This problem is usually solved by the same solution as is presented in the question right before this one: 
 [Why isn't the admin user listed as an author when editing posts?](https://wordpress.org/documentation/article/faq-troubleshooting/#why-isnt-the-admin-user-listed-as-an-author-when-editing-posts).
 
-## An update was just released, so why does my blog not recognize the update is available? {#an-update-was-just-released-so-why-does-my-blog-not-recognize-the-update-is-available}
+## An update was just released, so why does my blog not recognize the update is available?
 
 When an update is released, notification of that release is displayed at the top administration screens saying **WordPress x.x.x is available! Please update now.** Not every blog will see that message at the same time. Your blog is programmed to check for updates every 12 hours, but the timing of that check is purely random. So if your blog just checked for updates minutes before an update was released, you won't see the update message until your blog checks for updates 12 hours later.
 
@@ -282,7 +282,7 @@ Relevant discussion thread:
 
 * ["2.7.1 Please update now" NOT showing up](https://wordpress.org/support/topic/271-please-update-now-not-showing-up-1/)
 
-## Why did I lose custom changes to the WordPress Default Theme during the last automatic upgrade? {#why-did-i-lose-custom-changes-to-the-wordpress-default-theme-during-the-last-automatic-upgrade}
+## Why did I lose custom changes to the WordPress Default Theme during the last automatic upgrade?
 
 A core upgrade copies all the new files from the distribution over the old ones, so if you changed existing files in the WordPress default theme (e.g. `wp-content/themes/twentysixteen/style.css`), those changes got overwritten with the new version of that file.
 
@@ -297,7 +297,7 @@ See also:
 * [WordPress Backups](https://developer.wordpress.org/advanced-administration/security/backup/)
 * [Child Themes](https://developer.wordpress.org/themes/advanced-topics/child-themes/)
 
-## How do you repair a MySQL database table? {#how-do-you-repair-a-mysql-database-table}
+## How do you repair a MySQL database table?
 
 Every once in a while, it may be necessary to repair one or more MySQL database tables. According to the [How to Repair MyISAM Tables at dev.mysql.com](https://dev.mysql.com/doc/refman/8.0/en/myisam-repair.html) there are a number of reasons to repair a table including errors such as _"tbl_name.frm is locked against change"_, _"Can't find file tbl_name.MYI (Errcode: nnn)"_, _"Unexpected end of file"_, _"Record file is crashed"_, or _"Got error nnn from table handler"_.
 
