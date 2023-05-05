@@ -38,11 +38,11 @@ To register the FTP server, follow below steps:
 
 ## Connecting
 
-In the Toolbar of FileZilla main window, Select the down arrow of most left icon “Open the Site Manager”, and select your FTP server from drop down list.
+Go to the first icon in the toolbar of Filezilla's main window, “Open the Site Manager”, click the down arrow, and select your FTP server from dropdown list.
 
-Or, start Site Manager from **File > Site Manager**, select your FTP server and click ‘Connect’.
+Alternatively, start the Site Manager from **File > Site Manager**, select your FTP server, and click ‘Connect’.
 
-If all is well, then in the top window of FileZilla, you will have seen a series of messages, and in the large window, you will see a listing of the files will appear.
+Following the appearance of a series of messages in the small window (Message Log), you should then see the list of the files on your server in the large window (Remote Directory Tree).
 
 ## Troubleshooting
 
