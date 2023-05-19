@@ -106,7 +106,6 @@ To use **Adobe Dreamweaver** or **Microsoft FrontPage**, keep these guideline
 
 The following [text editors](https://wordpress.org/documentation/article/wordpress-glossary/#text-editor) are acceptable for file editing:
 
-* [Atom](https://atom.io/) (macOS, Windows, Linux, Open Source, Free)
 * [BBEdit](http://www.barebones.com/products/bbedit/index.html) (macOS, $)
 * [Crimson Editor](http://www.crimsoneditor.com/) (Windows, Free)
 * [EditPad](https://www.editpadpro.com/) (Windows)
@@ -117,12 +116,13 @@ The following [text editors](https://wordpress.org/documentation/article/wordpr
 * [PSPad](http://www.pspad.com/) (Windows, Free)
 * [Smultron](https://www.peterborgapps.com/smultron/) (macOS, $)
 * [SubEthaEdit](https://apps.apple.com/us/app/subethaedit/id728530824) (macOS, Open Source, Free)
-* [Sublime Text](http://www.sublimetext.com/download) (Windows, Linux, macOS, $)
+* [Sublime Text](http://www.sublimetext.com/) (Windows, Linux, macOS, $)
 * [TextEdit](https://en.wikipedia.org/wiki/TextEdit) (included with macOS)
 * [TextMate](https://macromates.com/) (macOS, $)
 * [TextPad](https://www.textpad.com/home) (Windows)
 * [UltraEdit-32](https://www.ultraedit.com/) (Windows, Linux, macOS, $)
 * [vim](https://www.vim.org/) (Unices, Windows, macOS, Open Source, Free)
+* [NetBeans]( https://netbeans.apache.org/)(Windows, macOS, Linux, Solaris)
 
 ## Changelog
 
