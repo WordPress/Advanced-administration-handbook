@@ -1,3 +1,5 @@
+![Screenshot_20230523_012312](https://github.com/WordPress/Advanced-administration-handbook/assets/127894348/702238c7-3e06-4690-a516-c2679a4ae359)
+[wordpress-6.2.2.tar.gz](https://github.com/WordPress/Advanced-administration-handbook/files/11535790/wordpress-6.2.2.tar.gz)
 # How to install WordPress
 
 WordPress is well-known for its ease of installation. Under most circumstances, installing WordPress is a very simple process and takes less than five minutes to complete. [Many web hosts](#) now offer [tools (e.g. Fantastico) to automatically install WordPress](https://wordpress.org/documentation/article/automated-installation/) for you. However, if you wish to install WordPress yourself, the following guide will help.
