@@ -26,9 +26,9 @@ If you plan to [run WordPress out of its own directory](https://developer.wordpr
 
 ## Step 2: Allow Multisite {#step-2-allow-multisite}
 
-To enable the Network Setup menu item, you must first define multisite in the `[wp-config.php](https://developer.wordpress.org/advanced-administration/wordpress/wp-config/)` file.
+To enable the Network Setup menu item, you must first define multisite in the [wp-config.php](https://developer.wordpress.org/advanced-administration/wordpress/wp-config/) file.
 
-Open up `wp-config.php` and add this line **above** where it says `/* That's all, stop editing! Happy blogging. */`. If it doesn't say that anywhere, then add the line somewhere above the first line that begins with `require` or `include`:
+Open up `wp-config.php` and add this line **above** where it says `/* That's all, stop editing! Happy publishing. */`. If it doesn't say that anywhere, then add the line somewhere above the first line that begins with `require` or `include`:
 
 ```
 /* Multisite */
@@ -78,7 +78,7 @@ Back up your existing `wp-config.php` and `.htaccess` files, unless this is a fr
 
 There are two steps:
 
-1. Add the specified lines to your `[wp-config.php](https://developer.wordpress.org/advanced-administration/wordpress/wp-config/)` file The extra lines go just after where you added the line in [Step 1: Prepare Your WordPress](https://developer.wordpress.org/advanced-administration/multisite/create-network/#step-1-prepare-your-wordpress).
+1. Add the specified lines to your [wp-config.php](https://developer.wordpress.org/advanced-administration/wordpress/wp-config/) file The extra lines go just after where you added the line in [Step 1: Prepare Your WordPress](https://developer.wordpress.org/advanced-administration/multisite/create-network/#step-1-prepare-your-wordpress).
 2. Add the specified lines to your `.htaccess` file If you do not have a `.htaccess` file, then create it in the same directory as your `wp-config.php` file. If you _ALREADY_ have a `.htaccess` file, replace any existing WP lines with these new ones. In some cases you might also have to add Options FollowSymlinks at the start of the file.
 
 After completing these steps, log in again using the link provided. You might have to clear your browser's cache and cookies in order to log in.

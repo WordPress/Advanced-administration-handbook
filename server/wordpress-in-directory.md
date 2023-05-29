@@ -1,6 +1,6 @@
 # Giving WordPress Its Own Directory
 
-Many people want WordPress to power their website's root (e.g. `https://example.com`) but they don't want all of the WordPress files cluttering up their root directory. WordPress allows you to install it into a subdirectory, but have your website served from the website root.
+Many people want WordPress to power their website's root (e.g. https://example.com) but they don't want all of the WordPress files cluttering up their root directory. WordPress allows you to install it into a subdirectory, but have your website served from the website root.
 
 As of [Version 3.5](https://wordpress.org/documentation/wordpress-version/version-3-5/), Multisite users may use all of the functionality listed below. If you are running a version of WordPress older than 3.5, please update before installing a Multisite WordPress install on a subdirectory.
 
@@ -25,7 +25,7 @@ RewriteCond %{HTTP_HOST} ^(www.)?example.com$
 RewriteCond %{REQUEST_URI} !^/my_subdir/
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^(.\*)$ /my_subdir/$1
+RewriteRule ^(.*)$ /my_subdir/$1
 RewriteCond %{HTTP_HOST} ^(www.)?example.com$
 RewriteRule ^(/)?$ my_subdir/index.php \[L\] 
 </IfModule>
@@ -41,14 +41,14 @@ _(p.s. If you've already installed WP in subdirectory, some steps might be alrea
 
 1. Create the new location for the core WordPress files to be stored (we will use `/wordpress` in our examples). (On linux, use `mkdir wordpress` from your `www` directory. You'll probably want to use `chown apache:apache` on the `wordpress` directory you created.)
 2. Go to the [General](https://wordpress.org/documentation/article/administration-screens/#settings-configuration-settings) Screen.
-3. In **WordPress address (URL):** set the address of your main WordPress core files. Example: `http://example.com/wordpress`
-4. In **Site address (URL):** set root directory's URL. Example: `http://example.com`
+3. In **WordPress address (URL):** set the address of your main WordPress core files. Example: http://example.com/wordpress
+4. In **Site address (URL):** set root directory's URL. Example: http://example.com
 5. Click **Save Changes**. (Do not worry about the errors that happen now! Continue reading)
 6. Now move your WordPress core files (from root directory) to the subdirectory.
 7. Copy (NOT MOVE!) the `index.php` and `.htaccess` files from the WordPress directory into the root directory of your site (Blog address). The `.htaccess` file is invisible, so you may have to set your FTP client to [show hidden files](https://developer.wordpress.org/advanced-administration/server/file-permissions/#Unhide_the_hidden_files). If you are not using [pretty permalinks](https://wordpress.org/documentation/article/using-permalinks/#using-pretty-permalinks), then you may not have a .`htaccess` file. _**If you are running WordPress on a Windows (IIS) server** and are using pretty permalinks, you'll have a `web.config` rather than a `.htaccess` file in your WordPress directory. For the `index.php` file the instructions remain the same, copy (don't move) the index.php file to your root directory. The `web.config` file, must be treated differently than the `.htaccess` file so you must MOVE (DON'T COPY) the `web.config` file to your root directory._
 8. Open your root directory's `index.php` file in a [text editor](https://wordpress.org/documentation/article/glossary#text-editor)
 9. Change the following and save the file. Change the line that says:`require dirname( __FILE__ ) . '/wp-blog-header.php';`to the following, using your directory name for the WordPress core files: `require dirname( __FILE__ ) . '/wordpress/wp-blog-header.php';`
-10. Login to the new location. It might now be `http://example.com/wordpress/wp-admin/`
+10. Login to the new location. It might now be http://example.com/wordpress/wp-admin/
 11. If you have set up [Permalinks](https://wordpress.org/documentation/article/using-permalinks/), go to the [Permalinks Screen](https://wordpress.org/documentation/article/administration-screens/#permalinks) and update your Permalink structure. WordPress will automatically update your `.htaccess` file if it has the appropriate file permissions. If WordPress can't write to your `.htaccess` file, it will display the new rewrite rules to you, which you should manually copy into your `.htaccess` file (in the same directory as the main `index.php` file.)
 
 ### .htaccess modification

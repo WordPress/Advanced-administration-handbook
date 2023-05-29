@@ -24,7 +24,7 @@ See [WordPress Backups](https://developer.wordpress.org/advanced-administration/
 
 4. Click “Erase” button of the table you wish to empty. For this example, we will be emptying the “wp_dstats2” table.
 
-**Note:** Your table may well have a different name, check the plugin’s documentation to find out what it is. DO NOT empty a table that is used by the WordPress core. {Please see the list under [Database_Description](https://codex.wordpress.org/Database_Description) for those specific table names.)
+**Note:** Your table may well have a different name, check the plugin’s documentation to find out what it is. DO NOT empty a table that is used by the WordPress core. (Please see the list under [Database_Description](https://codex.wordpress.org/Database_Description) for those specific table names.)
 
 ![Clicking the “Empty” button](https://user-images.githubusercontent.com/90067869/189547374-2088ff00-3c19-420d-86b7-fbcd0df6ed6d.png)
 

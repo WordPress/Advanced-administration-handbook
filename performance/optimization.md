@@ -128,7 +128,7 @@ When combined with a system level page cache such as Varnish, this can be quite 
 
 **W3 TOTAL CACHE**
 
-[W3 Total Cache](https://wordpress.org/extend/w3-total-cache/) (W3TC) is the latest generation in WordPress performance plugins, combining the research of [web development authorities](http://developer.yahoo.com/performance/rules.html) to provide an optimal user experience for WordPress sites. These detailed guides walk you through.
+[W3 Total Cache](https://wordpress.org/plugins/w3-total-cache/) (W3TC) is the latest generation in WordPress performance plugins, combining the research of [web development authorities](http://developer.yahoo.com/performance/rules.html) to provide an optimal user experience for WordPress sites. These detailed guides walk you through.
 
 W3TC is unique in its ability to optimize server side and client side performance, adding functionality otherwise unavailable natively:
 
@@ -162,22 +162,20 @@ Look into HTTP Cache-Control (specifically `max-age`) and Expires headers, as we
 
 W3 Total Cache integrates support for browser caching and ETags.
 
-#### Persistent Object Cache
+#### Object Caching
 
-A Persistent Object Cache helps speed up page load times by saving on trips to the database from your web server. For example, your site's options data needs to be available for each page view. Without a persistent object cache, your web server must read those options from the database to handle every page view. Those extra trips to the database slow down your web server's response times (TTFB) and can quickly overwhelm your database server during traffic spikes.
+Using a __persistent__ Object Cache helps speed up page load times by saving on trips to the database from your web server. For example, your site's options data needs to be available for each page view. Without a persistent object cache, your web server must read those options from the database to handle every page view. Those extra trips to the database slow down your web server's response times (TTFB) and can quickly overwhelm your database server during traffic spikes.
 
 For your site to use persistent object caching, your hosting provider must offer you a particular type of server, a cache server. Popular cache servers are [Redis](https://redis.io/) and [Memcached](https://memcached.org/). Ask your hosting provider to help you install and configure a persistent object cache, and they will recommend the right plugin, such as:
 
-- [Memcached Object Cache](https://wordpress.org/extend/plugins/memcached/) – Provides a persistent backend for the WordPress object cache. A memcached server and the PECL memcached extension are required.
-- [Redis Object Cache](https://wordpress.org/plugins/redis-cache/) – Provides a consistent Redis object cache backend for WordPress that works with various Redis clients. A Redis Server is required.
+- [Redis Object Cache](https://wordpress.org/plugins/redis-cache/) – Provides a persistent Redis object cache backend for WordPress that works with various Redis clients. A Redis server is required.
+- [Memcached Object Cache](https://wordpress.org/plugins/memcached/) – Provides a persistent Memcached object cache backend for WordPress. A memcached server and the [memcache](https://pecl.php.net/package/memcache) extension are required.
 
 ### Further Reading
 
-- [W3 Total Cache Plugin](http://dougal.gunters.org/blog/2009/08/26/w3-total-cache-plugin) (by Dougal Campbell)
-- [Holy Shmoly!: WP Super Cache](http://ocaoimh.ie/wp-super-cache/)
+- [WP Object Cache](https://developer.wordpress.org/reference/classes/wp_object_cache/))
 - [Best Practices for Speeding Up Your Web Site](http://developer.yahoo.com/performance/rules.html) – Expires / Cache-Control Header and ETags (by Yahoo! Developer Network)
 - [WebSiteOptimization.com: Use Server Cache Control to Improve Performance](http://www.websiteoptimization.com/speed/tweak/cache/)
-- [WP Object Cache](https://developer.wordpress.org/reference/classes/wp_object_cache/#persistent-cache-plugins))
 
 ### Content Offloading
 

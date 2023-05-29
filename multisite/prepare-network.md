@@ -31,7 +31,7 @@ Administration managing sites
 
 You can also choose whether or not to allow end users to create new sites on demand. Domain-based on-demand sites are normally only possible using subdomains like `site1.example.com` and `site2.example.com`. Path-based on-demand sites are also possible.
 
-The multisite installation process uses different terminology. A _sub-domain install_ creates a domain-based network, even though you might use separate mapped domains, and not subdomains, for your sites. A _sub-directory install_ creates a path-based network, even though it does not use file system directories. If you want to use a _sub-domain_ install, you must install WordPress in the root of your webpath (i.e. domain.com) however it does _not_ need to be installed in the root (i.e. /public_html/) if you choose to run WordPress from it's own directory.
+The multisite installation process uses different terminology. A _sub-domain install_ creates a domain-based network, even though you might use separate mapped domains, and not subdomains, for your sites. A _sub-directory install_ creates a path-based network, even though it does not use file system directories. If you want to use a _sub-domain_ install, you must install WordPress in the root of your webpath (i.e. domain.com) however it does _not_ need to be installed in the root (i.e. /public_html/) if you choose to run WordPress from its own directory.
 
 After the multisite network installation is complete, WordPress uses the terminology _domain_ and _path_ for each site's domain and path in the Network Admin user interface. A super admin (that is, a multisite network administrator) can edit sites' domain and path settings, although it is unusual to do this to established sites because it changes their URLs.
 
@@ -55,7 +55,7 @@ Some server requirements depend on the type of multisite network you want to cre
 
 ### Domain-based {#domain-based}
 
-Also known as 'Subdomain' installs, a Domain-based network uses URLs like `http://subsite.example.com`
+Also known as 'Subdomain' installs, a Domain-based network uses URLs like http://subsite.example.com
 
 A domain-based network maps different domain names to the same directory in the server's file system where WordPress is installed. You can do this in various ways, for example:
 
@@ -79,9 +79,9 @@ For some examples of how to configure wildcard subdomains on various systems, se
 
 ### Path-based {#path-based}
 
-Also known as 'Subfolder' or 'Subdirectory' installs, a path-based network uses URLs like `http://example.com/subsite`
+Also known as 'Subfolder' or 'Subdirectory' installs, a path-based network uses URLs like http://example.com/subsite
 
-If you are using pretty permalinks in your site already, then a path-based network will work as well, and you do not need any of the other information in this section. That said, be aware that your main site will use the following URL pattern for posts: `http://example.com/blog/[postformat]/`
+If you are using pretty permalinks in your site already, then a path-based network will work as well, and you do not need any of the other information in this section. That said, be aware that your main site will use the following URL pattern for posts: http://example.com/blog/[postformat]/
 
 At this time, you **cannot** remove the blog slug without manual configuration to the network options in a non-obvious place. It's not recommended.
 

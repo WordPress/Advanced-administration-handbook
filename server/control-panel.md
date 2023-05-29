@@ -1,69 +1,35 @@
 # Control Panels
 
-## cPanel
+## WP Toolkit for cPanel & WHM and Plesk
 
-This tutorial provides step-by-step examples of creating a database and database user using the cPanel MySQL Database Wizard tool.
+WP Toolkit is a single management interface that allows you to install, configure, and manage WordPress® easily. WP Toolkit can install, configure, and manage WordPress versions 4.9 or later.
 
-### Login to your site {#login-to-your-site}
+cPanel & WHM versions 102 and above install WP Toolkit by default. WP Toolkit is available in Plesk if the server administrator has installed the WP Toolkit extension.
 
-Login to your hosting control panel (cPanel) with information provided by your host company.
+## cPanel & WHM
 
-### MySQL Database Wizard {#mysql-database-wizard}
+This tutorial describes how to install WordPress in the cPanel & WHM control panel using WP Toolkit. For other options to install WordPress in cPanel & WHM, read cPanel's [How to Install WordPress with cPanel](https://docs.cpanel.net/knowledge-base/third-party/how-to-install-wordpress-with-cpanel/) documentation.
 
-Under the Database section, click on the MySQL Database Wizard icon.
+To install WordPress via WP Toolkit, perform the following actions:
 
-[![cpanel-dbwizardicon](https://i3.wp.com/wordpress.org/documentation/files/2018/10/cpanel-dbwizardicon.png)](https://wordpress.org/documentation/files/2018/10/cpanel-dbwizardicon.png)
+1. Log in to the cPanel interface with the information provided by your hosting company.
+2. Select _WP Toolkit_ from the lefthand menu bar. The _WP Toolkit_ interface will appear.
+3. Click _Install WordPress_ to create a new WordPress installation.
 
-#### Step 1. Create a Database {#step-1-create-a-database}
+### Install WordPress
 
-Step 1 in the wizard is creating the database. Simply give your database a name. The actual database name will be prepended by your hosting account name. In this example, after clicking Next Step, the database `michaelh_demowp` will be created.
+In the _Install Wordpress_ interface, click _Install_ to use the default settings. Or provide the following optional information to customize your installation, then click _Install_:
 
-[![cpanel-createdb-step1](https://i3.wp.com/wordpress.org/documentation/files/2018/10/cpanel-createdb-step1.png)](https://wordpress.org/documentation/files/2018/10/cpanel-createdb-step1.png)
+   * The installation directory. By default, the installation uses the account's `public_html` directory.
+   * The title for the website.
+   * The plugin or theme set.
+   * The language of the website.
+   * The version of WordPress to install. By default, the installation uses the current WordPress version.
+   * The WordPress Administrator username and password.
+   * The database name, table prefix, username and password.
+   * The automatic update settings for the WordPress software, plugins, and themes.
 
-#### Step 2. Create Database Users {#step-2-create-database-users}
-
-The next step in the wizard requires creating a database user and assigning that user a password. When entering the password, make sure the password strength meter registers Very Strong for your selected password. Also remember the password you enter as you will need that information later. In this example, dbuser is entered in the Username field, but when the Create User button is clicked, the database user ultimately will be named `michaelh_dbuser`.
-
-[![Step 2. Create Database Users](https://i3.wp.com/wordpress.org/documentation/files/2018/10/cpanel-createdb-step2.png)](https://wordpress.org/documentation/files/2018/10/cpanel-createdb-step2.png)
-
-#### Step 3. Add User to Database {#step-3-add-user-to-database}
-
-In Step 3, you assign the user to the database and you assign the necessary database privileges. In this case, click the All Privileges checkbox and click the Next Step button to assign all privileges to the database user.
-
-[![Step 3. Add User to Database](https://i3.wp.com/wordpress.org/documentation/files/2018/10/cpanel-createdb-step3.png)](https://wordpress.org/documentation/files/2018/10/cpanel-createdb-step3.png)
-
-### Step 4. Complete the task {#step-4-complete-the-task}
-
-In this step, you are notified that the user was added to the database. You have successfully created the database, created the user, and assigned privileges to that user.
-
-[![Step 4. Complete the task](https://i3.wp.com/wordpress.org/documentation/files/2018/10/cpanel-createdb-step4.png)](https://wordpress.org/documentation/files/2018/10/cpanel-createdb-step4.png)
-
-### Editing the WordPress Config File {#editing-the-wordpress-config-file}
-
-Open the file `wp-config-sample.php` using a [text editor](https://htmltomd.com/support/article/glossary/#text-editor). There are the four pieces of information you need to complete in the file. The following is an example; yours may look slightly different:
-
-```
-// ** MySQL settings - You can get this info from your web host ** //
-/** The name of the database for WordPress */
-define('DB_NAME', 'michaelh_demowp');
-
-/** MySQL database username */
-define('DB_USER', 'michaelh_dbuser');
-
-/** MySQL database password */
-define('DB_PASSWORD', 'here_the_password_you_set_before_');
-
-/** MySQL hostname */
-define('DB_HOST', 'localhost');
-```
-
-Note that the prefix `michaelh_` assigned by that cPanel is part of the database and database user. Also note, the **DB_HOST** value for almost all cPanel hosts is **localhost**.
-
-Important! Save the completed file as `wp-config.php`.
-
-### Continuing the Installation {#continuing-the-installation}
-
-The database is created, and user is created and assigned to the database with the proper privileges. And the `wp-config.php` is updated with the database information. At this point it is okay to move to [Step 4 of the Installation process](https://htmltomd.com/support/article/how-to-install-wordpress/#step-4-upload-the-files).
+Click _Install Plugins_ if you want to install plugins and themes, or click _No, thanks_ to optionally install them later.
 
 ## Plesk
 
@@ -81,24 +47,16 @@ Provide your server's IP address or hostname, enter your root password, or just 
 * Relax and wait for some time to let the installation be finalized.
 * Click on the Login link. No worries about "secure connection warnings", just make an exception.
 
-### WP Toolkit 
-
-WordPress Toolkit is a single management interface that enables you to easily install, configure, and manage WordPress. It is available if the WordPress Toolkit extension is installed in Plesk. WP Toolkit can install, configure, and manage WordPress version 3.7 or later.
-
 ### Installing WordPress
-
-The WP Toolkit extension is free with the Web Pro and the Web Host Plesk editions and is available for a fee for the Web Admin edition.
 
 ![image_2](https://user-images.githubusercontent.com/19301688/189542665-78f52a1c-e92b-4d70-bb5d-899ac02cc57e.png)
 
 * For an express installation, click Install (Quick). The latest version of WordPress will be installed, and the default settings will be used. The new instance will be available via HTTPS if SSL/TLS support is enabled for the domain.
 * If you want to change the default installation settings, click Install (Custom). This enables you to set up the administrator user, select the desired WordPress version, specify the database name, select auto-update settings, and more.
 
-Note: To install WordPress, WordPress Toolkit retrieves data from wordpress.org. By default, if WordPress Toolkit cannot establish connection in 15 seconds, wordpress.org is considered to be unavailable.
-
 ### Managing WordPress Instances
 
-Go to WordPress to see all your WordPress instances. WordPress Toolkit groups information about each instance in blocks we call cards.
+Go to WordPress to see all your WordPress instances. WP Toolkit groups information about each instance in blocks we call cards.
 
 ![image_3](https://user-images.githubusercontent.com/19301688/189542692-5d6f38b5-1b32-4de8-8f40-2abe9a5d1d86.png)
 
@@ -106,7 +64,7 @@ A card shows a screenshot of your website and features several controls that giv
 
 ### Tools
 
-In the "Tools" section, click to access the following WordPress Toolkit features:
+In the "Tools" section, click to access the following WP Toolkit features:
 
 ![image_4](https://user-images.githubusercontent.com/19301688/189542713-abf476de-fcbd-4113-9975-1c2961765190.png)
 
@@ -116,6 +74,7 @@ In the "Tools" section, click to access the following WordPress Toolkit features
 * "Back Up/Restore" to create a backup of your website and restore it if necessary.
 
 The controls below give you easy access to the following settings and tools:
+
 * "Search engine indexing" shows your website in search results of search engines.
 * "Caching (nginx)" speeds up the website load time and reduces server load.
 * "Debugging" helps you debug a website that is not ready for viewing and being tested or developed.
@@ -124,5 +83,6 @@ The controls below give you easy access to the following settings and tools:
 
 ## Changelog
 
+- 2023-04-25: Removed outdated manual instructions from cPanel section and combined common WP Toolkit info for cPanel and Plesk.
 - 2023-01-26: Original copied from [Using cPanel](https://wordpress.org/documentation/article/using-cpanel/).
 - 2022-09-11: Original copied for Plesk.
