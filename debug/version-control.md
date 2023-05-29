@@ -8,4 +8,5 @@ A lot of WordPress hosts offer version control but there are third-party service
 
 ## Changelog
 
+- 2023-05-29: Synced with [Hostinh Handbook](https://make.wordpress.org/hosting/handbook/reliability/#version-control)
 - 2023-03-03: Created a new page for *Version control*
