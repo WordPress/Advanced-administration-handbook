@@ -468,6 +468,13 @@
 		"parent": "debug",
 		"order": 4
 	},
+	"debug\/version-control": {
+		"title": "Version Control",
+		"slug": "version-control",
+		"markdown_source": "https:\/\/github.com\/WordPress\/Advanced-administration-handbook\/blob\/main\/debug\/version-control.md",
+		"parent": "debug",
+		"order": 5
+	},
 	"resources": {
 		"title": "Resources",
 		"slug": "resources",
