@@ -14,6 +14,7 @@ While a site's services may be responding, to a user, a site being "up" means mo
 
 It is best practice to use performance profiling tools, such as New Relic, AppDynamics or Tideways, to diagnose the performance bottlenecks of your website and infrastructure. These tools will give you insight such as slow performing functions, external HTTP requests, slow database queries and more that are causing poor performance.
 
-## VChangelog
+## Changelog
 
+- 2023-05-29: Updated from [Hosting Handbook](https://make.wordpress.org/hosting/handbook/reliability/#monitoring)
 - 2023-03-04: Add new file.

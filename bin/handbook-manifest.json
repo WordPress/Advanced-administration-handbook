@@ -412,6 +412,13 @@
 		"parent": "security",
 		"order": 6
 	},
+	"security\/monitoring": {
+		"title": "Monitoring",
+		"slug": "monitoring",
+		"markdown_source": "https:\/\/github.com\/WordPress\/Advanced-administration-handbook\/blob\/main\/security\/monitoring.md",
+		"parent": "security",
+		"order": 7
+	},
 	"performance": {
 		"title": "Performance / Optimization",
 		"slug": "performance",
