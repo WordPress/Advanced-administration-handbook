@@ -22,6 +22,8 @@ That happens when your web browser wants you to know a site is NOT using HTTPS. 
 
 In turn, you don't want browsers suggesting you might be that kind of shady site owner yourself.
 
+WordPress is fully [compatible with HTTPS when an TLS / SSL certificate](https://make.wordpress.org/support/user-manual/web-publishing/https-for-wordpress/) is installed and available for the web server to use. Support for HTTPS is strongly recommended to help maintain the security of both WordPress logins and site visitors.
+
 ## Administration Over HTTPS
 
 To easily enable (and enforce) WordPress administration over SSL, there are two constants that you can define in your site's [wp-config.php](https://wordpress.org/documentation/article/editing-wp-config-php/) file. It is not sufficient to define these constants in a plugin file; they must be defined in your [wp-config.php](https://wordpress.org/documentation/article/editing-wp-config-php/) file. You must also already have SSL configured on the server and a (virtual) host configured for the secure server before your site will work properly with these constants set to true.
