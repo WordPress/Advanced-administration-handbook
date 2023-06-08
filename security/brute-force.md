@@ -120,6 +120,14 @@ Unfortunately there is no easy way of configuring a password protected wp-login.
 
 All passwords must be encoded by function `crypt(3)`. You can use an online [htpasswd generator](http://www.htaccesstools.com/htpasswd-generator/) to encrypt your password.
 
+#### Throttle Multiple Login Attempts
+
+One of the most common kinds of attacks targeting internet services is brute force login attacks. With this form of attack, a malicious party tries to guess WordPress usernames and passwords. The attacker needs only the URL of a user site to perform an attack. Software is readily available to perform these attacks using botnets, making increasingly complex passwords easier to find.
+
+The best protection against this kind of attack is to set and recommend and/or enforce strong passwords for WordPress users.
+
+It is also recommended for hosts to throttle login attempts at the network and server level when possible. It’s helpful to throttle both maximum logins per site over time, and maximum attempts per IP over time across server or infrastructure to mitigate bot password brute-force attacks. This can be done at the plugin level as well, but not without incurring the additional resource utilization caused during these attacks.
+
 #### Limit Access to wp-login.php by IP {#limit-access-to-wp-login-php-by-ip}
 
 If you are the only person who needs to login to your Admin area and you have a fixed IP address, you can deny wp-login.php (and thus the wp-admin/ folder) access to everyone but yourself via an .htaccess or web.config file. This is often referred to as an _IP whitelist_.
