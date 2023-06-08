@@ -87,7 +87,7 @@ Making sure the images in your posts are optimized for the web can save time, ba
 
 The first and easiest way to improve WordPress performance is by looking at the plugins. Deactivate and delete any unnecessary plugins. Try selectively disabling plugins to measure server performance.
 
-Is one of your plugins significantly affecting your site's performance? Look at the plugin documentation or ask for support in the appropriate plugin support forum.
+Is one of your plugins significantly affecting your site's performance? Look at the plugin documentation, ask for support in the appropriate plugin support forum or look for alternative plugins with similar featuresets.
 
 #### Optimizing content
 
@@ -95,6 +95,7 @@ Is one of your plugins significantly affecting your site's performance? Look at 
 
 - Are there any unnecessary images? (e.g. Can you replace some of the images with text?)
 - Make sure all image files are optimized. Choose the correct format (JPG/PNG/GIF) and compression for each image.
+- Consider using a more modern image format like WebP which is smaller in size. 
 
 *Total File Number/Size*
 
@@ -104,7 +105,7 @@ Is one of your plugins significantly affecting your site's performance? Look at 
 
 ### Upgrade Hardware
 
-Paying more for higher service levels at your hosting provider can be very effective. Increasing memory (RAM) or switching to a host with Solid-State Drives (SSD) can make a big difference. Increased number of processors and processor speed will also help. Where possible, try to separate services with different functions – like HTTP and MySQL – on multiple servers or VPS.
+Paying more for higher service levels at your hosting provider can be very effective. Increasing CPU and memory (RAM) or switching to a host with Solid-State Drives (SSD) or NVMe can make a big difference. Increased number of processors and processor speed will also help. Where possible, try to separate services with different functions – like HTTP and MySQL – on multiple servers or VPS (the servers should ideally be in the same location to reduce latency). If you are on shared hosting, upgrading to a plan with higher resource limits like Disk I/O, IOPS, NPROC and total processes of your hosting plan may help if you are maxing out your limits.
 
 ### Optimize Software
 
@@ -116,7 +117,7 @@ If you are unable to perform the following tasks below, your hosting provider ma
 
 **Web Server**: Your web server can be configured to increase performance. There is a range of techniques, from web server caching to setting cache headers to reduce load per visitor. Search for your specific web server optimizations (for example, search for "Apache optimization" for more info). Some web servers have higher speed versions you can pay for. There are also a number of ways to tune Apache for higher performance based on your particular hosting and site configuration (e.g. Memcached).
 
-**PHP**: There are various PHP accelerators available which can dramatically improve the performance of your PHP files. This will apply to all PHP files, not just your WordPress installation. Search for PHP optimization for more information (e.g. [APC](https://www.php.net/manual/book.apcu.php) or [OPcache](https://www.php.net/manual/book.opcache.php)). Some WordPress caching plugins offer integrated support for Memcached, APC and other Opcode caching.
+**PHP**: There are various PHP accelerators available which can dramatically improve the performance of your PHP files. This will apply to all PHP files, not just your WordPress installation. Search for PHP optimization for more information (e.g. [APC](https://www.php.net/manual/book.apcu.php) or [OPcache](https://www.php.net/manual/book.opcache.php)). Some WordPress caching plugins offer integrated support for Memcached, APC and other Opcode caching. Newer PHP versions will usually include better performance optimization as well.
 
 **MySQL/MariaDB**: MySQL or MariaDB optimization is a black art in itself. A few simple changes to the query cache settings can have a dramatic effect on WordPress performance because WordPress repeats many queries on every request. Nowadays, with InnoDB being the default storage engine for MySQL, you have to make sure to use that. InnoDB can be optimized and fine-tuned, search the web for [mysql optimization](https://duckduckgo.com/?q=mysql+optimization), [mysql innodb performance](https://duckduckgo.com/?q=mysql+innodb+performance) or [innodb optimization](https://duckduckgo.com/?q=innodb+optimization) for more information and examples. Search the web for [mysql convert myisam to innodb](https://duckduckgo.com/?q=mysql+convert+myisam+to+innodb) for information on how to convert older MyISAM tables to InnoDB.
 
@@ -160,7 +161,7 @@ For your site to use persistent object caching, your hosting provider must offer
 
 #### Use a Content Delivery Network (CDN)
 
-Using a CDN can greatly reduce the load on your website. Offloading the searching and delivery of images, JavaScript, CSS and theme files to a CDN are not only faster but takes a great load off your WordPress server's own app stack. A CDN is most effective if used with a WordPress caching plugin, described above.
+Using a CDN can greatly reduce the load on your website. Offloading the searching and delivery of images, JavaScript, CSS and theme files to a CDN are not only faster but takes a great load off your WordPress server's own app stack. A CDN is most effective if used with a WordPress caching plugin, described above. Some newer CDN will also include Full Page Caching (FPC) or Edge Caching which will cache the entire HTML content of the website. 
 
 For details, see [list of notable content delivery service providers](https://en.wikipedia.org/wiki/Content_delivery_network#Notable_content_delivery_service_providers).
 
