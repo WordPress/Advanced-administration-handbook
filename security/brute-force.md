@@ -8,6 +8,14 @@ Due to the nature of these attacks, you may find your server's memory goes throu
 
 This sort of attack is not endemic to WordPress, it happens with every webapp out there, but WordPress is popular and thus a frequent target.
 
+### Throttling Multiple Login Attempts
+
+One of the most common kinds of attacks targeting internet services is brute force login attacks. With this form of attack, a malicious party tries to guess WordPress usernames and passwords. The attacker needs only the URL of a user site to perform an attack. Software is readily available to perform these attacks using botnets, making increasingly complex passwords easier to find.
+
+The best protection against this kind of attack is to set and recommend and/or enforce strong passwords for WordPress users.
+
+It is also recommended for hosts to throttle login attempts at the network and server level when possible. It's helpful to throttle both maximum logins per site over time, and maximum attempts per IP over time across server or infrastructure to mitigate bot password brute-force attacks. This can be done at the plugin level as well, but not without incurring the additional resource utilization caused during these attacks.
+
 ### Protect Yourself {#protect-yourself}
 
 A common attack point on WordPress is to hammer the `wp-login.php` file over and over until they get in or the server dies. You can do some things to protect yourself.
