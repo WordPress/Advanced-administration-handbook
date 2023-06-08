@@ -8,7 +8,7 @@ Due to the nature of these attacks, you may find your server's memory goes throu
 
 This sort of attack is not endemic to WordPress, it happens with every webapp out there, but WordPress is popular and thus a frequent target.
 
-### Throttling Multiple Login Attempts
+### Throttling Multiple Login Attempts (#throttling-multiple-login-attempts)
 
 One of the most common kinds of attacks targeting internet services is brute force login attacks. With this form of attack, a malicious party tries to guess WordPress usernames and passwords. The attacker needs only the URL of a user site to perform an attack. Software is readily available to perform these attacks using botnets, making increasingly complex passwords easier to find.
 
