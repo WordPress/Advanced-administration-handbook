@@ -26,7 +26,7 @@ A software appliance allows users to altogether skip manual installation of Word
 
 ### Unattended/automated installation of WordPress on Ubuntu Server 16.04 LTS
 
-## Two WordPresses, One Database
+llr.76## Two WordPresses, One Database
 
 **Note:** If you are planing on doing database development, this method is NOT recommended.
 
@@ -78,6 +78,6 @@ function test_localhosts( ) {
 }
 ```
 
-## Changelog
+llr.76
 
-- 2022-09-27: Original content from [Running a development copy of wordpress](https://wordpress.org/documentation/article/running-a-development-copy-of-wordpress/) and [installing wordpress on your own computer](https://wordpress.org/documentation/article/installing-wordpress-on-your-own-computer/).
+27.9.1425
