@@ -6,7 +6,7 @@ You have several choices.
 
 ### Creating a Sandbox
 
-Do this for test driving your WordPress Theme and style sheet, allowing you to develop your [WordPress Theme](https://wordpress.org/support/article/using-themes/) on your computer. This limits you to only working on CSS and not using plugins and other power features of WordPress. This is best for just styling a page.
+Do this for test driving your WordPress Theme and style sheet, allowing you to develop your [WordPress Theme](https://wordpress.org/documentation/article/using-themes/) on your computer. This limits you to only working on CSS and not using plugins and other power features of WordPress. This is best for just styling a page.
 
 ### Hiding Your WordPress Test Area
 
@@ -20,7 +20,7 @@ If you are determined to put WordPress through its paces, you can install WordPr
 
 A **Sandbox** is a term related to the sandbox you might have played in and built sand castles in as a child. It is a playground for working on concepts and exploring your imagination. A WordPress Sandbox is basically a copy of a generated page on a WordPress site that is saved to your hard drive for you to play with as you develop your final theme and look for your site.
 
-WordPress uses different [template files](https://codex.wordpress.org/Templates) to generate different views on your site. In general, there is the **front page view**, the **single post view**, and the **multi-post view**, used for categories, archives, and search. For more information on the structure of WordPress Themes, see [Site Architecture 1.5](https://codex.wordpress.org/Site%20Architecture%201.5). As different page views use different CSS styles, at the least you need to put three page views in your sandbox following these instructions.
+WordPress uses different [template files](https://codex.wordpress.org/Templates) to generate different views on your site. In general, there is the **front page view**, the **single post view**, and the **multi-post view**, used for categories, archives, and search. For more information on the structure of WordPress Themes, see [Site Architecture 1.5](https://developer.wordpress.org/advanced-administration/wordpress/site-architecture/). As different page views use different CSS styles, at the least you need to put three page views in your sandbox following these instructions.
 
 1. Choose the WordPress Theme you want to work from in your Appearance screen of your Administration Screen.
 2. From your initial or test WordPress site, view one of the following page views:
@@ -40,7 +40,9 @@ WordPress uses different [template files](https://codex.wordpress.org/Templates)
 </style>
 ``` 
 
-`<link rel="stylesheet" type="text/css" media="screen" href="style.css" />`
+```
+<link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+```
 
 Lastly, find all the image files and graphics associated with the style sheet, like background images, icons, bullets, or others, and copy them to your sandbox folder. Links to these items from within your style sheet should have no folders in their links, or link to a subfolder within your sandbox folder, such as:
 
@@ -57,7 +59,7 @@ To test this, double click on one of the pages in that folder to view it in your
 
 Now, you have a sandbox to play in.
 
-To use your sandbox, have two programs open. One is your text editor with the style.css file and the other is your browser with the page you are working on in view. Make a change in your style sheet, save it, then do a [total refresh](https://codex.wordpress.org/I%20Make%20Changes%20and%20Nothing%20Happens) or your browser screen and look at what changes. Then repeat the process. When you are done with one page, go to the next page and check those changes and add more if necessary.
+To use your sandbox, have two programs open. One is your text editor with the style.css file and the other is your browser with the page you are working on in view. Make a change in your style sheet, save it, then do a [total refresh](https://wordpress.org/support/topic/i-make-changes-and-nothing-happens/) or your browser screen and look at what changes. Then repeat the process. When you are done with one page, go to the next page and check those changes and add more if necessary.
 
 ### Sandbox Tips
 
@@ -115,7 +117,7 @@ Using the `.htaccess` file, you need to provide instructions to tell the server 
 
 1. Using a text editor create a blank text file called `.htaccess`.
 2. You need the following information:
-3. - The full path of a directory on your site server that is not accessible to the public (like `http://example.com/public_html/` is accessible but `http://example.com/private/` is not. Use the latter.
+3. - The full path of a directory on your site server that is not accessible to the public (like http://example.com/public_html/ is accessible but http://example.com/private/ is not. Use the latter.
 4. - The name of the secured area such as “Enter Password” or “Secure Area” (this is not important, just simple).
 5. In the file type the following, replacing /full/path/of/directory/ and Security Area with the above information: `AuthUserFile /full/path/of/directory/.htpasswd AuthName "Security Area" AuthType Basic require valid-user`
 6. Save this .htaccess file and upload it to the directory on your server you want hidden and secured. This would be the installation directory for WordPress such as `/wordpress/` or `blog`.
@@ -147,7 +149,7 @@ In order for WordPress to work, it must have access to an Apache server, MySQL/M
 2. This installs by default into `C:/xampplite` or `C:\xampp`.
 3. Start XAMPP from `c:\xampplite` or `c:\xampp`.
 4. You may need to restart your computer to allow apache services to start.
-5. In your browser, go to `http://localhost/xampp`.
+5. In your browser, go to http://localhost/xampp.
 6. In the left column under Tools, click **phpMyAdmin**.
 7. Login is admin.
 8. In **Create new database** enter **wordpress**.
@@ -155,7 +157,14 @@ In order for WordPress to work, it must have access to an Apache server, MySQL/M
 10. Click **Create** button.
 11. Unzip your WordPress download into the `htdocs` directory `– c:\xampp\htdocs\`.
 12. From the folder, open `wp-config-sample.php` in a text editor.
-13. The connection details you need are as follows: // ** MySQL settings ** // `define('DB_NAME', 'wordpress');` // `The name of the database define('DB_USER', 'root');` // `Your MySQL username define('DB_PASSWORD', '');` // `...and password define('DB_HOST', 'localhost');` // 99% chance you won't need to change this
+13. The connection details you need are as follows:
+```
+// ** MySQL settings ** //
+define('DB_NAME', 'wordpress'); // The name of the database
+define('DB_USER', 'root'); // Your MySQL username
+define('DB_PASSWORD', ''); // ...and password
+define('DB_HOST', 'localhost'); // 99% chance you won't need to change this
+```
 14. Save as `wp-config.php`.
 15. Install by going to http://localhost/wordpress/wp-admin/install.php
 
@@ -186,7 +195,7 @@ As the WordPress database normally stands, there are statistics tables which con
 2. From the main login screen, select **Databases**.
 3. Choose the name of your WordPress database.
 4. From the tags at the top of the screen, choose **Export**.
-5. In the frame at the top of the [Export section](https://wordpress.org/support/files/2018/11/phpmyadmin-export-tab.jpg) you will see a list of tables in your database.
+5. In the frame at the top of the [Export section](https://wordpress.org/documentation/files/2018/11/phpmyadmin-export-tab.jpg) you will see a list of tables in your database.
 6. You will need to choose only those tables that correspond to your WordPress install. They will be the ones with the `table_prefix` found in your `wp-config.php` file. If you only have WordPress installed, then choose **Select All** from the left column.
 7. Make sure the SQL button is selected.
 8. On the right side of the panel, make sure the following boxes are checked.
@@ -201,7 +210,7 @@ As the WordPress database normally stands, there are statistics tables which con
 - You should be prompted for a file to download. Save the file to your computer. Depending on the database size, this may take a few moments.
 
 ### Download WordPress
-Now, download your entire WordPress site to your computer. This is usually done with an [FTP client program](https://codex.wordpress.org/FTP_Clients). Make sure you include all core WordPress files within your root or WordPress directory, including the `index.php`.
+Now, download your entire WordPress site to your computer. This is usually done with an [FTP client program](https://developer.wordpress.org/advanced-administration/upgrade/ftp/). Make sure you include all core WordPress files within your root or WordPress directory, including the `index.php`.
 
 You should now have in your computer two items:
 
@@ -213,15 +222,22 @@ Copy the backup files again to somewhere safe on your machine so you work on a c
 ### Install Basic XAMPP
 
 1. Install XAMPP. By default, it will install to `C:\xampp`.
-2. Go to `C:\xampp\apache\conf` and open the file called `httpd.conf` in a [text editor](https://codex.wordpress.org/Glossary#Text%20editor).
+2. Go to `C:\xampp\apache\conf` and open the file called `httpd.conf` in a [text editor](https://wordpress.org/documentation/article/wordpress-glossary/#Text%20editor).
 3. About line 166 you will find: `#LoadModule rewrite_module modules/mod_rewrite.so`.
 4. Remove the # and save the file (this switches `mod_rewrite` on).
 5. Create a folder inside `C:\xampp\htdocs`. This will be for WordPress.
 6. Copy all your downloaded WordPress files (not the sql backup) into that directory.
 7. With a text editor, open the file `wp-config.php` on your WordPress install.
-8. Change the details for your new MySQL connection: // ** MySQL settings ** // `define('DB_NAME', 'wordpress');` // `The name of the new database you made define('DB_USER', 'root');` // `keep this as is define('DB_PASSWORD', '');` // `keep this empty define('DB_HOST', 'localhost');` // 99% chance you won't need to change this
+8. Change the details for your new MySQL connection:
+```
+// ** MySQL settings ** //
+define('DB_NAME', 'wordpress'); // The name of the new database you made
+define('DB_USER', 'root'); // keep this as is
+define('DB_PASSWORD', ''); // keep this empty
+define('DB_HOST', 'localhost'); // 99% chance you won't need to change this
+```
 9. Your main `index.php` should be in the `/htdocs` folder or in a subdirectory such as `/htdocs/wordpress/`. Write that down.
-10. Start XAMPP by clicking the orange `xampp_start.exe` or using the console program from Program Files \ApacheFriends\XAMPP\XAMPP Control Panel.
+10. Start XAMPP by clicking the orange `xampp_start.exe` or using the console program from `Program Files \ApacheFriends\XAMPP\XAMPP Control Panel`.
 11. Once it is working, click on link in the left side bar for phpMyAdmin.
 12. Create a database. The name should match the one used in your `wp-config.php` file.
 
@@ -230,7 +246,7 @@ Copy the backup files again to somewhere safe on your machine so you work on a c
 Before you begin to import your SQL backup file, you need to change some information inside your `.SQL` file.
 
 1. Using your text editor, open the `.sql` backup database file you downloaded.
-2. Find and replace all the instances of your old URL with your new URL. For instance if your blog address is at `http://example.com/wordpress/`, and your files on your computer are at `/htdocs/wordpress/`, replace it with `http://127.0.0.1/wordpress/`.
+2. Find and replace all the instances of your old URL with your new URL. For instance if your blog address is at http://example.com/wordpress/, and your files on your computer are at `/htdocs/wordpress/`, replace it with http://127.0.0.1/wordpress/.
 3. Click **Save – Do not use Save as**.
 
 ![phpMyAdmin SQL tab](https://user-images.githubusercontent.com/6118303/189546617-26a843c4-e793-4c44-b2a6-13a32b366a8e.png)
@@ -241,9 +257,9 @@ Now it is time to import your sql file. From within the phpMyAdmin on your compu
 
 Once the procedure is complete, your database will be restored and will work just as it did before. If something goes wrong with this last part of the process, it could be that either your backup was corrupted in some way, or something went wrong with the database itself. **Keep your backup files safe!**
 
-If everything so far has gone well, it is now time to visit your blog! In your browser, type in `http://127.0.0.1/wordpress/index.php` or the actual name of the folder you created for your WordPress files.
+If everything so far has gone well, it is now time to visit your blog! In your browser, type in http://127.0.0.1/wordpress/index.php or the actual name of the folder you created for your WordPress files.
 
-If you get a 404, check you have the right place. You do not need to put htdocs or xampp or anything else after the `http://127.0.0.1/` except use your directory name.
+If you get a 404, check you have the right place. You do not need to put htdocs or xampp or anything else after the http://127.0.0.1/ except use your directory name.
 
 WordPress should now function just as it did on the web. You do not need to use the built-in editor in WordPress to alter your files. Just open the files directly in a text editor and edit them as you would any other file. Refreshing your browser’s web page will then show the effects.
 
@@ -255,9 +271,6 @@ Coming soon – how to move your test site from your computer back live onto you
 - [Test themes on a live blog with Theme Test Drive](http://www.prelovac.com/vladimir/wordpress-plugins/theme-test-drive)
 - [qSandbox.com – Create a free WordPress test site to try (new) plugins and themes](http://qsandbox.com/)
 
-
-
-
 ## Changelog
 
-- 2022-09-11: Added to handbook.
+- 2022-09-11: Original content from [Test driving WordPress](https://wordpress.org/documentation/article/test-driving-wordpress/).

@@ -34,7 +34,7 @@ Beyond that, these are some resources you might find helpful for each of the lan
 
 ## CSS
 
-If this is your first time using CSS with WordPress, [this document](https://wordpress.org/support/article/css/) provides a fantastic overview
+If this is your first time using CSS with WordPress, [this document](https://developer.wordpress.org/advanced-administration/wordpress/css/) provides a fantastic overview
 
 Other than that, these are some solid resources for you to review:
 
@@ -74,4 +74,4 @@ Other than that, these are some solid resources for you to review:
 
 ## Changelog
 
-- 2022-09-04: Created, based on [Github](https://github.com/WordPress/Documentation-Issue-Tracker/issues/328#issuecomment-1144870008).
+- 2022-09-04: Original content from [Know Your Sources](https://codex.wordpress.org/Know_Your_Sources), based on ticket [Github](https://github.com/WordPress/Documentation-Issue-Tracker/issues/328#issuecomment-1144870008).
