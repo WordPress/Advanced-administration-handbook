@@ -1,0 +1,61 @@
+"This XML file does not appear to have any style information associated with it. The document tree is shown below.
+<response>
+<meta type="hash">
+<limit type="integer">20</limit>
+<next type="null"/>
+<offset type="integer">0</offset>
+<previous type="null"/>
+<total_count type="integer">1</total_count>
+</meta>
+<objects type="list">
+<object>
+<abstract>This document describes an Extensible Provisioning Protocol (EPP) mapping for a key relay object that relays DNSSEC key material between EPP clients using the poll queue defined in RFC 5730. This key relay mapping will help facilitate changing the DNS operator of a domain while keeping the DNSSEC chain of trust intact.</abstract>
+<ad>/api/v1/person/person/110077/</ad>
+<expires>2016-12-02T10:37:25Z</expires>
+<external_url/>
+<group>/api/v1/group/group/2146/</group>
+<id type="integer">53669</id>
+<intended_std_level>/api/v1/name/intendedstdlevelname/ps/</intended_std_level>
+<internal_comments/>
+<name>draft-ietf-eppext-keyrelay</name>
+<note/>
+<notify/>
+<pages type="integer">16</pages>
+<resource_uri>/api/v1/doc/document/draft-ietf-eppext-keyrelay/</resource_uri>
+<rev>12</rev>
+<rfc>8063</rfc>
+<shepherd>/api/v1/person/email/ulrich@wisser.se/</shepherd>
+<states type="list">
+<value>/api/v1/doc/state/3/</value>
+<value>/api/v1/doc/state/108/</value>
+<value>/api/v1/doc/state/115/</value>
+<value>/api/v1/doc/state/7/</value>
+<value>/api/v1/doc/state/44/</value>
+</states>
+<std_level>/api/v1/name/stdlevelname/ps/</std_level>
+<stream>/api/v1/name/streamname/ietf/</stream>
+<submissions type="list">
+<value>/api/v1/submit/submission/56954/</value>
+<value>/api/v1/submit/submission/65764/</value>
+<value>/api/v1/submit/submission/68832/</value>
+<value>/api/v1/submit/submission/69621/</value>
+<value>/api/v1/submit/submission/70089/</value>
+<value>/api/v1/submit/submission/71331/</value>
+<value>/api/v1/submit/submission/71670/</value>
+<value>/api/v1/submit/submission/71671/</value>
+<value>/api/v1/submit/submission/71879/</value>
+<value>/api/v1/submit/submission/72209/</value>
+<value>/api/v1/submit/submission/72656/</value>
+<value>/api/v1/submit/submission/74463/</value>
+<value>/api/v1/submit/submission/78410/</value>
+</submissions>
+<tags type="list"/>
+<time>2018-12-20T08:31:10Z</time>
+<title>Key Relay Mapping for the Extensible Provisioning Protocol</title>
+<type>/api/v1/name/doctypename/draft/</type>
+<uploaded_filename/>
+<words type="integer">3636</words>
+</object>
+</objects>
+</response>"
+ https://datatracker.ietf.org/api/v1/doc/document/?name=draft-ietf-eppext-keyrelay#:~:text=This%20XML%20file,%3C/response%3E
