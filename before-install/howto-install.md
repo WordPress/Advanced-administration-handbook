@@ -1,3 +1,383 @@
+wrage
+18-4G
+Y. LA 40 YE
+۲۰۲۰
+<data:description/>
+</b:includable>
+101 4G
+B/S
+id='title'>
+<b:if
+cond='data:blog.url ==
+data:blog.homepageUrl'>
+<data:title/>
+<b:else/>
+<a
+</a>
+expr:href='data:blog.home
+pageUrl'><data:title/>
+</b:if>
+<b:includable
+</b:includable>
+</b:widget>
+</b:section>
+<b:section class='headerright'
+id='headerright' maxwidgets='1'
+name='Header Ads'
+showaddelement='yes'>
+<b:widget id='HTML1'
+locked='false' title=
+type='HTML version='1'>
+<b:includable
+id='main'>
+<b:if
+cond='data:title != "">
+</b:if>
+<data:title/>
+<data: content/>
+</b:includable>
+</b:widget>
+</b:section>
+<div style='clear: both;'/>
+<a class='search'> <form
+action="/search/max-results=7'
+method='get'> <input id='s'
+name='q' placeholder='Type and hit
+enter...' type='text'/></form> </a>
+<a
+Menu'
+expr:href='data:blog.homepageUrl'>
+<i class='fa fa-home'/></a>
+<b:section
+class='menu' id='menu'
+maxwidgets='1' name='Main
+showaddelement='yes'>
+<b:widget
+id="linklist 210
+O
+▪ 3.9
+<data:post.
+dateHeader
+<a
+<data:po
+st.comm
+entLabel
+Full/>:
+3.8.5
+/>
+3.10 <b:if
+cond='data:
+post.link'>
+<data:po
+st.title/>
+k'
+expr.href='d
+ata:post.lin
+itemprop='u
+rl'>
+<data:post.t
+itle/></a>
+<b:else/>
+<b:if
+cond='data:
+post.url'> <a
+expr:href='d
+ata:post.url'
+itemprop='u
+rl'>
+<data:post.t
+itle/></a>
+<b:else/>
+<data:post.t
+itle/> </b:if>
+</b:if>
+3.11 <b:if
+<a
+cond='data:
+post.link'>
+k'
+expr:href='d
+ata:post.lin
+itemprop='u
+rl'>
+<data:post.t
+itle/></a>
+<b:else/>
+<b:if
+cond='data:
+post.url'> <a
+expr:href='d
+ata:post.url'
+itemprop='u
+rl'>
+تم حفظ لقطة الشاشة/></Pictures/ itle
+<data:post.t
+<b:else/>
+<data:post.t
+itle/> </b:if>
+</b:if>
+>[
+4 bif
+S
+۸:۱۲ ص
+B/S
+Ts/b.widget-setting
+<b:widget-
+setting name='link-9'>#
+</b:widget-setting>
+setting name='text-
+8'>_Multi
+DropDown</b:widget-
+setting>
+<b:widget-
+setting name='link-7'>#
+</b:widget-setting>
+<b:widget-
+<b:widget-
+setting name='link-8'>#
+<b:widget-
+</b:widget-setting>
+setting name='link-
+5'>http://</b:widget-
+setting>
+setting name='link-
+6'>http://</b:widget-
+setting>
+setting name='link-
+3'>http://</b:widget-
+setting>
+setting name='link-
+4'>http://</b:widget-
+setting>
+<b:widget-
+<b:widget-
+setting>
+setting name='text-
+1'></b:widget-
+setting>
+setting>
+setting name='text-
+0'></b:widget-
+<b:widget-
+تحميل برامج <'5
+<b:widget-
+setting name='text-
+3'>_</b:widget-
+<b:widget-
+setting>
+setting name='text-
+2'></b:widget-
+<b:widget-
+خدمات < ' 16
+<b:widget-
+setting name='text-
+<b:widget-
+g</b:widget-setting>
+<b:widget-
+</b:widget-
+<b:widget-
+setting name='text-
+4'>
+setting>
+setting name='text-
+7'></b:widget-
+setting>
+<b:widget-
+setting name='text-6'>alle
+</b:widget-setting>
+<b:widget-
+setting name='text-
+15'></b:widget-
+setting>
+setting name='text-
+bg</b:widget-setting>
+<b:widget-
+setting name='text-
+17'>äste legis</b:widget-
+setting>
+<b:widget-
+<b:widget-
+setting name='text-
+11'> DropDown
+3</b:widget-setting>
+<b:widget-
+setting name='text
+<b:widget-
+setting name='text-
+13'> SiteMap</b:widget-
+setting>
+<b:widget-
+st.link'> <a
+expr:href='data
+:post.link'>
+<data:post.title
+O
+/></a>
+<b:else/> <b:if
+cond='data:po
+st.url'> <b:if
+cond='data:blo
+g.url !=
+data:post.url'>
+<a
+expr:href='data
+:post.url'>
+<data:post.title
+/></a>
+<b:else/>
+<data:post.title
+/> </b:if>
+<b:else/>
+<data:post.title
+/> </b:if>
+</b:if>
+6.1 <b:if
+cond='data:
+post.link'>
+<a
+expr:href='d
+ata:post.lin
+k'>
+<data:post.t
+itle/></a>
+<b:else/>
+<b:if
+cond='data:
+post.url'> <a
+expr:href='d
+ata:post.url'
+>
+<data:post.t
+itle/> </a>
+<b:else/>
+<data:post.t
+itle/></b:if>
+</b:if>
+6.1.1
+<data:po
+st.comm
+entLabel
+Full/>:
+▪ 6.2
+<data:title/>
+- 6.3
+<data:title/>
+تم حفظ لقطة الشاشة في: /shortcodes / Pictures_<'12
+6.4
+<data:title/>
+Screenshot
+<data:title/>
+6.7
+>[
+O
+S
+۸:۱۲ ص
+<b:includable id='main'>
+<b:if cond='data:title != "">
+<data:title/>
+</b:if>
+10,46 "QO
+4G
+B/S
+<data: content/>
+</b:includable>
+</b:widget>
+</b:section>
+<div style='clear: both;'/>
+</b:if>
+<b:if cond='data:blog.url == data:blog.homepageUrl'>
+<b:section class='featured preload' id='featured"
+maxwidget='1' showaddelement='yes'>
+<b:widget id='HTML 299' locked='true' title=
+type='HTML version='1'>
+<b:widget-settings>
+<b:widget-setting name='content'><!
+[CDATA[]]></b:widget-setting>
+</b:widget-settings>
+<b:includable id='main'>
+<b:if cond='data:title != "">
+<data:title/>
+</b:if>
+<data: content/>
+</b:includable>
+</b:widget>
+</b:section>
+<div style='clear: both;'/>
+<b:section class='ad-home-widget' id='adwidegt1'
+maxwidgets='1' name='Home Ad Widget'
+showaddelement='yes'>
+<b:widget id='HTML 90' locked='false'
+title='Post Top Ad' type="HTML version='1'>
+<b:widget-settings>
+تم حفظ لقطة الشاشة في: /bwidget-se Pictures>
+</b:widget-settings>
+<b:includable id='main'>
+<b:if cond='data:title != ""'>
+<data:title/>
+O
+Screenshot
+K
+O
+S
+۸:۱۳ ص
+1. lowerbar-wrapper {
+Y,0. 4GY ☎: "0.ņ
+K/S
+float: left; margin: 0px 5px auto; padding-bottom: 20px;
+width: 32%; text-align: justify; color:#ddd; line-height:
+1.6em; word-wrap: break-word; overflow: hidden; max-
+width: 375px;}.lowerbar {margin: 0; padding: 0;} .lowerbar
+widget {margin: 0; padding: 10px 20px 0px 20px;box-
+sizing: border-box;} .lowerbar h2{
+position: relative;
+overflow: hidden;
+margin: 0;
+font-size: 18px;
+vertical-align: middle;
+padding: 0 0 10px 0;
+border-bottom:1px solid rgba(0, 200, 215,
+0.18);
+font-weight: 700;
+color:#fff;
+clear: both;
+}.lowerbar h2:after { content:;
+display: inline-block;
+position: absolute;
+height: 15px;
+top: 0;
+margin: 3px 10px 12px 0;
+width: 100%;
+background:
+url(http://4.bp.blogspot.com/-
+R2WTW609E10/VX7dqIGT1eI/AAAAAAAACc4/pyvQDMML
+X3E/s1600/repeat-bg.png) repeat;
+} .lowerbar ul { margin: 0 auto; padding: 0; list-style-type:
+none; } .lowerbar li { display:block; line-height: 1.6em;
+margin-left: 0 !important; list-style-type: none; } .lowerbar li
+a {text-decoration:none; color: #DBDBDB; } .lowerbar li
+a:hover {text-decoration:none; } .lowerbar li:hover {
+display:block; } .lowerbar .Popular Posts ul li a, .lowerbar,
+.lowerbar .ty-bonus .ty-bonos-entry a, .lowerbar .tyard-
+komet a { color:#fff; } .lowerbar .PopularPosts .widget-
+content ul li { border-bottom: 1px solid rgb(51, 51, 51);
+border-top: 0; } .lowerbar .ty-bonus.ty-wow { border-
+bottom: 1px solid rgb(51, 51, 51); border-top: 0; } .lowerbar
+.PopularPosts .widget-content ul li:last-child { border: 0; }
+lowerbar.widget-content{
+padding: 10px 0;
+} /* ######## Footer Copyright Css
+##############
+####### */
+1. ty_footer {
+background: #2d2d2d;
+color: #fff;
+font-weight: 300;
+padding: 15px 0px;
+O
+O
+>[
+S
+۸:۱۲ ص
 # How to install WordPress
 
 WordPress is well-known for its ease of installation. Under most circumstances, installing WordPress is a very simple process and takes less than five minutes to complete. [Many web hosts](#) now offer [tools (e.g. Fantastico) to automatically install WordPress](https://wordpress.org/documentation/article/automated-installation/) for you. However, if you wish to install WordPress yourself, the following guide will help.
