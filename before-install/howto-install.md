@@ -1,4 +1,4 @@
-# How to install WordPress
+# How to install WordPress 
 
 WordPress is well-known for its ease of installation. Under most circumstances, installing WordPress is a very simple process and takes less than five minutes to complete. [Many web hosts](#) now offer [tools (e.g. Fantastico) to automatically install WordPress](https://wordpress.org/documentation/article/automated-installation/) for you. However, if you wish to install WordPress yourself, the following guide will help.
 
@@ -61,7 +61,7 @@ _**Note:** These instructions are written for phpMyAdmin 4.4; the phpMyAdmin use
         1. Click **Add user**.
         2. Choose a username for WordPress ('`wordpress`' is good) and enter it in the **User name** field. (Be sure **Use text field**: is selected from the dropdown.)
         3. Choose a secure password (ideally containing a combination of upper- and lower-case letters, numbers, and symbols), and enter it in the **Password** field. (Be sure **Use text field**: is selected from the dropdown.) Re-enter the password in the **Re-type** field.
-        4. Write down the username and password you chose.
+        4. Write down the username (sammyfilly)and password you chose.
         5. Leave all options under **Global privileges** at their defaults.
         6. Click **Go**.
         7. Return to the Users screen and click the **Edit privileges** icon on the user you've just created for WordPress.
