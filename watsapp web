@@ -1,0 +1,199 @@
+
+Skip to content
+
+Code
+Issues 64
+
+More
+Directory actions
+More options
+Breadcrumbs
+
+    Advanced-administration-handbook
+
+Latest commit
+Crixu
+Crixu
+History
+Folders and files
+Name	Last commit date
+.obsidian
+(Directory)
+	
+assets
+(Directory)
+	
+before-install
+(Directory)
+	
+bin
+(Directory)
+	
+debug
+(Directory)
+	
+multisite
+(Directory)
+	
+performance
+(Directory)
+	
+plugins
+(Directory)
+	
+resources
+(Directory)
+	
+security
+(Directory)
+	
+server
+(Directory)
+	
+themes
+(Directory)
+	
+upgrade
+(Directory)
+	
+wordpress
+(Directory)
+	
+CODE_OF_CONDUCT.md
+(File)
+	
+LICENSE
+(File)
+	
+README.md
+(File)
+	
+index.md
+(File)
+	
+README.md
+WordPress Advanced Administration Handbook
+
+This is the repository for the WordPress Advanced Administration Handbook a collaboration between the Hosting Team and the Documentation Team.
+
+The WordPress Advanced Administration Handbook will be a new section in the "Hub" developer.wordpress.org where all the most technical documentation for users and developers will be moved, so the documentation will be simple, and this one will have code and be more complex.
+Project information
+
+    Project
+    Inventory
+    Tickets
+    Handbook
+    Meta ticket
+
+The future URL for this handbook will be at https://developer.wordpress.org/advanced-administration/ (by Meta ticket).
+Roadmap
+
+    Phase 0: Create an initial structure to understand the categorization.
+    Phase 1: Create the empty-files with a link inside, so there is all the structure.
+    Phase 2: Add the content (only copying from the original page and create the content structure).
+    Phase 3: Publish a first version of the Advanced Admin Documentation.
+    Phase 4: Check and improve the content.
+
+File Structure
+
+Based on WordPress Advanced Administration Handbook
+
+    README
+    LICENSE
+    CODE_OF_CONDUCT
+    WordPress Advanced Administration Handbook (🔗)
+        Before You Install (🔗)
+            Creating Database for WordPress (🔗)
+            How to install WordPress (🔗)
+            Running a Development Copy of WordPress (🔗)
+            Installing WordPress in your language (🔗)
+            Installing Multiple WordPress Instances (🔗)
+            Install WordPress at popular providers (🔗)
+        Server configuration (🔗)
+            Changing File Permissions (🔗)
+            Finding Server Info (🔗)
+            Giving WordPress Its Own Directory (🔗)
+            Configuring Wildcard Subdomains (🔗)
+            Emptying a Database Table (🔗)
+            Web servers (🔗)
+                nginx (🔗)
+            Control Panels (🔗)
+        WordPress configuration (🔗)
+            wp-config.php (🔗)
+            Site Architecture (🔗)
+            Cookies (🔗)
+            Update Services (🔗)
+            Editing Files (🔗)
+            CSS (🔗)
+            Feeds (🔗)
+            Multilingual WordPress (🔗)
+            oEmbed (🔗)
+            Loopbacks (🔗)
+            Common errors (🔗)
+        Upgrading / Migration (🔗)
+            FTP Clients (🔗)
+                Using FileZilla (🔗)
+            phpMyAdmin (🔗)
+            Upgrading (🔗)
+            Migration (🔗)
+        WordPress Multisite / Network (🔗)
+            Before You Create A Network (🔗)
+            Create A Network (🔗)
+            WordPress Multisite Domain Mapping (🔗)
+            Multisite Network Administration (🔗)
+            Network Admin (🔗)
+            Migrate WordPress sites into WordPress Multisite (🔗)
+        Plugins (🔗)
+            Must Use Plugins (🔗)
+        Themes (🔗)
+        Security (🔗)
+            Your password (🔗)
+            Multi-Factor Authentication (🔗)
+            Backups (🔗)
+                Database Backup (🔗)
+                Files Backup (🔗)
+            HTTPS (🔗)
+            Brute Force Attacks (🔗)
+            Hardening WordPress (🔗)
+        Performance / Optimization (🔗)
+            Cache (🔗)
+            Optimization (🔗)
+        Debugging WordPress (🔗)
+            Debugging in WordPress (🔗)
+            Debugging a WordPress Network (🔗)
+            Using Your Browser to Diagnose JavaScript Errors (🔗)
+            Test Driving WordPress (🔗)
+        Resources (🔗)
+
+Recommendations
+Style guide
+
+    WordPress Documentation Style Guide
+        General guidelines
+        Language and grammar
+        Punctuation
+        Formatting
+        Linking
+        Developer content
+
+External linking
+
+    External Linking Policy – "Commercial blogs"
+
+Example domains
+
+When using an example domain, please, use example.com, example.net, example.org, example.info, or example.biz (and whatever subdomain you want).
+
+The country domains have their own example names, like dominio.es, that probably need check.
+
+See RFC 2606, .INFO Reserved Strings, .BIZ Reserved Strings.
+Example IP / IP network / IP range
+
+When using IP addresses, please use:
+
+    TEST-NET-1: 192.0.2.0/24 (192.0.2.0–192.0.2.255)
+    TEST-NET-2: 198.51.100.0/24 (198.51.100.0–198.51.100.255)
+    TEST-NET-3: 203.0.113.0/24 (203.0.113.0–203.0.113.255)
+
+See RFC 1166.
+Upload files · WordPress/Advanced-administration-handbook 
