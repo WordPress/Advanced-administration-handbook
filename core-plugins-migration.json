@@ -1,4 +1,4 @@
-{
+
   "file-explorer": true,
   "global-search": true,
   "switcher": true,
@@ -26,4 +26,3 @@
   "file-recovery": true,
   "publish": false,
   "sync": false
-}
