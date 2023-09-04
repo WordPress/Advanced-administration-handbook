@@ -1,0 +1,278 @@
+From: <Saved by Blink>
+Snapshot-Content-Location: https://playground.wordpress.net/?url=/wp-admin/
+Subject: WordPress Playground
+Date: Mon, 4 Sep 2023 06:27:38 -0000
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	type="text/html";
+	boundary="----MultipartBoundary--5rdTdwSuImmk74sI8DuksGfGIgkNnmAVfDgSM2DEYr----"
+
+
+------MultipartBoundary--5rdTdwSuImmk74sI8DuksGfGIgkNnmAVfDgSM2DEYr----
+Content-Type: text/html
+Content-ID: <frame-3C7CF2551E27BA14D6DD634EEC2CC3A9@mhtml.blink>
+Content-Transfer-Encoding: binary
+Content-Location: https://playground.wordpress.net/?url=/wp-admin/
+
+<!DOCTYPE html><html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		
+		<title>WordPress Playground</title>
+		<base href="https://playground.wordpress.net/">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="icon" type="image/x-icon" href="https://playground.wordpress.net/favicon.ico">
+		
+		
+		<link rel="stylesheet" href="https://playground.wordpress.net/assets/index-cd58bf24.css">
+	<link rel="modulepreload" as="script" crossorigin="" href="https://playground.wordpress.net/assets/main-f44622c6.js"><link rel="stylesheet" href="https://playground.wordpress.net/assets/main-4f21813e.css"></head>
+	<body class="with-background">
+		<div id="root"><div class="_wrapper_5didy_26"><div class="_window_5didy_31"><div class="_toolbar_5didy_64"><div class="_window-controls_5didy_98"><div class="_window-control_5didy_98 _is-neutral_5didy_113"></div><div class="_window-control_5didy_98 _is-neutral_5didy_113"></div><div class="_window-control_5didy_98 _is-neutral_5didy_113"></div></div><div class="_address-bar-slot_5didy_84 _is-hidden_5didy_93"><form class="_form_xeyca_1"><div class="_input-container_xeyca_7"><input class="_input_xeyca_7" name="url" type="text" autocomplete="off" value=""></div><input class="_submit_xeyca_12" type="submit" tabindex="-1"></form></div><div class="_toolbar-buttons_5didy_77"><button class="_button_1lhdn_1   ">PHP 8.0  - WP 6.3  - ⚠️ Temporary</button></div></div><div class="_content_5didy_58"><div class="_full-size_tqr68_1"><iframe title="Playground Viewport" class="_full-size_tqr68_1" src="cid:frame-19ACB07CE73D5866556D41326E1E05E0@mhtml.blink"></iframe></div></div><div class="_experimental-notice_5didy_9">This is a cool fun experimental WordPress running in your browser :) All your changes are private and gone after a page refresh.</div></div></div></div>
+		
+	
+
+<div class="ReactModalPortal"></div></body></html>
+------MultipartBoundary--5rdTdwSuImmk74sI8DuksGfGIgkNnmAVfDgSM2DEYr----
+Content-Type: text/css
+Content-Transfer-Encoding: binary
+Content-Location: https://playground.wordpress.net/assets/index-cd58bf24.css
+
+@charset "utf-8";
+
+* { box-sizing: border-box; }
+
+html, body { margin: 0px; padding: 0px; height: 100%; font-size: 16px; font-family: Arial, Helvetica, sans-serif; line-height: 1.3; }
+
+#root { height: 100%; width: 100%; }
+
+#root.lazy-loading { display: flex; justify-content: center; align-items: center; }
+
+body.with-background { background-image: url("data:image/jpg;base64,/9j/4AAQSkZJRgABAQABLAEsAAD/4QCMRXhpZgAATU0AKgAAAAgABQESAAMAAAABAAEAAAEaAAUAAAABAAAASgEbAAUAAAABAAAAUgEoAAMAAAABAAIAAIdpAAQAAAABAAAAWgAAAAAAAAEsAAAAAQAAASwAAAABAAOgAQADAAAAAQABAACgAgAEAAAAAQAAAGmgAwAEAAAAAQAAAEAAAAAA/+EKYWh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8APD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iWE1QIENvcmUgNi4wLjAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOmJhNTU4YWFiLTcyYTMtNDdkYy04OTVmLWU0YTI5OTU2YWQzZSIgeG1wTU06T3JpZ2luYWxEb2N1bWVudElEPSJFRjk2NzgzNDlGN0JFQ0RBMEFGM0I5QzJCNkI2RjYzNyIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpiYTU1OGFhYi03MmEzLTQ3ZGMtODk1Zi1lNGEyOTk1NmFkM2UiIHhtcDpNZXRhZGF0YURhdGU9IjIwMjAtMDMtMzBUMTE6Mzg6MzktMDQ6MDAiLz4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8P3hwYWNrZXQgZW5kPSJ3Ij8+AP/AABEIAEAAaQMBIgACEQEDEQH/xAAfAAABBQEBAQEBAQAAAAAAAAAAAQIDBAUGBwgJCgv/xAC1EAACAQMDAgQDBQUEBAAAAX0BAgMABBEFEiExQQYTUWEHInEUMoGRoQgjQrHBFVLR8CQzYnKCCQoWFxgZGiUmJygpKjQ1Njc4OTpDREVGR0hJSlNUVVZXWFlaY2RlZmdoaWpzdHV2d3h5eoOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4eLj5OXm5+jp6vHy8/T19vf4+fr/xAAfAQADAQEBAQEBAQEBAAAAAAAAAQIDBAUGBwgJCgv/xAC1EQACAQIEBAMEBwUEBAABAncAAQIDEQQFITEGEkFRB2FxEyIygQgUQpGhscEJIzNS8BVictEKFiQ04SXxFxgZGiYnKCkqNTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqCg4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2dri4+Tl5ufo6ery8/T19vf4+fr/2wBDAAEBAQEBAQIBAQIDAgICAwMDAwMDAwQDAwMDAwQFBAQEBAQEBQUFBQUFBQUGBgYGBgYHBwcHBwgICAgICAgICAj/2wBDAQEBAQICAgQCAgQJBgUGCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQn/3QAEAAf/2gAMAwEAAhEDEQA/AP30m1xQOtc5e66pyM15Fc+LgoPzVzF54uXJy9fpGSYe6RrxXVtc9UvdbAyd1c5LrQY43V5Rd+KQ2drdaxv+El+bG6v03LcI2kfy1xfj0pM9yj1cHBzUx1NX6mvFYPEO7jdW3b6yHGC1ex9WPzSWKuekteg8iqxuRnJrlYtRBA5q2tzuNb0qRxVKt2dEsytUwG8cVhxzZrXtpMiu2NMzUitNF7VRktwRXQvFkZ9aqvCCOaUo9DWMNTkLqEVj/Zq665h4PrWN5Z9K52VOn5H/0PsvU/GYjz89cLdePE3Nl/1r5h8R/EpI84kx+NeO3fxWjExHmfrX7Zw3hOZI8njao4Jn3a/jhTxvz+NQxeMg7Z318O2/xMSc4EmfxretfHan+P8AWv1rB4BRgfyPxHWlUrNH29Z+MFZwN3613mmeIPOAO6vhbRvGPmzD585r33wx4gEoUk1csMfJ1fd0Z9WafqJkA5rsLV965FeIaJqRk24Neu6PPvUZ71SoWOJyudNExDYNb9m+eBWOsYxkVqWSktxVezRvTR0P3lqJl61biQslRSR46VhOJ3wiYVymRmsny1roLkfKc1k7FrllDU6JpdT/0fzI8cfF4W2/dLjGe9fLerfHyCG/MZnxk/3q+afjH8R57dJSkpB571+f+oeO9XvNTa4aU4zxz2r+m+CcpcqfNI8vxAhz+5T3Z+6/hP4wx3xVxN+te56T8QRNtO/9a/C/4b/E2/tHRJJCR35/+vX3J4K+If2pULP1x3r9MeFcUfy1meDcajjUVmfqb4X8ZCSZcvX1d4N8TB1Qhq/KvwZ4pLSKQ/XFfZvgDxFIxT5uOKKeGufI5lQ0uj9JfC2sCQLzzX0H4fvgyqSa+JvBWt71Q5r6b8NatlVCmqqYXQ+cUrM+i7SUSKBXSWMWcV53ol0ZAK9X0uMFB615tWFj0qEbmmi7YsVWmrSdSq1mz5wa4pLU74wMS7PBFYny1qXj4BrA+0L6/wCfyrP2YSZ//9L+Nz4ueI2uZ3jDZya+bDJlya63xdq73965znniuF8zuP5//Wr+18pwqoUlBHzmY4j29eUzv/DWrG2uACa+xPh34kAZAWr4EhuGRg69RXsngfxc1tMqO3TFfSUppqzPzPjDIJVI+2pbo/X/AMAaurlDu9K+4vh/qq/uznNfkr8L/G6TbFL88d6/QX4d+JQwQ7vSrhCzsfjGMouSaP028E6sMJg+lfVXhPUg4XB9K/PzwDrLylFTnpX2n4GaSRUZqurFJHydSg3KyPsPwzcb9vpXuWkzAqDXz14WBCLmvbtLl+QAV87inG9j1MJQfY72Qq0dY10ducVKs7BazrqbI5rzzuaOd1CTANcv5jf5/wD1Vq6rccE5rkftlUodjjqNXP/Z"); backdrop-filter: blur(7px); background-size: cover; background-attachment: fixed; }
+
+#lazy-load-initiator { display: inline-block; background-color: rgb(76, 175, 80); color: rgb(255, 255, 255); padding: 10px 20px; text-align: center; text-decoration: none; font-size: 34px; border-radius: 4px; transition: all 0.3s ease 0s; box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 15px; }
+
+#lazy-load-initiator:hover { background-color: rgb(69, 160, 73); box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 10px; }
+
+#lazy-load-initiator:active { background-color: rgb(56, 124, 59); box-shadow: rgba(0, 0, 0, 0.4) 0px 1px 5px; transform: translateY(2px); }
+------MultipartBoundary--5rdTdwSuImmk74sI8DuksGfGIgkNnmAVfDgSM2DEYr----
+Content-Type: text/css
+Content-Transfer-Encoding: binary
+Content-Location: https://playground.wordpress.net/assets/main-4f21813e.css
+
+@charset "utf-8";
+
+._full-size_tqr68_1 { position: relative; width: 100%; height: 100%; border: 0px; margin: 0px; padding: 0px; }
+
+._experimental-notice_5didy_9 { display: flex; padding: 10px 22px; background: rgb(255, 247, 204); font-family: "Andale mono", Helvetica, monospace, Arial; font-style: normal; font-weight: 100; font-size: 12px; line-height: 18px; align-items: center; color: rgb(30, 30, 30); }
+
+body._is-embedded_5didy_22 ._fake-window-wrapper_5didy_22 { padding: 15px; }
+
+._wrapper_5didy_26 { padding: 15px 60px 55px; height: 100%; }
+
+._window_5didy_31 { display: flex; flex-direction: column; margin: 0px auto; max-width: 1200px; height: 100%; border-radius: 6px; overflow: hidden; animation: 6s ease-in 0s infinite normal none running _pulse_5didy_1; }
+
+@keyframes _pulse_5didy_1 { 
+  0% { box-shadow: rgba(13, 32, 117, 0.5) 0px 4px 44px, rgba(13, 32, 117, 0.5) 0px 0px; }
+  50% { box-shadow: rgba(13, 32, 117, 0.5) 0px 4px 44px, rgba(13, 32, 117, 0.5) 0px 0px 88px 5px; }
+  100% { box-shadow: rgba(13, 32, 117, 0.5) 0px 4px 44px, rgba(13, 32, 117, 0.5) 0px 0px; }
+}
+
+._content_5didy_58 { display: flex; flex-grow: 1; background: rgb(255, 255, 255); }
+
+._toolbar_5didy_64 { position: relative; display: flex; flex-grow: 0; background: rgb(30, 35, 39); width: 100%; margin: 0px auto; padding: 0px 22px; height: 50px; flex-direction: row; align-items: center; }
+
+._toolbar-buttons_5didy_77 { display: flex; align-items: center; gap: 10px; padding-left: 10px; }
+
+._address-bar-slot_5didy_84 { margin-right: auto; margin-left: 100px; min-width: 200px; width: 100%; opacity: 1; transition: opacity 0.25s ease-in 0s; }
+
+._address-bar-slot_5didy_84._is-hidden_5didy_93 { opacity: 0; pointer-events: none; }
+
+._window-controls_5didy_98 { position: absolute; width: 80px; display: flex; }
+
+._window-control_5didy_98 { display: flex; width: 10px; height: 10px; background: rgb(249, 249, 249); border-radius: 50%; margin: 0px 12px 0px 0px; }
+
+._window-control_5didy_98._is-neutral_5didy_113 { background: rgb(165, 175, 188); }
+
+._window-control_5didy_98._is-red_5didy_117 { background: rgb(255, 96, 87); border: 1px solid rgb(225, 70, 64); }
+
+._window-control_5didy_98._is-amber_5didy_122 { background: rgb(255, 189, 46); border: 1px solid rgb(223, 161, 35); }
+
+._window-control_5didy_98._is-green_5didy_127 { background: rgb(39, 201, 63); border: 1px solid rgb(29, 173, 43); }
+
+@media (max-width: 1100px) {
+  ._address-bar-slot_5didy_84 { margin-left: 0px; }
+  ._window-controls_5didy_98 { display: none; }
+}
+
+@media (max-width: 902px) {
+  ._wrapper_5didy_26 { padding: 0px; height: 100%; }
+  ._window_5didy_31 { border-radius: 0px; }
+}
+
+@media (max-width: 812px) {
+  ._toolbar_5didy_64 { padding: 10px; flex-direction: column; height: auto; align-items: normal; }
+  ._toolbar-buttons_5didy_77 { padding: 0px; flex-wrap: wrap; }
+  ._address-bar-slot_5didy_84 { margin-bottom: 10px; }
+}
+
+._form_xeyca_1 { position: relative; display: flex; transition: opacity 0.5s ease 0s; }
+
+._input-container_xeyca_7 { display: flex; width: 100%; }
+
+._submit_xeyca_12 { position: absolute; width: 1px; height: 1px; left: -100000px; top: -100000px; }
+
+._input_xeyca_7 { flex-grow: 1; padding: 5px 10px; font-family: "San Francisco", Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 50; height: 26px; border: 0px; background: rgb(64, 70, 77); border-radius: 8px; color: rgb(165, 175, 188); transition: color 0.5s ease 0s; }
+
+._input_xeyca_7:focus, ._input_xeyca_7:hover { color: rgb(255, 255, 255); }
+
+._btn_1l5xg_1 { cursor: pointer; background: none; border: none; padding: 0px; }
+
+._btn_1l5xg_1:hover, ._btn_1l5xg_1:active { opacity: 0.8; }
+
+._screenreader-text_gzwal_1 { display: none; }
+
+._modal-text_gzwal_5, ._modal-text-list_gzwal_6 { text-align: left; }
+
+._modal-text-list_gzwal_6 { padding-left: 15px; }
+
+._form-group_ua2rp_1 { display: flex; flex-direction: column; margin-bottom: 20px; padding-bottom: 20px; border-bottom: 1px solid rgb(234, 234, 234); }
+
+._form-group-last_ua2rp_9 { border-bottom: none; padding-bottom: 0px; }
+
+._form-group-linear_ua2rp_14 { flex-flow: wrap; align-items: baseline; }
+
+._form-group-linear_ua2rp_14 ._group-label_ua2rp_20 { margin-bottom: 0px; }
+
+@media (max-width: 600px) {
+  ._form-group-linear_ua2rp_14 { justify-content: space-between; }
+}
+
+._file-input-label_ua2rp_31 { display: flex; flex-direction: row; justify-content: space-between; align-items: center; }
+
+._file-input-text_ua2rp_38 { margin-top: 5px; margin-bottom: 15px; }
+
+._file-input-label_ua2rp_31 ._btn_ua2rp_43 { width: 100%; }
+
+._group-label_ua2rp_20 { font-size: 18px; margin-bottom: 10px; margin-right: 15px; }
+
+._error_ua2rp_53 { color: red; }
+
+._large-select_ua2rp_57 { cursor: pointer; font-size: 18px; max-width: 200px; }
+
+._radio-input_ua2rp_63 { margin-right: 10px; }
+
+._radio-label_ua2rp_67 { font-size: 16px; cursor: pointer; }
+
+input[disabled]._radio-input_ua2rp_63 + label { color: graytext; }
+
+input._radio-input_ua2rp_63._not-available_ua2rp_76 + label > span { }
+
+._submit-row_ua2rp_80 { display: flex; flex-direction: row; justify-content: space-around; align-items: center; margin-top: 10px; }
+
+._button_1lhdn_1 { flex-grow: 1; padding: 0px 15px; font-family: "San Francisco", Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 50; min-height: 26px; white-space: nowrap; cursor: pointer; color-scheme: dark; border-radius: 6px; border: 0px; }
+
+._button_1lhdn_1[disabled] { opacity: 0.5; }
+
+._button_1lhdn_1:hover, ._button_1lhdn_1:active { opacity: 0.8; }
+
+._button_1lhdn_1._is-large_1lhdn_24 { height: 40px; padding: 5px 20px; font-size: 18px; }
+
+._button_1lhdn_1._is-primary_1lhdn_30 { background: rgb(30, 35, 39); color: rgb(255, 255, 255); border: none; }
+
+._btn_eaphz_1 { cursor: pointer; background: none; border: none; }
+
+._btn_eaphz_1:hover, ._btn_eaphz_1:active { opacity: 0.8; }
+
+._btn-close_eaphz_12 { position: absolute; top: -8px; right: -13px; }
+
+._modal-inner_eaphz_18 { position: relative; padding: 15px; text-align: left; max-height: 90vh; overflow: auto; }
+
+._radio-list_1kkw1_1 { list-style: none; padding: 0px; margin: 0px; }
+
+._radio-list_1kkw1_1 > li { display: flex; align-items: flex-start; margin-bottom: 10px; }
+
+._button-with-spinner_1kkw1_13 { display: flex; justify-content: center; align-items: center; gap: 8px; }
+
+._danger_1kkw1_20 { color: red; }
+
+._buttons-wrapper_1kkw1_24 { display: flex; flex-direction: row; gap: 10px; justify-content: space-around; }
+
+._spinner_7jgx1_1 { display: inline-block; width: 80px; height: 80px; }
+
+._spinner_7jgx1_1::after { content: " "; display: block; width: 80%; height: 80%; border-radius: 50%; border-width: 2px; border-style: solid; border-image: initial; border-color: rgb(255, 255, 255) transparent; animation: 1.2s linear 0s infinite normal none running _spinner_7jgx1_1; }
+
+@keyframes _spinner_7jgx1_1 { 
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+------MultipartBoundary--5rdTdwSuImmk74sI8DuksGfGIgkNnmAVfDgSM2DEYr----
+Content-Type: text/html
+Content-ID: <frame-19ACB07CE73D5866556D41326E1E05E0@mhtml.blink>
+Content-Transfer-Encoding: binary
+Content-Location: https://playground.wordpress.net/remote.html?v=87cb4252073f753bd2ce5102ac52c899fbc537c6&storage=temporary&progressbar=true&php=8.0&wp=6.3
+
+<!DOCTYPE html><html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><link rel="stylesheet" type="text/css" href="cid:css-bcca5898-2fab-4ebc-a593-46ce4acc6116@mhtml.blink" />
+		<title>WordPress Playground</title>
+		
+		
+		<link rel="stylesheet" href="https://playground.wordpress.net/assets/remote-9f4485b7.css">
+	</head>
+	<body class="is-loading is-embedded"><div class="_overlay_1n1bq_1"><h3 class="_caption_1n1bq_81">Preparing WordPress...</h3><div class="_wrapper_1n1bq_22 _wrapper-definite_1n1bq_32"><div class="_progress-bar_1n1bq_32 _is-definite_1n1bq_33" style="width: 50%;"></div></div></div>
+		<iframe id="wp" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-downloads"></iframe>
+		
+	
+
+</body></html>
+------MultipartBoundary--5rdTdwSuImmk74sI8DuksGfGIgkNnmAVfDgSM2DEYr----
+Content-Type: text/css
+Content-Transfer-Encoding: binary
+Content-Location: cid:css-bcca5898-2fab-4ebc-a593-46ce4acc6116@mhtml.blink
+
+@charset "utf-8";
+
+* { box-sizing: border-box; }
+
+html, body, #wp { height: 100%; width: 100%; margin: 0px; padding: 0px; border: 0px; }
+
+html, body { overflow: hidden; }
+
+body.has-error { background: rgb(241, 241, 241); display: flex; flex-direction: column; align-items: center; justify-content: center; font-size: 20px; font-family: Arial, Helvetica, sans-serif; line-height: 1.4; }
+
+body.has-error .error-message { padding: 20px; max-width: 800px; }
+
+body.has-error button { margin-top: 15px; font-size: 20px; padding: 5px 10px; cursor: pointer; }
+------MultipartBoundary--5rdTdwSuImmk74sI8DuksGfGIgkNnmAVfDgSM2DEYr----
+Content-Type: text/css
+Content-Transfer-Encoding: binary
+Content-Location: https://playground.wordpress.net/assets/remote-9f4485b7.css
+
+@charset "utf-8";
+
+._overlay_1n1bq_1 { position: absolute; top: 0px; left: 0px; background: rgb(255, 255, 255); z-index: 5; display: flex; flex-direction: column; width: 100%; height: 100%; justify-content: center; align-items: center; opacity: 1; transition: opacity 0.25s ease-in 0s; }
+
+._overlay_1n1bq_1._is-hidden_1n1bq_17 { opacity: 0; pointer-events: none; }
+
+._wrapper_1n1bq_22 { position: relative; width: 512px; max-width: 60vw; height: 4px; margin: 4px auto; border-radius: 10px; background: rgb(224, 224, 224); }
+
+._wrapper-definite_1n1bq_32 ._progress-bar_1n1bq_32._is-indefinite_1n1bq_32, ._wrapper-indefinite_1n1bq_33 ._progress-bar_1n1bq_32._is-definite_1n1bq_33 { opacity: 0; }
+
+._wrapper-indefinite_1n1bq_33 ._progress-bar_1n1bq_32._is-indefinite_1n1bq_32, ._wrapper-definite_1n1bq_32 ._progress-bar_1n1bq_32._is-definite_1n1bq_33 { opacity: 1; }
+
+._progress-bar_1n1bq_32 { position: absolute; inset: 0px 100% 0px 0px; width: 0px; background: rgb(56, 88, 233); border-radius: 2px; transition: opacity 0.2s linear 0s, width 0.2s ease-in 0s; }
+
+._progress-bar_1n1bq_32._is-indefinite_1n1bq_32 { animation: 2s linear 0s infinite normal none running _indefinite-loading_1n1bq_1; }
+
+@keyframes _indefinite-loading_1n1bq_1 { 
+  0% { left: 0%; right: 100%; width: 0%; }
+  10% { left: 0%; right: 75%; width: 25%; }
+  90% { right: 0%; left: 75%; width: 25%; }
+  100% { left: 100%; right: 0%; width: 0%; }
+}
+
+._caption_1n1bq_81 { font-weight: 400; font-family: -apple-system, BlinkMacSystemFont, sans-serif; font-size: 1.1rem; }
+------MultipartBoundary--5rdTdwSuImmk74sI8DuksGfGIgkNnmAVfDgSM2DEYr----
+Content-Type: text/html
+Content-ID: <frame-AAA523E7D45ED79B0F984F1554B50489@mhtml.blink>
+Content-Transfer-Encoding: binary
+
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></head><body></body></html>
+------MultipartBoundary--5rdTdwSuImmk74sI8DuksGfGIgkNnmAVfDgSM2DEYr------
