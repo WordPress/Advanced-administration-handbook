@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>WordPress Playground</title>
+		<base href="/" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="icon" type="image/x-icon" href="/favicon.ico" />
+		
+		<script type="module" crossorigin src="/assets/index-4195b3e2.js"></script>
+		<link rel="stylesheet" href="/assets/index-cd58bf24.css">
+	</head>
+	<body>
+		<div id="root">
+			<script>
+				const query = new URLSearchParams(window.location.search);
+				const shouldLazyLoadPlayground =
+					query.has('lazy') ||
+					// Initial API used "start_button" - this preserves compatability.
+					'1' === query.get('start_button');
+
+				if (
+					'seamless' !== query.get('mode') &&
+					!shouldLazyLoadPlayground
+				) {
+					document.body.classList.add('with-background');
+				}
+
+				if (shouldLazyLoadPlayground) {
+					const query = new URLSearchParams(window.location.search);
+					query.delete('lazy');
+					query.delete('start_button');
+					const nonLazyUrl = new URL(window.location);
+					nonLazyUrl.search = query.toString();
+
+					const initiator = document.createElement('a');
+					initiator.innerText = 'Run Playground';
+					initiator.setAttribute('id', 'lazy-load-initiator');
+					initiator.setAttribute('href', nonLazyUrl);
+
+					const root = document.getElementById('root');
+					root.classList.add('lazy-loading');
+					root.appendChild(initiator);
+				}
+			</script>
+		</div>
+		
+	</body>
+</html>
