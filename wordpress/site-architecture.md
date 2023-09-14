@@ -196,7 +196,7 @@ Like the Classic Theme, this division sets up the style for post and the identif
 <h2>Post Title</h2>
 ```
 
-This encompasses the post's title code, styled by the <h2> tag.
+This encompasses the post's title code, styled by the `<h2>` tag.
 
 ```
 <small>Date</small>
