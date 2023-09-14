@@ -106,7 +106,7 @@ Based on [WordPress Advanced Administration Handbook](https://docs.google.com/do
 
 ### External linking
 
-- [External Linking Policy – "Commercial blogs"](https://make.wordpress.org/docs/2020/07/06/external-linking-policy-commercial-blogs/)
+- [External Linking Policy (Summary)](https://make.wordpress.org/docs/handbook/documentation-team-handbook/external-linking-policy/)
 
 ### Example domains
 
