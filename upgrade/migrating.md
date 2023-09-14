@@ -425,15 +425,11 @@ If you are moving from subdomains to subfolders, or vice-versa, remember to adju
 
 ### Related Links
 
-- [How to move WordPress site to another server with zero downtime](http://www.prelovac.com/vladimir/how-to-move-wordpress-site-to-another-server-with-zero-downtime)
 - [Moving a blog from wordpress.com to self-hosted blog](http://www.problogger.net/archives/2009/01/03/how-to-move-from-wordpresscom-to-wordpressorg/)
 - [Moving WordPress to a new domain or server](http://sltaylor.co.uk/blog/moving-wordpress-new-domain-server/)
 - [Italian version of this article – Versione italiana dell'articolo](http://www.valent-blog.eu/2007/09/14/trasferire-wordpress/)
-- [How to move a WordPress Blog or Website](http://www.velvetblues.com/web-development-blog/how-to-move-a-wordpress-blog-or-website/)
 - [Search and Replace for WordPress Databases](http://interconnectit.com/124/search-and-replace-for-wordpress-databases/)
-- [Online WordPress Serialized PHP Search and Replace](http://pixelentity.com/wordpress-search-replace-domain/)
-- [Cloning a live WordPress site to a local Mac test environment](http://egalo.com/2012/05/15/clone-live-wordpress-to-local-env/)
-- P[HP script to replace site url in WordPress database dump, even with WPML](http://blog.lavoie.sl/2012/07/php-script-to-replace-site-url-in.html)
+- [PHP script to replace site url in WordPress database dump, even with WPML](http://blog.lavoie.sl/2012/07/php-script-to-replace-site-url-in.html)
 - [The Duplicator plugin helps administrators move a site from one location to another](https://wordpress.org/plugins/duplicator/)
 - [Technical tutorial on moving your WordPress blog to Bitnami's AWS configuration](http://www.agileweboperations.com/migrate-your-wordpress-blog-to-a-bitnami-ec2-instance)
 
