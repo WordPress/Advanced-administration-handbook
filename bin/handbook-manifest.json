@@ -412,6 +412,13 @@
 		"parent": "security",
 		"order": 6
 	},
+	"security\/hardening\/display-errors": {
+		"title": "Display Errors",
+		"slug": "display-errors",
+		"markdown_source": "https:\/\/github.com\/WordPress\/Advanced-administration-handbook\/blob\/main\/security\/display-errors.md",
+		"parent": "hardening",
+		"order": 1
+	},
 	"security\/monitoring": {
 		"title": "Monitoring",
 		"slug": "monitoring",
@@ -439,6 +446,13 @@
 		"markdown_source": "https:\/\/github.com\/WordPress\/Advanced-administration-handbook\/blob\/main\/performance\/optimization.md",
 		"parent": "performance",
 		"order": 2
+	},
+	"performance\/php": {
+		"title": "PHP Optimization",
+		"slug": "php",
+		"markdown_source": "https:\/\/github.com\/WordPress\/Advanced-administration-handbook\/blob\/main\/performance\/php.md",
+		"parent": "performance",
+		"order": 3
 	},
 	"debug": {
 		"title": "Debugging WordPress",
