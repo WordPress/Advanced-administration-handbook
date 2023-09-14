@@ -4,16 +4,14 @@ WordPress does not support a bilingual or multilingual blog out-of-the-box. Ther
 
 Creating a multilingual blog is basically installing WordPress in more than one language and letting the Plugin switch between them. This includes installing .mo languages files which most Plugins will require you to do manually. See [Installing WordPress in Your Language](https://developer.wordpress.org/advanced-administration/before-install/in-your-language/) for details.
 
-The free [WPGlobus](https://wordpress.org/plugins/wpglobus/), [Polylang](https://wordpress.org/plugins/polylang/), [qTranslate-X](https://wordpress.org/plugins/qtranslate-x/), [xili-language](https://wordpress.org/plugins/xili-language/) or [Sublanguage](https://wordpress.org/plugins/sublanguage/) plugins are installable on standalone WordPress sites. For multisite WordPress (one website per language), you can try [Multisite Language Switcher](https://wordpress.org/plugins/multisite-language-switcher/), [Zanto](https://wordpress.org/plugins/zanto/) or [Multilingual Press](https://wordpress.org/plugins/multilingual-press/) or purchase [WPML](https://wpml.org/).
-
 ## Different types of multilingual plugins {#different-types-of-multilingual-plugins}
 
 There are a few basic types of multilingual Plugins:
 
-1. Manage multilingual posts in one post per language (e.g. [WPML](https://wpml.org/) – paid, [xili-language](https://wordpress.org/plugins/xili-language/), [Polylang](https://wordpress.org/plugins/polylang/), [Bogo](https://wordpress.org/plugins/bogo/) or [Sublanguage](https://wordpress.org/plugins/sublanguage/)). Translations are then linked together, indicating that one page is the translation of another.
-2. Store all languages alternatives for each post in the same post (e.g. [qTranslate-X](https://wordpress.org/plugins/qtranslate-x/), [WPGlobus](https://wordpress.org/plugins/wpglobus/)).
-3. Manage translations on the generated page instead of using a post context (e.g. [Transposh](https://wordpress.org/plugins/transposh-translation-filter-for-wordpress) and [Global Translator](https://wordpress.org/plugins/global-translator/)).
-4. Plugins like [Multisite Language Switcher](https://wordpress.org/plugins/multisite-language-switcher/), [Multilingual Press](https://wordpress.org/plugins/multilingual-press/), and [Zanto](https://wordpress.org/plugins/zanto/), link together separate WordPress network (multisite) installations for each language by pinging back and forth.
+1. Manage multilingual posts in one post per language. Translations are then linked together, indicating that one post is the translation of another.
+2. Store all languages alternatives for each post in the same post.
+3. Manage translations on the generated page instead of using a post context.
+4. Link together separate WordPress sites in a network (multisite) installations for each language by pinging back and forth.
 
 ### One language per post {#one-language-per-post}
 
@@ -119,4 +117,5 @@ Since many multilingual plugins change the database significantly, doing a [data
 
 ## Changelog
 
+- 2023-09-14: Removed links to individual plugins
 - 2022-10-25: Original content from [Multilingual WordPress](https://wordpress.org/documentation/article/multilingual-wordpress/).
