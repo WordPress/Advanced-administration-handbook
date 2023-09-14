@@ -48,12 +48,12 @@ Your MySQL connection id is 5340 to server version: 3.23.54
 Type 'help;' or '\\h' for help. Type '\\c' to clear the buffer.  
   
 mysql> CREATE DATABASE databasename;  
-Query OK, 1 row affected (0.00 sec)  
-  
-mysql> GRANT ALL PRIVILEGES ON databasename.* TO "wordpressusername"@"hostname"
-\-> IDENTIFIED BY "password";  
-Query OK, 0 rows affected (0.00 sec)  
-  
+Query OK, 1 row affected (0.00 sec)
+
+mysql> CREATE USER "wordpressusername"@"hostname" IDENTIFIED BY "password";
+mysql> GRANT ALL PRIVILEGES ON databasename.* TO "wordpressusername"@"hostname";
+Query OK, 0 rows affected (0.00 sec)
+
 mysql> FLUSH PRIVILEGES;  
 Query OK, 0 rows affected (0.01 sec)   
   
