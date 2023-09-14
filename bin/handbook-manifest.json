@@ -440,6 +440,13 @@
 		"parent": "performance",
 		"order": 2
 	},
+	"performance\/php": {
+		"title": "PHP Optimization",
+		"slug": "php",
+		"markdown_source": "https:\/\/github.com\/WordPress\/Advanced-administration-handbook\/blob\/main\/performance\/php.md",
+		"parent": "performance",
+		"order": 3
+	},
 	"debug": {
 		"title": "Debugging WordPress",
 		"slug": "debug",
