@@ -24,11 +24,11 @@ After login, WordPress sets the `wordpress_logged_in_[hash]` cookie, which indic
 
 WordPress also sets a few `wp-settings-{time}-[UID]` cookies. The number on the end is your individual user ID from the users database table. This is used to customize your view of admin interface, and possibly also the main site interface.
 
-The cookies length can be adjusted with the `auth_cookie_expiration` hook. An example of this can be found at [what's the easiest way to stop wp from ever logging me out](https://wordpress.stackexchange.com/questions/515/whats-the-easiest-way-to-stop-wp-from-ever-logging-me-out).
+The cookies lifetime can be adjusted with the `auth_cookie_expiration` hook. An example of this can be found at [what's the easiest way to stop wp from ever logging me out](https://wordpress.stackexchange.com/questions/515/whats-the-easiest-way-to-stop-wp-from-ever-logging-me-out).
 
 ### Non-Version-Specific Data
 
-The actual cookies contain _hashed_ data, so you don't have to worry about someone gleaning your username and password by reading the cookie data. A _hash_ is the result of a specific mathematical formula applied to some input data (in this case your `user name` and `password`, respectively). It's quite hard to reverse a _hash_ (bordering on practical infeasibility with today's computers). This means it is very difficult to take a _hash_ and _"unhash"_ it to find the original input data.
+The actual cookies contain your username, the expiration time and _hashed_ data that ensures you have a valid session. A _hash_ is the result of a specific mathematical formula applied to some data. In case of this cookies, only 4 characters of your hashed password stored in a hash in your cookie. This ensures that it is impossible to retrieve your password from the cookie. It also ensures that any cookie will invalidated whenever your password is changed.
 
 WordPress uses the two cookies to bypass the password entry portion of `wp-login.php`. If WordPress recognizes that you have valid, non-expired cookies, you go directly to the [WordPress Administration Screen](https://wordpress.org/documentation/article/administration-screens). If you don't have the cookies, or they're expired, or in some other way invalid (like you edited them manually for some reason), WordPress will require you to log in again, in order to obtain new cookies.
 
@@ -42,6 +42,16 @@ When visitors comment on your blog, they get cookies stored on their computer to
 
 The commenter cookies are set to expire a little under one year from the time they're set.
 
+## WordPress Test Cookie
+
+WordPress will set a temporary cookie named `wordpress_test_cookie` which is to probe the ability of WordPress to set cookies. If writing this cookie fails, you will get the following error message "Cookies are blocked or not supported by your browser."
+
+In case you get this after moving your website, always try to delete your cookies and if you are using a caching plugin, the server cache. This will solve temporary issues.
+
+## Language Cookie
+
+WordPress allows you to alter the language of all translatable strings on login. For this measure WordPress will set a cookie named `wp_lang` which is a session cookie and will store the language key of the selected language.
+
 ## References
 
 - [Wikipedia: Cookies](http://en.wikipedia.org/wiki/HTTP_cookie)
@@ -50,5 +60,6 @@ The commenter cookies are set to expire a little under one year from the time th
 
 ## Changelog
 
+- 2023-06-08: Adding Test Cookie, language cookie and improvements.
 - 2022-09-20: Minor adjustments.
 - 2022-09-11: Original content from [Cookies](https://wordpress.org/documentation/article/cookies/); added minor adjustments.
