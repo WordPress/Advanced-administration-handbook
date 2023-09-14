@@ -2,6 +2,12 @@
 
 On computer file systems, different files and directories have **permissions** that specify who and what can read, write, modify and access them. This is important because WordPress may need access to write to files in your `wp-content` directory to enable certain functions.
 
+## Short explanation
+
+Linux [file permissions](https://en.wikipedia.org/wiki/File_system_permissions) consist primarily of three components -- the permissions the owner of the file or folder has, the permissions members of the group that owns the file or folder have, and the permissions that anyone else has for accessing or modifying the file and folder. The three permission components are usually represented using three numbers in order of the owner's permission level, the group's permission level, and everyone's permission level. _There is technically a fourth component, but that is beyond what we need to know to secure WordPress. It will not be discussed here._
+
+There are three kinds of access each for the user, the group, and everyone else. They are read access, write access, and execute access. Read access lets you read the contents of the file or the directory. Write access lets you modify the file or the directory. And execute access lets you run the file like a program or a script.
+
 ## Permission Modes
 
 ```
