@@ -16,7 +16,7 @@ TEMPORALLY NOTE: this may link for the simple part, to:
 
 The following sections may contain advanced information and some changes might result in unforeseen issues. Please make sure you practice [regular backups](https://developer.wordpress.org/advanced-administration/security/backup/) and know how to restore them before modifying these settings.
 
-### table_prefix {#table-prefix}]
+### table_prefix {#table-prefix}
 
 The **$table_prefix** is the value placed in the front of your database tables. Change the value if you want to use something other than **wp_** for your database prefix. Typically this is changed if you are [installing multiple WordPress blogs](https://developer.wordpress.org/advanced-administration/before-install/multiple-instances/) in the same database, as is done with the multisite feature.
 
