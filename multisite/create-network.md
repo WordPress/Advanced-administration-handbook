@@ -61,7 +61,7 @@ Once more: See [Before You Create A Network](https://developer.wordpress.org/adv
 
 **Network Details**
 
-These are filled in automatically, but you can make changes. Server Address The domain of the URL you are using to access your WordPress installation. Network Title The title of your network as a whole. Admin E-mail Address Your email address as super admin of the network as a whole.
+These are filled in automatically, but you can make changes. `Server Address`: the domain of the URL you are using to access your WordPress installation. `Network Title`: the title of your network as a whole. `Network Admin E-mail`: your email address as super admin of the network as a whole.
 
 Double-check the details and press the **Install** button.
 
