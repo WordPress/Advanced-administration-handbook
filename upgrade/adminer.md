@@ -8,7 +8,7 @@
 
 - **Simple Interface**: Adminer offers a clean and user-friendly interface, unlike some other database management tools.
 - **Direct Data Manipulation**: Useful for direct database edits, especially if WordPress stopped working.
-- **Lightweight**: Being a single PHP file, it is easy to upload/install and use.
+- **Lightweight**: Being a single PHP file, it is easy to upload, use, and remove.
 
 ## What is it good for?
 
@@ -16,8 +16,7 @@ Adminer is beneficial for table maintenance, data backups, and direct database e
 
 ## Where can I get it?
 
-Many hosting control panels, like cPanel and Plesk, come with [phpMyAdmin](https://wordpress.org/documentation/article/phpmyadmin/) pre-installed. If unavailable, users can consult with their hosting provider to get database access.
-
+Many hosting control panels, like cPanel and Plesk, come with [phpMyAdmin](https://developer.wordpress.org/advanced-administration/upgrade/phpmyadmin/) pre-installed. If no database access is available, users can consult with their hosting provider to get database access.
 For those who prefer to use Adminer, it can be downloaded from the [Adminer project page](https://www.adminer.org/).
 
 ## Installing Adminer
@@ -29,7 +28,7 @@ For those who prefer to use Adminer, it can be downloaded from the [Adminer proj
 
 ## Installing Adminer as a WordPress Plugin
 
-Adminer might also be available as a plugin in the [WordPress plugin repository](https://wordpress.org/plugins/search/database+adminer/). When installing  Adminer as a WordPress plugin, the database login credentials may be automatically inserted from the `wp-config.php` file.
+Adminer might also be available as a plugin in the [WordPress plugin repository](https://wordpress.org/plugins/search/database+adminer/). If installed as a WordPress plugin, Adminer may automatically use the database login credentials from the `wp-config.php` file when accessing it.
 
 ## Security Precautions
 
