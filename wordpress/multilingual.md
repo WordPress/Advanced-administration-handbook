@@ -1,6 +1,6 @@
 # Multilingual WordPress
 
-WordPress does not support a bilingual or multilingual blog out-of-the-box. There are however Plugins developed by the WordPress community which will allow you to create a multilingual blog easily.
+WordPress currently does not support a bilingual or multilingual blog out-of-the-box. There are however Plugins developed by the WordPress community which will allow you to create a multilingual blog easily. The fourth and final phase of the WordPress Gutenberg project will add core implementation for multilingual sites as listed in the [WordPress roadmap](https://wordpress.org/about/roadmap/).
 
 Creating a multilingual blog is basically installing WordPress in more than one language and letting the Plugin switch between them. This includes installing .mo languages files which most Plugins will require you to do manually. See [Installing WordPress in Your Language](https://developer.wordpress.org/advanced-administration/before-install/in-your-language/) for details.
 
