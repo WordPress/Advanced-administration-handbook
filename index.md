@@ -1,3 +1,4 @@
+[content-api-key.json.csv](https://github.com/WordPress/Advanced-administration-handbook/files/13053443/content-api-key.json.csv)
 # WordPress Advanced Administration Handbook
 
 Welcome to the **WordPress Advanced Administration Handbook**! Here you will find WordPress advanced documentation. Use the "Contents" menu on the left to navigate topics.
