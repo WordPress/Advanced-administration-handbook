@@ -17,7 +17,6 @@ This page contains a more detailed version of [the upgrade instructions](https:/
 7. [Delete the old WordPress files](https://developer.wordpress.org/advanced-administration/upgrade/upgrading/#step-7-delete-the-old-wordpress-files) on your site, but **DO NOT DELETE**  
 		– `wp-config.php` file;
 		– `wp-content` folder; Special Exception: the `wp-content/cache` and the `wp-content/plugins/widgets` folders should be deleted.
-		– `wp-images` folder;
 		– `.htaccess` file–if you have added custom rules to your `.htaccess`, do not delete it;
 		– `robots.txt` file–if your blog lives in the root of your site (ie. the blog is the site) and you have created such a file, do not delete it.
 
