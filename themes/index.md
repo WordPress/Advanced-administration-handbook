@@ -19,7 +19,6 @@ WordPress relies on databases, typically MySQL, to store content, settings, and 
 File systems are used to store theme files, images, JavaScript, and CSS. Understanding the structure and organization of theme files is essential for theme development.
 
 ## Theme Architecture
-
 WordPress themes consist of PHP template files, CSS stylesheets, JavaScript files, and other assets. Themes are organized within the `wp-content/themes` directory on the server.
 
 Template files determine the layout and structure of web pages. Key templates include `header.php`, `footer.php`, and various content-specific templates like `single.php` and `page.php`.
