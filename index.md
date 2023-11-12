@@ -1,3 +1,4 @@
+[Uploading generation-panel-leaders-quotes-04aug22-en.pdf…]()
 # WordPress Advanced Administration Handbook
 
 Welcome to the **WordPress Advanced Administration Handbook**! Here you will find WordPress advanced documentation. Use the "Contents" menu on the left to navigate topics.
