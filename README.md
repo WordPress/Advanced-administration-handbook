@@ -1,4 +1,2165 @@
+git.vger.kernel.org archive mirror
+ help / color / mirror / Atom feed
+* [RFC/PATCH] commit-graph: verify swapped zero/non-zero generation cases
+@ 2023-08-08 19:15 Jeff King
+  2023-08-10 16:00 ` Taylor Blau
+  0 siblings, 1 reply; 30+ messages in thread
+From: Jeff King @ 2023-08-08 19:15 UTC (permalink / raw)
+  To: git; +Cc: Derrick Stolee
 
+In verify_one_commit_graph(), we have code that complains when a commit
+is found with a generation number of zero, and then later with a
+non-zero number. It works like this:
+
+  1. When we see an entry with generation zero, we set the
+     generation_zero flag to GENERATION_ZERO_EXISTS.
+
+  2. When we later see an entry with a non-zero generation, we complain
+     if the flag is GENERATION_ZERO_EXISTS.
+
+There's a matching GENERATION_NUMBER_EXISTS value, which in theory would
+be used to find the case that we see the entries in the opposite order:
+
+  1. When we see an entry with a non-zero generation, we set the
+     generation_zero flag to GENERATION_NUMBER_EXISTS.
+
+  2. When we later see an entry with a zero generation, we complain if
+     the flag is GENERATION_NUMBER_EXISTS.
+
+But that doesn't work; step 2 is implemented, but there is no step 1. We
+never use NUMBER_EXISTS at all, and Coverity rightly complains that step
+2 is dead code.
+
+We can fix that by implementing that step 1.
+
+Signed-off-by: Jeff King <peff@peff.net>
+---
+This is marked as RFC because I'm still confused about a lot of things.
+For one, my explanation above about what the code is doing is mostly a
+guess. It _looks_ to me like that's what the existing check is trying to
+do. But if so, then why is the generation_zero flag defined outside the
+loop over each object? I'd think it would be a per-object thing.
+
+Likewise, just below this code, we check:
+
+                if (generation_zero == GENERATION_ZERO_EXISTS)
+                        continue;
+
+Is the intent here "if this is the zero-th generation, we can skip the
+rest of the loop because there are no more parents to look at"? If so,
+then would it make more sense to check commit_graph_generation()
+directly? I took care to preserve the existing behavior by pushing the
+set of NUMBER_EXISTS into an "else", but it seems like a weird use of
+the flag to me.
+
+So I kind of wonder if there's something I'm not getting here. Coverity
+is definitely right that our "step 2" is dead code (because we never set
+NUMBER_EXISTS). But I'm not sure if we should be deleting it, or trying
+to fix an underlying bug.
+
+ commit-graph.c | 8 ++++++--
+ 1 file changed, 6 insertions(+), 2 deletions(-)
+
+diff --git a/commit-graph.c b/commit-graph.c
+index 0aa1640d15..40cd55eb15 100644
+--- a/commit-graph.c
++++ b/commit-graph.c
+@@ -2676,9 +2676,13 @@ static int verify_one_commit_graph(struct repository *r,
+ 				graph_report(_("commit-graph has generation number zero for commit %s, but non-zero elsewhere"),
+ 					     oid_to_hex(&cur_oid));
+ 			generation_zero = GENERATION_ZERO_EXISTS;
+-		} else if (generation_zero == GENERATION_ZERO_EXISTS)
+-			graph_report(_("commit-graph has non-zero generation number for commit %s, but zero elsewhere"),
++		} else {
++			if (generation_zero == GENERATION_ZERO_EXISTS)
++				graph_report(_("commit-graph has non-zero generation number for commit %s, but zero elsewhere"),
+ 				     oid_to_hex(&cur_oid));
++			else
++				generation_zero = GENERATION_NUMBER_EXISTS;
++		}
+ 
+ 		if (generation_zero == GENERATION_ZERO_EXISTS)
+ 			continue;
+-- 
+2.42.0.rc0.376.g66bfc4f195
+
+^ permalink raw reply related	[flat|nested] 30+ messages in thread
+* Re: [RFC/PATCH] commit-graph: verify swapped zero/non-zero generation cases
+  2023-08-08 19:15 [RFC/PATCH] commit-graph: verify swapped zero/non-zero generation cases Jeff King
+@ 2023-08-10 16:00 ` Taylor Blau
+  2023-08-10 17:44   ` Taylor Blau
+  0 siblings, 1 reply; 30+ messages in thread
+From: Taylor Blau @ 2023-08-10 16:00 UTC (permalink / raw)
+  To: Jeff King; +Cc: git, Derrick Stolee
+
+On Tue, Aug 08, 2023 at 03:15:36PM -0400, Jeff King wrote:
+> This is marked as RFC because I'm still confused about a lot of things.
+> For one, my explanation above about what the code is doing is mostly a
+> guess. It _looks_ to me like that's what the existing check is trying to
+> do. But if so, then why is the generation_zero flag defined outside the
+> loop over each object? I'd think it would be a per-object thing.
+
+I thought the same thing initially, but looking back at 1373e547f7
+(commit-graph: verify generation number, 2018-06-27), I think the scope
+of generation_zero is correct.
+
+This is an artifact from when commit-graphs were written with all commit
+generation numbers equal to zero. So I think the logic is something
+like:
+
+- If the commit-graph has a generation number of 0 for some commit, but
+  we saw a non-zero value from any another commit, report it.
+
+- Otherwise, if the commit-graph had a non-zero value for the commit's
+  generation number, and we had previously seen a generation number of
+  zero for some other commit, report it.
+
+IOW, I think we expect to see either all zeros, or all non-zero values
+in a single commit-graph's set of generation numbers.
+
+Earlier in your message, you wrote:
+
+> There's a matching GENERATION_NUMBER_EXISTS value, which in theory would
+> be used to find the case that we see the entries in the opposite order:
+>
+>   1. When we see an entry with a non-zero generation, we set the
+>      generation_zero flag to GENERATION_NUMBER_EXISTS.
+>
+>   2. When we later see an entry with a zero generation, we complain if
+>      the flag is GENERATION_NUMBER_EXISTS.
+>
+> But that doesn't work; step 2 is implemented, but there is no step 1. We
+> never use NUMBER_EXISTS at all, and Coverity rightly complains that step
+> 2 is dead code.
+
+So I think the missing part is setting GENERATION_NUMBER_EXISTS when we
+have a non-zero generation number from the commit-graph, but have
+generation_zero set to GENERATION_ZERO_EXISTS (IOW, we have seen at
+least one commit with generation number 0).
+
+--- 8< ---
+diff --git a/commit-graph.c b/commit-graph.c
+index 0aa1640d15..935bc15440 100644
+--- a/commit-graph.c
++++ b/commit-graph.c
+@@ -2676,9 +2676,11 @@ static int verify_one_commit_graph(struct repository *r,
+ 				graph_report(_("commit-graph has generation number zero for commit %s, but non-zero elsewhere"),
+ 					     oid_to_hex(&cur_oid));
+ 			generation_zero = GENERATION_ZERO_EXISTS;
+-		} else if (generation_zero == GENERATION_ZERO_EXISTS)
++		} else if (generation_zero == GENERATION_ZERO_EXISTS) {
+ 			graph_report(_("commit-graph has non-zero generation number for commit %s, but zero elsewhere"),
+ 				     oid_to_hex(&cur_oid));
++			generation_zero = GENERATION_NUMBER_EXISTS;
++		}
+
+ 		if (generation_zero == GENERATION_ZERO_EXISTS)
+ 			continue;
+--- >8 ---
+
+> So I kind of wonder if there's something I'm not getting here. Coverity
+> is definitely right that our "step 2" is dead code (because we never set
+> NUMBER_EXISTS). But I'm not sure if we should be deleting it, or trying
+> to fix an underlying bug.
+
+I think that above is correct in that we should be fixing an underlying
+bug. But the fact that this isn't caught by our existing tests indicates
+that there is a gap in coverage. Let me see if I can find a test case
+that highlights this bug...
+
+Thanks,
+Taylor
+
+^ permalink raw reply related	[flat|nested] 30+ messages in thread
+* Re: [RFC/PATCH] commit-graph: verify swapped zero/non-zero generation cases
+  2023-08-10 16:00 ` Taylor Blau
+@ 2023-08-10 17:44   ` Taylor Blau
+  2023-08-10 20:37     ` [PATCH 0/4] commit-graph: fsck zero/non-zero generation number fixes Taylor Blau
+                       ` (2 more replies)
+  0 siblings, 3 replies; 30+ messages in thread
+From: Taylor Blau @ 2023-08-10 17:44 UTC (permalink / raw)
+  To: Jeff King; +Cc: git, Derrick Stolee
+
+On Thu, Aug 10, 2023 at 12:00:43PM -0400, Taylor Blau wrote:
+> > There's a matching GENERATION_NUMBER_EXISTS value, which in theory would
+> > be used to find the case that we see the entries in the opposite order:
+> >
+> >   1. When we see an entry with a non-zero generation, we set the
+> >      generation_zero flag to GENERATION_NUMBER_EXISTS.
+> >
+> >   2. When we later see an entry with a zero generation, we complain if
+> >      the flag is GENERATION_NUMBER_EXISTS.
+> >
+> > But that doesn't work; step 2 is implemented, but there is no step 1. We
+> > never use NUMBER_EXISTS at all, and Coverity rightly complains that step
+> > 2 is dead code.
+>
+> So I think the missing part is setting GENERATION_NUMBER_EXISTS when we
+> have a non-zero generation number from the commit-graph, but have
+> generation_zero set to GENERATION_ZERO_EXISTS (IOW, we have seen at
+> least one commit with generation number 0).
+>
+> --- 8< ---
+> diff --git a/commit-graph.c b/commit-graph.c
+> index 0aa1640d15..935bc15440 100644
+> --- a/commit-graph.c
+> +++ b/commit-graph.c
+> @@ -2676,9 +2676,11 @@ static int verify_one_commit_graph(struct repository *r,
+>  				graph_report(_("commit-graph has generation number zero for commit %s, but non-zero elsewhere"),
+>  					     oid_to_hex(&cur_oid));
+>  			generation_zero = GENERATION_ZERO_EXISTS;
+> -		} else if (generation_zero == GENERATION_ZERO_EXISTS)
+> +		} else if (generation_zero == GENERATION_ZERO_EXISTS) {
+>  			graph_report(_("commit-graph has non-zero generation number for commit %s, but zero elsewhere"),
+>  				     oid_to_hex(&cur_oid));
+> +			generation_zero = GENERATION_NUMBER_EXISTS;
+> +		}
+>
+>  		if (generation_zero == GENERATION_ZERO_EXISTS)
+>  			continue;
+> --- >8 ---
+
+OK, I investigated this a little bit more and now I think I understand
+fully what's going on here.
+
+There are a couple of things wrong with the diff that I posted above.
+First, it has a logic error that we should set GENERATION_NUMBER_EXISTS
+when we have a non-zero generation number from the graph, regardless of
+whether or not GENERATION_ZERO_EXISTS is set (like how it is done in
+your patch).
+
+But more importantly, we'll never end up in the first arm of that
+conditional as-is (the one that fires for when we see a generation
+number of zero) as a consequence of 2ee11f7261 (commit-graph: return
+generation from memory, 2023-03-20), which only returns non-zero
+generation numbers (or GENERATION_NUMBER_INFINITY, which is also
+non-zero).
+
+I think you want something like `commit_graph_generation()` that returns
+whatever is in `data->generation` regardless of whether or not it is
+zero valued. You'd then want to use that function instead of calling
+commit_graph_generation() directly.
+
+> > So I kind of wonder if there's something I'm not getting here. Coverity
+> > is definitely right that our "step 2" is dead code (because we never set
+> > NUMBER_EXISTS). But I'm not sure if we should be deleting it, or trying
+> > to fix an underlying bug.
+>
+> I think that above is correct in that we should be fixing an underlying
+> bug. But the fact that this isn't caught by our existing tests indicates
+> that there is a gap in coverage. Let me see if I can find a test case
+> that highlights this bug...
+
+Doing the above allows me to write these two tests on top of your patch,
+which both pass:
+
+--- &< ---
+diff --git a/t/t5318-commit-graph.sh b/t/t5318-commit-graph.sh
+index 4df76173a8..8e96471b34 100755
+--- a/t/t5318-commit-graph.sh
++++ b/t/t5318-commit-graph.sh
+@@ -450,14 +450,15 @@ GRAPH_BYTE_FANOUT2=$(($GRAPH_FANOUT_OFFSET + 4 * 255))
+ GRAPH_OID_LOOKUP_OFFSET=$(($GRAPH_FANOUT_OFFSET + 4 * 256))
+ GRAPH_BYTE_OID_LOOKUP_ORDER=$(($GRAPH_OID_LOOKUP_OFFSET + $HASH_LEN * 8))
+ GRAPH_BYTE_OID_LOOKUP_MISSING=$(($GRAPH_OID_LOOKUP_OFFSET + $HASH_LEN * 4 + 10))
++GRAPH_COMMIT_DATA_WIDTH=$(($HASH_LEN + 16))
+ GRAPH_COMMIT_DATA_OFFSET=$(($GRAPH_OID_LOOKUP_OFFSET + $HASH_LEN * $NUM_COMMITS))
+ GRAPH_BYTE_COMMIT_TREE=$GRAPH_COMMIT_DATA_OFFSET
+ GRAPH_BYTE_COMMIT_PARENT=$(($GRAPH_COMMIT_DATA_OFFSET + $HASH_LEN))
+ GRAPH_BYTE_COMMIT_EXTRA_PARENT=$(($GRAPH_COMMIT_DATA_OFFSET + $HASH_LEN + 4))
+ GRAPH_BYTE_COMMIT_WRONG_PARENT=$(($GRAPH_COMMIT_DATA_OFFSET + $HASH_LEN + 3))
+ GRAPH_BYTE_COMMIT_GENERATION=$(($GRAPH_COMMIT_DATA_OFFSET + $HASH_LEN + 11))
++GRAPH_BYTE_COMMIT_GENERATION_LAST=$(($GRAPH_BYTE_COMMIT_GENERATION + $(($NUM_COMMITS - 1)) * $GRAPH_COMMIT_DATA_WIDTH))
+ GRAPH_BYTE_COMMIT_DATE=$(($GRAPH_COMMIT_DATA_OFFSET + $HASH_LEN + 12))
+-GRAPH_COMMIT_DATA_WIDTH=$(($HASH_LEN + 16))
+ GRAPH_OCTOPUS_DATA_OFFSET=$(($GRAPH_COMMIT_DATA_OFFSET + \
+ 			     $GRAPH_COMMIT_DATA_WIDTH * $NUM_COMMITS))
+ GRAPH_BYTE_OCTOPUS=$(($GRAPH_OCTOPUS_DATA_OFFSET + 4))
+@@ -596,11 +597,6 @@ test_expect_success 'detect incorrect generation number' '
+ 		"generation for commit"
+ '
+
+-test_expect_success 'detect incorrect generation number' '
+-	corrupt_graph_and_verify $GRAPH_BYTE_COMMIT_GENERATION "\01" \
+-		"commit-graph generation for commit"
+-'
+-
+ test_expect_success 'detect incorrect commit date' '
+ 	corrupt_graph_and_verify $GRAPH_BYTE_COMMIT_DATE "\01" \
+ 		"commit date"
+@@ -622,6 +618,16 @@ test_expect_success 'detect incorrect chunk count' '
+ 		$GRAPH_CHUNK_LOOKUP_OFFSET
+ '
+
++test_expect_success 'detect mixed generation numbers (non-zero to zero)' '
++	corrupt_graph_and_verify $GRAPH_BYTE_COMMIT_GENERATION_LAST "\0\0\0\0" \
++		"but non-zero elsewhere"
++'
++
++test_expect_success 'detect mixed generation numbers (zero to non-zero)' '
++	corrupt_graph_and_verify $GRAPH_BYTE_COMMIT_GENERATION "\0\0\0\0" \
++		"but zero elsewhere"
++'
++
+ test_expect_success 'git fsck (checks commit-graph when config set to true)' '
+ 	git -C full fsck &&
+ 	corrupt_graph_and_verify $GRAPH_BYTE_FOOTER "\00" \
+--- >8 ---
+
+Note that we remove the duplicate "detect incorrect generation number"
+test, which was originally introduced in 1373e547f7 (commit-graph:
+verify generation number, 2018-06-27), but was modified in 2ee11f7261.
+
+That test is replaced by the latter "non-zero to zero" variant.
+
+Thanks,
+Taylor
+
+^ permalink raw reply related	[flat|nested] 30+ messages in thread
+* [PATCH 0/4] commit-graph: fsck zero/non-zero generation number fixes
+  2023-08-10 17:44   ` Taylor Blau
+@ 2023-08-10 20:37     ` Taylor Blau
+  2023-08-10 20:37       ` [PATCH 1/4] commit-graph: introduce `commit_graph_generation_from_graph()` Taylor Blau
+                         ` (4 more replies)
+  2023-08-11 17:05     ` [PATCH v2 0/5] " Taylor Blau
+  2023-08-21 21:34     ` [PATCH v3 0/4] " Taylor Blau
+  2 siblings, 5 replies; 30+ messages in thread
+From: Taylor Blau @ 2023-08-10 20:37 UTC (permalink / raw)
+  To: git; +Cc: Junio C Hamano, Jeff King, Derrick Stolee
+
+This series expands on a patch that Peff sent earlier in this thread to
+remove a section of unreachable code that was noticed by Coverity in the
+`verify_one_commit_graph()` function.
+
+The first couple of patches addresses the main issue, which is that we
+couldn't verify ancient commit-graphs written with zero'd generation
+numbers. The third patch adds additional tests to ensure our coverage in
+this area is complete, and the final patch is a cleanup.
+
+Thanks as always for your review.
+
+Jeff King (1):
+  commit-graph: verify swapped zero/non-zero generation cases
+
+Taylor Blau (3):
+  commit-graph: introduce `commit_graph_generation_from_graph()`
+  t/t5318-commit-graph.sh: test generation zero transitions during fsck
+  commit-graph: invert negated conditional
+
+ commit-graph.c          | 23 ++++++++++++++++++-----
+ t/t5318-commit-graph.sh | 18 ++++++++++++------
+ 2 files changed, 30 insertions(+), 11 deletions(-)
+
+-- 
+2.42.0.rc0.29.g00abebef8e
+
+^ permalink raw reply	[flat|nested] 30+ messages in thread
+* [PATCH 1/4] commit-graph: introduce `commit_graph_generation_from_graph()`
+  2023-08-10 20:37     ` [PATCH 0/4] commit-graph: fsck zero/non-zero generation number fixes Taylor Blau
+@ 2023-08-10 20:37       ` Taylor Blau
+  2023-08-10 20:37       ` [PATCH 2/4] commit-graph: verify swapped zero/non-zero generation cases Taylor Blau
+                         ` (3 subsequent siblings)
+  4 siblings, 0 replies; 30+ messages in thread
+From: Taylor Blau @ 2023-08-10 20:37 UTC (permalink / raw)
+  To: git; +Cc: Junio C Hamano, Jeff King, Derrick Stolee
+
+In 2ee11f7261 (commit-graph: return generation from memory, 2023-03-20),
+the `commit_graph_generation()` function stopped returning zeros when
+asked to locate the generation number of a given commit.
+
+This was done at the time to prepare for a later change which set
+generation values in memory, meaning that we could no longer rely on
+`graph_pos` alone to tell us whether or not to trust the generation
+number returned by this function.
+
+In 2ee11f7261, it was noted that this change only impacted very old
+commit-graphs, which were written with all commits having generation
+number 0. Indeed, zero is not a valid generation number, so we should
+never expect to see that value outside of the aforementioned case.
+
+The test fallout in 2ee11f7261 indicated that we were no longer able to
+fsck a specific old case of commit-graph corruption, where we see a
+non-zero generation number after having seen a generation number of 0
+earlier.
+
+Introduce a variant of `commit_graph_generation()` which behaves like
+that function did prior to 2ee11f7261, known as
+`commit_graph_generation_from_graph()`. Then use this function in the
+context of `verify_one_commit_graph()`, where we only want to trust the
+values from the graph.
+
+Signed-off-by: Taylor Blau <me@ttaylorr.com>
+---
+ commit-graph.c          | 14 ++++++++++++--
+ t/t5318-commit-graph.sh |  2 +-
+ 2 files changed, 13 insertions(+), 3 deletions(-)
+
+diff --git a/commit-graph.c b/commit-graph.c
+index 0aa1640d15..c68f5c6b3a 100644
+--- a/commit-graph.c
++++ b/commit-graph.c
+@@ -128,6 +128,16 @@ timestamp_t commit_graph_generation(const struct commit *c)
+ 	return GENERATION_NUMBER_INFINITY;
+ }
+ 
++static timestamp_t commit_graph_generation_from_graph(const struct commit *c)
++{
++	struct commit_graph_data *data =
++		commit_graph_data_slab_peek(&commit_graph_data_slab, c);
++
++	if (!data || data->graph_pos == COMMIT_NOT_FROM_GRAPH)
++		return GENERATION_NUMBER_INFINITY;
++	return data->generation;
++}
++
+ static struct commit_graph_data *commit_graph_data_at(const struct commit *c)
+ {
+ 	unsigned int i, nth_slab;
+@@ -2659,7 +2669,7 @@ static int verify_one_commit_graph(struct repository *r,
+ 					     oid_to_hex(&graph_parents->item->object.oid),
+ 					     oid_to_hex(&odb_parents->item->object.oid));
+ 
+-			generation = commit_graph_generation(graph_parents->item);
++			generation = commit_graph_generation_from_graph(graph_parents->item);
+ 			if (generation > max_generation)
+ 				max_generation = generation;
+ 
+@@ -2671,7 +2681,7 @@ static int verify_one_commit_graph(struct repository *r,
+ 			graph_report(_("commit-graph parent list for commit %s terminates early"),
+ 				     oid_to_hex(&cur_oid));
+ 
+-		if (!commit_graph_generation(graph_commit)) {
++		if (!commit_graph_generation_from_graph(graph_commit)) {
+ 			if (generation_zero == GENERATION_NUMBER_EXISTS)
+ 				graph_report(_("commit-graph has generation number zero for commit %s, but non-zero elsewhere"),
+ 					     oid_to_hex(&cur_oid));
+diff --git a/t/t5318-commit-graph.sh b/t/t5318-commit-graph.sh
+index 4df76173a8..4e70820c74 100755
+--- a/t/t5318-commit-graph.sh
++++ b/t/t5318-commit-graph.sh
+@@ -598,7 +598,7 @@ test_expect_success 'detect incorrect generation number' '
+ 
+ test_expect_success 'detect incorrect generation number' '
+ 	corrupt_graph_and_verify $GRAPH_BYTE_COMMIT_GENERATION "\01" \
+-		"commit-graph generation for commit"
++		"but zero elsewhere"
+ '
+ 
+ test_expect_success 'detect incorrect commit date' '
+-- 
+2.42.0.rc0.29.g00abebef8e
+
+
+^ permalink raw reply related	[flat|nested] 30+ messages in thread
+* [PATCH 2/4] commit-graph: verify swapped zero/non-zero generation cases
+  2023-08-10 20:37     ` [PATCH 0/4] commit-graph: fsck zero/non-zero generation number fixes Taylor Blau
+  2023-08-10 20:37       ` [PATCH 1/4] commit-graph: introduce `commit_graph_generation_from_graph()` Taylor Blau
+@ 2023-08-10 20:37       ` Taylor Blau
+  2023-08-10 21:36         ` Junio C Hamano
+  2023-08-10 20:37       ` [PATCH 3/4] t/t5318-commit-graph.sh: test generation zero transitions during fsck Taylor Blau
+                         ` (2 subsequent siblings)
+  4 siblings, 1 reply; 30+ messages in thread
+From: Taylor Blau @ 2023-08-10 20:37 UTC (permalink / raw)
+  To: git; +Cc: Junio C Hamano, Jeff King, Derrick Stolee
+
+From: Jeff King <peff@peff.net>
+
+In verify_one_commit_graph(), we have code that complains when a commit
+is found with a generation number of zero, and then later with a
+non-zero number. It works like this:
+
+  1. When we see an entry with generation zero, we set the
+     generation_zero flag to GENERATION_ZERO_EXISTS.
+
+  2. When we later see an entry with a non-zero generation, we complain
+     if the flag is GENERATION_ZERO_EXISTS.
+
+There's a matching GENERATION_NUMBER_EXISTS value, which in theory would
+be used to find the case that we see the entries in the opposite order:
+
+  1. When we see an entry with a non-zero generation, we set the
+     generation_zero flag to GENERATION_NUMBER_EXISTS.
+
+  2. When we later see an entry with a zero generation, we complain if
+     the flag is GENERATION_NUMBER_EXISTS.
+
+But that doesn't work; step 2 is implemented, but there is no step 1. We
+never use NUMBER_EXISTS at all, and Coverity rightly complains that step
+2 is dead code.
+
+We can fix that by implementing that step 1.
+
+Signed-off-by: Jeff King <peff@peff.net>
+Signed-off-by: Taylor Blau <me@ttaylorr.com>
+---
+ commit-graph.c | 9 ++++++---
+ 1 file changed, 6 insertions(+), 3 deletions(-)
+
+diff --git a/commit-graph.c b/commit-graph.c
+index c68f5c6b3a..acca753ce8 100644
+--- a/commit-graph.c
++++ b/commit-graph.c
+@@ -2686,9 +2686,12 @@ static int verify_one_commit_graph(struct repository *r,
+ 				graph_report(_("commit-graph has generation number zero for commit %s, but non-zero elsewhere"),
+ 					     oid_to_hex(&cur_oid));
+ 			generation_zero = GENERATION_ZERO_EXISTS;
+-		} else if (generation_zero == GENERATION_ZERO_EXISTS)
+-			graph_report(_("commit-graph has non-zero generation number for commit %s, but zero elsewhere"),
+-				     oid_to_hex(&cur_oid));
++		} else {
++			if (generation_zero == GENERATION_ZERO_EXISTS)
++				graph_report(_("commit-graph has non-zero generation number for commit %s, but zero elsewhere"),
++					     oid_to_hex(&cur_oid));
++			generation_zero = GENERATION_NUMBER_EXISTS;
++		}
+ 
+ 		if (generation_zero == GENERATION_ZERO_EXISTS)
+ 			continue;
+-- 
+2.42.0.rc0.29.g00abebef8e
+
+
+^ permalink raw reply related	[flat|nested] 30+ messages in thread
+* [PATCH 3/4] t/t5318-commit-graph.sh: test generation zero transitions during fsck
+  2023-08-10 20:37     ` [PATCH 0/4] commit-graph: fsck zero/non-zero generation number fixes Taylor Blau
+  2023-08-10 20:37       ` [PATCH 1/4] commit-graph: introduce `commit_graph_generation_from_graph()` Taylor Blau
+  2023-08-10 20:37       ` [PATCH 2/4] commit-graph: verify swapped zero/non-zero generation cases Taylor Blau
+@ 2023-08-10 20:37       ` Taylor Blau
+  2023-08-10 20:37       ` [PATCH 4/4] commit-graph: invert negated conditional Taylor Blau
+  2023-08-11 15:02       ` [PATCH 0/4] commit-graph: fsck zero/non-zero generation number fixes Jeff King
+  4 siblings, 0 replies; 30+ messages in thread
+From: Taylor Blau @ 2023-08-10 20:37 UTC (permalink / raw)
+  To: git; +Cc: Junio C Hamano, Jeff King, Derrick Stolee
+
+The second test called "detect incorrect generation number" asserts that
+we correctly warn during an fsck when we see a non-zero generation
+number after seeing a zero beforehand.
+
+The other transition (going from non-zero to zero) was previously
+untested. Test both directions, and rename the existing test to make
+clear which direction it is exercising.
+
+Signed-off-by: Taylor Blau <me@ttaylorr.com>
+---
+ t/t5318-commit-graph.sh | 18 ++++++++++++------
+ 1 file changed, 12 insertions(+), 6 deletions(-)
+
+diff --git a/t/t5318-commit-graph.sh b/t/t5318-commit-graph.sh
+index 4e70820c74..8e96471b34 100755
+--- a/t/t5318-commit-graph.sh
++++ b/t/t5318-commit-graph.sh
+@@ -450,14 +450,15 @@ GRAPH_BYTE_FANOUT2=$(($GRAPH_FANOUT_OFFSET + 4 * 255))
+ GRAPH_OID_LOOKUP_OFFSET=$(($GRAPH_FANOUT_OFFSET + 4 * 256))
+ GRAPH_BYTE_OID_LOOKUP_ORDER=$(($GRAPH_OID_LOOKUP_OFFSET + $HASH_LEN * 8))
+ GRAPH_BYTE_OID_LOOKUP_MISSING=$(($GRAPH_OID_LOOKUP_OFFSET + $HASH_LEN * 4 + 10))
++GRAPH_COMMIT_DATA_WIDTH=$(($HASH_LEN + 16))
+ GRAPH_COMMIT_DATA_OFFSET=$(($GRAPH_OID_LOOKUP_OFFSET + $HASH_LEN * $NUM_COMMITS))
+ GRAPH_BYTE_COMMIT_TREE=$GRAPH_COMMIT_DATA_OFFSET
+ GRAPH_BYTE_COMMIT_PARENT=$(($GRAPH_COMMIT_DATA_OFFSET + $HASH_LEN))
+ GRAPH_BYTE_COMMIT_EXTRA_PARENT=$(($GRAPH_COMMIT_DATA_OFFSET + $HASH_LEN + 4))
+ GRAPH_BYTE_COMMIT_WRONG_PARENT=$(($GRAPH_COMMIT_DATA_OFFSET + $HASH_LEN + 3))
+ GRAPH_BYTE_COMMIT_GENERATION=$(($GRAPH_COMMIT_DATA_OFFSET + $HASH_LEN + 11))
++GRAPH_BYTE_COMMIT_GENERATION_LAST=$(($GRAPH_BYTE_COMMIT_GENERATION + $(($NUM_COMMITS - 1)) * $GRAPH_COMMIT_DATA_WIDTH))
+ GRAPH_BYTE_COMMIT_DATE=$(($GRAPH_COMMIT_DATA_OFFSET + $HASH_LEN + 12))
+-GRAPH_COMMIT_DATA_WIDTH=$(($HASH_LEN + 16))
+ GRAPH_OCTOPUS_DATA_OFFSET=$(($GRAPH_COMMIT_DATA_OFFSET + \
+ 			     $GRAPH_COMMIT_DATA_WIDTH * $NUM_COMMITS))
+ GRAPH_BYTE_OCTOPUS=$(($GRAPH_OCTOPUS_DATA_OFFSET + 4))
+@@ -596,11 +597,6 @@ test_expect_success 'detect incorrect generation number' '
+ 		"generation for commit"
+ '
+ 
+-test_expect_success 'detect incorrect generation number' '
+-	corrupt_graph_and_verify $GRAPH_BYTE_COMMIT_GENERATION "\01" \
+-		"but zero elsewhere"
+-'
+-
+ test_expect_success 'detect incorrect commit date' '
+ 	corrupt_graph_and_verify $GRAPH_BYTE_COMMIT_DATE "\01" \
+ 		"commit date"
+@@ -622,6 +618,16 @@ test_expect_success 'detect incorrect chunk count' '
+ 		$GRAPH_CHUNK_LOOKUP_OFFSET
+ '
+ 
++test_expect_success 'detect mixed generation numbers (non-zero to zero)' '
++	corrupt_graph_and_verify $GRAPH_BYTE_COMMIT_GENERATION_LAST "\0\0\0\0" \
++		"but non-zero elsewhere"
++'
++
++test_expect_success 'detect mixed generation numbers (zero to non-zero)' '
++	corrupt_graph_and_verify $GRAPH_BYTE_COMMIT_GENERATION "\0\0\0\0" \
++		"but zero elsewhere"
++'
++
+ test_expect_success 'git fsck (checks commit-graph when config set to true)' '
+ 	git -C full fsck &&
+ 	corrupt_graph_and_verify $GRAPH_BYTE_FOOTER "\00" \
+-- 
+2.42.0.rc0.29.g00abebef8e
+
+
+^ permalink raw reply related	[flat|nested] 30+ messages in thread
+* [PATCH 4/4] commit-graph: invert negated conditional
+  2023-08-10 20:37     ` [PATCH 0/4] commit-graph: fsck zero/non-zero generation number fixes Taylor Blau
+                         ` (2 preceding siblings ...)
+  2023-08-10 20:37       ` [PATCH 3/4] t/t5318-commit-graph.sh: test generation zero transitions during fsck Taylor Blau
+@ 2023-08-10 20:37       ` Taylor Blau
+  2023-08-11 15:02       ` [PATCH 0/4] commit-graph: fsck zero/non-zero generation number fixes Jeff King
+  4 siblings, 0 replies; 30+ messages in thread
+From: Taylor Blau @ 2023-08-10 20:37 UTC (permalink / raw)
+  To: git; +Cc: Junio C Hamano, Jeff King, Derrick Stolee
+
+Now that we're using `commit_graph_generation_from_graph()` (which can
+return a zero value) and we have a pure if/else instead of an else-if,
+let's swap the arms of the if-statement.
+
+This avoids an "if (!x) { foo(); } else { bar(); }" and replaces it with
+the more readable "if (x) { bar(); } else { foo(); }".
+
+Signed-off-by: Taylor Blau <me@ttaylorr.com>
+---
+ commit-graph.c | 12 ++++++------
+ 1 file changed, 6 insertions(+), 6 deletions(-)
+
+diff --git a/commit-graph.c b/commit-graph.c
+index acca753ce8..b2cf9ed9d5 100644
+--- a/commit-graph.c
++++ b/commit-graph.c
+@@ -2681,16 +2681,16 @@ static int verify_one_commit_graph(struct repository *r,
+ 			graph_report(_("commit-graph parent list for commit %s terminates early"),
+ 				     oid_to_hex(&cur_oid));
+ 
+-		if (!commit_graph_generation_from_graph(graph_commit)) {
+-			if (generation_zero == GENERATION_NUMBER_EXISTS)
+-				graph_report(_("commit-graph has generation number zero for commit %s, but non-zero elsewhere"),
+-					     oid_to_hex(&cur_oid));
+-			generation_zero = GENERATION_ZERO_EXISTS;
+-		} else {
++		if (commit_graph_generation_from_graph(graph_commit)) {
+ 			if (generation_zero == GENERATION_ZERO_EXISTS)
+ 				graph_report(_("commit-graph has non-zero generation number for commit %s, but zero elsewhere"),
+ 					     oid_to_hex(&cur_oid));
+ 			generation_zero = GENERATION_NUMBER_EXISTS;
++		} else {
++			if (generation_zero == GENERATION_NUMBER_EXISTS)
++				graph_report(_("commit-graph has generation number zero for commit %s, but non-zero elsewhere"),
++					     oid_to_hex(&cur_oid));
++			generation_zero = GENERATION_ZERO_EXISTS;
+ 		}
+ 
+ 		if (generation_zero == GENERATION_ZERO_EXISTS)
+-- 
+2.42.0.rc0.29.g00abebef8e
+
+^ permalink raw reply related	[flat|nested] 30+ messages in thread
+* Re: [PATCH 2/4] commit-graph: verify swapped zero/non-zero generation cases
+  2023-08-10 20:37       ` [PATCH 2/4] commit-graph: verify swapped zero/non-zero generation cases Taylor Blau
+@ 2023-08-10 21:36         ` Junio C Hamano
+  2023-08-11 15:01           ` Jeff King
+  0 siblings, 1 reply; 30+ messages in thread
+From: Junio C Hamano @ 2023-08-10 21:36 UTC (permalink / raw)
+  To: Taylor Blau; +Cc: git, Jeff King, Derrick Stolee
+
+Taylor Blau <me@ttaylorr.com> writes:
+
+> diff --git a/commit-graph.c b/commit-graph.c
+> index c68f5c6b3a..acca753ce8 100644
+> --- a/commit-graph.c
+> +++ b/commit-graph.c
+> @@ -2686,9 +2686,12 @@ static int verify_one_commit_graph(struct repository *r,
+>  				graph_report(_("commit-graph has generation number zero for commit %s, but non-zero elsewhere"),
+>  					     oid_to_hex(&cur_oid));
+>  			generation_zero = GENERATION_ZERO_EXISTS;
+> -		} else if (generation_zero == GENERATION_ZERO_EXISTS)
+> -			graph_report(_("commit-graph has non-zero generation number for commit %s, but zero elsewhere"),
+> -				     oid_to_hex(&cur_oid));
+> +		} else {
+> +			if (generation_zero == GENERATION_ZERO_EXISTS)
+> +				graph_report(_("commit-graph has non-zero generation number for commit %s, but zero elsewhere"),
+> +					     oid_to_hex(&cur_oid));
+> +			generation_zero = GENERATION_NUMBER_EXISTS;
+> +		}
+
+Hmph, doesn't this potentially cause us to emit the two reports
+alternating, if we are unlucky enough to see a commit with 0
+generation first (which will silently set gz to ZERO_EXISTS), then
+another commit with non-zero generation (which will complain we saw
+non-zero for the current one and earlier we saw zero elsewhere, and
+then set gz to NUM_EXISTS), and then another commit with 0
+generation (which will complain the other way, and set gz back again
+to ZERO_EXISTS)?
+
+I am tempted to say this gz business should be done with two bits
+(seen zero bit and seen non-zero bit), and immediately after we see
+both kinds, we should report once and stop making further reports,
+but ...
+
+>  		if (generation_zero == GENERATION_ZERO_EXISTS)
+>  			continue;
+
+... as I do not see what this "continue" is doing, I'd stop at
+expressing my puzzlement ;-)
+
+Thanks.
+
+
+^ permalink raw reply	[flat|nested] 30+ messages in thread
+* Re: [PATCH 2/4] commit-graph: verify swapped zero/non-zero generation cases
+  2023-08-10 21:36         ` Junio C Hamano
+@ 2023-08-11 15:01           ` Jeff King
+  2023-08-11 17:08             ` Taylor Blau
+  0 siblings, 1 reply; 30+ messages in thread
+From: Jeff King @ 2023-08-11 15:01 UTC (permalink / raw)
+  To: Junio C Hamano; +Cc: Taylor Blau, git, Derrick Stolee
+
+On Thu, Aug 10, 2023 at 02:36:06PM -0700, Junio C Hamano wrote:
+
+> Taylor Blau <me@ttaylorr.com> writes:
+> 
+> > diff --git a/commit-graph.c b/commit-graph.c
+> > index c68f5c6b3a..acca753ce8 100644
+> > --- a/commit-graph.c
+> > +++ b/commit-graph.c
+> > @@ -2686,9 +2686,12 @@ static int verify_one_commit_graph(struct repository *r,
+> >  				graph_report(_("commit-graph has generation number zero for commit %s, but non-zero elsewhere"),
+> >  					     oid_to_hex(&cur_oid));
+> >  			generation_zero = GENERATION_ZERO_EXISTS;
+> > -		} else if (generation_zero == GENERATION_ZERO_EXISTS)
+> > -			graph_report(_("commit-graph has non-zero generation number for commit %s, but zero elsewhere"),
+> > -				     oid_to_hex(&cur_oid));
+> > +		} else {
+> > +			if (generation_zero == GENERATION_ZERO_EXISTS)
+> > +				graph_report(_("commit-graph has non-zero generation number for commit %s, but zero elsewhere"),
+> > +					     oid_to_hex(&cur_oid));
+> > +			generation_zero = GENERATION_NUMBER_EXISTS;
+> > +		}
+> 
+> Hmph, doesn't this potentially cause us to emit the two reports
+> alternating, if we are unlucky enough to see a commit with 0
+> generation first (which will silently set gz to ZERO_EXISTS), then
+> another commit with non-zero generation (which will complain we saw
+> non-zero for the current one and earlier we saw zero elsewhere, and
+> then set gz to NUM_EXISTS), and then another commit with 0
+> generation (which will complain the other way, and set gz back again
+> to ZERO_EXISTS)?
+> 
+> I am tempted to say this gz business should be done with two bits
+> (seen zero bit and seen non-zero bit), and immediately after we see
+> both kinds, we should report once and stop making further reports,
+> but ...
+
+Yeah, I think you are right. It might be OK, in the sense that we would
+show a different commit each time as we flip-flopped, but it's not clear
+to me how valuable that is.
+
+If the actual commit ids are not valuable, then we could just set bits
+and then at the end of the loop produce one warning:
+
+  if (seen_zero && seen_non_zero) {
+	graph_report("oops, we saw both types");
+  }
+
+Certainly that would make the code less confusing to me. :) But I really
+don't know if marking the individual commit is useful or not (on the
+other hand, it cannot be perfect, since when we see a mismatch we do not
+know if it was _this_ commit that is wrong and the previous one is
+right, or if the previous one was wrong and this one was right). I guess
+we could also save an example of each type and report them (i.e., make
+seen_zero and seen_non_zero pointers to commits/oids).
+
+> >  		if (generation_zero == GENERATION_ZERO_EXISTS)
+> >  			continue;
+> 
+> ... as I do not see what this "continue" is doing, I'd stop at
+> expressing my puzzlement ;-)
+
+Yeah, I'm not sure on this bit. I had thought at first it was just
+trying to avoid the rest of the loop for commits which are 0-generation.
+But after Taylor's explanation that this is about whole files with
+zero-generations, it makes sense that we would not do the rest of the
+loop for any commit (it is already an error to have mixed zero/non-zero
+entries, so the file fails verification).
+
+In a "two bits" world, I think this just becomes:
+
+  if (seen_zero)
+	continue;
+
+-Peff
+
+^ permalink raw reply	[flat|nested] 30+ messages in thread
+* Re: [PATCH 0/4] commit-graph: fsck zero/non-zero generation number fixes
+  2023-08-10 20:37     ` [PATCH 0/4] commit-graph: fsck zero/non-zero generation number fixes Taylor Blau
+                         ` (3 preceding siblings ...)
+  2023-08-10 20:37       ` [PATCH 4/4] commit-graph: invert negated conditional Taylor Blau
+@ 2023-08-11 15:02       ` Jeff King
+  4 siblings, 0 replies; 30+ messages in thread
+From: Jeff King @ 2023-08-11 15:02 UTC (permalink / raw)
+  To: Taylor Blau; +Cc: git, Junio C Hamano, Derrick Stolee
+
+On Thu, Aug 10, 2023 at 04:37:32PM -0400, Taylor Blau wrote:
+
+> This series expands on a patch that Peff sent earlier in this thread to
+> remove a section of unreachable code that was noticed by Coverity in the
+> `verify_one_commit_graph()` function.
+> 
+> The first couple of patches addresses the main issue, which is that we
+> couldn't verify ancient commit-graphs written with zero'd generation
+> numbers. The third patch adds additional tests to ensure our coverage in
+> this area is complete, and the final patch is a cleanup.
+
+Thanks for untangling (and explaining!) some of the history here. I
+think this series is a definite improvement, including that final
+cleanup. But I also think that the "two bits" approach mentioned by
+Junio would be better still.  IMHO the intent of the code would be more
+clear, and it would avoid the flip-flopping error case.
+
+-Peff
+
+^ permalink raw reply	[flat|nested] 30+ messages in thread
+* [PATCH v2 0/5] commit-graph: fsck zero/non-zero generation number fixes
+  2023-08-10 17:44   ` Taylor Blau
+  2023-08-10 20:37     ` [PATCH 0/4] commit-graph: fsck zero/non-zero generation number fixes Taylor Blau
+@ 2023-08-11 17:05     ` Taylor Blau
+  2023-08-11 17:05       ` [PATCH v2 1/5] commit-graph: introduce `commit_graph_generation_from_graph()` Taylor Blau
+                         ` (5 more replies)
+  2023-08-21 21:34     ` [PATCH v3 0/4] " Taylor Blau
+  2 siblings, 6 replies; 30+ messages in thread
+From: Taylor Blau @ 2023-08-11 17:05 UTC (permalink / raw)
+  To: git; +Cc: Junio C Hamano, Jeff King, Derrick Stolee
+
+Here's a small reroll of a series that I sent which expanded on a patch
+that Peff sent earlier in the thread to remove a section of unreachable
+code that was noticed by Coverity in the `verify_one_commit_graph()`
+function.
+
+Everything is the same in the first three patches. The fourth patch is
+slightly modified to (in addition to flipping the conditional) extract
+the mixed zero/non-zero generation number checks out to its own
+function.
+
+The fifth patch is new, and avoids repeatedly warning about mixed
+generation numbers by treating `generation_zero` as a bitfield.
+
+Thanks as always for your review!
+
+Jeff King (1):
+  commit-graph: verify swapped zero/non-zero generation cases
+
+Taylor Blau (4):
+  commit-graph: introduce `commit_graph_generation_from_graph()`
+  t/t5318-commit-graph.sh: test generation zero transitions during fsck
+  commit-graph: invert negated conditional, extract to function
+  commit-graph: avoid repeated mixed generation number warnings
+
+ commit-graph.c          | 48 ++++++++++++++++++++++++++++++++---------
+ t/t5318-commit-graph.sh | 32 +++++++++++++++++++++------
+ 2 files changed, 64 insertions(+), 16 deletions(-)
+
+Range-diff against v1:
+1:  6ea610f7d2 < -:  ---------- commit-graph: invert negated conditional
+-:  ---------- > 1:  701c198e19 commit-graph: introduce `commit_graph_generation_from_graph()`
+-:  ---------- > 2:  9b9483893c commit-graph: verify swapped zero/non-zero generation cases
+-:  ---------- > 3:  8679db3d0e t/t5318-commit-graph.sh: test generation zero transitions during fsck
+-:  ---------- > 4:  32b5d69ebe commit-graph: invert negated conditional, extract to function
+-:  ---------- > 5:  b82b15ebc8 commit-graph: avoid repeated mixed generation number warnings
+-- 
+2.42.0.rc0.30.gb82b15ebc8
+
+^ permalink raw reply	[flat|nested] 30+ messages in thread
+* [PATCH v2 1/5] commit-graph: introduce `commit_graph_generation_from_graph()`
+  2023-08-11 17:05     ` [PATCH v2 0/5] " Taylor Blau
+@ 2023-08-11 17:05       ` Taylor Blau
+  2023-08-11 17:05       ` [PATCH v2 2/5] commit-graph: verify swapped zero/non-zero generation cases Taylor Blau
+                         ` (4 subsequent siblings)
+  5 siblings, 0 replies; 30+ messages in thread
+From: Taylor Blau @ 2023-08-11 17:05 UTC (permalink / raw)
+  To: git; +Cc: Junio C Hamano, Jeff King, Derrick Stolee
+
+In 2ee11f7261 (commit-graph: return generation from memory, 2023-03-20),
+the `commit_graph_generation()` function stopped returning zeros when
+asked to locate the generation number of a given commit.
+
+This was done at the time to prepare for a later change which set
+generation values in memory, meaning that we could no longer rely on
+`graph_pos` alone to tell us whether or not to trust the generation
+number returned by this function.
+
+In 2ee11f7261, it was noted that this change only impacted very old
+commit-graphs, which were written with all commits having generation
+number 0. Indeed, zero is not a valid generation number, so we should
+never expect to see that value outside of the aforementioned case.
+
+The test fallout in 2ee11f7261 indicated that we were no longer able to
+fsck a specific old case of commit-graph corruption, where we see a
+non-zero generation number after having seen a generation number of 0
+earlier.
+
+Introduce a variant of `commit_graph_generation()` which behaves like
+that function did prior to 2ee11f7261, known as
+`commit_graph_generation_from_graph()`. Then use this function in the
+context of `verify_one_commit_graph()`, where we only want to trust the
+values from the graph.
+
+Signed-off-by: Taylor Blau <me@ttaylorr.com>
+---
+ commit-graph.c          | 14 ++++++++++++--
+ t/t5318-commit-graph.sh |  2 +-
+ 2 files changed, 13 insertions(+), 3 deletions(-)
+
+diff --git a/commit-graph.c b/commit-graph.c
+index 0aa1640d15..c68f5c6b3a 100644
+--- a/commit-graph.c
++++ b/commit-graph.c
+@@ -128,6 +128,16 @@ timestamp_t commit_graph_generation(const struct commit *c)
+ 	return GENERATION_NUMBER_INFINITY;
+ }
+ 
++static timestamp_t commit_graph_generation_from_graph(const struct commit *c)
++{
++	struct commit_graph_data *data =
++		commit_graph_data_slab_peek(&commit_graph_data_slab, c);
++
++	if (!data || data->graph_pos == COMMIT_NOT_FROM_GRAPH)
++		return GENERATION_NUMBER_INFINITY;
++	return data->generation;
++}
++
+ static struct commit_graph_data *commit_graph_data_at(const struct commit *c)
+ {
+ 	unsigned int i, nth_slab;
+@@ -2659,7 +2669,7 @@ static int verify_one_commit_graph(struct repository *r,
+ 					     oid_to_hex(&graph_parents->item->object.oid),
+ 					     oid_to_hex(&odb_parents->item->object.oid));
+ 
+-			generation = commit_graph_generation(graph_parents->item);
++			generation = commit_graph_generation_from_graph(graph_parents->item);
+ 			if (generation > max_generation)
+ 				max_generation = generation;
+ 
+@@ -2671,7 +2681,7 @@ static int verify_one_commit_graph(struct repository *r,
+ 			graph_report(_("commit-graph parent list for commit %s terminates early"),
+ 				     oid_to_hex(&cur_oid));
+ 
+-		if (!commit_graph_generation(graph_commit)) {
++		if (!commit_graph_generation_from_graph(graph_commit)) {
+ 			if (generation_zero == GENERATION_NUMBER_EXISTS)
+ 				graph_report(_("commit-graph has generation number zero for commit %s, but non-zero elsewhere"),
+ 					     oid_to_hex(&cur_oid));
+diff --git a/t/t5318-commit-graph.sh b/t/t5318-commit-graph.sh
+index 4df76173a8..4e70820c74 100755
+--- a/t/t5318-commit-graph.sh
++++ b/t/t5318-commit-graph.sh
+@@ -598,7 +598,7 @@ test_expect_success 'detect incorrect generation number' '
+ 
+ test_expect_success 'detect incorrect generation number' '
+ 	corrupt_graph_and_verify $GRAPH_BYTE_COMMIT_GENERATION "\01" \
+-		"commit-graph generation for commit"
++		"but zero elsewhere"
+ '
+ 
+ test_expect_success 'detect incorrect commit date' '
+-- 
+2.42.0.rc0.30.gb82b15ebc8
+
+
+^ permalink raw reply related	[flat|nested] 30+ messages in thread
+* [PATCH v2 2/5] commit-graph: verify swapped zero/non-zero generation cases
+  2023-08-11 17:05     ` [PATCH v2 0/5] " Taylor Blau
+  2023-08-11 17:05       ` [PATCH v2 1/5] commit-graph: introduce `commit_graph_generation_from_graph()` Taylor Blau
+@ 2023-08-11 17:05       ` Taylor Blau
+  2023-08-11 17:05       ` [PATCH v2 3/5] t/t5318-commit-graph.sh: test generation zero transitions during fsck Taylor Blau
+                         ` (3 subsequent siblings)
+  5 siblings, 0 replies; 30+ messages in thread
+From: Taylor Blau @ 2023-08-11 17:05 UTC (permalink / raw)
+  To: git; +Cc: Junio C Hamano, Jeff King, Derrick Stolee
+
+From: Jeff King <peff@peff.net>
+
+In verify_one_commit_graph(), we have code that complains when a commit
+is found with a generation number of zero, and then later with a
+non-zero number. It works like this:
+
+  1. When we see an entry with generation zero, we set the
+     generation_zero flag to GENERATION_ZERO_EXISTS.
+
+  2. When we later see an entry with a non-zero generation, we complain
+     if the flag is GENERATION_ZERO_EXISTS.
+
+There's a matching GENERATION_NUMBER_EXISTS value, which in theory would
+be used to find the case that we see the entries in the opposite order:
+
+  1. When we see an entry with a non-zero generation, we set the
+     generation_zero flag to GENERATION_NUMBER_EXISTS.
+
+  2. When we later see an entry with a zero generation, we complain if
+     the flag is GENERATION_NUMBER_EXISTS.
+
+But that doesn't work; step 2 is implemented, but there is no step 1. We
+never use NUMBER_EXISTS at all, and Coverity rightly complains that step
+2 is dead code.
+
+We can fix that by implementing that step 1.
+
+Signed-off-by: Jeff King <peff@peff.net>
+Signed-off-by: Taylor Blau <me@ttaylorr.com>
+---
+ commit-graph.c | 9 ++++++---
+ 1 file changed, 6 insertions(+), 3 deletions(-)
+
+diff --git a/commit-graph.c b/commit-graph.c
+index c68f5c6b3a..acca753ce8 100644
+--- a/commit-graph.c
++++ b/commit-graph.c
+@@ -2686,9 +2686,12 @@ static int verify_one_commit_graph(struct repository *r,
+ 				graph_report(_("commit-graph has generation number zero for commit %s, but non-zero elsewhere"),
+ 					     oid_to_hex(&cur_oid));
+ 			generation_zero = GENERATION_ZERO_EXISTS;
+-		} else if (generation_zero == GENERATION_ZERO_EXISTS)
+-			graph_report(_("commit-graph has non-zero generation number for commit %s, but zero elsewhere"),
+-				     oid_to_hex(&cur_oid));
++		} else {
++			if (generation_zero == GENERATION_ZERO_EXISTS)
++				graph_report(_("commit-graph has non-zero generation number for commit %s, but zero elsewhere"),
++					     oid_to_hex(&cur_oid));
++			generation_zero = GENERATION_NUMBER_EXISTS;
++		}
+ 
+ 		if (generation_zero == GENERATION_ZERO_EXISTS)
+ 			continue;
+-- 
+2.42.0.rc0.30.gb82b15ebc8
+
+
+^ permalink raw reply related	[flat|nested] 30+ messages in thread
+* [PATCH v2 3/5] t/t5318-commit-graph.sh: test generation zero transitions during fsck
+  2023-08-11 17:05     ` [PATCH v2 0/5] " Taylor Blau
+  2023-08-11 17:05       ` [PATCH v2 1/5] commit-graph: introduce `commit_graph_generation_from_graph()` Taylor Blau
+  2023-08-11 17:05       ` [PATCH v2 2/5] commit-graph: verify swapped zero/non-zero generation cases Taylor Blau
+@ 2023-08-11 17:05       ` Taylor Blau
+  2023-08-11 17:05       ` [PATCH v2 4/5] commit-graph: invert negated conditional, extract to function Taylor Blau
+                         ` (2 subsequent siblings)
+  5 siblings, 0 replies; 30+ messages in thread
+From: Taylor Blau @ 2023-08-11 17:05 UTC (permalink / raw)
+  To: git; +Cc: Junio C Hamano, Jeff King, Derrick Stolee
+
+The second test called "detect incorrect generation number" asserts that
+we correctly warn during an fsck when we see a non-zero generation
+number after seeing a zero beforehand.
+
+The other transition (going from non-zero to zero) was previously
+untested. Test both directions, and rename the existing test to make
+clear which direction it is exercising.
+
+Signed-off-by: Taylor Blau <me@ttaylorr.com>
+---
+ t/t5318-commit-graph.sh | 18 ++++++++++++------
+ 1 file changed, 12 insertions(+), 6 deletions(-)
+
+diff --git a/t/t5318-commit-graph.sh b/t/t5318-commit-graph.sh
+index 4e70820c74..8e96471b34 100755
+--- a/t/t5318-commit-graph.sh
++++ b/t/t5318-commit-graph.sh
+@@ -450,14 +450,15 @@ GRAPH_BYTE_FANOUT2=$(($GRAPH_FANOUT_OFFSET + 4 * 255))
+ GRAPH_OID_LOOKUP_OFFSET=$(($GRAPH_FANOUT_OFFSET + 4 * 256))
+ GRAPH_BYTE_OID_LOOKUP_ORDER=$(($GRAPH_OID_LOOKUP_OFFSET + $HASH_LEN * 8))
+ GRAPH_BYTE_OID_LOOKUP_MISSING=$(($GRAPH_OID_LOOKUP_OFFSET + $HASH_LEN * 4 + 10))
++GRAPH_COMMIT_DATA_WIDTH=$(($HASH_LEN + 16))
+ GRAPH_COMMIT_DATA_OFFSET=$(($GRAPH_OID_LOOKUP_OFFSET + $HASH_LEN * $NUM_COMMITS))
+ GRAPH_BYTE_COMMIT_TREE=$GRAPH_COMMIT_DATA_OFFSET
+ GRAPH_BYTE_COMMIT_PARENT=$(($GRAPH_COMMIT_DATA_OFFSET + $HASH_LEN))
+ GRAPH_BYTE_COMMIT_EXTRA_PARENT=$(($GRAPH_COMMIT_DATA_OFFSET + $HASH_LEN + 4))
+ GRAPH_BYTE_COMMIT_WRONG_PARENT=$(($GRAPH_COMMIT_DATA_OFFSET + $HASH_LEN + 3))
+ GRAPH_BYTE_COMMIT_GENERATION=$(($GRAPH_COMMIT_DATA_OFFSET + $HASH_LEN + 11))
++GRAPH_BYTE_COMMIT_GENERATION_LAST=$(($GRAPH_BYTE_COMMIT_GENERATION + $(($NUM_COMMITS - 1)) * $GRAPH_COMMIT_DATA_WIDTH))
+ GRAPH_BYTE_COMMIT_DATE=$(($GRAPH_COMMIT_DATA_OFFSET + $HASH_LEN + 12))
+-GRAPH_COMMIT_DATA_WIDTH=$(($HASH_LEN + 16))
+ GRAPH_OCTOPUS_DATA_OFFSET=$(($GRAPH_COMMIT_DATA_OFFSET + \
+ 			     $GRAPH_COMMIT_DATA_WIDTH * $NUM_COMMITS))
+ GRAPH_BYTE_OCTOPUS=$(($GRAPH_OCTOPUS_DATA_OFFSET + 4))
+@@ -596,11 +597,6 @@ test_expect_success 'detect incorrect generation number' '
+ 		"generation for commit"
+ '
+ 
+-test_expect_success 'detect incorrect generation number' '
+-	corrupt_graph_and_verify $GRAPH_BYTE_COMMIT_GENERATION "\01" \
+-		"but zero elsewhere"
+-'
+-
+ test_expect_success 'detect incorrect commit date' '
+ 	corrupt_graph_and_verify $GRAPH_BYTE_COMMIT_DATE "\01" \
+ 		"commit date"
+@@ -622,6 +618,16 @@ test_expect_success 'detect incorrect chunk count' '
+ 		$GRAPH_CHUNK_LOOKUP_OFFSET
+ '
+ 
++test_expect_success 'detect mixed generation numbers (non-zero to zero)' '
++	corrupt_graph_and_verify $GRAPH_BYTE_COMMIT_GENERATION_LAST "\0\0\0\0" \
++		"but non-zero elsewhere"
++'
++
++test_expect_success 'detect mixed generation numbers (zero to non-zero)' '
++	corrupt_graph_and_verify $GRAPH_BYTE_COMMIT_GENERATION "\0\0\0\0" \
++		"but zero elsewhere"
++'
++
+ test_expect_success 'git fsck (checks commit-graph when config set to true)' '
+ 	git -C full fsck &&
+ 	corrupt_graph_and_verify $GRAPH_BYTE_FOOTER "\00" \
+-- 
+2.42.0.rc0.30.gb82b15ebc8
+
+
+^ permalink raw reply related	[flat|nested] 30+ messages in thread
+* [PATCH v2 4/5] commit-graph: invert negated conditional, extract to function
+  2023-08-11 17:05     ` [PATCH v2 0/5] " Taylor Blau
+                         ` (2 preceding siblings ...)
+  2023-08-11 17:05       ` [PATCH v2 3/5] t/t5318-commit-graph.sh: test generation zero transitions during fsck Taylor Blau
+@ 2023-08-11 17:05       ` Taylor Blau
+  2023-08-11 17:05       ` [PATCH v2 5/5] commit-graph: avoid repeated mixed generation number warnings Taylor Blau
+  2023-08-11 17:58       ` [PATCH v2 0/5] commit-graph: fsck zero/non-zero generation number fixes Jeff King
+  5 siblings, 0 replies; 30+ messages in thread
+From: Taylor Blau @ 2023-08-11 17:05 UTC (permalink / raw)
+  To: git; +Cc: Junio C Hamano, Jeff King, Derrick Stolee
+
+Now that we're using `commit_graph_generation_from_graph()` (which can
+return a zero value) and we have a pure if/else instead of an else-if,
+let's swap the arms of the if-statement.
+
+This avoids an "if (!x) { foo(); } else { bar(); }" and replaces it with
+the more readable "if (x) { bar(); } else { foo(); }".
+
+Let's also move this code to verify mixed zero/non-zero generation
+numbers out to its own function, and have it modify the
+`generation_zero` variable through a pointer.
+
+There is no functionality change in this patch, but note that there are
+a couple of textual differences. First, the wrapping is adjusted on both
+`graph_report()` calls to avoid overly-long lines. Second, we use the
+OID from `graph_commit` instead of passing in `cur_oid`, since these are
+verified to be the same by `verify_one_commit_graph()`.
+
+Signed-off-by: Taylor Blau <me@ttaylorr.com>
+---
+ commit-graph.c | 34 +++++++++++++++++++++++-----------
+ 1 file changed, 23 insertions(+), 11 deletions(-)
+
+diff --git a/commit-graph.c b/commit-graph.c
+index acca753ce8..f7d9b31546 100644
+--- a/commit-graph.c
++++ b/commit-graph.c
+@@ -2568,6 +2568,27 @@ static int commit_graph_checksum_valid(struct commit_graph *g)
+ 	return hashfile_checksum_valid(g->data, g->data_len);
+ }
+ 
++static void verify_mixed_generation_numbers(struct commit_graph *g,
++					    struct commit *graph_commit,
++					    int *generation_zero)
++{
++	if (commit_graph_generation_from_graph(graph_commit)) {
++		if (*generation_zero == GENERATION_ZERO_EXISTS)
++			graph_report(_("commit-graph has non-zero generation "
++				       "number for commit %s, but zero "
++				       "elsewhere"),
++				     oid_to_hex(&graph_commit->object.oid));
++		*generation_zero = GENERATION_NUMBER_EXISTS;
++	} else {
++		if (*generation_zero == GENERATION_NUMBER_EXISTS)
++			graph_report(_("commit-graph has generation number "
++				       "zero for commit %s, but non-zero "
++				       "elsewhere"),
++				     oid_to_hex(&graph_commit->object.oid));
++		*generation_zero = GENERATION_ZERO_EXISTS;
++	}
++}
++
+ static int verify_one_commit_graph(struct repository *r,
+ 				   struct commit_graph *g,
+ 				   struct progress *progress,
+@@ -2681,17 +2702,8 @@ static int verify_one_commit_graph(struct repository *r,
+ 			graph_report(_("commit-graph parent list for commit %s terminates early"),
+ 				     oid_to_hex(&cur_oid));
+ 
+-		if (!commit_graph_generation_from_graph(graph_commit)) {
+-			if (generation_zero == GENERATION_NUMBER_EXISTS)
+-				graph_report(_("commit-graph has generation number zero for commit %s, but non-zero elsewhere"),
+-					     oid_to_hex(&cur_oid));
+-			generation_zero = GENERATION_ZERO_EXISTS;
+-		} else {
+-			if (generation_zero == GENERATION_ZERO_EXISTS)
+-				graph_report(_("commit-graph has non-zero generation number for commit %s, but zero elsewhere"),
+-					     oid_to_hex(&cur_oid));
+-			generation_zero = GENERATION_NUMBER_EXISTS;
+-		}
++		verify_mixed_generation_numbers(g, graph_commit,
++						&generation_zero);
+ 
+ 		if (generation_zero == GENERATION_ZERO_EXISTS)
+ 			continue;
+-- 
+2.42.0.rc0.30.gb82b15ebc8
+
+
+^ permalink raw reply related	[flat|nested] 30+ messages in thread
+* [PATCH v2 5/5] commit-graph: avoid repeated mixed generation number warnings
+  2023-08-11 17:05     ` [PATCH v2 0/5] " Taylor Blau
+                         ` (3 preceding siblings ...)
+  2023-08-11 17:05       ` [PATCH v2 4/5] commit-graph: invert negated conditional, extract to function Taylor Blau
+@ 2023-08-11 17:05       ` Taylor Blau
+  2023-08-11 17:58       ` [PATCH v2 0/5] commit-graph: fsck zero/non-zero generation number fixes Jeff King
+  5 siblings, 0 replies; 30+ messages in thread
+From: Taylor Blau @ 2023-08-11 17:05 UTC (permalink / raw)
+  To: git; +Cc: Junio C Hamano, Jeff King, Derrick Stolee
+
+When validating that a commit-graph has either all zero, or all non-zero
+generation numbers, we emit a warning on both the rising and falling
+edge of transitioning between the two.
+
+So if we are unfortunate enough to see a commit-graph which has a
+repeating sequence of zero, then non-zero generation numbers, we'll
+generate many warnings that contain more or less the same information.
+
+Avoid this by treating `generation_zero` as a bit-field, and warn under
+the same conditions, but only do so once.
+
+Suggested-by: Junio C Hamano <gitster@pobox.com>
+Signed-off-by: Taylor Blau <me@ttaylorr.com>
+---
+ commit-graph.c          | 17 ++++++++++-------
+ t/t5318-commit-graph.sh | 14 ++++++++++++++
+ 2 files changed, 24 insertions(+), 7 deletions(-)
+
+diff --git a/commit-graph.c b/commit-graph.c
+index f7d9b31546..8d924b4509 100644
+--- a/commit-graph.c
++++ b/commit-graph.c
+@@ -2562,6 +2562,8 @@ static void graph_report(const char *fmt, ...)
+ 
+ #define GENERATION_ZERO_EXISTS 1
+ #define GENERATION_NUMBER_EXISTS 2
++#define GENERATION_NUMBER_BOTH_EXIST \
++	(GENERATION_ZERO_EXISTS | GENERATION_NUMBER_EXISTS)
+ 
+ static int commit_graph_checksum_valid(struct commit_graph *g)
+ {
+@@ -2573,19 +2575,19 @@ static void verify_mixed_generation_numbers(struct commit_graph *g,
+ 					    int *generation_zero)
+ {
+ 	if (commit_graph_generation_from_graph(graph_commit)) {
+-		if (*generation_zero == GENERATION_ZERO_EXISTS)
++		if (*generation_zero & GENERATION_ZERO_EXISTS)
+ 			graph_report(_("commit-graph has non-zero generation "
+ 				       "number for commit %s, but zero "
+ 				       "elsewhere"),
+ 				     oid_to_hex(&graph_commit->object.oid));
+-		*generation_zero = GENERATION_NUMBER_EXISTS;
++		*generation_zero |= GENERATION_NUMBER_EXISTS;
+ 	} else {
+-		if (*generation_zero == GENERATION_NUMBER_EXISTS)
++		if (*generation_zero & GENERATION_NUMBER_EXISTS)
+ 			graph_report(_("commit-graph has generation number "
+ 				       "zero for commit %s, but non-zero "
+ 				       "elsewhere"),
+ 				     oid_to_hex(&graph_commit->object.oid));
+-		*generation_zero = GENERATION_ZERO_EXISTS;
++		*generation_zero |= GENERATION_ZERO_EXISTS;
+ 	}
+ }
+ 
+@@ -2702,10 +2704,11 @@ static int verify_one_commit_graph(struct repository *r,
+ 			graph_report(_("commit-graph parent list for commit %s terminates early"),
+ 				     oid_to_hex(&cur_oid));
+ 
+-		verify_mixed_generation_numbers(g, graph_commit,
+-						&generation_zero);
++		if (generation_zero != GENERATION_NUMBER_BOTH_EXIST)
++			verify_mixed_generation_numbers(g, graph_commit,
++							&generation_zero);
+ 
+-		if (generation_zero == GENERATION_ZERO_EXISTS)
++		if (generation_zero & GENERATION_ZERO_EXISTS)
+ 			continue;
+ 
+ 		/*
+diff --git a/t/t5318-commit-graph.sh b/t/t5318-commit-graph.sh
+index 8e96471b34..2626d41c94 100755
+--- a/t/t5318-commit-graph.sh
++++ b/t/t5318-commit-graph.sh
+@@ -628,6 +628,20 @@ test_expect_success 'detect mixed generation numbers (zero to non-zero)' '
+ 		"but zero elsewhere"
+ '
+ 
++test_expect_success 'detect mixed generation numbers (flip-flop)' '
++	corrupt_graph_setup &&
++	for pos in \
++		$GRAPH_BYTE_COMMIT_GENERATION \
++		$GRAPH_BYTE_COMMIT_GENERATION_LAST
++	do
++		printf "\0\0\0\0" | dd of="full/$objdir/info/commit-graph" bs=1 \
++		seek="$pos" conv=notrunc || return 1
++	done &&
++
++	test_must_fail git -C full commit-graph verify 2>err &&
++	test 1 -eq "$(grep -c "generation number" err)"
++'
++
+ test_expect_success 'git fsck (checks commit-graph when config set to true)' '
+ 	git -C full fsck &&
+ 	corrupt_graph_and_verify $GRAPH_BYTE_FOOTER "\00" \
+-- 
+2.42.0.rc0.30.gb82b15ebc8
+
+^ permalink raw reply related	[flat|nested] 30+ messages in thread
+* Re: [PATCH 2/4] commit-graph: verify swapped zero/non-zero generation cases
+  2023-08-11 15:01           ` Jeff King
+@ 2023-08-11 17:08             ` Taylor Blau
+  0 siblings, 0 replies; 30+ messages in thread
+From: Taylor Blau @ 2023-08-11 17:08 UTC (permalink / raw)
+  To: Jeff King; +Cc: Junio C Hamano, git, Derrick Stolee
+
+On Fri, Aug 11, 2023 at 11:01:14AM -0400, Jeff King wrote:
+> > Hmph, doesn't this potentially cause us to emit the two reports
+> > alternating, if we are unlucky enough to see a commit with 0
+> > generation first (which will silently set gz to ZERO_EXISTS), then
+> > another commit with non-zero generation (which will complain we saw
+> > non-zero for the current one and earlier we saw zero elsewhere, and
+> > then set gz to NUM_EXISTS), and then another commit with 0
+> > generation (which will complain the other way, and set gz back again
+> > to ZERO_EXISTS)?
+> >
+> > I am tempted to say this gz business should be done with two bits
+> > (seen zero bit and seen non-zero bit), and immediately after we see
+> > both kinds, we should report once and stop making further reports,
+> > but ...
+>
+> Yeah, I think you are right. It might be OK, in the sense that we would
+> show a different commit each time as we flip-flopped, but it's not clear
+> to me how valuable that is.
+>
+> If the actual commit ids are not valuable, then we could just set bits
+> and then at the end of the loop produce one warning:
+>
+>   if (seen_zero && seen_non_zero) {
+> 	graph_report("oops, we saw both types");
+>   }
+
+Thanks, both. I think that this is a very reasonable suggestion and an
+improvement on the existing reporting. I made this change and sent the
+revised series as a v2 lower down in the thread.
+
+Thanks,
+Taylor
+
+^ permalink raw reply	[flat|nested] 30+ messages in thread
+* Re: [PATCH v2 0/5] commit-graph: fsck zero/non-zero generation number fixes
+  2023-08-11 17:05     ` [PATCH v2 0/5] " Taylor Blau
+                         ` (4 preceding siblings ...)
+  2023-08-11 17:05       ` [PATCH v2 5/5] commit-graph: avoid repeated mixed generation number warnings Taylor Blau
+@ 2023-08-11 17:58       ` Jeff King
+  2023-08-11 19:28         ` Junio C Hamano
+  5 siblings, 1 reply; 30+ messages in thread
+From: Jeff King @ 2023-08-11 17:58 UTC (permalink / raw)
+  To: Taylor Blau; +Cc: git, Junio C Hamano, Derrick Stolee
+
+On Fri, Aug 11, 2023 at 01:05:39PM -0400, Taylor Blau wrote:
+
+> Here's a small reroll of a series that I sent which expanded on a patch
+> that Peff sent earlier in the thread to remove a section of unreachable
+> code that was noticed by Coverity in the `verify_one_commit_graph()`
+> function.
+> 
+> Everything is the same in the first three patches. The fourth patch is
+> slightly modified to (in addition to flipping the conditional) extract
+> the mixed zero/non-zero generation number checks out to its own
+> function.
+> 
+> The fifth patch is new, and avoids repeatedly warning about mixed
+> generation numbers by treating `generation_zero` as a bitfield.
+
+This all looks correct to me. Let me show what I thought the result
+might look like, just because I think the result is a bit simpler.  We
+may be hitting diminishing returns on refactoring here, though, so if
+you're not wildly impressed, I'm happy enough if we go with what you've
+written.
+
+This applies on top of yours, but probably would replace patches 2, 4,
+and 5 (the flip-flop case isn't even really worth testing after this,
+since the message can obviously only be shown once).
+
+ commit-graph.c          | 42 +++++++++--------------------------
+ t/t5318-commit-graph.sh | 18 ++-------------
+ 2 files changed, 13 insertions(+), 47 deletions(-)
+
+diff --git a/commit-graph.c b/commit-graph.c
+index 8d924b4509..079bbc8598 100644
+--- a/commit-graph.c
++++ b/commit-graph.c
+@@ -2560,45 +2560,19 @@ static void graph_report(const char *fmt, ...)
+ 	va_end(ap);
+ }
+ 
+-#define GENERATION_ZERO_EXISTS 1
+-#define GENERATION_NUMBER_EXISTS 2
+-#define GENERATION_NUMBER_BOTH_EXIST \
+-	(GENERATION_ZERO_EXISTS | GENERATION_NUMBER_EXISTS)
+-
+ static int commit_graph_checksum_valid(struct commit_graph *g)
+ {
+ 	return hashfile_checksum_valid(g->data, g->data_len);
+ }
+ 
+-static void verify_mixed_generation_numbers(struct commit_graph *g,
+-					    struct commit *graph_commit,
+-					    int *generation_zero)
+-{
+-	if (commit_graph_generation_from_graph(graph_commit)) {
+-		if (*generation_zero & GENERATION_ZERO_EXISTS)
+-			graph_report(_("commit-graph has non-zero generation "
+-				       "number for commit %s, but zero "
+-				       "elsewhere"),
+-				     oid_to_hex(&graph_commit->object.oid));
+-		*generation_zero |= GENERATION_NUMBER_EXISTS;
+-	} else {
+-		if (*generation_zero & GENERATION_NUMBER_EXISTS)
+-			graph_report(_("commit-graph has generation number "
+-				       "zero for commit %s, but non-zero "
+-				       "elsewhere"),
+-				     oid_to_hex(&graph_commit->object.oid));
+-		*generation_zero |= GENERATION_ZERO_EXISTS;
+-	}
+-}
+-
+ static int verify_one_commit_graph(struct repository *r,
+ 				   struct commit_graph *g,
+ 				   struct progress *progress,
+ 				   uint64_t *seen)
+ {
+ 	uint32_t i, cur_fanout_pos = 0;
+ 	struct object_id prev_oid, cur_oid;
+-	int generation_zero = 0;
++	struct commit *seen_gen_zero = NULL, *seen_gen_non_zero = NULL;
+ 
+ 	verify_commit_graph_error = verify_commit_graph_lite(g);
+ 	if (verify_commit_graph_error)
+@@ -2704,11 +2678,12 @@ static int verify_one_commit_graph(struct repository *r,
+ 			graph_report(_("commit-graph parent list for commit %s terminates early"),
+ 				     oid_to_hex(&cur_oid));
+ 
+-		if (generation_zero != GENERATION_NUMBER_BOTH_EXIST)
+-			verify_mixed_generation_numbers(g, graph_commit,
+-							&generation_zero);
++		if (!commit_graph_generation_from_graph(graph_commit))
++			seen_gen_zero = graph_commit;
++		else
++			seen_gen_non_zero = graph_commit;
+ 
+-		if (generation_zero & GENERATION_ZERO_EXISTS)
++		if (seen_gen_zero)
+ 			continue;
+ 
+ 		/*
+@@ -2734,6 +2709,11 @@ static int verify_one_commit_graph(struct repository *r,
+ 				     odb_commit->date);
+ 	}
+ 
++	if (seen_gen_zero && seen_gen_non_zero)
++		graph_report(_("commit-graph has both zero and non-zero generations (e.g., commits %s and %s"),
++			     oid_to_hex(&seen_gen_zero->object.oid),
++			     oid_to_hex(&seen_gen_non_zero->object.oid));
++
+ 	return verify_commit_graph_error;
+ }
+ 
+diff --git a/t/t5318-commit-graph.sh b/t/t5318-commit-graph.sh
+index 2626d41c94..ca5e2c87ae 100755
+--- a/t/t5318-commit-graph.sh
++++ b/t/t5318-commit-graph.sh
+@@ -620,26 +620,12 @@ test_expect_success 'detect incorrect chunk count' '
+ 
+ test_expect_success 'detect mixed generation numbers (non-zero to zero)' '
+ 	corrupt_graph_and_verify $GRAPH_BYTE_COMMIT_GENERATION_LAST "\0\0\0\0" \
+-		"but non-zero elsewhere"
++		"both zero and non-zero"
+ '
+ 
+ test_expect_success 'detect mixed generation numbers (zero to non-zero)' '
+ 	corrupt_graph_and_verify $GRAPH_BYTE_COMMIT_GENERATION "\0\0\0\0" \
+-		"but zero elsewhere"
+-'
+-
+-test_expect_success 'detect mixed generation numbers (flip-flop)' '
+-	corrupt_graph_setup &&
+-	for pos in \
+-		$GRAPH_BYTE_COMMIT_GENERATION \
+-		$GRAPH_BYTE_COMMIT_GENERATION_LAST
+-	do
+-		printf "\0\0\0\0" | dd of="full/$objdir/info/commit-graph" bs=1 \
+-		seek="$pos" conv=notrunc || return 1
+-	done &&
+-
+-	test_must_fail git -C full commit-graph verify 2>err &&
+-	test 1 -eq "$(grep -c "generation number" err)"
++		"both zero and non-zero"
+ '
+ 
+ test_expect_success 'git fsck (checks commit-graph when config set to true)' '
+
+^ permalink raw reply related	[flat|nested] 30+ messages in thread
+* Re: [PATCH v2 0/5] commit-graph: fsck zero/non-zero generation number fixes
+  2023-08-11 17:58       ` [PATCH v2 0/5] commit-graph: fsck zero/non-zero generation number fixes Jeff King
+@ 2023-08-11 19:28         ` Junio C Hamano
+  2023-08-17 19:51           ` Jeff King
+  0 siblings, 1 reply; 30+ messages in thread
+From: Junio C Hamano @ 2023-08-11 19:28 UTC (permalink / raw)
+  To: Jeff King; +Cc: Taylor Blau, git, Derrick Stolee
+
+Jeff King <peff@peff.net> writes:
+
+> This applies on top of yours, but probably would replace patches 2, 4,
+> and 5 (the flip-flop case isn't even really worth testing after this,
+> since the message can obviously only be shown once).
+>
+>  commit-graph.c          | 42 +++++++++--------------------------
+>  t/t5318-commit-graph.sh | 18 ++-------------
+>  2 files changed, 13 insertions(+), 47 deletions(-)
+
+Quite an impressive amount of code reduction.  I obviously like it.
+
+One very minor thing is that how much value are we getting by
+reporting the object names of one example from each camp, instead of
+just reporting a single bit "we have commits not counted and also
+counted their generations, which is an anomaly".
+
+Obviously it does not matter.  Even if we stopped doing so, the code
+would not become much simpler.  We'd just use a word with two bits
+instead of two pointers to existing in-core objects, which does not
+have meaningful performance implications either way.
+
+Thanks.
+
+^ permalink raw reply	[flat|nested] 30+ messages in thread
+* Re: [PATCH v2 0/5] commit-graph: fsck zero/non-zero generation number fixes
+  2023-08-11 19:28         ` Junio C Hamano
+@ 2023-08-17 19:51           ` Jeff King
+  2023-08-21 21:25             ` Taylor Blau
+  0 siblings, 1 reply; 30+ messages in thread
+From: Jeff King @ 2023-08-17 19:51 UTC (permalink / raw)
+  To: Junio C Hamano; +Cc: Taylor Blau, git, Derrick Stolee
+
+On Fri, Aug 11, 2023 at 12:28:49PM -0700, Junio C Hamano wrote:
+
+> Jeff King <peff@peff.net> writes:
+> 
+> > This applies on top of yours, but probably would replace patches 2, 4,
+> > and 5 (the flip-flop case isn't even really worth testing after this,
+> > since the message can obviously only be shown once).
+> >
+> >  commit-graph.c          | 42 +++++++++--------------------------
+> >  t/t5318-commit-graph.sh | 18 ++-------------
+> >  2 files changed, 13 insertions(+), 47 deletions(-)
+> 
+> Quite an impressive amount of code reduction.  I obviously like it.
+> 
+> One very minor thing is that how much value are we getting by
+> reporting the object names of one example from each camp, instead of
+> just reporting a single bit "we have commits not counted and also
+> counted their generations, which is an anomaly".
+> 
+> Obviously it does not matter.  Even if we stopped doing so, the code
+> would not become much simpler.  We'd just use a word with two bits
+> instead of two pointers to existing in-core objects, which does not
+> have meaningful performance implications either way.
+
+Yeah, I wasn't sure if the commit names were valuable or not. Two bits
+would definitely work (though I have a slight preference for two
+boolean variables, just because I find the syntax easier to read).
+
+I don't think we've heard from Taylor, but I saw his original patches
+were in 'next'. I'm happy to clean up what I posted, but I'm also happy
+if we just merge what's in next and move on.
+
+-Peff
+
+^ permalink raw reply	[flat|nested] 30+ messages in thread
+* Re: [PATCH v2 0/5] commit-graph: fsck zero/non-zero generation number fixes
+  2023-08-17 19:51           ` Jeff King
+@ 2023-08-21 21:25             ` Taylor Blau
+  0 siblings, 0 replies; 30+ messages in thread
+From: Taylor Blau @ 2023-08-21 21:25 UTC (permalink / raw)
+  To: Jeff King; +Cc: Junio C Hamano, git, Derrick Stolee
+
+On Thu, Aug 17, 2023 at 03:51:08PM -0400, Jeff King wrote:
+> > One very minor thing is that how much value are we getting by
+> > reporting the object names of one example from each camp, instead of
+> > just reporting a single bit "we have commits not counted and also
+> > counted their generations, which is an anomaly".
+> >
+> > Obviously it does not matter.  Even if we stopped doing so, the code
+> > would not become much simpler.  We'd just use a word with two bits
+> > instead of two pointers to existing in-core objects, which does not
+> > have meaningful performance implications either way.
+>
+> Yeah, I wasn't sure if the commit names were valuable or not. Two bits
+> would definitely work (though I have a slight preference for two
+> boolean variables, just because I find the syntax easier to read).
+
+I think having a single example of both a commit with zero and non-zero
+generation is marginally useful. I think keeping track of two commit
+pointers is more straightforward than the bit-field, and it does not
+complicate things too much, so I think it is worth keeping.
+
+> I don't think we've heard from Taylor, but I saw his original patches
+> were in 'next'. I'm happy to clean up what I posted, but I'm also happy
+> if we just merge what's in next and move on.
+
+Sorry that this fell to the bottom of my queue, which I am just digging
+out of now that 2.42.0 has been tagged.
+
+I think that the clean-up you suggested is worthwhile. Let's replace
+what we have in 'next' with the reroll that I'm about to submit...
+
+Thanks,
+Taylor
+
+^ permalink raw reply	[flat|nested] 30+ messages in thread
+* [PATCH v3 0/4] commit-graph: fsck zero/non-zero generation number fixes
+  2023-08-10 17:44   ` Taylor Blau
+  2023-08-10 20:37     ` [PATCH 0/4] commit-graph: fsck zero/non-zero generation number fixes Taylor Blau
+  2023-08-11 17:05     ` [PATCH v2 0/5] " Taylor Blau
+@ 2023-08-21 21:34     ` Taylor Blau
+  2023-08-21 21:34       ` [PATCH v3 1/4] commit-graph: introduce `commit_graph_generation_from_graph()` Taylor Blau
+                         ` (4 more replies)
+  2 siblings, 5 replies; 30+ messages in thread
+From: Taylor Blau @ 2023-08-21 21:34 UTC (permalink / raw)
+  To: git; +Cc: Junio C Hamano, Jeff King, Derrick Stolee
+
+Here's a(nother) small reroll of a series that I sent which expanded on
+a patch that Peff sent earlier in the thread to remove a section of
+unreachable code that was noticed by Coverity in the
+`verify_one_commit_graph()` function.
+
+The first few patches are the same, but the fourth (now final) patch is
+modified to track a single example of a commit with zero and non-zero
+generation to only emit the warning once at the end of processing.
+
+Thanks as always for your review!
+
+Jeff King (1):
+  commit-graph: verify swapped zero/non-zero generation cases
+
+Taylor Blau (3):
+  commit-graph: introduce `commit_graph_generation_from_graph()`
+  t/t5318-commit-graph.sh: test generation zero transitions during fsck
+  commit-graph: commit-graph: avoid repeated mixed generation number
+    warnings
+
+ commit-graph.c          | 38 ++++++++++++++++++++++++--------------
+ t/t5318-commit-graph.sh | 18 ++++++++++++------
+ 2 files changed, 36 insertions(+), 20 deletions(-)
+
+Range-diff against v2:
+1:  a1cc22297e = 1:  c88f945a54 commit-graph: introduce `commit_graph_generation_from_graph()`
+2:  38b8cd5e9f = 2:  8f8e0b6644 commit-graph: verify swapped zero/non-zero generation cases
+3:  d14f3ca840 = 3:  34a505dd4b t/t5318-commit-graph.sh: test generation zero transitions during fsck
+4:  e378fd6f93 < -:  ---------- commit-graph: invert negated conditional, extract to function
+5:  23bcb7d270 < -:  ---------- commit-graph: avoid repeated mixed generation number warnings
+-:  ---------- > 4:  52b49bb434 commit-graph: commit-graph: avoid repeated mixed generation number warnings
+-- 
+2.42.0.4.g52b49bb434
+
+^ permalink raw reply	[flat|nested] 30+ messages in thread
+* [PATCH v3 1/4] commit-graph: introduce `commit_graph_generation_from_graph()`
+  2023-08-21 21:34     ` [PATCH v3 0/4] " Taylor Blau
+@ 2023-08-21 21:34       ` Taylor Blau
+  2023-08-21 21:34       ` [PATCH v3 2/4] commit-graph: verify swapped zero/non-zero generation cases Taylor Blau
+                         ` (3 subsequent siblings)
+  4 siblings, 0 replies; 30+ messages in thread
+From: Taylor Blau @ 2023-08-21 21:34 UTC (permalink / raw)
+  To: git; +Cc: Junio C Hamano, Jeff King, Derrick Stolee
+
+In 2ee11f7261 (commit-graph: return generation from memory, 2023-03-20),
+the `commit_graph_generation()` function stopped returning zeros when
+asked to locate the generation number of a given commit.
+
+This was done at the time to prepare for a later change which set
+generation values in memory, meaning that we could no longer rely on
+`graph_pos` alone to tell us whether or not to trust the generation
+number returned by this function.
+
+In 2ee11f7261, it was noted that this change only impacted very old
+commit-graphs, which were written with all commits having generation
+number 0. Indeed, zero is not a valid generation number, so we should
+never expect to see that value outside of the aforementioned case.
+
+The test fallout in 2ee11f7261 indicated that we were no longer able to
+fsck a specific old case of commit-graph corruption, where we see a
+non-zero generation number after having seen a generation number of 0
+earlier.
+
+Introduce a variant of `commit_graph_generation()` which behaves like
+that function did prior to 2ee11f7261, known as
+`commit_graph_generation_from_graph()`. Then use this function in the
+context of `verify_one_commit_graph()`, where we only want to trust the
+values from the graph.
+
+Signed-off-by: Taylor Blau <me@ttaylorr.com>
+---
+ commit-graph.c          | 14 ++++++++++++--
+ t/t5318-commit-graph.sh |  2 +-
+ 2 files changed, 13 insertions(+), 3 deletions(-)
+
+diff --git a/commit-graph.c b/commit-graph.c
+index 0aa1640d15..c68f5c6b3a 100644
+--- a/commit-graph.c
++++ b/commit-graph.c
+@@ -128,6 +128,16 @@ timestamp_t commit_graph_generation(const struct commit *c)
+ 	return GENERATION_NUMBER_INFINITY;
+ }
+ 
++static timestamp_t commit_graph_generation_from_graph(const struct commit *c)
++{
++	struct commit_graph_data *data =
++		commit_graph_data_slab_peek(&commit_graph_data_slab, c);
++
++	if (!data || data->graph_pos == COMMIT_NOT_FROM_GRAPH)
++		return GENERATION_NUMBER_INFINITY;
++	return data->generation;
++}
++
+ static struct commit_graph_data *commit_graph_data_at(const struct commit *c)
+ {
+ 	unsigned int i, nth_slab;
+@@ -2659,7 +2669,7 @@ static int verify_one_commit_graph(struct repository *r,
+ 					     oid_to_hex(&graph_parents->item->object.oid),
+ 					     oid_to_hex(&odb_parents->item->object.oid));
+ 
+-			generation = commit_graph_generation(graph_parents->item);
++			generation = commit_graph_generation_from_graph(graph_parents->item);
+ 			if (generation > max_generation)
+ 				max_generation = generation;
+ 
+@@ -2671,7 +2681,7 @@ static int verify_one_commit_graph(struct repository *r,
+ 			graph_report(_("commit-graph parent list for commit %s terminates early"),
+ 				     oid_to_hex(&cur_oid));
+ 
+-		if (!commit_graph_generation(graph_commit)) {
++		if (!commit_graph_generation_from_graph(graph_commit)) {
+ 			if (generation_zero == GENERATION_NUMBER_EXISTS)
+ 				graph_report(_("commit-graph has generation number zero for commit %s, but non-zero elsewhere"),
+ 					     oid_to_hex(&cur_oid));
+diff --git a/t/t5318-commit-graph.sh b/t/t5318-commit-graph.sh
+index 4df76173a8..4e70820c74 100755
+--- a/t/t5318-commit-graph.sh
++++ b/t/t5318-commit-graph.sh
+@@ -598,7 +598,7 @@ test_expect_success 'detect incorrect generation number' '
+ 
+ test_expect_success 'detect incorrect generation number' '
+ 	corrupt_graph_and_verify $GRAPH_BYTE_COMMIT_GENERATION "\01" \
+-		"commit-graph generation for commit"
++		"but zero elsewhere"
+ '
+ 
+ test_expect_success 'detect incorrect commit date' '
+-- 
+2.42.0.4.g52b49bb434
+
+
+^ permalink raw reply related	[flat|nested] 30+ messages in thread
+* [PATCH v3 2/4] commit-graph: verify swapped zero/non-zero generation cases
+  2023-08-21 21:34     ` [PATCH v3 0/4] " Taylor Blau
+  2023-08-21 21:34       ` [PATCH v3 1/4] commit-graph: introduce `commit_graph_generation_from_graph()` Taylor Blau
+@ 2023-08-21 21:34       ` Taylor Blau
+  2023-08-21 21:34       ` [PATCH v3 3/4] t/t5318-commit-graph.sh: test generation zero transitions during fsck Taylor Blau
+                         ` (2 subsequent siblings)
+  4 siblings, 0 replies; 30+ messages in thread
+From: Taylor Blau @ 2023-08-21 21:34 UTC (permalink / raw)
+  To: git; +Cc: Junio C Hamano, Jeff King, Derrick Stolee
+
+From: Jeff King <peff@peff.net>
+
+In verify_one_commit_graph(), we have code that complains when a commit
+is found with a generation number of zero, and then later with a
+non-zero number. It works like this:
+
+  1. When we see an entry with generation zero, we set the
+     generation_zero flag to GENERATION_ZERO_EXISTS.
+
+  2. When we later see an entry with a non-zero generation, we complain
+     if the flag is GENERATION_ZERO_EXISTS.
+
+There's a matching GENERATION_NUMBER_EXISTS value, which in theory would
+be used to find the case that we see the entries in the opposite order:
+
+  1. When we see an entry with a non-zero generation, we set the
+     generation_zero flag to GENERATION_NUMBER_EXISTS.
+
+  2. When we later see an entry with a zero generation, we complain if
+     the flag is GENERATION_NUMBER_EXISTS.
+
+But that doesn't work; step 2 is implemented, but there is no step 1. We
+never use NUMBER_EXISTS at all, and Coverity rightly complains that step
+2 is dead code.
+
+We can fix that by implementing that step 1.
+
+Signed-off-by: Jeff King <peff@peff.net>
+Signed-off-by: Taylor Blau <me@ttaylorr.com>
+---
+ commit-graph.c | 9 ++++++---
+ 1 file changed, 6 insertions(+), 3 deletions(-)
+
+diff --git a/commit-graph.c b/commit-graph.c
+index c68f5c6b3a..acca753ce8 100644
+--- a/commit-graph.c
++++ b/commit-graph.c
+@@ -2686,9 +2686,12 @@ static int verify_one_commit_graph(struct repository *r,
+ 				graph_report(_("commit-graph has generation number zero for commit %s, but non-zero elsewhere"),
+ 					     oid_to_hex(&cur_oid));
+ 			generation_zero = GENERATION_ZERO_EXISTS;
+-		} else if (generation_zero == GENERATION_ZERO_EXISTS)
+-			graph_report(_("commit-graph has non-zero generation number for commit %s, but zero elsewhere"),
+-				     oid_to_hex(&cur_oid));
++		} else {
++			if (generation_zero == GENERATION_ZERO_EXISTS)
++				graph_report(_("commit-graph has non-zero generation number for commit %s, but zero elsewhere"),
++					     oid_to_hex(&cur_oid));
++			generation_zero = GENERATION_NUMBER_EXISTS;
++		}
+ 
+ 		if (generation_zero == GENERATION_ZERO_EXISTS)
+ 			continue;
+-- 
+2.42.0.4.g52b49bb434
+
+
+^ permalink raw reply related	[flat|nested] 30+ messages in thread
+* [PATCH v3 3/4] t/t5318-commit-graph.sh: test generation zero transitions during fsck
+  2023-08-21 21:34     ` [PATCH v3 0/4] " Taylor Blau
+  2023-08-21 21:34       ` [PATCH v3 1/4] commit-graph: introduce `commit_graph_generation_from_graph()` Taylor Blau
+  2023-08-21 21:34       ` [PATCH v3 2/4] commit-graph: verify swapped zero/non-zero generation cases Taylor Blau
+@ 2023-08-21 21:34       ` Taylor Blau
+  2023-08-21 21:34       ` [PATCH v3 4/4] commit-graph: commit-graph: avoid repeated mixed generation number warnings Taylor Blau
+  2023-08-21 21:55       ` [PATCH v3 0/4] commit-graph: fsck zero/non-zero generation number fixes Jeff King
+  4 siblings, 0 replies; 30+ messages in thread
+From: Taylor Blau @ 2023-08-21 21:34 UTC (permalink / raw)
+  To: git; +Cc: Junio C Hamano, Jeff King, Derrick Stolee
+
+The second test called "detect incorrect generation number" asserts that
+we correctly warn during an fsck when we see a non-zero generation
+number after seeing a zero beforehand.
+
+The other transition (going from non-zero to zero) was previously
+untested. Test both directions, and rename the existing test to make
+clear which direction it is exercising.
+
+Signed-off-by: Taylor Blau <me@ttaylorr.com>
+---
+ t/t5318-commit-graph.sh | 18 ++++++++++++------
+ 1 file changed, 12 insertions(+), 6 deletions(-)
+
+diff --git a/t/t5318-commit-graph.sh b/t/t5318-commit-graph.sh
+index 4e70820c74..8e96471b34 100755
+--- a/t/t5318-commit-graph.sh
++++ b/t/t5318-commit-graph.sh
+@@ -450,14 +450,15 @@ GRAPH_BYTE_FANOUT2=$(($GRAPH_FANOUT_OFFSET + 4 * 255))
+ GRAPH_OID_LOOKUP_OFFSET=$(($GRAPH_FANOUT_OFFSET + 4 * 256))
+ GRAPH_BYTE_OID_LOOKUP_ORDER=$(($GRAPH_OID_LOOKUP_OFFSET + $HASH_LEN * 8))
+ GRAPH_BYTE_OID_LOOKUP_MISSING=$(($GRAPH_OID_LOOKUP_OFFSET + $HASH_LEN * 4 + 10))
++GRAPH_COMMIT_DATA_WIDTH=$(($HASH_LEN + 16))
+ GRAPH_COMMIT_DATA_OFFSET=$(($GRAPH_OID_LOOKUP_OFFSET + $HASH_LEN * $NUM_COMMITS))
+ GRAPH_BYTE_COMMIT_TREE=$GRAPH_COMMIT_DATA_OFFSET
+ GRAPH_BYTE_COMMIT_PARENT=$(($GRAPH_COMMIT_DATA_OFFSET + $HASH_LEN))
+ GRAPH_BYTE_COMMIT_EXTRA_PARENT=$(($GRAPH_COMMIT_DATA_OFFSET + $HASH_LEN + 4))
+ GRAPH_BYTE_COMMIT_WRONG_PARENT=$(($GRAPH_COMMIT_DATA_OFFSET + $HASH_LEN + 3))
+ GRAPH_BYTE_COMMIT_GENERATION=$(($GRAPH_COMMIT_DATA_OFFSET + $HASH_LEN + 11))
++GRAPH_BYTE_COMMIT_GENERATION_LAST=$(($GRAPH_BYTE_COMMIT_GENERATION + $(($NUM_COMMITS - 1)) * $GRAPH_COMMIT_DATA_WIDTH))
+ GRAPH_BYTE_COMMIT_DATE=$(($GRAPH_COMMIT_DATA_OFFSET + $HASH_LEN + 12))
+-GRAPH_COMMIT_DATA_WIDTH=$(($HASH_LEN + 16))
+ GRAPH_OCTOPUS_DATA_OFFSET=$(($GRAPH_COMMIT_DATA_OFFSET + \
+ 			     $GRAPH_COMMIT_DATA_WIDTH * $NUM_COMMITS))
+ GRAPH_BYTE_OCTOPUS=$(($GRAPH_OCTOPUS_DATA_OFFSET + 4))
+@@ -596,11 +597,6 @@ test_expect_success 'detect incorrect generation number' '
+ 		"generation for commit"
+ '
+ 
+-test_expect_success 'detect incorrect generation number' '
+-	corrupt_graph_and_verify $GRAPH_BYTE_COMMIT_GENERATION "\01" \
+-		"but zero elsewhere"
+-'
+-
+ test_expect_success 'detect incorrect commit date' '
+ 	corrupt_graph_and_verify $GRAPH_BYTE_COMMIT_DATE "\01" \
+ 		"commit date"
+@@ -622,6 +618,16 @@ test_expect_success 'detect incorrect chunk count' '
+ 		$GRAPH_CHUNK_LOOKUP_OFFSET
+ '
+ 
++test_expect_success 'detect mixed generation numbers (non-zero to zero)' '
++	corrupt_graph_and_verify $GRAPH_BYTE_COMMIT_GENERATION_LAST "\0\0\0\0" \
++		"but non-zero elsewhere"
++'
++
++test_expect_success 'detect mixed generation numbers (zero to non-zero)' '
++	corrupt_graph_and_verify $GRAPH_BYTE_COMMIT_GENERATION "\0\0\0\0" \
++		"but zero elsewhere"
++'
++
+ test_expect_success 'git fsck (checks commit-graph when config set to true)' '
+ 	git -C full fsck &&
+ 	corrupt_graph_and_verify $GRAPH_BYTE_FOOTER "\00" \
+-- 
+2.42.0.4.g52b49bb434
+
+
+^ permalink raw reply related	[flat|nested] 30+ messages in thread
+* [PATCH v3 4/4] commit-graph: commit-graph: avoid repeated mixed generation number warnings
+  2023-08-21 21:34     ` [PATCH v3 0/4] " Taylor Blau
+                         ` (2 preceding siblings ...)
+  2023-08-21 21:34       ` [PATCH v3 3/4] t/t5318-commit-graph.sh: test generation zero transitions during fsck Taylor Blau
+@ 2023-08-21 21:34       ` Taylor Blau
+  2023-08-21 21:55       ` [PATCH v3 0/4] commit-graph: fsck zero/non-zero generation number fixes Jeff King
+  4 siblings, 0 replies; 30+ messages in thread
+From: Taylor Blau @ 2023-08-21 21:34 UTC (permalink / raw)
+  To: git; +Cc: Junio C Hamano, Jeff King, Derrick Stolee
+
+When validating that a commit-graph has either all zero, or all non-zero
+generation numbers, we emit a warning on both the rising and falling
+edge of transitioning between the two.
+
+So if we are unfortunate enough to see a commit-graph which has a
+repeating sequence of zero, then non-zero generation numbers, we'll
+generate many warnings that contain more or less the same information.
+
+Avoid this by keeping track of a single example for a commit with zero-
+and non-zero generation, and emit a single warning at the end of
+verification if both are non-NULL.
+
+Co-authored-by: Jeff King <peff@peff.net>
+Signed-off-by: Jeff King <peff@peff.net>
+Signed-off-by: Taylor Blau <me@ttaylorr.com>
+---
+ commit-graph.c          | 29 +++++++++++++----------------
+ t/t5318-commit-graph.sh |  4 ++--
+ 2 files changed, 15 insertions(+), 18 deletions(-)
+
+diff --git a/commit-graph.c b/commit-graph.c
+index acca753ce8..9e6eaa8a46 100644
+--- a/commit-graph.c
++++ b/commit-graph.c
+@@ -2560,9 +2560,6 @@ static void graph_report(const char *fmt, ...)
+ 	va_end(ap);
+ }
+ 
+-#define GENERATION_ZERO_EXISTS 1
+-#define GENERATION_NUMBER_EXISTS 2
+-
+ static int commit_graph_checksum_valid(struct commit_graph *g)
+ {
+ 	return hashfile_checksum_valid(g->data, g->data_len);
+@@ -2575,7 +2572,8 @@ static int verify_one_commit_graph(struct repository *r,
+ {
+ 	uint32_t i, cur_fanout_pos = 0;
+ 	struct object_id prev_oid, cur_oid;
+-	int generation_zero = 0;
++	struct commit *seen_gen_zero = NULL;
++	struct commit *seen_gen_non_zero = NULL;
+ 
+ 	verify_commit_graph_error = verify_commit_graph_lite(g);
+ 	if (verify_commit_graph_error)
+@@ -2681,19 +2679,12 @@ static int verify_one_commit_graph(struct repository *r,
+ 			graph_report(_("commit-graph parent list for commit %s terminates early"),
+ 				     oid_to_hex(&cur_oid));
+ 
+-		if (!commit_graph_generation_from_graph(graph_commit)) {
+-			if (generation_zero == GENERATION_NUMBER_EXISTS)
+-				graph_report(_("commit-graph has generation number zero for commit %s, but non-zero elsewhere"),
+-					     oid_to_hex(&cur_oid));
+-			generation_zero = GENERATION_ZERO_EXISTS;
+-		} else {
+-			if (generation_zero == GENERATION_ZERO_EXISTS)
+-				graph_report(_("commit-graph has non-zero generation number for commit %s, but zero elsewhere"),
+-					     oid_to_hex(&cur_oid));
+-			generation_zero = GENERATION_NUMBER_EXISTS;
+-		}
++		if (commit_graph_generation_from_graph(graph_commit))
++			seen_gen_non_zero = graph_commit;
++		else
++			seen_gen_zero = graph_commit;
+ 
+-		if (generation_zero == GENERATION_ZERO_EXISTS)
++		if (seen_gen_zero)
+ 			continue;
+ 
+ 		/*
+@@ -2719,6 +2710,12 @@ static int verify_one_commit_graph(struct repository *r,
+ 				     odb_commit->date);
+ 	}
+ 
++	if (seen_gen_zero && seen_gen_non_zero)
++		graph_report(_("commit-graph has both zero and non-zero "
++			       "generations (e.g., commits '%s' and '%s')"),
++			     oid_to_hex(&seen_gen_zero->object.oid),
++			     oid_to_hex(&seen_gen_non_zero->object.oid));
++
+ 	return verify_commit_graph_error;
+ }
+ 
+diff --git a/t/t5318-commit-graph.sh b/t/t5318-commit-graph.sh
+index 8e96471b34..ba65f17dd9 100755
+--- a/t/t5318-commit-graph.sh
++++ b/t/t5318-commit-graph.sh
+@@ -620,12 +620,12 @@ test_expect_success 'detect incorrect chunk count' '
+ 
+ test_expect_success 'detect mixed generation numbers (non-zero to zero)' '
+ 	corrupt_graph_and_verify $GRAPH_BYTE_COMMIT_GENERATION_LAST "\0\0\0\0" \
+-		"but non-zero elsewhere"
++		"both zero and non-zero generations"
+ '
+ 
+ test_expect_success 'detect mixed generation numbers (zero to non-zero)' '
+ 	corrupt_graph_and_verify $GRAPH_BYTE_COMMIT_GENERATION "\0\0\0\0" \
+-		"but zero elsewhere"
++		"both zero and non-zero generations"
+ '
+ 
+ test_expect_success 'git fsck (checks commit-graph when config set to true)' '
+-- 
+2.42.0.4.g52b49bb434
+
+^ permalink raw reply related	[flat|nested] 30+ messages in thread
+* Re: [PATCH v3 0/4] commit-graph: fsck zero/non-zero generation number fixes
+  2023-08-21 21:34     ` [PATCH v3 0/4] " Taylor Blau
+                         ` (3 preceding siblings ...)
+  2023-08-21 21:34       ` [PATCH v3 4/4] commit-graph: commit-graph: avoid repeated mixed generation number warnings Taylor Blau
+@ 2023-08-21 21:55       ` Jeff King
+  2023-08-21 23:22         ` Junio C Hamano
+  4 siblings, 1 reply; 30+ messages in thread
+From: Jeff King @ 2023-08-21 21:55 UTC (permalink / raw)
+  To: Taylor Blau; +Cc: git, Junio C Hamano, Derrick Stolee
+
+On Mon, Aug 21, 2023 at 05:34:32PM -0400, Taylor Blau wrote:
+
+> Here's a(nother) small reroll of a series that I sent which expanded on
+> a patch that Peff sent earlier in the thread to remove a section of
+> unreachable code that was noticed by Coverity in the
+> `verify_one_commit_graph()` function.
+> 
+> The first few patches are the same, but the fourth (now final) patch is
+> modified to track a single example of a commit with zero and non-zero
+> generation to only emit the warning once at the end of processing.
+
+The end result looks good to me. I probably would have squashed at least
+2+4 into one, and probably just squashed 3 into that as well. But I am
+OK with it as-is, too, and it is definitely diminishing returns to keep
+polishing it.
+
+Thanks for assembling it into a usable form.
+
+-Peff
+
+^ permalink raw reply	[flat|nested] 30+ messages in thread
+* Re: [PATCH v3 0/4] commit-graph: fsck zero/non-zero generation number fixes
+  2023-08-21 21:55       ` [PATCH v3 0/4] commit-graph: fsck zero/non-zero generation number fixes Jeff King
+@ 2023-08-21 23:22         ` Junio C Hamano
+  2023-08-23 19:59           ` Taylor Blau
+  0 siblings, 1 reply; 30+ messages in thread
+From: Junio C Hamano @ 2023-08-21 23:22 UTC (permalink / raw)
+  To: Jeff King; +Cc: Taylor Blau, git, Derrick Stolee
+
+Jeff King <peff@peff.net> writes:
+
+> The end result looks good to me. I probably would have squashed at least
+> 2+4 into one, and probably just squashed 3 into that as well. But I am
+> OK with it as-is, too, and it is definitely diminishing returns to keep
+> polishing it.
+
+I had the same impression.  The endgame after applying all four
+looks very sensible but the changes necessary to fix things while
+keeping ZERO_EXISTS and NUMBER_EXISTS looked more or less like
+unnecessary detour.
+
+> Thanks for assembling it into a usable form.
+
+Yup.  Will queue almost as-is (except for dropping the repeated
+"commit-graph" on the title of the last step).
+
+THanks.
+
+^ permalink raw reply	[flat|nested] 30+ messages in thread
+* Re: [PATCH v3 0/4] commit-graph: fsck zero/non-zero generation number fixes
+  2023-08-21 23:22         ` Junio C Hamano
+@ 2023-08-23 19:59           ` Taylor Blau
+  0 siblings, 0 replies; 30+ messages in thread
+From: Taylor Blau @ 2023-08-23 19:59 UTC (permalink / raw)
+  To: Junio C Hamano; +Cc: Jeff King, git, Derrick Stolee
+
+On Mon, Aug 21, 2023 at 04:22:51PM -0700, Junio C Hamano wrote:
+> Jeff King <peff@peff.net> writes:
+>
+> > The end result looks good to me. I probably would have squashed at least
+> > 2+4 into one, and probably just squashed 3 into that as well. But I am
+> > OK with it as-is, too, and it is definitely diminishing returns to keep
+> > polishing it.
+>
+> I had the same impression.  The endgame after applying all four
+> looks very sensible but the changes necessary to fix things while
+> keeping ZERO_EXISTS and NUMBER_EXISTS looked more or less like
+> unnecessary detour.
+
+I had a hard time picking between the two alternatives when assembling
+these patches myself. I ended up going with the approach here because I
+figured that the intermediate stages of the refactoring were
+sufficiently complicated that breaking them up made it easier for
+readers to digest the changes as a whole.
+
+> > Thanks for assembling it into a usable form.
+>
+> Yup.  Will queue almost as-is (except for dropping the repeated
+> "commit-graph" on the title of the last step).
+
+Thank you!
+
+Thanks,
+Taylor
+
+^ permalink raw reply	[flat|nested] 30+ messages in thread
+end of thread, other threads:[~2023-08-23 20:00 UTC | newest]
+
+Thread overview: 30+ messages (download: mbox.gz / follow: Atom feed)
+-- links below jump to the message on this page --
+2023-08-08 19:15 [RFC/PATCH] commit-graph: verify swapped zero/non-zero generation cases Jeff King
+2023-08-10 16:00 ` Taylor Blau
+2023-08-10 17:44   ` Taylor Blau
+2023-08-10 20:37     ` [PATCH 0/4] commit-graph: fsck zero/non-zero generation number fixes Taylor Blau
+2023-08-10 20:37       ` [PATCH 1/4] commit-graph: introduce `commit_graph_generation_from_graph()` Taylor Blau
+2023-08-10 20:37       ` [PATCH 2/4] commit-graph: verify swapped zero/non-zero generation cases Taylor Blau
+2023-08-10 21:36         ` Junio C Hamano
+2023-08-11 15:01           ` Jeff King
+2023-08-11 17:08             ` Taylor Blau
+2023-08-10 20:37       ` [PATCH 3/4] t/t5318-commit-graph.sh: test generation zero transitions during fsck Taylor Blau
+2023-08-10 20:37       ` [PATCH 4/4] commit-graph: invert negated conditional Taylor Blau
+2023-08-11 15:02       ` [PATCH 0/4] commit-graph: fsck zero/non-zero generation number fixes Jeff King
+2023-08-11 17:05     ` [PATCH v2 0/5] " Taylor Blau
+2023-08-11 17:05       ` [PATCH v2 1/5] commit-graph: introduce `commit_graph_generation_from_graph()` Taylor Blau
+2023-08-11 17:05       ` [PATCH v2 2/5] commit-graph: verify swapped zero/non-zero generation cases Taylor Blau
+2023-08-11 17:05       ` [PATCH v2 3/5] t/t5318-commit-graph.sh: test generation zero transitions during fsck Taylor Blau
+2023-08-11 17:05       ` [PATCH v2 4/5] commit-graph: invert negated conditional, extract to function Taylor Blau
+2023-08-11 17:05       ` [PATCH v2 5/5] commit-graph: avoid repeated mixed generation number warnings Taylor Blau
+2023-08-11 17:58       ` [PATCH v2 0/5] commit-graph: fsck zero/non-zero generation number fixes Jeff King
+2023-08-11 19:28         ` Junio C Hamano
+2023-08-17 19:51           ` Jeff King
+2023-08-21 21:25             ` Taylor Blau
+2023-08-21 21:34     ` [PATCH v3 0/4] " Taylor Blau
+2023-08-21 21:34       ` [PATCH v3 1/4] commit-graph: introduce `commit_graph_generation_from_graph()` Taylor Blau
+2023-08-21 21:34       ` [PATCH v3 2/4] commit-graph: verify swapped zero/non-zero generation cases Taylor Blau
+2023-08-21 21:34       ` [PATCH v3 3/4] t/t5318-commit-graph.sh: test generation zero transitions during fsck Taylor Blau
+2023-08-21 21:34       ` [PATCH v3 4/4] commit-graph: commit-graph: avoid repeated mixed generation number warnings Taylor Blau
+2023-08-21 21:55       ` [PATCH v3 0/4] commit-graph: fsck zero/non-zero generation number fixes Jeff King
+2023-08-21 23:22         ` Junio C Hamano
+2023-08-23 19:59           ` Taylor Blau
+This is a public inbox, see mirroring instructions
+for how to clone and mirror all data and code used for this inbox;
+as well as URLs for NNTP newsgroup(s).
 https://www.emiratesnbd.com.sa/en
 https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap
 https://www.emiratesnbd.com.sa/-/media/enbd/images/siteflags/uae_cyw.png
