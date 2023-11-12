@@ -1,0 +1,399 @@
+From: <Saved by Blink>
+Snapshot-Content-Location: https://www.rfc-editor.org/rfc/rfc2606
+Subject: RFC 2606: Reserved Top Level DNS Names
+Date: Sun, 12 Nov 2023 12:30:14 -0000
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	type="text/html";
+	boundary="----MultipartBoundary--pbEAEflztqZPU4xFqVMchOkHiqZFNdW9RqoeH7FRBb----"
+
+
+------MultipartBoundary--pbEAEflztqZPU4xFqVMchOkHiqZFNdW9RqoeH7FRBb----
+Content-Type: text/html
+Content-ID: <frame-2C099D14DDC2E4EE1ED3B4D87A9F214A@mhtml.blink>
+Content-Transfer-Encoding: binary
+Content-Location: https://www.rfc-editor.org/rfc/rfc2606
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><link rel="stylesheet" type="text/css" href="cid:css-c4a8ec7f-25ad-47e5-b5a9-7f895e63678e@mhtml.blink" />
+    
+    <meta name="robots" content="index,follow">
+    <meta name="creator" content="rfchandler version 0.2">
+      <meta name="citation_author" content="D. Eastlake 3rd">
+      <meta name="citation_author" content="A. Panitz">
+      <meta name="citation_publication_date" content="June, 1999">
+      <meta name="citation_title" content=" Reserved Top Level DNS Names ">
+      <meta name="citation_doi" content="10.17487/RFC2606">
+      <meta name="citation_issn" content="2070-1721">
+      <meta name="citation_technical_report_number" content="rfc2606">
+      <meta name="citation_pdf_url" content="https://www.rfc-editor.org/rfc/pdfrfc/rfc2606.txt.pdf">
+<title>RFC 2606:  Reserved Top Level DNS Names </title>    
+        
+
+        
+    <!--[if IE]>
+    <style>
+    body {
+       font-size: 13px;
+       margin: 10px 10px;
+    }
+    </style>
+    <![endif]-->    </head>
+<body>
+<span class="pre noprint docinfo">[<a href="https://www.rfc-editor.org/" title="RFC Editor">RFC Home</a>] [<a href="https://www.rfc-editor.org/rfc/rfc2606.txt">TEXT</a>|<a href="https://www.rfc-editor.org/rfc/pdfrfc/rfc2606.txt.pdf">PDF</a>|<a href="https://www.rfc-editor.org/rfc/rfc2606.html">HTML</a>] [<a href="https://datatracker.ietf.org/doc/rfc2606" title="IETF Datatracker information for this document">Tracker</a>] [<a href="https://datatracker.ietf.org/ipr/search/?rfc=2606&amp;submit=rfc" title="IPR disclosures related to this document">IPR</a>] [<a class="boldtext" href="https://www.rfc-editor.org/errata/rfc2606" target="_blank">Errata</a>] [<a href="https://www.rfc-editor.org/info/rfc2606" title="Info page">Info page</a>]         </span><br><span class="pre noprint docinfo">                                                                        </span><br><span class="pre noprint docinfo">                                                   BEST CURRENT PRACTICE</span><br><span class="pre noprint docinfo">Updated by: <a href="https://www.rfc-editor.org/rfc/rfc6761" target="_blank">6761</a>                                            <span style="color: #C00;">Errata Exist</span></span><pre>Network Working Group                                     D. Eastlake
+Request for Comments: 2606                                  A. Panitz
+BCP: 32                                                     June 1999
+Category: Best Current Practice
+
+
+                      <span class="h1">Reserved Top Level DNS Names</span>
+
+Status of this Memo
+
+   This document specifies an Internet Best Current Practices for the
+   Internet Community, and requests discussion and suggestions for
+   improvements.  Distribution of this memo is unlimited.
+
+Copyright Notice
+
+   Copyright (C) The Internet Society (1999).  All Rights Reserved.
+
+Abstract
+
+   To reduce the likelihood of conflict and confusion, a few top level
+   domain names are reserved for use in private testing, as examples in
+   documentation, and the like.  In addition, a few second level domain
+   names reserved for use as examples are documented.
+
+Table of Contents
+
+   <a href="https://www.rfc-editor.org/rfc/rfc2606#section-1">1</a>. Introduction............................................<a href="https://www.rfc-editor.org/rfc/rfc2606#page-1">1</a>
+   <a href="https://www.rfc-editor.org/rfc/rfc2606#section-2">2</a>. TLDs for Testing, &amp; Documentation Examples..............<a href="https://www.rfc-editor.org/rfc/rfc2606#page-2">2</a>
+   <a href="https://www.rfc-editor.org/rfc/rfc2606#section-3">3</a>. Reserved Example Second Level Domain Names..............<a href="https://www.rfc-editor.org/rfc/rfc2606#page-2">2</a>
+   <a href="https://www.rfc-editor.org/rfc/rfc2606#section-4">4</a>. IANA Considerations.....................................<a href="https://www.rfc-editor.org/rfc/rfc2606#page-3">3</a>
+   <a href="https://www.rfc-editor.org/rfc/rfc2606#section-5">5</a>. Security Considerations.................................<a href="https://www.rfc-editor.org/rfc/rfc2606#page-3">3</a>
+   References.................................................<a href="https://www.rfc-editor.org/rfc/rfc2606#page-3">3</a>
+   Authors' Addresses.........................................<a href="https://www.rfc-editor.org/rfc/rfc2606#page-4">4</a>
+   Full Copyright Statement...................................<a href="https://www.rfc-editor.org/rfc/rfc2606#page-5">5</a>
+
+<span class="h2"><a class="selflink" id="section-1" href="https://www.rfc-editor.org/rfc/rfc2606#section-1">1</a>. Introduction</span>
+
+   The global Internet Domain Name System is documented in [RFC 1034,
+   1035, 1591] and numerous additional Requests for Comment.  It defines
+   a tree of names starting with root, ".", immediately below which are
+   top level domain names such as ".com" and ".us". Below top level
+   domain names there are normally additional levels of names.
+
+
+
+
+
+
+
+
+<span class="grey">Eastlake &amp; Panitz        Best Current Practice                  [Page 1]</span></pre>
+<hr class="noprint"><!--NewPage--><pre class="newpage"><span id="page-2"></span>
+<span class="grey"><a href="https://www.rfc-editor.org/rfc/rfc2606">RFC 2606</a>              Reserved Top Level DNS Names             June 1999</span>
+
+
+<span class="h2"><a class="selflink" id="section-2" href="https://www.rfc-editor.org/rfc/rfc2606#section-2">2</a>. TLDs for Testing, &amp; Documentation Examples</span>
+
+   There is a need for top level domain (TLD) names that can be used for
+   creating names which, without fear of conflicts with current or
+   future actual TLD names in the global DNS, can be used for private
+   testing of existing DNS related code, examples in documentation, DNS
+   related experimentation, invalid DNS names, or other similar uses.
+
+   For example, without guidance, a site might set up some local
+   additional unused top level domains for testing of its local DNS code
+   and configuration. Later, these TLDs might come into actual use on
+   the global Internet.  As a result, local attempts to reference the
+   real data in these zones could be thwarted by the local test
+   versions.  Or test or example code might be written that accesses a
+   TLD that is in use with the thought that the test code would only be
+   run in a restricted testbed net or the example never actually run.
+   Later, the test code could escape from the testbed or the example be
+   actually coded and run on the Internet. Depending on the nature of
+   the test or example, it might be best for it to be referencing a TLD
+   permanently reserved for such purposes.
+
+   To safely satisfy these needs, four domain names are reserved as
+   listed and described below.
+
+                   .test
+                .example
+                .invalid
+              .localhost
+
+      ".test" is recommended for use in testing of current or new DNS
+      related code.
+
+      ".example" is recommended for use in documentation or as examples.
+
+      ".invalid" is intended for use in online construction of domain
+      names that are sure to be invalid and which it is obvious at a
+      glance are invalid.
+
+      The ".localhost" TLD has traditionally been statically defined in
+      host DNS implementations as having an A record pointing to the
+      loop back IP address and is reserved for such use.  Any other use
+      would conflict with widely deployed code which assumes this use.
+
+<span class="h2"><a class="selflink" id="section-3" href="https://www.rfc-editor.org/rfc/rfc2606#section-3">3</a>. Reserved Example Second Level Domain Names</span>
+
+   The Internet Assigned Numbers Authority (IANA) also currently has the
+   following second level domain names reserved which can be used as
+   examples.
+
+
+
+<span class="grey">Eastlake &amp; Panitz        Best Current Practice                  [Page 2]</span></pre>
+<hr class="noprint"><!--NewPage--><pre class="newpage"><span id="page-3"></span>
+<span class="grey"><a href="https://www.rfc-editor.org/rfc/rfc2606">RFC 2606</a>              Reserved Top Level DNS Names             June 1999</span>
+
+
+        example.com
+        example.net
+        example.org
+
+<span class="h2"><a class="selflink" id="section-4" href="https://www.rfc-editor.org/rfc/rfc2606#section-4">4</a>. IANA Considerations</span>
+
+   IANA has agreed to the four top level domain name reservations
+   specified in this document and will reserve them for the uses
+   indicated.
+
+<span class="h2"><a class="selflink" id="section-5" href="https://www.rfc-editor.org/rfc/rfc2606#section-5">5</a>. Security Considerations</span>
+
+   Confusion and conflict can be caused by the use of a current or
+   future top level domain name in experimentation or testing, as an
+   example in documentation, to indicate invalid names, or as a synonym
+   for the loop back address.  Test and experimental software can escape
+   and end up being run against the global operational DNS.  Even
+   examples used "only" in documentation can end up being coded and
+   released or cause conflicts due to later real use and the possible
+   acquisition of intellectual property rights in such "example" names.
+
+   The reservation of several top level domain names for these purposes
+   will minimize such confusion and conflict.
+
+References
+
+   [<a id="ref-RFC 1034">RFC 1034</a>] Mockapetris, P., "Domain names - concepts and facilities",
+              STD 13, <a href="https://www.rfc-editor.org/rfc/rfc1034">RFC 1034</a>, November 1987.
+
+   [<a id="ref-RFC 1035">RFC 1035</a>] Mockapetris, P., "Domain names - implementation and
+              specification", STD 13, <a href="https://www.rfc-editor.org/rfc/rfc1035">RFC 1035</a>, November 1987.
+
+   [<a id="ref-RFC 1591">RFC 1591</a>] Postel, J., "Domain Name System Structure and Delegation",
+              <a href="https://www.rfc-editor.org/rfc/rfc1591">RFC 1591</a>, March 1994.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<span class="grey">Eastlake &amp; Panitz        Best Current Practice                  [Page 3]</span></pre>
+<hr class="noprint"><!--NewPage--><pre class="newpage"><span id="page-4"></span>
+<span class="grey"><a href="https://www.rfc-editor.org/rfc/rfc2606">RFC 2606</a>              Reserved Top Level DNS Names             June 1999</span>
+
+
+Authors' Addresses
+
+   Donald E. Eastlake 3rd
+   IBM
+   65 Shindegan Hill Road, RR #1
+   Carmel, NY 10512
+
+   Phone: +1 914-276-1668(h)
+          +1 914-784-7913(w)
+   FAX:   +1 914-784-3833(3)
+   EMail: dee3@us.ibm.com
+
+
+   Aliza R. Panitz
+   500 Stamford Dr. No. 310
+   Newark, DE 19711 USA
+
+   Phone: +1 302-738-1554
+   EMail: buglady@fuschia.net
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<span class="grey">Eastlake &amp; Panitz        Best Current Practice                  [Page 4]</span></pre>
+<hr class="noprint"><!--NewPage--><pre class="newpage"><span id="page-5"></span>
+<span class="grey"><a href="https://www.rfc-editor.org/rfc/rfc2606">RFC 2606</a>              Reserved Top Level DNS Names             June 1999</span>
+
+
+Full Copyright Statement
+
+   Copyright (C) The Internet Society (1999).  All Rights Reserved.
+
+   This document and translations of it may be copied and furnished to
+   others, and derivative works that comment on or otherwise explain it
+   or assist in its implementation may be prepared, copied, published
+   and distributed, in whole or in part, without restriction of any
+   kind, provided that the above copyright notice and this paragraph are
+   included on all such copies and derivative works.  However, this
+   document itself may not be modified in any way, such as by removing
+   the copyright notice or references to the Internet Society or other
+   Internet organizations, except as needed for the purpose of
+   developing Internet standards in which case the procedures for
+   copyrights defined in the Internet Standards process must be
+   followed, or as required to translate it into languages other than
+   English.
+
+   The limited permissions granted above are perpetual and will not be
+   revoked by the Internet Society or its successors or assigns.
+
+   This document and the information contained herein is provided on an
+   "AS IS" basis and THE INTERNET SOCIETY AND THE INTERNET ENGINEERING
+   TASK FORCE DISCLAIMS ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING
+   BUT NOT LIMITED TO ANY WARRANTY THAT THE USE OF THE INFORMATION
+   HEREIN WILL NOT INFRINGE ANY RIGHTS OR ANY IMPLIED WARRANTIES OF
+   MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.
+
+Acknowledgement
+
+   Funding for the RFC Editor function is currently provided by the
+   Internet Society.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Eastlake &amp; Panitz        Best Current Practice                  [Page 5]
+</pre>
+
+
+
+
+</body></html>
+------MultipartBoundary--pbEAEflztqZPU4xFqVMchOkHiqZFNdW9RqoeH7FRBb----
+Content-Type: text/css
+Content-Transfer-Encoding: binary
+Content-Location: cid:css-c4a8ec7f-25ad-47e5-b5a9-7f895e63678e@mhtml.blink
+
+@charset "utf-8";
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  body { font-size: 14pt; }
+  div.content { width: 96ex; margin: 0px auto; }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  body { font-size: 14pt; }
+  div.content { width: 96ex; margin: 0px auto; }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  body { font-size: 11pt; }
+  div.content { width: 96ex; margin: 0px auto; }
+}
+
+@media only screen and (max-width: 479px) {
+  body { font-size: 8pt; }
+  div.content { width: 96ex; margin: 0px auto; }
+}
+
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) {
+  body { font-size: 9.5pt; }
+  div.content { width: 96ex; margin: 0px; }
+}
+
+@media only screen and (min-device-width: 1200px) {
+  body { font-size: 10pt; margin: 0px 4em; }
+  div.content { width: 96ex; margin: 0px; }
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 { display: inline; white-space: pre; font-family: monospace; font-size: 1em; font-weight: bold; }
+
+pre { font-size: 1em; margin-top: 0px; margin-bottom: 0px; }
+
+.pre { white-space: pre; font-family: monospace; }
+
+.header { font-weight: bold; }
+
+.newpage { break-before: page; }
+
+.invisible { text-decoration: none; color: white; }
+
+a.selflink { color: black; text-decoration: none; }
+
+@media print {
+  body { font-family: monospace; font-size: 10.5pt; }
+  h1, h2, h3, h4, h5, h6 { font-size: 1em; }
+  a:link, a:visited { color: inherit; text-decoration: none; }
+  .noprint { display: none; }
+}
+
+@media screen {
+  .grey, .grey a:link, .grey a:visited { color: rgb(119, 119, 119); }
+  .docinfo { background-color: rgb(238, 238, 238); }
+  .top { border-top: 7px solid rgb(238, 238, 238); }
+  .bgwhite { background-color: white; }
+  .bgred { background-color: rgb(255, 68, 68); }
+  .bggrey { background-color: rgb(102, 102, 102); }
+  .bgbrown { background-color: rgb(136, 68, 0); }
+  .bgorange { background-color: rgb(255, 170, 0); }
+  .bgyellow { background-color: rgb(238, 238, 0); }
+  .bgmagenta { background-color: rgb(255, 68, 255); }
+  .bgblue { background-color: rgb(102, 102, 255); }
+  .bgcyan { background-color: rgb(68, 221, 221); }
+  .bggreen { background-color: rgb(68, 255, 68); }
+  .legend { font-size: 90%; }
+  .cplate { font-size: 70%; border: 1px solid grey; }
+}
+------MultipartBoundary--pbEAEflztqZPU4xFqVMchOkHiqZFNdW9RqoeH7FRBb------
