@@ -1,0 +1,885 @@
+"Last modified: June 2, 2023
+
+REGISTRATION OF THE TLDS SET FORTH BELOW ARE SUBJECT TO COMPLIANCE WITH THE TERMS SET FORTH BELOW.
+
+.BIZ REGISTRATIONS.
+
+Registration Restrictions. Registered Names in the .BIZ TLD must be used or intended to be used, primarily for bona fide business or commercial purposes. For purposes of these restrictions, "bona fide business or commercial use" means the bona fide use or bona fide intent to use the Registered Name or any related content, software, materials, graphics or other information, to permit Internet users to access one or more host computers through the DNS (a) to exchange goods, services, or property of any kind; (b) in the ordinary course of trade or business; or (c) to facilitate the exchange of goods, services, information, or property of any kind or the ordinary course of trade or business. Registering a domain name solely for the purposes of selling, trading or leasing the domain name for compensation, or for the unsolicited offering to sell, trade or lease the domain name for compensation does not constitute a "bona fide business or commercial use" of that domain name.
+
+Certification of Compliance with Restrictions. Registrant certifies that to the best of Registrant’s knowledge: (a) the Registered Name will be used primarily for bona fide business or commercial purposes and not (i) exclusively for personal use; or (ii) solely for the purposes of selling, trading or leasing the domain name for compensation, or the unsolicited offering to sell, trade or lease the domain name for compensation; (b) Registrant has the authority to enter into this Agreement; and (c) the Registered Name is reasonably related to the Registered Name Holder’s business or intended commercial purpose at the time of registration.
+
+.Biz Resolution Services.
+
+Registrant acknowledges having read and understood, and is bound by, the terms and conditions of the following documents, as they may be amended from time to time, which are incorporated by this reference into this Agreement:
+The Uniform Domain Name Dispute Resolution Policy (UDRP) at http://www.icann.org/udrp/udrp.htm ; and
+The Restrictions Dispute Resolution Criteria and Rules (RDRP) at http://www.neustar-registry.biz/?q=node/51 .
+The UDRP sets forth the terms and conditions in connection with a dispute between a Registrant and any party other than the Registry Operator or Registrar over the registration and use of an Internet domain name registered by Registrant.
+The RDRP sets forth the terms under which any allegation that a domain name is not used primarily for business or commercial purposes will be enforced on a case-by-case, fact specific basis by an independent ICANN-accredited dispute provider. None of the violations of the Restrictions will be enforced directly by or through Registry Operator. Registry Operator will not review, monitor, or otherwise verify that any particular domain name is being used primarily for business or commercial purposes or that a domain name is being used in compliance with the UDRP processes.
+PROVISIONS SPECIFIC TO .CLUB REGISTRATIONS.
+
+.CLUB Domains, LLC (“.CLUB”) the Registry Operator for .CLUB domains, reserves the right to deny, cancel or transfer any registration or transaction, or place any domain name(s) on registry lock, hold, or similar status, as it deems necessary, in its unlimited and sole discretion: (a) to comply with specifications adopted by any industry group generally recognized as authoritative with respect to the Internet (e.g., RFCs); (b) to correct mistakes made by .CLUB or any registrar in connection with a domain name registration; or (c) for the non-payment of fees to .CLUB.
+
+PROVISIONS SPECIFIC TO .COM, .CC, .NAME, .NET AND .TV REGISTRATIONS.
+
+Verisign, the Registry Operator for .COM, .CC, .NAME, .NET and .TV, reserves the right to deny, cancel or transfer any registration or transaction, or place any domain name(s) on registry lock, hold, or similar status, as it deems necessary, in its unlimited and sole discretion: (a) to comply with specifications adopted by any industry group generally recognized as authoritative with respect to the Internet (e.g., RFCs); (b) to correct mistakes made by Verisign or any registrar in connection with a domain name registration; or (c) for the non-payment of fees to Verisign. If Registrant is registering a .NAME domain, Registrant certifies that it complies with the .NAME Eligibility Requirements.
+
+PROVISIONS SPECIFIC TO .HOW AND .SOY REGISTRATIONS.
+
+Charleston Road Registry Inc. (“CRR”), the Registry Operator for .HOW and .SOY, reserves the right to deny, cancel, or transfer any registration or transaction, or place any domain name(s) on registry lock, hold, or similar status, as it deems necessary, in its unlimited and sole discretion: (i) to comply with specifications adopted by any industry group generally recognized as authoritative with respect to the Internet (e.g., RFCs); (ii) to correct mistakes made by CRR or any registrar in connection with a domain name registration; (iii) to protect the rights and property of CRR and to avoid any potential or actual liability, civil or criminal, on the part of CRR as well as its affiliates, subsidiaries, officers, directors, representatives, employees, and stockholders; (iv) to protect the integrity and stability of CRR’s registry system and the operation of the DNS; (v) to comply with all applicable laws, government rules or requirements, requests of law enforcement or any applicable dispute resolution process; or (vi) for violation of this Agreement.
+
+PROVISIONS SPECIFIC TO .INFO REGISTRATIONS.
+
+Afilias p.l.c. (“Afilias”), the Registry Operator for .INFO, reserves the right to deny, cancel, or transfer any registration or transaction, or place any domain name(s) on registry lock, hold, or similar status, as it deems necessary, in its unlimited and sole discretion: (i) to protect the integrity and stability of the Afilias’ registry; (ii) to comply with any applicable laws, government rules or requirements, requests of law enforcement, or any dispute resolution process; (iii) to avoid any liability, civil or criminal, on the part of Afilias, as well as its affiliates, subsidiaries, officers, directors, and employees; (iv) for violation of this Agreement, (v) to correct mistakes made by Afilias or any registrar in connection with a domain name registration or (vi) during resolution of a dispute.
+
+PROVISIONS SPECIFIC TO .ORG REGISTRATIONS.
+
+The .org Registry Operator reserves the right to deny, cancel or transfer any registration or transaction, or place any domain name(s) on registry lock, hold, or similar status, that it deems necessary, in its sole discretion: (a) to protect the integrity and stability of the registry; (b) to comply with any applicable laws, government rules or requirements, requests of law enforcement, or any dispute resolution process; (c) to avoid any liability, civil, or criminal, on the part of the .org Registry Operator, as well as its affiliates, subsidiaries, officers, directors, and employees; (d) under the terms of this Agreement; (e) to correct mistakes made by the .org Registry Operator or any Registrar in connection with a domain name registration; or (f) during resolution of a dispute.
+
+PROVISIONS SPECIFIC TO .US REGISTRATIONS.
+
+Nexus Requirement. Registrant will comply with the usTLD Nexus Requirements .
+
+Registered Name Holders of Registered Names in the .us TLD must be either:
+A natural person (i) who is a United States citizen, (ii) a permanent resident of the United States of America or any of its possessions or territories, or (iii) whose primary place of domicile is in the United States of America or any of its possessions [Nexus Category 1]; or
+An entity or organization that is (A) incorporated within one of the fifty (50) U.S. states, the District of Columbia, or any of the United States possessions or territories or (B) organized or otherwise constituted under the laws of a state of the United States of America, the District of Columbia or any of its possessions or territories [Nexus Category 2]; or
+An entity or organization (including a federal, state, or local government of the United States, or a political subdivision thereof) that has a bona fide presence in the United States of America or any of its possessions or territories [Nexus Category 3].
+To register a .us domain name, Registrant must certify that the Registered Name Holder has a “bona fide presence in the United States” on the basis of real and substantial lawful contacts with, or lawful activities in, the United States of America. This requirement is intended to ensure that only those individuals or organizations that have a substantive lawful connection to the United States are permitted to register for usTLD domain names.
+It will be a continuing requirement that all usTLD domain name registrants maintain the US Nexus Requirement.
+Certification of Compliance with Restrictions. Registrant is not permitted to purchase private or proxy .us registrations. Registrant will register for any and all .us domain name registrations using Registrant’s personal information as the registered Name Holder, which information Registrant represents and warrants is current, accurate, and complete. Registrant certifies that to the best of Registrant’s knowledge, Registrant has the authority to enter into this Agreement and meets all the US Nexus Requirements set forth above.
+
+.usTLD Policies. Registrant’s registration of a .us TLD is subject to compliance with the following policies:
+
+usTLD Registry Operator’s Reservation of Rights Policy
+usTLD Registry Operator’s Administrative Policy Statement
+usTLD Acceptable Use Policy
+Name servers. Registrant must ensure that the name servers listed for all .us domain names are based in the United States of America or any of its possessions or territories.
+
+Reservation of Rights. The .us Registry Operator reserves the right to deny, cancel, or transfer any registration that it deems necessary, in its discretion; (a) to protect the integrity and stability of the registry; (b) to comply with any applicable laws, government rules or requirements, requests of law enforcement, in compliance with any dispute resolution process; (c) to avoid any liability, civil or criminal, on the part of .us Registry Operator, as well as its affiliates, subsidiaries, officers, directors, representatives, employees, and stockholders; (d) for violations of this Agreement; (e) to correct mistakes made by .us Registry Operator or any registrar in connection with a domain name registration; or (f) to prevent the use of a domain name used for the submission of unsolicited bulk e-mail, phishing, pharming, malware, bot-nets, or other abuse or fraudulent purposes. The .us Registry Operator also reserves the right to freeze a domain name during resolution of a dispute either by: (i) rendering the domain name unresolvable; (ii) preventing the transfer of the domain name to another person, entity, or registrar; or (iii) preventing any changes to the contact information associated with the domain name.
+
+PROVISIONS SPECIFIC TO REGISTRATIONS OF TLDS FROM DONUTS
+
+Donuts Inc. (“Donuts”), the Registry Operator for TLDs set forth at https://support.google.com/domains/answer/6279305 , reserves the right to deny, cancel or transfer any registration or transaction, or place any domain name(s) on registry lock, hold, or similar status, as it deems necessary, in its unlimited and sole discretion: (i) to enforce Donuts registry policies and ICANN requirements, each as amended from time to time; (ii) when the registration is not accompanied by complete and accurate information, or where required information is not updated or corrected, as required by ICANN requirements or Donuts registry policies; (iii) to protect the integrity and stability of the SRS or the operation or management of the Donuts registry; (iv) to comply with applicable laws, regulations, policies or any holding, order, or decision by a competent court or administrative authority, or any dispute resolution service provider the Donuts registry may retain to oversee the arbitration and mediation of disputes; (v) to establish, assert, or defend the legal rights of the Donuts registry or a third party, or to avoid any actual or potential civil or criminal liability on the part of or damage to the Donuts Registry or its affiliates, subsidiaries, contracted parties, officers, directors, representatives, employees, contractors, and stockholders; (vi) to correct mistakes made by the Donuts registry or any registrar in connection with a registration; or (vii) as otherwise provided in this Agreement.
+
+Donuts Policies. Registrant’s registration of a Donuts TLD is subject to compliance with the following policies: https://donuts.domains/about/policies/
+
+Regulated TLDs. Registration of the following Regulated TLDs: .accountants .associates .capital .care .cash .city .claims .clinic .credit .degree .dental .digital .discount .engineer .engineering .exchange .finance .financial .fitness .fund .gives .gratis .healthcare .insure .investments .lease .legal .limited .loans .market .mba .media .money .mortgage .movie .pictures .rehab .reisen .school .schule .show .software .tax .theater .tours .town .toys .vet is subject to the following requirements. Registrants must comply with all applicable laws, including those that relate to privacy, data collection, consumer protection (including in relation to misleading and deceptive conduct), fair lending, debt collection, organic farming, disclosure of data, and financial disclosures. If Registrant collects and maintains sensitive health and financial data, Registrant must implement reasonable and appropriate security measures commensurate with the offering of those services, as defined by applicable law.
+
+Regulated TLDs. Registration of the following Highly-regulated TLDs: .attorney .bingo .casino .creditcard .dentist .doctor .fail .gmbh .gripe .lawyer .ltd .sarl .surgery .university .wtf is subject to the following requirements. In addition to complying with all Regulated TLD requirements, Registrants must provide to their registrar administrative contact information, which must be kept up-to-date, for the notification of complaints or reports of registration abuse, as well as the contact details of the relevant regulatory, or industry self-regulatory, bodies in their main place of business. Registrant represents and warrants that it holds all necessary authorizations, charters, licenses and/or other related credentials for participation in the sector associated with such Highly-regulated TLD and will report any material changes to the Registrant’s authorizations, charters, licenses and/or other related credentials for participation in the sector associated with the Highly-regulated TLD.
+
+Military TLDs. Registration of the following Military TLDs: .airforce .army .navy is subject to the following requirements. Registrant must take steps to ensure against misrepresenting or falsely implying that the Registrant or its business is affiliated with, sponsored or endorsed by one or more country's or government's military forces if such affiliation, sponsorship or endorsement does not exist. To the extent applicable, Registrant will comply with Australian Defence Regulation 1957, No. 16 in connection with Registrant’s use of Military TLDs in Australia.
+
+PROVISIONS SPECIFIC TO REGISTRATIONS OF TLDS FROM RADIX
+
+Radix FZC ("Radix") is the Registry Operator for the TLDs set forth at https://support.google.com/domains/answer/6279305 ("Radix TLDS"). Registrant acknowledges and agrees that Radix reserves the absolute right to deny, cancel, delete or transfer any registration or transaction, or place any domain name(s) on registry lock, hold or similar status, as it deems necessary, in its unlimited and sole discretion: (1) to comply with specifications adopted by any industry group generally recognized as authoritative with respect to the Internet (e.g., RFCs), (2) to correct mistakes made by Radix or any registrar in connection with a domain name registration, (3) for the non-payment of fees to Radix, (4) to protect the integrity and stability of the .site registry system; (5) to comply with any applicable laws, government rules or requirements, requests of law enforcement, or any dispute resolution process; (6) to avoid any liability, civil or criminal, on the part of Radix , as well as its affiliates, subsidiaries, officers, directors, and employees.
+Registrant acknowledge and agree that if it collects and maintains sensitive health and financial data it must implement reasonable and appropriate security measures commensurate with the offering of those services, as defined by applicable law.
+Registrant warrants that no Radix TLD domain name registration will be used to distribute malware, abusively operating botnets, phishing, piracy, trademark or copyright infringement, fraudulent or deceptive practices, counterfeiting or other similar activity and providing consequences for such activities including suspension of the domain name.
+Registrant will comply with all operational standards, procedures, practices and policies for the Included TLD including the Radix Acceptable Use and Anti-Abuse Policy ("AUP") and all other applicable policies which will be available on the Radix website ( www.radixregistry.com ).
+Registrant consents to the use, copying, distribution, publication, modification and other processing of Registrant's personal data by Radix and its designees and agents, including as specified by ICANN from time to time for new TLDs.
+PROVISIONS SPECIFIC TO .DESIGN REGISTRATIONS
+
+Top Level Design, LLC ("Top Level Design") is the Registry Operator for the .design TLD. Registrant acknowledges and agrees that Top Level Design reserves the absolute right to deny, cancel, delete or transfer any registration or transaction, or place any domain name(s) on registry lock, hold or similar status, as it deems necessary, in its unlimited and sole discretion: (1) to comply with specifications adopted by any industry group generally recognized as authoritative with respect to the Internet (e.g., RFCs), (2) to correct mistakes made by Top Level Design or any registrar in connection with a domain name registration, (3) for the non-payment of fees to Top Level Design, (4) to protect the integrity and stability of the .design registry system; (5) to comply with any applicable laws, government rules or requirements, requests of law enforcement, or any dispute resolution process; (6) to avoid any liability, civil or criminal, on the part of Top Level Design, as well as its affiliates, subsidiaries, officers, directors, and employees.
+Registrant acknowledge and agree that if it collects and maintains sensitive health and financial data it must implement reasonable and appropriate security measures commensurate with the offering of those services, as defined by applicable law.
+Registrant warrants that no .design TLD domain name registration will be used to distribute malware, abusively operating botnets, phishing, piracy, trademark or copyright infringement, fraudulent or deceptive practices, counterfeiting or other similar activity and providing consequences for such activities including suspension of the domain name.
+Registrant will comply with all operational standards, procedures, practices and policies for the .design TLD.
+Registrant consents to the use, copying, distribution, publication, modification and other processing of Registrant's personal data by Top Level Design and its designees and agents, including as specified by ICANN from time to time for new TLDS.
+PROVISIONS SPECIFIC TO .UK REGISTRATIONS. Nominent UK is the Registry Operator for the .uk TLD. Registrant's registration of the .uk TLD is subject to compliance with the registrant policies set forth at http://www.nominet.uk/resources/policy/policies-rules/.
+
+PROVISIONS SPECIFIC TO .JP REGISTRATIONS.
+
+Japan Registry Service Co., Ltd is the Registry Operator for the .jp TLD. Registrant's registration of the .jp TLD is subject to compliance with the registrant policies set forth at https://jprs.jp/about/dom-rule/doc/
+
+Preliminary Remark:
+
+KS is an officially ICANN accredited and Solis KK (the Japan-Registry) authorized
+registrar for the Top-Level-Domains .JP.
+
+RSP and KS agree that RSP can register, renew, transfer and administer domain names beneath .JP for his customers through KS.
+
+ 
+
+Registration Requirements
+All partner registrars and resellers of .JP domain names are committed to these terms and
+conditions. Each customer who registers a domain name beneath .JP has to accept the following
+terms and conditions. RSP is committed to bind his customers according to these regulations.
+
+Policies for .JP domains, currently available under:
+=>https://www.nic.ad.jp/en/drp/index.html
+
+All accredited registrars of JPNIC are committed to these Terms and Conditions. Each customer who registers a domain beneath .JP accepts this policy.
+
+The Privacy- and Copyrightpolicies of JPNIC also apply:
+=>https://www.nic.ad.jp/en/privacy.html
+=>https://www.nic.ad.jp/en/copyright.html
+
+The general terms and conditions and domain registration policies of KS also apply:
+=> https://www.rrpproxy.net/Legal/Terms_and_Conditions.html
+=> https://www.rrpproxy.net/Legal/Registration_Agreement.html
+
+Domain-Name Dispute Resolution
+Domain name Disputes are resolved through the JP Domain Name Dispute Resolution Policy
+=> https://www.nic.ad.jp/en/drp/jp-drp.html
+=>https://www.nic.ad.jp/en/drp/jp-drp-rule.html
+
+ 
+
+Transfer of Domain-Names
+Transfer Policy
+In order to transfer a domain, the RSP of the customer must provide evidence of permission, either through the client directly or through an administrative contact. RSP will support KS with the registrar-transfer either to or from KS upon requirement, according to the Transfer-Policies of JPNIC
+
+Duration
+The registration or renewal of registration can take place for time periods between 1 and 2 years, in annual steps.
+
+Costs
+The prices of a registration and included services can be viewed directly through the RRPproxy WebInterface under the respective Top-Level-Domain (under www.RRPproxy.net --> Query List --> Zones / Prices).
+
+All costs will be charged in USD, meaning that when registering a Domain we will automatically exchange the respective fee into USD according to the daily exchange rate of the European Central Bank (ECB)
+
+V.A.T. only applies to RSPs who have their corporate office in Germany or to RSPs within the European Union, who do not possess a valid V.A.T. ID. The V.A.T. Is not applicable to RSPs outside the European Union.
+
+PROVISIONS SPECIFIC TO .FR REGISTRATIONS.
+
+.FR is the 2-Letter ISO Country Code of France. Afnic is the Registry Operator for the .fr TLD. Registrant's registration of the .fr TLD is subject to compliance with the registrant policies set forth at https://www.afnic.fr/en/resources/reference/charters/ and https://www.afnic.fr/en/resources/reference/registry-policies/ .
+
+
+Preliminary Remark:
+
+
+KS is an officially ICANN accredited and authorized registrar of AFNIC (official .FR registry)
+for the domain extension .FR and all other AFNIC TLDs (.WF, .TF, .RE, .PM, .YT).
+RSP and KS agree that RSP can register, renew and administer domain
+names beneath .FR as well as beneath .WF, .TF, .RE, .PM and .YT
+for his customers through KS.
+RSP shall monitor its customers’ compliance with all legal and regulatory provisions as well as the
+terms of the AFNIC Naming Policy in the version that was in effect on the day an administrative
+action was requested, and its customers’ observation of all methods and terms of use or licenses
+established by AFNIC. Any subsequent updates thereof shall be communicated by RSP to its
+customers. RSP shall take whatever steps are deemed necessary to fulfill this responsibility.
+The following paragraphs apply:
+
+Registration Requirements
+
+All accredited registrars of .FR are committed to these terms and conditions. Each customer who
+registers a domain beneath .FR has to accept the following terms and conditions. RSP is
+committed to bind his customers according to these regulations.
+The registration terms and conditions of AFNIC applies, currently available under:
+=> http://www.afnic.fr/data/chartes/charter-fr-2011-07-01.pdf
+Naming Policy:
+=> http://www.afnic.fr/medias/documents/AFNIC-naming-policy2012.pdf
+The registration of .FR domain names is available for corporate entities and individuals that are
+based in one of the following European countries:
+AT, BE, BG, CY, CZ, DE, DK, EE, ES, FI, AX, FR, GP, GF, MQ, RE, TF, YT, PF, NC, PM, WF, GB,
+GI, GR, HU, IS, IE, IT, LI, LT, LU, LV, MT, NL, NO, PL, PT, RO, SE, SI, SK, CH.
+Please note: The legal residence/place of business must be located in one of the above listed
+countries. A trademark registered for the European Union or an individual European state is not
+sufficient to be entitled to register .FR domains.
+The domain name holder and the administrative contact must be reachable and must provide a
+valid telephone number and e-mail address. They must ensure that such information is kept up-todate
+at all times through their registrar.
+New registrations beneath .ASSO.FR, .COM.FR and .TM.FR are no longer possible as of
+December 6, 2011.
+All AFNIC TLDs will be subject to the same registration rules, prices and extensions as the .FR
+TLD. Exception: Registrations for individuals are only allowed for the .FR zone. .WF (Wallis and
+Futuna), .TF (French Southern and Antarctic territories), .RE (Reunion), .PM (St. Pierre and
+Miquelon) and .YT (Mayotte) registrations are NOT open to natural persons.
+Thus, this appendix is also valid for all other TLDs .WF, .TF, .RE, .PM, .YT.
+General terms and conditions of KS
+=> http://rrpproxy.net/tac.php?lang=en
+
+ 
+
+ 
+
+Please check registry website for further information:
+=> http://www.afnic.fr/
+
+ 
+Change of the Trade-Procedure
+
+As of December 12, 2016, the registrant change procedure for .fr domain names will be carried out in the following way:
+
+The holder change operation will be carried out via an Update Domain transaction;
+the Registrant will be responsible for obtaining the agreement of the outgoing and incoming registrants to carry out the transaction;
+the transaction will not be charged;
+the transaction will not change the domain name's expiry date.
+After the Golive of the new registrant change procedure on December 12, the trade command will be disabled, so sending a Trade command (request/cancel) will receive an error. When a domain name is subject to a registrant change (Update Domain), the registrar must update the Auth-info and give it to the new registrant.
+
+Obligations regarding updates of registered name holders:
+
+For any update of the registered name holder of a .fr domain name, the Registry Service Provider (RSP) must obtain and keep documentary evidence of the agreement of the previous registered name holder and the new registered name holder (if applicable). Such evidence can be obtained through approval emails, trigger codes sent by SMS, log entries of approvals given in registered name holders customer account with RSP or similar processes. Upon reasonable request of Key-Systems, the RSP must provide such documentary evidence to Key-Systems within 3 working days. Failure to provide documentary evidence to Key-Systems upon request shall result in a penalty fee of EUR 1,000 to be applied to RSPs account.
+
+RSP is also responsible for informing the old and new registered name holder once the update is complete.
+
+Domain Name Dispute Resolution
+
+The alternative dispute resolutions applies, currently available under:
+=> http://www.afnic.fr/doc/ref/juridique/parl
+
+Duration
+
+The registration or renewal of registration can only take place for time period of one year.
+
+Transfer of Domain Names
+
+In order to transfer a domain, the RSP must provide evidence of permission, either through the
+client directly or through an administrative contact. RSP will support KS with the registrar-transfer
+either to or from KS upon requirement, according to Registration Terms and Conditions of AFNIC.
+
+Costs
+
+The prices of a registration and included services can be viewed directly through the RRPproxy
+web interface under the respective top-level domain (under www.RRPproxy.net → Account →
+Zones & Prices).
+All costs will be charged in USD, meaning that when registering a domain KS will automatically
+exchange the respective fee into USD according to the daily exchange rate of the European
+Central Bank (ECB).
+V.A.T. only applies to RSPs who have their corporate office in Germany or to RSPs within the
+European Union, who do not possess a valid V.A.T. ID. V.A.T. Is not applicable to RSPs
+outside the European Union.
+
+Trustee Service
+
+Key-Systems is able to offer a local presence or proxy service, the so called trustee service, for
+registrants unable to provide an own local contact in one of the above listed European countires.
+When using the trustee service, registrant must agree to the respective terms and conditions of
+the trustee service:
+http://www.rrpproxy.net/downloads/en/agreements/RRPProxy_Trustee_fr.en.pdf
+RSP must make the trustee agreement or the conditions for registration included therein available
+to the registrant before completing a registration with the trustee tag and thereafter.
+RSP agrees to pay the trustee fee for each registration using the trustee tag, as well as for each
+subsequent renewal of the domain name while the trustee service is activated.
+
+PROVISIONS SPECIFIC TO .IT REGISTRATIONS.
+
+.IT is the 2-Letter ISO Country Code of Italy
+
+
+Preliminary Remark:
+
+KS is an officially accredited Registrar of Nic.IT,
+for the Top-Level-Domain .IT.
+RSP and KS agree that RSP can register, renew, transfer and administer domain names beneath .IT for his
+customers through KS.
+The following paragraphs apply:
+Registration Requirements
+All partner registrars and resellers of .IT domain names are committed to these terms and conditions. Each
+customer who registers a domain name beneath .IT has to accept the following
+terms and conditions. RSP is committed to bind his customers according to these regulations.
+Policies for .IT domains, currently available under:
+=> https://www.nic.it/en/manage-your-it/legal
+=> https://www.nic.it/en/manage-your-it/forms-and-docs
+The general terms and conditions and domain registration policies of KS also apply:
+=> https://www.rrpproxy.net/Legal/Terms_and_Conditions.html
+=> https://www.rrpproxy.net/Legal/Registration_Agreement.html
+All accredited registrars of Nic.IT are committed to these Terms and Conditions. Each customer who registers a
+domain beneath .IT accepts these Terms and Conditions.
+RSP acknowledges and agrees to the obligations in EXTENSION A of the Appendix and the .IT Policies. RSP
+ensures with the registration agreement that the RNH will comply. RSP will store respectiverecords, files and
+other necessary documentation regarding the registration and to provide them to the Registrar upon request.
+The RSP agrees to be liable for any penalties and fees arising from breaches of the agreement and/or Policies.
+Domain-Name Dispute Resolution
+Regulations for the resolution of disputes in the ccTLD "it":
+=> https://www.nic.it/en/manage-your-it/legal
+Transfer of Domain-Names
+Transfer Policy
+In order to transfer a domain, the RSP must provide evidence of permission, either through the registrant of the
+respective domain directly or through an administrative contact. RSP will support KS with the registrar-transfer
+either to or from KS upon requirement according to registration terms and conditions of Nic.IT
+=> http://www.nic.it
+Duration
+The registration or renewal of registration can only take place for a time period of one year.
+Costs
+The prices of a registration and included services can be viewed directly through the RRPproxy WebInterface
+under the respective Top-Level-Domain (under www.RRPproxy.net --> Query List --> Zones / Prices).
+All costs will be charged in USD, meaning that when registering a Domain we will automatically exchange the
+respective fee into USD according to the daily exchange rate of the European Central Bank (ECB)
+V.A.T. only applies to RSPs who have their corporate office in Germany or to RSPs within the European Union,
+who do not possess a valid V.A.T. ID. The V.A.T. Is not applicable to RSPs outside the European Union.
+Trustee Service
+Key-Systems is able to offer a local presence or proxy service, the so called trustee service, for registrants
+unable to provide an own local contact. When using the trustee service, registrant agrees to the respective terms
+and conditions of the trustee service:
+http://www.rrpproxy.net/downloads/en/agreements/RRPProxy_Trustee_it.en.pdf
+RSP must make the trustee agreement or the conditions for registration included therein available to the
+registrant before completing a registration with the trustee tag and thereafter.
+RSP agrees to pay the trustee fee for each registration using the trustee tag, as well as for each subsequent
+renewal of the domain name while the trustee service is activated.
+EXTENSION A:
+Obligations:
+
+Obligations regarding the phase of registration.
+Through signing this Contract the RSP undertakes to:
+I. acquire, at the same time as application for registration, the personal data of each Registrant for
+whom the Registrar registers or manages a domain name, as indicated in the Regulations;
+II. check, on the basis of the declarations made by each Registrant for whom the Registrar registers a domain
+name, that these comply with the requisites for registering domain names in the ccTLD .it,
+as defined by the ccTLD .it Regulations;
+III. receive a declaration by means of which the Registrant guarantees the Registry, under the
+Registrant's own liability, that the registration of the domain name requested does not damage, as far as the
+Registrant is aware, the rights of third parties;
+IV. receive a declaration by means of which the Registrant indemnifies the Registry against the improper use of
+the domain name to be registered;
+V. receive a declaration of the Registrant made to the Registry accepting the Regulations for the assignment and
+management of domain names in the ccTLD .it" and the "Regulations for the resolutions of disputes in the
+ccTLD .it" (including relative Guidelines), including any future changes made to them;
+VI. inform the Registrant that registration of the domain name cannot be made anonymously, as this is not in
+conformity with the data treatment policy of the Registry and that the obligations related to the domain name are
+attributed to the subject that is indicated as the Registrant of the domain name;
+VII. supply each Registrant with appropriate notification of the treatment of personal data made by the IIT-
+Registry and obtaining acceptance from the Registrant.
+VIII. send to the Registrant an appropriate communication via email with which the Registrar informs the
+Registrant of the registration of the domain name, and change of Registrar (Transfer) and Registrant (Trade).
+Obligations regarding the phase of management of registrations, observance of the Regulations, of due
+diligence and correctness.
+Through signing this Contract the Registrar undertakes to:
+I. comply with the Regulations, as indicated in Paragraph 2, Def ini t ions , of this Contract and any changes
+made to them in the future as defined in Paragraph 3 of this Agreement, Juridical Hierarchy;
+II. carry out activities for the registration and maintenance of domain names with best diligence and with
+appropriate means, staff, organization and technical know-how; and carry out prompt updating of Registrant
+data when requested by the Registrant;
+III. guarantee the Registrant the supply, at freely determined fees, of such operations and activities as
+established in the Regulations and Guidelines, as defined in Paragraph 2 Definitions, and which constitute for
+the Registrar a contractual obligation;
+IV. undertake all the technical actions necessary for guaranteeing the completion of operations on the domain
+name in compliance with the Regulations;
+V. notify the Registrant of the AuthInfo code, safely and confidentially, on completion of the registration and
+maintenance of the domain name, such as, but not limited to, operations for registration, modification of the
+Registrant (Trade) and/or the Registrar (Transfer) within five days from these operations, in order to guarantee
+the carrying out of necessary operations for the registration and management of domain names. For this purpose
+any other means enabling the Registrant to obtain the Authinfo code in a secure and confidential manner, such
+as, for example, the provision of the abovementioned code on the website of the Registrar through SSL
+connection, shall be deemed valid. The Registrar undertakes to revise the Authinfo code in circumstances where
+there is a request for modification of the Registrant or of the Registrar, and whenever the Registrant requests a
+change;
+VI. ascertain, with ordinary diligence, prior to the operations of registration and management of a domain name,
+the credentials of the registrant regarding the operation requested;
+VII. inform the Registrant of the need to provide accurate, up-to-date information and notifying any changes,
+and that failure to provide such data can lead to the withdrawal of the domain name.
+Registrants must also be informed of the content of Art. 494 of the Italian Criminal Code in relation to the need
+to provide accurate data;
+VIII. not impede in any way a Registrant wishing to change Registrar and to fully collaborate with the
+Registrant in completing this operation. For example, the Registrar cannot avoid communicating the AuthInfo
+code to a Registrant who wishes to change to another Registrar;
+IX. observe maximum diligence in the management of domain names placed in a state of total or partial
+inoperativeness according to the provisions established in the Regulations, notifying the Registrant promptly
+and assuming any responsibility towards the IIT-Registry and the Registrant;
+X. carry out the deletion of a domain name only on receipt of express authorization from the Registrant, that is,
+when the date of expiry of the maintenance period has been reached, indicated in the field "expire" and
+however, within the period of "autoRenew", and when the obligation on the basis of which the Registrar was
+obliged to maintain the domain name is terminated, in fact or in law;
+Obligations regarding correct use of the registry's technical resources.
+I. In signing this Contract the Registrar undertakes not to perform activities which cause damage to the system
+and to the service of registration of the IIT-Registry, such as, but not limited to, saturation of resources, through
+denial of service, and unauthorised access to the Registry's computer systems.
+Obligations of documentation
+The .it Registry, also automatically, and interested third parties for legal reasons, and public authorities may
+request documentary evidence of the registration of a domain name. Therefore, in order to respect this legal
+requirement, by signing this Contract the Registrar undertakes to:
+I. document that the registration of the domain name, and other possible correlated operations of maintenance
+requested by the Registrant have taken place in compliance with the duties established in this Contract in
+Paragraph, 12, Premises and conditions for registration and in Paragraph 13,
+Obligations of the Registrar.
+By signing this Contract the Registrar is aware that the documentation regarding registration of the
+domain name must be made up of a copy of the Registration Form and by the concurrent communication of the
+Registrar to the Registrant of confirmation of the registration, as defined in the paragraph 2, Definition, also in
+accordance with legislative decree 6 September 2005 n. 206, Consumer Code or with Directive 2000/31/EC,
+"Directive on Electronic Commerce". The email communication from the Registrar is constituted by a copy of
+the email in source code format, containing the entirety of headers, without manipulation of the integral content
+of the message (RFC-2822) extracted from the mail box of the sender from which it is possible to deduce,
+among other information, the Message-ID;
+II. maintain the documentation pertaining to the registration and any other data or fact concerning the
+maintenance and management of the domain name for at least five years from the date of the extinction of the
+contract with the Registrant;
+III. promptly transmit to the Registry, in accordance with the provisions of this Contract and with the content of
+the Regulations, the request for access to the data and documents relative to registration, maintenance and
+challenge of a domain name in the ccTLD .it, also by mean of an instance received by the Registrar, such as that
+made by a third party for the protection of their rights, for the successive procedures accomplished by the
+Registry, and the transmission to the requesting third party;
+Without prejudice to any further obligations deriving from specific laws, send the documentation as above in
+writing to the Registry, or alternatively in the forms in accordance with the Digital Administration Code,
+Legislative Decree March 7, 2005, n. 82.
+"In writing" means any form of "mechanical reproduction" which complies with article 2712 of the Italian Civil
+Code, including an analog copy of an IT document. It must also be accompanied by a declaration pursuant to
+Decree December 28, 2000, n. 445 signed in original, or digitally signed by the legal representative of the
+Registrar, or a person delegated by the Registrar, attesting conformity to the original, a n d mu s t n o t c o n t a i
+n any alterations, thus ensuring the completeness of the document and the information contained.
+Regarding the requirement indicated in this paragraph, it is not sufficient to send to the Registry a reelaboration
+of the registration data created by the Registrar. On the Registry website there is a nonexhaustive example of the
+way in which the required information must be communicated to the Registry,in writing or other appropriate
+ways, with an attachment of the declaration form pursuant to the DPR 445/2000 or for Registrars not belonging
+to the EEA a declaration with authentication by a public notary or other competent public official, and with
+apostille or consular authentication. This is without prejudice to particular dispensations foreseen by bilateral or
+multilateral treaties.
+.? If the documentation sent does not respect the legal requirements mentioned in the previous
+paragraph, the Registrar assumes all responsibility regarding the requesting party, and indemnifies the Registry
+against any damage suffered as a result of this situation.
+Not sending the Registry the Registration Form together with the email communication, accompanied by the
+self-authentication in accordance with DPR 445/2000, or with apostille, or consular authentication,
+shallconstitute legitimate grounds for the Registry to immediately apply the penalty as established in
+thisAgreement. With this aim, the Registrar indemnifies the Registry against any actions of third parties
+deriving from or regarding the application of this penalty.
+The non-observance of the obligations of documentation implies that the Registrar has responsibility as
+specified in Parag. 29, Responsibilities of the Registrar.
+PROVISIONS SPECIFIC TO .AU REGISTRATIONS.
+
+
+Preliminary Remark:
+
+KS is an officially ICANN accredited registrar and authorized reseller for
+the domain ending .AU.
+RSP and KS agree that RSP can register, renew, transfer and administer third-level
+domain names beneath .AU for eligible customers through KS.
+The following paragraphs apply:
+Registration Requirements and Policies
+All accredited registrars and resellers of auDA are committed to these terms and conditions. Each
+customer who registers a domain beneath .AU has to accept the following terms and conditions.
+RSP is committed to bind his customers according to these regulations.
+=> Current applicable policies list:
+http://www.auda.org.au/policy/current-policies/
+=> Registration Warranty Policy:
+http://www.auda.org.au/policies/auda-2005-03/
+=> Whois Policy:
+http://www.auda.org.au/policies/auda-2010-06/
+=> Privacy Policy:
+http://www.auda.org.au/policies/auda-2010-02/
+=> Dispute Resolution Policy (AuDRP):
+http://www.auda.org.au/policies/auda-2010-05/
+=> Domain Name Eligibility and Allocation Policy:
+http://www.auda.org.au/pdf/auda-2008-05.pdf
+General terms and conditions of KS:
+=> http://rrpproxy.net/tac.php?lang=en
+Duration
+The registration or renewal of registration can take place for a 2 year terms only.
+Costs
+The prices of a registration and included services can be viewed directly through the RRPproxy
+web interface under the respective top-level domain (under www.RRPproxy.net ? Account ?
+Zones & Prices).
+All costs will be charged in USD, meaning that when registering a domain KS will automatically
+exchange the respective fee into USD according to the daily exchange rate of the European
+Central Bank (ECB).
+V.A.T. only applies to RSPs who have their corporate office in Germany or to RSPs within the
+European Union, who do not possess a valid V.A.T. ID. V.A.T. Is not applicable to RSPs
+outside the European Union.
+PROVISIONS SPECIFIC TO .DE REGISTRATIONS.
+
+
+Preliminary Remark:
+
+KS is an officially ICANN accredited and authorized registrar
+of DENIC eG for the domain extension .DE.
+RSP and KS agree that RSP can register, renew, transfer and administer
+domain names beneath .DE for his customers through KS.
+The following paragraphs apply:
+Registration Requirements
+All accredited registrars and resellers of .DE domain names are committed to these terms and
+conditions. Each customer who registers a domain name beneath .DE has to accept the following
+terms and conditions. RSP is committed to bind his customers according to these regulations.
+Policies for .DE Domains (Domain Guidelines & Terms and Conditions), currently available under:
+https://www.denic.de/fileadmin/public/documents/DENIC-Domainbedingungen_EN.pdf
+https://www.denic.de/fileadmin/public/documents/DENIC_Domainrichtlinien_EN.pdf
+The general terms and conditions and domain registration policies of KS also apply:
+=> https://www.rrpproxy.net/Legal/Terms_and_Conditions.html
+=> https://www.rrpproxy.net/Legal/Registration_Agreement.html
+Domain-Name Dispute Resolution
+DISPUTE Entries
+=> http://www.denic.de/en/domains/dispute.html
+Transfer of Domain-Names
+Transfer Policy
+In order to transfer a domain, the RSP must provide evidence of permission, either through the
+registrant of the respective domain directly or through an administrative contact. RSP will support
+KS with the registrar-transfer either to or from KS upon requirement according to 6 of the general
+registration terms and conditions of the DENIC e.G.
+=> https://www.denic.de/en/domains/de-domains/domain-terms-and-conditions/
+Duration
+The registration or renewal of registration can take place for a time period of 1 month or 1 year.
+Costs
+The prices of a registration and included services can be viewed directly through the RRPproxy
+web interface under the respective top-level domain (under www.RRPproxy.net ? Account ?
+Zones & Prices).
+All costs will be charged in USD, meaning that when registering a domain KS will automatically
+exchange the respective fee into USD according to the daily exchange rate of the European
+Central Bank (ECB).
+V.A.T. only applies to RSPs who have their corporate office in Germany or to RSPs within the
+European Union, who do not possess a valid V.A.T. ID. V.A.T. Is not applicable to RSPs
+outside the European Union.
+PROVISIONS SPECIFIC TO .NL REGISTRATIONS.
+
+
+Preliminary Remark:
+
+Preliminary Remark:
+KS is an officially ICANN accredited and SIDN authorized registrar for .NL.
+RSP and KS agree that RSP can register, renew, transfer and administer domain
+names beneath .NL for his customers through KS.
+Registration Requirements
+General Terms and Conditions of KS:
+=> https://www.rrpproxy.net/Legal/Terms_und_Conditions
+General Terms and Conditions of SIDN for .NL Registrants:
+=>https://www.sidn.nl/downloads/d_7zdiiDQvOGbSo1FGCcqw/d4c8288846f98ba422834c996994a04a/General_Terms_and_Conditions_for_nl_Registrants.pdf
+KS is obliged to pass on the following commitments to each reseller for the TLD .NL:
+The reseller's obligations with regard to initial registration
+1. Before submitting a registration application on behalf of an applicant, the reseller must:
+a. ensure that the applicant closes a registration contract with SIDN, which content and means of
+closure satisfy the requirements made by SIDN and published at www.sidn.nl, which is governed
+by the General Terms and Conditions for .nl Registrants in force at the time and which takes effect
+as soon as SIDN has processed the application;
+b. ensure that the applicant has the opportunity to familiarize him/herself with and save a copy of
+the General Terms and Conditions for .nl Registrants.
+2. At the time of registration and thereafter, the reseller has a duty to take all reasonable steps to
+ensure the accuracy of the registered data and the traceability of the registrant or party that
+commissioned the registration. The reseller shall not register any data that the reseller knows or
+suspects to be inaccurate and shall, upon independently ascertaining or learning from SIDN or a
+third party that an item of registered data is inaccurate, immediately replace the data in question
+with accurate data. If requested to do so by SIDN, the reseller shall provide evidence of the
+accuracy of the registered data.
+3. The reseller must inform every party that applies to register a .nl domain name through that
+registrar of a registrant's rights and obligations under the General Terms and Conditions for .nl
+Registrants.
+4. The reseller shall register a .nl domain name in the name of and using the details of the
+applicant. The reseller shall register a .nl domain name in the reseller's name or in the name of
+another party other than the applicant only with the applicant's explicit consent. Under such
+circumstances, the reseller shall inform the applicant of the implications of registering a .nl domain
+name in another party's name before proceeding with the registration.
+5. The reseller must always give a registrant the opportunity to act as administrative contact
+person for the registration made in the registrant's name. The reseller may act as administrative
+contact person for a registration only with the registrant's explicit consent. The reseller must not
+make agreement to act for a registrant conditional upon the registrant giving such consent.
+The reseller's obligations during the registration period and thereafter :
+1. If a registrant informs the reseller acting for him/her of any change to the registered
+information, the reseller must pass the details on to KS without delay. The reseller is entitled to
+update registered data only when asked to do so by the registrant. Under such circumstances, the
+reseller must take adequate steps to check that the person providing updated information is an
+authorized representative of the registrant.
+2. The reseller must ensure, insofar as reasonably practicable, that associated registrants meet
+their obligations under the General Terms and Conditions for .nl Registrants.
+3. Until two years after the termination of a registration, the reseller must retain all information
+relating to the application for, amendment of or termination of the registration in question.
+Changes of registrar and domain name relocation
+A registrant may change the registrar that acts for him/her (i.e. transfer the management of his/her
+registration) at any time during the registration period; the `old' registrar and his resellers must
+always cooperate with the relocation.
+Privacy/Personal Data Protection Act
+When processing personal data received in connection with the registration of domain names,
+SIDN, the registrar and his resellers must always adhere to the Personal Data Protection Act and
+to SIDN's Data Protection Policy.
+Resellers are committed to these Terms and Conditions. Each customer who registers a domain
+beneath .NL accepts these policies. RSP undertakes to bind his customers to these regulations.
+Whois Services:
+=> https://www.sidn.nl/en/whois/
+Domain Name Dispute Resolution
+Disputes and complaints:
+=>https://www.sidn.nl/downloads/5sAFIfNTSxe6N_elHf6iIg/718bf3910f9fd188993f9d5a522b857d/Dispute_Resolution_Regulations_for_nl_Domain_Names.pdf
+Duration
+The registration or renewal of registration can only take place for a time period of one year.
+Costs
+The prices of a registration and included services can be viewed directly through the RRPproxy
+web interface under the respective top-level domain (under www.RRPproxy.net ? Account ?
+Zones & Prices).
+All costs will be charged in USD, meaning that when registering a domain KS will automatically
+exchange the respective fee into USD according to the daily exchange rate of the European
+Central Bank (ECB).
+V.A.T. only applies to RSPs who have their corporate office in Germany or to RSPs within the
+European Union, who do not possess a valid V.A.T. ID. V.A.T. Is not applicable to RSPs
+outside the European Union.
+PROVISIONS SPECIFIC TO .PL REGISTRATIONS.
+
+
+Preliminary Remark:
+
+KS is an officially ICANN accredited and authorized registrar of NASK (the .PL Registry) for the top-level
+domain .PL.
+RSP and KS agree that RSP can register, renew, transfer and administer
+domain names beneath .PL, .COM.PL, .NET.PL, .ORG.PL, .INFO.PL, .BIZ.PL, .WAW.PL, .EDU.PL
+for his customers through KS.
+The following paragraphs apply:
+Registration Requirements
+All accredited registrars and resellers of .PL second-level and third-level domain names are committed to these
+terms and conditions. Each customer who registers a domain name beneath a .PL domain extension has to
+accept the following terms and conditions. RSP is committed to bind his customers according to these
+regulations.
+.PL Regulations, currently available under:
+=> https://www.dns.pl/en/
+=> https://www.dns.pl/en/pl_domain_name_regulations
+By completing the document ".PL Appendix No 4x" the domain owner must confirm that his registrar is
+allowed to act on his behalf towards the registry. RSP is obliged to obtain approval from the registrant by
+presenting the document to the registrant within the .PL registration process and for owner changes. The
+document must be kept on file by RSP for the duration of the registration of the domain name and presented to
+KS and/or Registry upon request.
+PLEASE NOTE THAT FROM DECEMBER 1ST 2015 NEW DOMAIN REGULATIONS FOR .PL
+WILL APPLY.
+PLEASE FIND HERE THE MAIN CHANGES:
+In the content of the Regulations there have been implemented
+modifications (in the contents of Articles 3-4, 6-12, 15-19, 23, 28)
+consisting in removing the provisions on NASK's operating as a registrar.
+The changes refer, in particular, to:
+method of concluding and terminating the agreements on domain namemaintenance,
+provision by NASK the Administrative and Technical Service, payment of fees,
+giving Subscriber's consent to provide the Administrative and Technical Service by NASK for the Partner.
+
+There has been implemented more detailed specification of the provisions on the results of:
+failure to sign the arbitration clause by the Subscriber (extended content of Article 21)
+termination or expiration of the Agreement binding the Partner with NASK (extended content of Article 13).
+failure to pay the fee for the Administrative and Technical Service (change of the contents of Articles 23 and 26).
+
+There have also been implemented provisions on the procedure of conduct in
+situations posing a threat to the security and stability of the domain
+system (implemented new Article 27) and transitional provisions for the
+Subscribers bound by the agreement on the domain name maintenance as of
+the enforcement of the changes in the Regulations (implemented new
+Articles 34-36).
+PLEASE FIND HERE THE COMPLETE NEW REGULATIONS VALID FROM DECEMBER 1st 2015:
+=>https://www.dns.pl/en/pl_domain_name_regulations
+The general terms and conditions and domain registration policies of KS also apply:
+=>https://www.rrpproxy.net/Legal/Terms_und_Conditions
+=>https://www.rrpproxy.net//Legal/Registration_Agreement
+Domain Name Dispute Resolution
+According to the Regulations, domain name disputes are resolved by the Arbitration Court or any other court.
+Arbitration Court is one of the permanent Arbitration Courts operating at organizations, which are bound to
+NASK by co-operation agreements on disputes resolution.
+=> http://www.dns.pl/english/disputes.html
+Transfer of Domain-Names
+Transfer Policy
+In order to transfer a domain, the RSP of the customer must provide evidence of permission, either through the
+client directly or through an administrative contact. RSP will support KS with the registrar-transfer either to or
+from KS upon requirement, according to the Transfer-Policies of the NASK registry: =>
+http://www.dns.pl/english/transfer.html
+The actual Registrar-Transfer is free of charge, however the domain registration time period will be extended
+for one year according to the costs stated in 5.
+Duration
+The registration or renewal of registration can take place for time periods between 1 and 3 years, in annual steps.
+Costs
+The prices of a registration and included services can be viewed directly through the RRPproxy web interface
+under the respective top-level domain (under www.RRPproxy.net ? Account ? Zones & Prices).
+All costs will be charged in USD, meaning that when registering a domain KS will automatically exchange the
+respective fee into USD according to the daily exchange rate of the European Central Bank (ECB).
+V.A.T. only applies to RSPs who have their corporate office in Germany or to RSPs within the European Union,
+who do not possess a valid V.A.T. ID. V.A.T. Is not applicable to RSPs outside the European Union.
+CIRA Registrant Agreement
+
+Version 2.0, October 12, 2010
+
+This agreement (the “Agreement”) is between you (the “Registrant”) and the Canadian Internet Registration Authority (“CIRA”).
+
+In consideration of the registration by CIRA of the Domain Name applied for by the Registrant in the name of the Registrant, and other good and valuable consideration, the receipt and adequacy of which are hereby acknowledged, CIRA and the Registrant agree as follows:
+
+Article 1 Interpretation
+
+Application. This Agreement between the Registrant and CIRA applies to all Domain Names registered by CIRA for the Registrant.
+
+Definitions. In this Agreement:
+
+"Administrative Contact means the person identified in the Registration Information as the Administrative Contact for the Registrant's Domain Name Registration(s);
+
+"Affiliate" means, with respect to either party, any entity that controls, is controlled by, or is under common control with, such party. For purposes of the foregoing, "control" means, with respect to: (a) a corporation, the ownership, directly or indirectly, of fifty percent (50%) or more of the voting power to elect directors thereof; and (b) any other entity, fifty percent (50%) or more ownership interest in said entity;
+
+"Applicable Laws" means all international, federal, provincial and local laws and regulations and other laws of applicable governmental authorities;
+
+"Domain Name" means a .ca domain name or sub-domain name;
+
+"Domain Name Registration" means the registration by CIRA of a Domain Name in the Registry, in the name of the Registrant, pursuant to this Agreement;
+
+"Fees" means the fees payable to CIRA in connection with this Agreement, including an application for a Domain Name and/or any renewal, transfer, and any other fees payable in connection with a Domain Name Registration;
+
+"Member" or "Membership" has the meaning specified in CIRA’s Amended and Restated By-Law No.1, which is located on CIRA’s website at: www.cira.ca/assets/Documents/Legal/Other/bylaw1.pdf;
+
+"Person" means a natural person, partnership, limited partnership, limited liability partnership, corporation, limited liability corporation, unlimited liability company, joint stock company, trust, unincorporated association, joint venture or other entity or governmental entity;
+
+"Registrant" means a Person who is listed in the Registry as the registrant of a Domain Name;
+
+"Registrar of Record" means the Registrar listed in the Registry as the Registrar of a specific Domain Name Registration, other than CIRA. In no event will CIRA be a Registrar of Record for purposes of the Registry PRP;
+
+"Registrars" mean the persons from time to time certified by CIRA to offer Domain Name Registration services within the .ca Internet Domain Name system;
+
+"Registration Date" means the date a Domain Name has been activated within the Registry;
+
+"Registration Information" means all information which the Registry PRP require the Registrant to submit to CIRA or the Registrar of Record to obtain a Domain Name Registration, or to process any Transaction Request;
+
+"Registry" means the .ca Internet Domain Name registry operated by CIRA;
+
+"Registry PRP" means the CIRA policies, rules, and procedures relating to Registrants, Registrars, and Domain Name Registrations as may be amended or adopted by CIRA from time to time, which are located on CIRA’s website at: www.cira.ca/en/PRP.html ; and
+
+"Transaction Requests" means all requests or transactions with respect to a Domain Name Registration, including those to renew, transfer, modify, or delete a Domain Name Registration.
+
+Article 2 AGREEMENT, REGISTRY PRP, AND AMENDMENTS BY CIRA
+
+Acceptance of Agreement and Registry PRP. This Agreement sets forth the terms and conditions of the registration of Domain Names by the Registrant with CIRA. The Registrant acknowledges that it has read, understood, and agrees to be bound by all the terms and conditions of this Agreement, and the Registry PRP, which CIRA may establish and amend from time to time. The Registry PRP are located on CIRA’s website at www.cira.ca/en/PRP.html. The acceptance of the Registrant Agreement and Registry PRP by the Registrant will apply to the current registration request as well as all other further registration requests which the Registrant may make thereafter with the same Registrar.
+
+Amendment of Agreement by CIRA. CIRA shall have the right, at any time and from time to time, to amend any or all of the terms and conditions of this Agreement. CIRA shall use commercially reasonable efforts to notify the Registrant of material amendments to this Agreement by email in accordance with Section 10.1. However, any amendment to this Agreement will be binding and effective upon 30 days after the posting of such amendment on CIRA’s website.
+
+Amendment and/or Establishment of new Registry PRP by CIRA. CIRA shall have the right, at any time and from time to time, to amend any or all of the Registry PRP and/or establish new Registry PRP. Any such amendment to the Registry PRP or new Registry PRP will be binding and effective upon the posting of such amendment or new Registry PRP on CIRA’s website.
+
+Obligation to Review; Disagreement. The Registrant agrees to periodically review CIRA’s website, and specifically this Agreement and the Registry PRP available on CIRA’s website, to be aware of any amendments to the Agreement, Registry PRP and/or any new Registry PRP. If the Registrant does not agree with any amendments to the Agreement, the Registry PRP and/or any new Registry PRP, then the Registrant may terminate this Agreement in accordance with Section 7.10. By continuing to maintain Domain Name Registrations in the Registry, the Registrant has agreed to be bound by any amendments to the Agreement, the Registry PRP and/or the establishment of any new Registry PRP after they become effective.
+
+Article 3 DOMAIN NAMES PROVISIONS
+
+Registrations of Domain Names.
+
+Applications. The Registrant acknowledges and agrees that applications for the registration of a Domain Name shall be made to CIRA only by the Registrar of Record, on behalf of the Registrant, in accordance with this Agreement and the Registry PRP.
+
+Processing of Applications. CIRA shall process complete applications for the registration of a Domain Name. CIRA, in its sole discretion, shall have the right to approve or reject any application for the registration of a Domain Name and/or agree or refuse to register any Domain Name for any reason whatsoever with no liability of CIRA whatsoever to the Registrant, the Registrar of Record or any other person. CIRA will give notice to the Registrar of Record upon the approval or rejection of an application.
+
+No Proprietary Right. The Registrant acknowledges and agrees that a Domain Name is not property and that a Domain Name Registration does not create any proprietary right for the Registrant, the Registrar of Record or any other person in any name used as a domain name or in any Domain Name Registration. The entry of a domain name in the Registry and/or in the "WHOIS" database shall not be construed as evidence of ownership of any Domain Name Registration. The Registrant shall not in any way transfer or purport to transfer a proprietary right in any Domain Name Registration or grant or purport to grant as security or in any other manner encumber or purport to encumber any Domain Name Registration.
+
+Renewals, Transfers, Modifications, Deletions and Other Transactions. The Registrant acknowledges and agrees that a renewal, transfer, modification or deletion of, and any other request or transaction with respect to, a Domain Name Registration shall be made in accordance with this Agreement and the Registry PRP. CIRA will notify the Registrar of Record of any renewal, transfer, modification, deletion or other transaction regarding a Domain Name Registration.
+
+Right of CIRA to Verify Information and Compliance. CIRA is entitled at any time and from time to time during the Term (as defined in Section 7.1) to verify: (a) the truth, accuracy and completeness of any information provided by the Registrant to CIRA, whether directly, through any of the Registrars of Record or otherwise; and (b) the compliance by the Registrant with the provisions of the Agreement and the Registry PRP. The Registrant shall fully and promptly cooperate with CIRA in connection with such verification and shall give to CIRA, either directly or through the Registrar of Record such assistance, access to and copies of, such information and documents as CIRA may reasonably require to complete such verification. CIRA and the Registrant shall each be responsible for their own expenses incurred in connection with such verification.
+
+Administrative Contacts.
+
+Agent for the Registrant. The Registrant acknowledges and agrees that the Administrative Contact is hereby irrevocably authorized by the Registrant to: 1. act as the Registrant's agent in connection with the Registrant's Domain Name Registrations; 2. be CIRA's contact for the Registrant and the Domain Name Registration(s); and 3. is recognized by CIRA and hereby irrevocably authorized by the Registrant to take any and all actions in connection with the Domain Name Registration(s) including, without limitation, renewing, transferring, modifying, or deleting it. Notwithstanding the foregoing, in the event of any dispute between the Registrant and the Registrant's Administrative Contact, the Registrant shall prevail.
+
+Registrant and Administrative Contact Email Addresses. The Registrant acknowledges and agrees that CIRA notices to the Registrant will be sent by email only, as set forth in Section 10.1 (Notices). It is solely the responsibility of the Registrant to ensure that the email addresses of the Registrant and its Administrative Contact are at all times functional and accurate and to make arrangements with its Administrative Contact to receive any notices that are sent by CIRA only to the Registrant's Administrative Contact. If CIRA can show that a notice was sent to either the Registrant or the Registrant's Administrative Contact email addresses, CIRA shall not be liable to the Registrant or any third party for damages arising from a failure to receive notice from CIRA.
+
+Registrars.
+
+Changes of Registrar.
+
+Time Period. The Registrant may change the Registrar of Record with respect to a Domain Name Registration at any time once 60 days has elapsed from the date of registration of the Domain Name.
+
+Replacement of Registrar. In the event that the Registrar of Record is no longer a Registrar for any reason, has had its certification as a Registrar suspended, revoked or terminated, and/or the Registrar Agreement between CIRA and the Registrar of Record is terminated or expires, the Registrant shall be responsible for changing such Registrar of Record to a new Registrar. Such change must occur within 30 days of notice being given to the Registrant, or such other period of time specified by CIRA.
+
+Agreement and Registry PRP. Any change of the Registrar of Record must be done in accordance with this Agreement and the Registry PRP.
+
+Registrar as Agent. The Registrant acknowledges and agrees that the Registrar of Record is hereby also irrevocably authorized to act as the Registrant's agent in connection with Domain Name Registrations. Accordingly, any communication and/or instructions to or from the Registrar of Record will be taken as being to or from the Registrant. Without limiting the generality of the foregoing, the Registrant acknowledges and agrees that the Registrar of Record may cancel the Registrant's Domain Name Registration within 5 days from the registration of the Domain Name at their discretion and without the Registrant's consent.
+
+Registrar Obligations. The Registrant acknowledges that the Registrar of Record has a number of obligations to CIRA, and should the Registrar fail to comply with such obligations, CIRA may require the Registrant to change such Registrar of Record to a new Registrar.
+
+Membership. The Registrant acknowledges and agrees that if the Registrant becomes a Member of CIRA, the Registrant agrees to abide by the terms of CIRA Membership, as set out in CIRA’s Amended and Restated By-law No.1, Policy on Membership and the Registry PRP, which are located on CIRA’s website at www.cira.ca/assets/Documents/Legal/Other/bylaw1.pdf , www.cira.ca/assets/Documents/Legal/Membership/membership.pdf , and www.cira.ca/en/PRP.html respectively.
+
+Article 4 CERTAIN REGISTRANT OBLIGATIONS
+
+Certain Registrant Obligations. Throughout the Term of this Agreement, the Registrant shall comply with and abide by all provisions of this Agreement and the Registry PRP. Furthermore, the Registrant shall, in accordance with this Agreement and the Registry PRP:
+submit Registration Information to CIRA upon request, and ensure at all times that the Registration Information is true, complete and accurate;
+promptly give notice to the Registrar of Record (for communication to CIRA), of any change to any Registration Information;
+comply with and observe all Applicable Laws;
+immediately give notice to CIRA of any pending or threatened claim, demand, action, cause of action, proceeding, lawsuit, investigation or application (collectively a “Claim”) in relation to any Domain Name Registration (or any judicial requests or orders to produce documents or information obtained from or supplied to the Registry) that became known to the Registrant;
+not engage in any direct or indirect activity which, in CIRA’s reasonable opinion, is designed to bring, or may bring, the Registry into disrepute, is designed to interfere, or may interfere, with CIRA’s operations or is designed to expose, or may expose, CIRA to prosecution or to legal action by the Registrant or a third party;
+act in good faith towards CIRA;
+not allow any third party to use or operate any Domain Name Registration registered in the name of the Registrant and not register any Domain Name as agent for, or on behalf of, any third party in any manner whatsoever, including without limiting the generality of the foregoing, for the purposes of lending, leasing, licensing or otherwise granting rights in such Domain Name Registration to any third party for monetary or non- monetary consideration, unless such third party:(i) otherwise qualifies under the applicable Registry PRP including without limitation CIRA’s Canadian Presence for Registrants which is located on CIRA’s website at www.cira.ca/assets/Documents/Legal/Registrants/CPR.pdf ; or (ii) is an Affiliate of the Registrant. For this purpose, “third party” means any Person other than CIRA and the Registrant.
+be wholly responsible for the use and operation of any third, fourth, or further sub-level domain to any second level Domain Name Registration in the Registrant’s name and the Registrant shall ensure that the use and operation of any such sublevel domain is conducted in compliance with this Agreement and the Registry PRP;
+not use any trade-mark, trade-name or symbol of CIRA or any trade-mark, trade-name or symbol likely to be confused therewith; and
+be wholly responsible for taking, or ensuring that the Registrar of Record deletes a Domain Name Registration during the Auto-Renew Grace Period, as such term is defined in the General Registration Rules, if the Registrant does not wish that the Domain Name Registration be renewed.
+
+No Conflict. The Registrant shall not enter into any agreement with any Registrar or any other person that is inconsistent with, or in any way, modifies, affects, overrides, limits, contradicts or cancels the terms and conditions of this Agreement and/or the Registry PRP. To the extent that the provisions of any such agreement conflict or are inconsistent with the provisions of this Agreement and/or the Registry PRP, the Registrant hereby agrees that the provisions of this Agreement and Registry PRP shall prevail and be binding on the Registrant for the benefit of CIRA.
+
+Article 5 REGISTRATION INFORMATION
+
+Consent to Use of Registration Information. The Registrant consents to the collection, use, storage and disclosure of Registration Information, including any personal information of the Registrant, as set out in CIRA’s Privacy Policy, which is located on CIRA’s website at: www.cira.ca/assets/Documents/Legal/Registrants/privacy.pdf .
+
+Disclosure Procedure. For any Registration Information which is not made available in the WHOIS database, the Registrant acknowledges and agrees that: (a) such information will be maintained in the CIRA Registry and may be used and disclosed by CIRA as permitted herein and/or in the Registry PRP; and (b) CIRA shall have no liability for any claim, damage, loss or expense arising as a result of the disclosure of Registrant Information as permitted herein and/or the Registry PRP.
+
+Third Party Correspondence. The Registrant acknowledges and agrees that CIRA may forward to the Registrant any correspondence from third parties and may exercise its discretion to refuse to forward such correspondence. The Registrant agrees that CIRA shall have no liability for any claim, damage, loss or expense arising as a result of CIRA reviewing, sending, delaying or failing to review or send any such correspondence to the Registrant. The Registrant further acknowledges and agrees that CIRA has no control over the content of information that may be sent to the Registrant via CIRA and that CIRA shall have no liability for any claim, damage, loss or expense arising as a result of any such content.
+
+WHOIS. The Registrant acknowledges and agrees that CIRA has no control over how any person uses the information disclosed by CIRA through the WHOIS database, whether or not the information is subject to domestic or foreign privacy laws.
+
+Article 6 REGISTRANT REPRESENTATIONS AND WARRANTIES
+
+Representations and Warranties. The Registrant covenants, represents and warrants to CIRA as follows:
+
+Authorization. The Registrant has the power, authority and capacity to enter into this Agreement and all other documents and instruments contemplated by this Agreement and to carry out its obligations under this Agreement and such other documents and instruments.
+
+Registration Information. During the Term of this Agreement, all Registration Information is and at all times shall be true, complete and accurate and not misleading.
+
+No Infringement. During the Term of this Agreement, neither the registration of any Domain Name nor the manner in which the Registrant intends to use or uses such Domain Name will directly or indirectly infringe or otherwise violate the copyright, trade-mark, patent or other intellectual property or other rights of any person or defame any person or unlawfully discriminate against any person or breach any Applicable Laws.
+
+Qualification. During the Term of this Agreement, the Registrant meets and shall continue to meet all the requirements of this Agreement and the Registry PRP to: (a) be a Registrant, (b) apply for the registration of a Domain Name Registration, and (c) hold and maintain a Domain Name Registration, including without limitation CIRA’s Canadian Presence Requirements for Registrants, which is located on CIRA’s website at: www.cira.ca/assets/Documents/Legal/Registrants/CPR.pdf .
+
+
+Survival. The Registrant acknowledges and agrees that the limitations on warranties, conditions and liabilities, and the representations and warranties of the Registrant contained herein shall forever survive the expiry or termination of this Agreement or any suspension or deletion of any Domain Name Registration.
+
+Article 7 TERM; RIGHTS AND REMEDIES OF CIRA
+
+Term. The term of this Agreement (the “Term”) shall commence effective upon the date that the Registrant enters into this Agreement with CIRA and shall continue in force until terminated as set out herein.
+
+Restrictions on Domain Name Registrations. CIRA may, in accordance with this Agreement, the Registry PRP or, in its sole discretion and at its sole option, restrict the Registrant’s ability to renew, transfer, modify, or delete any or all of the Registrant’s Domain Name Registrations.
+
+Suspension and/or Deletion of Domain Name Registrations. CIRA may, in its sole discretion and at its sole option, upon notice to the Registrant suspend and/or delete a Domain Name Registration within 30 days of the registration of the Domain Name for any reason whatsoever. CIRA may also, in its sole discretion and at its sole option, upon notice to the Registrant suspend and/or delete a Domain Name Registration in the event that:
+the Registration Information concerning such Domain Name Registration contains false, misleading, incomplete, and/or inaccurate information;
+the Registrar of Record fails to pay to CIRA when due any Fees payable by the Registrar of Record to CIRA with respect to a Domain Name Registration for any reason whatsoever;
+the Registrant breaches any term of this Agreement or any of the Registry PRP;
+the Registrant at any time fails to meet all of the requirements of this Agreement and/or the Registry PRP to: (a) be a Registrant, (b) apply for the registration of a Domain Name Registration, and/or (c) hold and maintain a Domain Name Registration, including without limitation CIRA’s Canadian Presence Requirements for Registrants, which is located on CIRA’s website at: www.cira.ca/assets/Documents/Legal/Registrants/CPR.pdf ;
+the Registrant engages in any direct or indirect activity which in CIRA’s reasonable opinion: (1) brings, or may bring, the Registry into disrepute; (2) interferes, or may interfere, with the Registry and/or CIRA’s operations; and/or (3) exposes, or may expose, CIRA to prosecution or to legal action by the Registrant or a third party;
+maintaining the Domain Name Registration would put CIRA in conflict with requirements of Applicable Laws, or any applicable federal, provincial or territorial human rights legislation or the Criminal Code (Canada), or the terms of an order, ruling, decision or judgment of a court, tribunal, board, administrative body, commission or arbitrator;
+the deletion, transfer or suspension of a Domain Name Registration is required by an order or decision under CIRA’s Domain Name Dispute Resolution Policy or an order, ruling, decision or judgment of a court, tribunal, board, administrative body, commission or arbitrator; or
+the designation by the government of Canada of CIRA to manage, operate and control the Registry is terminated or CIRA is no longer recognized at the international level as having the exclusive authority to operate the Registry.
+
+Suspension and/or Deletion by CIRA. In addition to CIRA’s other rights and remedies herein, CIRA may at its sole discretion and at its sole option suspend and/or delete any Domain Name Registration that it deems necessary to (1) protect the integrity and stability of the registry; (2) to comply with any applicable laws, government rules or requirements, requests of law enforcement, or any dispute resolution process; (3) to avoid any liability, civil or criminal, on the part of CIRA, as well as its officers, directors, and employees; or (4) to correct mistakes made by CIRA or any Registrar in connection with a Domain Name Registration.
+
+Suspension and Deletion for Failure to Confirm Registration Information. CIRA may in its sole discretion and at its sole option immediately suspend a Domain Name Registration for failure by the Registrant to satisfactorily confirm the truth, accuracy and/or completeness of Registration Information upon CIRA’s request. During the period of suspension as prescribed by CIRA, the Registrant may at any time reactivate the suspended Domain Name Registration by satisfactorily confirming or correcting the Registration Information. If a Registrant fails to confirm the Registration Information in accordance with the Registry PRP within the period of suspension prescribed by CIRA, CIRA may, in its sole discretion, delete the Domain Name Registration.
+
+Effect of Suspension. During any period in which a Domain Name Registration has been suspended pursuant to the provisions of this Agreement or the Registry PRP:
+the Domain Name Registration will not be included in the list of Domain Name Registrations transferred on a daily basis to the Registry’s primary domain name server and accordingly, an Internet user will not be able to send an email or access a web page which incorporates such Domain Name Registration;
+no transactions or activities associated with the Domain Name Registration and/or information concerning the Domain Name Registration will be possible, including without limitation, renewals, transfers, deletions, modifications or other requests or transactions;
+CIRA will continue to list such suspended Domain Name Registration in the WHOIS look up system of the Registry and the WHOIS look up system will indicate that the Domain Name Registration has been suspended;
+CIRA may reactivate the suspended Domain Name Registration at any time in its sole discretion; and
+CIRA may extend the period of suspension at any time for such period as CIRA may determine in its sole discretion.
+
+Effect of Deletion of a Domain Name Registration. Upon the deletion by CIRA of a Domain Name Registration for any reason pursuant to this Agreement:
+the Registrant will no longer be entitled to the use of such Domain Name Registration and accordingly, an Internet user will not be able to send an email or access a web page which incorporates such Domain Name Registration;
+the Domain Name Registration will be deleted from the Registry and will be available for registration in the name of another person;
+CIRA will list the deleted Domain Name Registration as available in its WHOIS look up system; and
+if the Registrant is a Member, the Registrant will cease being a Member forthwith after deletion of the Domain Name Registration, unless the Registrant has at least one other Domain Name Registration.
+
+Prohibition on New Registrations. CIRA, in its sole discretion, shall have the right to refuse any Registration Request from an Applicant if the Applicant previously had a Registrant Agreement terminated by CIRA.
+
+Termination of Agreement by CIRA. CIRA may, in its sole discretion and at its sole option, terminate this Agreement by giving notice thereof to the Registrant (such termination to be effective on the date specified by CIRA in the notice) in the event that:
+the Registrant breaches any term of this Agreement or any of the Registry PRP, other than as set forth in Sections 7.8 b) through (h), and fails to cure that breach within 10 days of receipt of notice from CIRA;
+the Registrant disrupts or abuses CIRA’s registry services as determined by CIRA in its sole discretion, acting reasonably;
+all of the Domain Name Registrations registered in the name of the Registrant have been deleted or have expired;
+the designation by the government of Canada of CIRA to manage, operate and control the Registry is terminated or CIRA is no longer recognized at the international level as having the exclusive authority to operate the Registry;
+the Registrant files, or consents to the filing against it of, any petition for relief, reorganization or liquidation under any bankruptcy or insolvency law of any jurisdiction, or has any such petition filed against it that is not dismissed within 30 days thereafter;
+the Registrant makes a general assignment for the benefit of its creditors, or consents to the appointment of a custodian, receiver, trustee or other officer with similar powers over a substantial portion of its assets, or has any proceeding seeking such an appointment filed against it;
+an execution or any other process of any court shall become enforceable against the Registrant; and/or
+the Registrant ceases to carry on business in the normal course, dissolves or is wound up, or ceases to exist as the Person listed in the Registry.
+
+Termination by Registrant. The Registrant shall be entitled (either directly or through the Registrar of Record) to terminate this Agreement at any time by giving 30 days notice to CIRA. The Registrant understands and agrees that there shall be no refund of any Fees in such event.
+
+Effect of Termination of Agreement. Upon termination of this Agreement for any reason: (a) all Domain Name Registrations in the name of the Registrant shall be immediately and automatically deleted and they shall be made available for any other person to register; (b) in the case of a Registrant who is a Member, the immediate and automatic termination of the Registrant's Membership in CIRA; and (c) Sections 5.1, 6, 7.9, 8, 9 and 10 of this Agreement shall survive.
+
+Article 8 LIMITATIONS ON WARRANTIES, CONDITIONS, LIABILITY; INDEMNIFICATION
+
+EXCLUSION OF REPRESENTATIONS, WARRANTIES AND CONDITIONS. THE REGISTRANT EXPRESSLY UNDERSTANDS AND AGREES THAT:
+ALL SERVICES PROVIDED BY CIRA, INCLUDING WITHOUT LIMITATION, THE PROVISION OF DOMAIN NAME REGISTRATIONS ("SERVICES"), ARE PROVIDED ON AN "AS IS" AND "AS AVAILABLE" BASIS. CIRA MAKES NO REPRESENTATIONS, WARRANTIES OR CONDITIONS OF ANY KIND, WHETHER ORAL OR WRITTEN, EXPRESS OR IMPLIED, STATUTORY OR OTHERWISE REGARDING THE SERVICES, INCLUDING, WITHOUT LIMITATION, ANY WARRANTY OR CONDITION OF MERCHANTABLE QUALITY OR FITNESS FOR A PARTICULAR PURPOSE OR NON- INFRINGEMENT.
+
+WITHOUT LIMITING THE FOREGOING, CIRA MAKES NO WARRANTY:
+
+THAT THE REGISTRY WILL BE AVAILABLE AT ALL TIMES DURING THE TERM;
+THAT THE SERVICES WILL BE TIMELY, SECURE OR ERROR FREE;
+THAT THE SERVICES WILL BE FREE FROM BUGS OR VIRUSES;
+WITH RESPECT TO THE ACCESSIBILITY, COMPATIBILITY OR INTEROPERABILITY OF THE REGISTRY OR THE SYSTEMS ACCESSED BY THE REGISTRAR(S) OF RECORD AND/OR THE REGISTRANT; OR
+WITH RESPECT TO THE SECURITY OF THE REGISTRY OR ANY SYSTEMS ACCESSED BY THE REGISTRAR(S) OF RECORD AND/OR THE REGISTRANT.
+
+LIMITATION OF LIABILITY. NOTWITHSTANDING ANY PROVISION OF THIS AGREEMENT TO THE CONTRARY, REGARDLESS OF THE FORM OR CAUSE OF ACTION WHETHER IN CONTRACT OR TORT OR THE NUMBER OF CLAIMS, WHETHER OR NOT SUCH DAMAGES ARE FORESEEABLE OR CIRA HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES, AND WHETHER IN RESPECT OF A BREACH OR DEFAULT IN THE NATURE OF A BREACH OF CONDITION OR FUNDAMENTAL TERM OR A FUNDAMENTAL BREACH:
+
+Indemnity.
+The Registrant agrees to defend, indemnify and save CIRA and its contractors, agents, employees, officers, directors, Members, affiliates and assigns harmless from and against any and all damages, liabilities, obligations, losses, claims, demands, actions, causes of action, lawsuits, penalties, costs and expenses (including, without limitation, reasonable legal and other related costs) arising out of or in any way connected with the Registrant's use of the Services, including without limitation the Registrant's use of any Domain Name Registration, the Registrant's violation of the Registrant Agreement or Registry PRP, or the Registrant's violation of any rights of another person.
+If a Claim is made, or CIRA believes a Claim is likely, CIRA may seek written assurances from the Registrant concerning their obligation to indemnify CIRA. The Registrant acknowledges and agrees that its failure to provide those assurances may be considered by CIRA to be a material breach of this Agreement.
+CIRA shall have the right to participate in any defence by the Registrant of a third-party claim, with counsel of CIRA's choice at CIRA's own expense. CIRA shall reasonably cooperate in the defence at the Registrant's request and expense. The Registrant must receive CIRA's prior written consent regarding any related settlement of a Claim.
+
+Independent Contractors. The legal relationship between CIRA and the Registrant and CIRA and each Registrar of Record is that of independent contractors. Under no circumstances shall this Agreement be construed to create a partnership, agency or joint venture between CIRA and the Registrant or CIRA and any Registrar(s) of Record.
+
+No Agency. Neither party shall have any right, power or authority to act on behalf of the other party and neither party shall create any express or implied obligations or financial commitments on behalf of the other party.
+
+Registrant Bound as a Principal. The Registrant agrees that the Registrant is bound as a principal by all of the terms and conditions of this Agreement, and the Registry PRP, notwithstanding that the Registrar of Record and/or an agent of the Registrant applied for the registration of the Registrant's selected Domain Name(s) on behalf of the Registrant. The continued registration of the Registrant's Domain Name Registrations shall ratify any unauthorized actions of the Registrar of Record and any such agent. In addition, the Registrant is responsible for any errors made by the Registrar of Record or any such agent.
+
+Notices. Any notice or other communication provided hereunder shall be in writing. Notices from CIRA to the Registrant shall be sent only by email to the email addresses listed in the Registration Information for the Registrant and/or the Registrant's Administrative Contact, and will be deemed to have been given and received on the date on which they are sent. Notices from the Registrant to CIRA shall be sent by: (a) personal delivery, (b) courier, or (c) confirmed facsimile transmission, addressed to: General Counsel, CIRA 350 Sparks Street, Suite 306, Ottawa, Ontario K1R 7S8 and shall be effective on the earlier of: (i) confirmation of receipt or (ii) three days after the date of posting or transmission.
+
+Time of Essence. Time is of the essence in this Agreement
+
+Further Assurances. Each party will promptly do, execute, deliver or cause to be done, executed and delivered all further acts, documents and things in connection with this Agreement that the other party may reasonably require, for the purposes of giving effect to this Agreement.
+
+Successors and Assigns. This Agreement will enure to the benefit of, and be binding on, the parties and their respective administrators, executors or other legal representatives, successors and permitted and qualified assigns. CIRA may assign or transfer all or any part of its rights and obligations under this Agreement to any person The Registrant shall not assign or transfer, whether absolutely, by way of security or otherwise, all or any part of its rights or obligations under this Agreement without the prior written consent of CIRA, which consent shall be in CIRA’s sole discretion. Any such purported assignment or transfer, or attempt to so assign and transfer without CIRA’s prior written consent, shall be of no force and effect.
+
+Entire Agreement. This Agreement (including the Registry PRP which are incorporated by reference herein) constitutes the entire agreement between the parties pertaining to the subject matter of this Agreement and supersedes all prior agreements, understandings, negotiations and discussions, whether oral or written. There are no conditions, warranties, representations or other agreements between the parties in connection with the subject matter of this Agreement (whether oral or written, express or implied, statutory or otherwise) except as specifically set out in this Agreement.
+
+Waiver. A waiver of any default, breach or non-compliance under this Agreement is not effective unless in writing and signed by the party to be bound by the waiver. No waiver will be inferred from or implied by any failure to act or delay in acting by a party in respect of any default, breach or non-observance or by anything done or omitted to be done by the other party. The waiver by a party of any default, breach or non-compliance under this Agreement will not operate as a waiver of that party’s rights under this Agreement in respect of any continuing or subsequent default, breach or non- observance (whether of the same or any other nature).
+
+Severability. Any provision of this Agreement which is prohibited or unenforceable in any jurisdiction will, as to that jurisdiction, be ineffective to the extent of such prohibition or unenforceability and will be severed from the balance of this Agreement, all without affecting the remaining provisions of this Agreement or affecting the validity or enforceability of such provision in any other jurisdiction.
+
+Governing Law; Attornment. This Agreement will be governed by and construed in accordance with the laws of the Province of Ontario and the laws of Canada applicable in that Province and will be treated, in all respects, as an Ontario contract. The Registrant agrees to submit to the personal and exclusive jurisdiction of a court of competent jurisdiction in the City of Ottawa in the Province of Ontario.
+
+Force Majeure. Neither party shall be deemed to be in default hereunder for any delay or failure to perform its obligations under this Agreement resulting from causes beyond its reasonable control. Each party will use its best efforts to anticipate such delays and failures, and to devise means to eliminate or minimize them.
+
+Remedies Cumulative. The rights and remedies of CIRA under this Agreement are cumulative and no exercise or enforcement by CIRA of any right or remedy hereunder shall preclude the exercise or enforcement by CIRA of any other right or remedy hereunder or to which it is otherwise entitled by law to enforce.
+
+Language. The parties to this Agreement have required that this Agreement and all deeds, documents and notices relating to this Agreement, be drawn up in the English language. Les parties aux présentes ont exigé que le présent contrat et tous autres contrats, documents ou avis afférents aux présentes soient rédigés en langue anglaise."
+ https://payments.google.com/payments/apis-secure/u/0/get_legal_document?ldi=350105#:~:text=Last%20modified%3A%20June,en%20langue%20anglaise.

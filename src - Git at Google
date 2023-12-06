@@ -1,0 +1,404 @@
+From: <Saved by Blink>
+Snapshot-Content-Location: https://chromium.googlesource.com/chromium/src/+/b38ecd5d70ab769f9c822c3f6c92a0760c96d309/.vpython3
+Subject: .vpython3 - chromium/src - Git at Google
+Date: Tue, 17 Oct 2023 05:28:17 -0000
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	type="text/html";
+	boundary="----MultipartBoundary--qKSBNEAoZGU9Kjvk8tfnfVBgBHrVfAJc9E9LL9dZ2e----"
+
+
+------MultipartBoundary--qKSBNEAoZGU9Kjvk8tfnfVBgBHrVfAJc9E9LL9dZ2e----
+Content-Type: text/html
+Content-ID: <frame-FEDB3813C3E47FCEEF13A359D86960A1@mhtml.blink>
+Content-Transfer-Encoding: binary
+Content-Location: https://chromium.googlesource.com/chromium/src/+/b38ecd5d70ab769f9c822c3f6c92a0760c96d309/.vpython3
+
+<!DOCTYPE html><html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>.vpython3 - chromium/src - Git at Google</title><link rel="stylesheet" type="text/css" href="https://chromium.googlesource.com/+static/base.css"><link rel="stylesheet" type="text/css" href="https://chromium.googlesource.com/+static/prettify/prettify.css"><!-- default customHeadTagPart --></head><body class="Site"><header class="Site-header"><div class="Header"><a class="Header-image" href="https://chromium.googlesource.com/"><img src="https://www.gstatic.com/images/branding/lockups/2x/lockup_git_color_108x24dp.png" width="108" height="24" alt="Google Git"></a><div class="Header-menu"> <a class="Header-menuItem" href="https://accounts.google.com/AccountChooser?faa=1&amp;service=gerritcodereview&amp;continue=https://chromium.googlesource.com/login/chromium/src/%2B/b38ecd5d70ab769f9c822c3f6c92a0760c96d309/.vpython3">Sign in</a> </div></div></header><div class="Site-content"><div class="Container "><div class="Breadcrumbs"><a class="Breadcrumbs-crumb" href="https://chromium.googlesource.com/?format=HTML">chromium</a> / <a class="Breadcrumbs-crumb" href="https://chromium.googlesource.com/chromium/">chromium</a> / <a class="Breadcrumbs-crumb" href="https://chromium.googlesource.com/chromium/src/">src</a> / <a class="Breadcrumbs-crumb" href="https://chromium.googlesource.com/chromium/src/+/b38ecd5d70ab769f9c822c3f6c92a0760c96d309">b38ecd5d70ab769f9c822c3f6c92a0760c96d309</a> / <a class="Breadcrumbs-crumb" href="https://chromium.googlesource.com/chromium/src/+/b38ecd5d70ab769f9c822c3f6c92a0760c96d309/">.</a> / <span class="Breadcrumbs-crumb">.vpython3</span></div><div class="u-sha1 u-monospace BlobSha1">blob: de296bc571e57cad6298e27447665eb07bf56082 [<a href="https://chromium.googlesource.com/chromium/src/+/b38ecd5d70ab769f9c822c3f6c92a0760c96d309/.vpython3">file</a>] [<a href="https://chromium.googlesource.com/chromium/src/+log/b38ecd5d70ab769f9c822c3f6c92a0760c96d309/.vpython3">log</a>] [<a href="https://chromium.googlesource.com/chromium/src/+blame/b38ecd5d70ab769f9c822c3f6c92a0760c96d309/.vpython3">blame</a>]</div><table class="FileContents"><tbody><tr class="u-pre u-monospace FileContents-line"><td class="u-lineNum u-noSelect FileContents-lineNum" data-line-number="1"></td><td class="FileContents-lineContents" id="1"><span class="com"># This is a vpython "spec" file.</span></td></tr><tr class="u-pre u-monospace FileContents-line"><td class="u-lineNum u-noSelect FileContents-lineNum" data-line-number="2"></td><td class="FileContents-lineContents" id="2"><span class="com">#</span></td></tr><tr class="u-pre u-monospace FileContents-line"><td class="u-lineNum u-noSelect FileContents-lineNum" data-line-number="3"></td><td class="FileContents-lineContents" id="3"><span class="com"># It describes patterns for python wheel dependencies of the python scripts in</span></td></tr><tr class="u-pre u-monospace FileContents-line"><td class="u-lineNum u-noSelect FileContents-lineNum" data-line-number="4"></td><td class="FileContents-lineContents" id="4"><span class="com"># the chromium repo, particularly for dependencies that have compiled components</span></td></tr><tr class="u-pre u-monospace FileContents-line"><td class="u-lineNum u-noSelect FileContents-lineNum" data-line-number="5"></td><td class="FileContents-lineContents" id="5"><span class="com"># (since pure-python dependencies can be easily vendored into third_party).</span></td></tr><tr class="u-pre u-monospace FileContents-line"><td class="u-lineNum u-noSelect FileContents-lineNum" data-line-number="6"></td><td class="FileContents-lineContents" id="6"><span class="com">#</span></td></tr><tr class="u-pre u-monospace FileContents-line"><td class="u-lineNum u-noSelect FileContents-lineNum" data-line-number="7"></td><td class="FileContents-lineContents" id="7"><span class="com"># When vpython is invoked, it finds this file and builds a python VirtualEnv,</span></td></tr><tr class="u-pre u-monospace FileContents-line"><td class="u-lineNum u-noSelect FileContents-lineNum" data-line-number="8"></td><td class="FileContents-lineContents" id="8"><span class="com"># containing all of the dependencies described in this file, fetching them from</span></td></tr><tr class="u-pre u-monospace FileContents-line"><td class="u-lineNum u-noSelect FileContents-lineNum" data-line-number="9"></td><td class="FileContents-lineContents" id="9"><span class="com"># CIPD (the "Chrome Infrastructure Package Deployer" service). Unlike `pip`,</span></td></tr><tr class="u-pre u-monospace FileContents-line"><td class="u-lineNum u-noSelect FileContents-lineNum" data-line-number="10"></td><td class="FileContents-lineContents" id="10"><span class="com"># this never requires the end-user machine to have a working python extension</span></td></tr><tr class="u-pre u-monospace FileContents-line"><td class="u-lineNum u-noSelect FileContents-lineNum" data-line-number="11"></td><td class="FileContents-lineContents" id="11"><span class="com"># compilation environment. All of these packages are built using:</span></td></tr><tr class="u-pre u-monospace FileContents-line"><td class="u-lineNum u-noSelect FileContents-lineNum" data-line-number="12"></td><td class="FileContents-lineContents" id="12"><span class="com">#   https://chromium.googlesource.com/infra/infra/+/master/infra/tools/dockerbuild/</span></td></tr><tr class="u-pre u-monospace FileContents-line"><td class="u-lineNum u-noSelect FileContents-lineNum" data-line-number="13"></td><td class="FileContents-lineContents" id="13"><span class="com">#</span></td></tr><tr class="u-pre u-monospace FileContents-line"><td class="u-lineNum u-noSelect FileContents-lineNum" data-line-number="14"></td><td class="FileContents-lineContents" id="14"><span class="com"># All python scripts in the repo share this same spec, to avoid dependency</span></td></tr><tr class="u-pre u-monospace FileContents-line"><td class="u-lineNum u-noSelect FileContents-lineNum" data-line-number="15"></td><td class="FileContents-lineContents" id="15"><span class="com"># fragmentation.</span></td></tr><tr class="u-pre u-monospace FileContents-line"><td class="u-lineNum u-noSelect FileContents-lineNum" data-line-number="16"></td><td class="FileContents-lineContents" id="16"><span class="com">#</span></td></tr><tr class="u-pre u-monospace FileContents-line"><td class="u-lineNum u-noSelect FileContents-lineNum" data-line-number="17"></td><td class="FileContents-lineContents" id="17"><span class="com"># If you have depot_tools installed in your $PATH, you can invoke python scripts</span></td></tr><tr class="u-pre u-monospace FileContents-line"><td class="u-lineNum u-noSelect FileContents-lineNum" data-line-number="18"></td><td class="FileContents-lineContents" id="18"><span class="com"># in this repo by running them as you normally would run them, except</span></td></tr><tr class="u-pre u-monospace FileContents-line"><td class="u-lineNum u-noSelect FileContents-lineNum" data-line-number="19"></td><td class="FileContents-lineContents" id="19"><span class="com"># substituting `vpython` instead of `python` on the command line, e.g.:</span></td></tr><tr class="u-pre u-monospace FileContents-line"><td class="u-lineNum u-noSelect FileContents-lineNum" data-line-number="20"></td><td class="FileContents-lineContents" id="20"><span class="com">#   vpython path/to/script.py some --arguments</span></td></tr><tr class="u-pre u-monospace FileContents-line"><td class="u-lineNum u-noSelect FileContents-lineNum" data-line-number="21"></td><td class="FileContents-lineContents" id="21"><span class="com">#</span></td></tr><tr class="u-pre u-monospace FileContents-line"><td class="u-lineNum u-noSelect FileContents-lineNum" data-line-number="22"></td><td class="FileContents-lineContents" id="22"><span class="com"># Read more about `vpython` and how to modify this file here:</span></td></tr><tr class="u-pre u-monospace FileContents-line"><td class="u-lineNum u-noSelect FileContents-lineNum" data-line-number="23"></td><td class="FileContents-lineContents" id="23"><span class="com">#   https://chromium.googlesource.com/infra/infra/+/master/doc/users/vpython.md</span></td></tr><tr class="u-pre u-monospace FileContents-line"><td class="u-lineNum u-noSelect FileContents-lineNum" data-line-number="24"></td><td class="FileContents-lineContents" id="24"></td></tr><tr class="u-pre u-monospace FileContents-line"><td class="u-lineNum u-noSelect FileContents-lineNum" data-line-number="25"></td><td class="FileContents-lineContents" id="25"><span class="pln">python_version</span><span class="pun">:</span><span class="pln"> </span><span class="str">"3.8"</span></td></tr><tr class="u-pre u-monospace FileContents-line"><td class="u-lineNum u-noSelect FileContents-lineNum" data-line-number="26"></td><td class="FileContents-lineContents" id="26"></td></tr><tr class="u-pre u-monospace FileContents-line"><td class="u-lineNum u-noSelect FileContents-lineNum" data-line-number="27"></td><td class="FileContents-lineContents" id="27"><span class="com"># TODO(https://crbug.com/898348): Add in necessary wheels as Python3 versions</span></td></tr><tr class="u-pre u-monospace FileContents-line"><td class="u-lineNum u-noSelect FileContents-lineNum" data-line-number="28"></td><td class="FileContents-lineContents" id="28"><span class="com"># become available.</span></td></tr><tr class="u-pre u-monospace FileContents-line"><td class="u-lineNum u-noSelect FileContents-lineNum" data-line-number="29"></td><td class="FileContents-lineContents" id="29"><span class="pln">wheel</span><span class="pun">:</span><span class="pln"> </span><span class="pun">&lt;</span></td></tr><tr class="u-pre u-monospace FileContents-line"><td class="u-lineNum u-noSelect FileContents-lineNum" data-line-number="30"></td><td class="FileContents-lineContents" id="30"><span class="pln">  name</span><span class="pun">:</span><span class="pln"> </span><span class="str">"infra/python/wheels/six-py2_py3"</span></td></tr><tr class="u-pre u-monospace FileContents-line"><td class="u-lineNum u-noSelect FileContents-lineNum" data-line-number="31"></td><td class="FileContents-lineContents" id="31"><span class="pln">  version</span><span class="pun">:</span><span class="pln"> </span><span class="str">"version:1.15.0"</span></td></tr><tr class="u-pre u-monospace FileContents-line"><td class="u-lineNum u-noSelect FileContents-lineNum" data-line-number="32"></td><td class="FileContents-lineContents" id="32"><span class="pun">&gt;</span></td></tr><tr class="u-pre u-monospace FileContents-line"><td class="u-lineNum u-noSelect FileContents-lineNum" data-line-number="33"></td><td class="FileContents-lineContents" id="33"></td></tr><tr class="u-pre u-monospace FileContents-line"><td class="u-lineNum u-noSelect FileContents-lineNum" data-line-number="34"></td><td class="FileContents-lineContents" id="34"><span class="com"># Common utilities.</span></td></tr><tr class="u-pre u-monospace FileContents-line"><td class="u-lineNum u-noSelect FileContents-lineNum" data-line-number="35"></td><td class="FileContents-lineContents" id="35"><span class="pln">wheel</span><span class="pun">:</span><span class="pln"> </span><span class="pun">&lt;</span></td></tr><tr class="u-pre u-monospace FileContents-line"><td class="u-lineNum u-noSelect FileContents-lineNum" data-line-number="36"></td><td class="FileContents-lineContents" id="36"><span class="pln">  name</span><span class="pun">:</span><span class="pln"> </span><span class="str">"infra/python/wheels/psutil/${platform}_${py_python}_${py_abi}"</span></td></tr><tr class="u-pre u-monospace FileContents-line"><td class="u-lineNum u-noSelect FileContents-lineNum" data-line-number="37"></td><td class="FileContents-lineContents" id="37"><span class="pln">  version</span><span class="pun">:</span><span class="pln"> </span><span class="str">"version:5.7.2"</span></td></tr><tr class="u-pre u-monospace FileContents-line"><td class="u-lineNum u-noSelect FileContents-lineNum" data-line-number="38"></td><td class="FileContents-lineContents" id="38"><span class="pun">&gt;</span></td></tr><tr class="u-pre u-monospace FileContents-line"><td class="u-lineNum u-noSelect FileContents-lineNum" data-line-number="39"></td><td class="FileContents-lineContents" id="39"><span class="pln">wheel</span><span class="pun">:</span><span class="pln"> </span><span class="pun">&lt;</span></td></tr><tr class="u-pre u-monospace FileContents-line"><td class="u-lineNum u-noSelect FileContents-lineNum" data-line-number="40"></td><td class="FileContents-lineContents" id="40"><span class="pln">  name</span><span class="pun">:</span><span class="pln"> </span><span class="str">"infra/python/wheels/requests-py2_py3"</span></td></tr><tr class="u-pre u-monospace FileContents-line"><td class="u-lineNum u-noSelect FileContents-lineNum" data-line-number="41"></td><td class="FileContents-lineContents" id="41"><span class="pln">  version</span><span class="pun">:</span><span class="pln"> </span><span class="str">"version:2.13.0"</span></td></tr><tr class="u-pre u-monospace FileContents-line"><td class="u-lineNum u-noSelect FileContents-lineNum" data-line-number="42"></td><td class="FileContents-lineContents" id="42"><span class="pun">&gt;</span></td></tr><tr class="u-pre u-monospace FileContents-line"><td class="u-lineNum u-noSelect FileContents-lineNum" data-line-number="43"></td><td class="FileContents-lineContents" id="43"></td></tr><tr class="u-pre u-monospace FileContents-line"><td class="u-lineNum u-noSelect FileContents-lineNum" data-line-number="44"></td><td class="FileContents-lineContents" id="44"><span class="com"># Used by various python unit tests.</span></td></tr><tr class="u-pre u-monospace FileContents-line"><td class="u-lineNum u-noSelect FileContents-lineNum" data-line-number="45"></td><td class="FileContents-lineContents" id="45"><span class="pln">wheel</span><span class="pun">:</span><span class="pln"> </span><span class="pun">&lt;</span></td></tr><tr class="u-pre u-monospace FileContents-line"><td class="u-lineNum u-noSelect FileContents-lineNum" data-line-number="46"></td><td class="FileContents-lineContents" id="46"><span class="pln">  name</span><span class="pun">:</span><span class="pln"> </span><span class="str">"infra/python/wheels/mock-py2_py3"</span></td></tr><tr class="u-pre u-monospace FileContents-line"><td class="u-lineNum u-noSelect FileContents-lineNum" data-line-number="47"></td><td class="FileContents-lineContents" id="47"><span class="pln">  version</span><span class="pun">:</span><span class="pln"> </span><span class="str">"version:2.0.0"</span></td></tr><tr class="u-pre u-monospace FileContents-line"><td class="u-lineNum u-noSelect FileContents-lineNum" data-line-number="48"></td><td class="FileContents-lineContents" id="48"><span class="pun">&gt;</span></td></tr><tr class="u-pre u-monospace FileContents-line"><td class="u-lineNum u-noSelect FileContents-lineNum" data-line-number="49"></td><td class="FileContents-lineContents" id="49"><span class="pln">wheel</span><span class="pun">:</span><span class="pln"> </span><span class="pun">&lt;</span></td></tr><tr class="u-pre u-monospace FileContents-line"><td class="u-lineNum u-noSelect FileContents-lineNum" data-line-number="50"></td><td class="FileContents-lineContents" id="50"><span class="pln">  name</span><span class="pun">:</span><span class="pln"> </span><span class="str">"infra/python/wheels/parameterized-py2_py3"</span></td></tr><tr class="u-pre u-monospace FileContents-line"><td class="u-lineNum u-noSelect FileContents-lineNum" data-line-number="51"></td><td class="FileContents-lineContents" id="51"><span class="pln">  version</span><span class="pun">:</span><span class="pln"> </span><span class="str">"version:0.7.1"</span></td></tr><tr class="u-pre u-monospace FileContents-line"><td class="u-lineNum u-noSelect FileContents-lineNum" data-line-number="52"></td><td class="FileContents-lineContents" id="52"><span class="pun">&gt;</span></td></tr><tr class="u-pre u-monospace FileContents-line"><td class="u-lineNum u-noSelect FileContents-lineNum" data-line-number="53"></td><td class="FileContents-lineContents" id="53"><span class="pln">wheel</span><span class="pun">:</span><span class="pln"> </span><span class="pun">&lt;</span></td></tr><tr class="u-pre u-monospace FileContents-line"><td class="u-lineNum u-noSelect FileContents-lineNum" data-line-number="54"></td><td class="FileContents-lineContents" id="54"><span class="pln">  name</span><span class="pun">:</span><span class="pln"> </span><span class="str">"infra/python/wheels/pbr-py2_py3"</span></td></tr><tr class="u-pre u-monospace FileContents-line"><td class="u-lineNum u-noSelect FileContents-lineNum" data-line-number="55"></td><td class="FileContents-lineContents" id="55"><span class="pln">  version</span><span class="pun">:</span><span class="pln"> </span><span class="str">"version:3.0.0"</span></td></tr><tr class="u-pre u-monospace FileContents-line"><td class="u-lineNum u-noSelect FileContents-lineNum" data-line-number="56"></td><td class="FileContents-lineContents" id="56"><span class="pun">&gt;</span></td></tr><tr class="u-pre u-monospace FileContents-line"><td class="u-lineNum u-noSelect FileContents-lineNum" data-line-number="57"></td><td class="FileContents-lineContents" id="57"></td></tr><tr class="u-pre u-monospace FileContents-line"><td class="u-lineNum u-noSelect FileContents-lineNum" data-line-number="58"></td><td class="FileContents-lineContents" id="58"><span class="com"># Used by:</span></td></tr><tr class="u-pre u-monospace FileContents-line"><td class="u-lineNum u-noSelect FileContents-lineNum" data-line-number="59"></td><td class="FileContents-lineContents" id="59"><span class="com">#   build/chromeos/test_runner.py</span></td></tr><tr class="u-pre u-monospace FileContents-line"><td class="u-lineNum u-noSelect FileContents-lineNum" data-line-number="60"></td><td class="FileContents-lineContents" id="60"><span class="pln">wheel</span><span class="pun">:</span><span class="pln"> </span><span class="pun">&lt;</span></td></tr><tr class="u-pre u-monospace FileContents-line"><td class="u-lineNum u-noSelect FileContents-lineNum" data-line-number="61"></td><td class="FileContents-lineContents" id="61"><span class="pln">  name</span><span class="pun">:</span><span class="pln"> </span><span class="str">"infra/python/wheels/jsonlines-py2_py3"</span></td></tr><tr class="u-pre u-monospace FileContents-line"><td class="u-lineNum u-noSelect FileContents-lineNum" data-line-number="62"></td><td class="FileContents-lineContents" id="62"><span class="pln">  version</span><span class="pun">:</span><span class="pln"> </span><span class="str">"version:1.2.0"</span></td></tr><tr class="u-pre u-monospace FileContents-line"><td class="u-lineNum u-noSelect FileContents-lineNum" data-line-number="63"></td><td class="FileContents-lineContents" id="63"><span class="pun">&gt;</span></td></tr><tr class="u-pre u-monospace FileContents-line"><td class="u-lineNum u-noSelect FileContents-lineNum" data-line-number="64"></td><td class="FileContents-lineContents" id="64"><span class="pln">wheel</span><span class="pun">:</span><span class="pln"> </span><span class="pun">&lt;</span></td></tr><tr class="u-pre u-monospace FileContents-line"><td class="u-lineNum u-noSelect FileContents-lineNum" data-line-number="65"></td><td class="FileContents-lineContents" id="65"><span class="pln">  name</span><span class="pun">:</span><span class="pln"> </span><span class="str">"infra/python/wheels/python-dateutil-py2_py3"</span></td></tr><tr class="u-pre u-monospace FileContents-line"><td class="u-lineNum u-noSelect FileContents-lineNum" data-line-number="66"></td><td class="FileContents-lineContents" id="66"><span class="pln">  version</span><span class="pun">:</span><span class="pln"> </span><span class="str">"version:2.7.3"</span></td></tr><tr class="u-pre u-monospace FileContents-line"><td class="u-lineNum u-noSelect FileContents-lineNum" data-line-number="67"></td><td class="FileContents-lineContents" id="67"><span class="pun">&gt;</span></td></tr><tr class="u-pre u-monospace FileContents-line"><td class="u-lineNum u-noSelect FileContents-lineNum" data-line-number="68"></td><td class="FileContents-lineContents" id="68"></td></tr><tr class="u-pre u-monospace FileContents-line"><td class="u-lineNum u-noSelect FileContents-lineNum" data-line-number="69"></td><td class="FileContents-lineContents" id="69"><span class="com"># Used by Web Platform Tests (WPT) codebase in</span></td></tr><tr class="u-pre u-monospace FileContents-line"><td class="u-lineNum u-noSelect FileContents-lineNum" data-line-number="70"></td><td class="FileContents-lineContents" id="70"><span class="com"># //third_party/blink/web_tests/external/wpt/tools/</span></td></tr><tr class="u-pre u-monospace FileContents-line"><td class="u-lineNum u-noSelect FileContents-lineNum" data-line-number="71"></td><td class="FileContents-lineContents" id="71"><span class="pln">wheel</span><span class="pun">:</span><span class="pln"> </span><span class="pun">&lt;</span></td></tr><tr class="u-pre u-monospace FileContents-line"><td class="u-lineNum u-noSelect FileContents-lineNum" data-line-number="72"></td><td class="FileContents-lineContents" id="72"><span class="pln">  name</span><span class="pun">:</span><span class="pln"> </span><span class="str">"infra/python/wheels/html5lib-py2_py3"</span></td></tr><tr class="u-pre u-monospace FileContents-line"><td class="u-lineNum u-noSelect FileContents-lineNum" data-line-number="73"></td><td class="FileContents-lineContents" id="73"><span class="pln">  version</span><span class="pun">:</span><span class="pln"> </span><span class="str">"version:1.0.1"</span></td></tr><tr class="u-pre u-monospace FileContents-line"><td class="u-lineNum u-noSelect FileContents-lineNum" data-line-number="74"></td><td class="FileContents-lineContents" id="74"><span class="pun">&gt;</span></td></tr><tr class="u-pre u-monospace FileContents-line"><td class="u-lineNum u-noSelect FileContents-lineNum" data-line-number="75"></td><td class="FileContents-lineContents" id="75"><span class="pln">wheel</span><span class="pun">:</span><span class="pln"> </span><span class="pun">&lt;</span></td></tr><tr class="u-pre u-monospace FileContents-line"><td class="u-lineNum u-noSelect FileContents-lineNum" data-line-number="76"></td><td class="FileContents-lineContents" id="76"><span class="pln">  name</span><span class="pun">:</span><span class="pln"> </span><span class="str">"infra/python/wheels/mozdebug-py2_py3"</span></td></tr><tr class="u-pre u-monospace FileContents-line"><td class="u-lineNum u-noSelect FileContents-lineNum" data-line-number="77"></td><td class="FileContents-lineContents" id="77"><span class="pln">  version</span><span class="pun">:</span><span class="pln"> </span><span class="str">"version:0.2"</span></td></tr><tr class="u-pre u-monospace FileContents-line"><td class="u-lineNum u-noSelect FileContents-lineNum" data-line-number="78"></td><td class="FileContents-lineContents" id="78"><span class="pun">&gt;</span></td></tr><tr class="u-pre u-monospace FileContents-line"><td class="u-lineNum u-noSelect FileContents-lineNum" data-line-number="79"></td><td class="FileContents-lineContents" id="79"><span class="pln">wheel</span><span class="pun">:</span><span class="pln"> </span><span class="pun">&lt;</span></td></tr><tr class="u-pre u-monospace FileContents-line"><td class="u-lineNum u-noSelect FileContents-lineNum" data-line-number="80"></td><td class="FileContents-lineContents" id="80"><span class="pln">  name</span><span class="pun">:</span><span class="pln"> </span><span class="str">"infra/python/wheels/mozinfo-py2_py3"</span></td></tr><tr class="u-pre u-monospace FileContents-line"><td class="u-lineNum u-noSelect FileContents-lineNum" data-line-number="81"></td><td class="FileContents-lineContents" id="81"><span class="pln">  version</span><span class="pun">:</span><span class="pln"> </span><span class="str">"version:1.2.2"</span></td></tr><tr class="u-pre u-monospace FileContents-line"><td class="u-lineNum u-noSelect FileContents-lineNum" data-line-number="82"></td><td class="FileContents-lineContents" id="82"><span class="pun">&gt;</span></td></tr><tr class="u-pre u-monospace FileContents-line"><td class="u-lineNum u-noSelect FileContents-lineNum" data-line-number="83"></td><td class="FileContents-lineContents" id="83"><span class="pln">wheel</span><span class="pun">:</span><span class="pln"> </span><span class="pun">&lt;</span></td></tr><tr class="u-pre u-monospace FileContents-line"><td class="u-lineNum u-noSelect FileContents-lineNum" data-line-number="84"></td><td class="FileContents-lineContents" id="84"><span class="pln">  name</span><span class="pun">:</span><span class="pln"> </span><span class="str">"infra/python/wheels/mozlog-py2_py3"</span></td></tr><tr class="u-pre u-monospace FileContents-line"><td class="u-lineNum u-noSelect FileContents-lineNum" data-line-number="85"></td><td class="FileContents-lineContents" id="85"><span class="pln">  version</span><span class="pun">:</span><span class="pln"> </span><span class="str">"version:7.1.0"</span></td></tr><tr class="u-pre u-monospace FileContents-line"><td class="u-lineNum u-noSelect FileContents-lineNum" data-line-number="86"></td><td class="FileContents-lineContents" id="86"><span class="pun">&gt;</span></td></tr><tr class="u-pre u-monospace FileContents-line"><td class="u-lineNum u-noSelect FileContents-lineNum" data-line-number="87"></td><td class="FileContents-lineContents" id="87"><span class="pln">wheel</span><span class="pun">:</span><span class="pln"> </span><span class="pun">&lt;</span></td></tr><tr class="u-pre u-monospace FileContents-line"><td class="u-lineNum u-noSelect FileContents-lineNum" data-line-number="88"></td><td class="FileContents-lineContents" id="88"><span class="pln">  name</span><span class="pun">:</span><span class="pln"> </span><span class="str">"infra/python/wheels/mozprocess-py2_py3"</span></td></tr><tr class="u-pre u-monospace FileContents-line"><td class="u-lineNum u-noSelect FileContents-lineNum" data-line-number="89"></td><td class="FileContents-lineContents" id="89"><span class="pln">  version</span><span class="pun">:</span><span class="pln"> </span><span class="str">"version:1.2.1"</span></td></tr><tr class="u-pre u-monospace FileContents-line"><td class="u-lineNum u-noSelect FileContents-lineNum" data-line-number="90"></td><td class="FileContents-lineContents" id="90"><span class="pun">&gt;</span></td></tr><tr class="u-pre u-monospace FileContents-line"><td class="u-lineNum u-noSelect FileContents-lineNum" data-line-number="91"></td><td class="FileContents-lineContents" id="91"><span class="pln">wheel</span><span class="pun">:</span><span class="pln"> </span><span class="pun">&lt;</span></td></tr><tr class="u-pre u-monospace FileContents-line"><td class="u-lineNum u-noSelect FileContents-lineNum" data-line-number="92"></td><td class="FileContents-lineContents" id="92"><span class="pln">  name</span><span class="pun">:</span><span class="pln"> </span><span class="str">"infra/python/wheels/urllib3-py2_py3"</span></td></tr><tr class="u-pre u-monospace FileContents-line"><td class="u-lineNum u-noSelect FileContents-lineNum" data-line-number="93"></td><td class="FileContents-lineContents" id="93"><span class="pln">  version</span><span class="pun">:</span><span class="pln"> </span><span class="str">"version:1.24.3"</span></td></tr><tr class="u-pre u-monospace FileContents-line"><td class="u-lineNum u-noSelect FileContents-lineNum" data-line-number="94"></td><td class="FileContents-lineContents" id="94"><span class="pun">&gt;</span></td></tr><tr class="u-pre u-monospace FileContents-line"><td class="u-lineNum u-noSelect FileContents-lineNum" data-line-number="95"></td><td class="FileContents-lineContents" id="95"><span class="pln">wheel</span><span class="pun">:</span><span class="pln"> </span><span class="pun">&lt;</span></td></tr><tr class="u-pre u-monospace FileContents-line"><td class="u-lineNum u-noSelect FileContents-lineNum" data-line-number="96"></td><td class="FileContents-lineContents" id="96"><span class="pln">  name</span><span class="pun">:</span><span class="pln"> </span><span class="str">"infra/python/wheels/blessings-py2_py3"</span></td></tr><tr class="u-pre u-monospace FileContents-line"><td class="u-lineNum u-noSelect FileContents-lineNum" data-line-number="97"></td><td class="FileContents-lineContents" id="97"><span class="pln">  version</span><span class="pun">:</span><span class="pln"> </span><span class="str">"version:1.7"</span></td></tr><tr class="u-pre u-monospace FileContents-line"><td class="u-lineNum u-noSelect FileContents-lineNum" data-line-number="98"></td><td class="FileContents-lineContents" id="98"><span class="pun">&gt;</span></td></tr><tr class="u-pre u-monospace FileContents-line"><td class="u-lineNum u-noSelect FileContents-lineNum" data-line-number="99"></td><td class="FileContents-lineContents" id="99"><span class="pln">wheel</span><span class="pun">:</span><span class="pln"> </span><span class="pun">&lt;</span></td></tr><tr class="u-pre u-monospace FileContents-line"><td class="u-lineNum u-noSelect FileContents-lineNum" data-line-number="100"></td><td class="FileContents-lineContents" id="100"><span class="pln">  name</span><span class="pun">:</span><span class="pln"> </span><span class="str">"infra/python/wheels/mozfile-py2_py3"</span></td></tr><tr class="u-pre u-monospace FileContents-line"><td class="u-lineNum u-noSelect FileContents-lineNum" data-line-number="101"></td><td class="FileContents-lineContents" id="101"><span class="pln">  version</span><span class="pun">:</span><span class="pln"> </span><span class="str">"version:2.0.0"</span></td></tr><tr class="u-pre u-monospace FileContents-line"><td class="u-lineNum u-noSelect FileContents-lineNum" data-line-number="102"></td><td class="FileContents-lineContents" id="102"><span class="pun">&gt;</span></td></tr><tr class="u-pre u-monospace FileContents-line"><td class="u-lineNum u-noSelect FileContents-lineNum" data-line-number="103"></td><td class="FileContents-lineContents" id="103"><span class="pln">wheel</span><span class="pun">:</span><span class="pln"> </span><span class="pun">&lt;</span></td></tr><tr class="u-pre u-monospace FileContents-line"><td class="u-lineNum u-noSelect FileContents-lineNum" data-line-number="104"></td><td class="FileContents-lineContents" id="104"><span class="pln">  name</span><span class="pun">:</span><span class="pln"> </span><span class="str">"infra/python/wheels/mozterm-py2_py3"</span></td></tr><tr class="u-pre u-monospace FileContents-line"><td class="u-lineNum u-noSelect FileContents-lineNum" data-line-number="105"></td><td class="FileContents-lineContents" id="105"><span class="pln">  version</span><span class="pun">:</span><span class="pln"> </span><span class="str">"version:1.0.0"</span></td></tr><tr class="u-pre u-monospace FileContents-line"><td class="u-lineNum u-noSelect FileContents-lineNum" data-line-number="106"></td><td class="FileContents-lineContents" id="106"><span class="pun">&gt;</span></td></tr><tr class="u-pre u-monospace FileContents-line"><td class="u-lineNum u-noSelect FileContents-lineNum" data-line-number="107"></td><td class="FileContents-lineContents" id="107"><span class="pln">wheel</span><span class="pun">:</span><span class="pln"> </span><span class="pun">&lt;</span></td></tr><tr class="u-pre u-monospace FileContents-line"><td class="u-lineNum u-noSelect FileContents-lineNum" data-line-number="108"></td><td class="FileContents-lineContents" id="108"><span class="pln">  name</span><span class="pun">:</span><span class="pln"> </span><span class="str">"infra/python/wheels/webencodings-py2_py3"</span></td></tr><tr class="u-pre u-monospace FileContents-line"><td class="u-lineNum u-noSelect FileContents-lineNum" data-line-number="109"></td><td class="FileContents-lineContents" id="109"><span class="pln">  version</span><span class="pun">:</span><span class="pln"> </span><span class="str">"version:0.5.1"</span></td></tr><tr class="u-pre u-monospace FileContents-line"><td class="u-lineNum u-noSelect FileContents-lineNum" data-line-number="110"></td><td class="FileContents-lineContents" id="110"><span class="pun">&gt;</span></td></tr><tr class="u-pre u-monospace FileContents-line"><td class="u-lineNum u-noSelect FileContents-lineNum" data-line-number="111"></td><td class="FileContents-lineContents" id="111"><span class="pln">wheel</span><span class="pun">:</span><span class="pln"> </span><span class="pun">&lt;</span></td></tr><tr class="u-pre u-monospace FileContents-line"><td class="u-lineNum u-noSelect FileContents-lineNum" data-line-number="112"></td><td class="FileContents-lineContents" id="112"><span class="pln">  name</span><span class="pun">:</span><span class="pln"> </span><span class="str">"infra/python/wheels/certifi-py2_py3"</span></td></tr><tr class="u-pre u-monospace FileContents-line"><td class="u-lineNum u-noSelect FileContents-lineNum" data-line-number="113"></td><td class="FileContents-lineContents" id="113"><span class="pln">  version</span><span class="pun">:</span><span class="pln"> </span><span class="str">"version:2020.11.8"</span></td></tr><tr class="u-pre u-monospace FileContents-line"><td class="u-lineNum u-noSelect FileContents-lineNum" data-line-number="114"></td><td class="FileContents-lineContents" id="114"><span class="pun">&gt;</span></td></tr><tr class="u-pre u-monospace FileContents-line"><td class="u-lineNum u-noSelect FileContents-lineNum" data-line-number="115"></td><td class="FileContents-lineContents" id="115"><span class="pln">wheel</span><span class="pun">:</span><span class="pln"> </span><span class="pun">&lt;</span></td></tr><tr class="u-pre u-monospace FileContents-line"><td class="u-lineNum u-noSelect FileContents-lineNum" data-line-number="116"></td><td class="FileContents-lineContents" id="116"><span class="pln">  name</span><span class="pun">:</span><span class="pln"> </span><span class="str">"infra/python/wheels/chardet-py2_py3"</span></td></tr><tr class="u-pre u-monospace FileContents-line"><td class="u-lineNum u-noSelect FileContents-lineNum" data-line-number="117"></td><td class="FileContents-lineContents" id="117"><span class="pln">  version</span><span class="pun">:</span><span class="pln"> </span><span class="str">"version:3.0.4"</span></td></tr><tr class="u-pre u-monospace FileContents-line"><td class="u-lineNum u-noSelect FileContents-lineNum" data-line-number="118"></td><td class="FileContents-lineContents" id="118"><span class="pun">&gt;</span></td></tr><tr class="u-pre u-monospace FileContents-line"><td class="u-lineNum u-noSelect FileContents-lineNum" data-line-number="119"></td><td class="FileContents-lineContents" id="119"><span class="pln">wheel</span><span class="pun">:</span><span class="pln"> </span><span class="pun">&lt;</span></td></tr><tr class="u-pre u-monospace FileContents-line"><td class="u-lineNum u-noSelect FileContents-lineNum" data-line-number="120"></td><td class="FileContents-lineContents" id="120"><span class="pln">  name</span><span class="pun">:</span><span class="pln"> </span><span class="str">"infra/python/wheels/idna-py2_py3"</span></td></tr><tr class="u-pre u-monospace FileContents-line"><td class="u-lineNum u-noSelect FileContents-lineNum" data-line-number="121"></td><td class="FileContents-lineContents" id="121"><span class="pln">  version</span><span class="pun">:</span><span class="pln"> </span><span class="str">"version:2.8"</span></td></tr><tr class="u-pre u-monospace FileContents-line"><td class="u-lineNum u-noSelect FileContents-lineNum" data-line-number="122"></td><td class="FileContents-lineContents" id="122"><span class="pun">&gt;</span></td></tr><tr class="u-pre u-monospace FileContents-line"><td class="u-lineNum u-noSelect FileContents-lineNum" data-line-number="123"></td><td class="FileContents-lineContents" id="123"><span class="pln">wheel</span><span class="pun">:</span><span class="pln"> </span><span class="pun">&lt;</span></td></tr><tr class="u-pre u-monospace FileContents-line"><td class="u-lineNum u-noSelect FileContents-lineNum" data-line-number="124"></td><td class="FileContents-lineContents" id="124"><span class="pln">  name</span><span class="pun">:</span><span class="pln"> </span><span class="str">"infra/python/wheels/distro-py2_py3"</span></td></tr><tr class="u-pre u-monospace FileContents-line"><td class="u-lineNum u-noSelect FileContents-lineNum" data-line-number="125"></td><td class="FileContents-lineContents" id="125"><span class="pln">  version</span><span class="pun">:</span><span class="pln"> </span><span class="str">"version:1.4.0"</span></td></tr><tr class="u-pre u-monospace FileContents-line"><td class="u-lineNum u-noSelect FileContents-lineNum" data-line-number="126"></td><td class="FileContents-lineContents" id="126"><span class="pun">&gt;</span></td></tr><tr class="u-pre u-monospace FileContents-line"><td class="u-lineNum u-noSelect FileContents-lineNum" data-line-number="127"></td><td class="FileContents-lineContents" id="127"></td></tr></tbody></table></div> <!-- Container --></div> <!-- Site-content --><footer class="Site-footer"><div class="Footer"><span class="Footer-poweredBy">Powered by <a href="https://gerrit.googlesource.com/gitiles/">Gitiles</a>| <a href="https://policies.google.com/privacy">Privacy</a>| <a href="https://policies.google.com/terms">Terms</a></span><span class="Footer-formats"><a class="u-monospace Footer-formatsItem" href="https://chromium.googlesource.com/chromium/src/+/b38ecd5d70ab769f9c822c3f6c92a0760c96d309/.vpython3?format=TEXT">txt</a> <a class="u-monospace Footer-formatsItem" href="https://chromium.googlesource.com/chromium/src/+/b38ecd5d70ab769f9c822c3f6c92a0760c96d309/.vpython3?format=JSON">json</a></span></div></footer></body></html>
+------MultipartBoundary--qKSBNEAoZGU9Kjvk8tfnfVBgBHrVfAJc9E9LL9dZ2e----
+Content-Type: text/css
+Content-Transfer-Encoding: binary
+Content-Location: https://chromium.googlesource.com/+static/base.css
+
+@charset "utf-8";
+
+@import url("//fonts.googleapis.com/css?family=Open+Sans:300,400,700&subset=latin,cyrillic-ext,greek-ext,cyrillic,greek,vietnamese,latin-ext");
+
+@import url("//fonts.googleapis.com/css?family=Source+Code+Pro");
+
+*, ::after, ::before { box-sizing: border-box; margin: 0px; padding: 0px; }
+
+h1, h2, h3, h4, h5, h6 { font-weight: normal; margin: 0.25em 0px 0.5em; }
+
+h1 { font-size: 2em; }
+
+h2 { font-size: 1.5em; }
+
+h3 { font-size: 1.3em; }
+
+h4, h5, h6 { font-size: 14px; font-style: italic; }
+
+ul, ol { list-style: none; }
+
+.u-sha1 { background-color: rgb(241, 242, 243); color: rgb(0, 0, 0); font-size: 13px; }
+
+.u-pre { font-size: 10pt; white-space: pre; }
+
+.u-lineNum { border-right: 1px solid rgb(241, 242, 243); color: rgb(102, 102, 102); display: inline-block; min-width: 3em; text-align: right; }
+
+.u-noSelect { user-select: none; }
+
+.u-monospace { font-family: "Source Code Pro", monospace; }
+
+.Site { background: rgb(255, 255, 255); color: rgb(0, 0, 0); display: flex; font: 14px / 1.54 "Open Sans", sans-serif; min-height: 100vh; -webkit-box-orient: vertical; -webkit-box-direction: normal; flex-direction: column; }
+
+.Site-header, .Site-footer { background: rgb(238, 238, 238); -webkit-box-flex: 0; flex: 0 0 auto; }
+
+.Site-header--withNavbar { background: rgb(255, 255, 255); }
+
+.Site-content { -webkit-box-flex: 1; flex: 1 0 auto; padding: 20px; }
+
+.Container { margin: 0px auto; max-width: 980px; }
+
+.Container--fullWidth { max-width: none; }
+
+.Header, .Footer { -webkit-box-align: center; align-items: center; display: flex; padding: 20px; }
+
+.Site-header--withNavbar .Header { max-width: 1020px; margin: 0px auto; padding: 10px 20px; }
+
+.Header-title, .Header-image { display: flex; -webkit-box-flex: 1; flex: 1 1 0%; }
+
+.Header-anchor { color: rgb(102, 102, 102); font-size: 32px; font-weight: 300; text-decoration: none; }
+
+.Header-anchorLogo { display: inline-block; margin-right: 10px; vertical-align: middle; }
+
+.Header-nav { background: rgb(238, 238, 238); padding: 15px 0px; }
+
+.Header-menu { display: flex; -webkit-box-pack: end; justify-content: flex-end; }
+
+.Header-menuItem { color: rgb(0, 0, 238); display: inline-block; margin-left: 15px; }
+
+.Header-menuItem--noAction { color: inherit; }
+
+.Breadcrumbs { font-size: 18px; margin-bottom: 20px; }
+
+.Breadcrumbs-crumb { color: rgb(0, 0, 238); }
+
+.Breadcrumbs-crumb:last-child { color: rgb(0, 0, 0); font-weight: bold; }
+
+.Footer { color: rgb(102, 102, 102); }
+
+.Footer-poweredBy { -webkit-box-flex: 1; flex: 1 1 0%; }
+
+.Footer-formats, .Footer-links { display: flex; -webkit-box-pack: end; justify-content: flex-end; }
+
+.Footer-formatsItem { display: inline-block; }
+
+.Footer-formatsItem:first-child { margin-right: 20px; }
+
+.Footer-link { display: inline-block; margin-left: 10px; }
+
+.RepoList-item { display: flex; left: -10px; padding: 5px 0px 5px 10px; position: relative; white-space: nowrap; width: calc(100% + 20px); }
+
+.RepoList-item:link, .RepoList-item:visited { text-decoration: none; }
+
+.RepoList-item:hover { background: rgb(238, 238, 238); }
+
+.RepoList-item--header { font-weight: bold; margin: 0px; }
+
+.RepoList-item--header:hover { background: rgb(255, 255, 255); }
+
+.RepoList-itemName, .RepoList-itemDescription { display: inline-block; }
+
+.RepoList-itemName { margin-right: 10px; min-width: 25%; text-decoration: underline; }
+
+.RepoList-item--header > .RepoList-itemName { text-decoration: none; }
+
+.RepoList-itemDescription { color: rgb(0, 0, 0); -webkit-box-flex: 1; flex: 1 1 0%; overflow: hidden; text-overflow: ellipsis; }
+
+.RepoDescription { margin: 10px 0px; }
+
+.RepoMirroredFrom { margin: 10px 0px; color: rgb(102, 102, 102); }
+
+.CloneRepo { background: rgb(238, 238, 238); margin-bottom: 20px; padding: 10px; }
+
+.CloneRepo-title { margin-bottom: 2px; }
+
+.CloneRepo-command { border: 1px solid rgb(204, 204, 204); border-radius: 4px; display: block; font-size: inherit; padding: 10px; width: 100%; }
+
+.RepoShortlog { display: flex; }
+
+.RepoShortlog-refs { width: 20%; -webkit-box-flex: 0 !important; flex: 0 0 auto !important; }
+
+.RepoShortlog-refs > .RefList:first-child { margin: 0px; }
+
+.RepoShortlog-log { -webkit-box-flex: 1; flex: 1 1 0%; width: 80%; }
+
+.RepoIndexDoc { border-top: 1px solid rgb(221, 221, 221); margin-top: 20px; padding-top: 5px; }
+
+.EmptyRepo-description { font-size: 14px; font-style: italic; }
+
+@media (max-width: 550px) {
+  .RepoShortlog { -webkit-box-orient: vertical; -webkit-box-direction: normal; flex-direction: column; }
+  .RepoShortlog-refs { width: auto; border-bottom: 1px solid rgb(221, 221, 221); margin-bottom: 20px; padding-bottom: 20px; }
+  .RepoShortlog-refs > .RefList:last-child { margin-bottom: 0px; }
+  .RepoShortlog-log { width: auto; }
+}
+
+.RefList { margin: 15px 0px; }
+
+.RefList-title { margin: 0px; }
+
+.RefList-items { overflow-wrap: break-word; }
+
+.RefList-item { padding: 2px 0px; }
+
+@media (max-width: 550px) {
+  .RefList--responsive .RefList-item { display: inline-block; margin-right: 6px; }
+}
+
+.LogNav { margin: 10px 0px; text-align: center; }
+
+.CommitLog-item { padding: 2px 0px; }
+
+.CommitLog-item--oneline:hover { background: rgb(238, 238, 238); }
+
+.CommitLog-item--full { margin-bottom: 20px; }
+
+.CommitLog-item--empty { padding: 10px 0px; text-align: center; }
+
+.CommitLog-sha1 { border-radius: 3px; display: inline-block; margin-right: 3px; padding: 2px 4px; text-align: center; }
+
+.CommitLog-time { color: rgb(102, 102, 102); }
+
+.CommitLog-branchLabel { color: rgb(221, 75, 57); }
+
+.CommitLog-tagLabel { color: rgb(0, 153, 51); }
+
+.CommitLog-rename { font-size: 0.9em; display: block; padding-left: 5px; }
+
+.Metadata { margin-bottom: 15px; }
+
+.Metadata-title { font-weight: bold; padding-right: 10px; text-align: right; }
+
+.MetadataMessage { background-color: rgb(250, 250, 250); border: 1px solid rgb(204, 204, 204); color: rgb(0, 0, 0); margin: 0px; padding: 12px; white-space: pre-wrap; }
+
+.DiffTree { margin: 10px 0px 5px; }
+
+.DiffTree-action { margin-left: 0.5em; }
+
+.DiffTree-action--add { color: rgb(0, 102, 0); }
+
+.DiffTree-action--delete { color: rgb(102, 0, 0); }
+
+.DiffTree-action--rename, .DiffTree-action--copy { color: rgb(0, 0, 102); }
+
+.TreeDetail-sha1, .BlobSha1 { margin: 10px 0px; padding: 5px 10px; }
+
+.FileList { margin-left: 25px; }
+
+.FileList-item { padding: 1px 0px; position: relative; }
+
+.FileList-item:hover { background: rgb(238, 238, 238); }
+
+.FileList-item::before { left: -22px; position: absolute; top: 4px; }
+
+.FileList-itemLink { display: block; }
+
+.FileList-item--gitTree::before { content: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAN1wAADdcBQiibeAAAAb5JREFUOMulkr1KA0EQgGdvTwwnYmER0gQsrFKmSy+pLESw9Qm0F/ICNnba+h6iEOuAEWslKJKTOyJJvIT72d1xZuOFC0giOLA77O7Mt/PnNptN+I+49Xr9GhH3f3mb0v1ht9vtLAUYYw5ItkgDL3KyD8PhcLvdbl/WarXT3DjLMnAcR/f7/YfxeKwtgC5RKQVhGILWeg4hQ6hUKjWyucmhLFEUuWR3QYBWAZABQ9i5CCmXy16pVALP80BKaaG+70MQBLvzFMjRKKXh8j6FSYKF7ITdEWLa4/ktokN74wiqjSMpnVcbQZqmEJHz+ckeCPFjWKwULpyspAqhdXVXdcnZcPjsIgn+2BsVA8jVYuWlgJ3yBj0icgq2uoK+lg4t+ZvLomSKamSQ4AI5BcMADtMhyNoSgNIISUaFNtwlazcDcBc4gjjVwCWid2usCWroYEhnaqbzFJLUzAHIXRDChXCcQP8zhkSZ5eNLgHAUzwDcRu4CoIRn/wsGUQIIy4Vr9TH6SYFCNzw4nALn5627K4vIttOUOwfa5YnrDYzt/9OLv9I5l8kk5hZ3XLO20b7tbR7zHLy/BX8G0IeBEM7ZN1NGIaFUaKLgAAAAAElFTkSuQmCC"); }
+
+.FileList-item--symlink::before { content: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAA3XAAAN1wFCKJt4AAABZUlEQVQ4y2NgIAL4zWL7D8TGDOQCqAEg7Ey2Aes+58AMcSSkmB2I3YB4HhCfh9kOMoCgIUAJMyDe2D+b58jKe553133M+r/uU/b/zV+L/y97n/i/+JIYbkOAAl5AfGLNTde/69+n/1/4MuD/gtsqKBhkALIh5S0M1jDN2kC8a+UNt/8b36f+X3JP5f/0u1pwjeuvS8E1g3DpZQm4ITAD5s09ZPBq49uE/0vvq4E1gPCJC5z/yy+IoGgG4a5HJqjeCJ3Pc2vjy+T/ux4Y/j99Rfz/7GtK/xfeUkbBN+8pY9cMAkFzuT5uepPy/+w1lf+TF3L/Q4p3OD5zRQ67Zlg873vk9n/mMlaQ5EcgLgZiA2R5nJphCjbfNP8LVeCBJyUa40xpO+5afQXS/8jKC0DJg+uPKx+bOJf1HDYXEJPW46JW8LcduKYzbdZMph4gn4ccQxSAOAuIo4FYdvsKFpYdK1iYCekDACq5JXDHGJhDAAAAAElFTkSuQmCC"); }
+
+.FileList-item--regularFile::before { content: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAtElEQVQ4ja2TSw7CIBRFu0r3wyIYsAMHDl1CC92IDqC0wAbQi4Fo5VOMJGcAyT33vQEDY+xCCPGdnIZ48NB7kPkSLMvipZQBpVQC70Br7Y0xZQGC4zj6aZoCnPMPhBBtwb41NoN1XesCBHPNhyfI7fziFu6HJti3IgS0vrcFuZ3Btm2JpmC/M5jnOdEU5JoRstYmigKES80x7JyrC+IE7+1xAoSrgp//AqX02vsbn5nz8K/zAP9CzjbgFoHjAAAAAElFTkSuQmCC"); }
+
+.FileList-item--executableFile::before { content: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA7ADsAOwdIxY2AAAACXBIWXMAAAsTAAALEwEAmpwYAAABOklEQVQ4T5WTTYqDQBBGPdKcZnIJdy7EVRByBQPi0iwHAlGT0YBHcG82kkV2VnffoKar7FYzIQYLPtqffq+rEJ04jn/CMMSV+XZs0YO1RcyLoO/7MdAD9gAI8wiK+CyYA0IDFABhrmFBAHNYbwYTIxFyWN8KwAiEmIEaknqVUposCoBBGE8cIGUipUKp5IJAzOe2JxI0pG1b3Gw2+Hg8FjoQzy0rLVAavt0GuGkaXrfb7avAzs0CNcHtDD4ejwzTve/7X/9GGFqn2QmkDmzbBJ9OJ8yyDNM0Rdd1J8mzgDqQPDNJLFwUBZ7PZ7xcLizwPI9gfj+NYAX2k+kx7vc7byrLEquqwuv1ivv9HpMk4ec6Uwfvqus63lzXNeZ5zoIRpoqiKP/09wVBwNDhcOB1t9v9OmuLTnw62dQfVIHPYx/I/0kAAAAASUVORK5CYII="); }
+
+.FileList-item--gitlink::before { content: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAA3XAAAN1wFCKJt4AAABO0lEQVQ4T7WT3U6EMBCF92m99yGMZuODGL01eueyXqjvwc+WUlooUPkfZxq3sQEvJLHJSQvlfDOnDbub/dUFCrZof3t9uaPF1kFeBwjD8E+apukfAVEUQRzHkCQJJKfEznES43tUGP0OIOMheIGn50e4f7izCo4H4GkKDEXPBIviCIZh8AFkfv94g5Qx4Jw7AOn4Grh1iqATdrUAEJmxFLIsgzzPQSnpQc4SIkMIh7ZtfQCjys6soNQlVFW1AEgpQWQCjDE+gHIKIaxZo7mu69UOiqJwRXxAxnFDQllS5XUzSeO+kmoJoOzUni41NE1tM9JBTdMII85d14FpjI2lihUA9wCNA8zzDOM4WkBjvgFqrQO8ulzmNgLl/8SPyTT0WL3vLLBGsNZ6HUBV1tT3vROd/Fk/AZt/Z/J+AUN8ayghXmezAAAAAElFTkSuQmCC"); }
+
+.FileContents { border-collapse: collapse; border-spacing: 0px; margin: 10px 0px; }
+
+.FileContents-line { border: none; }
+
+.FileContents-lineNum { padding-right: 10px; width: 1%; }
+
+.FileContents-lineNum::before { color: rgb(170, 170, 170); content: attr(data-line-number); cursor: pointer; }
+
+.FileContents-lineContents { line-height: 1.3em; min-height: 1em; padding-left: 10px; }
+
+.FileContents-lineContents:target { background: rgb(207, 216, 220); }
+
+.InlineReadme { border-top: 1px solid rgb(221, 221, 221); margin: 10px 0px; padding: 7px 0px; }
+
+.InlineReadme-path { color: rgb(102, 102, 102); }
+
+.Blame { border-collapse: collapse; font-size: 8pt; margin: 0px auto; }
+
+.Blame-region--bg1 { background: rgb(255, 255, 255); }
+
+.Blame-region--bg2 { background: rgb(241, 242, 243); }
+
+.Blame-sha1, .Blame-author, .Blame-time, .Blame-regionLink { font-size: 8pt; padding: 0px 3px; white-space: nowrap; }
+
+.Blame-regionLink { text-align: right; }
+
+.Blame-lineNum .u-lineNum { padding: 0px 8px; text-align: right; }
+
+.Blame-lineNum:hover { text-decoration: underline; }
+
+.Blame-lineContent { font-size: 9pt; line-height: 1.3em; padding: 0px 8px; }
+
+.Diff { margin: 10px 0px; }
+
+.Diff-fileIndex { color: rgb(68, 68, 68); font-weight: bold; }
+
+.Diff-unified { border-bottom: 1px solid rgb(221, 221, 221); border-top: 1px solid rgb(221, 221, 221); padding: 10px 0px; }
+
+.Diff-hunk { color: rgb(0, 0, 204); }
+
+.Diff-delete { color: rgb(204, 0, 0); }
+
+.Diff-insert { color: rgb(0, 136, 0); }
+
+sentinel { }
+------MultipartBoundary--qKSBNEAoZGU9Kjvk8tfnfVBgBHrVfAJc9E9LL9dZ2e----
+Content-Type: text/css
+Content-Transfer-Encoding: binary
+Content-Location: https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&subset=latin,cyrillic-ext,greek-ext,cyrillic,greek,vietnamese,latin-ext
+
+@charset "utf-8";
+
+@font-face { font-family: "Open Sans"; font-style: normal; font-weight: 300; font-stretch: 100%; src: url("https://fonts.gstatic.com/s/opensans/v36/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSKmu0SC55K5gw.woff2") format("woff2"); unicode-range: U+460-52F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F; }
+
+@font-face { font-family: "Open Sans"; font-style: normal; font-weight: 300; font-stretch: 100%; src: url("https://fonts.gstatic.com/s/opensans/v36/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSumu0SC55K5gw.woff2") format("woff2"); unicode-range: U+301, U+400-45F, U+490-491, U+4B0-4B1, U+2116; }
+
+@font-face { font-family: "Open Sans"; font-style: normal; font-weight: 300; font-stretch: 100%; src: url("https://fonts.gstatic.com/s/opensans/v36/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSOmu0SC55K5gw.woff2") format("woff2"); unicode-range: U+1F00-1FFF; }
+
+@font-face { font-family: "Open Sans"; font-style: normal; font-weight: 300; font-stretch: 100%; src: url("https://fonts.gstatic.com/s/opensans/v36/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSymu0SC55K5gw.woff2") format("woff2"); unicode-range: U+370-3FF; }
+
+@font-face { font-family: "Open Sans"; font-style: normal; font-weight: 300; font-stretch: 100%; src: url("https://fonts.gstatic.com/s/opensans/v36/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTS2mu0SC55K5gw.woff2") format("woff2"); unicode-range: U+590-5FF, U+200C-2010, U+20AA, U+25CC, U+FB1D-FB4F; }
+
+@font-face { font-family: "Open Sans"; font-style: normal; font-weight: 300; font-stretch: 100%; src: url("https://fonts.gstatic.com/s/opensans/v36/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSCmu0SC55K5gw.woff2") format("woff2"); unicode-range: U+102-103, U+110-111, U+128-129, U+168-169, U+1A0-1A1, U+1AF-1B0, U+300-301, U+303-304, U+308-309, U+323, U+329, U+1EA0-1EF9, U+20AB; }
+
+@font-face { font-family: "Open Sans"; font-style: normal; font-weight: 300; font-stretch: 100%; src: url("https://fonts.gstatic.com/s/opensans/v36/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSGmu0SC55K5gw.woff2") format("woff2"); unicode-range: U+100-2AF, U+304, U+308, U+329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+
+@font-face { font-family: "Open Sans"; font-style: normal; font-weight: 300; font-stretch: 100%; src: url("https://fonts.gstatic.com/s/opensans/v36/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTS-mu0SC55I.woff2") format("woff2"); unicode-range: U+0-FF, U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC, U+304, U+308, U+329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+
+@font-face { font-family: "Open Sans"; font-style: normal; font-weight: 400; font-stretch: 100%; src: url("https://fonts.gstatic.com/s/opensans/v36/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSKmu0SC55K5gw.woff2") format("woff2"); unicode-range: U+460-52F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F; }
+
+@font-face { font-family: "Open Sans"; font-style: normal; font-weight: 400; font-stretch: 100%; src: url("https://fonts.gstatic.com/s/opensans/v36/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSumu0SC55K5gw.woff2") format("woff2"); unicode-range: U+301, U+400-45F, U+490-491, U+4B0-4B1, U+2116; }
+
+@font-face { font-family: "Open Sans"; font-style: normal; font-weight: 400; font-stretch: 100%; src: url("https://fonts.gstatic.com/s/opensans/v36/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSOmu0SC55K5gw.woff2") format("woff2"); unicode-range: U+1F00-1FFF; }
+
+@font-face { font-family: "Open Sans"; font-style: normal; font-weight: 400; font-stretch: 100%; src: url("https://fonts.gstatic.com/s/opensans/v36/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSymu0SC55K5gw.woff2") format("woff2"); unicode-range: U+370-3FF; }
+
+@font-face { font-family: "Open Sans"; font-style: normal; font-weight: 400; font-stretch: 100%; src: url("https://fonts.gstatic.com/s/opensans/v36/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTS2mu0SC55K5gw.woff2") format("woff2"); unicode-range: U+590-5FF, U+200C-2010, U+20AA, U+25CC, U+FB1D-FB4F; }
+
+@font-face { font-family: "Open Sans"; font-style: normal; font-weight: 400; font-stretch: 100%; src: url("https://fonts.gstatic.com/s/opensans/v36/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSCmu0SC55K5gw.woff2") format("woff2"); unicode-range: U+102-103, U+110-111, U+128-129, U+168-169, U+1A0-1A1, U+1AF-1B0, U+300-301, U+303-304, U+308-309, U+323, U+329, U+1EA0-1EF9, U+20AB; }
+
+@font-face { font-family: "Open Sans"; font-style: normal; font-weight: 400; font-stretch: 100%; src: url("https://fonts.gstatic.com/s/opensans/v36/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSGmu0SC55K5gw.woff2") format("woff2"); unicode-range: U+100-2AF, U+304, U+308, U+329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+
+@font-face { font-family: "Open Sans"; font-style: normal; font-weight: 400; font-stretch: 100%; src: url("https://fonts.gstatic.com/s/opensans/v36/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTS-mu0SC55I.woff2") format("woff2"); unicode-range: U+0-FF, U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC, U+304, U+308, U+329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+
+@font-face { font-family: "Open Sans"; font-style: normal; font-weight: 700; font-stretch: 100%; src: url("https://fonts.gstatic.com/s/opensans/v36/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSKmu0SC55K5gw.woff2") format("woff2"); unicode-range: U+460-52F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F; }
+
+@font-face { font-family: "Open Sans"; font-style: normal; font-weight: 700; font-stretch: 100%; src: url("https://fonts.gstatic.com/s/opensans/v36/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSumu0SC55K5gw.woff2") format("woff2"); unicode-range: U+301, U+400-45F, U+490-491, U+4B0-4B1, U+2116; }
+
+@font-face { font-family: "Open Sans"; font-style: normal; font-weight: 700; font-stretch: 100%; src: url("https://fonts.gstatic.com/s/opensans/v36/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSOmu0SC55K5gw.woff2") format("woff2"); unicode-range: U+1F00-1FFF; }
+
+@font-face { font-family: "Open Sans"; font-style: normal; font-weight: 700; font-stretch: 100%; src: url("https://fonts.gstatic.com/s/opensans/v36/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSymu0SC55K5gw.woff2") format("woff2"); unicode-range: U+370-3FF; }
+
+@font-face { font-family: "Open Sans"; font-style: normal; font-weight: 700; font-stretch: 100%; src: url("https://fonts.gstatic.com/s/opensans/v36/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTS2mu0SC55K5gw.woff2") format("woff2"); unicode-range: U+590-5FF, U+200C-2010, U+20AA, U+25CC, U+FB1D-FB4F; }
+
+@font-face { font-family: "Open Sans"; font-style: normal; font-weight: 700; font-stretch: 100%; src: url("https://fonts.gstatic.com/s/opensans/v36/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSCmu0SC55K5gw.woff2") format("woff2"); unicode-range: U+102-103, U+110-111, U+128-129, U+168-169, U+1A0-1A1, U+1AF-1B0, U+300-301, U+303-304, U+308-309, U+323, U+329, U+1EA0-1EF9, U+20AB; }
+
+@font-face { font-family: "Open Sans"; font-style: normal; font-weight: 700; font-stretch: 100%; src: url("https://fonts.gstatic.com/s/opensans/v36/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSGmu0SC55K5gw.woff2") format("woff2"); unicode-range: U+100-2AF, U+304, U+308, U+329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+
+@font-face { font-family: "Open Sans"; font-style: normal; font-weight: 700; font-stretch: 100%; src: url("https://fonts.gstatic.com/s/opensans/v36/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTS-mu0SC55I.woff2") format("woff2"); unicode-range: U+0-FF, U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC, U+304, U+308, U+329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+------MultipartBoundary--qKSBNEAoZGU9Kjvk8tfnfVBgBHrVfAJc9E9LL9dZ2e----
+Content-Type: text/css
+Content-Transfer-Encoding: binary
+Content-Location: https://fonts.googleapis.com/css?family=Source+Code+Pro
+
+@charset "utf-8";
+
+@font-face { font-family: "Source Code Pro"; font-style: normal; font-weight: 400; src: url("https://fonts.gstatic.com/s/sourcecodepro/v23/HI_diYsKILxRpg3hIP6sJ7fM7PqPMcMnZFqUwX28DMyQtMRrTFcfZJmmpw.woff2") format("woff2"); unicode-range: U+460-52F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F; }
+
+@font-face { font-family: "Source Code Pro"; font-style: normal; font-weight: 400; src: url("https://fonts.gstatic.com/s/sourcecodepro/v23/HI_diYsKILxRpg3hIP6sJ7fM7PqPMcMnZFqUwX28DMyQtM1rTFcfZJmmpw.woff2") format("woff2"); unicode-range: U+301, U+400-45F, U+490-491, U+4B0-4B1, U+2116; }
+
+@font-face { font-family: "Source Code Pro"; font-style: normal; font-weight: 400; src: url("https://fonts.gstatic.com/s/sourcecodepro/v23/HI_diYsKILxRpg3hIP6sJ7fM7PqPMcMnZFqUwX28DMyQtMVrTFcfZJmmpw.woff2") format("woff2"); unicode-range: U+1F00-1FFF; }
+
+@font-face { font-family: "Source Code Pro"; font-style: normal; font-weight: 400; src: url("https://fonts.gstatic.com/s/sourcecodepro/v23/HI_diYsKILxRpg3hIP6sJ7fM7PqPMcMnZFqUwX28DMyQtMprTFcfZJmmpw.woff2") format("woff2"); unicode-range: U+370-3FF; }
+
+@font-face { font-family: "Source Code Pro"; font-style: normal; font-weight: 400; src: url("https://fonts.gstatic.com/s/sourcecodepro/v23/HI_diYsKILxRpg3hIP6sJ7fM7PqPMcMnZFqUwX28DMyQtMZrTFcfZJmmpw.woff2") format("woff2"); unicode-range: U+102-103, U+110-111, U+128-129, U+168-169, U+1A0-1A1, U+1AF-1B0, U+300-301, U+303-304, U+308-309, U+323, U+329, U+1EA0-1EF9, U+20AB; }
+
+@font-face { font-family: "Source Code Pro"; font-style: normal; font-weight: 400; src: url("https://fonts.gstatic.com/s/sourcecodepro/v23/HI_diYsKILxRpg3hIP6sJ7fM7PqPMcMnZFqUwX28DMyQtMdrTFcfZJmmpw.woff2") format("woff2"); unicode-range: U+100-2AF, U+304, U+308, U+329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+
+@font-face { font-family: "Source Code Pro"; font-style: normal; font-weight: 400; src: url("https://fonts.gstatic.com/s/sourcecodepro/v23/HI_diYsKILxRpg3hIP6sJ7fM7PqPMcMnZFqUwX28DMyQtMlrTFcfZJk.woff2") format("woff2"); unicode-range: U+0-FF, U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC, U+304, U+308, U+329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+------MultipartBoundary--qKSBNEAoZGU9Kjvk8tfnfVBgBHrVfAJc9E9LL9dZ2e----
+Content-Type: text/css
+Content-Transfer-Encoding: binary
+Content-Location: https://chromium.googlesource.com/+static/prettify/prettify.css
+
+@charset "utf-8";
+
+.str { color: rgb(0, 136, 0); }
+
+.kwd { color: rgb(0, 0, 136); }
+
+.com { color: rgb(136, 0, 0); }
+
+.typ { color: rgb(102, 0, 102); }
+
+.lit { color: rgb(0, 102, 102); }
+
+.pun, .opn, .clo { color: rgb(102, 102, 0); }
+
+.pln { color: rgb(0, 0, 0); }
+
+.tag { color: rgb(0, 0, 136); }
+
+.atn { color: rgb(102, 0, 102); }
+
+.atv { color: rgb(0, 136, 0); }
+
+.dec { color: rgb(102, 0, 102); }
+
+@media print {
+  .str { color: rgb(0, 102, 0); }
+  .kwd { color: rgb(0, 0, 102); font-weight: bold; }
+  .com { color: rgb(102, 0, 0); font-style: italic; }
+  .typ { color: rgb(68, 0, 68); font-weight: bold; }
+  .lit { color: rgb(0, 68, 68); }
+  .pun, .opn, .clo { color: rgb(68, 68, 0); }
+  .pln { color: rgb(0, 0, 0); }
+  .tag { color: rgb(0, 0, 102); font-weight: bold; }
+  .atn { color: rgb(68, 0, 68); }
+  .atv { color: rgb(0, 102, 0); }
+}
+
+pre.prettyprint { padding: 2px; border: 1px solid rgb(136, 136, 136); }
+
+ol.linenums { margin-top: 0px; margin-bottom: 0px; }
+
+li.L0, li.L1, li.L2, li.L3, li.L5, li.L6, li.L7, li.L8 { list-style-type: none; }
+
+li.L1, li.L3, li.L5, li.L7, li.L9 { background: rgb(238, 238, 238); }
+------MultipartBoundary--qKSBNEAoZGU9Kjvk8tfnfVBgBHrVfAJc9E9LL9dZ2e----
+Content-Type: image/png
+Content-Transfer-Encoding: binary
+Content-Location: https://www.gstatic.com/images/branding/lockups/2x/lockup_git_color_108x24dp.png
+
+‰PNG
+
+   IHDR   Ø   0   s7´  IDATxíİtÇ‡ñ›8v¸ÌÌL©$—+K²Ó”™é13s@²}ÌŒefNò˜™±L±ì¢$‡c½ï¾£œ³µ®¤]íÆ–_wÎù8‰Të¿³sgf-Qk±µ¨Å¾VnïÎMçJNeK×võ•î-ı3->Ò•-ıßO÷¿ÆŸ½º{ñŠ] /G‘ˆ¯'û^Ø‹Ğ|C({WüY&[¼89¿<®Hìº³¾è¿öl2ş"^”üxi»T®ğİ®ŞÂzL ÿLõ•æBÂ‰_wvÙíğkÏ~2ş"_ÀèsAWoéEHhr¥/ÏûÜÈTH$°‰°(`óç—'¬Ï”­+[üy¦ïÅ-!‘@ş/F›„ıq!>§wãDl¿­g¢·âLÆØµso(·¥zKWÕH®ğT*WúlWnøôTö…=“óó³Î_îHÎ/l•éN0ò½9İ[¸/-ŒØ+<–ì_¹$˜ÈDmŞÇ§Å¸ÜgĞÒpFIbìøÊ&*…~
+™ş•{¤s…+F‡«'»rwHp‘‰0Ú¦xœ€úp<¼´7ï-Æ¦1*½ªN5ğk§Ì/Ï€ø¥Å­>¦zkè áˆLÄ€Ñv®s+˜Ã«pDÇàT¼‹áÎÁ$Ôkï;µZ—Ë±h¾é-•Âa+\ŒZï‚B°¢pE£íŠ,œQŞ‡:P¯mŠ5‚¹-êµí°ĞõØµšã²0à­añ6+\ø$Òš&RÀh[`—~ô ~Úfx“+\{ÂKÛÇWlÙè£t~¸®Â}ZQ„DZÒ„	m2Ş
+Ç¥û£Ù6—á
+ÖÂXá
+£Ò·*º¥ky)`ÇUÀÑÊ-xÀv†fSN_1:`©\ñ«HK›£µE“!ÿ÷Ëô•N±n“¹ÒaVR/“ó©Î¹ƒéÄ—Ò±ßfCƒ©Ä0¿Ì§¿æ÷_äÏ{ôuf­Y2åØµKÚ?­Y:å±Õ´é¯k—¶ÿ_³lÊÑfém·VVuW·á¿ÑuEî"–ë×ºß3Õ?ƒxĞTÀş×İ‰´ó™Ä¯R‰§Sñü@:ñÁLü†|:ñŠ§N‰Í€„Ö	Çå#hÇx´QÜ­Ó706İĞğöğÆÜëQ)—'AZÅ`ºóÜTìß„¨ÜÈ@&ñÏ|wü,ˆk—´²viÛ_Q¹^ûG^{"Ä®\édòÿŞh·K&7ÎÿÂé\ñ—Æß7]äJÅO£ÿÕ°¹há5€¬õ§®•æÃİ.ãOã€İ]½ \ºÒ
+?òÈéŒN×5–éÊG’ÉizFî‘©æ;fíå¤R.ÎëˆeÊV	âƒa¬|î¹mƒéø—ıö!#Üµåsè€4ƒ6ı£æ^³_>ë-ıµú[\ ñƒ+í×	ÄO›Å|b!ÄMoS2ñ7. Ÿ‰¿^ÈÊ?i«—¶/Ñ°4‹÷ßW/dºıŒpİ`ÿf €•E&åS±«šîÇtâ&ıg@ü¢íÇå—MÀtwEõ^ÃâÛ ~·2>qk0r=Š+¸Â~FåµÕyíó­+j§2÷º[»oñºÛ	Ò35ƒö@Û7!ÂõéÚŸKüz©opxõ=½vÀ¸È¼·Nß<¨#ı¸×}SçcÖë˜³} âíh8.çµpÀæàÄŒ%…#`x²Î¹Ìù &ãgWÔIùtìœÁLl¹õ>{@ÜÖ.í8³ÆˆôÌº%í—3ºM ø­´¯^Òş*<g†lYÛI·T¶p|`=C¡ãRİ èv4n?Â<xm[ŞÓ¹;… UU}’Š=CAãüª~ŒÅÚóéø¢ª€¥«óÉ9{Aü Í…ãrü´ƒiÒìFZE«[ÄàË€(­rÕ(h<øLúÈ!µ<;7¾3!{¤ú½±¿¾äÃT–IŒLÿF¬ÇWŞ?uwHM?˜º¯{ª:dm†¸é#¬ÓzBRKºwø=ä4`ŒL_­W<Ï¯û@êø¶5§…øA;K~ÚEpš´ÿ8Ì.ràˆ¡`Zj¯¹bëò=‰Ã eâ	FºõÕ¬Äñè­[Æ¹ÖœNHC”ò¹…©
+(}2ÜY]@Ò#<…ã Qá0{db…ªÑ<?b ï8„2ı×è£’Q]³¼ç¨m ^ÑæÁq™;†;¼ö	ë¼ÖÆ,Ó§úK‡Ö›ƒñÍüÊn:I‡xÅ{nDy”O@aø¼1z]ñá¶êªbû' Š‘}qõH]¼â…–é	ÚÊf6ĞÈ#ù!nZ%Ê$.æïæ~­y‘ËÄÏ†xE;ËÙc°9ã0]—1wĞ÷—æ@6BtIQSğK?W]‹~ª¯À±Aøeõªã4ˆWëh?¯ºØÑşcˆbõcãdÂù¯ô£Ù€åSñ÷UÕD=×Û…
+a_å–±\[l9ó²ì3ÉÎ ~Ğö‡ãòføi›c/Œ*à¾ã0=lS¡ìÙ(ÁÓøĞ¼¢¬B…ßo.åı=Œ‰úcÅíİÀèpŒü`úN¯V.›º§5‡ƒ(úõÉÑÿŸöÜ«6FÁ\Ó#X:ş¹ª°t'^Ë¼lî¨º6.HZÑÂ¤´YÆÉiØí5p\¶÷€Ñô~ÿ{U·‰½…Õú8 H˜ô7Ö£ß2}+‚(nE^¬
+Ø¼ÎM ^=™IliUÎ Š€G‡ƒJá,ˆW#÷ÉÆ<îYˆb{aôÿ§ŞöA¼b´wÓ#X&şc:Ü TİBµ<•8Ú;à¸t"ìÖ†ì¨óa“["`ºï°ÆN‚%aW¡:özk-È]®¶F0­B¼Ê§ß³ŞF «F°¦ï ñJ«U#ØS„(İ_XÕ§Ù»B<£¢ÛlÀXßú¼Åä¿0ª½1Ÿ<`$L´.ãÁ5“f; Ëk -0mºØYcx$¹áuıÇXX©0ç`\YO‡x¥ëhæ`¿m°ÕØgs°ŸA`VVS}Ã§A¼ÒïKhs0£*¨[¡è«ã m&rp\E˜íp\l©€ÍÍ®Ø™Ç©•¬á} í-lM¸şdl,^Ùíï ©0¯¼º«âs‡[«ôÇ!Š0|Ù(±_ñácÁùÓ¥;ã»‚« ^ô|bd¦îìh6`C™XWÅúÇéƒS’ß2jìŒØa´¸†iã0ã¡7—ÕŞxZüƒøÅèuˆ®sy!­ò²NÈu}ÒH¾'vWç‘êí>±c!JwÂ[£Öâ`H#ÜÆuİÌÓèÿKÊ¸ ¬Õş€4Äóÿƒ¬ƒiq‚bÏsFÈ>
+iDæùõ]T7…AëÀá¸|Û!HÛ½p\º!!lQXO–úl­iULŸ<¥Ï@„4¢ÕÛ?W×ÔØ½ñ[ëŸ¥;9ôl’µÿğéÔœ]!µhõ[À'ªßÿÓKvrÜ m„ì!c7Æ¿)`lW·¸±tú¼îac?â?u‡DéZ¢ş@cÎù/´-¤¶Âqzª<øNø'ÍmO\„ õl¨BjV*mWô#Ã!h¦uÿ¼waJ3¬3Áš5t´ª»ë"[dĞW˜cœËá ­ŒéíŒ~hôÁ£ÜŞ¼VçîˆùğÑÅÃ;A,ºßĞœ;èšM*v¡q¨’PÆ/ÑC˜ö$>~"Ämİ²ö5V©]Ï†Aª,í8ÃŞ&æd7sÕúÿg„:âRÙy?üã”ySÓÛ@FÿŒ>)rÑy•Ñ²<yÄnâvã=ßöUÍ5ĞæÔxôÚ+±3¼´ñj8F`¶‚„°·…tÍY®èÔY0zyøhe|¹Ö¦_ ë®ŸÈ§ëYùÄBXn6ÃRÍô¼_÷é¯ŒPÖz-ó±k ÷2ˆ9š±æˆ~ı!ºO1üİô—Õ)Ë?¡ıÌ§Ÿşü,}ùİ±a÷cìoË{™		¢²>8†wâ$Šİ°cå×Cqâ†’¿ácØbÀzŒçˆœ‹Nhì´?‹Ñê¹0Ã¥¥}Ä6¤‘ÏÛkê`:¶T¿¹Í‹ß_ïÀàÈı2“€üå ~2òs™±pØrÿß?¯ó`J¤µ0¢#$´]9Y³Ş- !l–û1s†‚5ƒ>Õ×>>áA%°oô»®¦!c]ì;M¶ü†.#döHÖï»®|‡Ì€Ôsä§F¦Ó7ø¼ı›Ûõ‡›˜q.Ìb^û[{'M0´œˆœ&d‘A[ ó`‹(Y8¦°š.êÆ`‚ö´ß	s‹÷w/~nSH³øFŸ¢GN<}(R‰?s®†Ø[xÕÁG=…‹‰îE„ø¡•ZcUnïí™_ÜfôZšaT°3K/qÍ™AjêNÄ½×¹ıò!û"ÚL¤ğ.8¼]˜¿íC.^OWo…j-üŸ¾¢…>(ïÕ9ú	şŒWÖ¹–éé\ı	+©EÅÃÜ•ÿ¿²qw<Éê§XÇù©ÎÃğ‚şª¿×?wIiŠ²¤qªÎ¹ô|—n©ÂŠÌÁşÄŸ}_OÖ*$¤º],•-^HŸ]§#”ƒ*•ÖµOù»4Di¥uÔ~*A‚Ò éº £Ÿã]Ñƒ™|ı°>"€âW}ôlÈX¢ÍÆHâDœ†“p<ççyLÆVØ;a¢6‘ÛèÑp<‰´¾¨Æ˜ÎÃË•¶‡x¡ËÆÚáıHë‹:aŒè©n?U©È.ƒxÁíã;'./„DZ_Ô	cãÖêŸôY|;¤muAtÀtş‰´¾¨Æ€¹õŒÀ1¢} Ö’…x56Fÿ™¢NÉùÏo¦OÌªóäŞ÷ésêuc°–ğyíµ¶˜éã ‘‰!ê„1¢O—2ËàKñ[ÈÄuÂØJğ†'QÙ'"­,ê„1¦¼±4U[a¥>å7ú)£SÔ	ãD©èÏÄ6o)€è2F­¬>b™˜¢Ngú#ºöçù‡]œ¯ËèŞÓ¢$2ñı¾¤QN¦_•
+    IEND®B`‚
+------MultipartBoundary--qKSBNEAoZGU9Kjvk8tfnfVBgBHrVfAJc9E9LL9dZ2e------

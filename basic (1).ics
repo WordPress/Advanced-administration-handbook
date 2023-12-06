@@ -1,0 +1,1107 @@
+BEGIN:VCALENDAR
+PRODID:-//Google Inc//Google Calendar 70.9054//EN
+VERSION:2.0
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:LLC Board (Public)
+X-WR-TIMEZONE:Europe/Prague
+BEGIN:VTIMEZONE
+TZID:America/Los_Angeles
+X-LIC-LOCATION:America/Los_Angeles
+BEGIN:DAYLIGHT
+TZOFFSETFROM:-0800
+TZOFFSETTO:-0700
+TZNAME:PDT
+DTSTART:19700308T020000
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=2SU
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:-0700
+TZOFFSETTO:-0800
+TZNAME:PST
+DTSTART:19701101T020000
+RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VTIMEZONE
+TZID:America/New_York
+X-LIC-LOCATION:America/New_York
+BEGIN:DAYLIGHT
+TZOFFSETFROM:-0500
+TZOFFSETTO:-0400
+TZNAME:EDT
+DTSTART:19700308T020000
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=2SU
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:-0400
+TZOFFSETTO:-0500
+TZNAME:EST
+DTSTART:19701101T020000
+RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+DTSTART:20190501T150000Z
+DTEND:20190501T163000Z
+DTSTAMP:20230624T190905Z
+UID:3v4o6nbedp790racmjmvm0vsdq@google.com
+CREATED:20190411T182205Z
+DESCRIPTION:JOIN WEBEX MEETING\nhttps://ietf.webex.com/ietf/j.php?MTID=m6e4
+ 23258a7e066a04c376fa3b7d4a57a\nMeeting number (access code): 647 660 407\n\
+ n1-650-479-3208 Call-in toll number (US/Canada) 
+LAST-MODIFIED:20190411T182205Z
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:LLC Board Meeting
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20190507
+DTEND;VALUE=DATE:20190509
+DTSTAMP:20230624T190905Z
+UID:15damtrc8is3vnv7qlufrucr3f@google.com
+CREATED:20190423T224457Z
+DESCRIPTION:This will be a face-to-face meeting of the Board of Directors. 
+ Call-in details and exact time of public sections will be updated shortly.\
+ n\nJOIN WEBEX MEETING\nhttps://cisco.webex.com/cisco/j.php?MTID=m7cdc83137d
+ 604b3e40fae57196268dd2\nMeeting number (access code): 204 632 124\nMeeting 
+ password: rTAms23U
+LAST-MODIFIED:20190507T122114Z
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:LLC Board Retreat
+TRANSP:TRANSPARENT
+X-APPLE-TRAVEL-ADVISORY-BEHAVIOR:AUTOMATIC
+BEGIN:VALARM
+ACTION:AUDIO
+TRIGGER:-PT15H
+X-WR-ALARMUID:650BA04A-A83B-4626-A4DD-D456E4383A32
+UID:650BA04A-A83B-4626-A4DD-D456E4383A32
+ATTACH;VALUE=URI:Basso
+X-APPLE-DEFAULT-ALARM:TRUE
+ACKNOWLEDGED:20190507T112437Z
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Los_Angeles:20190530T120000
+DTEND;TZID=America/Los_Angeles:20190530T133000
+RRULE:FREQ=WEEKLY;WKST=SU;UNTIL=20191213T075959Z;INTERVAL=2;BYDAY=TH
+EXDATE;TZID=America/Los_Angeles:20190725T120000
+EXDATE;TZID=America/Los_Angeles:20191128T120000
+EXDATE;TZID=America/Los_Angeles:20191114T120000
+DTSTAMP:20230624T190905Z
+UID:0o4ss8d2gnfa3qviffp5g1kdsj@google.com
+CREATED:20190516T175512Z
+DESCRIPTION:\nAgenda posted at: https://www.ietf.org/about/groups/llc-board
+ /minutes/2019/\nJOIN WEBEX MEETING\nhttps://ietf.webex.com/ietf/j.php?MTID=
+ m54c5027c88c7f6818c8b23a0db94c616\nMeeting number (access code): 649 305 87
+ 2\n\n\nJOIN BY PHONE\n1-650-479-3208 Call-in toll number (US/Canada) 
+LAST-MODIFIED:20190516T175534Z
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:IETF LLC Board Meeting
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Los_Angeles:20190606T120000
+DTEND;TZID=America/Los_Angeles:20190606T133000
+RRULE:FREQ=WEEKLY;WKST=SU;COUNT=2;INTERVAL=2;BYDAY=TH
+EXDATE;TZID=America/Los_Angeles:20190620T120000
+DTSTAMP:20230624T190905Z
+UID:3hdjo9cn5vqah0j1k1av5bdqng@google.com
+CREATED:20190516T202437Z
+DESCRIPTION:\n\nJOIN WEBEX MEETING\nhttps://ietf.webex.com/ietf/j.php?MTID=
+ md2cd163217cd4c3e9751a4ffcb0faf01\nMeeting number (access code): 644 519 11
+ 4\n\nJOIN BY PHONE\n1-650-479-3208 Call-in toll number (US/Canada)
+LAST-MODIFIED:20190516T202437Z
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:LLC Board Meeting
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20190619T150000Z
+DTEND:20190619T160000Z
+DTSTAMP:20230624T190905Z
+UID:7njnga5kil4cjsejda4s12svs8@google.com
+CREATED:20190606T181049Z
+DESCRIPTION:https://ietf.webex.com/ietf/j.php?MTID=m41483e425f707ebcd439dde
+ cf11ff15f\nMeeting number (access code): 648 744 307\n1-650-479-3208 Call-i
+ n toll number (US/Canada) 
+LAST-MODIFIED:20190606T181116Z
+LOCATION:https://ietf.webex.com/ietf/j.php?MTID=m41483e425f707ebcd439ddecf1
+ 1ff15f
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:IETF Policies Webinar
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Los_Angeles:20190627T123000
+DTEND;TZID=America/Los_Angeles:20190627T133000
+DTSTAMP:20230624T190905Z
+UID:0o4ss8d2gnfa3qviffp5g1kdsj@google.com
+RECURRENCE-ID;TZID=America/Los_Angeles:20190627T120000
+CREATED:20190516T175512Z
+DESCRIPTION:\nAgenda posted at: https://www.ietf.org/about/groups/llc-board
+ /minutes/2019/\nJOIN WEBEX MEETING\nhttps://ietf.webex.com/ietf/j.php?MTID=
+ m54c5027c88c7f6818c8b23a0db94c616\nMeeting number (access code): 649 305 87
+ 2\n\n\nJOIN BY PHONE\n1-650-479-3208 Call-in toll number (US/Canada) 
+LAST-MODIFIED:20190626T221840Z
+SEQUENCE:1
+STATUS:CONFIRMED
+SUMMARY:IETF LLC Board Meeting
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Los_Angeles:20190807T120000
+DTEND;TZID=America/Los_Angeles:20190807T133000
+DTSTAMP:20230624T190905Z
+UID:0o4ss8d2gnfa3qviffp5g1kdsj@google.com
+RECURRENCE-ID;TZID=America/Los_Angeles:20190808T120000
+CREATED:20190516T175512Z
+DESCRIPTION:<br>Agenda posted at: <a href="https://www.ietf.org/about/group
+ s/llc-board/minutes/2019/" id="ow2980" __is_owner="true">https://www.ietf.o
+ rg/about/groups/llc-board/minutes/2019/</a><br><br>JOIN WEBEX MEETING<br>ht
+ tps://ietf.webex.com/ietf/j.php?MTID=m74515f593784f44210ce7ffbb39e3d7<br>Me
+ eting number (access code): 648 261 102<br>1-650-479-3208 Call-in toll numb
+ er (US/Canada)
+LAST-MODIFIED:20190801T200903Z
+SEQUENCE:1
+STATUS:CONFIRMED
+SUMMARY:IETF LLC Board Meeting
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Los_Angeles:20190822T120000
+DTEND;TZID=America/Los_Angeles:20190822T133000
+DTSTAMP:20230624T190905Z
+UID:0o4ss8d2gnfa3qviffp5g1kdsj@google.com
+RECURRENCE-ID;TZID=America/Los_Angeles:20190822T120000
+CREATED:20190516T175512Z
+DESCRIPTION:\nAgenda posted at: https://www.ietf.org/about/groups/llc-board
+ /minutes/2019/\nJOIN WEBEX MEETING\nhttps://ietf.webex.com/ietf/j.php?MTID=
+ m54c5027c88c7f6818c8b23a0db94c616\nMeeting number (access code): 649 305 87
+ 2\n\n\nJOIN BY PHONE\n1-650-479-3208 Call-in toll number (US/Canada) 
+LAST-MODIFIED:20190820T222158Z
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:CANCELED: IETF LLC Board Meeting
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Los_Angeles:20190905T123000
+DTEND;TZID=America/Los_Angeles:20190905T133000
+DTSTAMP:20230624T190905Z
+UID:0o4ss8d2gnfa3qviffp5g1kdsj@google.com
+RECURRENCE-ID;TZID=America/Los_Angeles:20190905T120000
+CREATED:20190516T175512Z
+DESCRIPTION:\nAgenda posted at: https://www.ietf.org/about/groups/llc-board
+ /minutes/2019/\nJOIN WEBEX MEETING\nhttps://ietf.webex.com/ietf/j.php?MTID=
+ m54c5027c88c7f6818c8b23a0db94c616\nMeeting number (access code): 649 305 87
+ 2\n\n\nJOIN BY PHONE\n1-650-479-3208 Call-in toll number (US/Canada) 
+LAST-MODIFIED:20190830T011038Z
+SEQUENCE:1
+STATUS:CONFIRMED
+SUMMARY:IETF LLC Board Meeting
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20191118T053000Z
+DTEND:20191118T070000Z
+DTSTAMP:20230624T190905Z
+UID:1doug1u8j9m1h6crdvkglolut6@google.com
+CREATED:20191106T175136Z
+DESCRIPTION:The LLC Board will meet during IETF 106 on Monday 18 November a
+ t 13:30 Singapore time. \nLocation: LLC Office\, room Minto\, Singapore Fai
+ rmont\n\n\nhttps://ietf.webex.com/ietf/j.php?MTID=mb4cd878ebbbc2fd25a11cad4
+ 7b249f4a\nMeeting number (access code): 314 642 358\n1-650-479-3208 Call-in
+  toll number (US/Canada)
+LAST-MODIFIED:20191106T175136Z
+LOCATION:Minto (LLC Office)
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:LLC Board Meeting 
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20191107T140000Z
+DTEND:20191107T190000Z
+DTSTAMP:20230624T190905Z
+UID:1d72us7a2pgejurtm2eunnveud@google.com
+CREATED:20191105T220210Z
+DESCRIPTION:\nJOIN WEBEX MEETING\nhttps://ietf.webex.com/ietf/j.php?MTID=m3
+ 7deb3dd244695ec48b32ebeb3081fae\nMeeting number (access code): 640 581 336\
+ n\n\nJOIN BY PHONE\n1-650-479-3208 Call-in toll number (US/Canada) \nTap he
+ re to call (mobile phones only\, hosts not supported): tel:%2B1-650-479-320
+ 8\,\,*01*640581336%23%23*01*\n\n1-877-668-4493 Call-in toll free number (US
+ /Canada) \nTap here to call (mobile phones only\, hosts not supported): tel
+ :1-877-668-4493\,\,*01*640581336%23%23*01*\n\nGlobal call-in numbers:\nhttp
+ s://ietf.webex.com/ietf/globalcallin.php?MTID=m165a48679b9da8eaf371af037405
+ 7ebe\n\nToll-free dialing restrictions: \nhttps://www.webex.com/pdf/tollfre
+ e_restrictions.pdf\n\n\n\nCan't join the meeting? Contact support here:\nht
+ tps://ietf.webex.com/ietf/mc\n\n\nIMPORTANT NOTICE: Please note that this W
+ ebex service allows audio and other information sent during the session to 
+ be recorded\, which may be discoverable in a legal matter. You should infor
+ m all meeting attendees prior to recording if you intend to record the meet
+ ing.
+LAST-MODIFIED:20191107T135007Z
+LOCATION:https://ietf.webex.com/ietf
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Board Meeting 7 Nov 2019
+TRANSP:OPAQUE
+X-APPLE-TRAVEL-ADVISORY-BEHAVIOR:AUTOMATIC
+BEGIN:VALARM
+ACTION:NONE
+TRIGGER;VALUE=DATE-TIME:19760401T005545Z
+X-WR-ALARMUID:D899264D-4B44-4A72-9698-12D52340F4CE
+UID:D899264D-4B44-4A72-9698-12D52340F4CE
+ACKNOWLEDGED:20191107T135006Z
+X-APPLE-DEFAULT-ALARM:TRUE
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Los_Angeles:20191212T120000
+DTEND;TZID=America/Los_Angeles:20191212T133000
+DTSTAMP:20230624T190905Z
+UID:0o4ss8d2gnfa3qviffp5g1kdsj@google.com
+RECURRENCE-ID;TZID=America/Los_Angeles:20191212T120000
+CREATED:20190516T175512Z
+DESCRIPTION:<br>Agenda posted at: <a href="https://www.ietf.org/about/group
+ s/llc-board/minutes/2019/">https://www.ietf.org/about/groups/llc-board/minu
+ tes/2019/</a><br>JOIN WEBEX MEETING<br><a href="https://ietf.webex.com/ietf
+ /j.php?MTID=m54c5027c88c7f6818c8b23a0db94c616">https://ietf.webex.com/ietf/
+ j.php?MTID=m2811906a3fb341648f4d5b6a796152a8</a><br>Meeting number (access 
+ code): 646 363 102<br><br><br>JOIN BY PHONE<br>1-650-479-3208 Call-in toll 
+ number (US/Canada)
+LAST-MODIFIED:20191206T223955Z
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:IETF LLC Board Meeting
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;VALUE=DATE:20200129
+DTEND;VALUE=DATE:20200131
+DTSTAMP:20230624T190905Z
+UID:00n8sbh6reqoars1uv2sj6gn22@google.com
+CREATED:20200124T232651Z
+DESCRIPTION:The board will have a two day face-to-face meeting on January 2
+ 9 - 30\, 2020. The public portion of the meeting will begin at 13:30 EST / 
+ 18:30 UTC on Wednesday\, January 29.\n\nJOIN WEBEX MEETING\nhttps://ietf.we
+ bex.com/ietf/j.php?MTID=m6f18249d0ff577ce0c4944b6cf8e0dfd\nMeeting number (
+ access code):  649 066 063\n\n\nJOIN BY PHONE\n1-650-479-3208 Call-in toll 
+ number (US/Canada)\nAccess code:  649 066 063
+LAST-MODIFIED:20200129T042402Z
+LOCATION:Washington\, DC\, USA
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:LLC Board F2F Meeting
+TRANSP:TRANSPARENT
+X-APPLE-TRAVEL-ADVISORY-BEHAVIOR:AUTOMATIC
+BEGIN:VALARM
+ACTION:AUDIO
+TRIGGER:-PT15H
+X-WR-ALARMUID:3ABEC92D-83AC-4139-BBD6-4AB904C24764
+UID:3ABEC92D-83AC-4139-BBD6-4AB904C24764
+ATTACH;VALUE=URI:Basso
+X-APPLE-DEFAULT-ALARM:TRUE
+ACKNOWLEDGED:20200129T035154Z
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20200326T190000Z
+DTEND:20200326T200000Z
+DTSTAMP:20230624T190905Z
+UID:69lhdpnpr7cme31aus7fqrlj99@google.com
+CREATED:20200313T185718Z
+DESCRIPTION:https://ietf.webex.com/ietf/j.php?MTID=m26683e98fd882be8509ddaa
+ 10e31b0e3\nMeeting number (access code): 641 016 319\n1-650-479-3208 Call-i
+ n toll number (US/Canada)
+LAST-MODIFIED:20200313T185718Z
+LOCATION:https://ietf.webex.com/ietf/j.php?MTID=m26683e98fd882be8509ddaa10e
+ 31b0e3\, 
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:LLC Board Meeting
+TRANSP:OPAQUE
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20210323T180000Z
+DTEND:20210323T210000Z
+DTSTAMP:20230624T190905Z
+UID:68olp6el97vd8p2hoefe8giqqc@google.com
+CREATED:20210316T215245Z
+DESCRIPTION:Day One of a two day IETF LLC Annual Strategic Planning Retreat
+ . <br>1100 - 1400 Pacific\, 1800 - 2100 UTC<br><br><br><p style="">⁨<a href
+ ="https://ietf.webex.com/ietf/j.php?MTID=mbc6005f6cd84bed7edd1724607612d8a%
+ E2%81%A9" style="">https://ietf.webex.com/ietf/j.php?MTID=mbc6005f6cd84bed7
+ edd1724607612d8a⁩</a>&nbsp\;<br>Meeting number (access code): 185 500 9522<
+ br>Meeting password: 2021</p><br><br>Agenda &amp\; details at: https://www.
+ ietf.org/about/groups/llc-board/minutes/2021/&nbsp\;
+LAST-MODIFIED:20210323T175505Z
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:IETF LLC Annual Retreat Day One
+TRANSP:OPAQUE
+X-APPLE-TRAVEL-ADVISORY-BEHAVIOR:AUTOMATIC
+BEGIN:VALARM
+ACTION:AUDIO
+TRIGGER:-PT5M
+X-WR-ALARMUID:0094D0A0-3F42-449B-94C1-AD47C1220FDC
+UID:0094D0A0-3F42-449B-94C1-AD47C1220FDC
+X-APPLE-DEFAULT-ALARM:TRUE
+ATTACH;VALUE=URI:Chord
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20210324T180000Z
+DTEND:20210324T210000Z
+DTSTAMP:20230624T190905Z
+UID:0gv3kfv458asjl02b6cjmt9kmv@google.com
+CREATED:20210316T215409Z
+DESCRIPTION:Day Two of a two day IETF LLC Annual Planning Retreat. <br>1100
+  - 1400 Pacific\, 1800 - 2100 UTC<br><br><p><a href="https://ietf.webex.com
+ /ietf-en/j.php?MTID=m0b2c9acafd7ab6e25751fa64d3f4bb93">https://ietf.webex.c
+ om/ietf-en/j.php?MTID=m0b2c9acafd7ab6e25751fa64d3f4bb93</a>&nbsp\;<br>Meeti
+ ng number (access code): 185 500 9522<br>Meeting password: 2021</p><br><br>
+ Agenda &amp\; details at: <a href="https://www.ietf.org/about/groups/llc-bo
+ ard/minutes/2021/" id="ow1817" __is_owner="true">https://www.ietf.org/about
+ /groups/llc-board/minutes/2021/</a>
+LAST-MODIFIED:20210324T181045Z
+LOCATION:https://ietf.webex.com/ietf-en/j.php?MTID=m0b2c9acafd7ab6e25751fa6
+ 4d3f4bb93
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:IETF LLC Annual Retreat Day Two
+TRANSP:OPAQUE
+X-APPLE-TRAVEL-ADVISORY-BEHAVIOR:AUTOMATIC
+BEGIN:VALARM
+ACTION:AUDIO
+TRIGGER:-PT5M
+X-WR-ALARMUID:B33416A3-A8A3-40EB-BC3F-48FDEF6F786A
+UID:B33416A3-A8A3-40EB-BC3F-48FDEF6F786A
+X-APPLE-DEFAULT-ALARM:TRUE
+ATTACH;VALUE=URI:Chord
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20210712T150000Z
+DTEND:20210712T163000Z
+DTSTAMP:20230624T190905Z
+UID:2hh0qi4rhmoo0mi7k9h42bfjs5@google.com
+CREATED:20210622T183205Z
+DESCRIPTION:JOIN WEBEX MEETING\nhttps://ietf.webex.com/ietf/j.php?MTID=m058
+ 617257af53e640a3c3b5d43247a81\nMeeting number (access code): 161 639 6024\n
+ Meeting password: iasa2\n\n\nJOIN BY PHONE\n1-650-479-3208 Call-in toll num
+ ber (US/Canada)\n\nGlobal call-in numbers:\nhttps://ietf.webex.com/ietf/glo
+ balcallin.php?MTID=mfba88f017ed12045db608bda30a2a44c
+LAST-MODIFIED:20210712T145634Z
+LOCATION:https://ietf.webex.com/ietf/j.php?MTID=m058617257af53e640a3c3b5d43
+ 247a81
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:IASA2 Retrospective Webinar #1
+TRANSP:OPAQUE
+X-APPLE-TRAVEL-ADVISORY-BEHAVIOR:AUTOMATIC
+BEGIN:VALARM
+ACTION:AUDIO
+TRIGGER:-PT5M
+X-WR-ALARMUID:B318EBD8-573D-47A9-95A5-CAC8D4AB8985
+UID:B318EBD8-573D-47A9-95A5-CAC8D4AB8985
+X-APPLE-DEFAULT-ALARM:TRUE
+ATTACH;VALUE=URI:Chord
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20210811T150000Z
+DTEND:20210811T163000Z
+DTSTAMP:20230624T190905Z
+UID:2ee3jfqhcmbfij62j7vvnaac70@google.com
+CREATED:20210622T183419Z
+DESCRIPTION:JOIN WEBEX MEETING\nhttps://ietf.webex.com/ietf/j.php?MTID=ma12
+ eab5ce47cabba3fba54411dd5d992\nMeeting number (access code): 161 250 0110\n
+ Meeting password: iasa2\n\n\n\nTAP TO JOIN FROM A MOBILE DEVICE (ATTENDEES 
+ ONLY)\n+1-650-479-3208\,\,1612500110## tel:%2B1-650-479-3208\,\,*01*1612500
+ 110%23%23*01* Call-in toll number (US/Canada)\n\nJOIN BY PHONE\n1-650-479-3
+ 208 Call-in toll number (US/Canada)\n\nGlobal call-in numbers:\nhttps://iet
+ f.webex.com/ietf/globalcallin.php?MTID=m53d0eb5bbac7f7968ee2e706da3c4633
+LAST-MODIFIED:20210811T145545Z
+LOCATION:https://ietf.webex.com/ietf/j.php?MTID=ma12eab5ce47cabba3fba54411d
+ d5d992
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:IASA2 Retrospective Webinar #2
+TRANSP:OPAQUE
+X-APPLE-TRAVEL-ADVISORY-BEHAVIOR:AUTOMATIC
+BEGIN:VALARM
+ACTION:AUDIO
+TRIGGER:-PT5M
+X-WR-ALARMUID:7C3EAF88-54A0-4035-970C-EAD30041AFA5
+UID:7C3EAF88-54A0-4035-970C-EAD30041AFA5
+X-APPLE-DEFAULT-ALARM:TRUE
+ATTACH;VALUE=URI:Chord
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20220420T130000Z
+DTEND:20220420T160000Z
+DTSTAMP:20230624T190905Z
+UID:37hlntkio154luqi497nngg08d@google.com
+CREATED:20220420T013057Z
+DESCRIPTION:\n\n\n\n\n\nJOIN WEBEX MEETING\n<a href="https://www.google.com
+ /url?q=https://ietf.webex.com/ietf/j.php?MTID%3Dmfb59886499a2971c7cf57597dd
+ 415bc1&amp\;sa=D&amp\;source=calendar&amp\;ust=1650214387327142&amp\;usg=AO
+ vVaw1TD83aIHKK7BXZM1wg5s_a" target="_blank">https://ietf.webex.com/ietf/j.p
+ hp?MTID=mfb59886499a2971c7cf57597dd415bc1</a>\nMeeting number (access code)
+ : 2431 124 2111\n\nMeeting password: retreat\n\n\n\nTAP TO JOIN FROM A MOBI
+ LE DEVICE (ATTENDEES ONLY)\n+1-650-479-3208\,\,24311242111## tel:%2B1-650-4
+ 79-3208\,\,*01*24311242111%23%23*01* Call-in toll number (US/Canada)\n\n\nJ
+ OIN BY PHONE\n1-650-479-3208 Call-in toll number (US/Canada)\n\nGlobal call
+ -in numbers\n<a href="https://www.google.com/url?q=https://ietf.webex.com/i
+ etf/globalcallin.php?MTID%3Dm6d05594fbb4069e46a5802158d6571db&amp\;sa=D&amp
+ \;source=calendar&amp\;ust=1650214387327142&amp\;usg=AOvVaw0M4kGZrAdObDa0fM
+ 7DiG83" target="_blank">https://ietf.webex.com/ietf/globalcallin.php?MTID=m
+ 6d05594fbb4069e46a5802158d6571db</a>\n\n\nJOIN FROM A VIDEO SYSTEM OR APPLI
+ CATION\nDial <a href="sip:24311242111@ietf.webex.com" target="_blank">sip:2
+ 4311242111@ietf.webex.com</a>\nYou can also dial 173.243.2.68 and enter you
+ r meeting number.\n\n\n\n\n\nCan&#39\;t join the meeting?\n<a href="https:/
+ /www.google.com/url?q=https://collaborationhelp.cisco.com/article/WBX000029
+ 055&amp\;sa=D&amp\;source=calendar&amp\;ust=1650214387327142&amp\;usg=AOvVa
+ w07P313NGsXwC-Clef9DXUS" target="_blank">https://collaborationhelp.cisco.co
+ m/article/WBX000029055</a>\n\n\nIMPORTANT NOTICE: Please note that this Web
+ ex service allows audio and other information sent during the session to be
+  recorded\, which may be discoverable in a legal matter. By joining this se
+ ssion\, you automatically consent to such recordings. If you do not consent
+  to being recorded\, discuss your concerns with the host or do not join the
+  session.\n
+LAST-MODIFIED:20220420T125512Z
+LOCATION:https://ietf.webex.com/ietf/j.php?MTID=mfb59886499a2971c7cf57597dd
+ 415bc1
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:LLC Virtual Retreat (Day 1)
+TRANSP:OPAQUE
+X-APPLE-TRAVEL-ADVISORY-BEHAVIOR:AUTOMATIC
+BEGIN:VALARM
+ACTION:AUDIO
+TRIGGER:-PT5M
+X-WR-ALARMUID:A7332000-129D-428F-B563-3BEA93C070CE
+UID:A7332000-129D-428F-B563-3BEA93C070CE
+X-APPLE-DEFAULT-ALARM:TRUE
+ATTACH;VALUE=URI:Chord
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20200109T150000
+DTEND;TZID=America/New_York:20200109T163000
+RRULE:FREQ=MONTHLY;UNTIL=20201210T045959Z;BYDAY=2TH
+DTSTAMP:20230624T190905Z
+UID:4hqip4fl94fddpomt7gp02h6f3@google.com
+CREATED:20200109T190602Z
+DESCRIPTION:\nJOIN WEBEX MEETING\nhttps://ietf.webex.com/ietf/j.php?MTID=m0
+ 46102e19fbfe4fdd231d13f508ab92f\nMeeting number (access code): 640 897 669\
+ n\n\n\n\nJOIN BY PHONE\n1-650-479-3208 Call-in toll number (US/Canada) \nTa
+ p here to call (mobile phones only\, hosts not supported): tel:%2B1-650-479
+ -3208\,\,*01*640897669%23%23*01*\n\n1-877-668-4493 Call-in toll free number
+  (US/Canada) \nTap here to call (mobile phones only\, hosts not supported):
+  tel:1-877-668-4493\,\,*01*640897669%23%23*01*\n\nGlobal call-in numbers:\n
+ https://ietf.webex.com/ietf/globalcallin.php?MTID=ma2c91923c964d805d4b849d6
+ 888a44df\n\nToll-free dialing restrictions: \nhttps://www.webex.com/pdf/tol
+ lfree_restrictions.pdf\n\n\n\nCan't join the meeting? Contact support here:
+ \nhttps://ietf.webex.com/ietf/mc\n\n\nIMPORTANT NOTICE: Please note that th
+ is Webex service allows audio and other information sent during the session
+  to be recorded\, which may be discoverable in a legal matter. You should i
+ nform all meeting attendees prior to recording if you intend to record the 
+ meeting.
+LAST-MODIFIED:20220422T201523Z
+LOCATION:https://ietf.webex.com/ietf
+SEQUENCE:1
+STATUS:CONFIRMED
+SUMMARY:LLC Board Meetings
+TRANSP:OPAQUE
+X-APPLE-TRAVEL-ADVISORY-BEHAVIOR:AUTOMATIC
+BEGIN:VALARM
+ACTION:NONE
+TRIGGER;VALUE=DATE-TIME:19760401T005545Z
+X-WR-ALARMUID:F8E59A32-6212-4EF1-9DF1-A9BAD9303C79
+UID:F8E59A32-6212-4EF1-9DF1-A9BAD9303C79
+ACKNOWLEDGED:20201112T195009Z
+X-APPLE-DEFAULT-ALARM:TRUE
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20200116T150000
+DTEND;TZID=America/New_York:20200116T163000
+DTSTAMP:20230624T190905Z
+UID:4hqip4fl94fddpomt7gp02h6f3@google.com
+RECURRENCE-ID;TZID=America/New_York:20200109T150000
+CREATED:20200109T190602Z
+DESCRIPTION:<br>JOIN WEBEX MEETING<br>https://ietf.webex.com/ietf/j.php?MTI
+ D=me291e3f8238196e17563651bac4afe64&nbsp\;<br>Meeting number (access code):
+  648 591 284<br><br><br><br><br>JOIN BY PHONE<br>1-650-479-3208 Call-in tol
+ l number (US/Canada) <br>Tap here to call (mobile phones only\, hosts not s
+ upported): tel:%2B1-650-479-3208\,\,*01*640897669%23%23*01*<br><br>1-877-66
+ 8-4493 Call-in toll free number (US/Canada) <br>Tap here to call (mobile ph
+ ones only\, hosts not supported): tel:1-877-668-4493\,\,*01*640897669%23%23
+ *01*<br><br>Global call-in numbers:<br><a href="https://ietf.webex.com/ietf
+ /globalcallin.php?MTID=ma2c91923c964d805d4b849d6888a44df">https://ietf.webe
+ x.com/ietf/globalcallin.php?MTID=ma2c91923c964d805d4b849d6888a44df</a><br><
+ br>Toll-free dialing restrictions: <br><a href="https://www.webex.com/pdf/t
+ ollfree_restrictions.pdf">https://www.webex.com/pdf/tollfree_restrictions.p
+ df</a><br><br><br><br>Can't join the meeting? Contact support here:<br><a h
+ ref="https://ietf.webex.com/ietf/mc">https://ietf.webex.com/ietf/mc</a><br>
+ <br><br>IMPORTANT NOTICE: Please note that this Webex service allows audio 
+ and other information sent during the session to be recorded\, which may be
+  discoverable in a legal matter. You should inform all meeting attendees pr
+ ior to recording if you intend to record the meeting.
+LAST-MODIFIED:20220422T201523Z
+LOCATION:https://ietf.webex.com/ietf
+SEQUENCE:2
+STATUS:CONFIRMED
+SUMMARY:LLC Board Meetings
+TRANSP:OPAQUE
+X-APPLE-TRAVEL-ADVISORY-BEHAVIOR:AUTOMATIC
+BEGIN:VALARM
+ACTION:NONE
+TRIGGER;VALUE=DATE-TIME:19760401T005545Z
+X-WR-ALARMUID:D6513441-308D-47A0-824F-467174C1ACAC
+UID:D6513441-308D-47A0-824F-467174C1ACAC
+ACKNOWLEDGED:20200116T195001Z
+X-APPLE-DEFAULT-ALARM:TRUE
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20210218T150000
+DTEND;TZID=America/New_York:20210218T163000
+DTSTAMP:20230624T190905Z
+UID:4hqip4fl94fddpomt7gp02h6f3_R20201210T200000@google.com
+RECURRENCE-ID;TZID=America/New_York:20210211T150000
+CREATED:20200109T190602Z
+DESCRIPTION:JOIN WEBEX MEETING\nhttps://ietf.webex.com/ietf/j.php?MTID=me83
+ 0289c157d009d14edf9f7d5098813\nMeeting number (access code): 185 016 2850\n
+ \nMeeting password: meetings\n\n\n\nTAP TO JOIN FROM A MOBILE DEVICE (ATTEN
+ DEES ONLY)\n+1-650-479-3208\,\,1850162850## tel:%2B1-650-479-3208\,\,*01*18
+ 50162850%23%23*01* Call-in toll number (US/Canada)\n\n\nJOIN BY PHONE\n1-65
+ 0-479-3208 Call-in toll number (US/Canada)\n\nGlobal call-in numbers\nhttps
+ ://ietf.webex.com/ietf/globalcallin.php?MTID=m9ac98d59102480f4b70fe78072385
+ c0e\n\n\nJOIN FROM A VIDEO SYSTEM OR APPLICATION\nDial sip:1850162850@ietf.
+ webex.com\nYou can also dial 173.243.2.68 and enter your meeting number.\n\
+ n\nJoin using Microsoft Lync or Microsoft Skype for Business\nDial sip:1850
+ 162850.ietf@lync.webex.com\n\n\n\n\n\nCan't join the meeting?\nhttps://coll
+ aborationhelp.cisco.com/article/WBX000029055\n\n\nIMPORTANT NOTICE: Please 
+ note that this Webex service allows audio and other information sent during
+  the session to be recorded\, which may be discoverable in a legal matter. 
+ By joining this session\, you automatically consent to such recordings. If 
+ you do not consent to being recorded\, discuss your concerns with the host 
+ or do not join the session.
+LAST-MODIFIED:20220422T201523Z
+LOCATION:https://ietf.webex.com/ietf/j.php?MTID=m5481867e37f4c98327c151d9a6
+ a7cd78
+SEQUENCE:2
+STATUS:CONFIRMED
+SUMMARY:LLC Board Meetings
+TRANSP:OPAQUE
+X-APPLE-TRAVEL-ADVISORY-BEHAVIOR:AUTOMATIC
+BEGIN:VALARM
+ACTION:AUDIO
+TRIGGER:-PT5M
+X-WR-ALARMUID:FE3386CF-08AD-40E8-9085-C1D1DCEC32EF
+UID:FE3386CF-08AD-40E8-9085-C1D1DCEC32EF
+ATTACH;VALUE=URI:Chord
+X-APPLE-DEFAULT-ALARM:TRUE
+ACKNOWLEDGED:20210218T195512Z
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20210715T150000
+DTEND;TZID=America/New_York:20210715T163000
+DTSTAMP:20230624T190905Z
+UID:4hqip4fl94fddpomt7gp02h6f3_R20201210T200000@google.com
+RECURRENCE-ID;TZID=America/New_York:20210708T150000
+CREATED:20200109T190602Z
+DESCRIPTION:Note: The July meeting has been moved from 8 July to 15 July.<b
+ r><br><br>JOIN WEBEX MEETING<br><a href="https://ietf.webex.com/ietf/j.php?
+ MTID=m5481867e37f4c98327c151d9a6a7cd78">⁨https://ietf.webex.com/ietf/j.php?
+ MTID=m9dc487750b49dc3546d5935d71356d88⁩</a><br>Meeting number (access code)
+ :&nbsp\; 161 642 1317<br><br><br><br><br>JOIN BY PHONE<br>1-650-479-3208 Ca
+ ll-in toll number (US/Canada) <br>Tap here to call (mobile phones only\, ho
+ sts not supported): tel:%2B1-650-479-3208\,\,*01*640897669%23%23*01*<br><br
+ >1-877-668-4493 Call-in toll free number (US/Canada) <br>Tap here to call (
+ mobile phones only\, hosts not supported): tel:1-877-668-4493\,\,*01*640897
+ 669%23%23*01*<br><br>Global call-in numbers:<br><a href="https://ietf.webex
+ .com/ietf/globalcallin.php?MTID=ma2c91923c964d805d4b849d6888a44df">https://
+ ietf.webex.com/ietf/globalcallin.php?MTID=ma2c91923c964d805d4b849d6888a44df
+ </a><br><br>Toll-free dialing restrictions: <br><a href="https://www.webex.
+ com/pdf/tollfree_restrictions.pdf">https://www.webex.com/pdf/tollfree_restr
+ ictions.pdf</a><br><br><br><br>Can't join the meeting? Contact support here
+ :<br><a href="https://ietf.webex.com/ietf/mc">https://ietf.webex.com/ietf/m
+ c</a><br><br><br>IMPORTANT NOTICE: Please note that this Webex service allo
+ ws audio and other information sent during the session to be recorded\, whi
+ ch may be discoverable in a legal matter. You should inform all meeting att
+ endees prior to recording if you intend to record the meeting.
+LAST-MODIFIED:20220422T201523Z
+LOCATION:https://ietf.webex.com/ietf/j.php?MTID=m5481867e37f4c98327c151d9a6
+ a7cd78
+SEQUENCE:2
+STATUS:CONFIRMED
+SUMMARY:LLC Board Meetings
+TRANSP:OPAQUE
+X-APPLE-TRAVEL-ADVISORY-BEHAVIOR:AUTOMATIC
+BEGIN:VALARM
+ACTION:AUDIO
+TRIGGER:-PT5M
+X-WR-ALARMUID:B64DDA21-C59A-43E0-B293-39F8F7993517
+UID:B64DDA21-C59A-43E0-B293-39F8F7993517
+ATTACH;VALUE=URI:Chord
+X-APPLE-DEFAULT-ALARM:TRUE
+ACKNOWLEDGED:20210715T185509Z
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20211118T150000
+DTEND;TZID=America/New_York:20211118T163000
+DTSTAMP:20230624T190905Z
+UID:4hqip4fl94fddpomt7gp02h6f3_R20210812T190000@google.com
+RECURRENCE-ID;TZID=America/New_York:20211111T150000
+CREATED:20200109T190602Z
+DESCRIPTION:JOIN WEBEX MEETING<br>https://ietf.webex.com/ietf/j.php?MTID=m7
+ 54e6669c7053ce155a77039317cc55f<br>Meeting number (access code): 428 082 24
+ 00<br><br>Password: meetings<br><br>* Note: This meeting has been pushed ba
+ ck one week and has a different Webex meeting number than the rest of the s
+ eries<br><br><br>JOIN BY PHONE<br>1-650-479-3208 Call-in toll number (US/Ca
+ nada) <br>Tap here to call (mobile phones only\, hosts not supported): tel:
+ %2B1-650-479-3208\,\,*01*640897669%23%23*01*<br><br>1-877-668-4493 Call-in 
+ toll free number (US/Canada) <br>Tap here to call (mobile phones only\, hos
+ ts not supported): tel:1-877-668-4493\,\,*01*640897669%23%23*01*<br><br>Glo
+ bal call-in numbers:<br><a href="https://ietf.webex.com/ietf/globalcallin.p
+ hp?MTID=ma2c91923c964d805d4b849d6888a44df">https://ietf.webex.com/ietf/glob
+ alcallin.php?MTID=ma2c91923c964d805d4b849d6888a44df</a><br><br>Toll-free di
+ aling restrictions: <br><a href="https://www.webex.com/pdf/tollfree_restric
+ tions.pdf">https://www.webex.com/pdf/tollfree_restrictions.pdf</a><br><br><
+ br><br>Can't join the meeting? Contact support here:<br><a href="https://ie
+ tf.webex.com/ietf/mc">https://ietf.webex.com/ietf/mc</a><br><br><br>IMPORTA
+ NT NOTICE: Please note that this Webex service allows audio and other infor
+ mation sent during the session to be recorded\, which may be discoverable i
+ n a legal matter. You should inform all meeting attendees prior to recordin
+ g if you intend to record the meeting.
+LAST-MODIFIED:20220422T201523Z
+LOCATION:https://ietf.webex.com/ietf/j.php?MTID=m5481867e37f4c98327c151d9a6
+ a7cd78
+SEQUENCE:2
+STATUS:CONFIRMED
+SUMMARY:LLC Board Meetings
+TRANSP:OPAQUE
+X-APPLE-TRAVEL-ADVISORY-BEHAVIOR:AUTOMATIC
+BEGIN:VALARM
+ACTION:AUDIO
+TRIGGER:-PT5M
+X-WR-ALARMUID:048AB0B0-A293-4D74-9D50-8B147DD20997
+UID:048AB0B0-A293-4D74-9D50-8B147DD20997
+ATTACH;VALUE=URI:Chord
+X-APPLE-DEFAULT-ALARM:TRUE
+ACKNOWLEDGED:20211118T195025Z
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20201210T150000
+DTEND;TZID=America/New_York:20201210T163000
+RRULE:FREQ=MONTHLY;UNTIL=20210812T035959Z;BYDAY=2TH
+DTSTAMP:20230624T190905Z
+UID:4hqip4fl94fddpomt7gp02h6f3_R20201210T200000@google.com
+CREATED:20200109T190602Z
+DESCRIPTION:<br>JOIN WEBEX MEETING<br>https://ietf.webex.com/ietf/j.php?MTI
+ D=m5481867e37f4c98327c151d9a6a7cd78<br>Meeting number (access code): 178 79
+ 7 1273<br><br><br><br><br>JOIN BY PHONE<br>1-650-479-3208 Call-in toll numb
+ er (US/Canada) <br>Tap here to call (mobile phones only\, hosts not support
+ ed): tel:%2B1-650-479-3208\,\,*01*640897669%23%23*01*<br><br>1-877-668-4493
+  Call-in toll free number (US/Canada) <br>Tap here to call (mobile phones o
+ nly\, hosts not supported): tel:1-877-668-4493\,\,*01*640897669%23%23*01*<b
+ r><br>Global call-in numbers:<br><a href="https://ietf.webex.com/ietf/globa
+ lcallin.php?MTID=ma2c91923c964d805d4b849d6888a44df">https://ietf.webex.com/
+ ietf/globalcallin.php?MTID=ma2c91923c964d805d4b849d6888a44df</a><br><br>Tol
+ l-free dialing restrictions: <br><a href="https://www.webex.com/pdf/tollfre
+ e_restrictions.pdf">https://www.webex.com/pdf/tollfree_restrictions.pdf</a>
+ <br><br><br><br>Can't join the meeting? Contact support here:<br><a href="h
+ ttps://ietf.webex.com/ietf/mc">https://ietf.webex.com/ietf/mc</a><br><br><b
+ r>IMPORTANT NOTICE: Please note that this Webex service allows audio and ot
+ her information sent during the session to be recorded\, which may be disco
+ verable in a legal matter. You should inform all meeting attendees prior to
+  recording if you intend to record the meeting.
+LAST-MODIFIED:20220422T201523Z
+LOCATION:https://ietf.webex.com/ietf/j.php?MTID=m5481867e37f4c98327c151d9a6
+ a7cd78
+SEQUENCE:1
+STATUS:CONFIRMED
+SUMMARY:LLC Board Meetings
+TRANSP:OPAQUE
+X-APPLE-TRAVEL-ADVISORY-BEHAVIOR:AUTOMATIC
+BEGIN:VALARM
+ACTION:AUDIO
+TRIGGER:-PT5M
+X-WR-ALARMUID:F8E59A32-6212-4EF1-9DF1-A9BAD9303C79
+UID:F8E59A32-6212-4EF1-9DF1-A9BAD9303C79
+ATTACH;VALUE=URI:Chord
+X-APPLE-DEFAULT-ALARM:TRUE
+ACKNOWLEDGED:20210812T185004Z
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20210812T150000
+DTEND;TZID=America/New_York:20210812T163000
+RRULE:FREQ=MONTHLY;UNTIL=20220113T045959Z;BYDAY=2TH
+DTSTAMP:20230624T190905Z
+UID:4hqip4fl94fddpomt7gp02h6f3_R20210812T190000@google.com
+CREATED:20200109T190602Z
+DESCRIPTION:JOIN WEBEX MEETING<br><a href="https://ietf.webex.com/ietf/j.ph
+ p?MTID=m5481867e37f4c98327c151d9a6a7cd78">https://ietf.webex.com/ietf/j.php
+ ?MTID=m5481867e37f4c98327c151d9a6a7cd78</a><br>Meeting number (access code)
+ : 178 797 1273<br>Password: meetings<br><br><br><br>JOIN BY PHONE<br>1-650-
+ 479-3208 Call-in toll number (US/Canada) <br>Tap here to call (mobile phone
+ s only\, hosts not supported): tel:%2B1-650-479-3208\,\,*01*640897669%23%23
+ *01*<br><br>1-877-668-4493 Call-in toll free number (US/Canada) <br>Tap her
+ e to call (mobile phones only\, hosts not supported): tel:1-877-668-4493\,\
+ ,*01*640897669%23%23*01*<br><br>Global call-in numbers:<br><a href="https:/
+ /ietf.webex.com/ietf/globalcallin.php?MTID=ma2c91923c964d805d4b849d6888a44d
+ f">https://ietf.webex.com/ietf/globalcallin.php?MTID=ma2c91923c964d805d4b84
+ 9d6888a44df</a><br><br>Toll-free dialing restrictions: <br><a href="https:/
+ /www.webex.com/pdf/tollfree_restrictions.pdf">https://www.webex.com/pdf/tol
+ lfree_restrictions.pdf</a><br><br><br><br>Can't join the meeting? Contact s
+ upport here:<br><a href="https://ietf.webex.com/ietf/mc">https://ietf.webex
+ .com/ietf/mc</a><br><br><br>IMPORTANT NOTICE: Please note that this Webex s
+ ervice allows audio and other information sent during the session to be rec
+ orded\, which may be discoverable in a legal matter. You should inform all 
+ meeting attendees prior to recording if you intend to record the meeting.
+LAST-MODIFIED:20220422T201523Z
+LOCATION:https://ietf.webex.com/ietf/j.php?MTID=m5481867e37f4c98327c151d9a6
+ a7cd78
+SEQUENCE:1
+STATUS:CONFIRMED
+SUMMARY:LLC Board Meetings
+TRANSP:OPAQUE
+X-APPLE-TRAVEL-ADVISORY-BEHAVIOR:AUTOMATIC
+BEGIN:VALARM
+ACTION:AUDIO
+TRIGGER:-PT5M
+X-WR-ALARMUID:F8E59A32-6212-4EF1-9DF1-A9BAD9303C79
+UID:F8E59A32-6212-4EF1-9DF1-A9BAD9303C79
+ATTACH;VALUE=URI:Chord
+X-APPLE-DEFAULT-ALARM:TRUE
+ACKNOWLEDGED:20211014T185502Z
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20220113T150000
+DTEND;TZID=America/New_York:20220113T163000
+RRULE:FREQ=MONTHLY;UNTIL=20220512T035959Z;BYDAY=2TH
+DTSTAMP:20230624T190905Z
+UID:4hqip4fl94fddpomt7gp02h6f3_R20220113T200000@google.com
+CREATED:20200109T190602Z
+DESCRIPTION:JOIN WEBEX MEETING<br>https://ietf.webex.com/ietf/j.php?MTID=m3
+ 5801209ab72d83e21872323bda20c08<br>Meeting number (access code): 2420 020 9
+ 230<br>Password: 1234<br><br><br><br>JOIN BY PHONE<br>1-650-479-3208 Call-i
+ n toll number (US/Canada) <br><br><br>Global call-in numbers:<br><a href="h
+ ttps://ietf.webex.com/ietf/globalcallin.php?MTID=ma2c91923c964d805d4b849d68
+ 88a44df">https://ietf.webex.com/ietf/globalcallin.php?MTID=ma2c91923c964d80
+ 5d4b849d6888a44df</a><br><br>Toll-free dialing restrictions: <br><a href="h
+ ttps://www.webex.com/pdf/tollfree_restrictions.pdf">https://www.webex.com/p
+ df/tollfree_restrictions.pdf</a><br><br><br><br>Can't join the meeting? Con
+ tact support here:<br><a href="https://ietf.webex.com/ietf/mc">https://ietf
+ .webex.com/ietf/mc</a><br><br><br>IMPORTANT NOTICE: Please note that this W
+ ebex service allows audio and other information sent during the session to 
+ be recorded\, which may be discoverable in a legal matter. You should infor
+ m all meeting attendees prior to recording if you intend to record the meet
+ ing.
+LAST-MODIFIED:20220422T201523Z
+LOCATION:https://ietf.webex.com/ietf/j.php?MTID=m35801209ab72d83e21872323bd
+ a20c08
+SEQUENCE:1
+STATUS:CONFIRMED
+SUMMARY:LLC Board Meetings
+TRANSP:OPAQUE
+X-APPLE-TRAVEL-ADVISORY-BEHAVIOR:AUTOMATIC
+BEGIN:VALARM
+ACTION:AUDIO
+TRIGGER:-PT5M
+X-WR-ALARMUID:F8E59A32-6212-4EF1-9DF1-A9BAD9303C79
+UID:F8E59A32-6212-4EF1-9DF1-A9BAD9303C79
+ATTACH;VALUE=URI:Chord
+X-APPLE-DEFAULT-ALARM:TRUE
+ACKNOWLEDGED:20220414T185003Z
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20220425T130000Z
+DTEND:20220425T160000Z
+DTSTAMP:20230624T190905Z
+UID:57di48ofk4fh873aang788ndfp@google.com
+CREATED:20220420T013843Z
+DESCRIPTION:\n\n\n\n\n\nJOIN WEBEX MEETING\n<a href="https://www.google.com
+ /url?q=https://ietf.webex.com/ietf/j.php?MTID%3Dm5390eccf9655d946459c1bd57a
+ dc99cb&amp\;sa=D&amp\;source=calendar&amp\;ust=1650214387327142&amp\;usg=AO
+ vVaw0scT1qk9iBPslIjT8_lNlQ" target="_blank">https://ietf.webex.com/ietf/j.p
+ hp?MTID=m5390eccf9655d946459c1bd57adc99cb</a>\nMeeting number (access code)
+ : 2436 232 3287\n\nMeeting password: retreat\n\n\n\nTAP TO JOIN FROM A MOBI
+ LE DEVICE (ATTENDEES ONLY)\n+1-650-479-3208\,\,24362323287## tel:%2B1-650-4
+ 79-3208\,\,*01*24362323287%23%23*01* Call-in toll number (US/Canada)\n\n\nJ
+ OIN BY PHONE\n1-650-479-3208 Call-in toll number (US/Canada)\n\nGlobal call
+ -in numbers\n<a href="https://www.google.com/url?q=https://ietf.webex.com/i
+ etf/globalcallin.php?MTID%3Dm1b7522c2b83a3ded77cf102b5c99569f&amp\;sa=D&amp
+ \;source=calendar&amp\;ust=1650214387327142&amp\;usg=AOvVaw10AGqRQukhbOKTYK
+ styYu4" target="_blank">https://ietf.webex.com/ietf/globalcallin.php?MTID=m
+ 1b7522c2b83a3ded77cf102b5c99569f</a>\n\n\nJOIN FROM A VIDEO SYSTEM OR APPLI
+ CATION\nDial <a href="sip:24362323287@ietf.webex.com" target="_blank">sip:2
+ 4362323287@ietf.webex.com</a>\nYou can also dial 173.243.2.68 and enter you
+ r meeting number.\n\n\n\n\n\nCan&#39\;t join the meeting?\n<a href="https:/
+ /www.google.com/url?q=https://collaborationhelp.cisco.com/article/WBX000029
+ 055&amp\;sa=D&amp\;source=calendar&amp\;ust=1650214387327142&amp\;usg=AOvVa
+ w07P313NGsXwC-Clef9DXUS" target="_blank">https://collaborationhelp.cisco.co
+ m/article/WBX000029055</a>\n\n\nIMPORTANT NOTICE: Please note that this Web
+ ex service allows audio and other information sent during the session to be
+  recorded\, which may be discoverable in a legal matter. By joining this se
+ ssion\, you automatically consent to such recordings. If you do not consent
+  to being recorded\, discuss your concerns with the host or do not join the
+  session.\n
+LAST-MODIFIED:20220425T125504Z
+LOCATION:https://ietf.webex.com/ietf/j.php?MTID=m5390eccf9655d946459c1bd57a
+ dc99cb
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:LLC Virtual Retreat (Day 2)
+TRANSP:OPAQUE
+X-APPLE-TRAVEL-ADVISORY-BEHAVIOR:AUTOMATIC
+BEGIN:VALARM
+ACTION:AUDIO
+TRIGGER:-PT5M
+X-WR-ALARMUID:54396580-021C-4F6A-99D3-5D62AA6C36F9
+UID:54396580-021C-4F6A-99D3-5D62AA6C36F9
+X-APPLE-DEFAULT-ALARM:TRUE
+ATTACH;VALUE=URI:Chord
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20220511T130000
+DTEND;TZID=America/New_York:20220511T143000
+RRULE:FREQ=MONTHLY;UNTIL=20221109T045959Z;BYDAY=2WE
+EXDATE;TZID=America/New_York:20220810T130000
+DTSTAMP:20230624T190905Z
+UID:o0nohfs3vt7m2ul6olv3g0mmb8@google.com
+CREATED:20200109T190602Z
+DESCRIPTION:<html-blob><br></html-blob><br><html-blob><br></html-blob><br><
+ html-blob><br></html-blob><br>JOIN WEBEX MEETING<br>https://ietf.webex.com/
+ ietf/j.php?MTID=mceeaa1be6f4d2d99bf0f8cfe3a8fa946<br>Meeting number (access
+  code): 2420 020 9230<br>Meeting password: 1234<br><br><br><br>TAP TO JOIN 
+ FROM A MOBILE DEVICE (ATTENDEES ONLY)<br>+1-650-479-3208\,\,24200209230## t
+ el:%2B1-650-479-3208\,\,*01*24200209230%23%23*01* Call-in toll number (US/C
+ anada)<br><br>JOIN BY PHONE<br>1-650-479-3208 Call-in toll number (US/Canad
+ a)<br><br>Global call-in numbers:<br>https://ietf.webex.com/ietf/globalcall
+ in.php?MTID=me72d23f20fb0176b36937f05e6facddd
+LAST-MODIFIED:20221020T164638Z
+LOCATION:https://www.ietf.org/about/administration/llc-board/meeting-info/
+SEQUENCE:2
+STATUS:CONFIRMED
+SUMMARY:LLC Board Meetings
+TRANSP:OPAQUE
+X-APPLE-TRAVEL-ADVISORY-BEHAVIOR:AUTOMATIC
+BEGIN:VALARM
+ACTION:AUDIO
+TRIGGER:-PT5M
+X-WR-ALARMUID:F8E59A32-6212-4EF1-9DF1-A9BAD9303C79
+UID:F8E59A32-6212-4EF1-9DF1-A9BAD9303C79
+ATTACH;VALUE=URI:Chord
+X-APPLE-DEFAULT-ALARM:TRUE
+ACKNOWLEDGED:20220914T172946Z
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20221214T130000
+DTEND;TZID=America/New_York:20221214T143000
+DTSTAMP:20230624T190905Z
+UID:t9891e88886dmvoe7ovl5q5k3s@google.com
+RECURRENCE-ID;TZID=America/New_York:20221221T130000
+CREATED:20200109T190602Z
+DESCRIPTION:<html-blob><br></html-blob><br><html-blob><br></html-blob><br><
+ html-blob><br></html-blob><br>JOIN WEBEX MEETING<br>https://ietf.webex.com/
+ ietf/j.php?MTID=mceeaa1be6f4d2d99bf0f8cfe3a8fa946<br>Meeting number (access
+  code): 2420 020 9230<br>Meeting password: 1234<br><br><br><br>TAP TO JOIN 
+ FROM A MOBILE DEVICE (ATTENDEES ONLY)<br>+1-650-479-3208\,\,24200209230## t
+ el:%2B1-650-479-3208\,\,*01*24200209230%23%23*01* Call-in toll number (US/C
+ anada)<br><br>JOIN BY PHONE<br>1-650-479-3208 Call-in toll number (US/Canad
+ a)<br><br>Global call-in numbers:<br>https://ietf.webex.com/ietf/globalcall
+ in.php?MTID=me72d23f20fb0176b36937f05e6facddd
+LAST-MODIFIED:20221116T180353Z
+LOCATION:https://www.ietf.org/about/administration/llc-board/meeting-info/
+SEQUENCE:5
+STATUS:CONFIRMED
+SUMMARY:LLC Board Meetings
+TRANSP:OPAQUE
+X-APPLE-TRAVEL-ADVISORY-BEHAVIOR:AUTOMATIC
+BEGIN:VALARM
+ACTION:AUDIO
+TRIGGER:-PT5M
+X-WR-ALARMUID:F575B5D1-44F4-4948-8E4B-F35C3129B3B0
+UID:F575B5D1-44F4-4948-8E4B-F35C3129B3B0
+X-APPLE-DEFAULT-ALARM:TRUE
+ATTACH;VALUE=URI:Chord
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20221116T130000
+DTEND;TZID=America/New_York:20221116T143000
+RRULE:FREQ=MONTHLY;UNTIL=20221231T000000Z;BYDAY=3WE
+DTSTAMP:20230624T190905Z
+UID:t9891e88886dmvoe7ovl5q5k3s@google.com
+CREATED:20200109T190602Z
+DESCRIPTION:<html-blob><br></html-blob><br><html-blob><br></html-blob><br><
+ html-blob><br></html-blob><br>JOIN WEBEX MEETING<br>https://ietf.webex.com/
+ ietf/j.php?MTID=mceeaa1be6f4d2d99bf0f8cfe3a8fa946<br>Meeting number (access
+  code): 2420 020 9230<br>Meeting password: 1234<br><br><br><br>TAP TO JOIN 
+ FROM A MOBILE DEVICE (ATTENDEES ONLY)<br>+1-650-479-3208\,\,24200209230## t
+ el:%2B1-650-479-3208\,\,*01*24200209230%23%23*01* Call-in toll number (US/C
+ anada)<br><br>JOIN BY PHONE<br>1-650-479-3208 Call-in toll number (US/Canad
+ a)<br><br>Global call-in numbers:<br>https://ietf.webex.com/ietf/globalcall
+ in.php?MTID=me72d23f20fb0176b36937f05e6facddd
+LAST-MODIFIED:20221214T175500Z
+LOCATION:https://www.ietf.org/about/administration/llc-board/meeting-info/
+SEQUENCE:4
+STATUS:CONFIRMED
+SUMMARY:LLC Board Meetings
+TRANSP:OPAQUE
+X-APPLE-TRAVEL-ADVISORY-BEHAVIOR:AUTOMATIC
+BEGIN:VALARM
+ACTION:AUDIO
+TRIGGER:-PT5M
+X-WR-ALARMUID:F8E59A32-6212-4EF1-9DF1-A9BAD9303C79
+UID:F8E59A32-6212-4EF1-9DF1-A9BAD9303C79
+ATTACH;VALUE=URI:Chord
+X-APPLE-DEFAULT-ALARM:TRUE
+ACKNOWLEDGED:20221116T175001Z
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+DTSTART:20190423T170000Z
+DTEND:20190423T183000Z
+DTSTAMP:20230624T190905Z
+UID:5p99vjpdgshv0pmh9efbe60eir@google.com
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=ACCEPTED;CN=ietf.o
+ rg_vmffrv4hq14aqpedenuv5v42hs@group.calendar.google.com;X-NUM-GUESTS=0:mail
+ to:ietf.org_vmffrv4hq14aqpedenuv5v42hs@group.calendar.google.com
+CREATED:20190411T182056Z
+DESCRIPTION:JOIN WEBEX MEETING\nhttps://ietf.webex.com/ietf/j.php?MTID=mc7e
+ e896eeb45b4570b9a2fcda657989f\nMeeting number (access code): 644 328 069\n1
+ -650-479-3208 Call-in toll number (US/Canada) 
+LAST-MODIFIED:20230104T051644Z
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:LLC Board Meeting
+TRANSP:OPAQUE
+X-APPLE-TRAVEL-ADVISORY-BEHAVIOR:AUTOMATIC
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Los_Angeles:20230111T100000
+DTEND;TZID=America/Los_Angeles:20230111T113000
+RRULE:FREQ=MONTHLY;UNTIL=20240102T075959Z;BYDAY=2WE
+DTSTAMP:20230624T190905Z
+UID:10ubdr2741ikrih9btd6oqtbpi@google.com
+CREATED:20221020T164857Z
+DESCRIPTION:<u></u>LLC Board Meetings<br>Hosted by LLC Board<br><br><a href
+ ="https://www.google.com/url?q=https://ietf.webex.com/ietf/j.php?MTID%3Dm2a
+ 033873864e87d9f0d7b94c7c1fac2c&amp\;sa=D&amp\;source=calendar&amp\;ust=1666
+ 715854543588&amp\;usg=AOvVaw3cOz2VWkzsowo4b9G53yUQ" target="_blank">https:/
+ /ietf.webex.com/ietf/j.php?MTID=m2a033873864e87d9f0d7b94c7c1fac2c</a><br>We
+ dnesday\, Jan 11\, 2023 1:00 pm | 1 hour 30 minutes | (UTC-04:00) Eastern T
+ ime (US &amp\; Canada)<br>Occurs the second Wednesday of every month effect
+ ive 1/11/2023 until 12/13/2023 from 10:00 AM to 11:30 AM\, &lt\;span&gt\;(U
+ TC-07:00) Pacific Time (US &amp\; Canada)&lt\;/span&gt\;<br>Meeting number:
+  2439 319 4224<br>Password: 1234<br><br>Join by video system<br>Dial <a hre
+ f="mailto:24393194224@ietf.webex.com" target="_blank">24393194224@ietf.webe
+ x.com</a><br>You can also dial 173.243.2.68 and enter your meeting number.<
+ br><br>Join by phone<br>1-650-479-3208 Call-in toll number (US/Canada)<br><
+ br>Access code: 243 931 94224<u></u>
+LAST-MODIFIED:20230111T184825Z
+LOCATION:https://ietf.webex.com/ietf/j.php?MTID=m2a033873864e87d9f0d7b94c7c
+ 1fac2c
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:IETF LLC Board Meeting
+TRANSP:OPAQUE
+X-APPLE-TRAVEL-ADVISORY-BEHAVIOR:AUTOMATIC
+BEGIN:VALARM
+ACTION:AUDIO
+TRIGGER:-PT5M
+X-WR-ALARMUID:7393306B-F0D2-44BE-8572-E972B197880F
+UID:7393306B-F0D2-44BE-8572-E972B197880F
+X-APPLE-DEFAULT-ALARM:TRUE
+ATTACH;VALUE=URI:Chord
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Los_Angeles:20231115T100000
+DTEND;TZID=America/Los_Angeles:20231115T113000
+DTSTAMP:20230624T190905Z
+UID:10ubdr2741ikrih9btd6oqtbpi@google.com
+RECURRENCE-ID;TZID=America/Los_Angeles:20231108T100000
+CREATED:20221020T164857Z
+DESCRIPTION:<u></u>LLC Board Meetings<br>Hosted by LLC Board<br><br><a href
+ ="https://www.google.com/url?q=https://ietf.webex.com/ietf/j.php?MTID%3Dm2a
+ 033873864e87d9f0d7b94c7c1fac2c&amp\;sa=D&amp\;source=calendar&amp\;ust=1666
+ 715854543588&amp\;usg=AOvVaw3cOz2VWkzsowo4b9G53yUQ" target="_blank">https:/
+ /ietf.webex.com/ietf/j.php?MTID=m2a033873864e87d9f0d7b94c7c1fac2c</a><br>We
+ dnesday\, Jan 11\, 2023 1:00 pm | 1 hour 30 minutes | (UTC-04:00) Eastern T
+ ime (US &amp\; Canada)<br>Occurs the second Wednesday of every month effect
+ ive 1/11/2023 until 12/13/2023 from 10:00 AM to 11:30 AM\, &lt\;span&gt\;(U
+ TC-07:00) Pacific Time (US &amp\; Canada)&lt\;/span&gt\;<br>Meeting number:
+  2439 319 4224<br>Password: 1234<br><br>Join by video system<br>Dial <a hre
+ f="mailto:24393194224@ietf.webex.com" target="_blank">24393194224@ietf.webe
+ x.com</a><br>You can also dial 173.243.2.68 and enter your meeting number.<
+ br><br>Join by phone<br>1-650-479-3208 Call-in toll number (US/Canada)<br><
+ br>Access code: 243 931 94224<u></u>
+LAST-MODIFIED:20230111T184825Z
+LOCATION:https://ietf.webex.com/ietf/j.php?MTID=m2a033873864e87d9f0d7b94c7c
+ 1fac2c
+SEQUENCE:1
+STATUS:CONFIRMED
+SUMMARY:IETF LLC Board Meeting
+TRANSP:OPAQUE
+X-APPLE-TRAVEL-ADVISORY-BEHAVIOR:AUTOMATIC
+BEGIN:VALARM
+ACTION:AUDIO
+TRIGGER:-PT5M
+X-WR-ALARMUID:39C6C54E-FD4F-48BD-8331-872747B17F92
+UID:39C6C54E-FD4F-48BD-8331-872747B17F92
+X-APPLE-DEFAULT-ALARM:TRUE
+ATTACH;VALUE=URI:Chord
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/Los_Angeles:20230517T100000
+DTEND;TZID=America/Los_Angeles:20230517T113000
+DTSTAMP:20230624T190905Z
+UID:10ubdr2741ikrih9btd6oqtbpi@google.com
+RECURRENCE-ID;TZID=America/Los_Angeles:20230510T100000
+CREATED:20221020T164857Z
+DESCRIPTION:<u></u>LLC Board Meetings<br>Hosted by LLC Board<br><br><a href
+ ="https://www.google.com/url?q=https://ietf.webex.com/ietf/j.php?MTID%3Dm2a
+ 033873864e87d9f0d7b94c7c1fac2c&amp\;sa=D&amp\;source=calendar&amp\;ust=1666
+ 715854543588&amp\;usg=AOvVaw3cOz2VWkzsowo4b9G53yUQ" target="_blank">https:/
+ /ietf.webex.com/ietf/j.php?MTID=m2a033873864e87d9f0d7b94c7c1fac2c</a><br>We
+ dnesday\, Jan 11\, 2023 1:00 pm | 1 hour 30 minutes | (UTC-04:00) Eastern T
+ ime (US &amp\; Canada)<br>Occurs the second Wednesday of every month effect
+ ive 1/11/2023 until 12/13/2023 from 10:00 AM to 11:30 AM\, &lt\;span&gt\;(U
+ TC-07:00) Pacific Time (US &amp\; Canada)&lt\;/span&gt\;<br>Meeting number:
+  2439 319 4224<br>Password: 1234<br><br>Join by video system<br>Dial <a hre
+ f="mailto:24393194224@ietf.webex.com" target="_blank">24393194224@ietf.webe
+ x.com</a><br>You can also dial 173.243.2.68 and enter your meeting number.<
+ br><br>Join by phone<br>1-650-479-3208 Call-in toll number (US/Canada)<br><
+ br>Access code: 243 931 94224<u></u>
+LAST-MODIFIED:20230421T153709Z
+LOCATION:https://ietf.webex.com/ietf/j.php?MTID=m2a033873864e87d9f0d7b94c7c
+ 1fac2c
+SEQUENCE:1
+STATUS:CONFIRMED
+SUMMARY:IETF LLC Board Meeting
+TRANSP:OPAQUE
+END:VEVENT
+END:VCALENDAR

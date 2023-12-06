@@ -1,0 +1,453 @@
+"This XML file does not appear to have any style information associated with it. The document tree is shown below.
+<response>
+<meta type="hash">
+<limit type="integer">20</limit>
+<next>/api/v1/group/group/?limit=20&offset=20</next>
+<offset type="integer">0</offset>
+<previous type="null"/>
+<total_count type="integer">1520</total_count>
+</meta>
+<objects type="list">
+<object>
+<acronym>dnsop</acronym>
+<ad type="null"/>
+<charter>/api/v1/doc/document/charter-ietf-dnsop/</charter>
+<comments>1st meeting at 44th IETF-Minneapolis, MN AD was Harald</comments>
+<description>The DNS Operations Working Group will develop guidelines for the operation of DNS software and services and for the administration of DNS zones. These guidelines will provide technical information relating to the implementation of the DNS protocol by the operators and administrators of DNS zones. The group will perform the following activities:</description>
+<id type="integer">1452</id>
+<list_archive>https://mailarchive.ietf.org/arch/browse/dnsop/</list_archive>
+<list_email>dnsop@ietf.org</list_email>
+<list_subscribe>http://www.ietf.org/mailman/listinfo/dnsop</list_subscribe>
+<meeting_seen_as_area type="boolean">False</meeting_seen_as_area>
+<name>Domain Name System Operations</name>
+<parent>/api/v1/group/group/1193/</parent>
+<resource_uri>/api/v1/group/group/1452/</resource_uri>
+<state>/api/v1/name/groupstatename/active/</state>
+<time>2023-04-16T19:45:59Z</time>
+<type>/api/v1/name/grouptypename/wg/</type>
+<unused_states type="list"/>
+<unused_tags type="list"/>
+<used_roles>[]</used_roles>
+<uses_milestone_dates type="boolean">True</uses_milestone_dates>
+</object>
+<object>
+<acronym>icann</acronym>
+<ad type="null"/>
+<charter type="null"/>
+<comments/>
+<description>No description available</description>
+<id type="integer">2390</id>
+<list_archive/>
+<list_email/>
+<list_subscribe/>
+<meeting_seen_as_area type="boolean">False</meeting_seen_as_area>
+<name>ICANN</name>
+<parent type="null"/>
+<resource_uri>/api/v1/group/group/2390/</resource_uri>
+<state>/api/v1/name/groupstatename/active/</state>
+<time>2023-04-18T18:35:12Z</time>
+<type>/api/v1/name/grouptypename/sdo/</type>
+<unused_states type="list"/>
+<unused_tags type="list"/>
+<used_roles>[]</used_roles>
+<uses_milestone_dates type="boolean">True</uses_milestone_dates>
+</object>
+<object>
+<acronym>ietf3gpp</acronym>
+<ad type="null"/>
+<charter type="null"/>
+<comments/>
+<description>The purpose of this group is to support coordination activities between IETF and 3GPP as documented in RFC 3113. The group maintains an invitation-only mailing list, a dependency list for tracking document dependencies, and shepherds liaison statements exchanged between IETF and 3GPP. The group typically holds a coordination call a couple of weeks before each IETF meeting and also holds an in-person meeting during the IETF meeting when there are topics that need discussion. This group is led jointly by the respective liaison managers from both organizations, IETF and 3GPP. This group has no fixed membership but participation from relevant IETF Area Directors, IETF WG Chairs, 3GPP WG Chairs, and document authors/editors is encouraged. The group co-leads will review and update the mailing list yearly prior to the July meeting, in order to adjust for changes in the IESG and IAB.</description>
+<id type="integer">2391</id>
+<list_archive/>
+<list_email/>
+<list_subscribe/>
+<meeting_seen_as_area type="boolean">False</meeting_seen_as_area>
+<name>IETF-3GPP</name>
+<parent>/api/v1/group/group/7/</parent>
+<resource_uri>/api/v1/group/group/2391/</resource_uri>
+<state>/api/v1/name/groupstatename/active/</state>
+<time>2023-04-19T16:08:46Z</time>
+<type>/api/v1/name/grouptypename/iabasg/</type>
+<unused_states type="list"/>
+<unused_tags type="list"/>
+<used_roles>[]</used_roles>
+<uses_milestone_dates type="boolean">True</uses_milestone_dates>
+</object>
+<object>
+<acronym>o-ran-wg9</acronym>
+<ad type="null"/>
+<charter type="null"/>
+<comments/>
+<description>No description available</description>
+<id type="integer">2392</id>
+<list_archive/>
+<list_email/>
+<list_subscribe/>
+<meeting_seen_as_area type="boolean">False</meeting_seen_as_area>
+<name>O-RAN WG9</name>
+<parent type="null"/>
+<resource_uri>/api/v1/group/group/2392/</resource_uri>
+<state>/api/v1/name/groupstatename/active/</state>
+<time>2023-04-21T14:28:52Z</time>
+<type>/api/v1/name/grouptypename/sdo/</type>
+<unused_states type="list"/>
+<unused_tags type="list"/>
+<used_roles>[]</used_roles>
+<uses_milestone_dates type="boolean">True</uses_milestone_dates>
+</object>
+<object>
+<acronym>spring</acronym>
+<ad type="null"/>
+<charter>/api/v1/doc/document/charter-ietf-spring/</charter>
+<comments/>
+<description>The Source Packet Routing in NetworkinG (SPRING) Working Group is the home of Segment Routing (SR) using MPLS (SR-MPLS) and IPv6 (SRv6). SPRING WG serves as a forum to discuss SPRING networks operations, define new applications of, and specify extensions of Segment Routing technologies.</description>
+<id type="integer">1905</id>
+<list_archive>https://mailarchive.ietf.org/arch/browse/spring/</list_archive>
+<list_email>spring@ietf.org</list_email>
+<list_subscribe>https://www.ietf.org/mailman/listinfo/spring</list_subscribe>
+<meeting_seen_as_area type="boolean">False</meeting_seen_as_area>
+<name>Source Packet Routing in Networking</name>
+<parent>/api/v1/group/group/1249/</parent>
+<resource_uri>/api/v1/group/group/1905/</resource_uri>
+<state>/api/v1/name/groupstatename/active/</state>
+<time>2023-04-21T14:58:58Z</time>
+<type>/api/v1/name/grouptypename/wg/</type>
+<unused_states type="list"/>
+<unused_tags type="list"/>
+<used_roles>[]</used_roles>
+<uses_milestone_dates type="boolean">True</uses_milestone_dates>
+</object>
+<object>
+<acronym>gopher</acronym>
+<ad type="null"/>
+<charter type="null"/>
+<comments/>
+<description>No description available</description>
+<id type="integer">1010</id>
+<list_archive/>
+<list_email/>
+<list_subscribe/>
+<meeting_seen_as_area type="boolean">False</meeting_seen_as_area>
+<name>GOPHER</name>
+<parent>/api/v1/group/group/1346/</parent>
+<resource_uri>/api/v1/group/group/1010/</resource_uri>
+<state>/api/v1/name/groupstatename/bof-conc/</state>
+<time>2011-12-09T20:00:00Z</time>
+<type>/api/v1/name/grouptypename/wg/</type>
+<unused_states type="list"/>
+<unused_tags type="list"/>
+<used_roles>[]</used_roles>
+<uses_milestone_dates type="boolean">True</uses_milestone_dates>
+</object>
+<object>
+<acronym>tsv</acronym>
+<ad type="null"/>
+<charter type="null"/>
+<comments/>
+<description>The transport and services area - usually just called "transport area" or "TSV area" - covers a range of technical topics related to data transport in the Internet. The Transport Area works on mechanisms related to end-to-end data transport to support Internet applications and services that exchange potentially large volumes of traffic at potentially high bandwidths. A key focus are mechanisms to detect and react to congestion in the Internet, such as the congestion control algorithms in Internet transport control protocols such as TCP, SCTP, and DCCP, as well as congestion management schemes such as PCN and CONEX. Current and new transport work includes congestion signaling and reporting, forward error correction, multicast, QoS and reservation signaling, DiffServ? and congestion control for unresponsive flows, NAT regularization and specification, storage protocols for the Internet, peer-to-peer streaming, performance metrics for Internet paths, experimentation with congestion control schemes developed in the IRTF, multipath extensions to existing transport protocols, congestion control for "background" bulk transfers, and extensions to the IETF protocols for multimedia transport. The transport area intersects most frequently with Internet area, the applications area, the RAI area, the security area and several IRTF research groups.</description>
+<id type="integer">1324</id>
+<list_archive/>
+<list_email/>
+<list_subscribe/>
+<meeting_seen_as_area type="boolean">False</meeting_seen_as_area>
+<name>Transport Area</name>
+<parent>/api/v1/group/group/2/</parent>
+<resource_uri>/api/v1/group/group/1324/</resource_uri>
+<state>/api/v1/name/groupstatename/active/</state>
+<time>2023-04-21T21:47:13Z</time>
+<type>/api/v1/name/grouptypename/area/</type>
+<unused_states type="list"/>
+<unused_tags type="list"/>
+<used_roles>[]</used_roles>
+<uses_milestone_dates type="boolean">False</uses_milestone_dates>
+</object>
+<object>
+<acronym>tictoc</acronym>
+<ad type="null"/>
+<charter>/api/v1/doc/document/charter-ietf-tictoc/</charter>
+<comments>1st meeting 68th IETF - Prague, Czech Republic</comments>
+<description> The Timing over IP Connections and Transfer Of Clock (TICTOC) WG is concerned with highly accurate time and frequency distribution over native IP and MPLS-enabled IP Packet Switched Networks (PSNs). While this need arises from a variety of sources (see draft-bryant-tictoc-probstat-01.txt), the application areas of focus for this WG are:</description>
+<id type="integer">1709</id>
+<list_archive>https://mailarchive.ietf.org/arch/browse/tictoc/</list_archive>
+<list_email>tictoc@ietf.org</list_email>
+<list_subscribe>https://www.ietf.org/mailman/listinfo/tictoc</list_subscribe>
+<meeting_seen_as_area type="boolean">False</meeting_seen_as_area>
+<name>Timing over IP Connection and Transfer of Clock</name>
+<parent>/api/v1/group/group/1052/</parent>
+<resource_uri>/api/v1/group/group/1709/</resource_uri>
+<state>/api/v1/name/groupstatename/active/</state>
+<time>2023-04-21T21:48:00Z</time>
+<type>/api/v1/name/grouptypename/wg/</type>
+<unused_states type="list"/>
+<unused_tags type="list"/>
+<used_roles>[]</used_roles>
+<uses_milestone_dates type="boolean">True</uses_milestone_dates>
+</object>
+<object>
+<acronym>sipcore</acronym>
+<ad type="null"/>
+<charter>/api/v1/doc/document/charter-ietf-sipcore/</charter>
+<comments/>
+<description>The Session Initiation Protocol Core (SIPCore) working group is chartered to maintain and continue the development of the SIP protocol, currently defined as proposed standard RFCs 3261, 3262, 3263, 3264, and 6665.</description>
+<id type="integer">1762</id>
+<list_archive>https://mailarchive.ietf.org/arch/browse/sipcore/</list_archive>
+<list_email>sipcore@ietf.org</list_email>
+<list_subscribe>https://www.ietf.org/mailman/listinfo/sipcore</list_subscribe>
+<meeting_seen_as_area type="boolean">False</meeting_seen_as_area>
+<name>Session Initiation Protocol Core</name>
+<parent>/api/v1/group/group/2010/</parent>
+<resource_uri>/api/v1/group/group/1762/</resource_uri>
+<state>/api/v1/name/groupstatename/active/</state>
+<time>2023-04-21T21:49:03Z</time>
+<type>/api/v1/name/grouptypename/wg/</type>
+<unused_states type="list"/>
+<unused_tags type="list"/>
+<used_roles>[]</used_roles>
+<uses_milestone_dates type="boolean">True</uses_milestone_dates>
+</object>
+<object>
+<acronym>secdispatch</acronym>
+<ad type="null"/>
+<charter>/api/v1/doc/document/charter-ietf-secdispatch/</charter>
+<comments/>
+<description>The Security Dispatch working group is a DISPATCH-style WG (see [RFC7957]) chartered to consider proposals for new work in the SEC area and if the work is appropriate for the IETF and there is sufficient interest, identify, or help create, an appropriate venue for the work. In order to help the proposed new work succeed, the working group aims to assist the proposed new work in:</description>
+<id type="integer">2219</id>
+<list_archive>https://mailarchive.ietf.org/arch/browse/secdispatch/</list_archive>
+<list_email>secdispatch@ietf.org</list_email>
+<list_subscribe>https://www.ietf.org/mailman/listinfo/secdispatch</list_subscribe>
+<meeting_seen_as_area type="boolean">True</meeting_seen_as_area>
+<name>Security Dispatch</name>
+<parent>/api/v1/group/group/1260/</parent>
+<resource_uri>/api/v1/group/group/2219/</resource_uri>
+<state>/api/v1/name/groupstatename/active/</state>
+<time>2023-04-21T21:50:00Z</time>
+<type>/api/v1/name/grouptypename/wg/</type>
+<unused_states type="list"/>
+<unused_tags type="list"/>
+<used_roles>[]</used_roles>
+<uses_milestone_dates type="boolean">True</uses_milestone_dates>
+</object>
+<object>
+<acronym>roll</acronym>
+<ad type="null"/>
+<charter>/api/v1/doc/document/charter-ietf-roll/</charter>
+<comments/>
+<description>Low power and Lossy Networks (LLNs ) are made up of many embedded devices with limited power, memory, and processing resources. They are interconnected by a variety of links, such as IEEE 802.15.4, Bluetooth, Low Power WiFi, wired or other low power PLC (Powerline Communication) links. LLNs are transitioning to an end-to-end IP-based solution to avoid the problem of non-interoperable networks interconnected by protocol translation gateways and proxies.</description>
+<id type="integer">1730</id>
+<list_archive>https://mailarchive.ietf.org/arch/browse/roll/</list_archive>
+<list_email>roll@ietf.org</list_email>
+<list_subscribe>http://www.ietf.org/mailman/listinfo/roll</list_subscribe>
+<meeting_seen_as_area type="boolean">False</meeting_seen_as_area>
+<name>Routing Over Low power and Lossy networks</name>
+<parent>/api/v1/group/group/1249/</parent>
+<resource_uri>/api/v1/group/group/1730/</resource_uri>
+<state>/api/v1/name/groupstatename/active/</state>
+<time>2023-04-21T21:51:03Z</time>
+<type>/api/v1/name/grouptypename/wg/</type>
+<unused_states type="list"/>
+<unused_tags type="list"/>
+<used_roles>[]</used_roles>
+<uses_milestone_dates type="boolean">True</uses_milestone_dates>
+</object>
+<object>
+<acronym>rift</acronym>
+<ad type="null"/>
+<charter>/api/v1/doc/document/charter-ietf-rift/</charter>
+<comments/>
+<description>Data Centers have been steadily growing to commonly host tens of thousands of end points, or more, in a single network. Because of their topologies (traditional and emerging), traffic patterns, need for fast restoration, and for low human intervention, data center networks have a unique set of requirements that is resulting in the design of routing solutions specific to them. Clos and Fat-Tree topologies have gained popularity in data center networks as a result of a trend towards centralized data center network architectures that may deliver computation and storage services.</description>
+<id type="integer">2214</id>
+<list_archive>https://mailarchive.ietf.org/arch/search/?email_list=rift</list_archive>
+<list_email>rift@ietf.org</list_email>
+<list_subscribe>https://www.ietf.org/mailman/listinfo/rift</list_subscribe>
+<meeting_seen_as_area type="boolean">False</meeting_seen_as_area>
+<name>Routing In Fat Trees</name>
+<parent>/api/v1/group/group/1249/</parent>
+<resource_uri>/api/v1/group/group/2214/</resource_uri>
+<state>/api/v1/name/groupstatename/active/</state>
+<time>2023-04-21T21:52:01Z</time>
+<type>/api/v1/name/grouptypename/wg/</type>
+<unused_states type="list"/>
+<unused_tags type="list"/>
+<used_roles>[]</used_roles>
+<uses_milestone_dates type="boolean">True</uses_milestone_dates>
+</object>
+<object>
+<acronym>regext</acronym>
+<ad type="null"/>
+<charter>/api/v1/doc/document/charter-ietf-regext/</charter>
+<comments/>
+<description>Charter for Working Group</description>
+<id type="integer">2146</id>
+<list_archive>https://mailarchive.ietf.org/arch/browse/regext/</list_archive>
+<list_email>regext@ietf.org</list_email>
+<list_subscribe>https://www.ietf.org/mailman/listinfo/regext</list_subscribe>
+<meeting_seen_as_area type="boolean">False</meeting_seen_as_area>
+<name>Registration Protocols Extensions</name>
+<parent>/api/v1/group/group/2010/</parent>
+<resource_uri>/api/v1/group/group/2146/</resource_uri>
+<state>/api/v1/name/groupstatename/active/</state>
+<time>2023-04-21T21:52:34Z</time>
+<type>/api/v1/name/grouptypename/wg/</type>
+<unused_states type="list"/>
+<unused_tags type="list"/>
+<used_roles>[]</used_roles>
+<uses_milestone_dates type="boolean">True</uses_milestone_dates>
+</object>
+<object>
+<acronym>netmod</acronym>
+<ad type="null"/>
+<charter>/api/v1/doc/document/charter-ietf-netmod/</charter>
+<comments/>
+<description>The Network Modeling (NETMOD) working group is responsible for the YANG data modeling language, which can be used to specify network management data models that are transported over such protocols as NETCONF and RESTCONF, and guidelines for developing YANG models. The NETMOD working group addresses general topics related to the use of the YANG language and YANG models, for example, the mapping of YANG modeled data into various encodings. Finally, the NETMOD working group also defines core YANG models used as basic YANG building blocks, and YANG models that do not otherwise fall under the charter of any other IETF working group. The NETMOD WG may include work on YANG modules device profiles that do not otherwise fall under the charter of any other IETF working group.</description>
+<id type="integer">1638</id>
+<list_archive>https://mailarchive.ietf.org/arch/browse/netmod/</list_archive>
+<list_email>netmod@ietf.org</list_email>
+<list_subscribe>https://www.ietf.org/mailman/listinfo/netmod</list_subscribe>
+<meeting_seen_as_area type="boolean">False</meeting_seen_as_area>
+<name>Network Modeling</name>
+<parent>/api/v1/group/group/1193/</parent>
+<resource_uri>/api/v1/group/group/1638/</resource_uri>
+<state>/api/v1/name/groupstatename/active/</state>
+<time>2023-04-21T21:53:30Z</time>
+<type>/api/v1/name/grouptypename/wg/</type>
+<unused_states type="list"/>
+<unused_tags type="list"/>
+<used_roles>[]</used_roles>
+<uses_milestone_dates type="boolean">True</uses_milestone_dates>
+</object>
+<object>
+<acronym>lwig</acronym>
+<ad type="null"/>
+<charter>/api/v1/doc/document/charter-ietf-lwig/</charter>
+<comments/>
+<description> Communications technology is being embedded into our environment. Different types of devices in our buildings, vehicles, equipment and other objects have a need to communicate. It is expected that most of these devices will employ the Internet Protocol suite. However, there is a lot of variation in the capabilities between different types of devices, and it is not always easy to embed all the necessary features. The Light-Weight Implementation Guidance (LWIG) Working Group focuses on helping the implementors of the smallest devices. The goal is to be able to build minimal yet interoperable IP-capable devices for the most constrained environments.</description>
+<id type="integer">1817</id>
+<list_archive>https://mailarchive.ietf.org/arch/browse/lwip/</list_archive>
+<list_email>lwip@ietf.org</list_email>
+<list_subscribe>https://www.ietf.org/mailman/listinfo/lwip</list_subscribe>
+<meeting_seen_as_area type="boolean">False</meeting_seen_as_area>
+<name>Light-Weight Implementation Guidance</name>
+<parent>/api/v1/group/group/1052/</parent>
+<resource_uri>/api/v1/group/group/1817/</resource_uri>
+<state>/api/v1/name/groupstatename/active/</state>
+<time>2023-04-21T21:54:02Z</time>
+<type>/api/v1/name/grouptypename/wg/</type>
+<unused_states type="list"/>
+<unused_tags type="list"/>
+<used_roles>[]</used_roles>
+<uses_milestone_dates type="boolean">True</uses_milestone_dates>
+</object>
+<object>
+<acronym>idr</acronym>
+<ad type="null"/>
+<charter>/api/v1/doc/document/charter-ietf-idr/</charter>
+<comments>This working group resulted from BGP and IPIDRP merging.</comments>
+<description> The Inter-Domain Routing Working Group is chartered to standardize, develop, and support the Border Gateway Protocol Version 4 (BGP-4) [RFC 4271] capable of supporting policy based routing for TCP/IP internets.</description>
+<id type="integer">1041</id>
+<list_archive>https://mailarchive.ietf.org/arch/browse/idr/</list_archive>
+<list_email>idr@ietf.org</list_email>
+<list_subscribe>https://www.ietf.org/mailman/listinfo/idr</list_subscribe>
+<meeting_seen_as_area type="boolean">False</meeting_seen_as_area>
+<name>Inter-Domain Routing</name>
+<parent>/api/v1/group/group/1249/</parent>
+<resource_uri>/api/v1/group/group/1041/</resource_uri>
+<state>/api/v1/name/groupstatename/active/</state>
+<time>2023-04-21T21:56:17Z</time>
+<type>/api/v1/name/grouptypename/wg/</type>
+<unused_states type="list"/>
+<unused_tags type="list"/>
+<used_roles>[]</used_roles>
+<uses_milestone_dates type="boolean">True</uses_milestone_dates>
+</object>
+<object>
+<acronym>ietf</acronym>
+<ad type="null"/>
+<charter type="null"/>
+<comments/>
+<description>No description available</description>
+<id type="integer">1</id>
+<list_archive/>
+<list_email/>
+<list_subscribe/>
+<meeting_seen_as_area type="boolean">False</meeting_seen_as_area>
+<name>IETF</name>
+<parent type="null"/>
+<resource_uri>/api/v1/group/group/1/</resource_uri>
+<state>/api/v1/name/groupstatename/active/</state>
+<time>2022-03-23T13:31:45Z</time>
+<type>/api/v1/name/grouptypename/ietf/</type>
+<unused_states type="list"/>
+<unused_tags type="list"/>
+<used_roles>[]</used_roles>
+<uses_milestone_dates type="boolean">False</uses_milestone_dates>
+</object>
+<object>
+<acronym>i2nsf</acronym>
+<ad type="null"/>
+<charter>/api/v1/doc/document/charter-ietf-i2nsf/</charter>
+<comments/>
+<description>A Network Security Function (NSF) is a function used to ensure integrity, confidentiality, or availability of network communications, to detect unwanted network activity, or to block or at least mitigate the effects of unwanted activity. NSFs are provided and consumed in increasingly diverse environments. Users could consume network security services enforced by NSFs hosted by one or more providers, which may be their own enterprise, service providers, or a combination of both. Similarly, service providers may offer their customers network security services that are enforced by multiple security products, functions from different vendors, or open source technologies. NSFs may be provided by physical and/or virtualized infrastructure. Without standard interfaces to control and monitor the behavior of NSFs, it has become virtually impossible for providers of security services to automate service offerings that utilize different security functions from multiple vendors.</description>
+<id type="integer">1965</id>
+<list_archive>https://mailarchive.ietf.org/arch/browse/i2nsf/</list_archive>
+<list_email>i2nsf@ietf.org</list_email>
+<list_subscribe>https://www.ietf.org/mailman/listinfo/i2nsf</list_subscribe>
+<meeting_seen_as_area type="boolean">False</meeting_seen_as_area>
+<name>Interface to Network Security Functions</name>
+<parent>/api/v1/group/group/1260/</parent>
+<resource_uri>/api/v1/group/group/1965/</resource_uri>
+<state>/api/v1/name/groupstatename/conclude/</state>
+<time>2023-06-21T23:14:56Z</time>
+<type>/api/v1/name/grouptypename/wg/</type>
+<unused_states type="list"/>
+<unused_tags type="list"/>
+<used_roles>[]</used_roles>
+<uses_milestone_dates type="boolean">True</uses_milestone_dates>
+</object>
+<object>
+<acronym>ecrit</acronym>
+<ad type="null"/>
+<charter>/api/v1/doc/document/charter-ietf-ecrit/</charter>
+<comments>1st meeting at 61st IETF - Washington, DC</comments>
+<description>In a number of areas, the public switched telephone network (PSTN) has been configured to recognize an explicitly specified number (usually one that is short and easily memorized) as a request for emergency services. These numbers (e.g., 911, 112) are related to an emergency service context and depend on a broad, regional configuration of service contact methods and a geographically-constrained approach for service delivery. These calls are intended to be delivered to special call centers equipped to manage emergency response. Successful delivery of an emergency service call within those systems requires an association of both the physical location of the originating device along with appropriate call routing to an emergency service center.</description>
+<id type="integer">1643</id>
+<list_archive>https://mailarchive.ietf.org/arch/browse/ecrit/</list_archive>
+<list_email>ecrit@ietf.org</list_email>
+<list_subscribe>https://www.ietf.org/mailman/listinfo/ecrit</list_subscribe>
+<meeting_seen_as_area type="boolean">False</meeting_seen_as_area>
+<name>Emergency Context Resolution with Internet Technologies</name>
+<parent>/api/v1/group/group/2010/</parent>
+<resource_uri>/api/v1/group/group/1643/</resource_uri>
+<state>/api/v1/name/groupstatename/active/</state>
+<time>2023-04-21T21:58:19Z</time>
+<type>/api/v1/name/grouptypename/wg/</type>
+<unused_states type="list"/>
+<unused_tags type="list"/>
+<used_roles>[]</used_roles>
+<uses_milestone_dates type="boolean">True</uses_milestone_dates>
+</object>
+<object>
+<acronym>dmarc</acronym>
+<ad type="null"/>
+<charter>/api/v1/doc/document/charter-ietf-dmarc/</charter>
+<comments/>
+<description> Domain-based Message Authentication, Reporting & Conformance (DMARC) uses existing mail authentication technologies (SPF and DKIM) to extend validation to the RFC5322.From field. DMARC uses DNS records to add policy-related requests for receivers and defines a feedback mechanism from receivers back to domain owners. This allows a domain owner to advertise that mail can safely receive differential handling, such as rejection, when the use of the domain name in the From field is not authenticated. Existing deployment of DMARC has demonstrated utility at internet scale, in dealing with significant email abuse, and has permitted simplifying some mail handling processes. However, DMARC is problematic for mail that does not flow from operators having a relationship with the domain owner, directly to receivers operating the destination mailbox (for example, mailing lists, publish-to-friend functionality, mailbox forwarding via ".forward", and third-party services that send on behalf of clients). The working group will explore possible updates and extensions to the specifications in order to address limitations and/or add capabilities. It will also provide technical implementation guidance and review possible enhancements elsewhere in the mail handling sequence that could improve DMARC compatibility.</description>
+<id type="integer">1892</id>
+<list_archive>https://mailarchive.ietf.org/arch/browse/dmarc/</list_archive>
+<list_email>dmarc@ietf.org</list_email>
+<list_subscribe>https://www.ietf.org/mailman/listinfo/dmarc</list_subscribe>
+<meeting_seen_as_area type="boolean">False</meeting_seen_as_area>
+<name>Domain-based Message Authentication, Reporting & Conformance</name>
+<parent>/api/v1/group/group/2010/</parent>
+<resource_uri>/api/v1/group/group/1892/</resource_uri>
+<state>/api/v1/name/groupstatename/active/</state>
+<time>2023-04-21T21:58:47Z</time>
+<type>/api/v1/name/grouptypename/wg/</type>
+<unused_states type="list"/>
+<unused_tags type="list"/>
+<used_roles>[]</used_roles>
+<uses_milestone_dates type="boolean">True</uses_milestone_dates>
+</object>
+</objects>
+</response>"
+ https://datatracker.ietf.org/api/v1/group/group/#:~:text=This%20XML%20file,%3C/response%3E
