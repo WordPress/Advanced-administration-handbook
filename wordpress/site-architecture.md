@@ -262,11 +262,11 @@ Comments may be featured in the single post view (using the comments.php templat
     </li>
   </ol>
   <p>
-    <a href='http://example.com/archives/name-of-post/feed/'><abbr title="Really Simple Syndication">RSS</abbr> feed for comments on this post.</a>
-    <a href="http://example.com/name-of-post/trackback/" rel="trackback">TrackBack <abbr title="Uniform Resource Identifier">URI</abbr></a>
+    <a href='https://example.com/archives/name-of-post/feed/'><abbr title="Really Simple Syndication">RSS</abbr> feed for comments on this post.</a>
+    <a href="https://example.com/name-of-post/trackback/" rel="trackback">TrackBack <abbr title="Uniform Resource Identifier">URI</abbr></a>
   </p>
   <h2 id="postcomment">Leave a comment</h2>
-  <form action="http://example.com/blog/wp-comments-post.php" method="post" id="commentform">
+  <form action="https://example.com/blog/wp-comments-post.php" method="post" id="commentform">
     <p>
       <input type="text" name="author" id="author" value="" size="22" tabindex="1">
       <label for="author"><small>Name (required)</small></label>
@@ -360,7 +360,7 @@ The Default Theme comments feature a loop query within the comments.php and comm
 <ol class="commentlist">
   <li class="alt" id="comment-1">
     <cite>
-      <a href="http://example.org/" rel="external nofollow">Mr WordPress</a>
+      <a href="https://example.org/" rel="external nofollow">Mr WordPress</a>
     </cite> Says:<br>
     <small class="commentmetadata">
       <a href="#comment-1" title="">Date and Time</a>
@@ -369,7 +369,7 @@ The Default Theme comments feature a loop query within the comments.php and comm
   </li>
 </ol>
 <h3 id="respond">Leave a Reply</h3>
-<form action="http://example.com/blog/wp-comments-post.php" method="post" id="commentform">
+<form action="https://example.com/blog/wp-comments-post.php" method="post" id="commentform">
   <p>
     <input name="author" id="author" value="" size="22" tabindex="1" type="text">
     <label for="author">
@@ -606,7 +606,7 @@ The footer is found within the footer.php template file. In both the Default and
 ```
 <p class="credit">
   <!--15 queries. 0.152 seconds. -->
-  <cite>Powered by <a href='http://wordpress.org' title='Powered by WordPress, state-of-the-art semantic personal publishing platform.'> <strong>WordPress</strong></a></cite>
+  <cite>Powered by <a href='https://wordpress.org' title='Powered by WordPress, state-of-the-art semantic personal publishing platform.'> <strong>WordPress</strong></a></cite>
 </p>
 </div>
 ```
@@ -624,8 +624,8 @@ The tag displays the number of mysql queries used on the page and the time it to
 
 ```
 <div id="footer">
-  <p>Blogging in the WordPress World is proudly powered by <a href="http://wordpress.org/">WordPress</a><br>
-    <a href="feed:http://example.com/feed/">Entries (RSS)</a> and <a href="feed:http://example.com/comments/feed/"> Comments (RSS)</a>.
+  <p>Blogging in the WordPress World is proudly powered by <a href="https://wordpress.org/">WordPress</a><br>
+    <a href="feed:http://example.com/feed/">Entries (RSS)</a> and <a href="feed:https://example.com/comments/feed/"> Comments (RSS)</a>.
     <!-- 18 queries. 0.186 seconds. -->
   </p>
 </div>

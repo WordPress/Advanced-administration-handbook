@@ -111,13 +111,13 @@ This method is useful toward the end of testing as you can ask for people to tes
 
 To hide your WordPress test folder from others, you can use the `.htaccess` file on an Apache web server. The `.htaccess` file is a file that stores server directives, instructions which tell the server what to do in specific situations. You could also use the Apache config file (httpd.conf) or other methods, but the `.htaccess` file can apply only to the folder in which the .htaccess file resides, and all the folders under that one, allowing you to restrict access to a specific folder.
 
-Remember, this will only work on servers that support `.htaccess`. If you are unsure that your server supports `.htaccess`, contact your hosting provider. You may or may not be able to do this depending upon the access permissions you have with your host server. You may need their assistance. If you are running your own server, or if your hosting provider is clue-free, consult the [AllowOverride documentation](http://httpd.apache.org/docs-2.0/mod/core.html#allowoverride).
+Remember, this will only work on servers that support `.htaccess`. If you are unsure that your server supports `.htaccess`, contact your hosting provider. You may or may not be able to do this depending upon the access permissions you have with your host server. You may need their assistance. If you are running your own server, or if your hosting provider is clue-free, consult the [AllowOverride documentation](https://httpd.apache.org/docs/2.0/mod/core.html#allowoverride).
 
 Using the `.htaccess` file, you need to provide instructions to tell the server to restrict or deny access to your WordPress test site. In the folder or directory in which WordPress is installed, do the following:
 
 1. Using a text editor create a blank text file called `.htaccess`.
 2. You need the following information:
-3. - The full path of a directory on your site server that is not accessible to the public (like http://example.com/public_html/ is accessible but http://example.com/private/ is not. Use the latter.
+3. - The full path of a directory on your site server that is not accessible to the public (like https://example.com/public_html/ is accessible but https://example.com/private/ is not. Use the latter.
 4. - The name of the secured area such as “Enter Password” or “Secure Area” (this is not important, just simple).
 5. In the file type the following, replacing /full/path/of/directory/ and Security Area with the above information: `AuthUserFile /full/path/of/directory/.htpasswd AuthName "Security Area" AuthType Basic require valid-user`
 6. Save this .htaccess file and upload it to the directory on your server you want hidden and secured. This would be the installation directory for WordPress such as `/wordpress/` or `blog`.
@@ -128,12 +128,12 @@ Using the `.htaccess` file, you need to provide instructions to tell the server 
 
 When you are ready to open your site to the public and remove the protection, delete the password and `.htaccess` files from their locations.
 
-It is highly recommended that you remove the default ping URL to [Ping-o-Matic!](http://www.pingomatic.com/), otherwise your test posts will ping and your test blog will be made public though not accessible.
+It is highly recommended that you remove the default ping URL to [Ping-o-Matic!](https://pingomatic.com/), otherwise your test posts will ping and your test blog will be made public though not accessible.
 
 ### Htaccess Resources
 
-- [.htaccess files howto](http://httpd.apache.org/docs-2.0/howto/htaccess.html)
-- [Authentication, Authorization and Access Control](http://httpd.apache.org/docs-2.0/howto/auth.html)
+- [.htaccess files howto](https://httpd.apache.org/docs/2.0/howto/htaccess.html)
+- [Authentication, Authorization and Access Control](https://httpd.apache.org/docs/2.0/howto/auth.html)
 
 ## Installing WordPress on a Mac
 
@@ -143,9 +143,9 @@ Use these instruction for setting up a local server environment for testing and 
 
 ## Installing WordPress on Your Windows Desktop
 
-In order for WordPress to work, it must have access to an Apache server, MySQL/MariaDB, and phpMyAdmin. Installing these separately can be painful. Luckily for us, [XAMPP](http://www.apachefriends.org/en/xampp-windows.html) installs all of these with one program, allowing you to run WordPress on your computer. There are two versions of the program, Basic and Lite. The Lite version is usually adequate.
+In order for WordPress to work, it must have access to an Apache server, MySQL/MariaDB, and phpMyAdmin. Installing these separately can be painful. Luckily for us, [XAMPP](https://www.apachefriends.org/download.html) installs all of these with one program, allowing you to run WordPress on your computer. There are two versions of the program, Basic and Lite. The Lite version is usually adequate.
 
-1. Download and install [XAMPP](http://www.apachefriends.org/en/xampp-windows.html).
+1. Download and install [XAMPP](https://www.apachefriends.org/download.html).
 2. This installs by default into `C:/xampplite` or `C:\xampp`.
 3. Start XAMPP from `c:\xampplite` or `c:\xampp`.
 4. You may need to restart your computer to allow apache services to start.
@@ -178,7 +178,7 @@ With the help of XAMPP, you can install WordPress directly on your computer and 
 
 1. Access to your server database.
 2. Ability to download your entire WordPress installation to your computer.
-3. [Basic XAMPP for Windows](http://www.apachefriends.org/en/xampp-windows.html)
+3. [Basic XAMPP for Windows](https://www.apachefriends.org/download.html)
 4. Enough room on your hard drive to accommodate your database, WordPress installation, and XAMPP.
 
 ### Backup WordPress
@@ -246,7 +246,7 @@ define('DB_HOST', 'localhost'); // 99% chance you won't need to change this
 Before you begin to import your SQL backup file, you need to change some information inside your `.SQL` file.
 
 1. Using your text editor, open the `.sql` backup database file you downloaded.
-2. Find and replace all the instances of your old URL with your new URL. For instance if your blog address is at http://example.com/wordpress/, and your files on your computer are at `/htdocs/wordpress/`, replace it with http://127.0.0.1/wordpress/.
+2. Find and replace all the instances of your old URL with your new URL. For instance if your blog address is at https://example.com/wordpress/, and your files on your computer are at `/htdocs/wordpress/`, replace it with http://127.0.0.1/wordpress/.
 3. Click **Save – Do not use Save as**.
 
 ![phpMyAdmin SQL tab](https://user-images.githubusercontent.com/6118303/189546617-26a843c4-e793-4c44-b2a6-13a32b366a8e.png)
@@ -268,8 +268,7 @@ WordPress should now function just as it did on the web. You do not need to use 
 Coming soon – how to move your test site from your computer back live onto your host server site.
 
 ### Resources
-- [Test themes on a live blog with Theme Test Drive](http://www.prelovac.com/vladimir/wordpress-plugins/theme-test-drive)
-- [qSandbox.com – Create a free WordPress test site to try (new) plugins and themes](http://qsandbox.com/)
+- [qSandbox.com – Create a free WordPress test site to try (new) plugins and themes](https://qsandbox.com/app/)
 
 ## Changelog
 

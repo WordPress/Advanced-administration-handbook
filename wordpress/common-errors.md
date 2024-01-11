@@ -58,7 +58,7 @@ Contact your hosting provider to see if either of these issues is causing your p
 
 If you have checked `wp-config.php` for errors, and confirmed with your host for hosting issues, it is possible that your site has been hacked.
 
-Scan your site with [Sucuri SiteCheck](http://sitecheck.sucuri.net/) to ensure that it hasn't been compromised. If it has you should check out [My Site was Hacked](https://wordpress.org/documentation/article/faq-my-site-was-hacked/).
+Scan your site with [Sucuri SiteCheck](https://sitecheck.sucuri.net/) to ensure that it hasn't been compromised. If it has you should check out [My Site was Hacked](https://wordpress.org/documentation/article/faq-my-site-was-hacked/).
 
 ## Failed Auto-Upgrade {#failed-auto-upgrade}
 
@@ -272,11 +272,11 @@ If you have not used phpMyAdmin before, or are uncomfortable doing so, contact y
 
 An unknown column error can be caused by a missing column in the database. If you have just upgraded WordPress then try manually upgrading again. To update your WordPress site manually, see the [Update article](https://wordpress.org/documentation/article/updating-wordpress/#manual-update).
 
-If you are running a database query when you encounter the error then you may by using incorrect quotation marks for the identifier quote character. This [question on Stack Overflow provides more details](https://stackoverflow.com/questions/1346209/unknown-column-in-field-list-error-on-mysql-update-query). Also see the [MySQL documentation](http://dev.mysql.com/doc/refman/en/identifiers.html).
+If you are running a database query when you encounter the error then you may by using incorrect quotation marks for the identifier quote character. This [question on Stack Overflow provides more details](https://stackoverflow.com/questions/1346209/unknown-column-in-field-list-error-on-mysql-update-query). Also see the [MySQL documentation](https://dev.mysql.com/doc/refman/8.2/en/identifiers.html).
 
 ## Resources {#resources}
 
-* [MySQL Error Codes and Messages](http://dev.mysql.com/doc/refman/en/error-messages-server.html)
+* [MySQL Error Codes and Messages](https://dev.mysql.com/doc/refman/en/error-messages-server.html)
 
 ## Changelog
 

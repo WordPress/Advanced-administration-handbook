@@ -10,7 +10,7 @@ Fundamentally, security _is not_ about perfectly secure systems. Such a thing mi
 
 **Website Hosts**
 
-Often, a good place to start when it comes to website security is your hosting environment. Today, there are a number of options available to you, and while hosts offer security to a certain level, it's important to understand where their responsibility ends and yours begins. Here is a good article explaining the complicated dynamic between [web hosts and the security of your website](http://perezbox.com/2014/11/how-hosts-manage-your-website-security/). A secure server protects the privacy, integrity, and availability of the resources under the server administrator's control.
+Often, a good place to start when it comes to website security is your hosting environment. Today, there are a number of options available to you, and while hosts offer security to a certain level, it's important to understand where their responsibility ends and yours begins. Here is a good article explaining the complicated dynamic between [web hosts and the security of your website](https://perezbox.com/2014/11/how-hosts-manage-your-website-security/). A secure server protects the privacy, integrity, and availability of the resources under the server administrator's control.
 
 Qualities of a trusted web host might include:
 
@@ -44,7 +44,7 @@ Keeping backups and knowing the state of your WordPress installation at regular 
 
 **Trusted Sources**
 
-Do not get plugins/themes from untrusted sources. Restrict yourself to the WordPress.org repository or well known companies. Trying to get plugins/themes from the outside [may lead to issues](http://blog.sucuri.net/2014/03/unmasking-free-premium-wordpress-plugins.html).
+Do not get plugins/themes from untrusted sources. Restrict yourself to the WordPress.org repository or well known companies. Trying to get plugins/themes from the outside [may lead to issues](https://blog.sucuri.net/2014/03/unmasking-free-premium-wordpress-plugins.html).
 
 ### Vulnerabilities on Your Computer {#vulnerabilities-on-your-computer}
 
@@ -90,7 +90,7 @@ Your web host should be making sure that their network is not compromised by att
 
 Many potential vulnerabilities can be avoided with good security habits. A strong password is an important aspect of this.
 
-The goal with your password is to make it hard for other people to guess and hard for a [brute force attack](https://developer.wordpress.org/advanced-administration/security/brute-force/) to succeed. Many [automatic password generators](http://www.google.com/?q=password+generator) are available that can be used to create secure passwords.
+The goal with your password is to make it hard for other people to guess and hard for a [brute force attack](https://developer.wordpress.org/advanced-administration/security/brute-force/) to succeed. Many [automatic password generators](https://www.google.com/?q=password+generator) are available that can be used to create secure passwords.
 
 WordPress also features a password strength meter which is shown when changing your password in WordPress. Use this when changing your password to ensure its strength is adequate.
 
@@ -173,7 +173,7 @@ When you tell WordPress to perform an automatic update, all file operations are 
 
 If you run multiple blogs on the same server, it is wise to consider keeping them in separate databases each managed by a different user. This is best accomplished when performing the initial [WordPress installation](https://developer.wordpress.org/advanced-administration/before-install/howto-install/). This is a containment strategy: if an intruder successfully cracks one WordPress installation, this makes it that much harder to alter your other blogs.
 
-If you administer MySQL yourself, ensure that you understand your MySQL configuration and that unneeded features (such as accepting remote TCP connections) are disabled. See [Secure MySQL Database Design](http://www.securityfocus.com/infocus/1667) for a nice introduction.
+If you administer MySQL yourself, ensure that you understand your MySQL configuration and that unneeded features (such as accepting remote TCP connections) are disabled. See [Secure MySQL Database Design](https://www.securityfocus.com/infocus/1667) for a nice introduction.
 
 #### Restricting Database User Privileges {#restricting-database-user-privileges}
 
@@ -187,7 +187,7 @@ Therefore any other database structure and administration privileges, such as DR
 
 ### Securing wp-admin {#securing-wp-admin}
 
-Adding server-side password protection (such as [BasicAuth](http://en.wikipedia.org/wiki/Basic_access_authentication)) to `/wp-admin/` adds a second layer of protection around your blog's admin area, the login screen, and your files. This forces an attacker or bot to attack this second layer of protection instead of your actual admin files. Many WordPress attacks are carried out autonomously by malicious software bots.
+Adding server-side password protection (such as [BasicAuth](https://en.wikipedia.org/wiki/Basic_access_authentication)) to `/wp-admin/` adds a second layer of protection around your blog's admin area, the login screen, and your files. This forces an attacker or bot to attack this second layer of protection instead of your actual admin files. Many WordPress attacks are carried out autonomously by malicious software bots.
 
 Simply securing the `wp-admin/` directory might also break some WordPress functionality, such as the AJAX handler at `wp-admin/admin-ajax.php`. See the [Resources](https://developer.wordpress.org/advanced-administration/resources/) section for more documentation on how to password protect your `wp-admin/` directory properly.
 
@@ -222,7 +222,7 @@ Note that this won't work well on Multisite, as `RewriteRule ^wp-includes/[^/]+\
 
 You can move the `wp-config.php` file to the directory above your WordPress install. This means for a site installed in the root of your webspace, you can store `wp-config.php` outside the web-root folder.
 
-**Note:** Some people assert that [moving wp-config.php has minimal security benefits](http://wordpress.stackexchange.com/q/58391/3898) and, if not done carefully, may actually introduce serious vulnerabilities. [Others disagree](http://wordpress.stackexchange.com/a/74972/24425).
+**Note:** Some people assert that [moving wp-config.php has minimal security benefits](https://wordpress.stackexchange.com/questions/58391/is-moving-wp-config-outside-the-web-root-really-beneficial) and, if not done carefully, may actually introduce serious vulnerabilities. [Others disagree](https://wordpress.stackexchange.com/questions/58391/is-moving-wp-config-outside-the-web-root-really-beneficial/74972#74972).
 
 Note that `wp-config.php` can be stored ONE directory level above the WordPress (where wp-includes resides) installation. Also, make sure that only you (and the web server) can read this file (it generally means a 400 or 440 permission).
 
@@ -256,7 +256,7 @@ file and restricting some access at the Apache level, before it is processed by 
 
 Besides plugins, you can also install a WAF (web firewall) at your web server to filter content before it is processed by WordPress. The most popular open source WAF is ModSecurity.
 
-A website firewall can also be added as intermediary between the traffic from the internet and your hosting server. These services all function as reverse proxies, in which they accept the initial requests and reroute them to your server, stripping it of all malicious requests. They accomplish this by modifying your DNS records, via an A record or full DNS swap, allowing all traffic to pass through the new network first. This causes all traffic to be filtered by the firewall before reaching your site. A few companies offer such service, like [CloudFlare](http://cloudflare.com), [Sucuri](https://sucuri.net/wordpress-security/) and [Incapsula](http://www.incapsula.com).
+A website firewall can also be added as intermediary between the traffic from the internet and your hosting server. These services all function as reverse proxies, in which they accept the initial requests and reroute them to your server, stripping it of all malicious requests. They accomplish this by modifying your DNS records, via an A record or full DNS swap, allowing all traffic to pass through the new network first. This causes all traffic to be filtered by the firewall before reaching your site. A few companies offer such service, like [CloudFlare](https://www.cloudflare.com/), [Sucuri](https://sucuri.net/wordpress-security/) and [Incapsula](https://www.imperva.com/).
 
 Additionally, these third parties service providers function as Content Distribution Network (CDNs) by default, introducing performance optimization and global reach.
 
@@ -272,7 +272,7 @@ A way to avoid using such a plugin is to use [custom page templates](https://wor
 
 ### Security through obscurity {#security-through-obscurity}
 
-[Security through obscurity](http://en.wikipedia.org/wiki/Security_through_obscurity) is generally an unsound primary strategy. However, there are areas in WordPress where obscuring information _might_ help with security:
+[Security through obscurity](https://en.wikipedia.org/wiki/Security_through_obscurity) is generally an unsound primary strategy. However, there are areas in WordPress where obscuring information _might_ help with security:
 
 1. **Rename the administrative account:** When creating an administrative account, avoid easily guessed terms such as `admin` or `webmaster` as usernames because they are typically subject to attacks first. On an existing WordPress install you may rename the existing account in the MySQL command-line client with a command like:
 ```
@@ -305,11 +305,11 @@ Sometimes prevention is not enough and you may still be hacked. That's why intru
 
 #### Monitoring your logs {#monitoring-your-logs}
 
-If you are on a dedicated or virtual private server, in which you have the luxury of root access, you have the ability easily configure things so that you can see what's going on. [OSSEC](http://www.ossec.net) easily facilitates this and here is a little write up that might help you out [OSSEC for Website Security – Part I](https://perezbox.com/2013/03/ossec-for-website-security-part-i/).
+If you are on a dedicated or virtual private server, in which you have the luxury of root access, you have the ability easily configure things so that you can see what's going on. [OSSEC](https://www.ossec.net/) easily facilitates this and here is a little write up that might help you out [OSSEC for Website Security – Part I](https://perezbox.com/2013/03/ossec-for-website-security-part-i/).
 
 #### Monitoring your files for changes {#monitoring-your-files-for-changes}
 
-When an attack happens, it always leave traces. Either on the logs or on the file system (new files, modified files, etc). If you are using [OSSEC](http://www.ossec.net) for example, it will monitor your files and alert you when they change.
+When an attack happens, it always leave traces. Either on the logs or on the file system (new files, modified files, etc). If you are using [OSSEC](https://www.ossec.net/) for example, it will monitor your files and alert you when they change.
 
 ##### Goals {#goals}
 
@@ -332,11 +332,11 @@ Administrators can monitor file system via general technologies such as:
 
 Options for file system monitoring include:
 
-* [diff](http://en.wikipedia.org/wiki/Diff_utility) – build clean test copy of your site and compare against production
-* [Git](http://git-scm.com/) – source code management
-* [inotify](https://en.wikipedia.org/wiki/Inotify) and [incron](http://inotify.aiken.cz/?section=incron&page=doc&lang=en) – OS kernel level file monitoring service that can run commands on filesystem events
+* [diff](https://en.wikipedia.org/wiki/Diff_utility) – build clean test copy of your site and compare against production
+* [Git](https://git-scm.com/) – source code management
+* [inotify](https://en.wikipedia.org/wiki/Inotify) and [incron](https://inotify.aiken.cz/?section=incron&page=doc&lang=en) – OS kernel level file monitoring service that can run commands on filesystem events
 * [Watcher](https://github.com/gregghz/Watcher/blob/master/jobs.yml) – Python inotify library
-* [OSSEC](http://ossec.net) – Open Source Host-based Intrusion Detection System that performs log analysis, file integrity checking, policy monitoring, rootkit detection, real-time alerting and active response.
+* [OSSEC](https://www.ossec.net/) – Open Source Host-based Intrusion Detection System that performs log analysis, file integrity checking, policy monitoring, rootkit detection, real-time alerting and active response.
 
 ##### Considerations {#considerations}
 
@@ -364,16 +364,16 @@ If the attacker tries to deface your site or add malware, you can also detect th
 
 ### Resources {#resources}
 
-* [How to Improve WordPress Security (Infographic)](http://yourescapefrom9to5.com/wordpress-security-infographic)
+* [How to Improve WordPress Security (Infographic)](https://yourescapefrom9to5.com/wordpress-security-infographic)
 * [Security Plugins](https://wordpress.org/plugins/tags/security)
-* [WordPress Security Cutting Through the BS](http://blog.sucuri.net/2012/08/wordpress-security-cutting-through-the-bs.html)
-* [e-Book: Locking Down WordPress](http://build.codepoet.com/2012/07/10/locking-down-wordpress/)
-* [wpsecure.net has a few guides on how to lock down WordPress.](http://wpsecure.net/basics/)
-* [A Beginners Guide to Hardening WordPress](http://makeawebsitehub.com/wordpress-security/)
-* [Brad Williams: Lock it Up (Video)](http://wordpress.tv/2010/01/23/brad-williams-security-boston10/)
+* [WordPress Security Cutting Through the BS](https://blog.sucuri.net/2012/08/wordpress-security-cutting-through-the-bs.html)
+* [e-Book: Locking Down WordPress](https://build.codepoet.com/2012/07/10/locking-down-wordpress/)
+* [wpsecure.net has a few guides on how to lock down WordPress.](https://wpsecure.net/basics/)
+* [A Beginners Guide to Hardening WordPress](https://makeawebsitehub.com/wordpress-security/)
+* [Brad Williams: Lock it Up (Video)](https://wordpress.tv/2010/01/23/brad-williams-security-boston10/)
 * [21 Ways to Secure Your WordPress Site](https://hostingfacts.com/how-to-secure-wordpress/)
-* [Official docs on how to password protect directories with an .htaccess file](http://httpd.apache.org/docs/2.2/howto/auth.html)
-* [Simple tutorial on how to password protect the WordPress admin area and fix the 404 error](http://www.wpbeginner.com/wp-tutorials/how-to-password-protect-your-wordpress-admin-wp-admin-directory/)
+* [Official docs on how to password protect directories with an .htaccess file](https://httpd.apache.org/docs/2.2/howto/auth.html)
+* [Simple tutorial on how to password protect the WordPress admin area and fix the 404 error](https://www.wpbeginner.com/wp-tutorials/how-to-password-protect-your-wordpress-admin-wp-admin-directory/)
 
 ### See Also {#see-also}
 

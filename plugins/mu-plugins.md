@@ -29,7 +29,7 @@ The code handling /mu-plugins/ was merged into the main WordPress code on 03/07/
 
 In this process the name “mu plugins” became a misnomer because it did not apply exclusively to multisite installs and because “MU” was not even being used anymore to refer to WP installations with multiple blogs. Despite this, the name was kept and **re-interpreted to mean “must-use plugins”**, i.e. these are plugins that must always be used, thus they are autoloaded on all sites regardless of the settings in the Plugins pane of wp-admin.
 
-Thus “Must-Use” is effectively a [Backronym](http://en.wikipedia.org/wiki/Backronym), like [PHP](https://wordpress.org/documentation/article/wordpress-glossary/#PHP) (which originally meant “Personal Home Page” but was later re-interpreted as meaning “PHP Hypertext Preprocessor”, which is also a [Recursive Acronym](http://en.wikipedia.org/wiki/Recursive_acronym)).
+Thus “Must-Use” is effectively a [Backronym](https://en.wikipedia.org/wiki/Backronym), like [PHP](https://wordpress.org/documentation/article/wordpress-glossary/#PHP) (which originally meant “Personal Home Page” but was later re-interpreted as meaning “PHP Hypertext Preprocessor”, which is also a [Recursive Acronym](https://en.wikipedia.org/wiki/Recursive_acronym)).
 
 ## Source Code
 * `get_mu_plugins()` is located in [wp-admin/includes/plugin.php](https://core.trac.wordpress.org/browser/tags/4.5.3/src/wp-admin/includes/plugin.php#L0).

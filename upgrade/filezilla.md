@@ -16,7 +16,7 @@ It's fast, stable, easy to use, and free. FTP is a standard way to upload or dow
 
 You will need the following details regarding the FTP account on your server:
 
-1. Your website FTP address (usually `ftp://example.com` if your URL is `http://example.com`)
+1. Your website FTP address (usually `ftp://example.com` if your URL is `https://example.com`)
 2. Your FTP username
 3. Your FTP password
 

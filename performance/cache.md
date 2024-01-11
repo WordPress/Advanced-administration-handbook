@@ -16,7 +16,7 @@ If your posts/pages have a lot of dynamic content configuring caching can be mor
 
 **Browser caching** can help to reduce server load by reducing the number of requests per page. For example, by setting the correct file headers on files that don't change (static files like images, CSS, JavaScript etc) browsers will then cache these files on your visitor's computer. This technique allows the browser to check to see if files have changed, instead of simply requesting them. The result is your web server can answer many more 304 responses, confirming that a file is unchanged, instead of 200 responses, which require the file to be sent.
 
-Look into HTTP Cache-Control (specifically **max-age**) and Expires headers, as well as [Entity Tags](http://en.wikipedia.org/wiki/HTTP_ETag) for more information.
+Look into HTTP Cache-Control (specifically **max-age**) and Expires headers, as well as [Entity Tags](https://en.wikipedia.org/wiki/HTTP_ETag) for more information.
 
 ## Object Caching {#object-caching}
 
@@ -37,8 +37,8 @@ Adding an opcode cache like [Opcache](https://www.php.net/manual/en/book.opcache
 ## Further Reading {#further-reading}
 
 * [Core Caching Concepts in WordPress](https://www.tollmanz.com/core-caching-concepts-in-wordpress/)
-* [Best Practices for Speeding Up Your Web Site](http://developer.yahoo.com/performance/rules.html) – Expires / Cache-Control Header and ETags (by Yahoo! Developer Network)
-* [WebSiteOptimization.com: Use Server Cache Control to Improve Performance](http://www.websiteoptimization.com/speed/tweak/cache/)
+* [Best Practices for Speeding Up Your Web Site](https://developer.yahoo.com/performance/rules.html) – Expires / Cache-Control Header and ETags (by Yahoo! Developer Network)
+* [WebSiteOptimization.com: Use Server Cache Control to Improve Performance](https://www.websiteoptimization.com/speed/tweak/cache/)
 
 ## Changelog
 

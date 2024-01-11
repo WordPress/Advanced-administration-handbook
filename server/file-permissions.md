@@ -104,11 +104,11 @@ In this specific type setup, WordPress will detect that it can directly create f
 
 Popular methods used by sysadmins for this setup are:
 
-* [suPHP](http://www.suphp.org/Home.html), runs through php-cgi, currently unmaintained since 2013.
+* [suPHP](https://smarsching.github.io/suphp/Home.html), runs through php-cgi, currently unmaintained since 2013.
 * [mod_ruid2](https://github.com/mind04/mod-ruid2), apache module, currently unmaintained since 2013.
 * [mpm-itk](http://mpm-itk.sesse.net/), apache module.
-* [mod_fcgid](http://httpd.apache.org/mod_fcgid/), an Apache module and FastCGI server with more extensive configuration.
-* [PHP-FPM](http://php-fpm.org/), an alternative FastCGI server with shared OPCode, for use with Apache and Nginx.
+* [mod_fcgid](https://httpd.apache.org/mod_fcgid/), an Apache module and FastCGI server with more extensive configuration.
+* [PHP-FPM](https://php-fpm.org/), an alternative FastCGI server with shared OPCode, for use with Apache and Nginx.
 
 ## Using an FTP Client
 
@@ -136,7 +136,7 @@ You can now see that the file permissions have been changed.
 
 ### Unhide the hidden files
 
-By default, most [FTP Clients](https://developer.wordpress.org/advanced-administration/upgrade/ftp/), including [FileZilla](http://filezilla.sourceforge.net/), keep hidden files, those files beginning with a period (.), from being displayed. But, at some point, you may need to see your hidden files so that you can change the permissions on that file. For example, you may need to make your [.htaccess](https://wordpress.org/documentation/article/glossary#htaccess) file, the file that controls [permalinks](https://wordpress.org/documentation/article/using-permalinks/), writeable.
+By default, most [FTP Clients](https://developer.wordpress.org/advanced-administration/upgrade/ftp/), including [FileZilla](https://sourceforge.net/projects/filezilla/), keep hidden files, those files beginning with a period (.), from being displayed. But, at some point, you may need to see your hidden files so that you can change the permissions on that file. For example, you may need to make your [.htaccess](https://wordpress.org/documentation/article/glossary#htaccess) file, the file that controls [permalinks](https://wordpress.org/documentation/article/using-permalinks/), writeable.
 
 To display hidden files in FileZilla, in it is necessary to select 'View' from the top menu, then select 'Show hidden files'. The screen display of files will refresh and any previously hidden file should come into view.
 

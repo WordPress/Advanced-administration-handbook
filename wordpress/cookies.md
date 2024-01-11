@@ -54,9 +54,9 @@ WordPress allows you to alter the language of all translatable strings on login.
 
 ## References
 
-- [Wikipedia: Cookies](http://en.wikipedia.org/wiki/HTTP_cookie)
-- [RFC2965](http://www.faqs.org/rfcs/rfc2965)
-- [PHP cookie documentation](http://www.php.net/manual/en/features.cookies.php)
+- [Wikipedia: Cookies](https://en.wikipedia.org/wiki/HTTP_cookie)
+- [RFC2965](http://www.faqs.org/rfcs/rfc2965.html)
+- [PHP cookie documentation](https://www.php.net/manual/en/features.cookies.php)
 
 ## Changelog
 

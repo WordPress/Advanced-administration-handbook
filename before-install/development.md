@@ -9,20 +9,20 @@ Use these instructions for setting up a local server environment for testing and
 Installing WordPress locally is usually meant for the purpose of development. Those interested in development should follow the instructions below and download WordPress locally.
 - [Local](https://localwp.com/) – Free, one-click WordPress installer.
 - [Lando](https://docs.lando.dev/wordpress/) – Free plugin to install WordPress locally.
-- [AMPPS](http://ampps.com/download) – Free WAMP/MAMP/LAMP stack, with inbuilt Softaculous Installer. Can 1 click install and upgrade WordPress and others as well.
+- [AMPPS](https://ampps.com/downloads/) – Free WAMP/MAMP/LAMP stack, with inbuilt Softaculous Installer. Can 1 click install and upgrade WordPress and others as well.
 - [Installing WordPress Locally on Your Mac With MAMP](https://codex.wordpress.org/Installing_WordPress_Locally_on_Your_Mac_With_MAMP)
 - [User:Beltranrubo/BitNami](https://codex.wordpress.org/User:Beltranrubo/BitNami) Free all-in-one installers for OS X, Windows and Linux. There are also available installers for WordPress Multisite [User:Beltranrubo/BitNami_Multisite](https://codex.wordpress.org/User:Beltranrubo/BitNami_Multisite) using different domains or subdomains.
-- [Instant WordPress](http://www.instantwp.com/) is a free, standalone, portable WordPress development environment for Windows that will run from a USB key.
+- [Instant WordPress](https://instantwp.com/) is a free, standalone, portable WordPress development environment for Windows that will run from a USB key.
 
 ### Software Appliance - Ready-to-use
 
-You may find that using a pre-integrated [software appliance](http://en.wikipedia.org/wiki/Software_appliance) is a great way to get up and running with WordPress, especially in combination with virtual machine software (e.g., VMWare, VirtualBox, Xen HVM, KVM).
+You may find that using a pre-integrated [software appliance](https://en.wikipedia.org/wiki/Software_appliance) is a great way to get up and running with WordPress, especially in combination with virtual machine software (e.g., VMWare, VirtualBox, Xen HVM, KVM).
 
 Another software that can be used is Parallels, which you would have to pay for unlike virtual machine software. It allows you to run both Mac and Windows on your machine.
 
 A software appliance allows users to altogether skip manual installation of WordPress and its dependencies, and instead deploy a self-contained system that requires little to no setup, in just a couple of minutes.
 
-- [TurnKey WordPress Appliance](http://www.turnkeylinux.org/wordpress): a free Debian-based appliance that just works. It bundles a collection of popular WordPress plugins and features a small footprint, automatic security updates, SSL support and a Web administration interface. Available as ISO, various virtual machine images, or launch in the cloud.
+- [TurnKey WordPress Appliance](https://www.turnkeylinux.org/wordpress): a free Debian-based appliance that just works. It bundles a collection of popular WordPress plugins and features a small footprint, automatic security updates, SSL support and a Web administration interface. Available as ISO, various virtual machine images, or launch in the cloud.
 
 ### Unattended/automated installation of WordPress on Ubuntu Server 16.04 LTS
 
@@ -37,16 +37,16 @@ A popular approach to running a local copy of your live site is to use the same 
 Once you have your local files setup, you will need to modify wp-config.php in the root of your local install.
 
 ```
-define('WP_HOME',  "http://{$_SERVER['HTTP_HOST']}");
-define('WP_SITEURL', "http://{$_SERVER['HTTP_HOST']}");
+define('WP_HOME',  "https://{$_SERVER['HTTP_HOST']}");
+define('WP_SITEURL', "https://{$_SERVER['HTTP_HOST']}");
 
 ob_start( 'ob_replace_home_url' );
 function ob_replace_home_url( $content ) {
     $home_urls = array(
-        'http://site.testing.foo.com',
-        'http://site.foo.com',
-        'http://site.authoring.testing.foo.com',
-        'http://site.authoring.foo.com',
+        'https://site.testing.example.com',
+        'https://site.example.com',
+        'https://site.authoring.testing.example.com',
+        'https://site.authoring.example.com',
     );
 
     $content = str_replace( $home_urls, WP_HOME, $content );
@@ -72,7 +72,7 @@ add_filter ( 'pre_option_home', 'test_localhosts' );
 add_filter ( 'pre_option_siteurl', 'test_localhosts' );
 function test_localhosts( ) {
   if (... same logic as before to see if on dev site ...) {
-     return "http://my.web.zz/dev";
+     return "https://my.example.com/dev";
   }
   else return false; // act as normal; will pull main site info from db
 }

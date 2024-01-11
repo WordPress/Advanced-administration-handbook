@@ -93,7 +93,7 @@ The following [text editors](https://wordpress.org/documentation/article/wordpre
 * [EditPad](https://www.editpadpro.com/) (Windows)
 * [EditPlus](https://www.editplus.com/) (Windows)
 * [emacs](https://www.gnu.org/software/emacs/emacs.html) (Mac, Linux, Windows) Open-Source, Free
-* [JEdit](http://jedit.org/) (Mac, Linux, Windows)
+* [JEdit](https://jedit.org/) (Mac, Linux, Windows)
 * [Notepad++](https://notepad-plus-plus.org/) (Windows) Open-Source, Free
 * [PSPad](https://www.pspad.com/) (Windows) Free
 * [Smultron](https://www.peterborgapps.com/smultron/) (Mac) $

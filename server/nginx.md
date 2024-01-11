@@ -10,7 +10,7 @@ When talking about Nginx, it is important to know that there are multiple ways t
 - Pretty Permalinks functionality is slightly different when running Nginx.
 - Since Nginx does not have .htaccess-type capability and WordPress cannot automatically modify the server configuration for you, it cannot generate the rewrite rules for you.
 - Without modifications to your install, “index.php” will be added to your Permalinks. (There are ways to mitigate this with plugins (see below) and/or adding custom code to your child theme’s functions.php.)
-- However, if you do want to have some (limited) .htaccess capability, it is technically possible to do add by installing the [htscanner PECL extension for PHP](http://php.net/manual/en/book.htscanner.php). (However, this is not a perfect solution so be sure to test and debug thoroughly before using on a live site.)
+- However, if you do want to have some (limited) .htaccess capability, it is technically possible to do add by installing the [htscanner PECL extension for PHP](https://www.php.net/manual/en/book.htscanner.php). (However, this is not a perfect solution so be sure to test and debug thoroughly before using on a live site.)
 
 This guide is not going to cover how to install and configure Nginx, so this assumes that you have already installed Nginx and have a basic understanding of how to work with and debug it.
 
@@ -71,7 +71,7 @@ http {
 ### Per Site configuration
 
 ```
-# Redirect everything to the main site. We use a separate server statement and NOT an if statement - see http://wiki.nginx.org/IfIsEvil
+# Redirect everything to the main site. We use a separate server statement and NOT an if statement - see https://www.nginx.com/resources/wiki/start/topics/depth/ifisevil/
 
 server {
     server_name  _;
@@ -608,26 +608,24 @@ A typo in [Global restrictions file](https://developer.wordpress.org/advanced-ad
 
 ### External Links
 
-- [Nginx WordPress wiki page](http://wiki.nginx.org/WordPress)
-- [Nginx Full Example](http://wiki.nginx.org/FullExample)
-- [Nginx Full Example 2](http://wiki.nginx.org/FullExample2)
-- [LEMP guides on Linode’s Library](http://library.linode.com/lemp-guides/)
-- [Various guides about Nginx on Linode’s Library](http://library.linode.com/web-servers/nginx/)
-- [Lightning fast WordPress with Php-fpm and Nginx](http://www.sitepoint.com/lightning-fast-wordpress-with-php-fpm-and-nginx/)
-- [Virtual Hosts Examples](http://wiki.nginx.org/VirtualHostExample)
-- [List of 20+ WordPress-Nginx Tutorials for common situations](http://rtcamp.com/wordpress-nginx/tutorials/)
-- [An introduction to Nginx configuration](http://blog.martinfjordvald.com/2010/07/nginx-primer/)
+- [Nginx WordPress wiki page](https://www.nginx.com/resources/wiki/start/topics/recipes/wordpress/)
+- [LEMP guides on Linode’s Library](https://www.linode.com/docs/guides/web-servers/lemp/)
+- [Various guides about Nginx on Linode’s Library](https://www.linode.com/docs/guides/web-servers/nginx/)
+- [Lightning fast WordPress with Php-fpm and Nginx](https://www.sitepoint.com/lightning-fast-wordpress-with-php-fpm-and-nginx/)
+- [Virtual Hosts Examples](https://wiki.nginx.org/VirtualHostExample)
+- [List of 20+ WordPress-Nginx Tutorials for common situations](https://rtcamp.com/wordpress-nginx/tutorials/)
+- [An introduction to Nginx configuration](https://blog.martinfjordvald.com/nginx-primer/)
 - [A comprehensive blog series on hosting WordPress yourself using Nginx](https://deliciousbrains.com/hosting-wordpress-setup-secure-virtual-server/)
-- [WordPress Installation CentminMod](http://centminmod.com/nginx_configure_wordpress.html)
+- [WordPress Installation CentminMod](https://centminmod.com/nginx_configure_wordpress.html)
 - [Nginx WordPress Installation Guide](https://thecustomizewindows.com/2015/12/nginx-wordpress-installation-guide-steps/)
 
 ### Scripts & Tools
 
-For WordPress Nginx scripted installation [CentminMod](http://centminmod.com/nginx_configure_wordpress.html) can be used for CentOS.
+For WordPress Nginx scripted installation [CentminMod](https://centminmod.com/nginx_configure_wordpress.html) can be used for CentOS.
 
 ### Securing Nginx
 
-- [Securing Nginx and PHP](http://kbeezie.com/view/securing-nginx-php/)
+- [Securing Nginx and PHP](http://kbeezie.com/securing-nginx-php/)
 - [Setting up PHP-FastCGI and nginx? Don’t trust the tutorials: check your configuration!](https://nealpoole.com/blog/2011/04/setting-up-php-fastcgi-and-nginx-dont-trust-the-tutorials-check-your-configuration/)
 
 ## Changelog

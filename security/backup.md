@@ -64,7 +64,7 @@ Most website hosts provide software to back up your site. Check with your host t
 
 **Create Sync With Your Site**
 
-[WinSCP](http://winscp.net/eng/index.php) and other programs allow you to sync with your website to keep a mirror copy of the content on your server and hard drive updated. It saves time and makes sure you have the latest files in both places.
+[WinSCP](https://winscp.net/eng/index.php) and other programs allow you to sync with your website to keep a mirror copy of the content on your server and hard drive updated. It saves time and makes sure you have the latest files in both places.
 
 **Copy Your Files to Your Desktop**
 
@@ -172,8 +172,8 @@ Various plugins exist to take automatic scheduled backups of your WordPress data
 
 ### Backup Resources
 
-* [FTP Backups](http://www.guyrutenberg.com/2010/02/28/improved-ftp-backup-for-wordpress/) – How to automate backing up to an FTP server
-* [Incremental Backups](http://www.guyrutenberg.com/2013/03/28/incremental-wordpress-backups-using-duply-duplicity/) – How to make encrypted incremental backups using duplicity
+* [FTP Backups](https://www.guyrutenberg.com/2010/02/28/improved-ftp-backup-for-wordpress/) – How to automate backing up to an FTP server
+* [Incremental Backups](https://www.guyrutenberg.com/2013/03/28/incremental-wordpress-backups-using-duply-duplicity/) – How to make encrypted incremental backups using duplicity
 * [Using phpMyAdmin with WordPress](https://developer.wordpress.org/advanced-administration/upgrade/phpmyadmin/)
 
 #### Backup Tools

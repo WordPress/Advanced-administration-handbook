@@ -188,7 +188,7 @@ For example, if you are adding the following in your post:
 
 ```
 ...an article about "Happiness" is at
-<a href="http://example.com/happy" title="Happiness">Happiness</a>
+<a href="https://example.com/happy" title="Happiness">Happiness</a>
 if you would like to read it...
 ```
 
@@ -196,7 +196,7 @@ Is actually imported into the database looking like this:
 
 ```
 ...an article about \"Happiness\" is at
-<a href=\"http://example.com/happy\" title=\"Happiness\">Happiness</a>
+<a href=\"https://example.com/happy\" title=\"Happiness\">Happiness</a>
 if you would like to read it...
 ```
 

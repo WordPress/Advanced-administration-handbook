@@ -8,7 +8,7 @@ Although WordPress displays in U.S. English by default, it has the built-in capa
 
 As of version 4.0, you can have WordPress [automatically install the language of your choice](https://make.wordpress.org/core/2014/09/05/language-chooser-in-4-0/) during the installation process.
 
-For WordPress 4.1 or later, you can [install language packs directly from the Admin back-end](http://wplang.org/wordpress-4-1-install-language-packs-dashboard/) at any time. WordPress will download them and switch the admin back-end to that language. Navigate to **Settings > General > Site Language** and select from the list of available languages. For Multisite Super Admins, you can set the default language using the Network Administration **Settings** panel.
+For WordPress 4.1 or later, you can [install language packs directly from the Admin back-end](https://wplang.org/wordpress-4-1-install-language-packs-dashboard/) at any time. WordPress will download them and switch the admin back-end to that language. Navigate to **Settings > General > Site Language** and select from the list of available languages. For Multisite Super Admins, you can set the default language using the Network Administration **Settings** panel.
 
 ## Manually installing language files
 
@@ -16,7 +16,7 @@ Here are the steps you will need to follow to install an international version o
 
 **Note:** If you make an error in the steps or you do not specify the correct language, WordPress will default back to English. For more help Installing WordPress, see [Installing WordPress](https://developer.wordpress.org/advanced-administration/before-install/howto-install/) and [FAQ Installation](https://wordpress.org/documentation/article/faq-installation/).
 
-* Download the `.mo` language file for your language. The naming convention of the `.mo` files is based on the ISO-639 language code (e.g. _pt_ for Portuguese) followed by the ISO-3166 country code (e.g. _PT_ for Portugal or _BR_ for Brazil). So, the Brazilian Portuguese file would be called `pt_BR.mo`, and a non-specific Portuges file would be called `pt.mo`. Complete lists of codes can be found at [(country codes)](http://www.gnu.org/software/gettext/manual/html_chapter/gettext_16.html#Country-Codes) and [(language codes)](http://www.gnu.org/software/gettext/manual/html_chapter/gettext_16.html#Language-Codes).
+* Download the `.mo` language file for your language. The naming convention of the `.mo` files is based on the ISO-639 language code (e.g. _pt_ for Portuguese) followed by the ISO-3166 country code (e.g. _PT_ for Portugal or _BR_ for Brazil). So, the Brazilian Portuguese file would be called `pt_BR.mo`, and a non-specific Portuges file would be called `pt.mo`. Complete lists of codes can be found at [(country codes)](https://www.gnu.org/savannah-checkouts/gnu/gettext/manual/gettext.html#Country-Codes) and [(language codes)](https://www.gnu.org/savannah-checkouts/gnu/gettext/manual/gettext.html#Language-Codes).
 
 ## Setting the language for your site
 

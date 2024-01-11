@@ -28,7 +28,7 @@ You can also use the plugin [Change Username](https://wordpress.org/plugins/chan
 
 #### Good Passwords {#good-passwords}
 
-The goal with your password is to make it hard for other people to guess and hard for a brute force attack to succeed. Many [automatic password generators](http://www.google.com/?q=password+generator) are available that can be used to create secure passwords.
+The goal with your password is to make it hard for other people to guess and hard for a brute force attack to succeed. Many [automatic password generators](https://www.google.com/?q=password+generator) are available that can be used to create secure passwords.
 
 WordPress also features a password strength meter which is shown when changing your password in WordPress. Use this when changing your password to ensure its strength is adequate.
 
@@ -62,7 +62,7 @@ You can have the 401 point to 401.html, but the point is to aim it at _not_ Word
 For Nginx you can use the `error_page` directive but must supply an absolute url.
 
 ```
-error_page  401  http://example.com/forbidden.html;  
+error_page  401  https://example.com/forbidden.html;  
 ```
 
 On IIS web servers you can use the `httpErrors` element in your web.config, set `errorMode="custom"`:
@@ -81,7 +81,7 @@ On IIS web servers you can use the `httpErrors` element in your web.config, set 
 
 Password protecting your wp-login.php file (and wp-admin folder) can add an extra layer to your server. Because password protecting wp-admin can break any plugin that uses ajax on the front end, it's usually sufficient to just protect wp-login.php.
 
-To do this, you will need to create a .htpasswd file. Many hosts have tools to do this for you, but if you have to do it manually, you can use this [htpasswd generator](http://www.htaccesstools.com/htpasswd-generator/). Much like your .htaccess file (which is a file that is only an extension), .htpasswd will also have no prefix.
+To do this, you will need to create a .htpasswd file. Many hosts have tools to do this for you, but if you have to do it manually, you can use this [htpasswd generator](https://hostingcanada.org/htpasswd-generator/). Much like your .htaccess file (which is a file that is only an extension), .htpasswd will also have no prefix.
 
 You can either put this file outside of your public web folder (i.e. not in /public_html/ or /domain.com/, depending on your host), or you _can_ put it in the same folder, but you'll want to do some extra security work in your .htaccess file if you do.
 
@@ -105,7 +105,7 @@ Speaking of which, once you've uploaded the .htpasswd file, you need to tell .ht
 
 The actual location of AuthUserFile depends on your server, and the 'require user' will change based on what username you pick.
 
-If you are using Nginx you can password protect your wp-login.php file using the [HttpAuthBasicModule](http://wiki.nginx.org/HttpAuthBasicModule). This block should be inside your server block.
+If you are using Nginx you can password protect your wp-login.php file using the [HttpAuthBasicModule](https://nginx.org/en/docs/http/ngx_http_auth_basic_module.html). This block should be inside your server block.
 
 ```
 location /wp-login.php {
@@ -126,7 +126,7 @@ user3:pass3
 
 Unfortunately there is no easy way of configuring a password protected wp-login.php on Windows Server IIS. If you use a .htaccess processor like Helicon Ape, you can use the .htaccess example mentioned above. Otherwise you'd have to ask your hosting provider to set up Basic Authentication.
 
-All passwords must be encoded by function `crypt(3)`. You can use an online [htpasswd generator](http://www.htaccesstools.com/htpasswd-generator/) to encrypt your password.
+All passwords must be encoded by function `crypt(3)`. You can use an online [htpasswd generator](https://hostingcanada.org/htpasswd-generator/) to encrypt your password.
 
 #### Throttle Multiple Login Attempts
 
@@ -142,7 +142,7 @@ If you are the only person who needs to login to your Admin area and you have a 
 
 **Note:** Beware your ISP or computer may be changing your IP address frequently, this is called dynamic IP addressing, rather than fixed IP addressing. This could be used for a variety of reasons, such as saving money. If you suspect this to be the case, find out out how change your computer's settings, or contact your ISP to obtain a fixed address, in order to use this procedure.
 
-In all examples you have to replace 203.0.113.15 with your IP address. Your Internet Provider can help you to establish your IP address. Or you can use an online service such as [What Is My IP](http://www.whatismyip.com/).
+In all examples you have to replace 203.0.113.15 with your IP address. Your Internet Provider can help you to establish your IP address. Or you can use an online service such as [What Is My IP](https://www.whatismyip.com/).
 
 Examples for multiple IP addresses are also provided. They're ideal if you use more than one internet provider, if you have a small pool of IP addresses or when you have a couple of people that are allowed access to your site's Dashboard.
 
@@ -193,7 +193,7 @@ If you want to add more than one IP address, you can use:
 For Nginx you can add a location block inside your server block that works the same as the Apache example above.
 
 ```
-error_page  403  http://example.com/forbidden.html;
+error_page  403  https://example.com/forbidden.html;
 location /wp-login.php {
 	allow   203.0.113.15
 	# or for the entire network:
@@ -233,7 +233,7 @@ Extended from [Combatting Comment Spam](https://codex.wordpress.org/Combating_Co
 	RewriteCond %{REQUEST_URI} .(wp-comments-post|wp-login)\.php*
 	RewriteCond %{HTTP_REFERER} !.*example.com.* [OR]
 	RewriteCond %{HTTP_USER_AGENT} ^$
-	RewriteRule (.*) http://%{REMOTE_ADDR}/$1 [R=301,L]
+	RewriteRule (.*) https://%{REMOTE_ADDR}/$1 [R=301,L]
 </ifModule>
 ```
 
@@ -241,7 +241,7 @@ Nginx – Deny Access to No Referrer Requests
 
 ```
 location ~* (wp-comments-posts|wp-login)\\.php$ {
-	if ($http_referer !~ ^(http://example.com) ) {
+	if ($http_referer !~ ^(https://example.com) ) {
 		return 405;
 	}
 }
@@ -265,7 +265,7 @@ Change example.com to your domain. If you're using Multisite with mapped domains
 
 #### ModSecurity {#modsecurity}
 
-If you use ModSecurity, you can follow the advice from [Frameloss – Stopping brute force logins against WordPress](http://www.frameloss.org/2011/07/29/stopping-brute-force-logins-against-wordpress/). This requires root level access to your server, and may need the assistance of your webhost.
+If you use ModSecurity, you can follow the advice from [Frameloss – Stopping brute force logins against WordPress](https://www.frameloss.org/2011/07/29/stopping-brute-force-logins-against-wordpress/). This requires root level access to your server, and may need the assistance of your webhost.
 
 If you're using ModSecurity 2.7.3, you can add the rules into your .htaccess file instead.
 
@@ -291,11 +291,9 @@ Services like CloudFlare and Sucuri CloudProxy can also help mitigate these atta
 
 ### See Also {#see-also}
 
-* [Sucuri: Protecting Against WordPress Brute Force Attacks](http://blog.sucuri.net/2013/04/protecting-against-wordpress-brute-force-attacks.html)
+* [Sucuri: Protecting Against WordPress Brute Force Attacks](https://blog.sucuri.net/2013/04/protecting-against-wordpress-brute-force-attacks.html)
 * [How to: Protect WordPress from brute-force XML-RPC attacks](https://www.saotn.org/how-to-wordpress-protection-from-brute-force-xml-rpc-attacks/)
-* [Liquid Web: ModSecurity Rules To Alleviate Brute Force Attacks](http://kb.liquidweb.com/wordpress-modsecurity-rules/)
-* [HostGator: Password Protecting wp-login](http://support.hostgator.com/articles/specialized-help/technical/wordpress/wordpress-login-brute-force-attack)
-* [Stopping Brute-force Logins](http://www.frameloss.org/2011/07/29/stopping-brute-force-logins-against-wordpress/)
+* [Liquid Web: ModSecurity Rules To Alleviate Brute Force Attacks](https://www.liquidweb.com/kb/wordpress-modsecurity-rules/)
 * [Swiss Army Knife for WordPress (SAK4WP)](https://github.com/orbisius/sak4wp/) – Free Open Source Tool that can help you protect your wp-login.php and /wp-admin/ but not /wp-admin/admin-ajax.php with one click and much more
 
 ## Changelog

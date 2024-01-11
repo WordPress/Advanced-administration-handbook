@@ -20,7 +20,7 @@ Also note that the `blog` prefix is not used for static pages which will be acce
 
 Your first site on a fresh install will put uploaded files in the traditional location of `/wp-content/uploads/`, however all _subsequent_ sites on your network will be in the `/wp-content/uploads/sites/` folder, in their own subfolder based on the site number, designated by the database. These files will be accessible via that URL.
 
-This is a change from Multisite 3.0-3.4.2, where images of subsites were stored in `/wp-content/blogs.dir/` and were shown in http://example.com/files/ and http://example.com/sitename/files and so on. If you started with a Multisite install older than 3.5, it is _not_ an error if your images show with the URL of `/files/`.
+This is a change from Multisite 3.0-3.4.2, where images of subsites were stored in `/wp-content/blogs.dir/` and were shown in https://example.com/files/ and https://example.com/sitename/files and so on. If you started with a Multisite install older than 3.5, it is _not_ an error if your images show with the URL of `/files/`.
 
 Regardless of WP version, these locations cannot be changed by site admins. Only the network admin can make changes on the site settings page. It is not recommended that you change these without understanding how both the `ms-files.php` works in conjunction with your `.htaccess`, as it can easily become non-functional. If the `/files/` urls aren't working, it's indicative of a misconfigured .htaccess or httpd.conf file on your server.
 

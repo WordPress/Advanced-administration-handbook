@@ -30,7 +30,7 @@ Modern two-step authentication more frequently relies on a user's smartphone tha
 
 **Something You Know**
 
-The most familiar form of authentication is the knowledge factor, or password. As old as [Open Sesame](http://en.wikipedia.org/wiki/Open_Sesame_(phrase)), passwords have long been a standard for anonymous authentication. In order for a knowledge factor to work, both parties need to know the password, but other parties must not be able to find or guess it.
+The most familiar form of authentication is the knowledge factor, or password. As old as [Open Sesame](https://en.wikipedia.org/wiki/Open_sesame), passwords have long been a standard for anonymous authentication. In order for a knowledge factor to work, both parties need to know the password, but other parties must not be able to find or guess it.
 
 The first challenge is in exchanging the password with the trusted party safely. On the web, when you register for a new site, your password needs to be sent to that site's servers and might be intercepted in the process (which is why you should always check for SSL when registering or logging in — [HTTPS](https://developer.wordpress.org/advanced-administration/security/https/)).
 
@@ -40,7 +40,7 @@ Finally, the password needs to be verified. When a user visits the site, they ne
 
 #### Benefits {#benefits}
 
-There are a lot of different places to increase the security of a site, but the WordPress Security Team [has said](http://vip.wordpress.com/security/) that "The weakest link in the security of anything you do online is your password," so it makes sense to put energy into strengthening that aspect of your site.
+There are a lot of different places to increase the security of a site, but the WordPress Security Team [has said](https://wpvip.com/security/) that "The weakest link in the security of anything you do online is your password," so it makes sense to put energy into strengthening that aspect of your site.
 
 #### Drawbacks {#drawbacks}
 
