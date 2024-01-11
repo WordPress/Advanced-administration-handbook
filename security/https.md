@@ -72,11 +72,11 @@ The following guide is for WordPress 1.5 and Apache running `mod_rewrite`, using
 
 You need a (virtual) host configured for the secure server in addition to the non-secure site. In this example, the secure virtual host uses the same `DocumentRoot` as the insecure host. Hypothetically, you could use a host with a different name, such as wpadmin.mysite.com and link the document root to the wpadmin directory.
 
-Please ask your ISP to set up a secure virtual host for you, or if you have administrative access set up your own. Note that [you cannot use name based virtual hosting to identify different SSL servers](http://httpd.apache.org/docs-2.0/ssl/ssl_faq.html#vhosts2).
+Please ask your ISP to set up a secure virtual host for you, or if you have administrative access set up your own. Note that [you cannot use name based virtual hosting to identify different SSL servers](https://httpd.apache.org/docs/2.0/ssl/ssl_faq.html#vhosts2).
 
 **Rewrite Rules For The Insecure Host**
 
-In the `.htaccess` or virtual host stanza in `httpd.conf` for your insecure host, add this rewrite rule to automatically go to the secure host when you browse to http://example.com/wp-admin/ or http://example.com/wp-login.php
+In the `.htaccess` or virtual host stanza in `httpd.conf` for your insecure host, add this rewrite rule to automatically go to the secure host when you browse to https://example.com/wp-admin/ or https://example.com/wp-login.php
 
 This should go above the main wordpress rewrite block.
 
@@ -98,7 +98,7 @@ The secure virtual host should have two rewrite rules in an .htaccess file or in
 
 ```
 RewriteRule !^/wp-admin/(.*) - [C]
-RewriteRule ^/(.*) http://www.example.com/$1 [QSA,L]
+RewriteRule ^/(.*) https://www.example.com/$1 [QSA,L]
 ```
 
 The first rule excludes the wp-admin directory from the next rule, which shuffles traffic to the secure site over to the insecure site, to keep things nice and seamless for your audience.
@@ -125,7 +125,7 @@ NOTE: The below config is not 100% compatible with WordPress 2.8+, WordPress 2.8
 	<IfModule mod_rewrite.c>
 		RewriteEngine On
 		RewriteRule !^/wp-(admin|includes)/(.*) - [C]
-		RewriteRule ^/(.*) http://www.example.com/$1 [QSA,L]
+		RewriteRule ^/(.*) https://www.example.com/$1 [QSA,L]
 	</IfModule>
 
 </VirtualHost>
@@ -182,7 +182,7 @@ RewriteBase /
 # For a site running on port 443 or else (http over ssl)
 RewriteCond %{SERVER_PORT} !^80$
 RewriteRule !^wp-(admin|login|register)(.*) - [C]
-RewriteRule ^(.*)$ http://%{SERVER_NAME}/$1 [L]
+RewriteRule ^(.*)$ https://%{SERVER_NAME}/$1 [L]
 
 # For a site running on port 80 (http)
 RewriteCond %{SERVER_PORT}  ^80$
@@ -219,7 +219,7 @@ More testing, preferably with a packet sniffer and some hardcore network analysi
 
 #### Limitations {#limitations}
 
-The author assumes (but hasn't checked) that if the user has stored cookies/told their browser to remember passwords (not based on form fields but if using certain external auth mechanism) and hits http://www.example.com/wp-admin/, those packets are sent in the clear and the cookie/auth headers could be intercepted. Therefore, to ensure maximum security, the user should explicitly use the https host or always log in at the beginning of new sessions.
+The author assumes (but hasn't checked) that if the user has stored cookies/told their browser to remember passwords (not based on form fields but if using certain external auth mechanism) and hits https://www.example.com/wp-admin/, those packets are sent in the clear and the cookie/auth headers could be intercepted. Therefore, to ensure maximum security, the user should explicitly use the https host or always log in at the beginning of new sessions.
 
 ## Changelog
 

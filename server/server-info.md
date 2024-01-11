@@ -23,7 +23,7 @@ Make sure there are no spaces before or after the command, just the command, and
 Upload the file to the root directory of your site. Then type in the address to the file in your browser:
 
 ```
-http://example.com/sffdsajk234.php
+https://example.com/sffdsajk234.php
 ```
 
 The result will be several pages long and it will contain a ton of information. Though your data may be in a different order, for the most part, you just need the summary items that lists things like this:
@@ -40,8 +40,8 @@ That’s it. Make sure you remember to delete the file once you’re done with i
 
 ## Information and Resources
 
-- [PHP.net’s phpinfo Manual](http://us3.php.net/phpinfo)
-- [Zend’s PHP Manual on phpinfo](http://www.zend.com/manual/function.phpinfo.php)
+- [PHP.net’s phpinfo Manual](https://www.php.net/phpinfo)
+- [Zend’s PHP Manual on phpinfo](https://www.zend.com/manual/function.phpinfo.php)
 - [WordPress Environment PHP library](https://github.com/abelcallejo/wordpress-environment)
 
 ## Changelog

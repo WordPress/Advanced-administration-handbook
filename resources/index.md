@@ -40,8 +40,8 @@ Other than that, these are some solid resources for you to review:
 
 - [W3 Schools](https://www.w3schools.com/cssref/default.asp)
 - [MDN](https://developer.mozilla.org/en-US/docs/CSS)
-- [CSS Tricks](http://css-tricks.com/)
-- [CSS Zen Garden - the art of the possible in CSS](http://www.csszengarden.com/)
+- [CSS Tricks](https://css-tricks.com/)
+- [CSS Zen Garden - the art of the possible in CSS](https://www.csszengarden.com/)
 - [CSS on A List Apart](https://alistapart.com/blog/topic/css/)
 - [Flexbox Guide](https://duckduckgo.com/?q=css+tricks+flexbox&ia=web)
 - [CSS Grid Guide](https://duckduckgo.com/?q=css+tricks+grid&ia=web)
@@ -56,10 +56,10 @@ Other than that, these are some solid resources for you to review:
 
 ## PHP
 
-- [PHP Language Reference](http://php.net/manual/en/langref.php)
-- [PHP Function Reference](http://php.net/manual/en/funcref.php)
+- [PHP Language Reference](https://www.php.net/manual/en/langref.php)
+- [PHP Function Reference](https://www.php.net/manual/en/funcref.php)
 - [W3Schools PHP](https://www.w3schools.com/php/default.asp)
-- [PHP The Right Way](http://www.phptherightway.com/) is a high level review of modern PHP
+- [PHP The Right Way](https://phptherightway.com/) is a high level review of modern PHP
 - [PHPDoc](https://www.phpdoc.org/docs/latest/index.html) for documenting your code
 - [SitePoint's PHP resources](https://www.sitepoint.com/php/)
 

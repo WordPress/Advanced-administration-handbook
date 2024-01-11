@@ -73,7 +73,7 @@ If you need to write these values somewhere, avoid writing them in the system th
 
 ## Using Plesk
 
-If your hosting provider supplies the [Plesk](http://www.plesk.com/) hosting control panel and you want to install WordPress manually, follow the instructions below to create a database:
+If your hosting provider supplies the [Plesk](https://www.plesk.com/) hosting control panel and you want to install WordPress manually, follow the instructions below to create a database:
 
 1. Log in to Plesk.
 2. Click **Databases** in the Custom Website area of your website on the Websites & Domains page:  

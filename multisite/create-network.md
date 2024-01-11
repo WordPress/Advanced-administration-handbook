@@ -109,7 +109,7 @@ For help troubleshooting:
 
 * [Hosting WordPress](https://wordpress.org/documentation/article/hosting-wordpress/)
 * [Installing Multiple Blogs](https://developer.wordpress.org/advanced-administration/before-install/multiple-instances/)
-* [How to adapt my plugin to Multisite?](http://stackoverflow.com/questions/13960514/how-to-adapt-my-plugin-to-multisite/)
+* [How to adapt my plugin to Multisite?](https://stackoverflow.com/questions/13960514/how-to-adapt-my-plugin-to-multisite/)
 
 ## Changelog
 

@@ -28,9 +28,9 @@ $table_prefix = 'example123_'; // Only numbers, letters, and underscores please!
 
 ### WP_SITEURL {#wp-siteurl}
 
-WP_SITEURL allows the WordPress address (URL) to be defined. The value defined is the address where your WordPress core files reside. It should include the http:// part too. Do not put a slash "**/**" at the end. Setting this value in `wp-config.php` overrides the [wp_options table](https://codex.wordpress.org/Database_Description#Table:_wp_options) value for **siteurl**. Adding this in can reduce the number of database calls when loading your site. **Note:** This will **not** change the database stored value. The URL will revert to the old database value if this line is ever removed from `wp-config`. [Use the **RELOCATE** constant](https://developer.wordpress.org/advanced-administration/upgrade/migrating/) to change the **siteurl** value in the database.
+WP_SITEURL allows the WordPress address (URL) to be defined. The value defined is the address where your WordPress core files reside. It should include the https:// part too. Do not put a slash "**/**" at the end. Setting this value in `wp-config.php` overrides the [wp_options table](https://codex.wordpress.org/Database_Description#Table:_wp_options) value for **siteurl**. Adding this in can reduce the number of database calls when loading your site. **Note:** This will **not** change the database stored value. The URL will revert to the old database value if this line is ever removed from `wp-config`. [Use the **RELOCATE** constant](https://developer.wordpress.org/advanced-administration/upgrade/migrating/) to change the **siteurl** value in the database.
 
-If WordPress is installed into a directory called "wordpress" for the [domain](http://en.wikipedia.org/wiki/Domain_name_system) example.com, define `WP_SITEURL` like this:
+If WordPress is installed into a directory called "wordpress" for the [domain](https://en.wikipedia.org/wiki/Domain_name_system) example.com, define `WP_SITEURL` like this:
 
 ```
 define( 'WP_SITEURL', 'https://example.com/wordpress' );
@@ -47,27 +47,27 @@ define( 'WP_SITEURL', 'https://' . $_SERVER['HTTP_HOST'] . '/path/to/wordpress' 
 Dynamically set `WP_SITEURL` based on `$_SERVER['SERVER_NAME']`
 
 ```
-define( 'WP_SITEURL', 'http://' . $_SERVER['SERVER_NAME'] . '/path/to/wordpress' );
+define( 'WP_SITEURL', 'https://' . $_SERVER['SERVER_NAME'] . '/path/to/wordpress' );
 ```
 
 ### Blog address (URL) {#blog-address-url}
 
-Similar to WP_SITEURL, WP_HOME _overrides the [wp_options table](https://codex.wordpress.org/Database_Description#Table:_wp_options) value for_ home _but does not change it in the database._ **home** is the address you want people to type in their browser to reach your WordPress blog. It should include the http:// part and should not have a slash "**/**" at the end. Adding this in can reduce the number of database calls when loading your site.
+Similar to WP_SITEURL, WP_HOME _overrides the [wp_options table](https://codex.wordpress.org/Database_Description#Table:_wp_options) value for_ home _but does not change it in the database._ **home** is the address you want people to type in their browser to reach your WordPress blog. It should include the https:// part and should not have a slash "**/**" at the end. Adding this in can reduce the number of database calls when loading your site.
 
 ```
-define( 'WP_HOME', 'http://example.com/wordpress' );
+define( 'WP_HOME', 'https://example.com/wordpress' );
 ```
 
 If you are using the technique described in [Giving WordPress Its Own Directory](https://developer.wordpress.org/advanced-administration/server/wordpress-in-directory/) then follow the example below. Remember, you will also be placing an `index.php` in your web-root directory if you use a setting like this.
 
 ```
-define( 'WP_HOME', 'http://example.com' );
+define( 'WP_HOME', 'https://example.com' );
 ```
 
 Dynamically set `WP_HOME` based on `$_SERVER['HTTP_HOST']`
 
 ```
-define( 'WP_HOME', 'http://' . $_SERVER['HTTP_HOST'] . '/path/to/wordpress' );
+define( 'WP_HOME', 'https://' . $_SERVER['HTTP_HOST'] . '/path/to/wordpress' );
 ```
 
 ### Moving wp-content folder {#moving-wp-content-folder}
@@ -83,7 +83,7 @@ define( 'WP_CONTENT_DIR', dirname(__FILE__) . '/blog/wp-content' );
 Set WP_CONTENT_URL to the full **URL** of this directory (no trailing slash), e.g.
 
 ```
-define( 'WP_CONTENT_URL', 'http://example/blog/wp-content' );
+define( 'WP_CONTENT_URL', 'https://example/blog/wp-content' );
 ```
 
 ### Moving plugin folder {#moving-plugin-folder}
@@ -97,7 +97,7 @@ define( 'WP_PLUGIN_DIR', dirname(__FILE__) . '/blog/wp-content/plugins' );
 Set WP_PLUGIN_URL to the full **URI** of this directory (no trailing slash), e.g.
 
 ```
-define( 'WP_PLUGIN_URL', 'http://example/blog/wp-content/plugins' );
+define( 'WP_PLUGIN_URL', 'https://example/blog/wp-content/plugins' );
 ```
 
 If you have compability issues with plugins Set PLUGINDIR to the full **local path** of this directory (no trailing slash), e.g.
@@ -181,7 +181,7 @@ define( 'WP_ALLOW_MULTISITE', true );
 NOBLOGREDIRECT can be used to redirect the browser if the visitor tries to access a nonexistent subdomain or a subfolder.
 
 ```
-define( 'NOBLOGREDIRECT', 'http://example.com' );
+define( 'NOBLOGREDIRECT', 'https://example.com' );
 ```
 
 ### Fatal Error Handler {#wp-disable-fatal-error-handler}
@@ -207,9 +207,9 @@ define( 'WP_DISABLE_FATAL_ERROR_HANDLER', true ); // 5.2 and later
 define( 'WP_DEBUG', true );
 ```
 
-[Database errors are printed only if WP_DEBUG is set to true](https://trac.wordpress.org/ticket/5473). Database errors are handled by the [wpdb](https://developer.wordpress.org/reference/classes/wpdb/) class and are not affected by [PHP's error settings](http://www.php.net/errorfunc).
+[Database errors are printed only if WP_DEBUG is set to true](https://trac.wordpress.org/ticket/5473). Database errors are handled by the [wpdb](https://developer.wordpress.org/reference/classes/wpdb/) class and are not affected by [PHP's error settings](https://www.php.net/errorfunc).
 
-Setting WP_DEBUG to true also raises the [error reporting level](http://www.php.net/error-reporting) to E_ALL and activates warnings when deprecated functions or files are used; otherwise, WordPress sets the error reporting level to E_ALL ^ E_NOTICE ^ E_USER_NOTICE.
+Setting WP_DEBUG to true also raises the [error reporting level](https://www.php.net/manual/en/errorfunc.configuration.php#ini.error-reporting) to E_ALL and activates warnings when deprecated functions or files are used; otherwise, WordPress sets the error reporting level to E_ALL ^ E_NOTICE ^ E_USER_NOTICE.
 
 ### WP_ENVIRONMENT_TYPE {#wp-environment-type}
 
@@ -237,7 +237,7 @@ define( 'SCRIPT_DEBUG', true );
 
 ### Disable Javascript Concatenation {#disable-javascript-concatenation}
 
-To result in faster administration screens, all JavaScript files are [concatenated](http://en.wikipedia.org/wiki/Concatenation) into one URL. If JavaScript is failing to work in an administration screen, you can try disabling this feature:
+To result in faster administration screens, all JavaScript files are [concatenated](https://en.wikipedia.org/wiki/Concatenation) into one URL. If JavaScript is failing to work in an administration screen, you can try disabling this feature:
 
 ```
 define( 'CONCATENATE_SCRIPTS', false );
@@ -259,7 +259,7 @@ ignore_repeated_source = Off
 html_errors = Off
 ```
 
-**About Error Reporting 4339** This is a custom value that only logs issues that affect the functioning of your site, and ignores things like notices that may not even be errors. See [PHP Error Constants](http://php.net/manual/en/errorfunc.constants.php) for the meaning of each binary position for 1000011110011, which is the binary number equal to 4339. The far left 1 means report any E_RECOVERABLE_ERROR. The next 0 means do not report E_STRICT, (which is thrown when sloppy but functional coding is used) and so on. Feel free to determine your own custom error reporting number to use in place of 4339.
+**About Error Reporting 4339** This is a custom value that only logs issues that affect the functioning of your site, and ignores things like notices that may not even be errors. See [PHP Error Constants](https://www.php.net/manual/en/errorfunc.constants.php) for the meaning of each binary position for 1000011110011, which is the binary number equal to 4339. The far left 1 means report any E_RECOVERABLE_ERROR. The next 0 means do not report E_STRICT, (which is thrown when sloppy but functional coding is used) and so on. Feel free to determine your own custom error reporting number to use in place of 4339.
 
 Obviously, you will want different settings for your development environment. If your staging copy is on the same server, or you don't have access to `php.ini`, you will need to override the default settings at run time. It's a matter of personal preference whether you prefer errors to go to a log file, or you prefer to be notified immediately of any error, or perhaps both. Here's an example that reports all errors immediately that you could insert into your `wp-config.php` file:
 
@@ -285,7 +285,7 @@ Here is an example that turns PHP error_logging on and logs them to a specific f
 /* That's all, stop editing! Happy blogging. */
 ```
 
-Another example of logging errors, as suggested by Mike Little on the [wp-hackers email list](http://lists.automattic.com/pipermail/wp-hackers/2010-September/034830.html):
+Another example of logging errors, as suggested by Mike Little on the [wp-hackers email list](https://lists.automattic.com/pipermail/wp-hackers/2010-September/034830.html):
 
 ```
 /**
@@ -299,7 +299,7 @@ define( 'WP_DEBUG_DISPLAY', false );
 @ini_set( 'display_errors', 0 );
 ```
 
-A refined version from Mike Little on the [Manchester WordPress User Group](http://groups.google.com/group/manchester-wordpress-user-group/msg/dcab0836cabc7f76):
+A refined version from Mike Little on the [Manchester WordPress User Group](https://groups.google.com/g/manchester-wordpress-user-group/c/tHJxMGhcnZs/m/dn-8yjYIq9wJ):
 
 ```
 /**

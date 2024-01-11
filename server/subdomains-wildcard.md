@@ -42,7 +42,7 @@ ServerAlias *.|DOMAIN|
 
 _If you ever need to un-do a custom Httpd: return here, delete text from input area, save._
 
-- DirectAdmin.com: [Apache Wildcard Documentation](https://help.directadmin.com/item.php?id=127). DirectAdmin.com forum: [WordPress wildcard subdomains](http://www.directadmin.com/forum/showthread.php?p=195033).
+- DirectAdmin.com: [Apache Wildcard Documentation](https://help.directadmin.com/item.php?id=127). DirectAdmin.com forum: [WordPress wildcard subdomains](https://forum.directadmin.com/threads/wildcard-subdomains-yea-i-know-its-a-common-one.29074/#post-195033).
 
 ## Amazon Web Services {#amazon-web-services}
 

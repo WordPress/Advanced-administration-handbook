@@ -31,7 +31,7 @@ Most website hosts provide software to back up your site. Check with your host t
 
 **Create Synchs With Your Site**
 
-[WinSCP](http://winscp.net/eng/index.php) and other programs allow you to synchronize with your website to keep a mirror copy of the content on your server and hard drive updated. It saves time and makes sure you have the latest files in both places.
+[WinSCP](https://winscp.net/eng/index.php) and other programs allow you to synchronize with your website to keep a mirror copy of the content on your server and hard drive updated. It saves time and makes sure you have the latest files in both places.
 
 #### Synchronize your files in WinScp {#synchronize-your-files-in-winscp}
 

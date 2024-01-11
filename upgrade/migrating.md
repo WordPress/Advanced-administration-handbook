@@ -7,7 +7,7 @@ On the `Settings -> General` screen in a single site installation of WordPress, 
 - The "Site Address (URL)" setting is the address you want people to type in their browser to reach your WordPress blog.
 - The "WordPress Address (URL)" setting is the address where your WordPress core files reside.
 
-**Note:** Both settings should include the http:// part and should not have a slash `/` at the end.
+**Note:** Both settings should include the https:// part and should not have a slash `/` at the end.
 
 Every once in a while, somebody finds a need to manually change (or fix) these settings. Usually this happens when they change one or both and discover that their site no longer works properly. This can leave the user with no easily discoverable way to correct the problem. This article tells you how to change these settings directly.
 
@@ -24,8 +24,8 @@ It is possible to set the site URL manually in the `wp-config.php` file.
 Add these two lines to your `wp-config.php`, where "example.com" is the correct location of your site.
 
 ```
-define( 'WP_HOME', 'http://example.com' );
-define( 'WP_SITEURL', 'http://example.com' );
+define( 'WP_HOME', 'https://example.com' );
+define( 'WP_SITEURL', 'https://example.com' );
 ```
 
 This is not necessarily the best fix, it's just hard-coding the values into the site itself. You won't be able to edit them on the General settings page anymore when using this method.
@@ -38,8 +38,8 @@ If you have access to the site via FTP, then this method will help you quickly g
 2. Add these two lines to the file, immediately after the initial `<?php` line:
 
 ```
-update_option( 'siteurl', 'http://example.com' );
-update_option( 'home', 'http://example.com' );
+update_option( 'siteurl', 'https://example.com' );
+update_option( 'home', 'https://example.com' );
 ``` 
 Use your own URL instead of `example.com`, obviously.
 
@@ -52,8 +52,8 @@ Note: If your theme doesn't have a `functions.php` file create a new one with a 
 
 ```	
 <?php
-update_option( 'siteurl', 'http://example.com' );
-update_option( 'home', 'http://example.com' );
+update_option( 'siteurl', 'https://example.com' );
+update_option( 'home', 'https://example.com' );
 ```
 
 Upload this file to your theme directory. Remove the lines or the remove the file after the site is up and running again.
@@ -71,13 +71,13 @@ Two important keys are router/firewall modifications and the "wait 10+ minutes" 
 2. Add lines just after `<?php`
 
 ```
-update_option( 'siteurl', 'http://example.com:port/yourblog');
-update_option( 'home', 'http://example.com:port/yourblog');
+update_option( 'siteurl', 'https://example.com:port/yourblog');
+update_option( 'home', 'https://example.com:port/yourblog');
 ```
 
 3. Refresh your web browser using your external site URL:
 
-http://example.com:port/yourblog
+https://example.com:port/yourblog
 `$ nano /var/www/books/wp-content/themes/twentyeleven/functions.php`
 
 4. Remove those lines you just added (or comment them out)
@@ -96,7 +96,7 @@ http://example.com:port/yourblog
 
 `"Disables the automatic creation of NAT redirect rules for access to your public IP addresses from within your internal networks. Note: Reflection only works on port forward type items and does not work for large ranges > 500 ports."`
 
-9. Then go do something for ten minutes and when you get back see if the external url http://example.com:port/yourblog from a LAN browser brings the page up correctly. 
+9. Then go do something for ten minutes and when you get back see if the external url https://example.com:port/yourblog from a LAN browser brings the page up correctly. 
 
 #### Relocate method
 
@@ -111,7 +111,7 @@ if ( defined( 'RELOCATE' ) AND RELOCATE ) {
 	// Move flag is set
 	if ( isset( $_SERVER['PATH_INFO'] ) AND ($_SERVER['PATH_INFO'] != $_SERVER['PHP_SELF']) ) 
 		$_SERVER['PHP_SELF'] = str_replace( $_SERVER['PATH_INFO'], "", $_SERVER['PHP_SELF'] );
-	$url = dirname( set_url_scheme( 'http://'. $_SERVER['HTTP_HOST'] . $_SERVER['PHP_SELF'] ) );
+	$url = dirname( set_url_scheme( 'https://'. $_SERVER['HTTP_HOST'] . $_SERVER['PHP_SELF'] ) );
 	if ( $url != get_option( 'siteurl' ) )
 		update_option( 'siteurl', $url );
 }
@@ -122,7 +122,7 @@ if ( defined( 'RELOCATE' ) AND RELOCATE ) {
 1. Edit the `wp-config.php` file.
 2. After the "define" statements (just before the comment line that says "That's all, stop editing!"), insert a new line, and type: `define('RELOCATE',true);`
 3. Save your `wp-config.php` file.
-4. Open a web browser and manually point it to `wp-login.php` on the new server. For example, if your new site is at http://www.example.com, then type http://www.example.com/wp-login.php into your browser's address bar.
+4. Open a web browser and manually point it to `wp-login.php` on the new server. For example, if your new site is at https://www.example.com, then type https://www.example.com/wp-login.php into your browser's address bar.
 5. Login as per normal.
 6. Look in your web browser's address bar to verify that you have, indeed, logged in to the correct server. If this is the case, then in the Admin back-end, navigate to `Settings > General` and verify that both the address settings are correct. Remember to Save Changes.
 7. Once this has been fixed, edit `wp-config.php` and either completely remove the line that you added (delete the whole line), comment it out (with `//`) or change the true value to false if you think it's likely you will be relocating again.
@@ -250,14 +250,14 @@ See [Moving WordPress Multisite](https://developer.wordpress.org/advanced-admini
 
 #### wp-cli
 
-[wp-cli](http://wp-cli.org/) is a super useful shell tool.
+[wp-cli](https://wp-cli.org/) is a super useful shell tool.
 
 `wp search-replace 'example.dev' 'example.com' --skip-columns=guid`
 
 Or, if you only want to change the option, you can do:
 ```
-wp option update home 'http://example.com'
-wp option update siteurl 'http://example.com'
+wp option update home 'https://example.com'
+wp option update siteurl 'https://example.com'
 ```
 
 # Moving WordPress
@@ -279,12 +279,12 @@ Moving your domain without changing the Home and Site URLs of your WordPress sit
 
 ### Changing Your Domain Name and URLs
 
-Moving a website and changing your domain name or URLs (i.e. from http://example.com/site to http://example.com, or http://example.com to http://example.net) requires the following steps – in sequence.
+Moving a website and changing your domain name or URLs (i.e. from https://example.com/site to https://example.com, or https://example.com to https://example.net) requires the following steps – in sequence.
 
 1. Download your existing site files.
 2. Export your database – go in to MySQL and export the database.
 3. Move the backed up files and database into a new folder – somewhere safe – this is your site backup.
-4. Log in to the site you want to move and go to Settings > General, then change the URLs. (ie from http://example.com/ to http://example.net) – save the settings and expect to see a 404 page.
+4. Log in to the site you want to move and go to Settings > General, then change the URLs. (ie from https://example.com/ to https://example.net) – save the settings and expect to see a 404 page.
 5. Download your site files again.
 6. Export the database again.
 7. Edit `wp-config.php` with the new server's MySQL database name, user and password.
@@ -296,7 +296,7 @@ When your domain name or URLs change there are additional concerns. The files an
 If you do a search and replace on your entire database to change the URLs, you can cause issues with data serialization, due to the fact that some themes and widgets store values with the length of your URL marked. When this changes, things break. To avoid that serialization issue, you have three options:
 
 1. Use the [Velvet Blues Update URLs](https://wordpress.org/plugins/velvet-blues-update-urls/) or [Better Search Replace](https://wordpress.org/plugins/better-search-replace/) plugins if you can access your Dashboard.
-2. Use [WP-CLI's search-replace](http://wp-cli.org/commands/search-replace/) if your hosting provider (or you) have installed WP-CLI.
+2. Use [WP-CLI's search-replace](https://developer.wordpress.org/cli/commands/search-replace/) if your hosting provider (or you) have installed WP-CLI.
 3. Use the [Search and Replace for WordPress Databases Script](https://interconnectit.com/products/search-and-replace-for-wordpress-databases/) to safely change all instances on your old domain or path to your new one. (**only use this option if you are comfortable with database administration** )
 
 Note: Only perform a search and replace on the wp_posts table.
@@ -317,10 +317,10 @@ Here are the step-by-step instructions to move your WordPress site to a new loca
 5. In the box for **Site Address (URL)**: change the address to the new location, which should match the WordPress (your public site) address.
 6. Click **Save Changes**.
 7. (Do not try to open/view your site now!)
-8. Move your WordPress core files to the new location. This includes the files found within the original directory, such as http://example.com/wordpress, and all the sub-directories, to the new location.
+8. Move your WordPress core files to the new location. This includes the files found within the original directory, such as https://example.com/wordpress, and all the sub-directories, to the new location.
 9. Now, try to open your site by going to yourdomain.com/wp-admin. Note, you may need to go to yourdomain.com/wp-login.php
 10. If you are using [Permalinks](https://wordpress.org/documentation/article/using-permalinks/), go to the Administration > Settings > [Permalinks](https://wordpress.org/documentation/article/settings-permalinks-screen/) panel and update your Permalink structure to your [.htaccess](https://wordpress.org/documentation/article/glossary/#htaccess), file, which should be in the same directory as the main `index.php` file.
-11. Existing image/media links uploaded media will refer to the old folder and must be updated with the new location. You can do this with the [Better Search Replace](https://wordpress.org/plugins/better-search-replace/) or [Velvet Blues Update URLs](https://wordpress.org/plugins/velvet-blues-update-urls/) plugins, [WP-CLI's search-replace](http://wp-cli.org/commands/search-replace/) if your hosting provider (or you) have installed WP-CLI, manually in your SQL database, or by using the 3rd party database updating tool [Search and Replace Databases Script](https://interconnectit.com/products/search-and-replace-for-wordpress-databases/) * **Note:** this script is best used by experienced developers.
+11. Existing image/media links uploaded media will refer to the old folder and must be updated with the new location. You can do this with the [Better Search Replace](https://wordpress.org/plugins/better-search-replace/) or [Velvet Blues Update URLs](https://wordpress.org/plugins/velvet-blues-update-urls/) plugins, [WP-CLI's search-replace](https://developer.wordpress.org/cli/commands/search-replace/) if your hosting provider (or you) have installed WP-CLI, manually in your SQL database, or by using the 3rd party database updating tool [Search and Replace Databases Script](https://interconnectit.com/products/search-and-replace-for-wordpress-databases/) * **Note:** this script is best used by experienced developers.
 12. In some cases your permissions may have changed, depending on your ISP. Watch for any files with "0000" permissions and change them back to "0644".
 13. If your theme supports menus, links to your home page may still have the old subdirectory embedded in them. Go to Appearance > Menus and update them.
 14. Sometimes you would need to restart your server, otherwise your server may give out an error. (happens in MAMP software (Mac)).
@@ -359,8 +359,8 @@ and insert the following lines below:
 
 ```
 //FIXME: do comment/remove these hack lines. (once the database is updated)
-update_option('siteurl', 'http://your.domain.name/the/path' );
-update_option('home', 'http://your.domain.name/the/path' );
+update_option('siteurl', 'https://example.com/the/path' );
+update_option('home', 'https://example.com/the/path' );
 ```
 
 You're done. Test your site to make sure that it works right. If the change involves a new address for your site, make sure you let people know the new address, and consider adding some redirection instructions in your `.htaccess` file to guide visitors to the new location.
@@ -425,13 +425,13 @@ If you are moving from subdomains to subfolders, or vice-versa, remember to adju
 
 ### Related Links
 
-- [Moving a blog from wordpress.com to self-hosted blog](http://www.problogger.net/archives/2009/01/03/how-to-move-from-wordpresscom-to-wordpressorg/)
-- [Moving WordPress to a new domain or server](http://sltaylor.co.uk/blog/moving-wordpress-new-domain-server/)
-- [Italian version of this article – Versione italiana dell'articolo](http://www.valent-blog.eu/2007/09/14/trasferire-wordpress/)
-- [Search and Replace for WordPress Databases](http://interconnectit.com/124/search-and-replace-for-wordpress-databases/)
+- [Moving a blog from wordpress.com to self-hosted blog](https://problogger.com/how-to-move-from-wordpresscom-to-wordpressorg/)
+- [Moving WordPress to a new domain or server](https://sltaylor.co.uk/blog/moving-wordpress-new-domain-server/)
+- [Italian version of this article – Versione italiana dell'articolo](https://www.valent-blog.eu/2007/09/14/trasferire-wordpress/)
+- [Search and Replace for WordPress Databases](https://interconnectit.com/search-and-replace-for-wordpress-databases/)
 - [PHP script to replace site url in WordPress database dump, even with WPML](http://blog.lavoie.sl/2012/07/php-script-to-replace-site-url-in.html)
 - [The Duplicator plugin helps administrators move a site from one location to another](https://wordpress.org/plugins/duplicator/)
-- [Technical tutorial on moving your WordPress blog to Bitnami's AWS configuration](http://www.agileweboperations.com/migrate-your-wordpress-blog-to-a-bitnami-ec2-instance)
+- [Technical tutorial on moving your WordPress blog to Bitnami's AWS configuration](https://agileweboperations.com/2011/01/20/migrate-your-wordpress-blog-to-a-bitnami-ec2-instance/)
 
 # Migrating multiple blogs into WordPress multisite
 

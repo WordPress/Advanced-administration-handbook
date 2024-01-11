@@ -177,15 +177,15 @@ In addition to MySQL Workbench, there are many GUI tools that let you backup (ex
 
 | Name | OS (Paid edition) | OS (Free edition) | |
 |---|---|---|
-| [MySQL Workbench](http://www.mysql.com/products/workbench/) | Windows/Mac/Linux | Windows/Mac/Linux | See [above](https://developer.wordpress.org/advanced-administration/security/backup/database/#Using_MySQL_Workbench) |
-| [EMS SQL Management Studio for MySQL](http://sqlmanager.net/en/products/studio/mysql) | Windows | | |
-| [Aqua Data Studio](http://www.aquafold.com/) | Windows/Mac/Linux | Windows/Mac/Linux (14 days trial) | Available in 9 languages |
+| [MySQL Workbench](https://www.mysql.com/products/workbench/) | Windows/Mac/Linux | Windows/Mac/Linux | See [above](https://developer.wordpress.org/advanced-administration/security/backup/database/#Using_MySQL_Workbench) |
+| [EMS SQL Management Studio for MySQL](https://www.sqlmanager.net/products/mysql/studio) | Windows | | |
+| [Aqua Data Studio](https://www.aquafold.com/) | Windows/Mac/Linux | Windows/Mac/Linux (14 days trial) | Available in 9 languages |
 | [Navicat for MySQL](https://www.navicat.com/en/products/navicat-for-mysql) | Windows/Mac/Linux | Windows/Mac/Linux (14 days trial) | Available in 8 languages |
-| [SQLyog](http://www.webyog.com/en/) | Windows | | |
+| [SQLyog](https://webyog.com/en/) | Windows | | |
 | [Toad for MySQL](https://www.toadworld.com/) | | Windows | |
-| [HeidiSQL](http://www.heidisql.com/) | | Windows | |
-| [Sequel Pro](http://sequelpro.com/) | Mac | CocoaMySQL successor | |
-| [Querious](http://www.araelium.com/querious/) | | Mac | |
+| [HeidiSQL](https://www.heidisql.com/) | | Windows | |
+| [Sequel Pro](https://sequelpro.com/) | Mac | CocoaMySQL successor | |
+| [Querious](https://www.araelium.com/querious/) | | Mac | |
 
 ### Using WordPress Database Backup Plugin {#using-wordpress-database-backup-plugin}
 
