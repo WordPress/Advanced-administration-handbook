@@ -27,7 +27,7 @@ RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^(.*)$ /my_subdir/$1
 RewriteCond %{HTTP_HOST} ^(www.)?example.com$
-RewriteRule ^(/)?$ my_subdir/index.php \[L\] 
+RewriteRule ^(/)?$ my_subdir/index.php [L] 
 </IfModule>
 ```
 
