@@ -34,16 +34,6 @@ You can import posts, comments, categories and authors from Blogger. WordPress i
 5. Click "Choose File" and navigate to your Blogger XML file.
 6. Click "Upload file and import".
 
-## Blogroll
-
-WordPress includes an import tool designed specifically for importing content from Blogroll.
-
-1. In your WordPress site, select Tools -> Import on the left nav of the admin screen.
-2. Under "Blogroll", if you haven't already installed the importer, click "Install Now".
-3. Click the "Run Importer" link.
-4. Click "Choose File" and navigate to your Blogroll OPML file.
-5. Click "Upload file and import".
-
 ## Drupal
 
 Many resources are available to help you migrate content from Drupal to WordPress. A few are highlighted here, and you're likely to find many others by searching the web.
@@ -57,15 +47,6 @@ Many resources are available to help you migrate content from Drupal to WordPres
 Here are some resources that can help guide you in importing XML or CSV content into WordPress.
 
 * The [WP All Import](https://wordpress.org/plugins/wp-all-import/) plugin can import any XML or CSV file. It integrates with the [WP All Export](https://wordpress.org/plugins/wp-all-export/) plugin.
-
-## HTML
-
-WordPress includes an import tool designed specifically for importing content from static HTML pages.
-
-1. In your WordPress site, select Tools -> Import on the left nav of the admin screen.
-2. Under "HTML", click the "Run Importer" link.
-3. Click "Choose File" and navigate to your HTML file.
-4. Click "Upload file and import".
 
 ## Joomla
 
@@ -207,4 +188,5 @@ You will first be asked to map the authors in this export file to users on the b
 
 ## Changelog
 
+- 2024-01-25: Removed HTML and Blogroll sections as they are no longer accurate
 - 2023-04-25: Added content from [Importing Content](https://wordpress.org/documentation/article/importing-content/).

@@ -149,7 +149,7 @@ All options except for MultiViews. This is the default setting.
 
 **ExecCGI**
 
-Execution of CGI scripts using mod\_cgi is permitted.
+Execution of CGI scripts using mod_cgi is permitted.
 
 **FollowSymLinks**
 
@@ -157,7 +157,7 @@ The server will follow symbolic links in this directory.
 
 **Includes**
 
-Server-side includes provided by mod\_include are permitted.
+Server-side includes provided by mod_include are permitted.
 
 **IncludesNOEXEC**
 
@@ -169,7 +169,7 @@ URL maps to a directory, and no DirectoryIndex, a formatted listing of the direc
 
 **MultiViews**
 
-Content negotiated “MultiViews” are allowed using mod\_negotiation.
+Content negotiated “MultiViews” are allowed using mod_negotiation.
 
 **SymLinksIfOwnerMatch**
 

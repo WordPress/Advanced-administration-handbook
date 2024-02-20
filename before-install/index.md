@@ -2,7 +2,7 @@
 
 Before installing WordPress, you need to check that your web hosting provider fulfills the necessary software and conditions. Also, you must have access to the server and some tools.
 
-# Requirements on the server side
+## Requirements on the server side
 
 * PHP 7.4 or greater
 * MySQL 5.7 or MariaDB 10.3 or greater
@@ -10,7 +10,7 @@ Before installing WordPress, you need to check that your web hosting provider fu
 
 For a list of detail requirements on your web host, refer the [official requirement page](https://wordpress.org/about/requirements/) and the [Server Environment page](https://make.wordpress.org/hosting/handbook/server-environment/).
 
-# Requirements on local
+## Requirements on local
 
 * Login Account (user id and password) to the server via FTP or shell
 * Text Editor
