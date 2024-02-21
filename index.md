@@ -1,4 +1,4 @@
-# WordPress Advanced Administration Handbook
+# Advanced Administration Handbook
 
 Welcome to the **WordPress Advanced Administration Handbook**! Here you will find WordPress advanced documentation. Use the "Contents" menu on the left to navigate topics.
 
