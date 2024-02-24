@@ -14,12 +14,12 @@ This page may be used to restore a corrupted `.htaccess` file (e.g. a misbehavin
 # BEGIN WordPress
 
 RewriteEngine On
-RewriteRule .\* - \[E=HTTP\_AUTHORIZATION:%{HTTP:Authorization}\]
+RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
 RewriteBase /
-RewriteRule ^index\\.php$ - \[L\]
-RewriteCond %{REQUEST\_FILENAME} !-f
-RewriteCond %{REQUEST\_FILENAME} !-d
-RewriteRule . /index.php \[L\]
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]
 
 # END WordPress
 ```
@@ -37,19 +37,19 @@ If you activated Multisite on WordPress 3.5 or later, use one of these.
 # Using subfolder network type: https://wordpress.org/documentation/article/htaccess/#multisite
 
 RewriteEngine On
-RewriteRule .\* - \[E=HTTP\_AUTHORIZATION:%{HTTP:Authorization}\]
+RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
 RewriteBase /
-RewriteRule ^index\\.php$ - \[L\]
+RewriteRule ^index\.php$ - [L]
 
 # add a trailing slash to /wp-admin
-RewriteRule ^(\[\_0-9a-zA-Z-\]+/)?wp-admin$ $1wp-admin/ \[R=301,L\]
+RewriteRule ^([_0-9a-zA-Z-]+/)?wp-admin$ $1wp-admin/ [R=301,L]
 
-RewriteCond %{REQUEST\_FILENAME} -f \[OR\]
-RewriteCond %{REQUEST\_FILENAME} -d
-RewriteRule ^ - \[L\]
-RewriteRule ^(\[\_0-9a-zA-Z-\]+/)?(wp-(content|admin|includes).\*) $2 \[L\]
-RewriteRule ^(\[\_0-9a-zA-Z-\]+/)?(.\*\\.php)$ $2 \[L\]
-RewriteRule . index.php \[L\]
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+RewriteRule ^([_0-9a-zA-Z-]+/)?(wp-(content|admin|includes).*) $2 [L]
+RewriteRule ^([_0-9a-zA-Z-]+/)?(.*\.php)$ $2 [L]
+RewriteRule . index.php [L]
 
 # END WordPress Multisite
 ```
@@ -61,19 +61,19 @@ RewriteRule . index.php \[L\]
 # Using subdomain network type: https://wordpress.org/documentation/article/htaccess/#multisite
 
 RewriteEngine On
-RewriteRule .\* - \[E=HTTP\_AUTHORIZATION:%{HTTP:Authorization}\]
+RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
 RewriteBase /
-RewriteRule ^index\\.php$ - \[L\]
+RewriteRule ^index\.php$ - [L]
 
 # add a trailing slash to /wp-admin
-RewriteRule ^wp-admin$ wp-admin/ \[R=301,L\]
+RewriteRule ^wp-admin$ wp-admin/ [R=301,L]
 
-RewriteCond %{REQUEST\_FILENAME} -f \[OR\]
-RewriteCond %{REQUEST\_FILENAME} -d
-RewriteRule ^ - \[L\]
-RewriteRule ^(wp-(content|admin|includes).\*) $1 \[L\]
-RewriteRule ^(.\*\\.php)$ $1 \[L\]
-RewriteRule . index.php \[L\]
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+RewriteRule ^(wp-(content|admin|includes).*) $1 [L]
+RewriteRule ^(.*\.php)$ $1 [L]
+RewriteRule . index.php [L]
 
 # END WordPress Multisite
 ```
@@ -92,20 +92,20 @@ WordPress 3.0 through 3.4.2
 
 RewriteEngine On
 RewriteBase /
-RewriteRule ^index\\.php$ - \[L\]
+RewriteRule ^index\.php$ - [L]
 
 # uploaded files
-RewriteRule ^(\[\_0-9a-zA-Z-\]+/)?files/(.+) wp-includes/ms-files.php?file=$2 \[L\]
+RewriteRule ^([_0-9a-zA-Z-]+/)?files/(.+) wp-includes/ms-files.php?file=$2 [L]
 
 # add a trailing slash to /wp-admin
-RewriteRule ^(\[\_0-9a-zA-Z-\]+/)?wp-admin$ $1wp-admin/ \[R=301,L\]
+RewriteRule ^([_0-9a-zA-Z-]+/)?wp-admin$ $1wp-admin/ [R=301,L]
 
-RewriteCond %{REQUEST\_FILENAME} -f \[OR\]
-RewriteCond %{REQUEST\_FILENAME} -d
-RewriteRule ^ - \[L\]
-RewriteRule ^\[\_0-9a-zA-Z-\]+/(wp-(content|admin|includes).\*) $1 \[L\]
-RewriteRule ^\[\_0-9a-zA-Z-\]+/(.\*\\.php)$ $1 \[L\]
-RewriteRule . index.php \[L\]
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+RewriteRule ^[_0-9a-zA-Z-]+/(wp-(content|admin|includes).*) $1 [L]
+RewriteRule ^[_0-9a-zA-Z-]+/(.*\.php)$ $1 [L]
+RewriteRule . index.php [L]
 
 # END WordPress Multisite
 ```
@@ -118,15 +118,15 @@ RewriteRule . index.php \[L\]
 
 RewriteEngine On
 RewriteBase /
-RewriteRule ^index\\.php$ - \[L\]
+RewriteRule ^index\.php$ - [L]
 
 # uploaded files
-RewriteRule ^files/(.+) wp-includes/ms-files.php?file=$1 \[L\]
+RewriteRule ^files/(.+) wp-includes/ms-files.php?file=$1 [L]
 
-RewriteCond %{REQUEST\_FILENAME} -f \[OR\]
-RewriteCond %{REQUEST\_FILENAME} -d
-RewriteRule ^ - \[L\]
-RewriteRule . index.php \[L\]
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+RewriteRule . index.php [L]
 
 # END WordPress Multisite
 ```
@@ -149,7 +149,7 @@ All options except for MultiViews. This is the default setting.
 
 **ExecCGI**
 
-Execution of CGI scripts using mod\_cgi is permitted.
+Execution of CGI scripts using mod_cgi is permitted.
 
 **FollowSymLinks**
 
@@ -157,7 +157,7 @@ The server will follow symbolic links in this directory.
 
 **Includes**
 
-Server-side includes provided by mod\_include are permitted.
+Server-side includes provided by mod_include are permitted.
 
 **IncludesNOEXEC**
 
@@ -169,7 +169,7 @@ URL maps to a directory, and no DirectoryIndex, a formatted listing of the direc
 
 **MultiViews**
 
-Content negotiated “MultiViews” are allowed using mod\_negotiation.
+Content negotiated “MultiViews” are allowed using mod_negotiation.
 
 **SymLinksIfOwnerMatch**
 
@@ -258,8 +258,8 @@ See also [Enable Compression](https://developers.google.com/speed/docs/insights/
 ```
 AddOutputFilterByType DEFLATE text/html text/plain text/xml application/xml application/xhtml+xml text/javascript text/css application/x-javascript
 BrowserMatch ^Mozilla/4 gzip-only-text/html
-BrowserMatch ^Mozilla/4\\.0\[678\] no-gzip
-BrowserMatch \\bMSIE !no-gzip !gzip-only-text/html
+BrowserMatch ^Mozilla/4\.0[678] no-gzip
+BrowserMatch \bMSIE !no-gzip !gzip-only-text/html
 ```
 
 **Force Compression for certain files**
