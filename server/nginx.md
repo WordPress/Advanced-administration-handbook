@@ -190,7 +190,7 @@ For multisite subdirectory installations, here is the `global/wordpress.conf` fi
 # Designed to be included in any server {} block.
 
 map $uri $blogname{
-    ~^(?P/[^/]+/)files/(.*)       $blogpath ;
+    ~^(?P<blogpath>/[^/]+/)files/(.*)       $blogpath ;
 }
 
 map $blogname $blogid{
