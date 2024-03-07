@@ -2,14 +2,14 @@
 
 ## Changing The Site URL
 
-On the `Settings -> General` screen in a single site installation of WordPress, there are two fields named "WordPress Address (URL)" and "Site Address (URL)". They are important settings, since they control where WordPress is located. These settings control the display of the URL in the admin section of your page, as well as the front end, and are used throughout the WordPress code.
+On the `Settings -> General` screen in a single site installation of WordPress, there are two fields named "WordPress Address (URL)" and "Site Address (URL)". They are important settings since they control where WordPress is located. These settings control the display of the URL in the admin section of your page, as well as the front end, and are used throughout the WordPress code.
 
 - The "Site Address (URL)" setting is the address you want people to type in their browser to reach your WordPress blog.
 - The "WordPress Address (URL)" setting is the address where your WordPress core files reside.
 
 **Note:** Both settings should include the https:// part and should not have a slash `/` at the end.
 
-Every once in a while, somebody finds a need to manually change (or fix) these settings. Usually this happens when they change one or both and discover that their site no longer works properly. This can leave the user with no easily discoverable way to correct the problem. This article tells you how to change these settings directly.
+Every once in a while, somebody finds a need to manually change (or fix) these settings. Usually, this happens when they change one or both and discover that their site no longer works properly. This can leave the user with no easily discoverable way to correct the problem. This article tells you how to change these settings directly.
 
 Additional information is presented here for the case where you are moving WordPress from one site to another, as this will also require changing the site URL. You should not attempt to use this additional information if you're only attempting to correct a "broken" site.
 
@@ -41,7 +41,7 @@ If you have access to the site via FTP, then this method will help you quickly g
 update_option( 'siteurl', 'https://example.com' );
 update_option( 'home', 'https://example.com' );
 ``` 
-Use your own URL instead of `example.com`, obviously.
+Obviously, use your own URL instead of `example.com`.
 
 3. Upload the file back to your site, in the same location. FileZilla offers a handy "edit file" function to do all of the above rapidly; if you can use that, do so.
 4. Load the login or admin page a couple of times. The site should come back up.
@@ -56,7 +56,7 @@ update_option( 'siteurl', 'https://example.com' );
 update_option( 'home', 'https://example.com' );
 ```
 
-Upload this file to your theme directory. Remove the lines or the remove the file after the site is up and running again.
+Upload this file to your theme directory. Remove the lines or remove the file after the site is up and running again.
 
 #### LAN-based site to externally accessible site
 
@@ -64,7 +64,7 @@ Here are some additional details that step you through transferring a LAN-based 
 
 Two important keys are router/firewall modifications and the "wait 10+ minutes" after making the changes at the end.
 
-1. Using ssh to log into your server (nano is a server preinstalled text editor):
+1. Using SSH to log into your server (nano is a server preinstalled text editor):
 
 `$ nano /var/www/books/wp-content/themes/twentyeleven/functions.php`
 
@@ -174,7 +174,7 @@ UPDATE `newprefix_usermeta` SET `meta_key` = REPLACE( `meta_key` , 'oldprefix_',
 
 #### Changing Template Files
 
-In your WordPress Theme, open each template file and search for any manually entered references to your old domain name and replace it with the new one. Look for specific hand coded links you may have entered on the various template files such as the `sidebar.php` and `footer.php`. WordPress uses a template tag called `bloginfo()` to automatically generate your site address from information entered in your Administration > Settings > General panel. The tag in your template files will not have to be modified. 
+In your WordPress Theme, open each template file and search for any manually entered references to your old domain name and replace it with the new one. Look for specific hand-coded links you may have entered on the various template files such as the `sidebar.php` and `footer.php`. WordPress uses a template tag called `bloginfo()` to automatically generate your site address from information entered in your Administration > Settings > General panel. The tag in your template files will not have to be modified. 
 
 #### Changing the Config file
 
@@ -218,11 +218,11 @@ If you make a mistake, you can [Restore Your Database](https://developer.wordpre
 There are other things you may wish to change in order to correct URLs when moving sites.
 
 1. Images link: image links are stored in "post_content" in the `wp_posts` table. You can use the similar code above to update image links.
-2. wp_options: Besides the "siteurl" and "home" items mentioned above, there are other option_value which also need revision, such as "upload path", and some plugin items (depends on what you've installed, such as widgets, stats, DMSGuestbook, sitemap, etc.)
+2. wp_options: Besides the "siteurl" and "home" items mentioned above, there are other option_value that also need revision, such as "upload path", and some plugin items (depends on what you've installed, such as widgets, stats, DMSGuestbook, sitemap, etc.)
 3. To fix widgets that contain outdated URL's, you may edit them in Dashboard / Appearance / Widgets.
 4. Do a FULL database search for any items left. **MAKE SURE** you know what you are changing and go through each item for possible improper replacement.
 5. If you a running a network / have multiple sites, you will need to replace instances of the URL in the database. They are stored in many tables, including each one of the sites (blogs). Be careful in what you replace and be sure you know the meaning of the field before changing it. See the Important GUID note below for an example of what not to change.
-6. **Note:** If you find your old url in the database options table under `dashboard_incoming_links`, you can ignore or delete that option. It's unused since WP 3.8.
+6. **Note:** If you find your old URL in the database options table under `dashboard_incoming_links`, you can ignore or delete that option. It's unused since WP 3.8.
 
 #### Important GUID Note
 
@@ -337,7 +337,7 @@ ln -s /path/to/new /path/to/old
 ```
 and then follow the steps above as normal. Afterwards, delete the symlink if you want.
 
-2. If you forget to change the WordPress Address and Blog Address, you will be unable to change it using the wordpress interface. However, you can fix it if you have access to the database. Go to the database of your site and find the wp_options table. This table stores all the options that you can set in the interface. The WordPress Address and Blog Address are stored as `siteurl` and `home` (the option_name field). All you have to do is change the option_value field to the correct URL for the records with `option_name='siteurl‘` or `option_name='home‘`.
+2. If you forget to change the WordPress Address and Blog Address, you will be unable to change it using the WordPress interface. However, you can fix it if you have access to the database. Go to the database of your site and find the wp_options table. This table stores all the options that you can set in the interface. The WordPress Address and Blog Address are stored as `siteurl` and `home` (the option_name field). All you have to do is change the option_value field to the correct URL for the records with `option_name='siteurl‘` or `option_name='home‘`.
 
 Note: Sometimes, the WordPress Address and Blog Address are stored in [WordPress Transients](https://developer.wordpress.org/apis/handbook/transients/). Search and replace scripts can have trouble modifying those to the new address and some plugins might therefore refer to the old address because of them. Transients are temporary (cached) values stored in the wp_options database table that can be recreated on-demand when removed. It's therefore safe to delete them from the migrated database copy and let them be recreated. This database query (again, have a backup!) clears all transients:
 
@@ -371,7 +371,7 @@ You're done. Test your site to make sure that it works right. If the change invo
 ## Managing Your Old Site
 
 ### Shutting It Down
-1. Download a copy of the main wordpress files from your OLD site to your hard drive and [edit wp-config.php](https://developer.wordpress.org/advanced-administration/wordpress/wp-config/) to suit the new server.
+1. Download a copy of the main WordPress files from your OLD site to your hard drive and [edit wp-config.php](https://developer.wordpress.org/advanced-administration/wordpress/wp-config/) to suit the new server.
 2. Go back to your OLD site and go to [Administration](https://wordpress.org/documentation/article/administration-screens/) > [Settings](https://wordpress.org/documentation/article/administration-screens/#settings-configuration-settings) > [General](https://wordpress.org/documentation/article/settings-general-screen/) screen and change the URL (both of them) to that of your new site.
 3. Login on your server, go to phpMyAdmin, export as file, and save your database (but keep the old one just in case). Now, upload this new database and the copy of the wordpress core files with the edited wp-config.php to your new server. That's it!
 
@@ -397,15 +397,15 @@ _Part B – Restoring Your Old Site_
 Another procedure for making copies of posts, comments, pages, categories and custom field (post status, data, permalinks, ping status, etc.) easy to follow:
 
 1. Install a new WordPress site
-2. Go on old site Admin panel. Here, in Manage > Export select "all" in menu Restrict Author.
+2. Go to the old site Admin panel. Here, in Manage > Export select "all" in the menu Restrict Author.
 3. Click on Download Export File
-4. In new site go on Manage > Import, choose WordPress item.
-5. In the page that will be shown, select the file just exported. Click on Upload file and Import
-6. It will appear a page. In Assign Authors, assign the author to users that already exist or create new ones.
+4. In the new site go to Manage > Import, and choose WordPress item.
+5. On the page that will be shown, select the file just exported. Click on Upload file and Import
+6. It will appear on a page. In Assign Authors, assign the author to users that already exist or create new ones.
 7. Click on Submit
 8. At the end, click on Have fun
 
-_Note: using this method, if there are some articles in the new site (like Hello World, Info Page, etc.), these will not be erased. Articles are only added. Using the former procedure, the articles in new site will be deleted._
+_Note: using this method, if there are some articles in the new site (like Hello World, Info Page, etc.), these will not be erased. Articles are only added. Using the former procedure, the articles in the new site will be deleted._
 
 ## Moving WordPress Multisite
 
@@ -415,7 +415,7 @@ If, instead, you are changing domains, then the best way to move Multisite is to
 
 If you're moving Multisite from one folder to another, you will need to make sure you edit the `wp_blogs` entries to change the folder name correctly. You should manually review both `wp_site` and `wp_blogs` regardless, to ensure all sites were changed correctly.
 
-Also, manually review all the wp_x_options tables and look for three fields and edit them as needed:
+Also, manually review all the wp_x_options tables look for three fields, and edit them as needed:
 
 - home
 - siteurl
@@ -446,7 +446,7 @@ This tutorial assumes that you are hosting WordPress on a server using cPanel. I
 Generate a full site backup in cPanel. It might also help to copy all the files on the server via FTP, so that you can easily access the files for plugins and themes, which you'll need in a later step.
 
 #### Export from your existing WordPress installs
-In each of your existing WordPress installations, go Tools > Export in WordPress. Download the WXR files that contain all your posts and pages for each site. See the instructions on the [Tools Export Screen](https://wordpress.org/documentation/article/tools-export-screen/).
+In each of your existing WordPress installations, go to Tools > Export in WordPress. Download the WXR files that contain all your posts and pages for each site. See the instructions on the [Tools Export Screen](https://wordpress.org/documentation/article/tools-export-screen/).
 
 Make sure that your export file actually has all the posts and pages. You can verify this by looking at the last entry of the exported file using a text editor. The last entry should be the most recent post.
 
@@ -463,14 +463,14 @@ Install WordPress. Follow the instructions for [Installing WordPress](https://de
 Activate multi-site in your WordPress install. This involves editing `wp-config.php` a couple of times. You need to use the subdomain, not the subdirectory, option. See the instructions on how to [Create A Network](https://developer.wordpress.org/advanced-administration/multisite/create-network/).
 
 #### Create blogs for each site you want to import
-Create blogs for each of the sites you want to host at separate domains. For example, `importedblogdotorg.mydomain.com`.
+Create blogs for each of the sites you want to host in separate domains. For example, `importedblogdotorg.mydomain.com`.
 
 Note: choose the name carefully, because changing it causes admin redirection issues. This is particularly important if you are migrating a site within the same hosting account.
 
 #### Import WXR files for each blog
 Go to the backend of each blog, and import the exported WXR file for each blog. Map the authors to the proper users, or create new ones. Be sure to check the box that will pull in photos and other attachments. See the instructions on Tools Import SubPanel.
 
-**Note:** if you choose to import images from the source site into the target site, make sure they have been uploaded into the right place and are displayed correctly in the respective post or page.
+**Note:** If you choose to import images from the source site into the target site, make sure they have been uploaded into the right place and are displayed correctly in the respective post or page.
 
 #### Edit WordPress configuration settings for each site
 
@@ -479,7 +479,7 @@ Edit the configuration settings, widget, etc. for each site. By the end of this 
 #### Limitations of PHP configuration
 You may run into trouble with the PHP configuration on your host. There are two potential problems. One is that PHP's `max_upload_size` will be too small for the WXR file. The other problem is that the PHP memory limit might be too small for importing all the posts.
 
-There are a couple ways to solve it. One is to ask your hosting provider to up the limits, even temporarily. The other is to put a php.ini file in your /wp-admin/ and /wp-includes directories that ups the limits for you (php.ini files are not recursive, so it has to be in those directories). Something like a 10 MB upload limit and a 128 MB memory limit should work, but check with your hosting provider first so that you don't violate the terms of your agreement.
+There are a couple of ways to solve it. One is to ask your hosting provider to up the limits, even temporarily. The other is to put a php.ini file in your /wp-admin/ and /wp-includes directories that ups the limits for you (php.ini files are not recursive, so it has to be in those directories). Something like a 10 MB upload limit and a 128 MB memory limit should work, but check with your hosting provider first so that you don't violate the terms of your agreement.
 
 Search the [WordPress forum support](https://wordpress.org/support/forums/) for help with PHP configuration problems.
 
