@@ -668,7 +668,7 @@ Reference: [Disabling Auto Updates in WordPress 3.7](https://make.wordpress.org/
 
 ### Cleanup Image Edits {#cleanup-image-edits}
 
-By default, WordPress creates a new set of images every time you edit an image and when you restore the original, it leaves all the edits on the server. Defining IMAGE_EDIT_OVERWRITE as true changes this behaviour. Only one set of image edits are ever created and when you restore the original, the edits are removed from the server.
+By default, WordPress creates a new set of images every time you edit an image and when you restore the original, it leaves all the edits on the server. Defining IMAGE_EDIT_OVERWRITE as true changes this behavior. Only one set of image edits are ever created and when you restore the original, the edits are removed from the server.
 
 ```
 define( 'IMAGE_EDIT_OVERWRITE', true );
