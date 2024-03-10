@@ -181,16 +181,79 @@ server {
 
 This is more up-to-date example for Nginx: https://www.nginx.com/resources/wiki/start/topics/recipes/wordpress/
 
-### WordPress Multisite Subdirectory rules
+### WordPress Multisite
 
-For multisite subdirectory installations, here is the `global/wordpress.conf` file:
+For multisite installations, use one of the below sections for the `global/wordpress.conf` file, depending on the version of WordPress that was in use when multisite was *activated*, as well as the domain/subdirectory configuration.
+
+#### WordPress 3.5 and up
+
+If you activated Multisite on WordPress 3.5 or later, use one of these.
+
+##### WordPress 3.5 and up Subdirectory Examples
 
 ```
-# WordPress multisite subdirectory rules.
-# Designed to be included in any server {} block.
+# WordPress multisite subdirectory config file for WP 3.5 and up.
+server {
+    server_name example.com ;
+
+    root /var/www/example.com/htdocs;
+    index index.php;
+
+    if (!-e $request_filename) {
+        rewrite /wp-admin$ $scheme://$host$request_uri/ permanent;
+        rewrite ^(/[^/]+)?(/wp-.*) $2 last;
+        rewrite ^(/[^/]+)?(/.*\.php) $2 last;
+    }
+
+    location / {
+        try_files $uri $uri/ /index.php?$args ;
+    }
+
+    location ~ \.php$ {
+        try_files $uri =404;
+        include fastcgi_params;
+        fastcgi_pass php;
+    }
+
+    #add some rules for static content expiry-headers here
+}
+```
+
+##### WordPress 3.5 and up Subdomains Examples
+
+```
+# WordPress multisite subdomain config file for WP 3.5 and up.
+server {
+    server_name example.com *.example.com ;
+
+    root /var/www/example.com/htdocs;
+    index index.php;
+
+    location / {
+        try_files $uri $uri/ /index.php?$args ;
+    }
+
+    location ~ \.php$ {
+        try_files $uri =404;
+        include fastcgi_params;
+        fastcgi_pass php;
+    }
+
+    #add some rules for static content expiry-headers here
+}
+```
+
+#### WordPress 3.4 and below
+
+If you originally activated Multisite with WordPress with 3.4 or older, you need to use one of these:
+
+##### WordPress <=3.4 Subdirectory Examples
+
+```
+# WordPress multisite subdirectory config file for WP 3.4 and below.
 
 map $uri $blogname{
-    ~^(?P/[^/]+/)files/(.*)       $blogpath ;
+    ~^(?P<blogpath>/[^/]+/)files/(.*)       $blogpath ;
 }
 
 map $blogname $blogid{
@@ -240,9 +303,10 @@ server {
 
 NGINX provides 2 special directive: X-Accel-Redirect and map. Using these 2 directives, one can eliminate performance hit for static-file serving on WordPress multisite network.
 
-### WordPress Multisite subdomains rules
+##### WordPress <=3.4 Subdomains Examples
 
 ```
+# WordPress multisite subdomain config file for WP 3.4 and below.
 map $http_host $blogid {
     default       -999;
 
@@ -547,9 +611,9 @@ location ~ /purge(/.*) {
 
 If you get an ‘unknown directive “fastcgi_cache_purge”‘ error check that your Nginx installation has fastcgi_cache_purge module.
 
-## Better Performance for Static Files in Multisite
+## Better Performance for Static Files in Multisite (WP <= 3.4)
 
-By default, on a Multisite setup, a static file request brings php into picture i.e. `ms-files.php` file. You can get much better performance using Nginx `Map{..}` directive.
+By default, on multisite networks activated prior to 3.5, a static file request brings php into picture i.e. `ms-files.php` file. You can get much better performance using Nginx `Map{..}` directive.
 
 In Nginx config for your site, above `server{..}` block, add a section as follows:
 
