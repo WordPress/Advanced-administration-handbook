@@ -362,25 +362,29 @@ Read about securing file permissions and ownership. In general, avoid allowing _
 
 If the attacker tries to deface your site or add malware, you can also detect these changes by using a web-based integrity monitor solution. This comes in many forms today, use your favorite search engine and look for Web Malware Detection and Remediation and you'll likely get a long list of service providers.
 
-### Resources {#resources}
+### Official WordPress Resources {#resources}
 
-* [How to Improve WordPress Security (Infographic)](https://yourescapefrom9to5.com/wordpress-security-infographic)
-* [Security Plugins](https://wordpress.org/plugins/tags/security)
-* [WordPress Security Cutting Through the BS](https://blog.sucuri.net/2012/08/wordpress-security-cutting-through-the-bs.html)
-* [e-Book: Locking Down WordPress](https://build.codepoet.com/2012/07/10/locking-down-wordpress/)
-* [wpsecure.net has a few guides on how to lock down WordPress.](https://wpsecure.net/basics/)
-* [A Beginners Guide to Hardening WordPress](https://makeawebsitehub.com/wordpress-security/)
-* [Brad Williams: Lock it Up (Video)](https://wordpress.tv/2010/01/23/brad-williams-security-boston10/)
-* [21 Ways to Secure Your WordPress Site](https://hostingfacts.com/how-to-secure-wordpress/)
-* [Official docs on how to password protect directories with an .htaccess file](https://httpd.apache.org/docs/2.2/howto/auth.html)
-* [Simple tutorial on how to password protect the WordPress admin area and fix the 404 error](https://www.wpbeginner.com/wp-tutorials/how-to-password-protect-your-wordpress-admin-wp-admin-directory/)
+* [WordPress Security Whitepaper](https://wordpress.org/about/security/)
+* [Brute Force Attacks](https://developer.wordpress.org/advanced-administration/security/brute-force/)
+* [Security FAQ](https://make.wordpress.org/core/handbook/testing/reporting-security-vulnerabilities/)
+* [FAQ – My site was hacked](https://wordpress.org/documentation/article/faq-my-site-was-hacked/)
 
 ### See Also {#see-also}
 
-* [Security FAQ](https://make.wordpress.org/core/handbook/testing/reporting-security-vulnerabilities/)
-* [FAQ – My site was hacked](https://wordpress.org/documentation/article/faq-my-site-was-hacked/)
-* [Brute Force Attacks](https://developer.wordpress.org/advanced-administration/security/brute-force/)
-* [WordPress Security Whitepaper](https://wordpress.org/about/security/)
+* [Open Source Security Explained](https://snyk.io/series/open-source-security/) (Snyk)
+* [Is WordPress Safe?](https://patchstack.com/articles/is-wordpress-safe/) (Patchstack)
+* [Authentication and Authorization — Official documentation for Apache HTTP server 2.2](https://httpd.apache.org/docs/current/howto/auth.html)
+* [Security Controls](https://docs.nginx.com/nginx/admin-guide/security-controls/) and [Advanced Security documentation for NGINX](https://docs.nginx.com/nginx-management-suite/acm/how-to/policies/advanced-security/)
+* Gridpane's [WordPress Security Knowledgebase](https://gridpane.com/knowledgebase/security/) and [WordPress Security Step-by-Step](https://gridpane.com/knowledgebase/security-strategies-and-tools/)
+* [How WordPress Uses Authentication Cookies & Sessions: A Technical Deep-Dive](https://snicco.io/blog/how-wordpress-uses-authentication-cookies-and-sessions) (Snicco)
+* [How WordPress Uses Salts and Why You Should Not Rotate Them: A Technical Deep-Dive](https://snicco.io/blog/wordpress-salts) (Snicco)
+* [Session Management and Security](https://github.com/snicco/fortress/blob/beta/docs/modules/session/session-managment-and-security.md#session-management-and-security) (Snicco)
+* [Securing WordPress Information Security Guideline](https://cio.ubc.ca/information-security/policy-standards-and-resources/securing-wordpress) (The University of British Columbia’s OCIO)
+* [Security, From the Basics to Enterprise with Calvin Alkan, Kathy Zant, and Carl Alexander](https://dothewoo.io/security-from-the-basics-to-enterprise-with-calvin-alkan/) (Video)
+* [WordPress Security Cutting Through the BS](https://blog.sucuri.net/2012/08/wordpress-security-cutting-through-the-bs.html)
+* [e-Book: Locking Down WordPress](https://newcodepoet.files.wordpress.com/2012/07/lockingdownwordpress1-1.pdf)
+* [Brad Williams: Lock it Up (Video)](https://wordpress.tv/2010/01/23/brad-williams-security-boston10/)
+* [Security Plugins](https://wordpress.org/plugins/tags/security)
 
 ## Changelog
 
