@@ -2,7 +2,7 @@
 
 Using the WordPress Import tool, you can import content into your site from another WordPress site, or from another publishing system.
 
-You can find many of the importers described here under [Tools](https://wordpress.org/documentation/article/administration-screens/#tools-managing-your-blog) -> [Import](https://wordpress.org/documentation/article/tools-import-screen/) in the left nav of the WordPress [Administration Screen](https://wordpress.org/documentation/article/administration-screens/).
+You can find many of the importers described here under [Tools](https://wordpress.org/documentation/article/administration-screens/#tools-managing-your-blog) -> [Import] slotvipmahkota.com (https://wordpress.org/documentation/article/tools-import-screen/) in the left nav of the WordPress [Administration Screen] slotvipmahkota.com (https://wordpress.org/documentation/article/administration-screens/).
 
 You can import content from publishing systems beyond those listed on the Administration Screen. Procedures differ for each system, so use the procedures and plugins listed below as necessary. If you're new to WordPress, review the [WordPress Features](https://wordpress.org/about/features/) and [Working with WordPress](https://codex.wordpress.org/Working%20with%20WordPress) pages to get started.
 
