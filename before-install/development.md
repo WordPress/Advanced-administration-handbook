@@ -4,15 +4,19 @@ Having a development instance of WordPress is a good way to update, develop and 
 
 ## Installing WordPress on your own computer
 
-Use these instructions for setting up a local server environment for testing and development.
+Setting up a local server environment is fundamental for testing and developing WordPress. This list is not exhaustive, but here are several local server options to choose from:
 
-Installing WordPress locally is usually meant for the purpose of development. Those interested in development should follow the instructions below and download WordPress locally.
-- [Local](https://localwp.com/) – Free, one-click WordPress installer.
-- [Lando](https://docs.lando.dev/wordpress/) – Free plugin to install WordPress locally.
-- [AMPPS](https://ampps.com/downloads/) – Free WAMP/MAMP/LAMP stack, with inbuilt Softaculous Installer. Can 1 click install and upgrade WordPress and others as well.
-- [Installing WordPress Locally on Your Mac With MAMP](https://codex.wordpress.org/Installing_WordPress_Locally_on_Your_Mac_With_MAMP)
-- [User:Beltranrubo/BitNami](https://codex.wordpress.org/User:Beltranrubo/BitNami) Free all-in-one installers for OS X, Windows and Linux. There are also available installers for WordPress Multisite [User:Beltranrubo/BitNami_Multisite](https://codex.wordpress.org/User:Beltranrubo/BitNami_Multisite) using different domains or subdomains.
-- [Instant WordPress](https://instantwp.com/) is a free, standalone, portable WordPress development environment for Windows that will run from a USB key.
+- [Local](https://localwp.com/) (Mac, Windows, Linux)
+- [Lando](https://docs.lando.dev/wordpress/) (Mac, Windows, Linux)
+- [AMPPS](https://ampps.com/downloads/) (Mac, Windows, Linux)
+- [MAMP](https://www.mamp.info/) (Mac & Windows)
+- [Bitnami package for WordPress](https://bitnami.com/stack/wordpress) (Mac, Windows, Linux)
+- [Instant WordPress](https://instantwp.com/) (Mac & Windows)
+- [Studio by WordPress.com](https://developer.wordpress.com/studio/) (Mac & Windows)
+- [Docker](https://www.docker.com/) (Mac, Windows, Linux)
+- [XAMPP](https://www.apachefriends.org/) (Mac, Windows, Linux)
+
+It's advisable to research various options before settling on a local server program that best matches your needs. For more information, read the [Setting Up a Development Environment](https://make.wordpress.org/core/handbook/tutorials/installing-a-local-server/) documentation in the Core Handbook, which includes tutorials for getting started with some of the aforementioned options.
 
 ### Software Appliance - Ready-to-use
 
