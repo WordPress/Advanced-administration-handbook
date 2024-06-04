@@ -229,10 +229,9 @@ Note that `wp-config.php` can be stored ONE directory level above the WordPress 
 If you use a server with .htaccess, you can put this in that file (at the very top) to deny access to anyone surfing for it:
 
 ```
-<files wp-config.php>
-order allow,deny
-deny from all
-</files>
+<Files "wp-config.php">
+Require all denied
+</Files>
 ```
 
 ### Disable File Editing {#disable-file-editing}
