@@ -105,7 +105,7 @@ Normally, the URL indicates the display language. Different URL strategies for e
 
 Choosing the most suitable multilingual Plugin for your needs will take some time. See the [WordPress Plugin Directory](https://wordpress.org/plugins/search/multilingual) for a list of multilingual Plugins.
 
-There is not only one way but a way adapted to the content strategy, the data-model, the number of posts and pages, and the behavior/experience expected by visitors. And for WordPress Network (multisite), a good knowledge of server administration is required.
+There is not only one way but a way adapted to the content strategy, the data-model, the number of posts and pages, and the behaviour/experience expected by visitors. And for WordPress Network (multisite), a good knowledge of server administration is required.
 
 In any case, installing a multilingual plugin is a big change for any site. It would be a good idea to first create a test site and verify that everything works correctly between all the required plugins and the theme and only then install.
 
