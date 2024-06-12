@@ -8,6 +8,7 @@ Use these instructions for setting up a local server environment for testing and
 
 Installing WordPress locally is usually meant for the purpose of development. Those interested in development should follow the instructions below and download WordPress locally.
 - [Local](https://localwp.com/) – Free, one-click WordPress installer.
+- [DDEV](https://ddev.readthedocs.io/en/stable/users/quickstart/#wordpress) - Free, open-souce, high-performance development environment for Windows, WSL2, Mac and Linux. Abstracts away all of the difficulty of running a Docker environment. Can seamlessly share local sites over public domains. One comand to launch database editor. Xdebug and other performance profiling tools "just work". 
 - [Lando](https://docs.lando.dev/wordpress/) – Free plugin to install WordPress locally.
 - [AMPPS](https://ampps.com/downloads/) – Free WAMP/MAMP/LAMP stack, with inbuilt Softaculous Installer. Can 1 click install and upgrade WordPress and others as well.
 - [Installing WordPress Locally on Your Mac With MAMP](https://codex.wordpress.org/Installing_WordPress_Locally_on_Your_Mac_With_MAMP)
