@@ -1,6 +1,6 @@
 # Before You Create A Network
 
-This section outlines some requirements to consider before you begin [creating a multisite network](https://wordpress.org/support/article/create-a-network/).
+This section outlines some requirements to consider before you begin [creating a multisite network](https://developer.wordpress.org/advanced-administration/multisite/create-network/).
 
 ## Do you really need a network? {#do-you-really-need-a-network}
 
@@ -31,7 +31,7 @@ Administration managing sites
 
 You can also choose whether or not to allow end users to create new sites on demand. Domain-based on-demand sites are normally only possible using subdomains like `site1.example.com` and `site2.example.com`. Path-based on-demand sites are also possible.
 
-The multisite installation process uses different terminology. A _sub-domain install_ creates a domain-based network, even though you might use separate mapped domains, and not subdomains, for your sites. A _sub-directory install_ creates a path-based network, even though it does not use file system directories. If you want to use a _sub-domain_ install, you must install WordPress in the root of your webpath (i.e. domain.com) however it does _not_ need to be installed in the root (i.e. /public_html/) if you choose to run WordPress from it's own directory.
+The multisite installation process uses different terminology. A _sub-domain install_ creates a domain-based network, even though you might use separate mapped domains, and not subdomains, for your sites. A _sub-directory install_ creates a path-based network, even though it does not use file system directories. If you want to use a _sub-domain_ install, you must install WordPress in the root of your webpath (i.e. domain.com) however it does _not_ need to be installed in the root (i.e. /public_html/) if you choose to run WordPress from its own directory.
 
 After the multisite network installation is complete, WordPress uses the terminology _domain_ and _path_ for each site's domain and path in the Network Admin user interface. A super admin (that is, a multisite network administrator) can edit sites' domain and path settings, although it is unusual to do this to established sites because it changes their URLs.
 
@@ -39,9 +39,9 @@ Plugins can extend the options available and help with administration. Search [P
 
 ## Admin Requirements {#admin-requirements}
 
-To create a multisite network you must be the administrator of a WordPress installation, and you normally need access to the server's file system so that you can edit files and create a directory. For example, you could access the server's file system using [FTP](https://wordpress.org/support/article/glossary#ftp), or using the File Manager in [cPanel](https://wordpress.org/support/article/glossary#cpanel), or in some other way.
+To create a multisite network you must be the administrator of a WordPress installation, and you normally need access to the server's file system so that you can edit files and create a directory. For example, you could access the server's file system using [FTP](https://wordpress.org/documentation/article/glossary#ftp), or using the File Manager in [cPanel](https://wordpress.org/documentation/article/glossary#cpanel), or in some other way.
 
-You do not necessarily need any knowledge of WordPress [development](https://wordpress.org/support/article/glossary#developer), [PHP](https://wordpress.org/support/article/glossary#php), [HTML](https://wordpress.org/support/article/glossary#html), [CSS](/support/article/glossary#css), server administration or system administration, although knowledge of these things might be useful for troubleshooting or for customizing your multisite network after installation.
+You do not necessarily need any knowledge of WordPress [development](https://wordpress.org/documentation/article/glossary#developer), [PHP](https://wordpress.org/documentation/article/glossary#php), [HTML](https://wordpress.org/documentation/article/glossary#html), [CSS](https://wordpress.org/documentation/article/glossary#css), server administration or system administration, although knowledge of these things might be useful for troubleshooting or for customizing your multisite network after installation.
 
 ## Server Requirements {#server-requirements}
 
@@ -49,19 +49,19 @@ When you are planning a network, it can sometimes be helpful to use a developmen
 
 In all cases, you will need to make sure your server can use the more complex .htaccess (or nginx.conf or web.config) rules that Multisite requires.
 
-Multisite requires [mod_rewrite](https://wordpress.org/support/article/glossary#mod_rewrite) to be loaded on the Apache server, support for it in [.htaccess](https://wordpress.org/support/article/glossary#htaccess) files, and Options FollowSymLinks either already enabled or at least not permanently disabled. If you have access to the server configuration, then you could use a Directory section instead of a .htaccess file. Also make sure that your httpd.conf file is set for "AllowOverride" to be "All" or "Options All" for the vhost of the domain. You can ask your webhost for more information on any of this.
+Multisite requires [mod_rewrite](https://wordpress.org/documentation/article/glossary#mod_rewrite) to be loaded on the Apache server, support for it in [.htaccess](https://wordpress.org/documentation/article/glossary#htaccess) files, and Options FollowSymLinks either already enabled or at least not permanently disabled. If you have access to the server configuration, then you could use a Directory section instead of a .htaccess file. Also make sure that your httpd.conf file is set for "AllowOverride" to be "All" or "Options All" for the vhost of the domain. You can ask your webhost for more information on any of this.
 
 Some server requirements depend on the type of multisite network you want to create, as follows.
 
 ### Domain-based {#domain-based}
 
-Also known as 'Subdomain' installs, a Domain-based network uses URLs like `http://subsite.example.com`
+Also known as 'Subdomain' installs, a Domain-based network uses URLs like http://subsite.example.com
 
 A domain-based network maps different domain names to the same directory in the server's file system where WordPress is installed. You can do this in various ways, for example:
 
 * by configuring wildcard subdomains
 * by configuring virtual hosts, specifying the same document root for each
-* by creating addon domains or subdomains in [cPanel](https://wordpress.org/support/article/glossary#cpanel) or in a similar web hosting control panel
+* by creating addon domains or subdomains in [cPanel](https://wordpress.org/documentation/article/glossary#cpanel) or in a similar web hosting control panel
 
 On-demand domain-based sites require the wildcard subdomains method. You can create additional sites manually in the same network using other methods.
 
@@ -75,13 +75,13 @@ External links:
 * [Apache Virtual Host](http://httpd.apache.org/docs/2.0/en/vhosts/) (Apache HTTP Server documentation)
 * [cPanel Domains](https://documentation.cpanel.net/display/74Docs/cPanel+Features+List#DomainsTab) (cPanel documentation)
 
-For some examples of how to configure wildcard subdomains on various systems, see: [Configuring Wildcard Subdomains](https://codex.wordpress.org/Configuring Wildcard Subdomains)
+For some examples of how to configure wildcard subdomains on various systems, see: [Configuring Wildcard Subdomains](https://wordpress.org/documentation/article/configuring-wildcard-subdomains/)
 
 ### Path-based {#path-based}
 
-Also known as 'Subfolder' or 'Subdirectory' installs, a path-based network uses URLs like `http://example.com/subsite`
+Also known as 'Subfolder' or 'Subdirectory' installs, a path-based network uses URLs like http://example.com/subsite
 
-If you are using pretty permalinks in your site already, then a path-based network will work as well, and you do not need any of the other information in this section. That said, be aware that your main site will use the following URL pattern for posts: `http://example.com/blog/[postformat]/`
+If you are using pretty permalinks in your site already, then a path-based network will work as well, and you do not need any of the other information in this section. That said, be aware that your main site will use the following URL pattern for posts: http://example.com/blog/[postformat]/
 
 At this time, you **cannot** remove the blog slug without manual configuration to the network options in a non-obvious place. It's not recommended.
 
@@ -91,11 +91,11 @@ When you install a multisite network you start from an existing WordPress instal
 
 ### Be Aware {#be-aware}
 
-[Giving WordPress its own directory](https://wordpress.org/support/article/giving-wordpress-its-own-directory/) works with Multisite as of 3.5, however you must make the 'own directory' changes before you activate Multisite.
+[Giving WordPress its own directory](https://developer.wordpress.org/advanced-administration/server/wordpress-in-directory/) works with Multisite as of 3.5, however you must make the 'own directory' changes before you activate Multisite.
 
 While it's not recommended to use www in your domain URL, if you chose to do so and plan to use _subdomains_ for multisite, make sure that **both** the site address and the WordPress address are the same. Also keep in mind some hosts will default to showing this sort of URL:
 
-[![](https://i0.wp.com/wordpress.org/support/files/2018/11/no-www.png?fit=474%2C215&ssl=1)](https://wordpress.org/support/files/2018/11/no-www.png)
+[![](https://i0.wp.com/wordpress.org/support/files/2018/11/no-www.png?fit=474%2C215&ssl=1)](https://wordpress.org/documentation/files/2018/11/no-www.png)
 
 For this, and many other reasons, we do not suggest you use www in your domain name whenever possible. If you plan on changing them to `domain.com` or `www.domain.com`, do so _before_ you begin the rest of the setup for multisite, as changing the domain name after the fact is more complicated.
 
@@ -113,10 +113,10 @@ You _cannot choose **Sub-domain** Install_ (for a domain-based network) in the f
 
 (Note that you can create a domain-based network on your local machine for testing purposes by using your hosts file to map some other hostnames to the IP address 127.0.0.1, so that you never have to use the hostname `localhost`.)
 
-You _cannot choose **Sub-directory** Install_ (for a path-based network) if your existing WordPress installation has been set up for more than a month, due to issues with existing permalinks. (This problem will be fixed in a future version. See [Switching network types](https://wordpress.org/support/article/multisite-network-administration/#switching-network-types) for more information.)
+You _cannot choose **Sub-directory** Install_ (for a path-based network) if your existing WordPress installation has been set up for more than a month, due to issues with existing permalinks. (This problem will be fixed in a future version. See [Switching network types](https://developer.wordpress.org/advanced-administration/multisite/administration/#switching-network-types) for more information.)
 
 _See `wp-admin/network.php` for more detail)_
 
 ## Changelog
 
-- 2022-10-21: Copying from [original content](https://wordpress.org/support/article/before-you-create-a-network/).
+- 2022-10-21: Original content from [Before You Create A Network](https://wordpress.org/documentation/article/before-you-create-a-network/).

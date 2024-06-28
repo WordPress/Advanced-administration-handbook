@@ -2,35 +2,35 @@
 
 ## Upgrading WordPress – Extended Instructions
 
-This page contains a more detailed version of [the upgrade instructions](https://wordpress.org/support/article/updating-wordpress/).
+This page contains a more detailed version of [the upgrade instructions](https://wordpress.org/documentation/article/updating-wordpress/).
 
-### Detailed Instructions {#detailed-instructions)}
+### Detailed Instructions {#detailed-instructions}
 
 #### Overview of the Upgrade Process {#overview-of-the-upgrade-process}
 
-1. [Backup your database](https://wordpress.org/support/article/upgrading-wordpress-extended-instructions/#step-1-back-up-your-database).
-2. [Backup ALL your WordPress files](https://wordpress.org/support/article/upgrading-wordpress-extended-instructions/#step-2-back-up-all-your-wordpress-files) in your WordPress directory. Don't forget your [`.htaccess`](https://codex.wordpress.org/Glossary#.htaccess) file.
-3. [Verify the backups](https://wordpress.org/support/article/upgrading-wordpress-extended-instructions/#step-3-verify-the-backups) you created are there and usable. This is essential.
-4. [Deactivate ALL your Plugins](https://wordpress.org/support/article/upgrading-wordpress-extended-instructions/#step-4-deactivate-all-your-plugins).
-5. [Ensure first four steps are completed](https://wordpress.org/support/article/upgrading-wordpress-extended-instructions/#step-5-ensure-first-four-steps-are-completed). Do not attempt the upgrade unless you have completed the first four steps.
-6. [Download and extract the WordPress package](https://wordpress.org/support/article/upgrading-wordpress-extended-instructions/#step-6-download-and-extract-the-wordpress-package) from [https://wordpress.org/download/](https://wordpress.org/download/).
-7. [Delete the old WordPress files](https://wordpress.org/support/article/upgrading-wordpress-extended-instructions/#step-7-delete-the-old-wordpress-files) on your site, but **DO NOT DELETE**  
+1. [Backup your database](https://developer.wordpress.org/advanced-administration/upgrade/upgrading/#step-1-back-up-your-database).
+2. [Backup ALL your WordPress files](https://developer.wordpress.org/advanced-administration/upgrade/upgrading/#step-2-back-up-all-your-wordpress-files) in your WordPress directory. Don't forget your [`.htaccess`](https://wordpress.org/documentation/article/wordpress-glossary/#.htaccess) file.
+3. [Verify the backups](https://developer.wordpress.org/advanced-administration/upgrade/upgrading/#step-3-verify-the-backups) you created are there and usable. This is essential.
+4. [Deactivate ALL your Plugins](https://developer.wordpress.org/advanced-administration/upgrade/upgrading/#step-4-deactivate-all-your-plugins).
+5. [Ensure first four steps are completed](https://developer.wordpress.org/advanced-administration/upgrade/upgrading/#step-5-ensure-first-four-steps-are-completed). Do not attempt the upgrade unless you have completed the first four steps.
+6. [Download and extract the WordPress package](https://developer.wordpress.org/advanced-administration/upgrade/upgrading/#step-6-download-and-extract-the-wordpress-package) from [https://wordpress.org/download/](https://wordpress.org/download/).
+7. [Delete the old WordPress files](https://developer.wordpress.org/advanced-administration/upgrade/upgrading/#step-7-delete-the-old-wordpress-files) on your site, but **DO NOT DELETE**  
 		– `wp-config.php` file;
 		– `wp-content` folder; Special Exception: the `wp-content/cache` and the `wp-content/plugins/widgets` folders should be deleted.
 		– `wp-images` folder;
 		– `.htaccess` file–if you have added custom rules to your `.htaccess`, do not delete it;
 		– `robots.txt` file–if your blog lives in the root of your site (ie. the blog is the site) and you have created such a file, do not delete it.
 
-8. [Upload the new files](https://wordpress.org/support/article/upgrading-wordpress-extended-instructions/#step-8-upload-the-new-files) from your computer's hard drive to the appropriate WordPress folder on your site.
-9. [Run the WordPress upgrade program](https://wordpress.org/support/article/upgrading-wordpress-extended-instructions/#step-9-run-the-wordpress-upgrade-program) and follow the instructions on the screen.
-10. [Update Permalinks and .htaccess](https://wordpress.org/support/article/upgrading-wordpress-extended-instructions/#step-10-update-permalinks-and-htaccess).
-11. [Install updated Plugins and Themes](https://wordpress.org/support/article/upgrading-wordpress-extended-instructions/#step-11-install-updated-plugins-and-themes).
-12. [Reactivate Plugins](https://wordpress.org/support/article/upgrading-wordpress-extended-instructions/#step-12-reactivate-plugins)
-13. [Review what has changed in WordPress](https://wordpress.org/support/article/upgrading-wordpress-extended-instructions/#step-14-review-what-has-changed-in-wordpress).
+8. [Upload the new files](https://developer.wordpress.org/advanced-administration/upgrade/upgrading/#step-8-upload-the-new-files) from your computer's hard drive to the appropriate WordPress folder on your site.
+9. [Run the WordPress upgrade program](https://developer.wordpress.org/advanced-administration/upgrade/upgrading/#step-9-run-the-wordpress-upgrade-program) and follow the instructions on the screen.
+10. [Update Permalinks and .htaccess](https://developer.wordpress.org/advanced-administration/upgrade/upgrading/#step-10-update-permalinks-and-htaccess).
+11. [Install updated Plugins and Themes](https://developer.wordpress.org/advanced-administration/upgrade/upgrading/#step-11-install-updated-plugins-and-themes).
+12. [Reactivate Plugins](https://developer.wordpress.org/advanced-administration/upgrade/upgrading/#step-12-reactivate-plugins)
+13. [Review what has changed in WordPress](https://developer.wordpress.org/advanced-administration/upgrade/upgrading/#step-14-review-what-has-changed-in-wordpress).
 
 That's the overview of the upgrade process. Please continue reading the Detailed Upgrade Instructions.
 
-Remember, if you do encounter problems, re-read the Instructions below to insure you've followed the proper procedures and consult [Troubleshooting: Common Installation Problems](https://wordpress.org/support/article/how-to-install-wordpress/#common-installation-problems).
+Remember, if you do encounter problems, re-read the Instructions below to insure you've followed the proper procedures and consult [Troubleshooting: Common Installation Problems](https://developer.wordpress.org/advanced-administration/before-install/howto-install/#common-installation-problems).
 
 #### Upgrading Across Multiple Versions {#upgrading-across-multiple-versions}
 
@@ -42,15 +42,15 @@ WordPress 3.7 introduced an easy to use one-button updater which will take you d
 
 ##### Step 1: Back up your database {#step-1-back-up-your-database}
 
-Perform a backup of your database. All of your WordPress data, such as Users, Posts, Pages, Links, and Categories, are stored in your [MySQL](https://wordpress.org/support/article/glossary#mysql) [database](https://codex.wordpress.org/Database Description). Please read [Backing Up Your Database](https://wordpress.org/article/backing-up-your-database/) for a detailed explanation of this process.
+Perform a backup of your database. All of your WordPress data, such as Users, Posts, Pages, Links, and Categories, are stored in your [MySQL](https://wordpress.org/documentation/article/glossary#mysql) [database](https://codex.wordpress.org/Database_Description). Please read [Backing Up Your Database](https://wordpress.org/article/backing-up-your-database/) for a detailed explanation of this process.
 
 It is extremely important to back up your database before beginning the upgrade. If, for some reason, you find it necessary to revert back to the ‘old' version of WordPress, you may have to restore your database from these backups.
 
 ##### Step 2: Back up ALL your WordPress files {#step-2-back-up-all-your-wordpress-files}
 
-Back up ALL of your files in your WordPress directory and your [`.htaccess`](https://codex.wordpress.org/Glossary#.htaccess) file. Typically, this process involves using an [FTP program](https://wordpress.org/support/article/ftp-clients/) to download ALL your WordPress files from your host to your local computer.
+Back up ALL of your files in your WordPress directory and your [`.htaccess`](https://wordpress.org/documentation/article/wordpress-glossary/#.htaccess) file. Typically, this process involves using an [FTP program](https://developer.wordpress.org/advanced-administration/upgrade/ftp/) to download ALL your WordPress files from your host to your local computer.
 
-Please read [Backing Up Your WordPress Site](https://wordpress.org/support/article/wordpress-backups/#backing-up-your-wordpress-site) for further explanation.
+Please read [Backing Up Your WordPress Site](https://developer.wordpress.org/advanced-administration/security/backup/#backing-up-your-wordpress-site) for further explanation.
 
 If you have made changes to any core WordPress files, or if you've got customized Plugins or Themes, you will want to have a good backup of those files. It is extremely important to back up your files before beginning the upgrade. If for some reason you find it necessary to revert back to the ‘old' version of WordPress you will need to upload these files.
 
@@ -58,11 +58,11 @@ If you have made changes to any core WordPress files, or if you've got customize
 
 Verify that the backups you created are there and usable. **This is the most important step in the upgrade process!**
 
-The verification process involves making sure you can see the backup files on your local computer (or wherever you've stored them) and that you can navigate into any sub-folders. If the files are in a zip file, make sure you can open the zip file. Also consider opening a _.sql_ file in an [editor](https://wordpress.org/support/article/glossary#text-editor) to see if the tables and data are represented.
+The verification process involves making sure you can see the backup files on your local computer (or wherever you've stored them) and that you can navigate into any sub-folders. If the files are in a zip file, make sure you can open the zip file. Also consider opening a _.sql_ file in an [editor](https://wordpress.org/documentation/article/glossary#text-editor) to see if the tables and data are represented.
 
 ##### Step 4: Deactivate ALL your Plugins {#step-4-deactivate-all-your-plugins}
 
-In your [Administration Screen](https://wordpress.org/support/article/administration-screens/), under the Plugins choice, deactivate any Plugins. Because of the changes to WordPress, some Plugins may conflict with the upgrade process. If you're not able to access the administrative menus you can deactivate all plugins by [resetting the plugins folder](https://wordpress.org/support/article/faq-troubleshooting/#how-to-deactivate-all-plugins-when-not-able-to-access-the-administrative-menus).
+In your [Administration Screen](https://wordpress.org/documentation/article/administration-screens/), under the Plugins choice, deactivate any Plugins. Because of the changes to WordPress, some Plugins may conflict with the upgrade process. If you're not able to access the administrative menus you can deactivate all plugins by [resetting the plugins folder](https://wordpress.org/documentation/article/faq-troubleshooting/#how-to-deactivate-all-plugins-when-not-able-to-access-the-administrative-menus).
 
 ##### Step 5: Ensure first four steps are completed {#step-5-ensure-first-four-steps-are-completed}
 
@@ -75,7 +75,7 @@ The best resource for problems with your upgrade is the [WordPress Support Forum
 Download and unzip the WordPress package from [https://wordpress.org/download/](https://wordpress.org/download/).
 
 * If you will be uploading WordPress to a remote web server, download the WordPress package to your computer with your favorite web browser and unzip the package.
-* If you have [shell](https://wordpress.org/support/article/glossary#shell) access to your web server, and are comfortable using console-based tools, you may wish to download WordPress directly to your [web server](https://wordpress.org/support/article/glossary#web-server). You can do so using `wget` , `lynx` or another console-based web browser, which are valuable if you want to avoid [FTPing](https://codex.wordpress.org/Glossary#FTP). Place the package in a directory parallel to your current wordpress directory (like "uploads," for example). Then, unzip it using: `gunzip -c wordpress-_Version_.tar.gz | tar -xf -` or by using: `tar -xzvf latest.tar.gz`
+* If you have [shell](https://wordpress.org/documentation/article/glossary#shell) access to your web server, and are comfortable using console-based tools, you may wish to download WordPress directly to your [web server](https://wordpress.org/documentation/article/glossary#web-server). You can do so using `wget` , `lynx` or another console-based web browser, which are valuable if you want to avoid [FTPing](https://wordpress.org/documentation/article/wordpress-glossary/#FTP). Place the package in a directory parallel to your current wordpress directory (like "uploads," for example). Then, unzip it using: `gunzip -c wordpress-_Version_.tar.gz | tar -xf -` or by using: `tar -xzvf latest.tar.gz`
 
 The WordPress package will be extracted into a folder called `wordpress`.
 
@@ -102,7 +102,7 @@ The WordPress package will be extracted into a folder called `wordpress`.
 
 **Using FTP to delete files and folders**
 
-The same [FTP client](https://wordpress.org/support/article/ftp-clients/) you use for [uploading](https://wordpress.org/support/article/using-filezilla/) can be used to delete files and folders. If your [FTP client](https://wordpress.org/support/article/ftp-clients/) does not appear to permit you to delete non-empty folders, check the available options for your [FTP client](https://wordpress.org/support/article/ftp-clients/). You'll usually find an option that permits deleting non-empty folders. Deleting non-empty folders is a quick and thorough method cleaning out an old installation of WordPress. It is recommended that once the deleting is done, you switch back to the original setting for safety reasons.
+The same [FTP client](https://developer.wordpress.org/advanced-administration/upgrade/ftp/) you use for [uploading](https://developer.wordpress.org/advanced-administration/upgrade/ftp/filezilla/) can be used to delete files and folders. If your [FTP client](https://developer.wordpress.org/advanced-administration/upgrade/ftp/) does not appear to permit you to delete non-empty folders, check the available options for your [FTP client](https://developer.wordpress.org/advanced-administration/upgrade/ftp/). You'll usually find an option that permits deleting non-empty folders. Deleting non-empty folders is a quick and thorough method cleaning out an old installation of WordPress. It is recommended that once the deleting is done, you switch back to the original setting for safety reasons.
 
 **Using SSH to delete file**
 
@@ -123,7 +123,7 @@ Alternatively, using SSH, you could copy `wp-config.php, .htaccess`, and any con
 
 ##### Step 8: Upload the new files {#step-8-upload-the-new-files}
 
-With the new upgrade on your local computer, and using [FTP](https://wordpress.org/support/article/glossary#ftp), [upload](https://wordpress.org/support/article/using-filezilla/) the new files to your site server just as you did when you first installed WordPress. See [Using FileZilla](https://wordpress.org/support/article/using-filezilla/) and [Uploadi](https://codex.wordpress.org/Uploading_WordPress_to_a_remote_host)[n](https://wordpress.org/support/article/using-filezilla/)[g WordPress to a remote host](https://codex.wordpress.org/Uploading_WordPress_to_a_remote_host) for detailed guidelines in using an FTP Client to upload.
+With the new upgrade on your local computer, and using [FTP](https://wordpress.org/documentation/article/glossary#ftp), [upload](https://developer.wordpress.org/advanced-administration/upgrade/ftp/filezilla/) the new files to your site server just as you did when you first installed WordPress. See [Using FileZilla](https://developer.wordpress.org/advanced-administration/upgrade/ftp/filezilla/) and [Uploadi](https://codex.wordpress.org/Uploading_WordPress_to_a_remote_host)[n](https://developer.wordpress.org/advanced-administration/upgrade/ftp/filezilla/)[g WordPress to a remote host](https://codex.wordpress.org/Uploading_WordPress_to_a_remote_host) for detailed guidelines in using an FTP Client to upload.
 
 **NOTE: If you did not delete the `wp-content` folder, you will need to overwrite some files during the upload.**
 
@@ -141,14 +141,14 @@ Note: Make sure the database user name registered to WordPress has permission to
 
 If you want to run the upgrade script manually:
 
-* If WordPress is installed in the root directory, point your browser to: `http://example.com/wp-admin/upgrade.php`
-* If WordPress is installed in its own subdirectory called `blog`, for example, point your browser to: `http://example.com/blog/wp-admin/upgrade.php`
+* If WordPress is installed in the root directory, point your browser to: http://example.com/wp-admin/upgrade.php
+* If WordPress is installed in its own subdirectory called `blog`, for example, point your browser to: http://example.com/blog/wp-admin/upgrade.php
 
 If you experience difficulties with login after your upgrade, it is worth clearing your browser's cookies.
 
 ##### Step 10: Update Permalinks and .htaccess {#step-10-update-permalinks-and-htaccess}
 
-In your [Administration Screen](https://wordpress.org/support/article/administration-screens/) > [Settings](https://wordpress.org/support/article/administration-screens/#permalinks) > [Permalinks](https://wordpress.org/support/article/settings-permalinks-screen/) screen update your Permalink Structure and, if necessary, place the rules in your [`.htaccess`](https://codex.wordpress.org/Glossary#.htaccess) file. Also see [Using Permalinks](https://wordpress.org/support/article/using-permalinks/) for details regarding Permalinks and the [`.htaccess`](https://codex.wordpress.org/Glossary#.htaccess) file.
+In your [Administration Screen](https://wordpress.org/documentation/article/administration-screens/) > [Settings](https://wordpress.org/documentation/article/administration-screens/#permalinks) > [Permalinks](https://wordpress.org/documentation/article/settings-permalinks-screen/) screen update your Permalink Structure and, if necessary, place the rules in your [`.htaccess`](https://wordpress.org/documentation/article/wordpress-glossary/#.htaccess) file. Also see [Using Permalinks](https://wordpress.org/documentation/article/using-permalinks/) for details regarding Permalinks and the [`.htaccess`](https://wordpress.org/documentation/article/wordpress-glossary/#.htaccess) file.
 
 ##### Step 11: Install updated Plugins and Themes {#step-11-install-updated-plugins-and-themes}
 
@@ -168,11 +168,11 @@ Please review these resources to see what's new in WordPress:
 
 **Scrambled Layout or Errors**
 
-If your blog looks scrambled now or features line errors, an old plugin that doesn't work with the new code may be the culprit. In your WordPress [Administration Screen](https://wordpress.org/support/article/administration-screens), deactivate all plugins that do not come with WordPress by default. Re-activate them one by one.
+If your blog looks scrambled now or features line errors, an old plugin that doesn't work with the new code may be the culprit. In your WordPress [Administration Screen](https://wordpress.org/documentation/article/administration-screens), deactivate all plugins that do not come with WordPress by default. Re-activate them one by one.
 
 **Made Custom Changes/Hacks?**
 
-If you have made changes to other WordPress files ("hacked" WordPress), you are supposed to keep track of your changes. You will have to transfer your edits into the new code. [WordPress Versions](https://codex.wordpress.org/WordPress Versions) lists the files that have changed in each release.
+If you have made changes to other WordPress files ("hacked" WordPress), you are supposed to keep track of your changes. You will have to transfer your edits into the new code. [WordPress Versions](https://codex.wordpress.org/WordPress_Versions) lists the files that have changed in each release.
 
 **Resist Using Old Code**
 
@@ -180,17 +180,17 @@ Upgrading gives you the newest and best code. Using your old code, no matter how
 
 **Can I Go Back to Old Versions**
 
-You can, but it is usually not recommended to rollback (revert) your current version to an older version. That is because newer versions often include security updates and a rollback may put your site at risk. Second, the change between the database structure between versions may cause complications in maintaining your site content, posts, comments, and plugins that are dependent upon the information stored in the database. If you are still intent on this, proceed at your own risk. **Please note, that without a backup of your entire site and your database, made prior to your upgrade attempt, a successful rollback is near impossible.** Delete all WordPress files except for `wp-config`. [Upload](https://wordpress.org/support/article/using-filezilla/) the files from your backup to your server and [restore your database backup](https://wordpress.org/article/restoring-your-database-from-backup/). Remember, you must have good backups for the rollback to work. For older WordPress versions, a rollback might not work.
+You can, but it is usually not recommended to rollback (revert) your current version to an older version. That is because newer versions often include security updates and a rollback may put your site at risk. Second, the change between the database structure between versions may cause complications in maintaining your site content, posts, comments, and plugins that are dependent upon the information stored in the database. If you are still intent on this, proceed at your own risk. **Please note, that without a backup of your entire site and your database, made prior to your upgrade attempt, a successful rollback is near impossible.** Delete all WordPress files except for `wp-config`. [Upload](https://developer.wordpress.org/advanced-administration/upgrade/ftp/filezilla/) the files from your backup to your server and [restore your database backup](https://wordpress.org/article/restoring-your-database-from-backup/). Remember, you must have good backups for the rollback to work. For older WordPress versions, a rollback might not work.
 
 **Get More Help**
 
-If you get any errors following an upgrade, check [Troubleshooting: Common Installation Problems](https://wordpress.org/support/article/how-to-install-wordpress/#common-installation-problems), [Troubleshooting](https://codex.wordpress.org/Troubleshooting), and the [Installation Category of Articles](https://wordpress.org/support/category/installation/). If you can't find an answer, post a clear question on the [WordPress Suppport Forums](https://wordpress.org/support/forums). You will be asked if you have used any old code. You'll be told to change it then, so you may as well change it now 🙂.
+If you get any errors following an upgrade, check [Troubleshooting: Common Installation Problems](https://developer.wordpress.org/advanced-administration/before-install/howto-install/#common-installation-problems), [Troubleshooting](https://codex.wordpress.org/Troubleshooting), and the [Installation Category of Articles](https://wordpress.org/documentation/category/installation/). If you can't find an answer, post a clear question on the [WordPress Suppport Forums](https://wordpress.org/support/forums/). You will be asked if you have used any old code. You'll be told to change it then, so you may as well change it now 🙂.
 
 ## Configuring Automatic Background Updates
 
 ### Update Types {#update-types}
 
-Automatic background updates were introduced in [WordPress 3.7](https://codex.wordpress.org/Version_3.7) in an effort to promote better security, and to streamline the update experience overall. By default, automatic updates of WordPress are enabled on most sites. In special cases, plugins and themes may be automatically updated as well. Translation files are auto-updated by default.
+Automatic background updates were introduced in [WordPress 3.7](https://wordpress.org/documentation/wordpress-version/version-3-7/) in an effort to promote better security, and to streamline the update experience overall. By default, automatic updates of WordPress are enabled on most sites. In special cases, plugins and themes may be automatically updated as well. Translation files are auto-updated by default.
 
 In WordPress, there are four types of automatic background updates:
 
@@ -253,7 +253,7 @@ Starting WordPress 5.6, the default value of `WP_AUTO_UPDATE_CORE` for new WordP
 
 Using filters allows for fine-tuned control of automatic updates.
 
-The best place to put these filters is in a [must-use plugin](https://wordpress.org/support/article/must-use-plugins/).
+The best place to put these filters is in a [must-use plugin](https://developer.wordpress.org/advanced-administration/plugins/mu-plugins/).
 
 Do _not_ add `add_filter()` calls directly in `wp-config.php`. WordPress isn't fully loaded and can cause conflicts with other applications such as WP-CLI.
 
@@ -365,4 +365,4 @@ apply_filters( 'auto_core_update_send_email', true, $type, $core_update, $result
 
 ## Changelog
 
-- 2022-10-25: Copying the [original content](https://wordpress.org/support/article/configuring-automatic-background-updates/) and [original content](https://wordpress.org/support/article/upgrading-wordpress-extended-instructions/)
+- 2022-10-25: Original content from [Configuring Automatic Background Updates](https://wordpress.org/documentation/article/configuring-automatic-background-updates/), and [Upgrading WordPress – Extended Instructions](https://wordpress.org/documentation/article/upgrading-wordpress-extended-instructions/).

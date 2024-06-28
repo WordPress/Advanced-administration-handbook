@@ -4,7 +4,7 @@ If you are installing WordPress on your own web server, follow the one of below 
 
 ## Using phpMyAdmin
 
-If your web server has [phpMyAdmin](https://codex.wordpress.org/Glossary#phpMyAdmin) installed, you may follow these instructions to create your WordPress username and database. If you work on your own computer, on most Linux distributions you can install PhpMyAdmin automatically.
+If your web server has [phpMyAdmin](https://wordpress.org/documentation/article/wordpress-glossary/#phpMyAdmin) installed, you may follow these instructions to create your WordPress username and database. If you work on your own computer, on most Linux distributions you can install PhpMyAdmin automatically.
 
 _**Note:** These instructions are written for phpMyAdmin 4.4; the phpMyAdmin user interface can vary slightly between versions._
 
@@ -18,7 +18,7 @@ phpMyAdmin language encoding drop down
 
 Click the **phpMyAdmin** icon in the upper left to return to the main page, then click the **Users** tab. If a user relating to WordPress does not already exist in the list of users, create one:
 
-[![phpMyAdmin Users Tab selected](https://wordpress.org/support/files/2018/11/users-768x500.jpg)](https://wordpress.org/support/files/2018/11/users-768x500.jpg)
+[![phpMyAdmin Users Tab selected](https://wordpress.org/documentation/files/2018/11/users-768x500.jpg)](https://wordpress.org/documentation/files/2018/11/users-768x500.jpg)
 
 phpMyAdmin Users Tab
 
@@ -50,7 +50,7 @@ Type 'help;' or '\\h' for help. Type '\\c' to clear the buffer.
 mysql> CREATE DATABASE databasename;  
 Query OK, 1 row affected (0.00 sec)  
   
-mysql> GRANT ALL PRIVILEGES ON databasename.\* TO "wordpressusername"@"hostname"  
+mysql> GRANT ALL PRIVILEGES ON databasename.* TO "wordpressusername"@"hostname"
 \-> IDENTIFIED BY "password";  
 Query OK, 0 rows affected (0.00 sec)  
   
@@ -69,7 +69,7 @@ The example shows:
 * _hostname_ will usually be localhost. If you don't know what this value should be, check with your system administrator if you are not the admin for your WordPress host. If you are the system admin, consider using a non-root account to administer your database.
 * _password_ should be a difficult-to-guess password, ideally containing a combination of upper- and lower-case letters, numbers, and symbols. One good way of avoiding the use of a word found in a dictionary is to use the first letter of each word in a phrase that you find easy to remember.
 
-If you need to write these values somewhere, avoid writing them in the system that contains the things protected by them. You need to remember the value used for _databasename_, _wordpressusername_, _hostname_, and _password_. Of course, since they are already in (or will be shortly) your wp-config.php file, there is no need to put them somewhere else, too.
+If you need to write these values somewhere, avoid writing them in the system that contains the things protected by them. You need to remember the value used for _databasename_, _wordpressusername_, _hostname_, and _password_. Of course, since they are already (or will be shortly) in your wp-config.php file, there is no need to put them somewhere else, too.
 
 ## Using Plesk
 
@@ -78,7 +78,7 @@ If your hosting provider supplies the [Plesk](http://www.plesk.com/) hosting con
 1. Log in to Plesk.
 2. Click **Databases** in the Custom Website area of your website on the Websites & Domains page:  
 
-[![Plesk panel highlighting the Custom Website box with the databases button highlighted](https://wordpress.org/support/files/2018/11/plesk-db-768x558.png)](https://wordpress.org/support/files/2018/11/plesk-db-768x558.png)
+[![Plesk panel highlighting the Custom Website box with the databases button highlighted](https://wordpress.org/documentation/files/2018/11/plesk-db-768x558.png)](https://wordpress.org/documentation/files/2018/11/plesk-db-768x558.png)
 
 Plesk custom website databases
 
@@ -86,9 +86,9 @@ Plesk custom website databases
 
 ## Using cPanel
 
-If your hosting provider supplies the [cPanel](https://codex.wordpress.org/Glossary#cPanel) hosting control panel, you may follow these simple instructions to create your WordPress username and database. A more complete set of instructions for using cPanel to create the database and user can be found in [Using cPanel](https://codex.wordpress.org/Using_cPanel).
+If your hosting provider supplies the [cPanel](https://wordpress.org/documentation/article/wordpress-glossary/#cPanel) hosting control panel, you may follow these simple instructions to create your WordPress username and database. A more complete set of instructions for using cPanel to create the database and user can be found in [Using cPanel](https://wordpress.org/documentation/article/using-cpanel/).
 
-1. Log in to your [cPanel](https://codex.wordpress.org/Glossary#cPanel).
+1. Log in to your [cPanel](https://wordpress.org/documentation/article/wordpress-glossary/#cPanel).
 2. Click **MySQL Database Wizard** icon under the Databases section.
 3. In **Step 1. Create a Database** enter the database name and click Next Step.
 4. In **Step 2. Create Database Users** enter the database user name and the password. Make sure to use a strong password. Click Create User.
@@ -105,4 +105,4 @@ In MySQL Management, click on the small words: **Create new database**. Here you
 
 ## Changelog
 
-- 2022-09-11: Copies from [Creating Database for WordPress](https://wordpress.org/support/article/creating-database-for-wordpress/)
+- 2022-09-11: Original content from [Creating Database for WordPress](https://wordpress.org/documentation/article/creating-database-for-wordpress/).

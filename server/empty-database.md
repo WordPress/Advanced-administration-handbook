@@ -2,13 +2,13 @@
 
 Plugins which generate site statistics for you can rapidly create large amounts of data — every visitor causes something to be written to the database. Ordinarily, this is not a problem, but if your database size is limited by your host it could be. Also, if you are moving the database for whatever reason, its size will impact the export and import time. This page will show you how to empty a table, thus resetting its contents and size to zero. This does not stop the statistics plugins from working or otherwise damage your database.
 
-[phpMyAdmin](https://wordpress.org/support/article/phpmyadmin/) is the name of the program used to manipulate your database. A good hosting package will have this included. [Accessing phpMyAdmin](https://wordpress.org/support/article/wordpress-backups/#accessing-phpmyadmin) offers information on accessing phpMyAdmin under various server control panels.
+[phpMyAdmin](https://developer.wordpress.org/advanced-administration/upgrade/phpmyadmin/) is the name of the program used to manipulate your database. A good hosting package will have this included. [Accessing phpMyAdmin](https://developer.wordpress.org/advanced-administration/security/backup/#accessing-phpmyadmin) offers information on accessing phpMyAdmin under various server control panels.
 
 The procedure outlined in this article has been tried and tested using phpMyAdmin versions 2.5.3 and 2.5.7 pl1 running on Unix.
 
 **Note:** When making significant changes like this to your database, you should always create a BACKUP!
 
-See [WordPress Backups](https://wordpress.org/support/article/wordpress-backups/) and [Backing_Up_Your_Database](https://wordpress.org/support/article/backing-up-your-database/) for details.
+See [WordPress Backups](https://developer.wordpress.org/advanced-administration/security/backup/) and [Backing Up Your Database](https://developer.wordpress.org/advanced-administration/security/backup/database/) for details.
 
 ## The Process
 
@@ -24,7 +24,7 @@ See [WordPress Backups](https://wordpress.org/support/article/wordpress-backups/
 
 4. Click “Erase” button of the table you wish to empty. For this example, we will be emptying the “wp_dstats2” table.
 
-**Note:** Your table may well have a different name, check the plugin’s documentation to find out what it is. DO NOT empty a table that is used by the WordPress core. {Please see the list under [Database_Description](https://codex.wordpress.org/Database_Description) for those specific table names.)
+**Note:** Your table may well have a different name, check the plugin’s documentation to find out what it is. DO NOT empty a table that is used by the WordPress core. (Please see the list under [Database_Description](https://codex.wordpress.org/Database_Description) for those specific table names.)
 
 ![Clicking the “Empty” button](https://user-images.githubusercontent.com/90067869/189547374-2088ff00-3c19-420d-86b7-fbcd0df6ed6d.png)
 
@@ -38,4 +38,4 @@ See [WordPress Backups](https://wordpress.org/support/article/wordpress-backups/
 
 ## Changelog
 
-- 2022-09-11: Created from [Emptying a Database Table](https://wordpress.org/support/article/emptying-a-database-table/)
+- 2022-09-11: Original content from [Emptying a Database Table](https://wordpress.org/documentation/article/emptying-a-database-table/).
