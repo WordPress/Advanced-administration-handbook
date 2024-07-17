@@ -22,7 +22,7 @@ That happens when your web browser wants you to know a site is NOT using HTTPS. 
 
 In turn, you don't want browsers suggesting you might be that kind of shady site owner yourself.
 
-WordPress is fully [compatible with HTTPS when an TLS / SSL certificate](https://make.wordpress.org/support/user-manual/web-publishing/https-for-wordpress/) is installed and available for the web server to use. Support for HTTPS is strongly recommended to help maintain the security of both WordPress logins and site visitors.
+WordPress is fully compatible with HTTPS when an TLS / SSL certificate is installed and available for the web server to use. Support for HTTPS is strongly recommended to help maintain the security of both WordPress logins and site visitors.
 
 ## Administration Over HTTPS
 
