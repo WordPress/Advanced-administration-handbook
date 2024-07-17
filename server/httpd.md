@@ -296,7 +296,7 @@ This is very useful for protecting the `wp-login.php` file. You can use this [Ad
 ```
 AuthType Basic
 AuthName "Password Protected"
-AuthUserFile /full/path/to/.htpasswd
+AuthUserFile /full/absolute/path/to/.htpasswd
 Require valid-user
 Satisfy All
 ```
@@ -307,31 +307,30 @@ Satisfy All
 AuthType Digest
 AuthName "Password Protected"
 AuthDigestDomain /wp-login.php https://example.com/wp-login.php
-AuthUserFile /full/path/to/.htpasswd
+AuthUserFile /full/absolute/path/to/.htpasswd
 Require valid-user
 Satisfy All
 ```
 
 #### Require Specific IP
 
-This is a way to only allow certain IP addresses to be allowed access.
+This is a way to only allow access for IP addresses listed. Note usage of RequireAny instead of RequireAll.
 
 ```
-ErrorDocument 401 default
-ErrorDocument 403 default
-
-Order deny,allow
-Deny from all
-Allow from 192.0.2.1 localhost
+<RequireAny>
+  Require ip 192.0.2.123
+  Require ip 2001:0DB8:1111:2222:3333:4444:5555:6666
+</RequireAny>
 ```
 
 #### Protect Sensitive Files
 
-This denies all web access to your wp-config file, error_logs, php.ini, and htaccess/htpasswds.
+This denies all web access to your wp-config file, htaccess/htpasswd and Wordpress debug.log. On installed site, consider adding install.php as well.
 
 ```
-Order deny,allow
-Deny from all
+<FilesMatch "^(wp-config\.php|\.htaccess|\.htpasswd|debug\.log)$">
+  Require all denied
+</FilesMatch>
 ```
 
 #### Require SSL
