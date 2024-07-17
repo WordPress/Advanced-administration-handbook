@@ -61,7 +61,7 @@ _Super Admin Sites_
 
 Lists all sites on this network.  
 - **Edit**: Click this link to go to Edit Site Screen to view/edit Settings of the site and add users.  
-- **Backend**: Switch Administration Screens to the site's one.  
+- **Dashboard**: Switch Administration Screens to the site's one.  
 - **Deactivate / Activate**: Deactivate / Activate the site.  
 - **Archive**: Archive the site (same as Deactivate, effectively)  
 - **Spam**: Mark the site as spam. Makes it unavailable to use for anyone.  
