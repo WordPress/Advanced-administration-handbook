@@ -348,7 +348,7 @@ ErrorDocument 403 https://www.example.com
 
 * [Official Apache HTTP Server Tutorial: .htaccess files](https://httpd.apache.org/docs/trunk/howto/htaccess.html)
 * [Official Htaccess Directive Quick Reference](https://httpd.apache.org/docs/trunk/mod/quickreference.html)
-* [Htaccess Tutorial](https://www.askapache.com/htaccess/
+* [Htaccess Tutorial](https://www.askapache.com/htaccess/)
 * [Google PageSpeed for Developers](https://developers.google.com/speed/docs/insights/rules)
 * [Stupid Htaccess Tricks](https://perishablepress.com/stupid-htaccess-tricks/)
 * [Advanced Mod_Rewrite](https://www.askapache.com/htaccess/crazy-advanced-mod_rewrite-tutorial/)
