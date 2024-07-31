@@ -49,7 +49,7 @@ When you are planning a network, it can sometimes be helpful to use a developmen
 
 In all cases, you will need to make sure your server can use the more complex .htaccess (or nginx.conf or web.config) rules that Multisite requires.
 
-Multisite requires [mod_rewrite](https://wordpress.org/documentation/article/glossary#mod_rewrite) to be loaded on the Apache server, support for it in [.htaccess](https://wordpress.org/documentation/article/glossary#htaccess) files, and Options FollowSymLinks either already enabled or at least not permanently disabled. If you have access to the server configuration, then you could use a Directory section instead of a .htaccess file. Also make sure that your httpd.conf file is set for "AllowOverride" to be "All" or "Options All" for the vhost of the domain. You can ask your webhost for more information on any of this.
+Multisite requires [mod_rewrite](https://wordpress.org/documentation/article/glossary#mod-rewrite) to be loaded on the Apache server, support for it in [.htaccess](https://wordpress.org/documentation/article/glossary#htaccess) files, and Options FollowSymLinks either already enabled or at least not permanently disabled. If you have access to the server configuration, then you could use a Directory section instead of a .htaccess file. Also make sure that your httpd.conf file is set for "AllowOverride" to be "All" or "Options All" for the vhost of the domain. You can ask your webhost for more information on any of this.
 
 Some server requirements depend on the type of multisite network you want to create, as follows.
 
