@@ -21,4 +21,4 @@ This documentation is managed by [@javiercasares](https://profiles.wordpress.org
 ## Changelog
 
 - 2023-01-15: Minor fixes, and reviewed.
-- 2022-08-16: First version.
+- 2022-08-16: First version
