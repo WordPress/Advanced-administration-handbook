@@ -8,7 +8,7 @@ TBD
 
 ## nginx
 
-See [Nginx](nginx.md).
+See [Nginx](https://developer.wordpress.org/advanced-administration/server/web-server/nginx/).
 
 ## Changelog
 
