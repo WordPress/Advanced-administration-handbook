@@ -59,8 +59,7 @@ if( strpos( $_SERVER['HTTP_X_FORWARDED_PROTO'], 'https') !== false )
 
 When you're using a proxy pass redirection, you transmit the request to an host of your networks but don't transmit the headers linked to it. However some headers are needed by wordpress to make it able to do some redirections. In order to transmit them you need to add some lines to your redirection.
 
-For instance, with Nginx you need to have these lines :
-
+For instance, with Nginx you need to have these lines:
 ```
 location / {
 	proxy_pass http://your_host_name:your_port;
@@ -69,13 +68,11 @@ location / {
 	proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
 	proxy_set_header X-Forwarded-Host $server_name;
 	proxy_set_header X-Forwarded-Proto $scheme;
-	
 	proxy_redirect off;
 }
 ```
 
-The variables like $variable are automatically managed by the reverse proxy.
-
+The variables like `$variabl`e are automatically managed by the reverse proxy.
 
 ### Further Information {#further-information}
 
