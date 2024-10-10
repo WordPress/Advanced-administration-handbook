@@ -31,7 +31,7 @@ Check to see if you are still having an issue.
 ### Open the Developer Tools 
 
 * **Chrome**: Type `Cmd-Option-J` (Mac) or `Ctrl-Shift-J` (Windows, Linux, Chrome OS), or navigate to `View -> Developer -> Developer Tools` in the menu.
-* **Firefox**: Type `Cmd-Option-K` (Mad) or `Ctrl-Shift-K` (Windows, Linux, Chrome OS), or navigate to `Web Development -> Web Console` in the menu.
+* **Firefox**: Type `Cmd-Option-K` (Mac) or `Ctrl-Shift-K` (Windows, Linux, Chrome OS), or navigate to `Web Development -> Web Console` in the menu.
 * **Edge**: Follow the instructions for Chrome.
 * **Safari**: First, navigate to `Safari -> Preferences`. Click on the `Advanced` tab, then check `Show Develop Menu in menu bar`. Then, in the new `Develop` menu, navigate to `Show JavaScript Console`.
 * **Opera**: Navigate to `Tools -> Advanced -> Error Console` in the menu.
