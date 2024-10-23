@@ -28,11 +28,9 @@ You can also use the plugin [Change Username](https://wordpress.org/plugins/chan
 
 #### Good Passwords {#good-passwords}
 
-The goal with your password is to make it hard for other people to guess and hard for a brute force attack to succeed. Many [automatic password generators](https://www.google.com/?q=password+generator) are available that can be used to create secure passwords.
+The goal with your password is to make it hard for other people to guess and hard for a brute force attack to succeed. Many automatic password generators are available that can be used to create secure passwords.
 
 WordPress also features a password strength meter which is shown when changing your password in WordPress. Use this when changing your password to ensure its strength is adequate.
-
-You can use the [Force Strong Password](https://wordpress.org/plugins/force-strong-passwords/) plugin to force users to set strong passwords.
 
 Things to avoid when choosing a password:
 
@@ -265,7 +263,7 @@ Change example.com to your domain. If you're using Multisite with mapped domains
 
 #### ModSecurity {#modsecurity}
 
-If you use ModSecurity, you can follow the advice from [Frameloss – Stopping brute force logins against WordPress](https://www.frameloss.org/2011/07/29/stopping-brute-force-logins-against-wordpress/). This requires root level access to your server, and may need the assistance of your webhost.
+If you use ModSecurity, you can follow the advice from [Frameloss – Stopping brute force logins against WordPress](https://web.archive.org/web/20230113232859/https://www.frameloss.org/2011/07/29/stopping-brute-force-logins-against-wordpress/). This requires root level access to your server, and may need the assistance of your webhost.
 
 If you're using ModSecurity 2.7.3, you can add the rules into your .htaccess file instead.
 
