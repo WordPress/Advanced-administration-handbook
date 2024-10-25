@@ -90,6 +90,7 @@ The following [text editors](https://wordpress.org/documentation/article/wordpre
 
 * [BBEdit](https://www.barebones.com/products/bbedit/) (Mac, Free)
 * [Crimson Editor](http://www.crimsoneditor.com/) (Windows, Free)
+* [CodeLobster](https://codelobster.com/) (Mac, Linux, Windows, Free)
 * [EditPad](https://www.editpadpro.com/) (Windows)
 * [EditPlus](https://www.editplus.com/) (Windows)
 * [emacs](https://www.gnu.org/software/emacs/emacs.html) (Mac, Linux, Windows) Open-Source, Free
