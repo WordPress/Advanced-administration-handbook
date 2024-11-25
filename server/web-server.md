@@ -4,7 +4,7 @@ The web server is a piece of software that accepts user web requests and serves 
 
 ## Apache HTTPD
 
-TBD
+See [Apache HTTPD / .htaccess](https://developer.wordpress.org/advanced-administration/server/web-server/httpd/)
 
 ## nginx
 
