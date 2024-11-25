@@ -1,6 +1,6 @@
 # Multisite Network Administration
 
-Once you've [created a Multisite Network](https://developer.wordpress.org/advanced-administration/multisite/create-network/), there are some additional things you might need to know about advanced administration, due to the additional complexity of a Multisite. Even if you're familiar with WordPress, the location and behavior of Multisite Network Administration can be confusing.
+Once you've [created a Multisite Network](https://developer.wordpress.org/advanced-administration/multisite/create-network/), there are some additional things you might need to know about advanced administration, due to the additional complexity of a Multisite. Even if you’re familiar with WordPress, the structure and behavior of Multisite Network Administration might seem confusing at first.
 
 ## User Access & Capabilities {#user-access-capabilities}
 
