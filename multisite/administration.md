@@ -1,10 +1,10 @@
 # Multisite Network Administration
 
-Once you've [created a Multisite Network](https://developer.wordpress.org/advanced-administration/multisite/create-network/), there are some additional things you might need to know about advanced administration, due to the additional complexity of a Multisite. Even if you're familiar with WordPress, the location and behavior of Multisite Network Administration can be confusing.
+Once you've [created a Multisite Network](https://developer.wordpress.org/advanced-administration/multisite/create-network/), there are some additional things you might need to know about advanced administration, due to the additional complexity of a Multisite. Even if you’re familiar with WordPress, the structure and behavior of Multisite Network Administration might seem confusing at first.
 
 ## User Access & Capabilities {#user-access-capabilities}
 
-By design, all users who are added to your network will have _subscriber_ access to **all sites** on your network. To allocate a different default role for users on individual sites, you must use a plugin.
+By default, all users added to your network will have _subscriber_ access to **all sites** of your network. To assign a different default role for users on individual sites, you need to use a plugin.
 
 The capabilities of the site administrator role are also reduced in a WordPress Network. Site admins cannot install new themes or plugins and cannot edit the profiles of users on their site. Only the Network Admin (aka Super Admin) has the ability to perform these tasks in a WordPress network.
 
