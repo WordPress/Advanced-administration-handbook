@@ -15,7 +15,7 @@ Make note of any browsers you are experiencing the error in. You can use this in
 
 ## Step 2: Enable SCRIPT_DEBUG
 
-You need to turn on [script debugging](https://wordpress.org/documentation/article/debugging-in-wordpress#SCRIPT_DEBUG). Open `wp-config.php` and add the following line before "That's all, stop editing! Happy blogging".
+You need to turn on [script debugging](https://developer.wordpress.org/advanced-administration/debug/debug-wordpress/#script_debug). Open `wp-config.php` and add the following line before "That's all, stop editing! Happy blogging".
 
 ```
 define('SCRIPT_DEBUG', true);
