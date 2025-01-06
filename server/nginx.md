@@ -358,8 +358,9 @@ Enabling HTTPS in Nginx is relatively simple.
 server {
     # listens both on IPv4 and IPv6 on 443 and enables HTTPS and HTTP/2 support.
     # HTTP/2 is available in nginx 1.9.5 and above.
-    listen *:443 ssl http2;
-    listen [::]:443 ssl http2;
+    listen *:443 ssl;
+    listen [::]:443 ssl;
+    http2 on;
 
     # indicate locations of SSL key files.
     ssl_certificate /srv/www/ssl/ssl.crt;
