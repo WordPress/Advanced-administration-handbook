@@ -2,7 +2,7 @@
 
 A loopback is when your own server or website tries to connect to it self.
 
-WordPress uses his functionality to trigger scheduled posts, and other scheduled events that plugins or themes may introduce.
+WordPress uses this functionality to trigger scheduled posts, and other scheduled events that plugins or themes may introduce.
 
 They are also used when making changes in the Plugin- or Theme-editor, by connecting back to the website and making sure that the changes made does not break your website.
 
