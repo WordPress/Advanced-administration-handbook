@@ -1,6 +1,6 @@
 # Update Services
 
-Update Services are tools you can use to let other people know you've updated your blog. WordPress automatically notifies popular Update Services that you've updated your blog by sending a [XML-RPC](http://www.xmlrpc.com/) [ping](https://wordpress.org/documentation/article/glossary/#pingback) each time you create or update a post. In turn, Update Services process the ping and updates their proprietary indices with _your_ update. 
+Update Services are tools you can use to let other people know you've updated your blog. WordPress automatically notifies popular Update Services that you've updated your blog by sending a [XML-RPC](https://xmlrpc.com/) [ping](https://wordpress.org/documentation/article/glossary/#pingback) each time you create or update a post. In turn, Update Services process the ping and updates their proprietary indices with _your_ update. 
 
 ## Common Usage
 
