@@ -28,13 +28,13 @@ The cookies lifetime can be adjusted with the `auth_cookie_expiration` hook. An 
 
 ### Non-Version-Specific Data
 
-The actual cookies contain your username, the expiration time and _hashed_ data that ensures you have a valid session. A _hash_ is the result of a specific mathematical formula applied to some data. In case of this cookies, only 4 characters of your hashed password stored in a hash in your cookie. This ensures that it is impossible to retrieve your password from the cookie. It also ensures that any cookie will invalidated whenever your password is changed.
+The actual cookies contain your username, the expiration time and _hashed_ data that ensures you have a valid session. A _hash_ is the result of a specific mathematical formula applied to some data. In case of these cookies, only 4 characters of your hashed password are stored in a hash in your cookie. This ensures that it is impossible to retrieve your password from the cookie. It also ensures that any cookie will invalidated whenever your password is changed.
 
 WordPress uses the two cookies to bypass the password entry portion of `wp-login.php`. If WordPress recognizes that you have valid, non-expired cookies, you go directly to the [WordPress Administration Screen](https://wordpress.org/documentation/article/administration-screens). If you don't have the cookies, or they're expired, or in some other way invalid (like you edited them manually for some reason), WordPress will require you to log in again, in order to obtain new cookies.
 
 ## Commenter's Cookie
 
-When visitors comment on your blog, they get cookies stored on their computer too. This is purely a convenience, so that the visitor won't need to re-type all their information again when they want to leave another comment. Three cookies are set for commenters:
+When visitors comment on your blog, they get cookies stored on their computers too. This is purely a convenience, so that the visitor won't need to re-type all their information again when they want to leave another comment. Three cookies are set for commenters:
 
 - `comment_author_{HASH}`
 - `comment_author_email_{HASH}`
