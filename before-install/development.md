@@ -6,15 +6,17 @@ Having a development instance of WordPress is a good way to update, develop, and
 
 Use these instructions to set up a local server environment for testing and development.
 
-Installing WordPress locally is usually meant for development. Those interested in development should follow the instructions below and download WordPress locally.
-- [Studio by WordPress.com](https://developer.wordpress.com/studio/) - A free, AI_powered, open-source software to manage multiple WordPress sites locally.
-- [Local](https://localwp.com/) – Free, one-click WordPress installer.
-- [DDEV](https://ddev.readthedocs.io/en/stable/users/quickstart/#wordpress) - Free, open-source, high-performance development environment for Windows, WSL2, Mac, and Linux. Abstracts away all of the difficulty of running a Docker environment. Can seamlessly share local sites over public domains. One command to launch a database editor. Xdebug and other performance profiling tools "just work." 
-- [Lando](https://docs.lando.dev/wordpress/) – Free plugin to install WordPress locally.
-- [AMPPS](https://ampps.com/downloads/) – A free WAMP/MAMP/LAMP stack with Softaculous Installer built in. It can 1-click install and upgrade WordPress and others as well.
-- [Installing WordPress Locally on Your Mac With MAMP](https://codex.wordpress.org/Installing_WordPress_Locally_on_Your_Mac_With_MAMP)
-- [User:Beltranrubo/BitNami](https://codex.wordpress.org/User:Beltranrubo/BitNami) Free all-in-one installers for OS X, Windows and Linux. There are also available installers for WordPress Multisite [User:Beltranrubo/BitNami_Multisite](https://codex.wordpress.org/User:Beltranrubo/BitNami_Multisite) using different domains or subdomains.
-- [Instant WordPress](https://instantwp.com/) is a free, standalone, portable WordPress development environment for Windows that will run from a USB key.
+Installing WordPress locally is usually meant for development. Those interested in development can follow the instructions below to download and install WordPress locally.
+- [wp-env](https://developer.wordpress.org/block-editor/reference-guides/packages/packages-env/) - a free, open-source development environment maintained by the WordPress core developer community.
+- [VVV or Varying Vagrant Vagrants](https://varyingvagrantvagrants.org/) - free, open-source local development environment maintained by members of the WordPress community.
+- [XAMPP](https://www.apachefriends.org/) - free and open-source local development environment maintained by Apache Friends
+- [MAMP](https://www.mamp.info/en/mac/) - free local development environment that everything you need to install WordPress locally.
+- [DDEV](https://ddev.readthedocs.io/en/stable/users/quickstart/#wordpress) - free, open-source, development environment. Seamlessly share local sites over public domains, includes a database editor, Xdebug, and other performance profiling tools.
+- [Lando](https://lando.dev/) – free, open-source development environment that offers a [plugin to install WordPress locally](https://docs.lando.dev/plugins/wordpress/).
+- [AMPPS](https://ampps.com/downloads/) – free WAMP/MAMP/LAMP stack with Softaculous Installer built in. It can 1-click install and upgrade WordPress and others as well.
+- [Bitnami package for WordPress](https://bitnami.com/stack/wordpress) and [Bitnami package for WordPress Multisite](https://bitnami.com/stack/wordpress-multisite) - Bitnami packages for WordPress that provide a one-click install solution for WordPress or WordPress Multisite on your local computer or in the cloud.
+- [Instant WordPress](https://instantwp.com/) - free, standalone, portable WordPress development environment for Windows that will run from a USB key.
+- [Studio by WordPress.com](https://developer.wordpress.com/studio/) - free, open-source app to install and manage multiple WordPress sites locally.
 
 ### Software Appliance - Ready-to-use
 
