@@ -17,3 +17,4 @@ You can download phpMyAdmin yourself and install it from the main [phpMyAdmin pr
 ## Changelog
 
 - 2022-09-11: Original content from [phpMyAdmin](https://wordpress.org/documentation/article/phpmyadmin/).
+  
