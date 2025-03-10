@@ -37,4 +37,5 @@ The oEmbed discovery content for "link" and "photo" types is not quite so heavil
 ## Changelog
 
 - 2023-01-25: Review and Update Content. Linked list of whitelisted providers.
-- 2022-09-11: Added content from [oEmbed](https://docs.google.com/document/d/1ni59ohlSHeCH_BwRtxUXzGY1LLWqFiaaGQFcCjh_2rQ/).
+- 2022-09-11: Added content from [oEmbed](https://oembed.com).
+- 2025-03-10: Fixed wrong link in Changelog
