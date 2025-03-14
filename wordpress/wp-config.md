@@ -100,7 +100,7 @@ Set WP_PLUGIN_URL to the full **URI** of this directory (no trailing slash), e.g
 define( 'WP_PLUGIN_URL', 'https://example/blog/wp-content/plugins' );
 ```
 
-If you have compability issues with plugins Set PLUGINDIR to the full **local path** of this directory (no trailing slash), e.g.
+If you have compatibility issues with plugins Set PLUGINDIR to the full **local path** of this directory (no trailing slash), e.g.
 
 ```
 define( 'PLUGINDIR', dirname(__FILE__) . '/blog/wp-content/plugins' );
