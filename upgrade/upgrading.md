@@ -183,7 +183,7 @@ You can, but it is usually not recommended to rollback (revert) your current ver
 
 **Get More Help**
 
-If you get any errors following an upgrade, check [Troubleshooting: Common Installation Problems](https://developer.wordpress.org/advanced-administration/before-install/howto-install/#common-installation-problems), [Troubleshooting](https://codex.wordpress.org/Troubleshooting), and the [Installation Category of Articles](https://wordpress.org/documentation/category/installation/). If you can't find an answer, post a clear question on the [WordPress Suppport Forums](https://wordpress.org/support/forums/). You will be asked if you have used any old code. You'll be told to change it then, so you may as well change it now 🙂.
+If you get any errors following an upgrade, check [Troubleshooting: Common Installation Problems](https://developer.wordpress.org/advanced-administration/before-install/howto-install/#common-installation-problems), [Troubleshooting](https://codex.wordpress.org/Troubleshooting), and the [Installation Category of Articles](https://wordpress.org/documentation/category/installation/). If you can't find an answer, post a clear question on the [WordPress Support Forums](https://wordpress.org/support/forums/). You will be asked if you have used any old code. You'll be told to change it then, so you may as well change it now 🙂.
 
 ## Configuring Automatic Background Updates
 
