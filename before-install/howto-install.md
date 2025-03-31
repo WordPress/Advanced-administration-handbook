@@ -39,7 +39,7 @@ Download and unzip the WordPress package from [wordpress.org/download/](https://
 
     The WordPress package will extract into a folder called wordpress in the same directory that you downloaded latest.tar.gz.
 
-### Step 2: Download and Extract {#detailed-step-2}
+### Step 2: Create a database for WordPress {#detailed-step-2}
 
 If you are using a [hosting provider](https://wordpress.org/documentation/article/glossary/#hosting-provider), you may already have a WordPress database set up for you, or there may be an automated setup solution to do so. Check your hosting provider's support pages or your control panel for clues about whether or not you'll need to create one manually.
 
