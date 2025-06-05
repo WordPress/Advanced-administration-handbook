@@ -4,7 +4,25 @@
 
 This page contains a more detailed version of [the upgrade instructions](https://wordpress.org/documentation/article/updating-wordpress/).
 
-### Detailed Instructions {#detailed-instructions}
+### Back up WordPress {#backup-up-wordpress}
+
+Before you get started, it’s a good idea to back up your website. This means if there are any issues you can restore your website. Complete instructions to make a backup can be found in the WordPress Backup.
+
+### One-click Upgrade {#one-click-upgrade}
+
+WordPress lets you update with the click of a button.  You can launch the update by clicking the link in the new version banner (if it’s there) or by going to the Dashboard > Updates screen. Once you are on the “Update WordPress” page, click the button “Update Now” to start the process off. You shouldn’t need to do anything else and, once it’s finished, you will be up-to-date.
+
+One-click updates work on most servers. If you have any problems, it is probably related to permissions issues on the filesystem.
+
+#### Hosting Services Tools {#hosting-services-tools}
+
+You may have access to WP-Toolkit if your websites are hosted in cPanel (Look for "WordPress Management" in the left menu bar) or Plesk (Look for "WordPress" in the left menu bar). You can perform one-click update of your WordPress websites inside WP-Toolkit. You will also have the ability to configure automatic updates in WP-Toolkit. 
+
+If your websites are hosted in a WP Squared server, you will see a notification and a button to perform one-click update of your WordPress website when a new update is available. Automatic update is enabled by default, and you have the ability to configure whether to enable or disable automatic updates in WP Squared.
+
+_Hosting providers: If your tools are missing here, feel free to create a pull request in Github to add it._
+
+### Manual Upgrade {#manual-upgrade}
 
 #### Overview of the Upgrade Process {#overview-of-the-upgrade-process}
 
@@ -39,129 +57,206 @@ If you plan on upgrading across more than **two** major releases, you should c
 
 WordPress 3.7 introduced an easy to use one-button updater which will take you directly to Current Version. This update step is safe, and it is possible to one-click update from 3.7 to any later version.
 
-##### Step 1: Back up your database {#step-1-back-up-your-database}
+##### Upgrading from WordPress 0.7 - 3.6 (by migration)
 
-Perform a backup of your database. All of your WordPress data, such as Users, Posts, Pages, Links, and Categories, are stored in your [MySQL](https://wordpress.org/documentation/article/glossary#mysql) [database](https://codex.wordpress.org/Database_Description). Please read [Backing Up Your Database](https://wordpress.org/article/backing-up-your-database/) for a detailed explanation of this process.
+Goals:
+- WordPress: upgrade to WordPress 6.2
+- PHP: upgrade to PHP 7.4
+- SQL: upgrade to MySQL 8.0 / MariaDB 10.11
 
-It is extremely important to back up your database before beginning the upgrade. If, for some reason, you find it necessary to revert back to the ‘old' version of WordPress, you may have to restore your database from these backups.
+Losses:
+- Content: none
+- Plugins: all
+- Themes: all
 
-##### Step 2: Back up ALL your WordPress files {#step-2-back-up-all-your-wordpress-files}
+These are the oldest versions of WordPress and the ones that have not been supported for years. In general, have to assume some losses, although not of the contents, but probably of some functionality on themes and plugins.
 
-Back up ALL of your files in your WordPress directory and your [`.htaccess`](https://wordpress.org/documentation/article/wordpress-glossary/#.htaccess) file. Typically, this process involves using an [FTP program](https://developer.wordpress.org/advanced-administration/upgrade/ftp/) to download ALL your WordPress files from your host to your local computer.
+Considering that the goal is to keep the contents and assuming the loss of the rest of the elements, there are some steps.
 
-Please read [Backing Up Your WordPress Site](https://developer.wordpress.org/advanced-administration/security/backup/#backing-up-your-wordpress-site) for further explanation.
+As with any upgrade, the first thing to do is to make a backup copy. The best way to upgrade from WP < 3.6 is to perform a content migration. 
 
-If you have made changes to any core WordPress files, or if you've got customized Plugins or Themes, you will want to have a good backup of those files. It is extremely important to back up your files before beginning the upgrade. If for some reason you find it necessary to revert back to the ‘old' version of WordPress you will need to upload these files.
+1. Create a brand-new WordPress, without the database.
+2. Copy the old WordPress files from the "/wp-content/uploads/" content to the new one.
+3. Create a new database with the old database information. The best way is using "mysqldump".
+4. Configure the wp-config.php with all the new data.
+5. Access the "/wp-admin/" page, and follow the upgrading process.
 
-##### Step 3: Verify the backups {#step-3-verify-the-backups}
+With this way, WordPress will be able to maintain and update the contents in the database and be able to work with these contents in an updated version of WordPress.
 
-Verify that the backups you created are there and usable. **This is the most important step in the upgrade process!**
+A WordPress with the default theme, and all the contents should now be available.
 
-The verification process involves making sure you can see the backup files on your local computer (or wherever you've stored them) and that you can navigate into any sub-folders. If the files are in a zip file, make sure you can open the zip file. Also consider opening a _.sql_ file in an [editor](https://wordpress.org/documentation/article/glossary#text-editor) to see if the tables and data are represented.
+Character Encoding commonly presents technical hiccups when restoring a database. It is possible that backup data is not encoded in UTF-8 and instead may be in an ISO or ASCII "deprecated" format. Make sure that the character encoding is updated correctly upon restoring a database! More information on [converting Character Sets in a WordPress database can be found here](https://codex.wordpress.org/Converting_Database_Character_Sets).
 
-##### Step 4: Deactivate ALL your Plugins {#step-4-deactivate-all-your-plugins}
+##### Upgrading from WordPress 3.7 - 4.0
 
-In your [Administration Screen](https://wordpress.org/documentation/article/administration-screens/), under the Plugins choice, deactivate any Plugins. Because of the changes to WordPress, some Plugins may conflict with the upgrade process. If you're not able to access the administrative menus you can deactivate all plugins by [resetting the plugins folder](https://wordpress.org/documentation/article/faq-troubleshooting/#how-to-deactivate-all-plugins-when-not-able-to-access-the-administrative-menus).
+Goals
+- WordPress: upgrade to WordPress 4.1
+- PHP: upgrade to PHP 5.6.20+
+- SQL: upgrade to MySQL 5.6 / MariaDB 10.0
 
-##### Step 5: Ensure first four steps are completed {#step-5-ensure-first-four-steps-are-completed}
+Losses:
+- Content: none
+- Plugins: probably yes
+- Themes: probably yes
 
-If you have not completed the first four procedures, STOP, and do them! Do not attempt the upgrade unless you have completed the first four steps.
+WordPress Versions <= 4.0 are compatible with PHP versions that are hardly available today. They can range from PHP 5.2 (or even earlier) to PHP 5.5. That is why the main goal will be to go to a version that is still easy to get on many operating systems.
 
-The best resource for problems with your upgrade is the [WordPress Support Forums](https://wordpress.org/support/forums/), and if you have problems, the volunteers at the [WordPress Support Forums](https://wordpress.org/support/forums/) will likely ask if you have completed the first four steps.
+The same will happen with the database. It is very likely that there is a MySQL 5.5 or earlier. Depending on whether want to continue with MySQL or move to MariaDB, choose which way to go and migrate the database to a MySQL 5.6 or MariaDB 10.0.
 
-##### Step 6: Download and extract the WordPress package {#step-6-download-and-extract-the-wordpress-package}
+Note that WP-CLI is not available for PHP versions lower than PHP 5.6.20, so this process still must be done somewhat manually.
 
-Download and unzip the WordPress package from [https://wordpress.org/download/](https://wordpress.org/download/).
+As with any upgrade, the first thing to do is to make a backup copy.
 
-* If you will be uploading WordPress to a remote web server, download the WordPress package to your computer with your favorite web browser and unzip the package.
-* If you have [shell](https://wordpress.org/documentation/article/glossary#shell) access to your web server, and are comfortable using console-based tools, you may wish to download WordPress directly to your [web server](https://wordpress.org/documentation/article/glossary#web-server). You can do so using `wget` , `lynx` or another console-based web browser, which are valuable if you want to avoid [FTPing](https://wordpress.org/documentation/article/wordpress-glossary/#FTP). Place the package in a directory parallel to your current wordpress directory (like "uploads," for example). Then, unzip it using: `gunzip -c wordpress-_Version_.tar.gz | tar -xf -` or by using: `tar -xzvf latest.tar.gz`
+Remove all themes that are not active, leaving only the main theme. If there is a child theme active, please, maintain the child and parent.
 
-The WordPress package will be extracted into a folder called `wordpress`.
+Install and activate the [Twenty Ten](https://wordpress.org/themes/twentyten/) theme and activate it. This theme works in all sites since WordPress 3.7.
 
-##### Step 7: Delete the old WordPress files {#step-7-delete-the-old-wordpress-files}
+In the same way, delete all deactivated plugins (and, therefore, not working).
 
-**Why Delete?** Generally, it is a good idea to delete whatever is possible because the uploading (or upgrading through cPanel) process may not correctly overwrite an existing file and that may cause problems later.
+Deactivate all left active plugins.
 
-**DO NOT DELETE these folders and files:**
+Now, WordPress will have:
+-	Core: any version (between WordPress 3.7 and WordPress 4.0)
+-	Themes: Twenty Ten is active, and the main theme is deactivated.
+-	Plugins: all plugins that should be active are deactivated.
 
-* `wp-config.php` file;
-* `wp-content` folder;
-* `wp-includes/languages/` folder–if you are using a language file, and it is here rather than in `wp-content/languages/`, do not delete this folder (you might want to move your language files to `wp-content/languages/` for easier upgrading in the future);.
-* `.htaccess` file–if you have added custom rules to your `.htaccess`, do not delete it;
-* Custom Content and/or Plugins–if you have any images or other custom content or Plugins inside the `wp-content` folder, do NOT delete them.
+At this point, overwrite the WordPress Core with [WordPress 4.1](https://wordpress.org/wordpress-4.1.zip), available in the [release list](https://wordpress.org/download/releases/). Install WordPress 4.1 major version or, if available and recommended, the latest 4.1.x minor version.
 
-**Delete these Files and Folders:**
+Upgrade the systems up to PHP 5.6.20+ and MySQL 5.6.x or MariaDB 10.0.x. Please, do not install the newest major version.
 
-* `wp-*` (except for those above), `readme.html`, `wp.php`, `xmlrpc.php`, and `license.txt` files; Typically files in your root or wordpress folder. Again, don't delete the `wp-config.php` file. **Note**: some files may not exist in later versions.
-* `wp-admin` folder;
-* `wp-includes` folder;
-* `wp-content/plugins/widgets` folder; You only see this folder if you previously installed the Sidebar Widgets plugin. The Sidebar Widgets code conflicts with the built-in widget ability.
+Access the "/wp-admin/" page, and follow the upgrading process.
 
-**How to Delete?** There are several ways to delete the files from your WordPress site. You can use your FTP Client, or if you have access to SSH you can use that. Some host providers also provide the ability to delete files and folders.
+WordPress will be able to maintain and update the contents in the database and be able to work with these contents. WordPress, with the default theme and all the contents should now be available and working.
 
-**Using FTP to delete files and folders**
+Character Encoding commonly presents technical hiccups when restoring a database. It is possible that backup data is not encoded in UTF-8 and instead may be in an ISO or ASCII "deprecated" format. Make sure that the character encoding is updated correctly upon restoring a database! More information on [converting Character Sets in a WordPress database can be found here](https://codex.wordpress.org/Converting_Database_Character_Sets).
 
-The same [FTP client](https://developer.wordpress.org/advanced-administration/upgrade/ftp/) you use for [uploading](https://developer.wordpress.org/advanced-administration/upgrade/ftp/filezilla/) can be used to delete files and folders. If your [FTP client](https://developer.wordpress.org/advanced-administration/upgrade/ftp/) does not appear to permit you to delete non-empty folders, check the available options for your [FTP client](https://developer.wordpress.org/advanced-administration/upgrade/ftp/). You'll usually find an option that permits deleting non-empty folders. Deleting non-empty folders is a quick and thorough method cleaning out an old installation of WordPress. It is recommended that once the deleting is done, you switch back to the original setting for safety reasons.
+Proceed to the next step, which is upgrade to WordPress 4.9 from WordPress 4.1.
 
-**Using SSH to delete file**
+##### Upgrading from WordPress 4.1 - 4.8
 
-If you have a command-line login (ssh), you can enter the following commands to make backup copies of the files you need to keep and to delete ONLY the wordpress files in your directory (plus .htaccess). If you've customized other files (like `index.php`) not included by the `cp` commands below, copy them as well:
+Goals
+- WordPress: upgrade to WordPress 4.9
+- PHP: upgrade to PHP 7.2
+- SQL: maintain or upgrade to MySQL 5.6 / MariaDB 10.0
 
-```
-$ mkdir backup
-cp wp-config.php .htaccess backup
-cp -R wp-content backup
-rm wp*.php .htaccess license.txt readme.html xmlrpc.php
-rm -rf wp-admin wp-includes
-cp backup/wp-config.php .
-```
+Losses:
+- Content: none
+- Plugins: probably yes
+- Themes: probably yes
 
-After you have finished with the upgrade, you can restore any customizations to your templates or plugins from your backup directory. For example, use `cp backup/index.php .` to restore `index.php`.
+_If you don't have PHP 5.6.20+ configured yet, do it. Chances are that everything will still work normally._
 
-Alternatively, using SSH, you could copy `wp-config.php, .htaccess`, and any content files you've added or altered into the _new_ wordpress directory. Then, rename the old one (to archive it), and move the new one into its place.
+From WordPress 4.1 and PHP 5.6.20+, you can continue with the manual update process, or start using [WP-CLI](https://wp-cli.org/), the tool to run WordPress commands directly via console, something that can easy the process.
 
-##### Step 8: Upload the new files {#step-8-upload-the-new-files}
+As with any upgrade, the first thing to do is to make a backup copy.
 
-With the new upgrade on your local computer, and using [FTP](https://wordpress.org/documentation/article/glossary#ftp), [upload](https://developer.wordpress.org/advanced-administration/upgrade/ftp/filezilla/) the new files to your site server just as you did when you first installed WordPress. See [Using FileZilla](https://developer.wordpress.org/advanced-administration/upgrade/ftp/filezilla/) and [Uploadi](https://codex.wordpress.org/Uploading_WordPress_to_a_remote_host)[n](https://developer.wordpress.org/advanced-administration/upgrade/ftp/filezilla/)[g WordPress to a remote host](https://codex.wordpress.org/Uploading_WordPress_to_a_remote_host) for detailed guidelines in using an FTP Client to upload.
+Remove all themes that are not active, leaving only the main theme. If there is a child theme active, please, maintain the child and parent.
 
-**NOTE: If you did not delete the `wp-content` folder, you will need to overwrite some files during the upload.**
+Install and activate the [Twenty Ten](https://wordpress.org/themes/twentyten/) theme and activate it. This theme works in all sites since WordPress 3.7.
 
-The `wp-content` folder holds your WordPress Themes and Plugins. These should remain. Upload everything else first, then upload only those WordPress files that are new or changed to your new `wp-content` folder. Overwrite any old versions of default plugins with the new ones.
+In the same way, delete all deactivated plugins (and, therefore, not working).
 
-The WordPress default theme has changed so you will want to upload the `wp-content/themes/default` folder. If you have custom changes to the default theme, those changes will need to be reviewed and installed after the upgrade.
+Now, WordPress will have:
+-	Core: any version (between WordPress 4.1 and WordPress 4.8)
+-	Themes: Twenty Ten is active, and the main theme is deactivated.
+-	Plugins: all plugins that should be active are deactivated.
 
-##### Step 9: Run the WordPress upgrade program {#step-9-run-the-wordpress-upgrade-program}
+At this point, overwrite the WordPress Core with [WordPress 4.9](https://wordpress.org/wordpress-4.9.zip), available in the [release list](https://wordpress.org/download/releases/). Install WordPress 4.9 major version or, if available and recommended, the latest 4.9.x minor version.
 
-Using a web browser, go to the WordPress admin pages at the normal /wp-admin location. WordPress will check to see if a database upgrade is necessary, and if it is, it will give you a new link to follow.
+Upgrade the systems up to PHP 7.2 and, if they are not already, to MySQL 5.6.x or MariaDB 10.0.x. Please, do not install the newest major version.
 
-This link will lead you to run the WordPress upgrade script by accessing `wp-admin/upgrade.php`. Follow the instructions presented on your screen.
+Access the "/wp-admin/" page, and follow the upgrading process.
 
-Note: Make sure the database user name registered to WordPress has permission to create, modify, and delete database tables before you do this step. If you installed WordPress in the standard way, and nothing has changed since then, you are fine.
+WordPress will be able to maintain and update the contents in the database and be able to work with these contents. WordPress, with the default theme and all the contents should be available and working.
 
-If you want to run the upgrade script manually:
+Character Encoding commonly presents technical hiccups when restoring a database. It is possible that backup data is not encoded in UTF-8 and instead may be in an ISO or ASCII "deprecated" format. Make sure that the character encoding is updated correctly upon restoring a database! More information on [converting Character Sets in a WordPress database can be found here](https://codex.wordpress.org/Converting_Database_Character_Sets).
 
-* If WordPress is installed in the root directory, point your browser to: https://example.com/wp-admin/upgrade.php
-* If WordPress is installed in its own subdirectory called `blog`, for example, point your browser to: https://example.com/blog/wp-admin/upgrade.php
+Proceed to the next step, which is upgrade to WordPress 5.3 from WordPress 4.9.
 
-If you experience difficulties with login after your upgrade, it is worth clearing your browser's cookies.
+##### WordPress 4.9 - 5.2
 
-##### Step 10: Update Permalinks and .htaccess {#step-10-update-permalinks-and-htaccess}
+Goals
+- WordPress: upgrade to WordPress 5.3
+- PHP: upgrade to PHP 7.4
+- SQL: maintain or upgrade to MySQL 8.0 / MariaDB 10.3
 
-In your [Administration Screen](https://wordpress.org/documentation/article/administration-screens/) > [Settings](https://wordpress.org/documentation/article/administration-screens/#permalinks) > [Permalinks](https://wordpress.org/documentation/article/settings-permalinks-screen/) screen update your Permalink Structure and, if necessary, place the rules in your [`.htaccess`](https://wordpress.org/documentation/article/wordpress-glossary/#.htaccess) file. Also see [Using Permalinks](https://wordpress.org/documentation/article/using-permalinks/) for details regarding Permalinks and the [`.htaccess`](https://wordpress.org/documentation/article/wordpress-glossary/#.htaccess) file.
+Losses:
+- Content: none
+- Plugins: probably no
+- Themes: probably no
 
-##### Step 11: Install updated Plugins and Themes {#step-11-install-updated-plugins-and-themes}
+_If you don't have PHP 7.4 configured yet, do it. Chances are that everything will still work normally._
 
-Please visit individual plugin and theme pages and look for the compatibility information with your new WordPress version. Install new versions of your Plugins and Themes, if necessary.
+WordPress 4.9 was the last version with the Classic Editor, so, a lot of people, afraid of the new editor, stopped updating WordPress. WordPress 5.0+ is fully compatible with the Classic Editor content, so it can be upgraded without losing any content.
 
-##### Step 12: Reactivate Plugins {#step-12-reactivate-plugins}
+Also, when WordPress 4.9 was released, PHP 7.0+ was very stablished and WordPress 5.0 version had support. Upgrading from PHP 5.6.20+ to PHP 7.0+ should be very stable.
 
-Use your Administration Screen, Plugins, to activate your Plugins. If you are not sure if they will work correctly with the new version, activate each plugin, one at a time, and test that there are no problems before continuing.
+From WordPress 4.9, you can continue with the manual update process, or start using [WP-CLI](https://wp-cli.org/), the tool to run WordPress commands directly via console, something that can ease the process.
 
-##### Step 13: Review what has changed in WordPress {#step-13-review-what-has-changed-in-wordpress}
+As with any upgrade, the first thing to do is to make a backup copy.
 
-Please review these resources to see what's new in WordPress:
+Remove all themes that are not active, leaving only the main theme. If there is a child theme active, please, maintain the child and parent.
 
-* [Version history](https://codex.wordpress.org/WordPress_Versions)
+Install and activate the [Twenty Ten](https://wordpress.org/themes/twentyten/) theme and activate it. This theme works in all sites since WordPress 3.7.
+
+In the same way, delete all deactivated plugins.
+
+Now, WordPress will have:
+-	Core: any version (between WordPress 4.9 and WordPress 5.2)
+-	Themes: Twenty Ten is active, and the main theme is deactivated.
+-	Plugins: all plugins that should be active are deactivated.
+
+At this point, overwrite the WordPress Core with [WordPress 5.3](https://wordpress.org/wordpress-5.3.zip), available in the [release list](https://wordpress.org/download/releases/). Install WordPress 5.3 major version or, if available and recommended, the latest 5.3.x minor version.
+
+Upgrade the systems up to PHP 7.4 and, if they are not already, to MySQL 8.0.x or MariaDB 10.3.x. Please, do not install the newest major version.
+
+Access the "/wp-admin/" page, and follow the upgrading process.
+
+WordPress will be able to maintain and update the contents in the database and be able to work with these contents.
+
+Getting this moment, make a new backup copy, because some more updates will be made and, at this point, there is a good WordPress situation.
+
+Most of the plugins available in WordPress 4.9+ should work with WordPress 5.3, so try to update everything available in the plugin list. Please, do it one by one and check all the warnings and errors. If you get some big error, try an older release for this plugin. Usually they are at the end of the "Developer" tab in each plugin page at wordpress.org.
+
+Try the same with the theme. Most of the themes available in WordPress 4.9+ should work with WordPress 5.3.
+
+Proceed to the next step, which is upgrade to WordPress 6.2 from WordPress 5.3.
+
+##### WordPress 5.3 - 6.2
+
+Goals
+- WordPress: upgrade to WordPress 6.2
+- PHP: upgrade to PHP 7.4
+- SQL: maintain or upgrade to MySQL 8.0 LTS / MariaDB 10.11 LTS
+
+Losses:
+- Content: none
+- Plugins: probably no
+- Themes: probably no
+
+_If you don't have PHP 7.4 configured yet, do it. Chances are that everything will still work normally._
+
+Upgrade everything normally. Everything should work fine.
+
+##### WordPress 6.3 - 6.8
+
+Goals
+- WordPress: upgrade to WordPress 6.8
+- PHP: upgrade to at least PHP 8.1 (WordPress 6.6+ supports PHP 8.2)
+- SQL: maintain or upgrade to MySQL 8.0 LTS / MariaDB 10.11 LTS
+
+Losses:
+- Content: none
+- Plugins: probably no
+- Themes: probably no
+
+_If you don't have PHP 8.1 configured yet, do it. Chances are that everything will still work normally._
+
+When WordPress 6.3 was released, support for PHP 5.6 dropped and PHP 7.0 was stablished as the minimum PHP version. Upgrading from PHP 5.6.20+ to PHP 7.0+ should be very stable.
+
+When WordPress 6.6 was released, support for PHP 7.0 and 7.1 dropped and PHP 7.2.25 was stablished as the minimum PHP version. Upgrading from PHP 7.0+, or PHP 7.1+ to PHP 7.2+ should be very stable. WordPress 6.6 also supports PHP 8.2 so you can try switching to PHP 8.2 when upgraded WordPress. 
+
+Upgrade everything normally. Everything should work fine.
 
 ### Troubleshooting {#troubleshooting}
 
@@ -364,4 +459,5 @@ apply_filters( 'auto_core_update_send_email', true, $type, $core_update, $result
 
 ## Changelog
 
+- 2024-06-05: Original content from [Upgrading WordPress](https://make.wordpress.org/hosting/handbook/upgrading/)
 - 2022-10-25: Original content from [Configuring Automatic Background Updates](https://wordpress.org/documentation/article/configuring-automatic-background-updates/), and [Upgrading WordPress – Extended Instructions](https://wordpress.org/documentation/article/upgrading-wordpress-extended-instructions/).
