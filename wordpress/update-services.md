@@ -20,11 +20,7 @@ Certain web hosts – particularly free ones – disable the PHP functions used 
 ```
 https://rpc.pingomatic.com
 https://rpc.twingly.com
-http://www.blogdigger.com/RPC2
 http://ping.blo.gs/
-http://ping.feedburner.com
-http://rpc.weblogs.com/RPC2
-http://www.pingmyblog.com
 ```
 
 ## Alternatives
