@@ -18,8 +18,8 @@ Certain web hosts – particularly free ones – disable the PHP functions used 
 ## XML-RPC Ping Services
 
 ```
-http://rpc.pingomatic.com
-http://rpc.twingly.com
+https://rpc.pingomatic.com
+https://rpc.twingly.com
 http://www.blogdigger.com/RPC2
 http://ping.blo.gs/
 http://ping.feedburner.com
