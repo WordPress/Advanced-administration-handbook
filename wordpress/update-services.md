@@ -11,20 +11,16 @@ Most people use [Ping-o-Matic](https://pingomatic.com/) which, with just one "pi
 
 If you do not want the update services to be pinged, remove all the update service URIs listed under "Update Services" on the [Settings](https://wordpress.org/documentation/article/administration-screens/#settings-configuration-settings)->[Writing](https://wordpress.org/documentation/article/settings-writing-screen/) administration screen of your WordPress installation.
 
-![Screenshot of the Update Services screen.](https://wordpress.org/documentation/files/2018/10/update_service.png)
+![Screenshot of the Update Services screen.](https://wordpress.org/documentation/files/2025/06/update_service.png)
 
 Certain web hosts – particularly free ones – disable the PHP functions used to alert update services. If your web host prevents pings, you should stop WordPress from attempting to ping.
 
 ## XML-RPC Ping Services
 
 ```
-http://rpc.pingomatic.com
-http://rpc.twingly.com
-http://www.blogdigger.com/RPC2
+https://rpc.pingomatic.com
+https://rpc.twingly.com
 http://ping.blo.gs/
-http://ping.feedburner.com
-http://rpc.weblogs.com/RPC2
-http://www.pingmyblog.com
 ```
 
 ## Alternatives
