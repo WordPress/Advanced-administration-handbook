@@ -124,6 +124,3 @@ If for any reason a site does not get upgraded, each site should be upgraded whe
 
 If a version update to core has not happened, clicking this button won't affect anything.
 
-## Changelog
-
-- 2022-10-21: Original content from [Network Admin](https://wordpress.org/documentation/article/network-admin/), [Network Admin Sites Screen](https://wordpress.org/documentation/article/network-admin-sites-screen/), and [Network Admin Updates Screen](https://wordpress.org/documentation/article/network-admin-updates-screen/).

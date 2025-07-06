@@ -55,6 +55,3 @@ AWS Elastic Load Balancers cannot be assigned an elastic IP, therefore you must 
 - Some registrars do not currently support wildcard CNames.
 - Amazon's Route53 Domain Name Service eliminates the CName issue, but at an additional cost.
 
-## Changelog
-
-- 2023-01-20: Original copied from [Configuring Wildcard Subdomains](https://wordpress.org/documentation/article/configuring-wildcard-subdomains/) and links checked.

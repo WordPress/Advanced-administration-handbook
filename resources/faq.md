@@ -315,7 +315,3 @@ See also:
 
 * [WordPress Backups](https://developer.wordpress.org/advanced-administration/security/backup/)
 
-## Changelog
-
-- 2023-02-17: Links updated, and some fixes for deprecated content.
-- 2023-01-31: Original content from [FAQ Troubleshooting](https://wordpress.org/documentation/article/faq-troubleshooting-2/).

@@ -235,7 +235,3 @@ If you use a Persistent Object Cache, options (whether autoloaded or not) load f
    - [Presentation on HyperDB and High Performance from WordCamp 2007 (San Francisco)](https://onemansblog.com/2007/08/16/wordcamp-2007-hyperdb-and-high-performance-wordpress/)
 - [50 tips su Web Performance Optimization per siti ad alto traffico WordCamp Bologna (Italy) 2013](https://www.slideshare.net/AndreaCardinali/50-tips-su-web-performance-optimization-per-siti-ad-alto-traffico-wpcamp-bologna-2013)
 
-## Changelog
-
-- 2023-05-03: Revised content to comply with [External Linking Policy](https://make.wordpress.org/docs/handbook/documentation-team-handbook/external-linking-policy/).
-- 2022-09-11: Original content from [Optimization](https://wordpress.org/documentation/article/optimization/).

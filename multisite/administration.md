@@ -213,6 +213,3 @@ Moving Multisite is more complicated than moving a single install. Please read [
 
 When you've created your WordPress Network for importing other sites, you need to look at the [Migrating Multiple Blogs into WordPress Multisite](https://wordpress.org/documentation/article/migrating-multiple-blogs-into-wordpress-multisite/) article.
 
-## Changelog
-
-- 2022-10-25: Original content from [Multisite Network Administration](https://wordpress.org/documentation/article/multisite-network-administration/).

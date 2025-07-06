@@ -4,7 +4,3 @@ Version control is a way of tracking the changes made to files over time by diff
 
 A lot of WordPress hosts offer version control but there are third-party services and self hosted options as well.
 
-## Changelog
-
-- 2023-05-29: Synced with [Hosting Handbook](https://make.wordpress.org/hosting/handbook/reliability/#version-control)
-- 2023-03-03: Created a new page for *Version control*

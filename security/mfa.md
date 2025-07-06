@@ -62,6 +62,3 @@ You can [search for two-step authentication plugins](https://wordpress.org/plugi
 
 * [Brute Force Attacks](https://developer.wordpress.org/advanced-administration/security/brute-force/)
 
-## Changelog
-
-- 2022-10-25: Original content from [Two Step Authentication](https://wordpress.org/documentation/article/two-step-authentication/).

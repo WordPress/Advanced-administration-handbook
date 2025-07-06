@@ -682,8 +682,3 @@ Before you save the file, be sure to **double-check** that you have not accident
 
 To save the file, choose **File > Save As > wp-config.php** and save the file in the root of your WordPress install. Upload the file to your web server and you're ready to install WordPress!
 
-## Changelog
-
-- 2022-10-25: Fix content and links.
-- 2022-09-04: Original content from [wp-config.php](https://developer.wordpress.org/apis/wp-config-php/); ticket [Github](https://github.com/WordPress/Documentation-Issue-Tracker/issues/349).
-- 2023-01-20: Add content to the start from [documentation](https://wordpress.org/documentation/article/editing-wp-config-php/) ticket [Github](https://github.com/WordPress/Advanced-administration-handbook/issues/89)

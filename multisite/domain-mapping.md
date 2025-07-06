@@ -34,6 +34,3 @@ define( 'COOKIE_DOMAIN', $_SERVER['HTTP_HOST'] );
 2. [MultiSite Network Administration](https://developer.wordpress.org/advanced-administration/multisite/administration/)
 3. [Installing Multiple Blogs](https://developer.wordpress.org/advanced-administration/before-install/multiple-instances/)
 
-## Changelog
-
-- 2022-10-25: Original content from [WordPress Multisite Domain Mapping](https://wordpress.org/documentation/article/wordpress-multisite-domain-mapping/).

@@ -81,7 +81,3 @@ function test_localhosts( ) {
   else return false; // act as normal; will pull main site info from db
 }
 ```
-
-## Changelog
-- 2022-11-20: Fixed typos and improved readability. Added Studio as an option for local development (launched after the last update to this developer doc).
-- 2022-09-27: Original content from [Running a development copy of wordpress](https://wordpress.org/documentation/article/running-a-development-copy-of-wordpress/) and [installing wordpress on your own computer](https://wordpress.org/documentation/article/installing-wordpress-on-your-own-computer/).

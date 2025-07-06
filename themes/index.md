@@ -54,7 +54,3 @@ Optimizing themes for performance includes minimizing server requests, reducing 
 ### Security Considerations
 Proper security practices include keeping themes and WordPress core up-to-date, securing database access, and sanitizing user input to prevent vulnerabilities.
 
-## Changelog
-
-- 2023-11-06: Added Update Theme Informationen.
-- 2022-08-16: Nothing here, yet.

@@ -41,6 +41,3 @@ You can also install WordPress on Ubuntu with one click [WordPress Hosting](http
 * Running into some issues and need to troubleshoot your WordPress site on Azure? Follow this handy [Troubleshooting guide for WordPress on Azure](https://learn.microsoft.com/troubleshoot/azure/app-service/web-apps-open-source-technologies-faqs).
 * For other WordPress related content or specific WordPress related questions, you may perform a [search with WordPress related terms on Microsoft Learn](https://learn.microsoft.com/en-us/search/?terms=wordpress).
 
-## Changelog
-
-- 2023-01-20: Migrated content from [Installing WordPress at popular Hosting Companies](https://wordpress.org/documentation/article/installing-wordpress-at-popular-hosting-companies/).

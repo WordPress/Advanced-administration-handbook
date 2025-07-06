@@ -102,7 +102,3 @@ If you're a regular User of a single-site webhosting account, you can log in nor
 Reseller accounts Admin accounts may need to click **User Level**. They must first log in as Reseller if the relevant domain is a Reseller's primary domain… or log in as a User if the domain is not a Reseller's primary domain. If it's the Reseller's primary domain, then when logged in as Reseller, simply click **User Level**. However if the relevant domain is not the Reseller's primary domain, then you must log in as a User. Then click **MySQL Management**. (If not readily visible, perhaps you need to return to the Reseller or Admin level, and modify the “Manage user package” or “Manage Reseller package” to enable MySQL.)
 
 In MySQL Management, click on the small words: **Create new database**. Here you are asked to submit two suffixes for the database and its username. For maximum security, use two different sets of 4-6 random characters. Then the password field has a Random button that generates an 8-character password. You may also add more characters to the password for maximum security. Click **Create**. The next screen will summarize the database, username, password and hostname. Be sure to copy and paste these into a text file for future reference.
-
-## Changelog
-
-- 2022-09-11: Original content from [Creating Database for WordPress](https://wordpress.org/documentation/article/creating-database-for-wordpress/).

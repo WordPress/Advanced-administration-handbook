@@ -111,6 +111,3 @@ For help troubleshooting:
 * [Installing Multiple Blogs](https://developer.wordpress.org/advanced-administration/before-install/multiple-instances/)
 * [How to adapt my plugin to Multisite?](https://stackoverflow.com/questions/13960514/how-to-adapt-my-plugin-to-multisite/)
 
-## Changelog
-
-- 2022-10-21: Original content from [Create A Network](https://wordpress.org/documentation/article/create-a-network/).

@@ -17,8 +17,3 @@ The Documentation Team meets in the WordPress Slack, in the [#docs](https://word
 This documentation is managed by [@javiercasares](https://profiles.wordpress.org/javiercasares/), [@lucp](https://profiles.wordpress.org/lucp/), and [@milana_cap](https://profiles.wordpress.org/milana_cap/). Also, the [Documentation Team](https://make.wordpress.org/docs/) and [Hosting Team](https://make.wordpress.org/hosting/) are involved in this.
 
 [info]If you're interested in improving this handbook, check the [Github Handbook repo](https://github.com/WordPress/WordPress-Advanced-administration-handbook), the [Documentation Issue tracked](https://github.com/WordPress/Documentation-Issue-Tracker/labels/advanced%20administration), or leave a message in the [#hosting-community channel](https://wordpress.slack.com/archives/hosting-community/) at [WordPress Slack](https://make.wordpress.org/chat/).[/info]
-
-## Changelog
-
-- 2023-01-15: Minor fixes, and reviewed.
-- 2022-08-16: First version.

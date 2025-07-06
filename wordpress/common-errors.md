@@ -278,6 +278,3 @@ If you are running a database query when you encounter the error then you may by
 
 * [MySQL Error Codes and Messages](https://dev.mysql.com/doc/refman/en/error-messages-server.html)
 
-## Changelog
-
-- 2023-01-20: Copy content from [Common WordPress Errors](https://wordpress.org/documentation/article/common-wordpress-errors/)

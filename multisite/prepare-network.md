@@ -117,6 +117,3 @@ You _cannot choose **Sub-directory** Install_ (for a path-based network) if your
 
 _See `wp-admin/network.php` for more detail)_
 
-## Changelog
-
-- 2022-10-21: Original content from [Before You Create A Network](https://wordpress.org/documentation/article/before-you-create-a-network/).

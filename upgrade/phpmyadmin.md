@@ -14,6 +14,3 @@ Often host control panels, such as cPanel and Plesk, have phpMyAdmin pre-install
 
 You can download phpMyAdmin yourself and install it from the main [phpMyAdmin project page](https://www.phpmyadmin.net/).
 
-## Changelog
-
-- 2022-09-11: Original content from [phpMyAdmin](https://wordpress.org/documentation/article/phpmyadmin/).

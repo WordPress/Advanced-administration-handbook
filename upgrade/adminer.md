@@ -34,8 +34,3 @@ Adminer might also be available as a plugin in the [WordPress plugin repository]
 
 To prevent unauthorized access, please ensure that Adminer is either removed or protected after use, especially if it can be accessed publicly. One way to protect it is by restricting access using the `.htaccess` file. If you're unfamiliar with `.htaccess` file restrictions, consider seeking [guidance on hardening WordPress](https://wordpress.org/documentation/article/hardening-wordpress/) or removing Adminer after use.
 
-## Changelog
-
-- 2023-10-19: Include content from [phpMyAdmin](https://wordpress.org/documentation/article/phpmyadmin/).
-- 2023-10-19: Include content from [FileZilla](https://wordpress.org/documentation/article/using-filezilla/).
-- 2023-10-19: Include content from [Hardening WordPress](https://wordpress.org/documentation/article/hardening-wordpress/)

@@ -240,6 +240,3 @@ More testing, preferably with a packet sniffer and some hardcore network analysi
 
 The author assumes (but hasn't checked) that if the user has stored cookies/told their browser to remember passwords (not based on form fields but if using certain external auth mechanism) and hits https://www.example.com/wp-admin/, those packets are sent in the clear and the cookie/auth headers could be intercepted. Therefore, to ensure maximum security, the user should explicitly use the https host or always log in at the beginning of new sessions.
 
-## Changelog
-
-- 2022-10-25: Original content from [Why should I use HTTPS](https://wordpress.org/documentation/article/why-should-i-use-https/), and [Administration Over SSL](https://wordpress.org/documentation/article/administration-over-ssl/).

@@ -55,7 +55,3 @@ Look at the top area of the FileZilla main window and check the messages.
 2. If it says that the user does not exist or _Incorrect Login_ and so on, check the Site Manager setting and ensure that it reflects what your FTP account and password details provided by your host says, or use the web server administration interface provided to you by your host to re-check the existence of the FTP account. Check your password carefully. It is case-sensitive (capitals and small letters). You may want to ask your web host for some assistance, too.
 3. If it says _Could not retrieve directory listing_, you may need to change the Transfer Setting. From Site Manager, select your FTP Server and click the *Transfer Settings* tab. Select *Passive* from Transfer mode and click OK.
 
-## Changelog
-
-- 2023-05-05: Correct and clarify the Connecting section.
-- 2022-09-11: Original content from [Using FileZilla](https://wordpress.org/documentation/article/using-filezilla/).

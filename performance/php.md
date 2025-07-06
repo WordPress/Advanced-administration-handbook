@@ -76,6 +76,3 @@ Bear in mind that on shared hosting accounts, those limits are usually set on a 
 
 The `wp-cron.php` script is responsible for causing certain tasks to be scheduled and executed automatically. Every time someone visits your website, `wp-cron.php` checks whether it is time to execute a job or not. Even though these checks are small and fast they consume time and produce load. For this reason, it's worth considering setting the [`DISABLE_WP_CRON` constant](https://developer.wordpress.org/advanced-administration/wordpress/wp-config/#disable-cron-and-cron-timeout) and using an alternative method to trigger WordPress' cron system. Note, however, that the WordPress cron system is designed with performance in mind and requires minimal resources to operate so it's not mandatory to replace it unless you really need to do so.
 
-## Changelog
-
-- 2023-06-08: New page created.

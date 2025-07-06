@@ -158,6 +158,3 @@ You must also register the `post_format` taxonomy with [register_taxonomy()](htt
 * [Smarter Post Formats?](https://dougal.gunters.org/blog/2010/12/10/smarter-post-formats/)
 * [WordPress Theme Support Generator](https://generatewp.com/theme-support/)
 
-## Changelog
-
-- 2023-04-25: original content from [Post Formats](https://wordpress.org/documentation/article/post-formats/).

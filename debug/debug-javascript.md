@@ -61,6 +61,3 @@ Please include the below information:
 * the context of the error – including the whole error stack will help developers
 * If possible, a link to the web page showing the error
 
-## Changelog
-
-- 2022-09-11: Original content from [Using Your Browser to Diagnose JavaScript Errors](https://wordpress.org/documentation/article/using-your-browser-to-diagnose-javascript-errors/). Consolidated Developer Tools instructions, removed IE documentation.

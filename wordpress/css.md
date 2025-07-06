@@ -187,6 +187,3 @@ If you are having some problems or questions about your WordPress Theme or layou
 * [Conditional Comment CSS](https://codex.wordpress.org/Conditional_Comment_CSS)
 * [Validating a Website](https://codex.wordpress.org/Validating_a_Website)
 
-## Changelog
-
-- 2022-09-04: Original content from [CSS](https://wordpress.org/documentation/article/css/); ticket [Github](https://github.com/WordPress/Documentation-Issue-Tracker/issues/424).

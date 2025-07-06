@@ -18,6 +18,3 @@ The most common cause of loopback failures is a plugin or theme conflict, you sh
 * Switching to a Twenty-Something theme to rule out any theme-specific problems. If you can't log in to change themes, you can remove the theme folders via [SFTP/FTP](https://developer.wordpress.org/advanced-administration/upgrade/ftp/) so the only one is `twentytwentythree`. That will force your site to use it.
 * If you can install plugins, install the plugin [Health Check](https://wordpress.org/plugins/health-check/). On the troubleshooting tab, you can click the button to disable all plugins and change the theme for you, while you're still logged in, **without affecting normal visitors to your site**.
 
-## Changelog
-
-- 2023-01-20: Content migrated from [Loopbacks](https://wordpress.org/documentation/article/loopbacks/).
