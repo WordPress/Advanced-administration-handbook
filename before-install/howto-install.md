@@ -222,9 +222,3 @@ Check to make sure that your configuration of your web-server is correct and tha
 **My image/MP3 uploads aren't working.**
 
 If you use the Rich Text Editor on a blog that's installed in a subdirectory, and drag a newly uploaded image into the editor field, the image may vanish a couple seconds later. This is due to a problem with TinyMCE (the rich text editor) not getting enough information during the drag operation to construct the path to the image or other file correctly. The solution is to NOT drag uploaded images into the editor. Instead, click and hold on the image and select **Send to Editor.**
-
-## Changelog
-
-- 2022-09-14: Added alt tags to all images.
-- 2022-09-14: cleared up a link refering to the [utf8mb4 article](https://make.wordpress.org/core/2015/04/02/the-utf8mb4-upgrade/)
-- 2022-09-14: Original content from [How to install WordPress](https://wordpress.org/documentation/article/how-to-install-wordpress/)

@@ -13,7 +13,3 @@ Security largely consists of reducing risk and planning for recovery. Most secur
 
 Security is also about more than WordPress. It is also about making sure your hosting environment is secure and your personal online practices and behaviors keep you safe. Good security depends on the technology in use and the people using the technology. Obsolete or out-of-date technology can have bugs or vulnerabilities that can put your WordPress website at risk. People's bad online practices can also put your WordPress website as risk. It is important to make sure that not only do you keep the technology you use up-to-date and maintained but also that employees are using security best practices when using the Internet and when interacting with your hosting platform or customer WordPress sites.
 
-## Changelog
-
-- 2022-08-16: Nothing here, yet.
-- 2023-06-08: Moved from https://make.wordpress.org/hosting/handbook/security/

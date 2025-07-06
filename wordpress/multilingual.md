@@ -115,7 +115,3 @@ Since many multilingual plugins change the database significantly, doing a [data
 
 * [WordPress in Your Language](https://developer.wordpress.org/advanced-administration/before-install/in-your-language/)
 
-## Changelog
-
-- 2023-09-14: Removed links to individual plugins
-- 2022-10-25: Original content from [Multilingual WordPress](https://wordpress.org/documentation/article/multilingual-wordpress/).

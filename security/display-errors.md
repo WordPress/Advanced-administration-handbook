@@ -26,6 +26,3 @@ If your server uses FastCGI/PHP-FPM, it may be possible disable the display_erro
 
 If these examples do not work for you, or if you need more instructions, please reach out to your hosting provider.
 
-## Changelog
-
-- 2023-09-14: Setup, and Adding text.

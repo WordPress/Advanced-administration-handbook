@@ -20,6 +20,3 @@ When it comes to [debugging a WordPress site](https://developer.wordpress.org/ad
 
 [Test-driving](https://developer.wordpress.org/advanced-administration/debug/test-driving/) refers to the process of testing a website before making it live. This process allows developers to identify and resolve any issues or bugs before the site is made available to the public. Test-driving is typically performed in a sandbox environment. Creating a sandbox environment is covered in this section.
 
-## Changelog
-
-- 2023-02-17: Added original content.

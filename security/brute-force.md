@@ -294,6 +294,3 @@ Services like CloudFlare and Sucuri CloudProxy can also help mitigate these atta
 * [Liquid Web: ModSecurity Rules To Alleviate Brute Force Attacks](https://www.liquidweb.com/kb/wordpress-modsecurity-rules/)
 * [Swiss Army Knife for WordPress (SAK4WP)](https://github.com/orbisius/sak4wp/) – Free Open Source Tool that can help you protect your wp-login.php and /wp-admin/ but not /wp-admin/admin-ajax.php with one click and much more
 
-## Changelog
-
-- 2022-10-25: Original content from [Brute Force Attacks](https://wordpress.org/documentation/article/brute-force-attacks/).

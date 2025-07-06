@@ -8,6 +8,3 @@ The content in a Multisite has its own unique tables in the database, only the u
 
 You can create a multisite that works with subdirectories ("path-based") or use domains or subdomains ("domain-based"). For how to map the domains, see [WordPress Multisite Domain Mapping](https://developer.wordpress.org/advanced-administration/multisite/domain-mapping/)
 
-## Changelog
-
-- 2023-05-19: First content.

@@ -107,7 +107,3 @@ The following [text editors](https://wordpress.org/documentation/article/wordpre
 * [Visual Studio Code](https://code.visualstudio.com/) (Mac, Linux, Windows)
 * [NetBeans](https://netbeans.apache.org/) (Mac, Linux, Windows)
 
-## Changelog
-
-- 2023-01-20: Updated broken links. Removed non-existing text editors.
-- 2022-09-11: Original content from [Editing Files](https://wordpress.org/documentation/article/editing-files/).

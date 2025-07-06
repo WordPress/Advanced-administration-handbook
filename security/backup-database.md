@@ -280,6 +280,3 @@ Enter password: (enter your mysql password)
 user@linux:~/files/blog>
 ```
 
-## Changelog
-
-- 2022-10-25: Original content from [Backing Up Your Database](https://developer.wordpress.org/advanced-administration/security/backup/database/).

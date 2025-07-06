@@ -270,6 +270,3 @@ Coming soon – how to move your test site from your computer back live onto you
 ### Resources
 - [qSandbox.com – Create a free WordPress test site to try (new) plugins and themes](https://qsandbox.com/app/)
 
-## Changelog
-
-- 2022-09-11: Original content from [Test driving WordPress](https://wordpress.org/documentation/article/test-driving-wordpress/).

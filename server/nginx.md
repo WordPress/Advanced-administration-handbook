@@ -693,6 +693,3 @@ For WordPress Nginx scripted installation [CentminMod](https://centminmod.com/ng
 - [Securing Nginx and PHP](http://kbeezie.com/securing-nginx-php/)
 - [Setting up PHP-FastCGI and nginx? Don’t trust the tutorials: check your configuration!](https://nealpoole.com/blog/2011/04/setting-up-php-fastcgi-and-nginx-dont-trust-the-tutorials-check-your-configuration/)
 
-## Changelog
-
-- 2022-10-25: Original content from [Nginx](https://wordpress.org/documentation/article/nginx/).

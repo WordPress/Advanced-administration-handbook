@@ -385,6 +385,3 @@ If the attacker tries to deface your site or add malware, you can also detect th
 * [Brad Williams: Lock it Up (Video)](https://wordpress.tv/2010/01/23/brad-williams-security-boston10/)
 * [Security Plugins](https://wordpress.org/plugins/tags/security)
 
-## Changelog
-
-- 2022-10-25: Original content from [Hardening WordPress](https://wordpress.org/documentation/article/hardening-wordpress/).

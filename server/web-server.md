@@ -10,6 +10,3 @@ See [Apache HTTPD / .htaccess](https://developer.wordpress.org/advanced-administ
 
 See [Nginx](https://developer.wordpress.org/advanced-administration/server/web-server/nginx/).
 
-## Changelog
-
-- 2022-09-11: First move from the old handbook.

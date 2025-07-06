@@ -78,6 +78,3 @@ The following links explains how to change specific directories within WordPress
 
 * [Using Caddy to give WordPress its own directory](https://caddy.community/t/using-caddy-to-give-wordpress-its-own-directory/13185)
 
-## Changelog
-
-- 2022-09-11: Original content from [Giving WordPress Its Own Directory](https://wordpress.org/documentation/article/giving-wordpress-its-own-directory/).

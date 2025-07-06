@@ -78,6 +78,3 @@ If the old site is no longer available and you find you have forgotten to copy s
 
 Another option might be the [Internet Archive Wayback Machine](https://archive.org/web/). They may have a copy of the site (or some part of it) archived.
 
-## Changelog
-
-- 2023-01-20: Original content from [Migrating multiple blogs into WordPress multisite](https://wordpress.org/documentation/article/migrating-multiple-blogs-into-wordpress-multisite/)

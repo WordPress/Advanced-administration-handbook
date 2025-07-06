@@ -84,5 +84,3 @@ Here is an example for MovableType Users:
 RewriteRule ^index.xml(.*)? /wordpress/?feed=rss2 [QSA]
 ```
 
-## Changelog
-- 2023-01-20: Original content from [WordPress Feeds](https://wordpress.org/documentation/article/wordpress-feeds/), issue [#93](https://github.com/WordPress/Advanced-administration-handbook/issues/93).

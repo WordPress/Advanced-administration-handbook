@@ -40,6 +40,3 @@ Adding an opcode cache like [Opcache](https://www.php.net/manual/en/book.opcache
 * [Best Practices for Speeding Up Your Web Site](https://developer.yahoo.com/performance/rules.html) – Expires / Cache-Control Header and ETags (by Yahoo! Developer Network)
 * [WebSiteOptimization.com: Use Server Cache Control to Improve Performance](https://www.websiteoptimization.com/speed/tweak/cache/)
 
-## Changelog
-
-- 2022-09-04: Original content from [Optimization – Caching](https://wordpress.org/documentation/article/optimization-caching/).

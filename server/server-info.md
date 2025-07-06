@@ -44,6 +44,3 @@ That’s it. Make sure you remember to delete the file once you’re done with i
 - [Zend’s PHP Manual on phpinfo](https://www.zend.com/manual/function.phpinfo.php)
 - [WordPress Environment PHP library](https://github.com/abelcallejo/wordpress-environment)
 
-## Changelog
-
-- 2022-11-11: Original content from [Finding Server Info](https://wordpress.org/documentation/article/finding-server-info/).

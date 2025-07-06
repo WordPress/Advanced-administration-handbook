@@ -457,7 +457,3 @@ apply_filters( 'auto_core_update_send_email', true, $type, $core_update, $result
 * More information here: [How Do I Configure Automatic Updates in WordPress 3.7?](https://wordpress.stackexchange.com/questions/120081/how-do-i-configure-automatic-updates-in-wordpress-3-7)
 * Info about wp-cli conflict: [https://github.com/wp-cli/wp-cli/issues/1310](https://github.com/wp-cli/wp-cli/issues/1310)
 
-## Changelog
-
-- 2024-06-05: Original content from [Upgrading WordPress](https://make.wordpress.org/hosting/handbook/upgrading/)
-- 2022-10-25: Original content from [Configuring Automatic Background Updates](https://wordpress.org/documentation/article/configuring-automatic-background-updates/), and [Upgrading WordPress – Extended Instructions](https://wordpress.org/documentation/article/upgrading-wordpress-extended-instructions/).

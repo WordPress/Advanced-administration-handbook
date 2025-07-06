@@ -146,7 +146,3 @@ There are many [debugging plugins](https://wordpress.org/plugins/search/debug/) 
 
 For example, [Debug Bar](https://wordpress.org/plugins/debug-bar/) adds a debug menu to the admin bar that shows query, cache, and other helpful debugging information. When WP_DEBUG is enabled, it also tracks PHP Warnings and Notices to make them easier to find.
 
-## Changelog
-
-- 2023-02-01: Updated original content.
-- 2022-09-11: Original content from [Debugging in WordPress](https://wordpress.org/documentation/article/debugging-in-wordpress/); ticket from [Github](https://github.com/WordPress/Documentation-Issue-Tracker/issues/349).

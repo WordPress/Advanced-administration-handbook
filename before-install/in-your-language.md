@@ -58,6 +58,3 @@ You can set the default language for the entire network under the `Network Admin
 
 If you want to add translations for terms that are still displaying in English after installation, visit [translate.wordpress.org](https://translate.wordpress.org) and select your language. To get started, refer [this page](https://make.wordpress.org/polyglots/handbook/tools/glotpress-translate-wordpress-org/) in the [Translator’s Handbook](https://make.wordpress.org/polyglots/handbook/).
 
-## Changelog
-
-- 2022-09-11: Original content from [Installing WordPress in your language](https://wordpress.org/documentation/article/installing-wordpress-in-your-language/).

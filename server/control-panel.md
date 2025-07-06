@@ -81,8 +81,3 @@ The controls below give you easy access to the following settings and tools:
 * "Maintenance mode" hides your website's content from visitors.
 * "Password Protection" specifies the password you will use to log in to WordPress from Plesk.
 
-## Changelog
-
-- 2023-04-25: Removed outdated manual instructions from cPanel section and combined common WP Toolkit info for cPanel and Plesk.
-- 2023-01-26: Original copied from [Using cPanel](https://wordpress.org/documentation/article/using-cpanel/).
-- 2022-09-11: Original copied for Plesk.

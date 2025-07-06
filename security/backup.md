@@ -188,7 +188,3 @@ Various plugins exist to take automatic scheduled backups of your WordPress data
 * [WordPress Backups](https://developer.wordpress.org/advanced-administration/security/backup/)
 * [Upgrading WordPress Extended](https://developer.wordpress.org/advanced-administration/upgrade/upgrading/)
 
-## Changelog
-
-- 2022-10-25: Original content from [Restoring Your Database From Backup](https://wordpress.org/documentation/article/restoring-your-database-from-backup/).
-- 2022-09-11: Original content from [WordPress Backups](https://wordpress.org/documentation/article/wordpress-backups/).

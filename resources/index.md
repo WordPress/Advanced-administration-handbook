@@ -72,6 +72,3 @@ Other than that, these are some solid resources for you to review:
 - [PHP Cookbook](https://www.oreilly.com/library/view/php-cookbook/9781098121310/)
 - [Programming PHP](https://www.oreilly.com/library/view/programming-php-4th/9781492054122/)
 
-## Changelog
-
-- 2022-09-04: Original content from [Know Your Sources](https://codex.wordpress.org/Know_Your_Sources), based on ticket [Github](https://github.com/WordPress/Documentation-Issue-Tracker/issues/328#issuecomment-1144870008).

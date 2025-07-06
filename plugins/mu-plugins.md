@@ -35,6 +35,3 @@ Thus “Must-Use” is effectively a [Backronym](https://en.wikipedia.org/wiki/B
 * `get_mu_plugins()` is located in [wp-admin/includes/plugin.php](https://core.trac.wordpress.org/browser/tags/4.5.3/src/wp-admin/includes/plugin.php#L0).
 * `wp_get_mu_plugins()` is located in [wp-includes/load.php](https://core.trac.wordpress.org/browser/tags/4.5.3/src/wp-includes/load.php#L0).
 
-## Changelog
-
-- 2022-09-11: Original content from [Must Use Plugins](https://wordpress.org/documentation/article/must-use-plugins/). Minor additions and copy-editing.

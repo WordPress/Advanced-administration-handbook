@@ -74,9 +74,3 @@ For enhanced security you can also add multiple users to the same database and g
 You can use the same userbase for all your blogs on the same domain by defining the `CUSTOM_USER_TABLE` and optionally the `CUSTOM_USER_META_TABLE` constants to point to the same `wp_your_blog_users` and `wp_your_blog_usermeta` tables.  
 See [Editing wp-config.php/Custom User and Usermeta Tables](https://developer.wordpress.org/advanced-administration/wordpress/wp-config/#custom-user-and-usermeta-tables).
 
-## Changelog
-
-
-- 2023-02-17: WCAsia Contributor Day - Review and rework
-- 2022-10-21: Original content from [Installing Multiple WordPress Instances](https://wordpress.org/support/article/installing-multiple-blogs/).
-

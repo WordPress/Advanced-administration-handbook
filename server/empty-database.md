@@ -36,6 +36,3 @@ See [WordPress Backups](https://developer.wordpress.org/advanced-administration/
 
 8. Click “OK” and you will be returned to viewing all the tables in your database with the specified table’s contents emptied.
 
-## Changelog
-
-- 2022-09-11: Original content from [Emptying a Database Table](https://wordpress.org/documentation/article/emptying-a-database-table/).

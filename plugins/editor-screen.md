@@ -35,6 +35,3 @@ Under the editor, there is a dropdown menu listing function names found in the P
 
 Remember to click this button to save the changes you have made to the Plugin file. After clicking this button you should see a splash message at the top of the screen saying "File edited successfully". If you don't see that message, then your changes are not saved! Note that if a file is not writeable the Update File button will not be available.
 
-## Changelog
-
-- 2023-04-10: Original content from [Plugin File Editor Screen](https://wordpress.org/documentation/article/plugins-editor-screen/). Minor additions and copy-editing.

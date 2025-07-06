@@ -186,7 +186,3 @@ You will first be asked to map the authors in this export file to users on the b
 
 [xanga.r](https://www.timwylie.com/xword.html) is a program that parses xanga pages to get the post and comments. Then it can output them in the WordPress rss 2.0 xml format for WordPress to import.
 
-## Changelog
-
-- 2024-01-25: Removed HTML and Blogroll sections as they are no longer accurate
-- 2023-04-25: Added content from [Importing Content](https://wordpress.org/documentation/article/importing-content/).

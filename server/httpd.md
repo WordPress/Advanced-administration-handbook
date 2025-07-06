@@ -361,6 +361,3 @@ ErrorDocument 403 https://www.example.com
 * [UNIX Shell Skills](https://codex.wordpress.org/UNIX%20Shell%20Skills)
 * [Rewrite API](https://codex.wordpress.org/Rewrite%20API)
 
-## Changelog
-
-- 2023-04-25: Original content from [htaccess](https://wordpress.org/documentation/article/htaccess/).

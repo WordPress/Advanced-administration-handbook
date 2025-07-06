@@ -141,6 +141,3 @@ Default is English.
 
 On WordPress Multisite the default setting for plugins is disabled. This means your users won't have access to the plugin admin panel inside their dashboard unless you first enable access to plugins network wide.
 
-## Changelog
-
-- 2023-04-25: Original content from [Network Admin Settings Screen](https://wordpress.org/documentation/article/network-admin-settings-screen/).
