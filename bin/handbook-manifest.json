@@ -125,6 +125,13 @@
 		"parent": "server",
 		"order": 7
 	},
+	"server\/mail": {
+		"title": "Mail",
+		"slug": "mail",
+		"markdown_source": "https:\/\/github.com\/WordPress\/Advanced-administration-handbook\/blob\/main\/server\/mail.md",
+		"parent": "server",
+		"order": 8
+	},
 	"wordpress": {
 		"title": "WordPress configuration",
 		"slug": "wordpress",
