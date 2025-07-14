@@ -16,7 +16,7 @@ Installing WordPress locally is usually meant for development. Those interested 
 - [AMPPS](https://ampps.com/downloads/) – free WAMP/MAMP/LAMP stack with Softaculous Installer built in. It can 1-click install and upgrade WordPress and others as well.
 - [Bitnami package for WordPress](https://bitnami.com/stack/wordpress) and [Bitnami package for WordPress Multisite](https://bitnami.com/stack/wordpress-multisite) - Bitnami packages for WordPress that provide a one-click install solution for WordPress or WordPress Multisite on your local computer or in the cloud.
 - [Instant WordPress](https://instantwp.com/) - free, standalone, portable WordPress development environment for Windows that will run from a USB key.
-- [Studio by WordPress.com](https://developer.wordpress.com/studio/) - free, open-source app to install and manage multiple WordPress sites locally.
+- [WordPress Studio](https://developer.wordpress.com/studio/) - free, open-source app to install and manage multiple WordPress sites locally.
 
 ### Software Appliance - Ready-to-use
 
