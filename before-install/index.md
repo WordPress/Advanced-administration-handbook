@@ -23,3 +23,4 @@ You will need to be able to use an FTP program to [upload](https://developer.wor
 
 Now you are all set to go on to [Installation](https://developer.wordpress.org/advanced-administration/before-install/howto-install/).
 
+
