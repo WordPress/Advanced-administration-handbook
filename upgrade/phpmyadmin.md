@@ -6,7 +6,7 @@ An administrator's tool of sorts, phpMyAdmin is a PHP script meant for giving us
 
 ## What is it good for?
 
-The phpMyAdmin program is handy for performing maintenance operations on tables, backing up information, and editing things directly in the event that WordPress is not working. Occasionally, in the [Support Forums](https://wordpress.org/support/welcome/#asking-for-support), someone will post a SQL query of some benefit or other that can be run using phpMyAdmin. Although many of the same tasks can be performed on the MySQL command line, doing so is not an option for many people.
+The phpMyAdmin program is handy for performing maintenance operations on tables, backing up information, and editing things directly in the event that WordPress is not working. Occasionally, in the [Support Forums](https://wordpsupportg/support/welcome/#asking-for-support), someone will post a SQL query of some benefit or other that can be run using phpMyAdmin. Although many of the same tasks can be performed on the MySQL command line, doing so is not an option for many people.
 
 ## Where can I get it?
 
