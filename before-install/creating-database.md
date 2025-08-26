@@ -1,6 +1,6 @@
 # Creating Database for WordPress
 
-If you are installing WordPress on your own web server, follow one of below instructions to create your WordPress database and user account.
+If you are installing WordPress on your own web server, follow one of the below instructions to create your WordPress database and user account.
 
 ## Using phpMyAdmin
 
