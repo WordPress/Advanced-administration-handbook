@@ -1,6 +1,6 @@
 # Creating Database for WordPress
 
-If you are installing WordPress on your own web server, follow the one of below instructions to create your WordPress database and user account.
+If you are installing WordPress on your own web server, follow one of below instructions to create your WordPress database and user account.
 
 ## Using phpMyAdmin
 
@@ -24,7 +24,7 @@ phpMyAdmin Users Tab
 
 1. Click **Add user**.
 2. Choose a username for WordPress ('wordpress' is good) and enter it in the **User name** field. (Be sure **Use text field:** is selected from the dropdown.)
-3. Choose a secure password (ideally containing a combination of upper- and lower-case letters, numbers, and symbols), and enter it in the **Password** field. (Be sure **Use text field:** is selected from the dropdown.) Re-enter the password in the **Re-type**field.
+3. Choose a secure password (ideally containing a combination of upper- and lower-case letters, numbers, and symbols), and enter it in the **Password** field. (Be sure **Use text field:** is selected from the dropdown.) Re-enter the password in the **Re-type** field.
 4. Write down the username and password you chose.
 5. Leave all options under **Global privileges** at their defaults.
 6. Click **Go**.
