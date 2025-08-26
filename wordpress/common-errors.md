@@ -130,6 +130,16 @@ You may experience problems with 404 errors and [custom post types](https://word
 1. Make sure that none of your Custom Post Types and single pages have the same name. If they do, rename the single page, including the [slug](https://wordpress.org/documentation/article/glossary/#post-slug).
 2. Log in to your WordPress Administration Screens, navigate to **Settings > Permalinks**. Select the default permalinks. Save. Then reselect your preferred permalinks. This will flush the rewrite rules and should solve your problem.
 
+## Critical Error Message {#critical-error-message}
+
+If you come across the message "There has been a critical error on this website. Please check your site admin email inbox for instructions." it means something has gone wrong behind the scenes and WordPress cannot fix it on its own.
+
+First, check your email to see if WordPress has sent you any details about the error. Next, enable debug mode in your [wp-config.php](https://developer.wordpress.org/advanced-administration/debug/debug-wordpress/#example-wp-config-php-for-debugging) file.
+
+After enabling this, review the error logs located in wp-content/debug.log to find out what specifically went wrong.
+
+Some of the most common causes you might uncover include conflicts between plugins, compatibility issues with your theme, running an incompatible PHP version, hitting the memory limit, or having corrupted WordPress files.
+
 ## Specific Error Messages {#specific-error-messages}
 
 There are a number of different errors that will appear in your error logs. To access your error logs you will need to turn on [debugging](https://wordpress.org/documentation/article/editing-wp-config-php/#wp_debug) and then locate your error log via FTP. The following information will help you to decipher some of the common error messages.
