@@ -16,7 +16,7 @@ The Dashboard is information central and tells you about your network sites, pro
 
 ### Sites {#sites}
 
-Use the [Network Admin Sites Screen](https://wordpress.org/documentation/articles/network-admin-sites/screen) to review and manage the various sites that are part of your network. These sites will be either subdirectory or subdomain sites as determined by how the network was configured. From this screen you can access Info, Users, Themes, and Settings for each site in your Network.
+Use the [Network Admin Sites Screen](https://developer.wordpress.org/advanced-administration/multisite/admin/#network-admin-sites-screen) to review and manage the various sites that are part of your network. These sites will be either subdirectory or subdomain sites as determined by how the network was configured. From this screen you can access Info, Users, Themes, and Settings for each site in your Network.
 
 Use the [Add New Sites Screen](https://developer.wordpress.org/advanced-administration/multisite/admin/#add-site) to add new sites to your network.
 
