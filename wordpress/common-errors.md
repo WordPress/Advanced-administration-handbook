@@ -132,7 +132,7 @@ You may experience problems with 404 errors and [custom post types](https://word
 
 ## Critical Error Message {#critical-error-message}
 
-If you come across the message "There has been a critical error on this website. Please check your site admin email inbox for instructions." it means something has gone wrong behind the scenes and WordPress cannot fix it on its own.
+If you come across the message "There has been a critical error on this website. Please check your site admin email inbox for instructions.", this indicates that something in your site has caused a critical error that prevents WordPress from running as expected.
 
 First, check your email to see if WordPress has sent you any details about the error. Next, enable debug mode in your [wp-config.php](https://developer.wordpress.org/advanced-administration/debug/debug-wordpress/#example-wp-config-php-for-debugging) file.
 
