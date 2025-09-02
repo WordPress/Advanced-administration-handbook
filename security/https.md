@@ -72,7 +72,7 @@ location / {
 }
 ```
 
-The variables like `$variabl`e are automatically managed by the reverse proxy.
+The variables like `$variable` are automatically managed by the reverse proxy.
 
 ### Further Information {#further-information}
 
