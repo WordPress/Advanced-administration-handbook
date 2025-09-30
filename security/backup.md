@@ -21,7 +21,10 @@ _Back up your database regularly, and always before an upgrade._
 
 **How often should you back up?**
 
-That depends on how often you blog, how often you want to do this, and how you would feel if your database were lost along with a few posts. It is your decision.
+That depends on how often you blog, how often you want to do this, and how you would feel if your database were lost along with a few posts. It is your decision. General suggestion when backups should be made:
+
+ - For smaller websites with fewer posts, backups should be made once a week.
+ - For high activy websites with a lot of posts, backups should made daily. 
 
 **Can you use this method to back up other data?**
 
@@ -29,7 +32,7 @@ Yes. Backups are good all around.
 
 **How many backups should I keep?**
 
-The general rule of thumb is to keep at least three backups and keep them in three different places or forms, like CD/DVDs, different hard drives, a thumbdrive, web disk, your e-mail account, etc. This prevents problems if a single backup becomes corrupted or damaged.
+You should keep at least 3–5 recent WordPress backups to stay safe from data loss, with copies stored in different locations — for example, one on your hosting server, one on cloud storage (Google Drive, Dropbox, etc.), and one downloaded to your local computer. This way, even if one backup fails or is lost, you’ll always have a reliable version to restore your website.
 
 **Can backups be automated?**
 
