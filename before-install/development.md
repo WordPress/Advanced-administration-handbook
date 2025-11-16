@@ -1,4 +1,4 @@
-# Running a Development Copy of WordPress
+before-install/development.md# Running a Development Copy of WordPress
 
 Having a development instance of WordPress is a good way to update, develop, and modify a website without interrupting the live version of WordPress. There are many ways to set up a development copy of WordPress, but this article will cover the basics, best practices, tips, and some tools to make running a development copy of WordPress much easier.
 
