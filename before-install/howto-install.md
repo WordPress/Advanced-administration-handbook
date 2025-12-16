@@ -4,8 +4,8 @@ WordPress is well-known for its ease of installation. Under most circumstances, 
 
 ## Things to Know Before Installing WordPress
 
-Before you begin the install, there are a few things you need to have and do. Refer the article [Before You Install](https://developer.wordpress.org/advanced-administration/before-install/).
-If you need multiple WordPress instances, refer [Installing Multiple WordPress Instances.](https://developer.wordpress.org/advanced-administration/before-install/multiple-instances/)
+Before you begin the install, there are a few things you need to have and do. Refer the article [Before You Install](https://developer.wordpress.org/advanced-administration/before-install/). It's also good to verify that e-mail delivery is working properly on your host. Refer to [Mail](https://developer.wordpress.org/advanced-administration/server/mail/) for more information.
+If you need multiple WordPress instances, refer [Installing Multiple WordPress Instances.](https://developer.wordpress.org/advanced-administration/before-install/multiple-instances/).
 
 ## Basic Instructions
 
