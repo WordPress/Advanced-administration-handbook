@@ -433,6 +433,13 @@
 		"parent": "security",
 		"order": 7
 	},
+	"security\/application-passwords": {
+		"title": "Application Passwords",
+		"slug": "application-passwords",
+		"markdown_source": "https:\/\/github.com\/WordPress\/Advanced-administration-handbook\/blob\/main\/security\/application-passwords.md",
+		"parent": "security",
+		"order": 8
+	},
 	"performance": {
 		"title": "Performance / Optimization",
 		"slug": "performance",
