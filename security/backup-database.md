@@ -4,7 +4,9 @@
 
 [Restoring your database from backup](https://developer.wordpress.org/advanced-administration/security/backup/) is then possible if something goes wrong. 
 
-**NOTE:** Below steps backup core WordPress database that include all your posts, pages and comments, but DO NOT backup the files and folders such as images, theme files on the server. For whole WordPress site backup, refer [WordPress Backups](https://developer.wordpress.org/advanced-administration/security/backup/).
+**NOTE:** The steps below back up the WordPress database (posts, pages, comments, settings, etc.) but they do **not** back up your WordPress files (themes, plugins, uploads, `wp-config.php`, etc.). For a full-site backup, see [WordPress Backups](https://developer.wordpress.org/advanced-administration/security/backup/) and [Backing Up Your WordPress Files](https://developer.wordpress.org/advanced-administration/security/backup-files/).
+
+When you back up a database, you usually create an export file (for example, a `.sql`, `.gz`, or `.bz2`). That export file can be stored with your file backups so the database and files stay together as one “backup set”, but restoring still requires importing it into MySQL/MariaDB.
 
 ### Backup using cPanel X {#backup-using-cpanel-x}
 
