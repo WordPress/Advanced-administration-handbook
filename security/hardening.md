@@ -173,7 +173,7 @@ When you tell WordPress to perform an automatic update, all file operations are 
 
 If you run multiple blogs on the same server, it is wise to consider keeping them in separate databases each managed by a different user. This is best accomplished when performing the initial [WordPress installation](https://developer.wordpress.org/advanced-administration/before-install/howto-install/). This is a containment strategy: if an intruder successfully cracks one WordPress installation, this makes it that much harder to alter your other blogs.
 
-If you administer MySQL yourself, ensure that you understand your MySQL configuration and that unneeded features (such as accepting remote TCP connections) are disabled. See [Secure MySQL Database Design](https://www.securityfocus.com/infocus/1667) for a nice introduction.
+If you administer MySQL yourself, ensure that you understand your MySQL configuration and that unneeded features (such as accepting remote TCP connections) are disabled. See [MySQL Security](https://dev.mysql.com/doc/refman/8.0/en/security.html) for more information.
 
 #### Restricting Database User Privileges {#restricting-database-user-privileges}
 
@@ -333,7 +333,7 @@ Options for file system monitoring include:
 
 * [diff](https://en.wikipedia.org/wiki/Diff_utility) – build clean test copy of your site and compare against production
 * [Git](https://git-scm.com/) – source code management
-* [inotify](https://en.wikipedia.org/wiki/Inotify) and [incron](https://inotify.aiken.cz/?section=incron&page=doc&lang=en) – OS kernel level file monitoring service that can run commands on filesystem events
+* [inotify](https://en.wikipedia.org/wiki/Inotify) – OS kernel level file monitoring service that can run commands on filesystem events
 * [Watcher](https://github.com/gregghz/Watcher/blob/master/jobs.yml) – Python inotify library
 * [OSSEC](https://www.ossec.net/) – Open Source Host-based Intrusion Detection System that performs log analysis, file integrity checking, policy monitoring, rootkit detection, real-time alerting and active response.
 
@@ -379,7 +379,7 @@ If the attacker tries to deface your site or add malware, you can also detect th
 * [How WordPress Uses Salts and Why You Should Not Rotate Them: A Technical Deep-Dive](https://snicco.io/blog/wordpress-salts) (Snicco)
 * [Session Management and Security](https://github.com/snicco/fortress/blob/beta/docs/modules/session/session-managment-and-security.md#session-management-and-security) (Snicco)
 * [Securing WordPress Information Security Guideline](https://cio.ubc.ca/information-security/policy-standards-and-resources/securing-wordpress) (The University of British Columbia’s OCIO)
-* [Security, From the Basics to Enterprise with Calvin Alkan, Kathy Zant, and Carl Alexander](https://dothewoo.io/security-from-the-basics-to-enterprise-with-calvin-alkan/) (Video)
+* [Security, From the Basics to Enterprise with Calvin Alkan, Kathy Zant, and Carl Alexander](https://openchannels.fm/security-from-the-basics-to-enterprise-with-calvin-alkan/) (Video)
 * [WordPress Security Cutting Through the BS](https://blog.sucuri.net/2012/08/wordpress-security-cutting-through-the-bs.html)
 * [e-Book: Locking Down WordPress](https://newcodepoet.files.wordpress.com/2012/07/lockingdownwordpress1-1.pdf)
 * [Brad Williams: Lock it Up (Video)](https://wordpress.tv/2010/01/23/brad-williams-security-boston10/)
