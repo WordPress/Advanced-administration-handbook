@@ -33,7 +33,7 @@ If the use-case is interactive logins in a browser, use a strong password and co
 4. Enter a descriptive name (for example: `CI deploy bot`, `My iPhone app`, `Reporting integration`).
 5. Generate the password and **copy/store it immediately** (it will not be shown again).
 
-WordPress displays Application Passwords in grouped chunks for readability. They can be used with or without the spaces (spaces are stripped before validation). See: [Application Passwords: Integration Guide](https://make.wordpress.org/core/2020/11/05/application-passwords-integration-guide/).
+WordPress displays Application Passwords in grouped chunks for readability. They can be used with or without the spaces (spaces are stripped before validation).
 
 ### Using an Application Password {#using-an-application-password}
 
@@ -96,7 +96,7 @@ Official command reference: [wp user application-password](https://developer.wor
 
 ### Availability and disabling {#availability-and-disabling}
 
-By default, Application Passwords are available when requests are served over HTTPS. Availability can be customized (or disabled) with filters; see the core dev note for examples: [Application Passwords: Integration Guide](https://make.wordpress.org/core/2020/11/05/application-passwords-integration-guide/).
+By default, Application Passwords are available when requests are served over HTTPS. Availability can be customized (or disabled) with filters.
 
 If you do not want to allow Application Passwords on a site, you can disable them via code (for example, in a must-use plugin) using the `wp_is_application_passwords_available` filter. For more granular control (for example, only allow specific users/roles), use `wp_is_application_passwords_available_for_user`.
 
