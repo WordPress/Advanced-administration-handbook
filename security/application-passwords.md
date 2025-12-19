@@ -37,12 +37,20 @@ WordPress displays Application Passwords in grouped chunks for readability. They
 
 ### Using an Application Password {#using-an-application-password}
 
-Application Passwords are typically used via HTTP Basic Authentication:
+Application Passwords are typically used via HTTP Basic Authentication ([RFC 7617](https://datatracker.ietf.org/doc/html/rfc7617)). With Basic Auth, your client sends credentials in an `Authorization` HTTP header.
+
+The header value is constructed by Base64-encoding the string `username:password`:
+
+```
+Authorization: Basic BASE64_ENCODED_CREDENTIALS
+```
+
+When using Application Passwords:
 
 * **Username**: the WordPress username (login).
 * **Password**: the generated Application Password.
 
-Because Basic Auth credentials can be intercepted on the network if unencrypted, you should use HTTPS. See: [HTTPS](https://developer.wordpress.org/advanced-administration/security/https/).
+Because Basic Auth credentials can be intercepted on the network if sent unencrypted, you should always use HTTPS. See: [HTTPS](https://developer.wordpress.org/advanced-administration/security/https/).
 
 Example (REST API request with `curl`):
 
