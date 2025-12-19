@@ -71,16 +71,16 @@ If you manage WordPress via SSH, WP-CLI can create, list, update, and revoke App
 Examples:
 
 ```
-# Create an application password for a user (prints the password once).
+# Create an application password for user ID 123 (prints the password once).
 wp user application-password create 123 "myapp"
 
-# Create and output just the password (useful for scripts/CI).
+# Create and output just the password for user ID 123 (useful for scripts/CI).
 wp user application-password create 123 "myapp" --porcelain
 
-# List passwords and show common fields.
+# List passwords for user ID 123 and show common fields.
 wp user application-password list 123 --fields=uuid,name,created,last_used,last_ip
 
-# Delete a specific application password by UUID.
+# Delete a specific application password by UUID for user ID 123.
 wp user application-password delete 123 <uuid>
 ```
 
