@@ -55,8 +55,8 @@ curl --user "USERNAME:APPLICATION_PASSWORD" https://example.com/wp-json/wp/v2/us
 In the same **Application Passwords** section on the user profile, you can:
 
 * Review existing Application Passwords (by name).
-* See usage metadata (for example, last used time / last IP, depending on version).
-* Revoke individual passwords (or revoke all, depending on UI).
+* See usage metadata (for example, last used time / last IP).
+* Revoke individual passwords.
 
 Operational best practice is to treat Application Passwords like secrets:
 
