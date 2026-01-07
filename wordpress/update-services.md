@@ -27,6 +27,19 @@ http://ping.blo.gs/
 An alternative is [Feed Shark](https://feedshark.brainbliss.com/), which pings over 60 services for free.
 
 ## WordPress Multisite Network
-By default, editing the Ping Services for a WordPress Multisite network site is disabled. This can be re-enabled with a plugin such as the [Activate Update Services](https://wordpress.org/plugins/activate-update-services/) plugin.
+By default, editing the Ping Services field is disabled for individual sites in a WordPress Multisite network. To restore this option, you can add a small custom plugin or must-use plugin with the following code:
 
+```
+add_action( 'init', function() {
+    if ( is_multisite() ) {
+        // Allow the Update Services configuration screen to appear.
+        add_filter( 'enable_update_services_configuration', '__return_true', 11 );
 
+        // Whitelist the 'ping_sites' option so changes can be saved to the database.
+        add_filter( 'whitelist_options', function( $options ) {
+            $options['writing'][] = 'ping_sites';
+            return $options;
+        }, 11 );
+    }
+} );
+```
