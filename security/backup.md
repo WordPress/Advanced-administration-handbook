@@ -24,7 +24,7 @@ _Back up your database regularly, and always before an upgrade._
 That depends on how often you blog, how often you want to do this, and how you would feel if your database were lost along with a few posts. It is your decision. General suggestion when backups should be made:
 
  - For smaller websites with fewer posts, backups should be made once a week.
- - For high activy websites with a lot of posts, backups should made daily. 
+ - For high-activity websites with a lot of posts, backups should be made daily.
 
 **Can you use this method to back up other data?**
 
@@ -44,7 +44,32 @@ Yes. See Backup Resources for more information.
 
 ### Backing Up Your WordPress Site
 
-There are two parts to backing up your WordPress site: **Database** and **Files**. You need to back up the entire site, and you need to back up your WordPress database. Below are instructions for backing up your WordPress database for various server programs. We will start with backing up the rest of your WordPress site.
+There are two parts to backing up your WordPress site: **Database** and **Files**. You need both to be able to fully restore a typical WordPress site.
+
+For step-by-step instructions, see:
+
+- [Backing Up Your WordPress Files](https://developer.wordpress.org/advanced-administration/security/backup-files/)
+- [Backing Up Your Database](https://developer.wordpress.org/advanced-administration/security/backup/database/)
+
+#### Database vs files (why both are needed)
+
+It is common to wonder whether “backing up the files” also backs up the database. In a typical WordPress setup, the answer is **no**:
+
+- **WordPress files** are the files in your WordPress directory on the web server (WordPress core, themes, plugins, uploads, `wp-config.php`, `.htaccess`, etc.).
+- **The WordPress database** is stored in a separate database system (usually MySQL/MariaDB). You usually **cannot** back it up by downloading your WordPress directory, because the database lives outside of it.
+
+When you “back up the database” you usually create an **export/dump file** (for example, a `.sql`, `.gz`, or `.bz2` file). That exported file *is* a file and you can store it alongside your file backups — but restoring still requires importing it back into MySQL/MariaDB.
+
+#### Recommended backup and restore order
+
+To keep backups consistent, it helps to treat the **files + database** as one “backup set” (for example, both created around the same time).
+
+- **Backup (typical order)**:
+  - **Back up the database first**, then back up the WordPress files.
+  - Optionally store the database export file inside the same backup folder/zip as the file backup, so they stay together.
+- **Restore (typical order)**:
+  - **Restore the WordPress files first**, then restore/import the database.
+  - If you changed database credentials during a migration, update `wp-config.php` to match.
 
 Your WordPress site consists of the following:
 
