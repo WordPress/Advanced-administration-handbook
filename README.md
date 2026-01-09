@@ -5,7 +5,6 @@ This is the repository for the **WordPress Advanced Administration Handbook** a 
 The **WordPress Advanced Administration Handbook** will be a new section in the "Hub" [developer.wordpress.org](https://developer.wordpress.org/) where all the most technical documentation for users and developers will be moved, so the documentation will be simple, and this one will have code and be more complex.
 
 ## Project information
-
 - [Project](https://github.com/orgs/WordPress/projects/47)
 - [Inventory](https://github.com/orgs/WordPress/projects/26/views/1)
 - [Tickets](https://github.com/WordPress/Documentation-Issue-Tracker/labels/advanced%20administration)
