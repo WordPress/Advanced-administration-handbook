@@ -1,63 +1,80 @@
 # Using Your Browser to Diagnose JavaScript Errors
 
-If you're experiencing issues with your interactive functionality this may be due to JavaScript errors or conflicts. For example, your flyout menus may be broken, your metaboxes don't drag, or your add media buttons aren't working. In order to formulate your support request it helps the team to know what the JavaScript error is.
+Interactive functionality in WordPress often relies on JavaScript. If you encounter broken menus, metaboxes that won’t drag, or buttons that don’t work (such as **Add Media**), these may be caused by JavaScript errors or conflicts.
 
-This guide will show you how to diagnose JavaScript issues in different browsers.
+This guide explains how to use your browser to diagnose JavaScript issues so you can provide better information when requesting support.
 
-## Step 1: Try Another Browser
+---
 
-Different browsers often implement parts of JavaScript differently. To make sure that this is a JavaScript error, and not a browser error, first of all try opening your site in another browser.
+## Step 1: Try Another Browser {#try-another-browser}
 
-* if the site is not having the same issue in the new browser you know that the error is browser specific
-* if the site is having the same error it is not an error that is specific to one browser
+Different browsers sometimes handle JavaScript differently. Test your site in at least two browsers:
 
-Make note of any browsers you are experiencing the error in. You can use this information when you are making a support request.
+- **If the issue only occurs in one browser** → it may be browser‑specific (e.g., an extension conflict).  
+- **If the issue occurs in all browsers** → it is likely a JavaScript or plugin/theme error.
 
-## Step 2: Enable SCRIPT_DEBUG
+**Note:** Browser extensions (ad blockers, privacy tools) can sometimes interfere with JavaScript. Try disabling extensions or using a private/incognito window to rule this out.
 
-You need to turn on [script debugging](https://developer.wordpress.org/advanced-administration/debug/debug-wordpress/#script_debug). Open `wp-config.php` and add the following line before "That's all, stop editing! Happy blogging".
+Record which browsers show the error; include this information in your support request.
 
+---
+
+## Step 2: Enable SCRIPT_DEBUG {#enable-script-debug}
+
+WordPress uses minified JavaScript by default. Enabling `SCRIPT_DEBUG` forces WordPress to load the full, uncompressed versions, which makes errors easier to trace.
+
+1. Open `wp-config.php`.  
+2. Add this line **before** “That’s all, stop editing! Happy publishing”:  
+
+```php
+define( 'SCRIPT_DEBUG', true );
 ```
-define('SCRIPT_DEBUG', true);
-```
 
-Check to see if you are still having an issue.
+3. Reload your site and check if the error still occurs.
 
-* **Issue is fixed** – turn off script debugging and report the issue on the support forum, telling the volunteers that you turned on script debugging and it solved the problem.
-* **Issue persists** – proceed to Step 3.
+- **If the issue is fixed** → turn off `SCRIPT_DEBUG` again and report this detail in your support request.  
+- **If the issue persists** → continue to Step 3.
 
-## Step 3: Diagnosis
+---
 
-### Open the Developer Tools 
+## Step 3: Open Browser Developer Tools {#open-devtools}
 
-* **Chrome**: Type `Cmd-Option-J` (Mac) or `Ctrl-Shift-J` (Windows, Linux, Chrome OS), or navigate to `View -> Developer -> Developer Tools` in the menu.
-* **Firefox**: Type `Cmd-Option-K` (Mac) or `Ctrl-Shift-K` (Windows, Linux, Chrome OS), or navigate to `Web Development -> Web Console` in the menu.
-* **Edge**: Follow the instructions for Chrome.
-* **Safari**: First, navigate to `Safari -> Preferences`. Click on the `Advanced` tab, then check `Show Develop Menu in menu bar`. Then, in the new `Develop` menu, navigate to `Show JavaScript Console`.
-* **Opera**: Navigate to `Tools -> Advanced -> Error Console` in the menu.
+Every modern browser includes Developer Tools. Open them and switch to the **Console** tab.
 
-### Identify The Error
+- **Chrome / Edge / Opera**: Press **F12** (or `Ctrl+Shift+I` / `Cmd+Option+I`) → select the **Console** tab.  
+- **Firefox**: Press **F12** (or `Ctrl+Shift+K` / `Cmd+Option+K`) → **Console** tab.  
+- **Safari**: First enable the Develop menu: `Safari → Settings → Advanced → Show Develop menu`. Some versions of Safari provide the option at `Safari → Settings → Advanced → Show features for web developer`. Then open **Develop → Show JavaScript Console**, or press `Cmd+Option+I`.
 
-Often, the text of the error will already be visible in the console. It may look similar to this:
+---
+
+## Step 4: Identify the Error {#identify-error}
+
+Errors will appear in the Console. A typical error message might look like:
 
 ![Screenshot of an example developer tools error page.](https://wordpress.org/documentation/files/2020/07/chrome-devtools.png)
 
-The image above shows the error to be in `jquery.js on line 2`, however remember to copy the whole stack information! Just saying what line is less helpful that showing context.
+Tips:
+- Copy the **full error message and stack trace** (not just the line number).  
+- If no errors appear, reload the page — some only occur on load.  
+- Note the **file name and line number** of the error (e.g., `jquery.js:2`).  
 
-If no errors are displayed, reload the page; many errors occur only when the page is first loaded.
+---
 
-## Step 4: Reporting
+## Step 5: Report the Issue {#report}
 
-Now that you have diagnosed your error, you should make your support forum request. Go to the [troubleshooting forum](https://wordpress.org/documentation/forum/how-to-and-troubleshooting).
+When requesting help, provide as much detail as possible. Go to the [WordPress.org Support Forums](https://wordpress.org/support/forums/) or the plugin/theme’s dedicated forum:  
+- Plugins: `https://wordpress.org/support/plugin/PLUGINNAME`  
+- Themes: `https://wordpress.org/support/theme/THEMENAME`  
 
-If your problem is with a specific theme or plugin, you can access their dedicated support forum by visiting https://wordpress.org/support/plugin/PLUGINNAME or https://wordpress.org/support/theme/THEMENAME.
+Include the following information:  
+- Browsers where the error occurs  
+- Whether enabling `SCRIPT_DEBUG` changed the behavior  
+- The full JavaScript error message (including stack trace)  
+- File name and line number where the error occurred  
+- Context — what action triggered the error  
+- A link to the affected page, if possible  
 
-Please include the below information:
+---
 
-* the browsers that you are experiencing the problem in
-* whether `SCRIPT_DEBUG` fixed the error or not
-* the JavaScript error
-* the location of the error – both the file name and the line number
-* the context of the error – including the whole error stack will help developers
-* If possible, a link to the web page showing the error
-
+## Summary {#summary}
+By confirming the issue across browsers, enabling `SCRIPT_DEBUG`, and checking the browser console, you can quickly diagnose JavaScript errors. Sharing this information in support requests makes it much easier for volunteers and developers to help resolve your problem.
