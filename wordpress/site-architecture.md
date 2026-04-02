@@ -539,7 +539,7 @@ Most of these are self-explanatory. Each set of links has its own CSS selector: 
 
 #### Pages and Link Categories
 
-The [Pages](https://wordpress.org/documentation/article/create-pages/) and [Links](https://codex.wordpress.org/Links_Manager) category, labeled "Blogroll", uses the [<?php get_links_list(); ?>](https://developer.wordpress.org/reference/functions/get_links_list/) and [<?php wp_list_pages(); ?>](https://developer.wordpress.org/reference/functions/wp_list_pages/) template tags which automatically generates a heading.
+The [Pages](https://wordpress.org/documentation/article/create-pages/) and [Links](https://codex.wordpress.org/Links_Manager) category, labeled "Blogroll", uses the [<?php get_links_list(); ?>](https://developer.wordpress.org/reference/functions/get_links_list/) and [<?php wp_list_pages(); ?>](https://developer.wordpress.org/reference/functions/wp_list_pages/) template tags which automatically generate a heading.
 
 For the **Links** category, it generates an h2 heading for that set of links. This means you can style the menu h2 heading to look differently from the rest of the headings, or, if you want them to all look the same, make sure that the menu h2 style _matches_ the rest of the category styles which are not automatically generated.
 
