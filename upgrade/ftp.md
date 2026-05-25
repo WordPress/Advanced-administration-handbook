@@ -1,35 +1,55 @@
 # Updating WordPress using FTP
 
-## FTP Clients
+## FTP clients
+
 There are two common ways to upload and manage files on your site:
 
-1. By using the file manager provided in your host’s control panel. Popular file managers: [cPanel](https://documentation.cpanel.net/display/64Docs/File+Manager), [DirectAdmin](https://www.site-helper.com/filemanager.html), [Plesk](https://www.plesk.com/).
-2. By using an FTP or SFTP client. This guide will show you how to use [FileZilla](https://filezilla-project.org/).
+1. Use the file manager provided by your host's control panel.
+2. Use an FTP, FTPS, or SFTP client.
 
-Neither option is automatically “better” — they’re different interfaces for working with the same kinds of files on your server.
+Both options are interfaces for working with files on your server. The best choice depends on the task, your access level, and what your host supports.
 
-- **When a control panel file manager is a good choice**: Quick, one-off tasks in a browser (renaming a file, uploading a single file, checking what’s on the server, or making a small emergency edit when you can’t install software on your computer).
-- **When an FTP/SFTP client is a good choice**: Larger or repeatable tasks (uploading many files/folders, replacing WordPress core during a manual update, uploading a theme/plugin, keeping a queue running, resuming interrupted transfers, or working faster with drag-and-drop and bulk operations).
+## Before transferring files
 
-### Is cPanel “better” than an FTP client?
-Not in general. cPanel’s file manager is convenient because it runs in your browser, but it can be slower and more tedious for bulk uploads. An FTP/SFTP client is often more efficient for moving lots of files and folders.
+Before uploading, replacing, or deleting WordPress files, make sure you have a current backup of both your site files and database. Also confirm the correct site directory with your host, especially if your account contains more than one site or staging environment.
 
-### Does an FTP/SFTP client “automate” the clunky parts of a file manager?
-Yes, they often do. Clients typically offer features like transfer queues, recursive folder uploads, overwrite prompts, resumable transfers, and easier bulk operations. The underlying job is the same (copy files to/from the server), but the tooling can be smoother.
+When replacing files, avoid changing file permissions unless you know they are incorrect. Incorrect permissions can prevent WordPress, themes, plugins, or the web server from reading or writing files.
 
-### Can one option upload things the other option can’t?
-Usually both can upload/download the same website files. Differences are typically **limits and features**, not capability:
+## When to use a control panel file manager
 
-- **Control panel limits**: Some hosts limit upload size, timeouts, or ZIP extraction features in the browser.
-- **FTP/SFTP client benefits**: Better handling of many small files, easier folder mirroring, and more reliable transfers on slow connections.
+A control panel file manager can be useful for quick, one-off tasks in a browser, such as:
 
-FTP or “File Transfer Protocol” has been the most widely used transfer protocol for over thirty years, but it sends your information in the clear, which is a security risk. Use SFTP (Secure File Transfer Protocol) if your host supports it. This transfers your files and your password over a secured connection, and should therefore be used instead of FTP whenever possible. Sometimes you have to contact your host to have SFTP enabled on your account.
+* Renaming a file.
+* Uploading a single file.
+* Checking which files are on the server.
+* Making a small emergency edit when you cannot install software on your computer.
 
-Why use FileZilla? Because, like WordPress, it is released under the GPL. So, it is not just free, it is staying that way, too. The following pages will show you how to setup and use Filezilla:
+For larger uploads, a browser-based file manager can be slower or more limited. Some hosts also limit upload size, timeout duration, or ZIP extraction features in the control panel.
 
-1. [Setting up FileZilla for Your Website](https://developer.wordpress.org/advanced-administration/upgrade/ftp/filezilla/)
-2. [Setting Permissions](https://developer.wordpress.org/advanced-administration/server/file-permissions/)
-3. [FileZilla’s Extensive Documentation](https://wiki.filezilla-project.org/Documentation)
+## When to use an FTP, FTPS, or SFTP client
 
-Want to try a different FTP or SFTP client? [Find more on Wikipedia](https://en.wikipedia.org/wiki/Comparison_of_FTP_clients).
+An FTP, FTPS, or SFTP client is often a better choice for larger or repeatable file-management tasks, such as:
 
+* Uploading many files or folders.
+* Replacing WordPress core files during a manual update.
+* Uploading a theme or plugin.
+* Using transfer queues.
+* Resuming interrupted transfers.
+* Working faster with drag-and-drop and bulk operations.
+* Viewing hidden files, such as `.htaccess`, when your client is configured to show them.
+
+FTP, or File Transfer Protocol, sends data in clear text. This is a security risk because your files and password are not encrypted during transfer.
+
+Use **SFTP** or **FTPS** instead of plain FTP whenever your host supports it. SFTP and FTPS transfer files over an encrypted connection. You may need to contact your host to confirm which protocol, host name, port, username, and authentication method you should use.
+
+## Using FileZilla
+
+FileZilla is a popular FTP, FTPS, and SFTP client. Like WordPress, it is released under the GPL.
+
+The following pages can help you set up and use FileZilla:
+
+1. [Setting up FileZilla for your website](https://developer.wordpress.org/advanced-administration/upgrade/ftp/filezilla/)
+2. [Setting permissions](https://developer.wordpress.org/advanced-administration/server/file-permissions/)
+3. [FileZilla documentation](https://wiki.filezilla-project.org/Documentation)
+
+Want to try a different FTP, FTPS, or SFTP client? You can compare available clients and choose one that supports your operating system and your host's required protocol.
