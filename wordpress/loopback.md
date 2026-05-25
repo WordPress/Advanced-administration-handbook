@@ -1,20 +1,20 @@
 # Loopbacks
 
-A loopback is when your own server or website tries to connect to it self.
+A loopback request is when WordPress tries to connect back to its own site.
 
-WordPress uses this functionality to trigger scheduled posts, and other scheduled events that plugins or themes may introduce.
+WordPress uses loopback requests to start WP-Cron, which runs scheduled posts and other scheduled events that plugins or themes may add.
 
-They are also used when making changes in the Plugin- or Theme-editor, by connecting back to the website and making sure that the changes made does not break your website.
+Loopback requests are also used by the built-in plugin and theme file editors. When you make a change, WordPress connects back to the site to check that the change does not break the site.
 
 ## Troubleshooting loopback issues {#troubleshooting-loopback-issues}
 
-If you are having problems with scheduled posts or other timed events not running, or seeing Site Health warnings about loopbacks failing, you may want to troubleshoot these.
+If scheduled posts or other timed events are not running, or if Site Health reports that loopback requests are failing, you may need to troubleshoot the site.
 
-The most common cause of loopback failures is a plugin or theme conflict, you should start by following the normal troubleshooting steps:
+The most common cause of loopback failures is a plugin or theme conflict. Start with the normal troubleshooting steps:
 
 ## Common troubleshooting steps {#common-troubleshooting-steps}
 
-* Deactivating **all plugins** (yes, all) to see if this resolves the problem. If this works, re-activate the plugins one by one until you find the problematic plugin(s). If you can't get into your admin dashboard, try resetting the plugins folder by [SFTP/FTP](https://developer.wordpress.org/advanced-administration/upgrade/ftp/) or phpMyAdmin (read [How to deactivate all plugins when you can’t log in to wp-admin](https://wordpress.org/documentation/article/faq-troubleshooting/) if you need help). Sometimes, an apparently inactive plugin can still cause problems. Also remember to deactivate any plugins in the `mu-plugins` folder. The easiest way is to rename that folder to `mu-plugins-old`.
-* Switching to a Twenty-Something theme to rule out any theme-specific problems. If you can't log in to change themes, you can remove the theme folders via [SFTP/FTP](https://developer.wordpress.org/advanced-administration/upgrade/ftp/) so the only one is `twentytwentythree`. That will force your site to use it.
-* If you can install plugins, install the plugin [Health Check](https://wordpress.org/plugins/health-check/). On the troubleshooting tab, you can click the button to disable all plugins and change the theme for you, while you're still logged in, **without affecting normal visitors to your site**.
-
+- Deactivate **all plugins** to see whether this resolves the problem. If it does, reactivate the plugins one by one until you find the plugin causing the issue. If you cannot access your admin dashboard, try resetting the plugins folder by [SFTP/FTP](https://developer.wordpress.org/advanced-administration/upgrade/ftp/) or phpMyAdmin. For more help, read [How to deactivate all plugins when you can't log in to wp-admin](https://wordpress.org/documentation/article/faq-troubleshooting/). Sometimes, an apparently inactive plugin can still cause problems. Also remember to deactivate any plugins in the `mu-plugins` folder. The easiest way is to temporarily rename that folder to `mu-plugins-old`.
+- Switch to a bundled default WordPress theme to rule out theme-specific problems. If you cannot log in to change themes, you can temporarily move or rename the active theme folder by [SFTP/FTP](https://developer.wordpress.org/advanced-administration/upgrade/ftp/) so WordPress can fall back to an installed default theme.
+- If you can install plugins, install the [Health Check & Troubleshooting](https://wordpress.org/plugins/health-check/) plugin. On the troubleshooting tab, you can disable all plugins and switch themes for your own logged-in session without affecting normal visitors to your site.
+- If the problem continues after disabling plugins and switching themes, contact your hosting provider. Ask whether server-side security rules, firewall rules, DNS configuration, SSL configuration, or HTTP authentication are blocking the site from requesting its own URL.
