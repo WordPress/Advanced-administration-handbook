@@ -301,7 +301,7 @@ Core updates are subdivided into three types:
 2. Minor core updates, such as maintenance and security releases
 3. Major core release updates
 
-Before WordPress 5.6, by default, every site had automatic updates enabled for minor core releases and translation files only. Starting WordPress 5.6 and above, every new site has automatic enabled for both minor and major releases.
+Before WordPress 5.6, every site had automatic updates enabled for minor core releases and translation files only by default. Starting with WordPress 5.6, new installations have automatic updates enabled for both minor and major core releases by default, unless WordPress detects a version control checkout. Existing installations keep the previous behavior unless major core auto-updates are enabled by a site administrator, constant, or filter.
 
 Sites already running a development version also have automatic updates to further development versions enabled by default.
 
@@ -331,17 +331,15 @@ To enable automatic updates for major releases or development purposes, the plac
 define( 'WP_AUTO_UPDATE_CORE', true );
 ```
 
-`WP_AUTO_UPDATE_CORE` can be defined with one of three values, each producing a different behavior:
+`WP_AUTO_UPDATE_CORE` can be defined with one of three values, each producing a different behavior. When set, the constant overrides the automatic update setting stored by the Updates screen.
 
-* Value of `true` – Development, minor, and major updates are all **enabled**
-* Value of `false` – Development, minor, and major updates are all **disabled**
-* Value of `'minor'` – Minor updates are **enabled**, development, and major updates are **disabled**
+* Value of `true` - Development, minor, and major updates are all **enabled**
+* Value of `false` - Development, minor, and major updates are all **disabled**
+* Value of `'minor'` - Minor updates are **enabled**, development, and major updates are **disabled**
 
 Note that only sites already running a development version will receive development updates.
 
-For development sites, the default value of `WP_AUTO_UPDATE_CORE` is `true`. For other sites, the default value of `WP_AUTO_UPDATE_CORE` is `minor`.
-
-Starting WordPress 5.6, the default value of `WP_AUTO_UPDATE_CORE` for new WordPress installations is `true`. For new website, the default value of `WP_AUTO_UPDATE_CORE` is `minor`.
+If `WP_AUTO_UPDATE_CORE` is not defined, WordPress uses the site's current automatic update settings and the default behavior for that installation type. Existing installations receive minor core updates by default. Fresh installations created on WordPress 5.6 or later receive both minor and major core updates by default, unless WordPress detects a version control checkout. Sites running a development version receive development updates by default.
 
 #### Configuration via Filters {#configuration-via-filters}
 
@@ -456,4 +454,3 @@ apply_filters( 'auto_core_update_send_email', true, $type, $core_update, $result
 * More examples at [https://make.wordpress.org/core/2013/10/25/the-definitive-guide-to-disabling-auto-updates-in-wordpress-3-7/](https://make.wordpress.org/core/2013/10/25/the-definitive-guide-to-disabling-auto-updates-in-wordpress-3-7/)
 * More information here: [How Do I Configure Automatic Updates in WordPress 3.7?](https://wordpress.stackexchange.com/questions/120081/how-do-i-configure-automatic-updates-in-wordpress-3-7)
 * Info about wp-cli conflict: [https://github.com/wp-cli/wp-cli/issues/1310](https://github.com/wp-cli/wp-cli/issues/1310)
-
