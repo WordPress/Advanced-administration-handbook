@@ -8,6 +8,12 @@ In this part of the Advanced Administration Handbook, we will address various as
 
 When it comes to [debugging a WordPress site](https://developer.wordpress.org/advanced-administration/debug/debug-wordpress/), there are various methods and techniques to use, including turning on debugging in the WordPress configuration file, using error logs and the use of debugging plugins. These techniques can help identify and resolve various types of errors, such as PHP errors and database errors.
 
+## Testing and step debugging
+
+Automated tests and step debugging are useful when you need to investigate problems in code instead of only reading log output. [PHPUnit](https://make.wordpress.org/core/handbook/testing/automated-testing/phpunit/) is used for automated PHP tests in WordPress development, and [WP-CLI can scaffold plugin test files](https://developer.wordpress.org/cli/commands/scaffold/plugin-tests/) for plugin projects.
+
+[Xdebug](https://xdebug.org/docs/step_debug) can be used with a compatible editor or IDE to step through PHP code, inspect variables, and follow the call stack while a request is running.
+
 ## JavaScript Debugging
 
 [JavaScript debugging](https://developer.wordpress.org/advanced-administration/debug/debug-javascript/) is essential for ensuring that the site's front-end interactions and user experience are functioning correctly. Using browser dev tools to inspect the source code and diagnose issues with JavaScript along with a few more tips are provided in this section.
@@ -19,4 +25,3 @@ When it comes to [debugging a WordPress site](https://developer.wordpress.org/ad
 ## Test-driving
 
 [Test-driving](https://developer.wordpress.org/advanced-administration/debug/test-driving/) refers to the process of testing a website before making it live. This process allows developers to identify and resolve any issues or bugs before the site is made available to the public. Test-driving is typically performed in a sandbox environment. Creating a sandbox environment is covered in this section.
-
