@@ -146,3 +146,12 @@ There are many [debugging plugins](https://wordpress.org/plugins/search/debug/) 
 
 For example, [Debug Bar](https://wordpress.org/plugins/debug-bar/) adds a debug menu to the admin bar that shows query, cache, and other helpful debugging information. When WP_DEBUG is enabled, it also tracks PHP Warnings and Notices to make them easier to find.
 
+## Automated tests and step debugging
+
+Logs and debugging plugins are useful for finding runtime errors, but some problems are easier to investigate with automated tests or a step debugger.
+
+[PHPUnit](https://make.wordpress.org/core/handbook/testing/automated-testing/phpunit/) is used for automated PHP tests in WordPress development. Tests can help confirm that code behaves as expected and can prevent the same bug from returning later. For plugin projects, [WP-CLI can scaffold plugin test files](https://developer.wordpress.org/cli/commands/scaffold/plugin-tests/).
+
+[Xdebug](https://xdebug.org/docs/step_debug) is a PHP extension that can be used for step debugging with a compatible editor or IDE. It lets you pause code while it runs, inspect variables, and follow the call stack. This can be helpful when a log message does not show enough context to explain a problem.
+
+Use these tools in a local development or staging environment, not directly on a production site.
