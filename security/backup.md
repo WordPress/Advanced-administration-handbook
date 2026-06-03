@@ -48,7 +48,7 @@ There are two parts to backing up your WordPress site: **Database** and **Files*
 
 For step-by-step instructions, see:
 
-- [Backing Up Your WordPress Files](https://developer.wordpress.org/advanced-administration/security/backup-files/)
+- [Backing Up Your WordPress Files](https://developer.wordpress.org/advanced-administration/security/backup/files/)
 - [Backing Up Your Database](https://developer.wordpress.org/advanced-administration/security/backup/database/)
 
 #### Database vs files (why both are needed)
