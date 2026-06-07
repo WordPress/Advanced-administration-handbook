@@ -119,9 +119,9 @@ Limit total size of files uploaded to [ 50 ] MB.
 
 **Upload file types**
 
-Default is `jpg jpeg png gif webp mov avi mpg 3gp 3g2 midi mid pdf doc ppt odt pptx docx pps ppsx xls xlsx key mp3 ogg flac m4a wav mp4 m4v webm ogv flv`.
+The default list is populated by WordPress during network setup from `get_allowed_mime_types()`, which covers common image, video, audio, text, document, archive, and Office formats. The exact set of extensions varies between WordPress versions as new types are added; to see the current default for your installation, check the `upload_filetypes` value in the `wp_sitemeta` table or inspect [`wp_get_mime_types()`](https://github.com/WordPress/WordPress/blob/master/wp-includes/functions.php) in WordPress core.
 
-Note: Adding arbitrary file types will not work unless a corresponding function is also hooked to [upload_mimes](https://developer.wordpress.org/reference/hooks/upload_mimes/) filter. See the `wp_get_mime_types` function in [wp-includes/functions.php](https://core.trac.wordpress.org/browser/trunk/src/wp-includes/functions.php) for the current default set of supported mime-types / file extensions. Adding mime types in the 'upload file types' field not listed in the default set will **NOT** work unless you've added them using the [upload_mimes](https://developer.wordpress.org/reference/hooks/upload_mimes/) filter! Uploading files with mime types not supported (without adding them using the filter) will fail with the message "Sorry, this file type is not permitted for security reasons".
+Note: Adding arbitrary file types will not work unless a corresponding function is also hooked to [upload_mimes](https://developer.wordpress.org/reference/hooks/upload_mimes/) filter. See the `wp_get_mime_types` function in [wp-includes/functions.php](https://github.com/WordPress/WordPress/blob/master/wp-includes/functions.php) for the current default set of supported mime-types / file extensions. Adding mime types in the 'upload file types' field not listed in the default set will **NOT** work unless you've added them using the [upload_mimes](https://developer.wordpress.org/reference/hooks/upload_mimes/) filter! Uploading files with mime types not supported (without adding them using the filter) will fail with the message "Sorry, this file type is not permitted for security reasons".
 
 **Max upload file size**
 
