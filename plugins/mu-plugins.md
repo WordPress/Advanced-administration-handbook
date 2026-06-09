@@ -8,7 +8,7 @@ Web hosts commonly use mu-plugins to add support for host-specific features, esp
 
 To change the default directory manually, define `WPMU_PLUGIN_DIR` and `WPMU_PLUGIN_URL` in [wp-config.php](https://wordpress.org/documentation/article/editing-wp-config-php/).
 
-## When to use must-use plugins
+## When to Use Must-use Plugins
 
 Must-use plugins are useful for code that should always run and should not be disabled accidentally from wp-admin.
 
@@ -19,7 +19,7 @@ Common use cases include:
 * Security, performance, or maintenance functionality that should remain active for the whole site.
 * Network-wide functionality on Multisite installations.
 
-## When not to use must-use plugins
+## When Not to Use Must-use Plugins
 
 Must-use plugins are not a replacement for normal plugins in every situation. Avoid using the mu-plugins directory for plugins that:
 
@@ -57,23 +57,25 @@ wp-content/
 require WPMU_PLUGIN_DIR . '/my-plugin/my-plugin.php';
 ```
 
-## Maintenance and security
+## Maintenance and Security
 
 Because must-use plugins always load, keep them small, reviewed, and documented. A broken mu-plugin can affect the whole site, and a compromised mu-plugin can be harder to notice than a normal plugin because it cannot be disabled from the main plugins list.
 
 Keep a record of why each mu-plugin exists, who maintains it, and how it should be updated. If a host or agency adds mu-plugins to a site, site owners should know that those files exist and that they may affect site behavior.
 
-## History and naming
+## History and Naming
 
-The _mu-plugins_ directory was originally implemented by WPMU (Multi-User) to offer site admins an easy way to activate plugins by default on all blogs in the network. This was needed because, at the time, the multi-user-specific code did not offer ways to manage this from the site admin section. Today, Multisite includes features to manage plugins from inside the admin.
+The _mu-plugins_ directory was originally implemented by WPMU, or WordPress MultiUser, to offer site admins an easy way to activate plugins by default on all blogs in the network. This was needed because, at the time, the multi-user-specific code did not offer ways to manage this from the site admin section.
+
+WordPress MultiUser was later merged into WordPress core, and the feature is now known as Multisite. Today, Multisite includes features to manage plugins from inside the admin.
 
 The code handling `/mu-plugins/` was merged into the main WordPress code on March 7, 2009 with [this changeset](https://core.trac.wordpress.org/changeset/10737), before the WPMU codebase was initially merged. This made autoloaded plugins available to all WordPress sites, whether or not Multisite was enabled.
 
-In this process, the name "mu plugins" became a misnomer because it no longer applied exclusively to multisite installations. Despite this, the name was kept and reinterpreted to mean "must-use plugins". These are plugins that must always be used, so they are autoloaded regardless of the settings in the **Plugins** screen of wp-admin.
+In this process, the name "mu plugins" became a misnomer because it no longer applied exclusively to Multisite installations. Despite this, the name was kept and reinterpreted to mean "must-use plugins". These are plugins that must always be used, so they are autoloaded regardless of the settings in the **Plugins** screen of wp-admin.
 
 Thus, "must-use" is effectively a [backronym](https://en.wikipedia.org/wiki/Backronym).
 
-## Source code
+## Source Code
 
 * [`get_mu_plugins()`](https://developer.wordpress.org/reference/functions/get_mu_plugins/) checks the mu-plugins directory and retrieves all mu-plugin files with plugin data.
 * [`wp_get_mu_plugins()`](https://developer.wordpress.org/reference/functions/wp_get_mu_plugins/) retrieves an array of must-use plugin files.
