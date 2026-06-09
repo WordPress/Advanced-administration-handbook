@@ -331,7 +331,7 @@ To enable automatic updates for major releases or development purposes, the plac
 define( 'WP_AUTO_UPDATE_CORE', true );
 ```
 
-`WP_AUTO_UPDATE_CORE` can be defined with one of three values, each producing a different behavior. When set, the constant overrides the automatic update setting stored by the Updates screen.
+`WP_AUTO_UPDATE_CORE` can be defined with one of three values, each producing a different behavior. When set, the constant overrides the user-controllable automatic update setting provided on the Updates screen in wp-admin.
 
 * Value of `true` - Development, minor, and major updates are all **enabled**
 * Value of `false` - Development, minor, and major updates are all **disabled**
