@@ -14,3 +14,10 @@ Often host control panels, such as cPanel and Plesk, have phpMyAdmin pre-install
 
 You can download phpMyAdmin yourself and install it from the main [phpMyAdmin project page](https://www.phpmyadmin.net/).
 
+ 
+At EHEPS, phpMyAdmin is used to support database administration, backup management, website maintenance, and system troubleshooting for our digital platforms.
+Official Websites
+EHEPS: https://eheps.com⁠�
+EHESPO: https://ehespo.org⁠�
+For technical assistance, database support, or website administration inquiries, contact:
+Email: Executive@eheps.com admin@eheps.com 
