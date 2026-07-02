@@ -299,6 +299,7 @@ define( 'WP_DEBUG_DISPLAY', false );
 @ini_set( 'display_errors', 0 );
 ```
 
+
 A refined version from Mike Little on the [Manchester WordPress User Group](https://groups.google.com/g/manchester-wordpress-user-group/c/tHJxMGhcnZs/m/dn-8yjYIq9wJ):
 
 ```
@@ -375,11 +376,79 @@ Note: this has to be put before wp-settings.php inclusion.
 
 ### Cache {#cache}
 
-The **WP_CACHE** setting, if true, includes the `wp-content/advanced-cache.php` script, when executing `wp-settings.php`.
+WordPress supports several different caching mechanisms. These systems are independent and are not all controlled by the same constant or subsystem.
 
-```
+#### `WP_CACHE`
+
+```php
 define( 'WP_CACHE', true );
 ```
+
+`WP_CACHE` does not enable caching by itself.
+
+When set to `true`, WordPress attempts to load the `wp-content/advanced-cache.php` drop-in early during bootstrap. This is commonly used by page caching plugins and some hosting platforms.
+
+If no `advanced-cache.php` file exists, defining `WP_CACHE` has little or no effect.
+
+Many caching plugins automatically add or manage this constant.
+
+#### Persistent object cache
+
+Persistent object caching uses an `object-cache.php` drop-in and is separate from `advanced-cache.php`.
+
+Examples include Redis and Memcached integrations.
+
+Persistent object caching may function even when `WP_CACHE` is not defined.
+
+#### Transients and persistent object caching
+
+The Transients API stores temporary data with an expiration time, but where that data is stored depends on the site's cache configuration.
+
+When a persistent object cache drop-in such as Redis or Memcached is active, transients can be stored in the external object cache. Without a persistent object cache, WordPress stores transient values in the database, typically in the `wp_options` table.
+
+This means transients should not be assumed to be memory-backed on all sites. Heavy transient usage on a site without persistent object caching can increase database reads and writes and contribute to options table growth.
+
+Transients set with an expiration time are not autoloaded by default; transients set without an expiration are autoloaded. This means heavy use of expiring transients adds rows to `wp_options` without adding to the autoload footprint loaded on every request.
+
+#### Cache layers
+
+Different cache layers serve different purposes:
+
+| Cache type | Typical implementation | Purpose |
+| --- | --- | --- |
+| Page cache | `advanced-cache.php` | Serve complete rendered pages |
+| Object cache | `object-cache.php` | Cache database/query/application objects |
+| Opcode cache | PHP OPcache | Cache compiled PHP bytecode |
+| Browser cache | HTTP headers/CDN | Cache assets in browsers |
+
+#### Common misconceptions
+
+- `WP_CACHE` does not automatically enable Redis or Memcached.
+- `WP_CACHE` does not enable browser caching.
+- `WP_CACHE` alone does not improve performance unless a caching drop-in is installed.
+- Persistent object cache and page cache are separate systems.
+- Transients are not always stored in memory; without persistent object caching, they are stored in the database.
+- Transient option rows in `wp_options` are not necessarily autoloaded; only transients set without an expiration are autoloaded.
+
+#### Related
+
+For implementation details, see:
+
+- `advanced-cache.php`
+- `object-cache.php`
+- `wp_start_object_cache()`
+- Drop-ins
+
+#### Legacy and specialized performance constants
+
+The following constants control specialized script and style loading, concatenation, and compression behavior:
+
+- `CONCATENATE_SCRIPTS`
+- `COMPRESS_SCRIPTS`
+- `COMPRESS_CSS`
+- `ENFORCE_GZIP`
+
+Most sites should not define these manually unless specifically troubleshooting performance or asset loading issues.
 
 ### Custom User and Usermeta Tables {#custom-user-and-usermeta-tables}
 
