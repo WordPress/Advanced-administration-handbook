@@ -1,4 +1,4 @@
-# Must-use plugins
+# Must-Use Plugins
 
 Must-use plugins, also known as mu-plugins, are plugins installed in a special directory inside the content folder. They are automatically enabled on all sites in the installation.
 
@@ -8,7 +8,7 @@ Web hosts commonly use mu-plugins to add support for host-specific features, esp
 
 To change the default directory manually, define `WPMU_PLUGIN_DIR` and `WPMU_PLUGIN_URL` in [wp-config.php](https://wordpress.org/documentation/article/editing-wp-config-php/).
 
-## When to Use Must-use Plugins
+## When to Use Must-Use Plugins
 
 Must-use plugins are useful for code that should always run and should not be disabled accidentally from wp-admin.
 
@@ -19,7 +19,7 @@ Common use cases include:
 * Security, performance, or maintenance functionality that should remain active for the whole site.
 * Network-wide functionality on Multisite installations.
 
-## When Not to Use Must-use Plugins
+## When Not to Use Must-Use Plugins
 
 Must-use plugins are not a replacement for normal plugins in every situation. Avoid using the mu-plugins directory for plugins that:
 
