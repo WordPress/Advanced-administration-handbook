@@ -146,7 +146,7 @@ There are many [debugging plugins](https://wordpress.org/plugins/search/debug/) 
 
 For example, [Debug Bar](https://wordpress.org/plugins/debug-bar/) adds a debug menu to the admin bar that shows query, cache, and other helpful debugging information. When WP_DEBUG is enabled, it also tracks PHP Warnings and Notices to make them easier to find.
 
-## Automated tests and step debugging
+## Automated Tests and Step Debugging
 
 Logs and debugging plugins are useful for finding runtime errors, but some problems are easier to investigate with automated tests or a step debugger.
 

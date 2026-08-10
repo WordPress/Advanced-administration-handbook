@@ -8,7 +8,7 @@ In this part of the Advanced Administration Handbook, we will address various as
 
 When it comes to [debugging a WordPress site](https://developer.wordpress.org/advanced-administration/debug/debug-wordpress/), there are various methods and techniques to use, including turning on debugging in the WordPress configuration file, using error logs and the use of debugging plugins. These techniques can help identify and resolve various types of errors, such as PHP errors and database errors.
 
-## Testing and step debugging
+## Testing and Step Debugging
 
 Automated tests and step debugging are useful when you need to investigate problems in code instead of only reading log output. [PHPUnit](https://make.wordpress.org/core/handbook/testing/automated-testing/phpunit/) is used for automated PHP tests in WordPress development, and [WP-CLI can scaffold plugin test files](https://developer.wordpress.org/cli/commands/scaffold/plugin-tests/) for plugin projects.
 
