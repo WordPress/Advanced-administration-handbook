@@ -12,7 +12,7 @@ For more information about FileZilla, view the [list of features](https://filezi
 
 It's fast, stable, easy to use, and free. FileZilla can upload or download files between your local system and your web server. Whenever possible, use **SFTP** or **FTPS** instead of plain FTP so your connection is encrypted.
 
-## Setting up the options
+## Setting Up the Options
 
 You will need the following details from your host (for FTP, FTPS, or SFTP):
 
