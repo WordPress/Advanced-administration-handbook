@@ -2,7 +2,7 @@
 
 ## Network Admin
 
-**The Network Admin Screen** is the central access point to the various options necessary to administer the [Multisite (or Network)](https://wordpress.org/documentation/article/glossary#multisite) capabilities of WordPress. The information below is directed specifically for Network Administrators. Other users should see [Administration Screens](https://wordpress.org/documentation/article/administration-screens/) for information on using WordPress.
+**The Network Admin Screen** is the central access point to the various options necessary to administer the [Multisite (or Network)](https://wordpress.org/documentation/article/wordpress-glossary/#multisite) capabilities of WordPress. The information below is directed specifically for Network Administrators. Other users should see [Administration Screens](https://wordpress.org/documentation/article/administration-screens/) for information on using WordPress.
 
 The Network Admin link is only visible after you [Create A Network](https://developer.wordpress.org/advanced-administration/multisite/create-network/). The menu will appear in the upper right of the menu bar, and is only visible to super admins. It has been moved to a separate location with the admin area, and is available from the admin area of any site, as long as you are logged in as the super admin user.
 
@@ -18,7 +18,7 @@ The Dashboard is information central and tells you about your network sites, pro
 
 Use the [Network Admin Sites Screen](https://developer.wordpress.org/advanced-administration/multisite/admin/#network-admin-sites-screen) to review and manage the various sites that are part of your network. These sites will be either subdirectory or subdomain sites as determined by how the network was configured. From this screen you can access Info, Users, Themes, and Settings for each site in your Network.
 
-Use the [Add New Sites Screen](https://developer.wordpress.org/advanced-administration/multisite/admin/#add-site) to add new sites to your network.
+Use the [Add Site Screen](https://developer.wordpress.org/advanced-administration/multisite/admin/#add-site) to add new sites to your network.
 
 ### Users {#users}
 
@@ -52,12 +52,12 @@ The [Network Admin Updates Screen](https://developer.wordpress.org/advanced-adm
 
 ## Network Admin Sites Screen
 
-The **Network Admin Sites Screen** allows you to add a new site and control existing sites on your [network](https://wordpress.org/documentation/article/glossary#network).
+The **Network Admin Sites Screen** allows you to add a new site and control existing sites on your [network](https://wordpress.org/documentation/article/wordpress-glossary/#network).
 
 [![](https://i1.wp.com/wordpress.org/support/files/2019/02/superadmin-sites.png?fit=1277%2C443&ssl=1)](https://wordpress.org/documentation/superadmin-sites-2/)
 _Super Admin Sites_
 
-### Sites {#sites}
+### Sites {#sites-list}
 
 Lists all sites on this network.  
 - **Edit**: Click this link to go to Edit Site Screen to view/edit Settings of the site and add users.  
