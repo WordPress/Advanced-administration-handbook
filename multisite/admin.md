@@ -54,8 +54,8 @@ The [Network Admin Updates Screen](https://developer.wordpress.org/advanced-adm
 
 The **Network Admin Sites Screen** allows you to add a new site and control existing sites on your [network](https://wordpress.org/documentation/article/glossary#network).
 
-[![](https://i1.wp.com/wordpress.org/support/files/2019/02/superadmin-sites.png?fit=1277%2C443&ssl=1)](https://wordpress.org/documentation/superadmin-sites-2/)
-_Super Admin Sites_
+![The Network Admin Sites screen listing four sites in the network, each with its URL, last updated date, registration date, and user count](https://raw.githubusercontent.com/WordPress/Advanced-administration-handbook/main/assets/network-admin-sites.png)
+_Network Admin Sites screen_
 
 ### Sites {#sites}
 
@@ -85,8 +85,8 @@ The Edit Site screen is split up into tabs for easier data management. It is str
 
 This data is the basic information of the site. Domain, registration date, time of last update, and if it's public or mature.
 
-[![](https://i2.wp.com/wordpress.org/support/files/2019/02/superadmin-sites-edit.png?fit=1277%2C633&ssl=1)](https://wordpress.org/documentation/superadmin-sites-edit/)
-_Edit Site – Super Admin_
+![The Info tab of the Edit Site screen, showing the Site Address (URL), Registered and Last Updated dates, and the Public, Archived, Spam, Flagged for Deletion, and Mature attribute checkboxes](https://raw.githubusercontent.com/WordPress/Advanced-administration-handbook/main/assets/network-admin-edit-site.png)
+_Edit Site – Info tab_
 
 - **Users**: Users lists all the users of the site. It also has options to add new users, via either "Add Existing User" (i.e. a user on your network already) or "Add New User" (i.e. a new user to the network).
 - **Themes**: Themes shows all the themes on the site. Network enabled themes are not shown on this screen.  
@@ -100,7 +100,8 @@ The **Network Admin Updates Screen** controls update process in the network. I
 
 On this [Available Updates Screen](#available-updates), you can update to the latest version of WordPress, as well as update your themes and plugins from the [WordPress.org](https://wordpress.org/) repositories.
 
-[![](https://wordpress.org/documentation/files/2019/04/network-available-updates-1024x590.png)](https://wordpress.org/documentation/files/2019/04/network-available-updates.png)
+![The network Available Updates screen, showing the current WordPress version, a plugin with a new version available, and the Themes section](https://raw.githubusercontent.com/WordPress/Advanced-administration-handbook/main/assets/network-admin-available-updates.png)
+_Available Updates screen_
 
 #### How to Update {#how-to-update}
 
@@ -114,7 +115,8 @@ On this [Available Updates Screen](#available-updates), you can update to the l
 
 This [Upgrade Network Screen](#upgrade-network) is used to upgrade all the sites in a [Network](https://wordpress.org/documentation/article/glossary#network) after a [WordPress upgrade](#available-updates) is completed. After a WordPress upgrade, you are reminded to visit the **Upgrade Networks** with a message such as, "Thank you for Updating! Please visit the Upgrade Network page to upgrade all of your sites."
 
-[![](https://i1.wp.com/wordpress.org/support/files/2019/04/superadmin-update.png?fit=1024%2C584&ssl=1)](https://wordpress.org/documentation/files/2019/04/superadmin-update.png)
+![The Upgrade Network screen with its Upgrade Network button, listed under the Dashboard menu alongside Home and Updates](https://raw.githubusercontent.com/WordPress/Advanced-administration-handbook/main/assets/network-admin-upgrade-network.png)
+_Upgrade Network screen_
 
 The Upgrade Networks feature will step through each site, five at a time, and make sure any database changes are applied. This menu item is only visible if you are logged in as a Super Admin role user. You can access it from any site in the network.
 
