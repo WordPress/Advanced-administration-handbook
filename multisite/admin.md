@@ -72,8 +72,9 @@ Lists all sites on this network.
 
 Fill in the items and click the _Add Site_ button to add a new site into your network.
 
-- **Site Address**: Only the characters a-z and 0-9 permitted.  
+- **Site Address (URL)**: Only lowercase letters (a-z), numbers, and hyphens are allowed.
 - **Site Title**: Name of the site.  
+- **Site Language**: The language for the new site's admin area. It defaults to the network's language.
 - **Admin Email**: Email address of the administrator of the new site. A new user will be created if the above email address is not in the database.  
 The username and password will be mailed to this email address.
 
