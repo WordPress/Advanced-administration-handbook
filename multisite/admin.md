@@ -48,7 +48,7 @@ Also, [Network Setup](https://wordpress.org/documentation/article/network-admin
 
 ### Updates {#updates}
 
-The [Network Admin Updates Screen](https://developer.wordpress.org/advanced-administration/multisite/admin/) controls update process of both network and sites. In the [Available Updates Screen](https://developer.wordpress.org/advanced-administration/multisite/admin/#available-updates), you can update WordPress core, themes and plugins. After you updates to the latest version of WordPress, you can upgrade all the sites on your network from [Upgrade Network Screen](https://wordpress.org/documentation/article/network-admin-updates-screen/#upgrade-network).  
+The [Network Admin Updates Screen](https://developer.wordpress.org/advanced-administration/multisite/admin/#network-admin-updates-screen) controls the update process for both the network and its sites. In the [Available Updates Screen](https://developer.wordpress.org/advanced-administration/multisite/admin/#available-updates), you can update WordPress core, themes and plugins. After you update to the latest version of WordPress, you can upgrade all the sites on your network from the [Upgrade Network Screen](https://developer.wordpress.org/advanced-administration/multisite/admin/#upgrade-network).
 
 ## Network Admin Sites Screen
 
@@ -94,11 +94,11 @@ _Edit Site – Super Admin_
 
 ## Network Admin Updates Screen
 
-The **Network Admin Updates Screen** controls update process in the network. If an update is available, you'll see a notification appear in the Toolbar and navigation menu. Keeping your site updated is important for security. It also makes the internet a safer place for you and your readers. There are two screens under the [Network Admin](https://developer.wordpress.org/advanced-administration/multisite/admin/) > [Updates](https://developer.wordpress.org/advanced-administration/multisite/admin/#updates). In the default [Available Updates Screen](#available-updates), you can update WordPress, themes and plugins. After you updates to the latest version of WordPress, you can upgrade all the sites on your network from [Upgrade Network Screen](#upgrade-nework).
+The **Network Admin Updates Screen** controls the update process in the network. If an update is available, you'll see a notification appear in the Toolbar and navigation menu. Keeping your site updated is important for security. It also makes the internet a safer place for you and your readers. Both update screens sit under the Network Admin **Dashboard** menu: **Updates** and **Upgrade Network**. On the [Available Updates Screen](#available-updates), you can update WordPress, themes and plugins. After you update to the latest version of WordPress, you can upgrade all the sites on your network from the [Upgrade Network Screen](#upgrade-network).
 
 ### Available Updates {#available-updates}
 
-On this [Available Updates Screen](#available-updates), you can update to the latest version of WordPress, as well as update your themes and plugins from the [WordPress.org](https://wordpress.org/) repositories.
+On the [Available Updates Screen](#available-updates), you can update to the latest version of WordPress, along with the themes and plugins installed on the network. WordPress detects updates for anything hosted in the [WordPress.org](https://wordpress.org/) theme and plugin directories. Themes and plugins from elsewhere appear here too, as long as their authors supply update information.
 
 [![](https://wordpress.org/documentation/files/2019/04/network-available-updates-1024x590.png)](https://wordpress.org/documentation/files/2019/04/network-available-updates.png)
 
@@ -108,17 +108,17 @@ On this [Available Updates Screen](#available-updates), you can update to the l
 
 **Themes and Plugins**: To update individual themes or plugins from this screen, use the checkboxes to make your selection, then click on the appropriate "Update" button. To update all of your themes or plugins at once, you can check the box at the top of the section to select all before clicking the update button.
 
-**Translation**: Translation files are updated when it is needed. Click the "Update Translation" button when you are notified that a new translation is available.
+**Translation**: Translation files are updated when it is needed. Click the "Update Translations" button when you are notified that a new translation is available.
 
 ### Upgrade Network {#upgrade-network}
 
-This [Upgrade Network Screen](#upgrade-network) is used to upgrade all the sites in a [Network](https://wordpress.org/documentation/article/glossary#network) after a [WordPress upgrade](#available-updates) is completed. After a WordPress upgrade, you are reminded to visit the **Upgrade Networks** with a message such as, "Thank you for Updating! Please visit the Upgrade Network page to upgrade all of your sites."
+This [Upgrade Network Screen](#upgrade-network) is used to upgrade all the sites in a [Network](https://wordpress.org/documentation/article/wordpress-glossary/#network) after a [WordPress upgrade](#available-updates) is completed. After a WordPress upgrade, you are reminded to visit the **Upgrade Network** screen with the message, "Thank you for Updating! Please visit the Upgrade Network page to update all your sites."
 
 [![](https://i1.wp.com/wordpress.org/support/files/2019/04/superadmin-update.png?fit=1024%2C584&ssl=1)](https://wordpress.org/documentation/files/2019/04/superadmin-update.png)
 
-The Upgrade Networks feature will step through each site, five at a time, and make sure any database changes are applied. This menu item is only visible if you are logged in as a Super Admin role user. You can access it from any site in the network.
+The Upgrade Network feature will step through each site, five at a time, and make sure any database changes are applied. This menu item is only visible if you are logged in as a Super Admin role user. You can access it from any site in the network.
 
-If for any reason a site does not get upgraded, each site should be upgraded when the admin for that site logs in to the administration for that site. Sites that have been deactivated will not be upgraded by this process, however, if a site is reactivated, the site will get upgraded when an admin for that site logs in to the dashboard for that site.
+If for any reason a site does not get upgraded, each site should be upgraded when the admin for that site logs in to the administration for that site. Sites that are deactivated, archived, or marked as spam are skipped. If such a site is restored, it gets upgraded when an admin for that site logs in to its dashboard.
 
 **Upgrade Network** Click this button to start the upgrade process. Clicking the Upgrade Network button will step through each site in the network, five at a time, and make sure any database updates are applied.
 
