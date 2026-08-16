@@ -42,9 +42,9 @@ Using the [Plugin Editor](https://codex.wordpress.org/Network_Admin_Plugins_Scr
 
 ### Settings {#settings}
 
-The [Network Admin Settings Screen](https://wordpress.org/documentation/article/network-admin-settings-screen/) is where a network admin sets and changes settings for the network as a whole. The first site is the main site in the network and network settings are pulled from that original site's options.
+The [Network Admin Settings Screen](https://developer.wordpress.org/advanced-administration/multisite/admin/settings/) (Settings > Network Settings) is where a network admin sets options for the network as a whole. WordPress stores these as network options, by default in the `wp_sitemeta` table, and reads them with `get_site_option()` rather than from the main site's options.
 
-Also, [Network Setup](https://wordpress.org/documentation/article/network-admin-settings-screen/) information that was used when [Creating the Network](https://developer.wordpress.org/advanced-administration/multisite/create-network/) can be accessed.
+The **Network Setup** screen (Settings > Network Setup) shows the `wp-config.php` and rewrite rules for the network, so you can review the configuration from [Creating the Network](https://developer.wordpress.org/advanced-administration/multisite/create-network/) at any time.
 
 ### Updates {#updates}
 
@@ -90,7 +90,7 @@ _Edit Site – Super Admin_
 
 - **Users**: Users lists all the users of the site. It also has options to add new users, via either "Add Existing User" (i.e. a user on your network already) or "Add New User" (i.e. a new user to the network).
 - **Themes**: Themes shows all the themes on the site. Network enabled themes are not shown on this screen.  
-- **Settings**: All site settings are stored in this table. Do not edit anything here unless you know what you're doing.
+- **Settings**: The raw options stored for that site. Do not edit anything here unless you know what you're doing.
 
 ## Network Admin Updates Screen
 
