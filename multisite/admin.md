@@ -22,23 +22,25 @@ Use the [Add New Sites Screen](https://developer.wordpress.org/advanced-adminis
 
 ### Users {#users}
 
-The [Network Admin Users Screen](https://codex.wordpress.org/Network_Admin_Users_Screen) is where Network Admin personnel manages users and [Add New Users Screen](https://codex.wordpress.org/Network_Admin_Users_Screen#Add_User) is used to add new users.
+The **Network Admin Users Screen** (Users > All Users) lists every user account on the network, and Users > **Add User** creates a new one. Creating a network account does not give that user access to any site: site membership and roles are set per site, from each site's own Users screen. See [Roles and Capabilities](https://wordpress.org/documentation/article/roles-and-capabilities/) for what each role can do, and [Users Screen](https://wordpress.org/documentation/article/users-screen/) for the per-site equivalent.
 
 ### Themes {#themes}
 
-The [Network Admin Themes Screen](https://codex.wordpress.org/Network_Admin_Themes_Screen) allows you to control which themes site administrators can use for each site. It does not activate or deactivate which theme a site is currently using. If the network admin disables a theme that is in use, it can still remain selected on that site. If another theme is chosen, the disabled theme will not appear in the site's Appearance > Themes screen. Themes can be enabled on a site by site basis by the network admin on the Edit Site screen you go to via the Edit action link on the Sites screen.
+The **Network Admin Themes Screen** (Themes > Installed Themes) allows you to control which themes site administrators can use for each site. It does not activate or deactivate which theme a site is currently using. If the network admin disables a theme that is in use, it can still remain selected on that site. If another theme is chosen, the disabled theme will not appear in the site's Appearance > Themes screen. Themes can be enabled on a site by site basis by the network admin on the Edit Site screen you go to via the Edit action link on the Sites screen.
 
-To add new themes, refer to the [Add New Theme](https://codex.wordpress.org/Network_Admin_Themes_Screen#Add_New_Theme) to understand the process of finding and installing new themes for your network.
+To add new themes, refer to [Work with Themes](https://wordpress.org/documentation/article/work-with-themes/) to understand the process of finding and installing new themes for your network.
 
-Use the Theme Editor to edit the various files that comprise your Themes. The [Theme Editor Screen](https://codex.wordpress.org/Network_Admin_Themes_Screen#Theme_Editor) allows you to designate which theme you want to edit then displays the files in that theme. Each file (Template and CSS) in the theme can be edited in the large text box.
+Use the **Theme File Editor** (Themes > Theme File Editor) to edit the various files that comprise your themes. It allows you to designate which theme you want to edit, then displays the files in that theme. Each file (template and CSS) in the theme can be edited in the large text box. See [Appearance Theme File Editor Screen](https://wordpress.org/documentation/article/appearance-theme-file-editor-screen/) for details on the editor itself.
 
 ### Plugins {#plugins}
 
-The [Network Admin Plugins Screen](https://codex.wordpress.org/Network_Admin_Plugins_Screen) allow you to add new features to your WordPress network that don't come standard with the default installation. There are a rich variety of available Plugins for WordPress, and plugin installation and management is a snap.
+The **Network Admin Plugins Screen** (Plugins > Installed Plugins) allows you to add new features to your WordPress network that don't come standard with the default installation. There are a rich variety of available plugins for WordPress, and plugin installation and management is a snap.
 
-Refer to the [Add New Plugins](https://codex.wordpress.org/Network_Admin_Plugins_Screen#Add_New_Plugins) to add new plugins. For information on downloading and installing plugins, see [Managing Plugins](https://wordpress.org/documentation/article/manage-plugins/).
+Network activating a plugin makes it active on every site in the network, but it does not change where the plugin stores its data. Whether settings are kept network-wide or per site depends on how the plugin is written.
 
-Using the [Plugin Editor](https://codex.wordpress.org/Network_Admin_Plugins_Screen#Plugin_Editor), you can modify the source code of all your plugins.
+Refer to [Plugins Add New Screen](https://wordpress.org/documentation/article/plugins-add-new-screen/) to add new plugins. For information on downloading and installing plugins, see [Manage Plugins](https://wordpress.org/documentation/article/manage-plugins/).
+
+Using the **Plugin File Editor** (Plugins > Plugin File Editor), you can modify the source code of all your plugins.
 
 ### Settings {#settings}
 
