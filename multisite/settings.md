@@ -2,7 +2,7 @@
 
 The **Network Admin Settings** is where a network admin sets and changes settings for the network as a whole. The first site is the main site in the network and network settings are pulled from that original site’s options.
 
-![](https://i0.wp.com/wordpress.org/documentation/files/2020/02/superadmin-options.png?fit=1024%2C751&ssl=1)
+![The Network Settings screen, showing the Operational, Registration, New Site, Upload, Language, and Menu settings sections](https://raw.githubusercontent.com/WordPress/Advanced-administration-handbook/main/assets/network-admin-settings.png)
 
 ## Operational Settings
 
