@@ -4,9 +4,9 @@
 
 **The Network Admin Screen** is the central access point to the various options necessary to administer the [Multisite (or Network)](https://wordpress.org/documentation/article/glossary#multisite) capabilities of WordPress. The information below is directed specifically for Network Administrators. Other users should see [Administration Screens](https://wordpress.org/documentation/article/administration-screens/) for information on using WordPress.
 
-The Network Admin link is only visible after you [Create A Network](https://developer.wordpress.org/advanced-administration/multisite/create-network/). The menu will appear in the upper right of the menu bar, and is only visible to super admins. It has been moved to a separate location with the admin area, and is available from the admin area of any site, as long as you are logged in as the super admin user.
+The Network Admin link appears only after you [Create A Network](https://developer.wordpress.org/advanced-administration/multisite/create-network/), and only for Super Admins. To reach it, open the **My Sites** menu in the Toolbar (at the left in left-to-right languages) and choose **Network Admin**. You can do this from the admin area of any site in the network.
 
-When visiting Network Admin you will see the Dashboard screen. This looks similar to a site dashboard, with one additional widget, and the site specific widgets removed. The Right Now widget has quick links to the Create a Site and Create a User screens, as well as search boxes to quickly find sites and users.
+When visiting Network Admin you will see the Dashboard screen. This looks similar to a site dashboard, with one additional widget, and the site specific widgets removed. The Right Now widget has quick links to the Create a New Site and Create a New User screens, as well as search boxes to quickly find sites and users.
 
 Each screen is accessed via the main navigation menu, presented in the boxes below. The links in those boxes will lead you to sections of this article describing those screens. From those sections, you can navigate to articles detailing more information about each screen.
 
