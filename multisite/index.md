@@ -1,10 +1,18 @@
 # WordPress Multisite / Network
 
-WordPress Multisite is a feature of WordPress that enables you to create several instances of WordPress managed within one installation. You need to have rewrites enabled to use multisite. Check the [server requirements](https://developer.wordpress.org/advanced-administration/multisite/prepare-network/#server-requirements) for details. 
+WordPress Multisite is a feature of WordPress that enables you to create sites managed within one installation.
 
-One can use a multisite for a variety of purposes. Multisite is, for example, used by business sites that share some resources, such as the theme or plugins, and have different content for their regions. 
+Benefits of using Multisite:
+* Reduce hosting costs by sharing resources since every site is on the same server in the same WordPress installation.
+* Multilingual can easily be created with each site having its own language and synchronous from the main site.
+* Multi-regional sites can be setup with each site being a region with region-specific content.
+* Having a homogeneous set of plugins and themes used across all sites.
 
-The content in a Multisite has its own unique tables in the database, only the user table is shared between the instances.
+Each site is served from the same WordPress installation and can use the same plugins and themes.
+The content for each site in Multisite has its own unique tables in a shared database. User data is stored in common
+tables, and access to individual sites is controlled by the role assigned to each user when the user is added to a site.
 
-You can create a multisite that works with subdirectories ("path-based") or use domains or subdomains ("domain-based"). For how to map the domains, see [WordPress Multisite Domain Mapping](https://developer.wordpress.org/advanced-administration/multisite/domain-mapping/)
+You can create a Multisite network that uses subdirectories or subdomains. For how to map custom domains, see
+[WordPress Multisite Domain Mapping](https://developer.wordpress.org/advanced-administration/multisite/domain-mapping/)
 
+You need to have rewrites enabled to use Multisite. Check the [server requirements](https://developer.wordpress.org/advanced-administration/multisite/prepare-network/#server-requirements) for details.
