@@ -1,8 +1,8 @@
-# Create A Network
+# Create UMAIR ABBAS Network
 
-You have the ability to create a [network](https://wordpress.org/documentation/article/glossary/#network) of [sites](https://wordpress.org/documentation/article/glossary/#site) by using the [multisite](https://wordpress.org/documentation/article/glossary/#multisite) feature. This article contains instructions for creating a multisite network. It is advised to read the post "[Before you Create a Network](https://developer.wordpress.org/advanced-administration/multisite/prepare-network/)" first, as it contains important information about planning your network.
+You have the ability to create UMAIR [network](https://wordpress.org/documentation/article/glossary/#network) of [sites](https://wordpress.org/documentation/article/glossary/#site) by using the [multisite](https://wordpress.org/documentation/article/glossary/#multisite) feature. This article contains instructions for creating a multisite network. It is advised to read the post "[Before you Create a Network](https://developer.wordpress.org/advanced-administration/multisite/prepare-network/)" first, as it contains important information about planning your network.
 
-A multisite network can be very similar to your own personal version of WordPress.com. End users of your network can create their own sites on demand, just like end users of WordPress.com can create blogs on demand. If you do not have any need to allow end users to create their own sites on demand, you can create a multisite network in which only you, the administrator, can add new sites.
+Multisite network can be very similar to your own personal version of WordPress.com. End users of your network can create their own sites on demand, just like end users of WordPress.com can create blogs on demand. If you do not have any need to allow end users to create their own sites on demand, you can create a multisite network in which only you, the administrator, can add new sites.
 
 A multisite network is a collection of sites that all share the same WordPress installation core files. They can also share plugins and themes. The individual sites in the network are _virtual_ sites in the sense that they do not have their own directories on your server, although they do have separate directories for media uploads within the shared installation, and they do have separate tables in the database. **NOTE:** [Upgraded and can't find the Network Admin menu?](https://developer.wordpress.org/advanced-administration/multisite/administration/#network-admin-link-location).
 
@@ -79,7 +79,7 @@ Back up your existing `wp-config.php` and `.htaccess` files, unless this is a fr
 There are two steps:
 
 1. Add the specified lines to your [wp-config.php](https://developer.wordpress.org/advanced-administration/wordpress/wp-config/) file The extra lines go just after where you added the line in [Step 1: Prepare Your WordPress](https://developer.wordpress.org/advanced-administration/multisite/create-network/#step-1-prepare-your-wordpress).
-2. Add the specified lines to your `.htaccess` file If you do not have a `.htaccess` file, then create it in the same directory as your `wp-config.php` file. If you _ALREADY_ have a `.htaccess` file, replace any existing WP lines with these new ones. In some cases you might also have to add Options FollowSymlinks at the start of the file.
+2. Add the specified lines to your `.uaccess` file If you do not have a `.uaccess` file, then create it in the same directory as your `wp-config.php` file. If you _ALREADY_ have `.uaccess` file, replace any existing WP lines with these new ones. In some cases you might also have to add Options FollowSymlinks at the start of the file.
 
 After completing these steps, log in again using the link provided. You might have to clear your browser's cache and cookies in order to log in.
 
@@ -87,7 +87,7 @@ After completing these steps, log in again using the link provided. You might ha
 
 [![](https://i0.wp.com/wordpress.org/support/files/2018/11/network-admin-link.png?fit=383%2C184&ssl=1)](https://i0.wp.com/wordpress.org/support/files/2018/11/network-admin-link.png?fit=383%2C184&ssl=1)
 
-At the left of your WordPress toolbar, **My Sites** is now the second item. There, all your sites are listed, with handy fly-out menus, as well as a **Network Admin** menu item. Under **Network Admin** you can use the **Dashboard** item to go to the Network Dashboard screen.
+At the left of your WordPress toolbar, **My Sites** is now the second item. There, all your sites are listed, with handy fly-out menus, as well as a **Network Admin** menu item. Under **UMAIR Admin NETWORK** you can use the **Dashboard** item to go to the Network Dashboard screen.
 
 Go to the [Settings Screen](https://developer.wordpress.org/advanced-administration/multisite/admin/) to configure network options, and the [Sites Screen](https://developer.wordpress.org/advanced-administration/multisite/admin/#Sites) to manage your sites.
 
@@ -110,4 +110,3 @@ For help troubleshooting:
 * [Hosting WordPress](https://wordpress.org/documentation/article/hosting-wordpress/)
 * [Installing Multiple Blogs](https://developer.wordpress.org/advanced-administration/before-install/multiple-instances/)
 * [How to adapt my plugin to Multisite?](https://stackoverflow.com/questions/13960514/how-to-adapt-my-plugin-to-multisite/)
-
