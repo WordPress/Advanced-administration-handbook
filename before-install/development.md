@@ -10,7 +10,7 @@ Installing WordPress locally is usually meant for development. Those interested 
 - [wp-env](https://developer.wordpress.org/block-editor/reference-guides/packages/packages-env/) - a free, open-source development environment maintained by the WordPress core developer community.
 - [VVV or Varying Vagrant Vagrants](https://varyingvagrantvagrants.org/) - free, open-source local development environment maintained by members of the WordPress community.
 - [XAMPP](https://www.apachefriends.org/) - free and open-source local development environment maintained by Apache Friends
-- [MAMP](https://www.mamp.info/en/mac/) - free local development environment that everything you need to install WordPress locally.
+- [MAMP](https://www.mamp.info/en/mac/) - free local development environment that has everything you need to install WordPress locally.
 - [DDEV](https://ddev.readthedocs.io/en/stable/users/quickstart/#wordpress) - free, open-source, development environment. Seamlessly share local sites over public domains, includes a database editor, Xdebug, and other performance profiling tools.
 - [Lando](https://lando.dev/) – free, open-source development environment that offers a [plugin to install WordPress locally](https://docs.lando.dev/plugins/wordpress/).
 - [AMPPS](https://ampps.com/downloads/) – free WAMP/MAMP/LAMP stack with Softaculous Installer built in. It can 1-click install and upgrade WordPress and others as well.

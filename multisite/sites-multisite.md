@@ -1,6 +1,6 @@
 # Migrate WordPress sites into WordPress Multisite
 
-This tutorial explains how to migrate multiples WordPress installs to a WordPress multisite install. You can migrate sites that use their own domain names, as well as sites that use a subdomain on your primary domain.
+This tutorial explains how to migrate multiple WordPress installs to a WordPress multisite install. You can migrate sites that use their own domain names, as well as sites that use a subdomain on your primary domain.
 
 This tutorial assumes that you are hosting WordPress on a server using cPanel. If you are using another solution to manage your server, you'll have to adapt these instructions.
 
@@ -70,7 +70,7 @@ Deleting add-on domains in cPanel and replacing them with parked domains will al
 
 ### Limitations of importing users {#limitations-of-importing-users}
 
-As there is the above way to import the content into an instance of the Multisite-blog, you are running into massive troubles, when it gets to import multiple users. Users are generated during the import, but you won't get any roles or additional information into the new blog.
+As there is the above way to import the content into an instance of the Multisite-blog, you are running into massive troubles, when it comes to importing multiple users. Users are generated during the import, but you won't get any roles or additional information into the new blog.
 
 ### Losing settings {#losing-settings}
 
