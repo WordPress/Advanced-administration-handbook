@@ -4,7 +4,7 @@ If you need multiple WordPress instances, there are three types of installations
 
 1. WordPress Multisite Network: a single WordPress instance (with multiple sites created within the same WP instance) sharing a single database instance.
 2. Single Database: multiple WordPress instances sharing a single database instance.
-3. Multiple Databases: multiple WordPress instances with each instance using its own databases instance.
+3. Multiple Databases: multiple WordPress instances with each instance using its own database instance.
 
 ![](https://wordpress.org/documentation/files/2022/06/multisite_db_layout-1024x469.jpg)
 
@@ -14,12 +14,12 @@ Let's first look at the third type, multiple WordPress instances with multiple d
 
 You'll need a separate [MySQL database](https://wordpress.org/documentation/article/wordpress-glossary/#mysql) for each instance you plan to install. If you have not yet created these, [basic instructions are found here](https://developer.wordpress.org/advanced-administration/before-install/howto-install/#step-2-create-the-database-and-a-user).
 
-To make sure each WordPress instance connects to the right database you need to add those information to the [wp-config.php](https://developer.wordpress.org/advanced-administration/wordpress/wp-config/) file. The lines to change are the following:
+To make sure each WordPress instance connects to the right database you need to add that information to the [wp-config.php](https://developer.wordpress.org/advanced-administration/wordpress/wp-config/) file. The lines to change are the following:
 
 ```
 define('DB_NAME', 'wordpress');    // The name of the database
 define('DB_USER', 'username');     // Your MySQL username
-define('DB_PASSWORD', 'password'); // The users password
+define('DB_PASSWORD', 'password'); // The user's password
 define('DB_HOST', 'localhost' );  // The host of the database
 ```
 
