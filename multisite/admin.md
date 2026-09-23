@@ -62,10 +62,10 @@ _Super Admin Sites_
 Lists all sites on this network.  
 - **Edit**: Click this link to go to Edit Site Screen to view/edit Settings of the site and add users.  
 - **Dashboard**: Switch Administration Screens to the site's one.  
-- **Deactivate / Activate**: Deactivate / Activate the site.  
-- **Archive**: Archive the site (same as Deactivate, effectively)  
-- **Spam**: Mark the site as spam. Makes it unavailable to use for anyone.  
-- **Delete**: Delete the site.  
+- **Deactivate / Activate**: Deactivate or reactivate the site. Deactivating sets the site's `deleted` flag. The site's data is kept, but visitors get an HTTP 410 response and the message "This site is no longer available."
+- **Archive / Unarchive**: Archive or restore the site. Archiving sets a separate `archived` flag, and visitors get an HTTP 410 response and the message "This site has been archived or suspended."
+- **Spam / Not Spam**: Mark the site as spam, or clear the flag. Spam sites get the same response and message as archived ones. Deactivating, archiving, and marking as spam all take a site offline, but each sets its own flag.
+- **Delete**: Delete the site and its database tables.
 - **Visit**: Go to the website.
 
 #### Add Site {#add-site}
