@@ -51,8 +51,6 @@ Tips:
 
 ## Step 5: Report the Issue {#report}
 
-Go to the [WordPress.org Support Forums](https://wordpress.org/support/forums/)
-
 Now that you have diagnosed your error, you should make your support forum request. When requesting help, provide as much detail as possible. Go to the [troubleshooting forum](https://wordpress.org/support/forum/how-to-and-troubleshooting/) or the plugin/theme’s dedicated forum:
 - Plugins: `https://wordpress.org/support/plugin/PLUGINNAME`
 - Themes: `https://wordpress.org/support/theme/THEMENAME`
