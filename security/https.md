@@ -1,242 +1,88 @@
 # HTTPS
 
-HTTPS is an encrypted communication protocol — essentially, a more secure way of browsing the web, since you get a private channel directly between your browser and the web server. That's why most major sites use it.
+HTTPS (Hypertext Transfer Protocol Secure) is the encrypted communication protocol used on the modern web. It ensures that traffic between a visitor’s browser and your server is private and cannot be intercepted or modified in transit. Virtually all major websites now require HTTPS, and most browsers label non-HTTPS sites as *Not Secure*.
 
-If a site's using HTTPS, you'll see a little padlock icon in the address field, just as in the screenshot below:
+If a site is using HTTPS, browsers display a padlock icon in the address bar:
 
-![Screenshot of the "secure site" padlock icon](https://wordpress.org/documentation/files/2019/03/image.png)
+*Screenshot of the "secure site" padlock icon*
 
-Here are the most common reasons you might want to use HTTPS on your own site:
+---
 
-**Faster.** One might think that HTTPS would make your site slower, since it takes some time to encrypt and decrypt all data. But a lot of efficiency improvements to HTTP are only available when you use HTTPS. As a result, HTTPS will actually make your site faster for almost all visitors.
+## Why Use HTTPS?
 
-**Trust.** Users find it easier to trust a secure site. While they don't necessarily know their traffic is encrypted, they do know the little padlock icon means a site cares about their privacy. Tech people will know that any servers between your computer and the web server won't be able to see the information flowing forth and back, and won't be able to change it.
+- **Performance**: Modern web performance features such as HTTP/2 and HTTP/3 require HTTPS. These protocols enable multiplexing, header compression, and faster delivery — making HTTPS sites faster than HTTP.  
+- **Trust**: Users expect to see the padlock icon or “secure” connection indicators. Without it, browsers display warnings that discourage engagement.  
+- **Security for Payments & Data**: HTTPS protects login details, payment information, and other sensitive data. For e-commerce sites, HTTPS is also a PCI DSS requirement.  
+- **Search Engine Optimization**: Google and other search engines use HTTPS as a ranking factor. Sites without HTTPS may rank lower.  
+- **Reputation**: Browsers mark non-HTTPS sites as *Not Secure*. Running your site without HTTPS risks damaging visitor trust.
 
-**Payment security.** If you sell anything on your site, users want to know their payment information is secure. HTTPS, and the little padlock, assure that their information travels safely to the web server.
+---
 
-**Search Engine Optimization.** Many search engines will add a penalty to web sites that don't use HTTPS, thus making it harder to reach the best spots in search results.
+## HTTPS in WordPress
 
-**Your good name.** Have you noticed that some websites have the text "not secure" next to their address?
+WordPress is fully compatible with HTTPS once a TLS/SSL certificate is installed and configured on your web server. Today, most hosting providers automatically provision free certificates (often via [Let’s Encrypt](https://letsencrypt.org/)). If your host does not, you can install and manage your own certificate using tools such as [Certbot](https://certbot.eff.org/).
 
-That happens when your web browser wants you to know a site is NOT using HTTPS. Browsers want you to think (rightly!) that site owners who can't be bothered using HTTPS (it's free in many cases) aren't worth your time and certainly not your money.
+### Force WordPress Admin over HTTPS
 
-In turn, you don't want browsers suggesting you might be that kind of shady site owner yourself.
+To enforce encrypted logins and admin sessions, set the following constant in your `wp-config.php` file:
 
-WordPress is fully compatible with HTTPS when an TLS / SSL certificate is installed and available for the web server to use. Support for HTTPS is strongly recommended to help maintain the security of both WordPress logins and site visitors.
-
-## Administration Over HTTPS
-
-To easily enable (and enforce) WordPress administration over SSL, there are two constants that you can define in your site's [wp-config.php](https://wordpress.org/documentation/article/editing-wp-config-php/) file. It is not sufficient to define these constants in a plugin file; they must be defined in your [wp-config.php](https://wordpress.org/documentation/article/editing-wp-config-php/) file. You must also already have SSL configured on the server and a (virtual) host configured for the secure server before your site will work properly with these constants set to true.
-
-**Note:** `FORCE_SSL_LOGIN` was deprecated in [Version 4.0](https://wordpress.org/documentation/wordpress-version/version-4-0/). Please use `FORCE_SSL_ADMIN`.
-
-### To Force HTTPS Logins and HTTPS Admin Access {#to-force-ssl-logins-and-ssl-admin-access}
-
-The constant `FORCE_SSL_ADMIN` can be set to true in the `wp-config.php` file to force all logins **and** all admin sessions to happen over SSL.
-
-#### Example {#example}
-
-```
+```php
 define( 'FORCE_SSL_ADMIN', true );
 ```
 
-### Using a Reverse Proxy {#using-a-reverse-proxy}
+> ⚠️ Note: The older constant `FORCE_SSL_LOGIN` was deprecated in WordPress 4.0. Use `FORCE_SSL_ADMIN` instead.
 
-If WordPress is hosted behind a reverse proxy that provides SSL, but is hosted itself without SSL, these options will initially send any requests into an infinite redirect loop. To avoid this, you may configure WordPress to recognize the `HTTP_X_FORWARDED_PROTO` header (assuming you have properly configured the reverse proxy to set that header).
+This ensures all login and admin traffic runs over HTTPS.
 
-#### Example {#example-2}
+---
 
-```
+## Using a Reverse Proxy or CDN
+
+If your WordPress site is behind a reverse proxy (e.g., Nginx, Varnish, Cloudflare) that handles SSL termination, WordPress may need to be told to recognize forwarded HTTPS headers. Without this, you may experience redirect loops.
+
+Example:
+
+```php
 define( 'FORCE_SSL_ADMIN', true );
-// in some setups HTTP_X_FORWARDED_PROTO might contain 
-// a comma-separated list e.g. http,https
-// so check for https existence
-if( strpos( $_SERVER['HTTP_X_FORWARDED_PROTO'], 'https') !== false )
-	$_SERVER['HTTPS'] = 'on';
-```
 
-#### Notice
-
-When you're using a proxy pass redirection, you transmit the request to an host of your networks but don't transmit the headers linked to it. However some headers are needed by wordpress to make it able to do some redirections. In order to transmit them you need to add some lines to your redirection.
-
-For instance, with Nginx you need to have these lines:
-```
-location / {
-	proxy_pass http://your_host_name:your_port;
-	proxy_set_header Host $host:$server_port;
-	proxy_set_header X-Real-IP $remote_addr;
-	proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-	proxy_set_header X-Forwarded-Host $server_name;
-	proxy_set_header X-Forwarded-Proto $scheme;
-	proxy_redirect off;
+// In some setups HTTP_X_FORWARDED_PROTO might contain a list (e.g., http,https)
+// so check for 'https' explicitly.
+if ( isset($_SERVER['HTTP_X_FORWARDED_PROTO']) && strpos($_SERVER['HTTP_X_FORWARDED_PROTO'], 'https') !== false ) {
+    $_SERVER['HTTPS'] = 'on';
 }
 ```
 
-The variables like `$variable` are automatically managed by the reverse proxy.
+For Nginx, ensure you pass the correct headers:
 
-### Further Information {#further-information}
-
-The rest of this article serves as information in case you're using an older version of WordPress (which ideally you shouldn't!) or your SSL setup is somewhat different (ie. your SSL certificate is for a different domain).
-
-Sometimes, you want your whole wp-admin to run over a secure connection using the https protocol. Conceptually, the procedure works like this:
-
-1. Set up two virtual hosts with the same url (the blog url), one secure, the other not.
-2. On the secure virtual host, set up a rewrite rule that shuttles all non-wp-admin traffic to the insecure site.
-3. On the insecure virtual host, set up a rewrite rule that shuttles all traffic to wp-admin to the secure host.
-4. Put in a filter (via a plugin) that filters the links in wp-admin so that once activated, administrative links are rewritten to use https and that edits cookies to work only over encrypted connections.
-
-The following guide is for WordPress 1.5 and Apache running `mod_rewrite`, using rewrite rules in `httpd.conf` (as opposed to `.htaccess` files) but could easily be modified to fit other hosting scenarios.
-
-#### Virtual Hosts {#virtual-hosts}
-
-You need a (virtual) host configured for the secure server in addition to the non-secure site. In this example, the secure virtual host uses the same `DocumentRoot` as the insecure host. Hypothetically, you could use a host with a different name, such as wpadmin.mysite.com and link the document root to the wpadmin directory.
-
-Please ask your ISP to set up a secure virtual host for you, or if you have administrative access set up your own. Note that [you cannot use name based virtual hosting to identify different SSL servers](https://httpd.apache.org/docs/2.0/ssl/ssl_faq.html#vhosts2).
-
-**Rewrite Rules For The Insecure Host**
-
-In the `.htaccess` or virtual host stanza in `httpd.conf` for your insecure host, add this rewrite rule to automatically go to the secure host when you browse to https://example.com/wp-admin/ or https://example.com/wp-login.php
-
-This should go above the main wordpress rewrite block.
-
-```
-RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /(.*)\ HTTP/ [NC]
-RewriteCond %{HTTPS} !=on [NC]
-RewriteRule ^/?(wp-admin/|wp-login\.php) https://example.com%{REQUEST_URI}%{QUERY_STRING} [R=301,QSA,L]
+```nginx
+location / {
+    proxy_pass http://your_host_name:your_port;
+    proxy_set_header Host $host:$server_port;
+    proxy_set_header X-Real-IP $remote_addr;
+    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    proxy_set_header X-Forwarded-Host $server_name;
+    proxy_set_header X-Forwarded-Proto $scheme;
+    proxy_redirect off;
+}
 ```
 
-If you are using permalink rewrite rules, this line must come before `RewriteRule ^.*$ - [S=40]`.
+---
 
-An important idea in this block is using `THE_REQUEST`, which ensures only actual http requests are rewritten and not local direct file requests, like an include or fopen.
+## Best Practices for HTTPS
 
-**Rewrite Rules For Secure Host (Optional)**
+- **Automatic Certificates**: Use Let’s Encrypt or your host’s SSL manager to automatically renew certificates.  
+- **Redirects**: Configure your server or CDN to redirect all HTTP traffic to HTTPS (301 redirect).  
+- **Mixed Content**: Ensure all scripts, images, and assets load over HTTPS to avoid browser warnings.  
+- **HSTS**: Add an HTTP Strict Transport Security (HSTS) header to enforce HTTPS for returning visitors. Example (Nginx):  
+  ```nginx
+  add_header Strict-Transport-Security "max-age=31536000; includeSubDomains" always;
+  ```  
+- **Testing**: Use [Qualys SSL Labs](https://www.ssllabs.com/ssltest/) to check your certificate and configuration.
 
-These rewrite rules are optional. They disable access to the public site over a secure connection. If you wish to remain logged in to the public portion of your site using the plugin below, you must _not_ add these rules, as the plugin disables the cookie over unencrypted connections.
+---
 
-The secure virtual host should have two rewrite rules in an .htaccess file or in the virtual host declaration (see [Using Permalinks](https://wordpress.org/documentation/article/customize-permalinks/) for more on rewriting):
+## Summary
 
-```
-RewriteRule !^/wp-admin/(.*) - [C]
-RewriteRule ^/(.*) https://www.example.com/$1 [QSA,L]
-```
+HTTPS is no longer optional. It improves speed, boosts SEO, secures sensitive data, and maintains user trust.  
 
-The first rule excludes the wp-admin directory from the next rule, which shuffles traffic to the secure site over to the insecure site, to keep things nice and seamless for your audience.
-
-**Setting WordPress URI**
-
-For some plugins to work, and for other reasons, you may wish to set your WordPress URI in options to reflect the https protocol by making this setting https://example.com. Your blog address should not change.
-
-**Example Config Stanzas**
-
-NOTE: The below config is not 100% compatible with WordPress 2.8+, WordPress 2.8 uses some files from the wp-includes folder. The redirection that the first set of Rewrite rules introduces may cause security warnings for some users. See [#10079](https://core.trac.wordpress.org/ticket/10079) for more information.
-
-```
-<VirtualHost nnn.nnn.nnn.nnn:443>
-	ServerName www.example.com
-
-	SSLEngine On
-	SSLCertificateFile /etc/apache2/ssl/thissite.crt
-	SSLCertificateKeyFile /etc/apache2/ssl/thissite.pem
-	SetEnvIf User-Agent ".*MSIE.*" nokeepalive ssl-unclean-shutdown
-
-	DocumentRoot /var/www/mysite
-
-	<IfModule mod_rewrite.c>
-		RewriteEngine On
-		RewriteRule !^/wp-(admin|includes)/(.*) - [C]
-		RewriteRule ^/(.*) https://www.example.com/$1 [QSA,L]
-	</IfModule>
-
-</VirtualHost>
-```
-
-_Insecure site_
-
-```
-<VirtualHost *>
-	ServerName www.mysite.com
-
-	DocumentRoot /var/www/ii/mysite
-
-	<Directory /var/www/ii/mysite >
-		<IfModule mod_rewrite.c>
-			RewriteEngine On
-			RewriteBase /
-			RewriteCond %{REQUEST_FILENAME} -f [OR]
-			RewriteCond %{REQUEST_FILENAME} -d
-			RewriteRule ^wp-admin/(.*) https://www.example.com/wp-admin/$1 [C]
-			RewriteRule ^.*$ - [S=40]
-			RewriteRule ^feed/(feed|rdf|rss|rss2|atom)/?$ /index.php?&feed=$1 [QSA,L]
-
-		</IfModule>
-	</Directory>
-
-</VirtualHost>
-```
-
-**Rewrite for Login and Registration**
-
-It is probably a good idea to utilize SSL for user logins and registrations. Consider the following substitute RewriteRules.
-
-_Insecure_
-
-```
-RewriteRule ^/wp-(admin|login|register)(.*) https://www.example.com/wp-$1$2 [C]
-```
-
-_Secure_
-
-```
-RewriteRule !^/wp-(admin|login|register)(.*) - [C]
-```
-
-**Rewrite for sites running on port 443 or port 80**
-
-```
-# BEGIN WordPress
-<IfModule mod_rewrite.c>
-RewriteEngine On
-RewriteBase /
-
-# For a site running on port 443 or else (http over ssl)
-RewriteCond %{SERVER_PORT} !^80$
-RewriteRule !^wp-(admin|login|register)(.*) - [C]
-RewriteRule ^(.*)$ https://%{SERVER_NAME}/$1 [L]
-
-# For a site running on port 80 (http)
-RewriteCond %{SERVER_PORT}  ^80$
-RewriteCond %{REQUEST_FILENAME} -f [OR]
-RewriteCond %{REQUEST_FILENAME} -d
-RewriteRule ^wp-(admin|login|register)(.*) https://%{SERVER_NAME}:10001/wp-$1$2 [L]
-
-RewriteCond %{SERVER_PORT}  ^80$
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule . /index.php [L]
-
-</IfModule>
-```
-
-#### Summary {#summary}
-
-This method does _not_ fix some [inherent security risks](https://wordpress.org/support/topic/securing-loginphp-with-ssl/) in WordPress, nor does it protect you against man-in-the-middle attacks or other risks that can cripple secure connections.
-
-However, this _should_ make it much harder for a malicious person to steal your cookies and/or authentication headers and use them to impersonate you and gain access to wp-admin. It also obfuscates the ability to sniff your content, which could be important for legal blogs which may have drafts of documents that need strict protection.
-
-#### Verification {#verification}
-
-On the author's server, logs indicate that both GET and POST requests are over SSL and that all traffic to wp-admin on the insecure host is being shuttled over to the secure host.
-
-Sample POST log line:
-
-```
-[Thu Apr 28 09:34:33 2005] [info] Subsequent (No.5) HTTPS request received for child 6 (server foo.com:443)
-xx.xxx.xxx.xxx - - [28/Apr/2005:09:34:33 -0500] "POST /wp-admin/post.php HTTP/1.1" 302 - "https://foo.com/wp-admin/post.php?action=edit&post=71" "Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.7.7) Gecko/20050414 Firefox/1.0.3"
-```
-
-More testing, preferably with a packet sniffer and some hardcore network analysis tools, would help to confirm.
-
-#### Limitations {#limitations}
-
-The author assumes (but hasn't checked) that if the user has stored cookies/told their browser to remember passwords (not based on form fields but if using certain external auth mechanism) and hits https://www.example.com/wp-admin/, those packets are sent in the clear and the cookie/auth headers could be intercepted. Therefore, to ensure maximum security, the user should explicitly use the https host or always log in at the beginning of new sessions.
-
+WordPress makes it simple to enforce HTTPS via `FORCE_SSL_ADMIN`, and most hosting providers include free SSL certificates by default. For advanced setups with reverse proxies or CDNs, ensure forwarded headers are passed correctly and configure redirects and HSTS for maximum security.
