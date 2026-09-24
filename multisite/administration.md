@@ -17,7 +17,7 @@ While permalinks will continue to work, the main site (i.e. the first one create
 `domain.com/blog/YYYY/MM/POSTNAME`.
 
 This is by design, in order to prevent collisions with subdirectory installs. Currently there is no easy way to change it, as doing so prevents WordPress from auto-detecting
-collisions between your main site and any subsites. This will be addressed, and customizable, in a future version of WordPress.
+collisions between your main site and any subsites.
 
 Also note that the `blog` prefix is not used for static pages which will be accessible directly under the base address, e.g. `domain.com/PAGENAME`. If you try to create a static
 page in the first site with the name of another existing site on the network, the page's permalink will get a suffix (e.g. `domain.com/PAGENAME-2`). If you create a new site with
@@ -31,8 +31,8 @@ Your first site on a fresh install will put uploaded files in the traditional lo
 
 ## Plugins {#plugins}
 
-Plugins now have additional flexibility, depending upon their implementation across the network. All plugins are installed on the network dashboard's plugin page, and can be
-activated either per-site or for the entire network.
+Plugins now have additional flexibility, depending upon their implementation across the network. Plugins are installed on the network dashboard's plugin page, and can be activated
+either per-site or for the entire network. Plugins can be designated as network-only by including `Network: true` in the plugin file header.
 
 - **Site Activated Plugins:** When plugins are activated on individual sites, they are loaded only on those sites.
 - **Network Activated Plugins:** Network admins may 'network activate' plugins in the Network Admin dashboard for plugins. Then they will become active in all sites and show as
