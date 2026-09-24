@@ -10,14 +10,14 @@ As of [Version 3.5](https://wordpress.org/documentation/wordpress-version/versio
 
 ## Moving a Root install to its own directory
 
-Let's say you've installed WordPress at `example.com`. Now you have two different methods to move WordPress installations into subdirectory:
+Let's say you've installed WordPress at `example.com`. Now you have two different methods to move WordPress installations into a subdirectory:
 
 1. Without change of SITE-URL (remains `example.com`)
 2. With change in SITE-URL (it will redirect to `example.com/subdirectory`)
 
 ## Method I (Without URL change)
 
-1. After Installing WordPress in the root folder, move EVERYTHING from the root folder into subdirectory.
+1. After Installing WordPress in the root folder, move EVERYTHING from the root folder into a subdirectory.
 
 ### Apache (.htaccess)
 2. Create a `.htaccess` file in the root folder, and put this content inside (just change `example.com` and `my_subdir`):
@@ -65,7 +65,7 @@ _(p.s. If you've already installed WP in subdirectory, some steps might be alrea
 4. In **Site address (URL):** set root directory's URL. Example: `https://example.com`.
 5. Click **Save Changes**. Do not worry about the errors that happen now! Continue reading.
 6. Now move your WordPress core files (from root directory) to the subdirectory.
-7. Copy (NOT MOVE!) the `index.php` and `.htaccess` files from the WordPress directory into the root directory of your site (Blog address). The `.htaccess` file is invisible, so you may have to set your FTP client to [show hidden files](https://developer.wordpress.org/advanced-administration/server/file-permissions/#Unhide_the_hidden_files). If you are not using [pretty permalinks](https://wordpress.org/documentation/article/using-permalinks/#using-pretty-permalinks), then you may not have a .`htaccess` file. _**If you are running WordPress on a Windows (IIS) server** and are using pretty permalinks, you'll have a `web.config` rather than a `.htaccess` file in your WordPress directory. For the `index.php` file the instructions remain the same, copy (don't move) the index.php file to your root directory. The `web.config` file, must be treated differently than the `.htaccess` file so you must MOVE (DON'T COPY) the `web.config` file to your root directory._
+7. Copy (NOT MOVE!) the `index.php` and `.htaccess` files from the WordPress directory into the root directory of your site (Blog address). The `.htaccess` file is invisible, so you may have to set your FTP client to [show hidden files](https://developer.wordpress.org/advanced-administration/server/file-permissions/#Unhide_the_hidden_files). If you are not using [pretty permalinks](https://wordpress.org/documentation/article/using-permalinks/#using-pretty-permalinks), then you may not have a .`htaccess` file. _**If you are running WordPress on a Windows (IIS) server** and are using pretty permalinks, you'll have a `web.config` rather than a `.htaccess` file in your WordPress directory. For the `index.php` file the instructions remain the same, copy (don't move) the index.php file to your root directory. The `web.config` file must be treated differently than the `.htaccess` file so you must MOVE (DON'T COPY) the `web.config` file to your root directory._
 8. Open your root directory's `index.php` file in a [text editor](https://wordpress.org/documentation/article/glossary#text-editor).
 9. Change the following and save the file. Change the line that says:`require dirname( __FILE__ ) . '/wp-blog-header.php';`to the following, using your directory name for the WordPress core files: `require dirname( __FILE__ ) . '/wordpress/wp-blog-header.php';`.
 10. Login to the new location. It might now be `https://example.com/wordpress/wp-admin/`.
@@ -100,13 +100,13 @@ location ~ \.php$ {
 }
 ```
 
-Now when users to go your root domain (`example.com`), it will automatically redirect to the subdirectory you specified.
+Now when users go to your root domain (`example.com`), it will automatically redirect to the subdirectory you specified.
 
 Note: This code comes from Site 5's post here: [How to Redirect Your Domain to a Subfolder Using .htaccess](https://qa.site5.com/advanced/how-to-redirect-your-domain-to-a-subfolder-using-htaccess/).
 
 ## Moving Specific WordPress Folders
 
-The following links explains how to change specific directories within WordPress:
+The following links explain how to change specific directories within WordPress:
 
 * [Moving wp-content folder](https://wordpress.org/documentation/article/editing-wp-config-php/#moving-wp-content-folder)
 * [Moving Plugin Folder](https://wordpress.org/documentation/article/editing-wp-config-php/#moving-plugin-folder)
