@@ -25,7 +25,7 @@ The sites in a network have different URLs. You can choose one of two ways for t
 
 Additionally, you can map domains like `example1.com`, `example2.com`, etc, however a plugin is suggested. You can make the changes directly in the network settings, but it's considered advanced administration.
 
-[![Administration managing sites screen](https://i0.wp.com/wordpress.org/support/files/2018/11/sites-edit-site_4.7.png?fit=612%2C235&ssl=1)](https://i0.wp.com/wordpress.org/support/files/2018/11/sites-edit-site_4.7.png?fit=612%2C235&ssl=1)
+![The Info tab of the Edit Site screen in Network Admin, where a site's Site Address (URL) is set](https://raw.githubusercontent.com/WordPress/Advanced-administration-handbook/main/assets/multisite-edit-site-address.png)
 
 Administration managing sites
 
@@ -95,7 +95,7 @@ When you install a multisite network you start from an existing WordPress instal
 
 While it's not recommended to use www in your domain URL, if you chose to do so and plan to use _subdomains_ for multisite, make sure that **both** the site address and the WordPress address are the same. Also keep in mind some hosts will default to showing this sort of URL:
 
-[![](https://i0.wp.com/wordpress.org/support/files/2018/11/no-www.png?fit=474%2C215&ssl=1)](https://wordpress.org/documentation/files/2018/11/no-www.png)
+[![The Create a Network of WordPress Sites screen warning that the site domain should be changed before enabling the network, shown when the address begins with www](https://wordpress.org/documentation/files/2018/11/no-www.png)](https://wordpress.org/documentation/files/2018/11/no-www.png)
 
 For this, and many other reasons, we do not suggest you use www in your domain name whenever possible. If you plan on changing them to `domain.com` or `www.domain.com`, do so _before_ you begin the rest of the setup for multisite, as changing the domain name after the fact is more complicated.
 
