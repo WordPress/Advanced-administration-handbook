@@ -24,7 +24,7 @@ In 2013, Apple released TouchID which lets users unlock their iPhones using thei
 
 **Something You Have**
 
-Also known as the possession factor, users can be identified by the devices which they carry. Traditionally, a company that wanted to enable two-step authentication would distribute secure keychain fobs to users. The keychain fobs would display a new number every 30 seconds, and that number would be needed to be typed along with the password every time a user logged in.
+Also known as the possession factor, users can be identified by the devices which they carry. Traditionally, a company that wanted to enable two-step authentication would distribute secure keychain fobs to users. The keychain fobs would display a new number every 30 seconds, and that number would need to be typed along with the password every time a user logged in.
 
 Modern two-step authentication more frequently relies on a user's smartphone than on a new piece of hardware. One common model of this uses SMS in order to provide an easy second factor. When the user enters their password, they are sent a text message with a unique code. By entering that code, after the password, they supposedly prove that they also have their phone. Unfortunately, SMS is not a secure communication channel, so smartphone apps and [plugins](#plugins-for-two-step-authentication) have been developed to create that secure channel.
 
