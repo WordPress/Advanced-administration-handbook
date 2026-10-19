@@ -1,69 +1,84 @@
 # Creating Database for WordPress
 
-If you are installing WordPress on your own web server, follow one of the below instructions to create your WordPress database and user account.
+If you are installing WordPress on your own web server, follow one of the instructions below to create your WordPress database and user account.
+
+## Character set and collation
+
+New WordPress installations default to the `utf8mb4` character set. By default, WordPress creates its own tables with a `utf8mb4` collation when it installs, whatever the default collation of the database is. On MySQL 8.4 and MariaDB 11.4, for example, WordPress creates its tables with `utf8mb4_unicode_520_ci`.
+
+Tables created without their own collation, for example by some plugins, use the default collation of the database. So if you are asked to choose a collation when you create the database, choose one that starts with `utf8mb4`. If the default is already a `utf8mb4` collation, such as `utf8mb4_0900_ai_ci` on MySQL 8, keep it. Avoid `latin1` and `utf8mb3` (called `utf8` on older servers) collations. (Reference: [The utf8mb4 Upgrade](https://make.wordpress.org/core/2015/04/02/the-utf8mb4-upgrade/).)
 
 ## Using phpMyAdmin
 
-If your web server has [phpMyAdmin](https://wordpress.org/documentation/article/wordpress-glossary/#phpMyAdmin) installed, you may follow these instructions to create your WordPress username and database. If you work on your own computer, on most Linux distributions you can install PhpMyAdmin automatically.
+If your web server has [phpMyAdmin](https://wordpress.org/documentation/article/wordpress-glossary/#phpmyadmin) installed, you may follow these instructions to create your WordPress username and database. If you work on your own computer, most Linux distributions can install phpMyAdmin from their package manager.
 
-_**Note:** These instructions are written for phpMyAdmin 4.4; the phpMyAdmin user interface can vary slightly between versions._
+_**Note:** These instructions are written for phpMyAdmin 5.2; the phpMyAdmin user interface can vary slightly between versions._
 
-If a database relating to WordPress does not already exist in the **Database** dropdown on the left, create one:
+To create the database:
 
-Choose a name for your WordPress database: 'wordpress' or 'blog' are good, but most hosting services (especially shared hosting) will require a name beginning with your username and an underscore, so, even if you work on your own computer, we advise that you check your hosting service requirements so that you can follow them on your own server and be able to transfer your database without modification. Enter the chosen database name in the **Create database** field and choose the best collation for your language and encoding. In most cases it's better to choose in the “utf8_” series and, if you don't find your language, to choose “utf8mb4_general_ci” (Reference: [\[1\]](https://make.wordpress.org/core/2015/04/02/the-utf8mb4-upgrade/)).
+1. Click the **Databases** tab.
+2. Under **Create database**, enter a name for your WordPress database. 'wordpress' or 'blog' are good, but most hosting services (especially shared hosting) will require a name beginning with your username and an underscore. So, even if you work on your own computer, we advise that you check your hosting service requirements so that you can follow them on your own server and be able to transfer your database without modification.
+3. In the **Collation** dropdown, keep the default if it starts with `utf8mb4`; otherwise, choose a `utf8mb4` collation (see [Character set and collation](#character-set-and-collation)). Click **Create**.
 
-[![phpMyAdmin language encoding dropdown with utf8mb4_general_ci selected](https://i1.wp.com/wordpress.org/support/files/2018/11/phpMyAdmin_create_database_4.4.jpg?fit=688%2C411&ssl=1)](https://i1.wp.com/wordpress.org/support/files/2018/11/phpMyAdmin_create_database_4.4.jpg?fit=688%2C411&ssl=1)
+[![The Create database form on the Databases tab in phpMyAdmin, with 'wordpress' as the database name and utf8mb4_0900_ai_ci as the collation](https://raw.githubusercontent.com/WordPress/Advanced-administration-handbook/main/assets/phpmyadmin-create-database.png)](https://raw.githubusercontent.com/WordPress/Advanced-administration-handbook/main/assets/phpmyadmin-create-database.png)
 
-phpMyAdmin language encoding drop down
+phpMyAdmin Create database form
 
-Click the **phpMyAdmin** icon in the upper left to return to the main page, then click the **Users** tab. If a user relating to WordPress does not already exist in the list of users, create one:
+To create the WordPress user and give it access to the database:
 
-[![phpMyAdmin Users Tab selected](https://wordpress.org/documentation/files/2018/11/users-768x500.jpg)](https://wordpress.org/documentation/files/2018/11/users-768x500.jpg)
+1. With the new database selected, click the **Privileges** tab, then click **Add user account**.
 
-phpMyAdmin Users Tab
+[![The Privileges tab of the wordpress database in phpMyAdmin, listing the users who have access to it and the Add user account link](https://raw.githubusercontent.com/WordPress/Advanced-administration-handbook/main/assets/phpmyadmin-database-privileges.png)](https://raw.githubusercontent.com/WordPress/Advanced-administration-handbook/main/assets/phpmyadmin-database-privileges.png)
 
-1. Click **Add user**.
-2. Choose a username for WordPress ('wordpress' is good) and enter it in the **User name** field. (Be sure **Use text field:** is selected from the dropdown.)
-3. Choose a secure password (ideally containing a combination of upper- and lower-case letters, numbers, and symbols), and enter it in the **Password** field. (Be sure **Use text field:** is selected from the dropdown.) Re-enter the password in the **Re-type** field.
-4. Write down the username and password you chose.
-5. Leave all options under **Global privileges** at their defaults.
-6. Click **Go**.
-7. Return to the **Users** screen and click the **Edit privileges** icon on the user you've just created for WordPress.
-8. In the **Database-specific privileges** section, select the database you've just created for WordPress under the **Add privileges to the following database** dropdown, and click **Go**.
-9. The page will refresh with privileges for that database. Click **Check All** to select all privileges, and click **Go**.
-10. On the resulting page, make note of the host name listed after **Server:** at the top of the page. (This will usually be **localhost**.)
+phpMyAdmin database Privileges tab
 
-[![Databaser Server selected showing 'localhost'](https://i1.wp.com/wordpress.org/support/files/2018/11/phpMyAdmin_server_info_4.4.jpg?fit=682%2C107&ssl=1)](https://i1.wp.com/wordpress.org/support/files/2018/11/phpMyAdmin_server_info_4.4.jpg?fit=682%2C107&ssl=1)
+2. Choose a username for WordPress ('wordpress' is good) and enter it in the **User name** field.
+3. In **Host name**, choose **Local** if WordPress runs on the same server as the database. Otherwise, check with your hosting provider or system administrator.
+4. Choose a secure password (ideally containing a combination of upper- and lower-case letters, numbers, and symbols), and enter it in the **Password** and **Re-type** fields, or click **Generate** to create one.
+5. Write down the username and password you chose.
+6. Under **Database for user account**, make sure **Grant all privileges on database** is checked for your WordPress database.
+7. Leave all options under **Global privileges** unchecked.
+8. Click **Go**.
+
+[![The Add user account form in phpMyAdmin, with the Grant all privileges on database wordpress option checked under Database for user account](https://raw.githubusercontent.com/WordPress/Advanced-administration-handbook/main/assets/phpmyadmin-add-user-account.png)](https://raw.githubusercontent.com/WordPress/Advanced-administration-handbook/main/assets/phpmyadmin-add-user-account.png)
+
+phpMyAdmin Add user account form
+
+Make a note of the host name listed after **Server:** at the top of the page. (This will usually be **localhost**.)
 
 ## Using the MySQL Client
 
 You can create MySQL users and databases quickly and easily by running mysql from the shell. The syntax is shown below and the dollar sign is the command prompt:
 
 ```
-$ mysql -u adminusername -p  
-Enter password:  
-Welcome to the MySQL monitor. Commands end with ; or \\g.  
-Your MySQL connection id is 5340 to server version: 3.23.54  
-  
-Type 'help;' or '\\h' for help. Type '\\c' to clear the buffer.  
-  
-mysql> CREATE DATABASE databasename;  
+$ mysql -u adminusername -p
+Enter password:
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 10
+Server version: 8.4.11 MySQL Community Server - GPL
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> CREATE DATABASE databasename;
 Query OK, 1 row affected (0.00 sec)
 
-mysql> CREATE USER "wordpressusername"@"hostname" IDENTIFIED BY "password";
-mysql> GRANT ALL PRIVILEGES ON databasename.* TO "wordpressusername"@"hostname";
+mysql> CREATE USER 'wordpressusername'@'hostname' IDENTIFIED BY 'password';
 Query OK, 0 rows affected (0.00 sec)
 
-mysql> FLUSH PRIVILEGES;  
-Query OK, 0 rows affected (0.01 sec)   
-  
-mysql> EXIT  
-Bye  
+mysql> GRANT ALL PRIVILEGES ON databasename.* TO 'wordpressusername'@'hostname';
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> EXIT
+Bye
 ```
+
+MySQL 8 no longer creates a user through `GRANT`, so run `CREATE USER` first, as shown. Older guides use `GRANT ... IDENTIFIED BY`, which MySQL 8 rejects; MariaDB still accepts it.
+
+On MariaDB, you can run the same statements with the `mariadb` client; its welcome message is slightly different. You don't need to run `FLUSH PRIVILEGES` after `CREATE USER` and `GRANT`: the new user can log in right away.
 
 The example shows:
 
-* That root is also the _adminusername_. It is a safer practice to choose a so-called “mortal” account as your mysql admin, so that you are not entering the command “mysql” as the root user on your system. (Any time you can avoid doing work as root you decrease your chance of being exploited.) The name you use depends on the name you assigned as the database administrator using mysqladmin.
+* _adminusername_ is a database account that can create databases and users. It is a safer practice not to use the root account of your system for this. (Any time you can avoid doing work as root you decrease your chance of being exploited.)
 * wordpress or blog are good values for _databasename_.
 * wordpress is a good value for _wordpressusername_ but you should realize that, since it is used here, the entire world will know it, too.
 * _hostname_ will usually be localhost. If you don't know what this value should be, check with your system administrator if you are not the admin for your WordPress host. If you are the system admin, consider using a non-root account to administer your database.
@@ -76,29 +91,30 @@ If you need to write these values somewhere, avoid writing them in the system th
 If your hosting provider supplies the [Plesk](https://www.plesk.com/) hosting control panel and you want to install WordPress manually, follow the instructions below to create a database:
 
 1. Log in to Plesk.
-2. Click **Databases** in the Custom Website area of your website on the Websites & Domains page:  
+2. Go to **Domains**, select your domain, and click **Databases**.
+3. Click **Add Database**, enter the database details, and click **OK**.
 
-[![Plesk panel highlighting the Custom Website box with the databases button highlighted](https://wordpress.org/documentation/files/2018/11/plesk-db-768x558.png)](https://wordpress.org/documentation/files/2018/11/plesk-db-768x558.png)
-
-Plesk custom website databases
-
-3. Click **Add New Database**, change database name if you want, create database user by providing credentials and click **OK**. You're done!
+The steps vary slightly depending on the Plesk view. For more details, see [How to create a database in Plesk](https://support.plesk.com/hc/en-us/articles/12377341716759-How-to-create-a-database-in-Plesk) in the Plesk documentation.
 
 ## Using cPanel
 
-If your hosting provider supplies the [cPanel](https://wordpress.org/documentation/article/wordpress-glossary/#cPanel) hosting control panel, you may follow these simple instructions to create your WordPress username and database. A more complete set of instructions for using cPanel to create the database and user can be found in [Using cPanel](https://wordpress.org/documentation/article/using-cpanel/).
+If your hosting provider supplies the [cPanel](https://wordpress.org/documentation/article/wordpress-glossary/#cpanel) hosting control panel, you may follow these simple instructions to create your WordPress username and database. More about hosting control panels can be found in [Control Panels](https://developer.wordpress.org/advanced-administration/server/control-panel/).
 
-1. Log in to your [cPanel](https://wordpress.org/documentation/article/wordpress-glossary/#cPanel).
-2. Click **MySQL Database Wizard** icon under the Databases section.
-3. In **Step 1. Create a Database** enter the database name and click Next Step.
-4. In **Step 2. Create Database Users** enter the database user name and the password. Make sure to use a strong password. Click Create User.
-5. In **Step 3. Add User to Database** click the All Privileges checkbox and click Next Step.
-6. In **Step 4. Complete the task** note the database name and user. Write down the values of _hostname_, _username_, _databasename_, and the password you chose. (Note that _hostname_ will usually be **localhost**.)
+1. Log in to your [cPanel](https://wordpress.org/documentation/article/wordpress-glossary/#cpanel).
+2. Click **Database Wizard** under the Databases section. (cPanel & WHM renamed it from **MySQL Database Wizard** in version 120.)
+3. In the **New Database** field, enter the database name and click **Next Step**.
+4. Enter the database user name and a strong password (or click **Password Generator**), and click **Create User**.
+5. Select **ALL PRIVILEGES** and click **Next Step**.
+6. Write down the values of _hostname_, _username_, _databasename_, and the password you chose. (Note that _hostname_ will usually be **localhost**.)
+
+Your hosting provider may add a prefix, such as your account name and an underscore, to the database and user names. Use the full names in your `wp-config.php` file.
+
+For more details, see [MySQL Database Wizard](https://docs.cpanel.net/cpanel/databases/mysql-database-wizard/) in the cPanel documentation.
 
 ## Using DirectAdmin
 
-If you're a regular User of a single-site webhosting account, you can log in normally. Then click **MySQL Management**. (If this is not readily visible, perhaps your host needs to modify your “package” to activate MySQL.) Then follow part “c” below.
+If you're a regular User of a single-site webhosting account, you can log in normally. Then click **MySQL Management**. (If this is not readily visible, perhaps your host needs to modify your “package” to activate MySQL.) Then follow the last paragraph of this section.
 
-Reseller accounts Admin accounts may need to click **User Level**. They must first log in as Reseller if the relevant domain is a Reseller's primary domain… or log in as a User if the domain is not a Reseller's primary domain. If it's the Reseller's primary domain, then when logged in as Reseller, simply click **User Level**. However if the relevant domain is not the Reseller's primary domain, then you must log in as a User. Then click **MySQL Management**. (If not readily visible, perhaps you need to return to the Reseller or Admin level, and modify the “Manage user package” or “Manage Reseller package” to enable MySQL.)
+Reseller and Admin accounts may need to click **User Level**. They must first log in as Reseller if the relevant domain is a Reseller's primary domain… or log in as a User if the domain is not a Reseller's primary domain. If it's the Reseller's primary domain, then when logged in as Reseller, simply click **User Level**. However if the relevant domain is not the Reseller's primary domain, then you must log in as a User. Then click **MySQL Management**. (If not readily visible, perhaps you need to return to the Reseller or Admin level, and modify the “Manage user package” or “Manage Reseller package” to enable MySQL.)
 
 In MySQL Management, click on the small words: **Create new database**. Here you are asked to submit two suffixes for the database and its username. For maximum security, use two different sets of 4-6 random characters. Then the password field has a Random button that generates an 8-character password. You may also add more characters to the password for maximum security. Click **Create**. The next screen will summarize the database, username, password and hostname. Be sure to copy and paste these into a text file for future reference.
