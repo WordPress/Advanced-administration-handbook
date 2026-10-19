@@ -112,7 +112,7 @@ On the [Available Updates Screen](#available-updates), you can update to the lat
 
 ### Upgrade Network {#upgrade-network}
 
-This [Upgrade Network Screen](#upgrade-network) is used to upgrade all the sites in a [Network](https://wordpress.org/documentation/article/wordpress-glossary/#network) after a [WordPress upgrade](#available-updates) is completed. After a WordPress upgrade, you are reminded to visit the **Upgrade Network** screen with the message, "Thank you for Updating! Please visit the Upgrade Network page to update all your sites."
+This [Upgrade Network Screen](#upgrade-network) is used to upgrade all the sites in a [Network](https://wordpress.org/documentation/article/wordpress-glossary/#network) after a [WordPress upgrade](#available-updates) is completed. After a WordPress upgrade, you are reminded to visit the **Upgrade Network** screen with the message, "Thank you for updating! Please visit the Upgrade Network page to update all your sites."
 
 [![](https://i1.wp.com/wordpress.org/support/files/2019/04/superadmin-update.png?fit=1024%2C584&ssl=1)](https://wordpress.org/documentation/files/2019/04/superadmin-update.png)
 
