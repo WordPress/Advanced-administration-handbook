@@ -47,14 +47,15 @@ If you find custom code *after* the `require_once` line, move it above the "stop
 If your main site loads but child sites return 404 errors, your rewrite rules may not be active.
 
 #### Apache
-On Ubuntu/Debian systems:
+On Ubuntu/Debian systems, enable the rewrite module:
 
 ```bash
 sudo a2enmod rewrite
-sudo nano /etc/apache2/sites-available/000-default.conf
 ```
 
-Change both instances of `AllowOverride None` to `AllowOverride All`, then restart Apache:
+Then allow `.htaccess` files in your WordPress directory: in the `<Directory>` block for that directory, change `AllowOverride None` to `AllowOverride All`. On a default install, this is the `<Directory /var/www/>` block in `/etc/apache2/apache2.conf`. Do not change the `<Directory />` block.
+
+Restart Apache:
 
 ```bash
 sudo systemctl restart apache2
@@ -83,7 +84,6 @@ Multisite requires additional database tables. Confirm that the following exist 
 
 - `wp_blogs`  
 - `wp_blogmeta`  
-- `wp_blog_versions`  
 - `wp_registration_log`  
 - `wp_signups`  
 - `wp_site`  
@@ -124,7 +124,7 @@ INSERT INTO wp_sitemeta VALUES (1, 1, 'site_admins', 'a:1:{i:1;s:5:"admin";}');
 
 ## Related Articles {#related-articles}
 - [WordPress Multisite Network: A Complete Guide](https://multilingualpress.org/wordpress-multisite-network/)  
-- [Hardening WordPress Multisite](https://developer.wordpress.org/advanced-administration/security/hardening/)  
+- [Hardening WordPress](https://developer.wordpress.org/advanced-administration/security/hardening/)
 
 ## External Links {#external-links}
 - [WordPress Support → Multisite Forum](https://wordpress.org/support/forum/multisite/)  
