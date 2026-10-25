@@ -183,7 +183,7 @@ This is more up-to-date example for Nginx: https://www.nginx.com/resources/wiki/
 
 ### WordPress Multisite
 
-For multisite installations, use one of the below sections for the `global/wordpress.conf` file, depending on the version of WordPress that was in use when multisite was *activated*, as well as the domain/subdirectory configuration.
+For multisite installations, use one of the below examples, depending on the version of WordPress that was in use when multisite was *activated*, as well as the domain/subdirectory configuration. Each example is a complete `server` block, so do not include it from inside another `server` block; Nginx does not accept that. In the per-site file above, use the example in place of the WordPress `server` block and keep the separate redirect `server` block. The `map` blocks in the WordPress 3.4 and below examples go in the same file, outside the `server` block. To keep the global restrictions, add `include global/restrictions.conf;` inside the example's `server` block.
 
 #### WordPress 3.5 and up
 
@@ -200,7 +200,7 @@ server {
     index index.php;
 
     if (!-e $request_filename) {
-        rewrite /wp-admin$ $scheme://$host$request_uri/ permanent;
+        rewrite /wp-admin$ $scheme://$host$uri/ permanent;
         rewrite ^(/[^/]+)?(/wp-.*) $2 last;
         rewrite ^(/[^/]+)?(/.*\.php) $2 last;
     }
@@ -212,6 +212,7 @@ server {
     location ~ \.php$ {
         try_files $uri =404;
         include fastcgi_params;
+        fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
         fastcgi_pass php;
     }
 
@@ -236,6 +237,7 @@ server {
     location ~ \.php$ {
         try_files $uri =404;
         include fastcgi_params;
+        fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
         fastcgi_pass php;
     }
 
@@ -259,8 +261,10 @@ map $uri $blogname{
 map $blogname $blogid{
     default -999;
 
-    #Ref: https://wordpress.org/extend/plugins/nginx-helper/
-    #include /var/www/wordpress/wp-content/plugins/nginx-helper/map.conf ;
+    # With "Enable Nginx Map" checked, the Nginx Helper plugin shows the path of this file (or the lines to paste instead) in its Network Admin settings.
+    # Replace the path below with the path shown there.
+    # Ref: https://wordpress.org/plugins/nginx-helper/
+    #include /var/www/example.com/htdocs/wp-content/uploads/nginx-helper/map.conf ;
 }
 
 server {
@@ -274,7 +278,7 @@ server {
         access_log off;     log_not_found off; expires max;
     }
 
-    #avoid php readfile()
+    # Used when wp-config.php defines WPMU_ACCEL_REDIRECT as true, so nginx serves the file instead of PHP readfile().
     location ^~ /blogs.dir {
         internal;
         alias /var/www/example.com/htdocs/wp-content/blogs.dir ;
@@ -282,7 +286,7 @@ server {
     }
 
     if (!-e $request_filename) {
-        rewrite /wp-admin$ $scheme://$host$request_uri/ permanent;
+        rewrite /wp-admin$ $scheme://$host$uri/ permanent;
         rewrite ^(/[^/]+)?(/wp-.*) $2 last;
         rewrite ^(/[^/]+)?(/.*\.php) $2 last;
     }
@@ -294,6 +298,7 @@ server {
     location ~ \.php$ {
         try_files $uri =404;
         include fastcgi_params;
+        fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
         fastcgi_pass php;
     }
 
@@ -310,8 +315,10 @@ NGINX provides 2 special directive: X-Accel-Redirect and map. Using these 2 dire
 map $http_host $blogid {
     default       -999;
 
-    #Ref: https://wordpress.org/extend/plugins/nginx-helper/
-    #include /var/www/wordpress/wp-content/plugins/nginx-helper/map.conf ;
+    # With "Enable Nginx Map" checked, the Nginx Helper plugin shows the path of this file (or the lines to paste instead) in its Network Admin settings.
+    # Replace the path below with the path shown there.
+    # Ref: https://wordpress.org/plugins/nginx-helper/
+    #include /var/www/example.com/htdocs/wp-content/uploads/nginx-helper/map.conf ;
 
 }
 
@@ -328,6 +335,7 @@ server {
     location ~ \.php$ {
         try_files $uri =404;
         include fastcgi_params;
+        fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
         fastcgi_pass php;
     }
 
@@ -337,7 +345,7 @@ server {
             access_log off; log_not_found off; expires max;
         }
 
-    #WPMU x-sendfile to avoid php readfile()
+    # Used when wp-config.php defines WPMU_ACCEL_REDIRECT as true, so nginx serves the file instead of PHP readfile().
     location ^~ /blogs.dir {
         internal;
         alias /var/www/example.com/htdocs/wp-content/blogs.dir;
