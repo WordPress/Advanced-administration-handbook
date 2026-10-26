@@ -29,7 +29,7 @@ An alternative is [Feed Shark](https://feedshark.brainbliss.com/), which pings o
 ## WordPress Multisite Network
 By default, editing the Ping Services field is disabled for individual sites in a WordPress Multisite network. To restore this option, you can add a small custom plugin or must-use plugin with the following code:
 
-```
+```php
 <?php
 /**
  * Plugin Name: Update Services for Multisite
