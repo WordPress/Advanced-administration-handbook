@@ -1,16 +1,16 @@
 # Create A Network
 
-You have the ability to create a [network](https://wordpress.org/documentation/article/glossary/#network) of [sites](https://wordpress.org/documentation/article/glossary/#site) by using the [multisite](https://wordpress.org/documentation/article/glossary/#multisite) feature. This article contains instructions for creating a multisite network. It is advised to read the post "[Before you Create a Network](https://developer.wordpress.org/advanced-administration/multisite/prepare-network/)" first, as it contains important information about planning your network.
+You have the ability to create a [network](https://wordpress.org/documentation/article/wordpress-glossary/#network) of [sites](https://wordpress.org/documentation/article/wordpress-glossary/#site) by using the [multisite](https://wordpress.org/documentation/article/wordpress-glossary/#multisite) feature. This article contains instructions for creating a multisite network. It is advised to read the post "[Before you Create a Network](https://developer.wordpress.org/advanced-administration/multisite/prepare-network/)" first, as it contains important information about planning your network.
 
 A multisite network can be very similar to your own personal version of WordPress.com. End users of your network can create their own sites on demand, just like end users of WordPress.com can create blogs on demand. If you do not have any need to allow end users to create their own sites on demand, you can create a multisite network in which only you, the administrator, can add new sites.
 
-A multisite network is a collection of sites that all share the same WordPress installation core files. They can also share plugins and themes. The individual sites in the network are _virtual_ sites in the sense that they do not have their own directories on your server, although they do have separate directories for media uploads within the shared installation, and they do have separate tables in the database. **NOTE:** [Upgraded and can't find the Network Admin menu?](https://developer.wordpress.org/advanced-administration/multisite/administration/#network-admin-link-location).
+A multisite network is a collection of sites that all share the same WordPress installation core files. They can also share plugins and themes. The individual sites in the network are _virtual_ sites in the sense that they do not have their own directories on your server, although they do have separate directories for media uploads within the shared installation, and they do have separate tables in the database. **NOTE:** [Upgraded and can't find the Network Admin menu?](https://developer.wordpress.org/advanced-administration/multisite/admin/)
 
 ## Step 0: Before You Begin {#step-0-before-you-begin}
 
 Compared with a typical single WordPress installation a network installation has additional considerations. You must decide if you want to use subdomains or subfolders and how you want to manage them. Installing themes and plugins is different: for example, each individual site of a network can activate both, but install neither.
 
-This guide describes how to install manually WordPress Multisite in your current WordPress installation. There are also available [ready-to-run packages](https://codex.wordpress.org/User:Beltranrubo/BitNami_Multisite) from BitNami.
+This guide describes how to manually enable WordPress Multisite on your current WordPress installation. If you manage your site with [WP-CLI](https://developer.wordpress.org/cli/commands/), you can instead convert your installation with [`wp core multisite-convert`](https://developer.wordpress.org/cli/commands/core/multisite-convert/). That command creates the network database tables and adds the multisite constants to `wp-config.php`, but you still need to add the web server rewrite rules described in [Step 4](#step-4-enabling-the-network).
 
 **Please read [Before You Create A Network](https://developer.wordpress.org/advanced-administration/multisite/prepare-network/) in full before continuing.**
 
@@ -18,7 +18,7 @@ This guide describes how to install manually WordPress Multisite in your current
 
 Your existing WordPress site will be updated when creating a network. Unless this is a fresh install and you have nothing to lose, please [backup your database and files](https://developer.wordpress.org/advanced-administration/security/backup/).
 
-Verify that [Pretty Permalinks](https://wordpress.org/documentation/article/using-permalinks/) work on your single WP instance.
+Verify that [pretty permalinks](https://wordpress.org/documentation/article/customize-permalinks/) work on your single WordPress installation.
 
 Also deactivate all active plugins. You can reactivate them again after the network is created.
 
@@ -30,12 +30,12 @@ To enable the Network Setup menu item, you must first define multisite in the [w
 
 Open up `wp-config.php` and add this line **above** where it says `/* That's all, stop editing! Happy publishing. */`. If it doesn't say that anywhere, then add the line somewhere above the first line that begins with `require` or `include`:
 
-```
+```php
 /* Multisite */
 define( 'WP_ALLOW_MULTISITE', true );
 ```
 
-You will need to refresh your browser to continue.
+Save the file and refresh your browser to continue.
 
 ## Step 3: Installing a Network {#step-3-installing-a-network}
 
@@ -50,18 +50,22 @@ _Create a Network of WordPress Sites page_
 
 You are given the choice between sub-domains and sub-directories, except when [existing settings](https://developer.wordpress.org/advanced-administration/multisite/prepare-network/#wordpress-settings-requirements) restrict your choice.
 
-You must choose one or the other. You can reconfigure your network to use the other choice after installation, despite the advice on the screen, but reconfiguring it might not be easy.
+You must choose one or the other. You can [reconfigure your network to use the other choice](https://developer.wordpress.org/advanced-administration/multisite/administration/#switching-network-types) after installation, despite the advice on the screen, but reconfiguring it might not be easy.
 
 You only need wildcard DNS for on-demand domain-based sites, despite the advice that may be on the screen.
 
 Once more: See [Before You Create A Network](https://developer.wordpress.org/advanced-administration/multisite/prepare-network/).
 
-* **Sub-domains** — a domain-based network in which on-demand sites use subdomains
-* **Sub-directories** — a path-based network in which on-demand sites use paths
+* **Sub-domains**: a domain-based network in which on-demand sites use subdomains
+* **Sub-directories**: a path-based network in which on-demand sites use paths
 
 **Network Details**
 
-These are filled in automatically, but you can make changes. `Server Address`: the domain of the URL you are using to access your WordPress installation. `Network Title`: the title of your network as a whole. `Network Admin E-mail`: your email address as super admin of the network as a whole.
+These are filled in automatically, but you can make changes.
+
+* **Server Address**: the domain of the URL you are using to access your WordPress installation. This is shown for reference and cannot be changed here.
+* **Network Title**: the title of your network as a whole.
+* **Network Admin Email**: your email address as Super Admin of the network as a whole.
 
 Double-check the details and press the **Install** button.
 
@@ -74,12 +78,15 @@ To enable your network, follow the instructions on the Create a Network of WordP
 [![Populated settings when creating a network of sites](https://i0.wp.com/wordpress.org/support/files/2018/11/tools-network-created.png?fit=1024%2C742&ssl=1)](https://i0.wp.com/wordpress.org/support/files/2018/11/tools-network-created.png?fit=1024%2C742&ssl=1)
 _Populated settings when creating a network of sites_
 
-Back up your existing `wp-config.php` and `.htaccess` files, unless this is a fresh install and you have nothing to lose.
+Back up your existing `wp-config.php` file and your web server configuration file (`.htaccess` on Apache, `web.config` on IIS), unless this is a fresh install and you have nothing to lose.
 
 There are two steps:
 
-1. Add the specified lines to your [wp-config.php](https://developer.wordpress.org/advanced-administration/wordpress/wp-config/) file The extra lines go just after where you added the line in [Step 1: Prepare Your WordPress](https://developer.wordpress.org/advanced-administration/multisite/create-network/#step-1-prepare-your-wordpress).
-2. Add the specified lines to your `.htaccess` file If you do not have a `.htaccess` file, then create it in the same directory as your `wp-config.php` file. If you _ALREADY_ have a `.htaccess` file, replace any existing WP lines with these new ones. In some cases you might also have to add Options FollowSymlinks at the start of the file.
+1. Add the specified lines to your [wp-config.php](https://developer.wordpress.org/advanced-administration/wordpress/wp-config/) file, **above** the line reading `/* That's all, stop editing! Happy publishing. */`. The extra lines go just after the `WP_ALLOW_MULTISITE` line you added in [Step 2: Allow Multisite](#step-2-allow-multisite). If the screen also lists authentication keys that are missing from your `wp-config.php` file, add those too.
+2. Add the specified rewrite rules to your web server configuration:
+    * **Apache:** add the rules to the `.htaccess` file in the folder shown on the screen (usually your WordPress root folder). If you do not have a `.htaccess` file, create it there. If you _already_ have a `.htaccess` file, replace any existing WordPress rules with these new ones. In some cases you might also have to add `Options +FollowSymLinks` at the start of the file.
+    * **IIS:** add the rules to the `web.config` file in the folder shown on the screen, replacing any existing WordPress rules.
+    * **Nginx:** Nginx does not use `.htaccess` files, so the screen links to the [Nginx](https://developer.wordpress.org/advanced-administration/server/web-server/nginx/#wordpress-multisite) documentation instead of showing rules. Add the Multisite rules described there to your server configuration.
 
 After completing these steps, log in again using the link provided. You might have to clear your browser's cache and cookies in order to log in.
 
@@ -89,11 +96,9 @@ After completing these steps, log in again using the link provided. You might ha
 
 At the left of your WordPress toolbar, **My Sites** is now the second item. There, all your sites are listed, with handy fly-out menus, as well as a **Network Admin** menu item. Under **Network Admin** you can use the **Dashboard** item to go to the Network Dashboard screen.
 
-Go to the [Settings Screen](https://developer.wordpress.org/advanced-administration/multisite/admin/) to configure network options, and the [Sites Screen](https://developer.wordpress.org/advanced-administration/multisite/admin/#Sites) to manage your sites.
+Go to the [Settings Screen](https://developer.wordpress.org/advanced-administration/multisite/admin/settings/) to configure network options, and the [Sites Screen](https://developer.wordpress.org/advanced-administration/multisite/admin/#sites-list) to manage your sites.
 
-For more information, see: [Network Admin](https://developer.wordpress.org/advanced-administration/multisite/admin/)
-
-[Upgraded and can't find the Network Admin menu?](https://developer.wordpress.org/advanced-administration/multisite/administration/#network-admin-link-location)
+For more information, see [Network Admin](https://developer.wordpress.org/advanced-administration/multisite/admin/).
 
 ## Step 6: Administration {#step-6-administration}
 
