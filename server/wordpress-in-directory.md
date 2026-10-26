@@ -4,7 +4,7 @@ Many people want WordPress to power their website's root (e.g. https://example.c
 
 **Note:** This guide covers configuration for Apache (`.htaccess`), nginx (server blocks), and IIS (`web.config`).
 
-As of [Version 3.5](https://wordpress.org/documentation/wordpress-version/version-3-5/), Multisite users may move a network into its own directory using Method II below. If you are running a version of WordPress older than 3.5, please update before installing a Multisite WordPress install on a subdirectory. Method I is not suitable for Multisite: its catch-all rule in the root `.htaccess` competes with the network's own rewrite rules rather than composing with them.
+As of [Version 3.5](https://wordpress.org/documentation/wordpress-version/version-3-5/), Multisite users may move a network into its own directory using Method II below. If you are running a version of WordPress older than 3.5, please update before installing a Multisite WordPress install on a subdirectory. Method I is not suitable for Multisite: its catch-all rule in the root `.htaccess` competes with the network's own rewrite rules rather than composing with them. On Multisite, the General screen does not show the URL fields used in steps 2 to 5, so change the main site's **WordPress address** with WP-CLI instead, for example `wp option update siteurl https://example.com/wordpress --url=https://example.com/`. The **Site address** stays at the root.
 
 **Note to theme/plugin developers:** this will not separate your code from WordPress. Themes and plugins will still reside under `wp-content` folder.
 
