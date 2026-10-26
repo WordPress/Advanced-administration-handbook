@@ -177,7 +177,7 @@ The following is a very simple version of Backing Up Your Database. Once you hav
 
 ![image](https://user-images.githubusercontent.com/8250598/189548469-d63090c3-4e43-48d4-8039-507957e4a69c.png)
 
-2. You may have several databases. Click the one that holds your WordPress data, the database you created when you [installed WordPress](https://wordpress.org/installation/how-to-install-wordpress/). (In older versions this may be done through a pull-down menu.)
+2. You may have several databases. Click the one that holds your WordPress data, the database you created when you [installed WordPress](https://developer.wordpress.org/advanced-administration/before-install/howto-install/). (In older versions this may be done through a pull-down menu.)
 
 3. Below is a picture of the default tables in the Structure view tab. You may have more tables — this would happen if you have any statistics plugins or anti-spam plugins.
 

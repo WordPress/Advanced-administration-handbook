@@ -4,7 +4,7 @@
 
 [Restoring your database from backup](https://developer.wordpress.org/advanced-administration/security/backup/) is then possible if something goes wrong. 
 
-**NOTE:** The steps below back up the WordPress database (posts, pages, comments, settings, etc.) but they do **not** back up your WordPress files (themes, plugins, uploads, `wp-config.php`, etc.). For a full-site backup, see [WordPress Backups](https://developer.wordpress.org/advanced-administration/security/backup/) and [Backing Up Your WordPress Files](https://developer.wordpress.org/advanced-administration/security/backup-files/).
+**NOTE:** The steps below back up the WordPress database (posts, pages, comments, settings, etc.) but they do **not** back up your WordPress files (themes, plugins, uploads, `wp-config.php`, etc.). For a full-site backup, see [WordPress Backups](https://developer.wordpress.org/advanced-administration/security/backup/) and [Backing Up Your WordPress Files](https://developer.wordpress.org/advanced-administration/security/backup/files/).
 
 When you back up a database, you usually create an export file (for example, a `.sql`, `.gz`, or `.bz2`). That export file can be stored with your file backups so the database and files stay together as one “backup set”, but restoring still requires importing it into MySQL/MariaDB.
 
@@ -179,7 +179,7 @@ In addition to MySQL Workbench, there are many GUI tools that let you backup (ex
 
 | Name | OS (Paid edition) | OS (Free edition) | |
 |---|---|---|
-| [MySQL Workbench](https://www.mysql.com/products/workbench/) | Windows/Mac/Linux | Windows/Mac/Linux | See [above](https://developer.wordpress.org/advanced-administration/security/backup/database/#Using_MySQL_Workbench) |
+| [MySQL Workbench](https://www.mysql.com/products/workbench/) | Windows/Mac/Linux | Windows/Mac/Linux | See [above](https://developer.wordpress.org/advanced-administration/security/backup/database/#using-mysql-workbench) |
 | [EMS SQL Management Studio for MySQL](https://www.sqlmanager.net/products/mysql/studio) | Windows | | |
 | [Aqua Data Studio](https://www.aquafold.com/) | Windows/Mac/Linux | Windows/Mac/Linux (14 days trial) | Available in 9 languages |
 | [Navicat for MySQL](https://www.navicat.com/en/products/navicat-for-mysql) | Windows/Mac/Linux | Windows/Mac/Linux (14 days trial) | Available in 8 languages |
@@ -258,7 +258,7 @@ If you get an error message, your best bet is to post to the [WordPress support 
 
 The restore process consists of unarchiving your archived database dump, and importing it into your MySQL/MariaDB database.
 
-Assuming your backup is a `.bz2` file, created using instructions similar to those given for [Backing up your database using MySQL/MariaDB commands](https://developer.wordpress.org/advanced-administration/security/backup/database/#using-straight-mysqlmariadb-commands), the following steps will guide you through restoring your database:
+Assuming your backup is a `.bz2` file, created using instructions similar to those given for [Backing up your database using MySQL/MariaDB commands](https://developer.wordpress.org/advanced-administration/security/backup/database/#using-straight-mysql-mariadb-commands), the following steps will guide you through restoring your database:
 
 1. Unzip your `.bz2` file:
 

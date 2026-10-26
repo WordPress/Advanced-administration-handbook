@@ -62,7 +62,7 @@ You may run into trouble with the PHP configuration on your host. There are two 
 
 There are a couple ways to solve it. One is to ask your hosting provider to up the limits, even temporarily. The other is to put a php.ini file in your `/wp-admin/` and `/wp-includes` directories that ups the limits for you (php.ini files are not recursive, so it has to be in those directories). Something like a 10 MB upload limit and a 128 MB memory limit should work, but check with your hosting provider first so that you don't violate the terms of your agreement.
 
-Search the [WordPress forum support](https://wordpress.org/documentation/forums/) for help with PHP configuration problems.
+Search the [WordPress forum support](https://wordpress.org/support/forums/) for help with PHP configuration problems.
 
 ### Converting add-on domains to parked domains {#converting-add-on-domains-to-parked-domains}
 
