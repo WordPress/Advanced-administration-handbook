@@ -154,7 +154,7 @@ If the `<?php ?>` tags are being sent to the browser, it means your [PHP](https:
 **I keep getting an `Error connecting to database` message but I'm sure my configuration is correct.**
 
 Try resetting your MySQL password manually. If you have access to MySQL via shell, try issuing:
-```
+```sql
 ALTER USER 'wordpressusername'@'hostname' IDENTIFIED BY 'password';
 ```
 
