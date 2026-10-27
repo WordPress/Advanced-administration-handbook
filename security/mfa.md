@@ -50,12 +50,7 @@ Two-step authentication can also prevent legitimate logins. If a user forgets th
 
 #### Plugins for Two-Step Authentication {#plugins-for-two-step-authentication}
 
-You can [search for two-step authentication plugins](https://wordpress.org/plugins/tags/two-factor-authentication) available in the WordPress.org plugin repository. Here are some of the most popular ones to get you started (in alphabetical order):
-
-* [Google Authenticator](https://wordpress.org/plugins/google-authenticator/)
-* [Two-Factor](https://wordpress.org/plugins/two-factor/)
-* [WordFence](https://wordpress.org/plugins/wordfence/)
-* [WP 2FA](https://wordpress.org/plugins/wp-2fa/)
+You can [search for two-step authentication plugins](https://wordpress.org/plugins/tags/two-factor-authentication) available in the WordPress.org plugin repository. 
 
 ### Related {#related}
 
