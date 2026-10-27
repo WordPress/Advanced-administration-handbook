@@ -14,7 +14,9 @@ This section covers advanced plugin administration topics. It is intended for si
 
 Editing plugin files directly can break your site if the code contains an error. If possible, make changes in a staging environment first and keep a current backup of the original file.
 
-If a change causes an error and you cannot access wp-admin, use [SFTP/FTP](../upgrade/ftp/) or your hosting file manager to restore the file from a backup or temporarily rename the affected plugin directory or must-use plugin file.
+If a change causes an error and you cannot access wp-admin, use [SFTP/FTP](../upgrade/ftp/) or your hosting file manager to restore the file from a backup or temporarily rename the affected plugin directory.
+
+For a directly loaded must-use plugin, move its file out of the must-use plugins directory or rename it so it no longer ends in `.php`, for example `my-plugin.php.off`. WordPress loads every `.php` file in that directory. If a loader file loads code from a subdirectory, rename the loader file, not the subdirectory.
 
 ## Plugin development
 
