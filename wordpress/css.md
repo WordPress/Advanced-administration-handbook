@@ -6,7 +6,7 @@ WordPress relies heavily on the presentation styles within CSS. With the use of 
 
 [CSS](https://wordpress.org/documentation/article/glossary/#css) stands for **Cascading Style Sheets**. It allows you to store style presentation information (like colors and layout) separate from your HTML structure. This allows precision control of your website layout and makes your pages faster and easier to update.
 
-This article briefly describes the use of CSS in WordPress, and lists some references for further information. For information on CSS itself, see [Resources for Building on WordPress#CSS](https://developer.wordpress.org/advanced-administration/resources/#CSS).
+This article briefly describes the use of CSS in WordPress, and lists some references for further information. For information on CSS itself, see [Resources for Building on WordPress: CSS](https://developer.wordpress.org/advanced-administration/resources/#css).
 
 ## [WordPress and CSS](#wordpress-and-css)
 
@@ -172,7 +172,6 @@ To help you understand more about how CSS works in relationship to your web page
 
 If you are having some problems or questions about your WordPress Theme or layout, begin by checking the website of the Theme author to see if there is an upgrade or whether there are answers to your questions. Here are some other resources:
 
-* [Lessons on Designing Your WordPress Site](https://wordpress.org/documentation/article/wordpress-lessons/)
 * [Site Design and Layout](https://codex.wordpress.org/Site_Design_and_Layout) – Comprehensive list of resources related to site design in WordPress.
 * [FAQ Layout and Design](https://codex.wordpress.org/FAQ_Layout_and_Design)
 
@@ -183,7 +182,7 @@ If you are having some problems or questions about your WordPress Theme or layou
 * [CSS Fixing Browser Bugs](https://codex.wordpress.org/CSS_Fixing_Browser_Bugs)
 * [CSS Coding Standards](https://developer.wordpress.org/coding-standards/wordpress-coding-standards/css/)
 * [CSS Shorthand](https://codex.wordpress.org/CSS_Shorthand)
-* [Resources for Building on WordPress#CSS](https://developer.wordpress.org/advanced-administration/resources/#CSS)
+* [Resources for Building on WordPress: CSS](https://developer.wordpress.org/advanced-administration/resources/#css)
 * [Conditional Comment CSS](https://codex.wordpress.org/Conditional_Comment_CSS)
 * [Validating a Website](https://codex.wordpress.org/Validating_a_Website)
 
