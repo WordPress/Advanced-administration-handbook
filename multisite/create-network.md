@@ -43,7 +43,7 @@ The previous step enables the **Network Setup** item in your **Tools menu**. Use
 
 To see an example of the Create a Network of WordPress Sites screen, look at [Administration](https://wordpress.org/documentation/article/administration-screens/) > [Tools](https://wordpress.org/documentation/article/administration-screens/#tools-managing-your-blog) > [Network Setup](https://wordpress.org/documentation/article/tools-network-screen/). The screen does not look exactly the same in all circumstances. The example shown is for an installation on `localhost`, which restricts the options available.
 
-[![Create a Network of WordPress Sites page](https://i0.wp.com/wordpress.org/support/files/2018/11/network-create.png?fit=1024%2C743&ssl=1)](https://i0.wp.com/wordpress.org/support/files/2018/11/network-create.png?fit=1024%2C743&ssl=1)
+![The Create a Network of WordPress Sites screen at Tools > Network Setup, with the sub-directory notice, Server Address, Network Title, and Network Admin Email fields](https://raw.githubusercontent.com/WordPress/Advanced-administration-handbook/main/assets/multisite-network-setup.png)
 _Create a Network of WordPress Sites page_
 
 **Addresses of Sites in your Network**
@@ -71,7 +71,7 @@ Double-check the details and press the **Install** button.
 
 To enable your network, follow the instructions on the Create a Network of WordPress Sites screen. The instructions that you see are customized for your installation. They might not be the same as the examples you see here.
 
-[![Populated settings when creating a network of sites](https://i0.wp.com/wordpress.org/support/files/2018/11/tools-network-created.png?fit=1024%2C742&ssl=1)](https://i0.wp.com/wordpress.org/support/files/2018/11/tools-network-created.png?fit=1024%2C742&ssl=1)
+![The Enabling the Network step, showing the generated wp-config.php constants and the .htaccess rewrite rules to copy](https://raw.githubusercontent.com/WordPress/Advanced-administration-handbook/main/assets/multisite-network-enable.png)
 _Populated settings when creating a network of sites_
 
 Back up your existing `wp-config.php` and `.htaccess` files, unless this is a fresh install and you have nothing to lose.
@@ -85,7 +85,7 @@ After completing these steps, log in again using the link provided. You might ha
 
 ## Step 5: Network Admin Settings {#step-5-network-admin-settings}
 
-[![](https://i0.wp.com/wordpress.org/support/files/2018/11/network-admin-link.png?fit=383%2C184&ssl=1)](https://i0.wp.com/wordpress.org/support/files/2018/11/network-admin-link.png?fit=383%2C184&ssl=1)
+![The My Sites menu open in the Toolbar, listing Network Admin above each site in the network, every entry with its own fly-out menu](https://raw.githubusercontent.com/WordPress/Advanced-administration-handbook/main/assets/multisite-my-sites-menu.png)
 
 At the left of your WordPress toolbar, **My Sites** is now the second item. There, all your sites are listed, with handy fly-out menus, as well as a **Network Admin** menu item. Under **Network Admin** you can use the **Dashboard** item to go to the Network Dashboard screen.
 
