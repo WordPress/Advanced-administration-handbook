@@ -1,6 +1,6 @@
 # How to install WordPress
 
-WordPress is well-known for its ease of installation. Under most circumstances, installing WordPress is a very simple process and takes less than five minutes to complete. [Many web hosts](https://wordpress.org/hosting/) now offer [tools (e.g. Fantastico) to automatically install WordPress](https://wordpress.org/documentation/article/automated-installation/) for you. However, if you wish to install WordPress yourself, the following guide will help.
+WordPress is well-known for its ease of installation. Under most circumstances, installing WordPress is a very simple process and takes less than five minutes to complete. [Many web hosts](https://wordpress.org/hosting/) now offer [tools (e.g. Fantastico) to automatically install WordPress](https://wordpress.org/documentation/article/use-automated-installation/) for you. For example, WP Toolkit can install WordPress in [Plesk](https://docs.plesk.com/en-US/obsidian/reseller-guide/website-management/wordpress-toolkit.73391/) and in [cPanel](https://docs.cpanel.net/cpanel/domains/wp-toolkit-for-cpanel/). However, if you wish to install WordPress yourself, the following guide will help.
 
 ## Things to Know Before Installing WordPress
 
@@ -43,34 +43,9 @@ Download and unzip the WordPress package from [wordpress.org/download/](https://
 
 If you are using a [hosting provider](https://wordpress.org/documentation/article/glossary/#hosting-provider), you may already have a WordPress database set up for you, or there may be an automated setup solution to do so. Check your hosting provider's support pages or your control panel for clues about whether or not you'll need to create one manually.
 
-If you determine that you'll need to create one manually, follow the instructions for Using phpMyAdmin below to create your WordPress username and database. For other tools such as Plesk, cPanel and Using the MySQL Client, refer the article [Creating Database for WordPress.](https://developer.wordpress.org/advanced-administration/before-install/creating-database/)
+If you determine that you'll need to create one manually, follow the instructions in [Creating Database for WordPress](https://developer.wordpress.org/advanced-administration/before-install/creating-database/), which covers [phpMyAdmin](https://developer.wordpress.org/advanced-administration/before-install/creating-database/#using-phpmyadmin), the MySQL client, Plesk, cPanel, and DirectAdmin.
 
 If you have only one database and it is already in use, you can install WordPress in it – just make sure to have a distinctive prefix for your tables to avoid over-writing any existing database tables.
-
-#### Using phpMyAdmin
-
-If your web server has [phpMyAdmin](https://wordpress.org/documentation/article/glossary/#phpmyadmin) installed, you may follow these instructions to create your WordPress username and database. If you work on your own computer, on most Linux distributions you can install PhpMyAdmin automatically.
-
-_**Note:** These instructions are written for phpMyAdmin 4.4; the phpMyAdmin user interface can vary slightly between versions._
-
-1. If a database relating to WordPress does not already exist in the **Database** dropdown on the left, create one:
-    1. Choose a name for your WordPress database: '`wordpress`' or '`blog`' are good, but most hosting services (especially shared hosting) will require a name beginning with your username and an underscore, so, even if you work on your own computer, we advise that you check your hosting service requirements so that you can follow them on your own server and be able to transfer your database without modification. Enter the chosen database name in the **Create database** field and choose the best collation for your language and encoding. In most cases it's better to choose in the "utf8_" series and, if you don't find your language, to choose "utf8mb4_general_ci" [(Refer this article about upgrading to utf8mb4)](https://make.wordpress.org/core/2015/04/02/the-utf8mb4-upgrade/).
-    ![Creating a database in phpMyAdmin 4.4](https://wordpress.org/documentation/files/2018/10/phpMyAdmin_create_database_4.4.jpg)
-    2. Click the **phpMyAdmin** icon in the upper left to return to the main page, then click the **Users** tab. If a user relating to WordPress does not already exist in the list of users, create one:
-    ![Create user in phpMyAdmin 4.4](https://codex.wordpress.org/images/2/26/users.jpg)
-        1. Click **Add user**.
-        2. Choose a username for WordPress ('`wordpress`' is good) and enter it in the **User name** field. (Be sure **Use text field**: is selected from the dropdown.)
-        3. Choose a secure password (ideally containing a combination of upper- and lower-case letters, numbers, and symbols), and enter it in the **Password** field. (Be sure **Use text field**: is selected from the dropdown.) Re-enter the password in the **Re-type** field.
-        4. Write down the username and password you chose.
-        5. Leave all options under **Global privileges** at their defaults.
-        6. Click **Go**.
-        7. Return to the Users screen and click the **Edit privileges** icon on the user you've just created for WordPress.
-        8. In the **Database-specific privileges** section, select the database you've just created for WordPress under the **Add privileges to the following database** dropdown, and click Go.
-        9. The page will refresh with privileges for that database. Click **Check All** to select all privileges, and click **Go**.
-        10. On the resulting page, make note of the host name listed after **Server**: at the top of the page. (This will usually be **localhost**.)
-
-    ![Make sure the server is localhost](https://wordpress.org/documentation/files/2018/10/phpMyAdmin_server_info_4.4.jpg)
-
 
 ### Step 3: Set up wp-config.php {#detailed-step-3}
 You can either create and edit the wp-config.php file yourself, or you can skip this step and let WordPress try to do this itself when you run the installation script (step 5). (you'll still need to tell WordPress your database information).
@@ -114,12 +89,12 @@ _**Note:** The location of your root web directory in the filesystem on your [we
 
 #### In the Root Directory
 
-- If you need to upload your files to your web server, use an [FTP](https://wordpress.org/documentation/article/glossary/#ftp) client to upload all the contents of the wordpress directory (but not the directory itself) into the root directory of your website.
+- If you need to upload your files to your web server, use an [FTP client](https://developer.wordpress.org/advanced-administration/upgrade/ftp/) to upload all the contents of the wordpress directory (but not the directory itself) into the root directory of your website.
 If your files are already on your web server, and you are using [shell](https://wordpress.org/documentation/article/glossary/#shell) access to install WordPress, move all of the contents of the wordpress directory (but not the directory itself) into the root directory of your website.
 
 #### In a Subdirectory
 
-- If you need to upload your files to your web server, rename the wordpress directory to your desired name, then use an [FTP](https://wordpress.org/documentation/article/glossary/#ftp) client to upload the directory to your desired location within the root directory of your website.
+- If you need to upload your files to your web server, rename the wordpress directory to your desired name, then use an [FTP client](https://developer.wordpress.org/advanced-administration/upgrade/ftp/) to upload the directory to your desired location within the root directory of your website.
 - If your files are already on your web server, and you are using [shell](https://wordpress.org/documentation/article/glossary/#shell) access to install WordPress, move the wordpress directory to your desired location within the root directory of your website, and rename the directory to your desired name.
 
 ### Step 5: Run the Install Script
@@ -131,7 +106,7 @@ Point a web browser to start the installation script.
 
 #### Setup configuration file
 
-If WordPress can't find the wp-config.php file, it will tell you and offer to try to create and edit the file itself. (You can also do this directly by loading `wp-admin/setup-config.php` in your web browser.) WordPress will ask you the database details and write them to a new wp-config.php file. If this works, you can go ahead with the installation; otherwise, go back and [create, edit, and upload the wp-config.php file yourself (step 3).](https://developer.wordpress.org/advanced-administration/before-install/howto-install/#step-3-set-up-wp-config-php)
+If WordPress can't find the wp-config.php file, it will tell you and offer to try to create and edit the file itself. (You can also do this directly by loading `wp-admin/setup-config.php` in your web browser.) WordPress will ask you the database details and write them to a new wp-config.php file. If this works, you can go ahead with the installation; otherwise, go back and [create, edit, and upload the wp-config.php file yourself (step 3).](#detailed-step-3)
 
 ![The WordPress setup screen](https://wordpress.org/documentation/files/2018/10/install-step3_v47.png)
 
@@ -146,42 +121,12 @@ If you successfully install the WordPress, login prompt will be displayed.
 Install script troubleshooting
 - If you get an error about the database when you run the install script:
     - Go back to [Step 2](#detailed-step-2) and [Step 3](#detailed-step-3), and make sure you entered all the correct database information into wp-config.php.
-    - Make sure you granted your WordPress user permission to access your WordPress database in **Step 3.**
+    - Make sure you granted your WordPress user permission to access your WordPress database in **Step 2**.
     - Make sure the database server is running.
 
-## Installing WordPress at popular Hosting Companies {#installing-wordpress-at-popular-hosting-companies}
+## Installing WordPress at popular providers {#installing-wordpress-at-popular-hosting-companies}
 
-### installing WordPress at Atlantic.net
-
-[Install WordPress On A Ubuntu 14.04 LTS](https://www.atlantic.net/vps-hosting/how-to-install-wordpress-ubuntu-14/)
-You can also install WordPress on Ubuntu with [one click WordPress Hosting](https://www.atlantic.net/vps-hosting/wordpress-vps-hosting/) on Atlantic.Net.
-
-### Installing WordPress at AWS
-
-- [Installatron WordPress](https://aws.amazon.com/marketplace/pp/prodview-duuvqpjnl65oe) Installatron WordPress is a pre-configured and ready-to-launch image that contains a WordPress website and Installatron's WordPress management tools.
-- [Architecting a Highly Scalable WordPress Site in AWS](https://www.slideshare.net/harishganesan/scaling-wordpress-in-aws-amazon-ec2) A guide for building a more expensive, highly scalable AWS implementation using Amazon's Relational Data Store (RDS) et al.
-
-### Installing WordPress at DigitalOcean
-
-- [How to install WordPress on Ubuntu 14.04](https://www.digitalocean.com/community/tutorials/how-to-install-wordpress-on-ubuntu-14-04)
-
-### Installing WordPress at Linode
-
-- [Manage Web Content with WordPress](https://www.linode.com/docs/websites/cms/manage-web-content-with-wordpress) Install WordPress on a Debian Server with a LAMP Stack
-
-You can also install WordPress on Ubuntu with one click using this [StackScript](https://www.linode.com/stackscripts/view/12) on Linode.
-
-### Installing WordPress at iPage Hosting
-
-- [This is a great step by step tutorial by IStartBlogging](https://istartblogging.com/#express-blog-install) on how to setup your blog the smart way with iPage Hosting.
-
-In less than 5 minutes from now, you will have your blog ready on your domain. You will install WordPress on your own domain as an Automated Process with ONE Click WordPress Installation feature from iPage hosting.
-
-### Installing WordPress at Microsoft Azure
-
-- [Installing WordPress on Microsoft Azure](https://azure.microsoft.com/en-us/marketplace/partners/wordpress/wordpress/) is as simple as a few clicks. A hosting space and MySQL database will be created and configured, so you're ready to start creating within a matter of seconds.
-- Running into some issues and need to troubleshoot your WordPress site on Azure? Follow this handy [Troubleshooting guide for WordPress on Azure](https://azure.microsoft.com/en-us/blog/wordpress-troubleshooting-techniques-on-azure-websites/)
-- There is a full listing of resources on how to [learn more about WordPress on Microsoft Azure!](https://azure.microsoft.com/en-us/documentation/articles/develop-wordpress-on-app-service-web-apps/)
+For installation guides from hosting providers, see [Install WordPress at popular providers](https://developer.wordpress.org/advanced-administration/before-install/popular-providers/).
 
 ## Common installation problems
 
@@ -209,8 +154,8 @@ If the `<?php ?>` tags are being sent to the browser, it means your [PHP](https:
 **I keep getting an `Error connecting to database` message but I'm sure my configuration is correct.**
 
 Try resetting your MySQL password manually. If you have access to MySQL via shell, try issuing:
-```
-SET PASSWORD FOR 'wordpressusername'@'hostname' = OLD_PASSWORD('password');
+```sql
+ALTER USER 'wordpressusername'@'hostname' IDENTIFIED BY 'password';
 ```
 
 If you do not have shell access, you should be able to simply enter the above into an SQL query in phpMyAdmin. Failing that, you may need to use your host's control panel to reset the password for your database user.
