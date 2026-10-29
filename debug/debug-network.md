@@ -21,7 +21,7 @@ Check your [wp-config.php](https://developer.wordpress.org/advanced-administrati
 - Correct database details (`DB_NAME`, `DB_USER`, `DB_PASSWORD`, `DB_HOST`)  
 - The `MULTISITE` constant  
 - The `SUBDOMAIN_INSTALL` constant (true/false depending on setup)  
-- The `$base` variable  
+- The `DOMAIN_CURRENT_SITE`, `PATH_CURRENT_SITE`, `SITE_ID_CURRENT_SITE` and `BLOG_ID_CURRENT_SITE` constants, as shown on the Network Setup screen
 - The table prefix (`$table_prefix`)  
 
 Ensure no code is placed after the following block:  
@@ -47,29 +47,22 @@ If you find custom code *after* the `require_once` line, move it above the "stop
 If your main site loads but child sites return 404 errors, your rewrite rules may not be active.
 
 #### Apache
-On Ubuntu/Debian systems:
+On Ubuntu/Debian systems, enable the rewrite module:
 
 ```bash
 sudo a2enmod rewrite
-sudo nano /etc/apache2/sites-available/000-default.conf
 ```
 
-Change both instances of `AllowOverride None` to `AllowOverride All`, then restart Apache:
+Then allow `.htaccess` files in your WordPress directory: in the `<Directory>` block for that directory, change `AllowOverride None` to `AllowOverride All`. On a default install, this is the `<Directory /var/www/>` block in `/etc/apache2/apache2.conf`. Do not change the `<Directory />` block.
+
+Restart Apache:
 
 ```bash
 sudo systemctl restart apache2
 ```
 
 #### Nginx
-For Nginx, ensure your server block includes:
-
-```nginx
-location / {
-    try_files $uri $uri/ /index.php?$args;
-}
-```
-
-Restart Nginx:
+Nginx does not read `.htaccess` files, so the rewrite rules go in the server block. They depend on whether the network uses subdirectories or subdomains, and on whether Multisite was first activated on WordPress 3.5 or later, or on 3.4 or earlier. Use the configuration under [WordPress Multisite](https://developer.wordpress.org/advanced-administration/server/web-server/nginx/#wordpress-multisite) on the Nginx page that matches your network, then restart Nginx:
 
 ```bash
 sudo systemctl restart nginx
@@ -79,27 +72,24 @@ sudo systemctl restart nginx
 
 ### Check the Database {#check-database}
 
-Multisite requires additional database tables. Confirm that the following exist (with your prefix, e.g., `wp_`):  
+A Multisite network uses these core tables, with your prefix, for example `wp_`:
 
-- `wp_blogs`  
-- `wp_blogmeta`  
-- `wp_blog_versions`  
-- `wp_registration_log`  
-- `wp_signups`  
-- `wp_site`  
-- `wp_sitemeta`  
+- `wp_blogs`
+- `wp_site`
+- `wp_sitemeta`
+- `wp_signups`
+- `wp_registration_log`
 
-If tables are missing, or `wp_site`/`wp_blogs` are empty, you may need to insert rows manually. **Back up first!**  
+Since WordPress 5.1, `wp_blogmeta` stores site metadata. If it is missing, WordPress treats site metadata as unsupported.
 
-Example SQL (adjust prefix, domain, path, user, and dates):  
+To see which sites the network expects, run these read-only queries (adjust the prefix):
 
 ```sql
-INSERT INTO wp_site VALUES (1, 'example.com', '/');
-INSERT INTO wp_blogs VALUES (1, 1, 'example.com', '/', '2025-01-01', '2025-01-01', 1, 0, 0, 0, 0, 0);
-INSERT INTO wp_sitemeta VALUES (1, 1, 'site_admins', 'a:1:{i:1;s:5:"admin";}');
+SELECT id, domain, path FROM wp_site;
+SELECT blog_id, site_id, domain, path FROM wp_blogs;
 ```
 
-⚠️ Change `"admin"` to your actual username, and adjust `s:5` to match its character length.
+Compare the domain and path with the address you are visiting, and with `DOMAIN_CURRENT_SITE` and `PATH_CURRENT_SITE` in `wp-config.php`. If the network moved to a new domain, see [Moving WordPress Multisite](https://developer.wordpress.org/advanced-administration/upgrade/migrating/#moving-wordpress-multisite). If tables or rows are missing, restore them from a backup rather than adding rows by hand.
 
 ---
 
@@ -124,7 +114,7 @@ INSERT INTO wp_sitemeta VALUES (1, 1, 'site_admins', 'a:1:{i:1;s:5:"admin";}');
 
 ## Related Articles {#related-articles}
 - [WordPress Multisite Network: A Complete Guide](https://multilingualpress.org/wordpress-multisite-network/)  
-- [Hardening WordPress Multisite](https://developer.wordpress.org/advanced-administration/security/hardening/)  
+- [Hardening WordPress](https://developer.wordpress.org/advanced-administration/security/hardening/)
 
 ## External Links {#external-links}
 - [WordPress Support → Multisite Forum](https://wordpress.org/support/forum/multisite/)  
