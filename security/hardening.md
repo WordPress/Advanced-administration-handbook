@@ -167,7 +167,16 @@ find /path/to/your/wordpress/install/ -type f -exec chmod 644 {} \;
 
 #### Regarding Automatic Updates {#regarding-automatic-updates}
 
-When you tell WordPress to perform an automatic update, all file operations are performed as the user that owns the files, not as the web server's user. All files are set to 0644 and all directories are set to 0755, and writable by only the user and readable by everyone else, including the web server.
+When WordPress updates itself, a plugin or a theme, the user that does the file operations depends on the filesystem method that WordPress picks:
+
+* **Direct**: WordPress first creates a test file. If PHP creates files with the same owner as the WordPress files, PHP writes the files itself. The files are written as the user that PHP runs as, which is the same user that owns the WordPress files.
+* **SSH or FTP**: If PHP runs as a different user, WordPress usually asks for SSH or FTP login details. The files are then written as the user you log in with.
+
+WordPress also uses the direct method when PHP runs as a different user in two cases: when `FS_METHOD` is set to `direct`, and for a core background update that adds no new files, if PHP can write to the WordPress files. In these cases the files are written by the user that PHP runs as.
+
+Automatic background updates run only when WordPress does not need to ask for login details. To force a method, or to save the SSH or FTP details, see [WordPress Upgrade Constants](https://developer.wordpress.org/advanced-administration/wordpress/wp-config/#wordpress-upgrade-constants).
+
+By default, files that WordPress writes during an update get the permissions of `index.php` plus at least 0644. Directories get the permissions of the WordPress root directory plus at least 0755. To use other values, see [Override of default file permissions](https://developer.wordpress.org/advanced-administration/wordpress/wp-config/#override-of-default-file-permissions).
 
 ### Database Security {#database-security}
 
