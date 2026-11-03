@@ -16,7 +16,12 @@ Here are the steps you will need to follow to install an international version o
 
 **Note:** If you make an error in the steps or you do not specify the correct language, WordPress will default back to English. For more help Installing WordPress, see [Installing WordPress](https://developer.wordpress.org/advanced-administration/before-install/howto-install/) and [FAQ Installation](https://wordpress.org/documentation/article/faq-installation/).
 
-* Download the `.mo` language file for your language. The naming convention of the `.mo` files is based on the ISO-639 language code (e.g. _pt_ for Portuguese) followed by the ISO-3166 country code (e.g. _PT_ for Portugal or _BR_ for Brazil). So, the Brazilian Portuguese file would be called `pt_BR.mo`, and a non-specific Portuges file would be called `pt.mo`. Complete lists of codes can be found at [(country codes)](https://www.gnu.org/savannah-checkouts/gnu/gettext/manual/gettext.html#Country-Codes) and [(language codes)](https://www.gnu.org/savannah-checkouts/gnu/gettext/manual/gettext.html#Language-Codes).
+1. Go to the [Translation Teams](https://make.wordpress.org/polyglots/teams/) page, find your language, and click **View Team Page**.
+2. Click **Download language pack**. You get a ZIP file with the translation files of WordPress for your language. The button shows the WordPress version of the language pack. If it is older than your WordPress version, some text may show in English. If there is no **Download language pack** button, your language does not have a language pack yet. See [Adding translation](#adding-translation) to help translate it.
+3. Unzip the file and upload all its files to the `wp-content/languages/` folder of your site. Create the folder if it does not exist.
+4. Set the language, as explained in [Setting the language for your site](#setting-the-language-for-your-site). Your language now shows in the **Site Language** list.
+
+The file names include the code of your language. The code is based on the ISO-639 language code (e.g. _pt_ for Portuguese) followed by the ISO-3166 country code (e.g. _PT_ for Portugal or _BR_ for Brazil). So, the Brazilian Portuguese file would be called `pt_BR.mo`, and a non-specific Portuguese file would be called `pt.mo`. Complete lists of codes can be found at [(country codes)](https://www.gnu.org/savannah-checkouts/gnu/gettext/manual/gettext.html#Country-Codes) and [(language codes)](https://www.gnu.org/savannah-checkouts/gnu/gettext/manual/gettext.html#Language-Codes).
 
 ## Setting the language for your site
 
