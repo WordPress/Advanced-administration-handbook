@@ -107,47 +107,45 @@ error_page 403 /403.html;
 **Password‑protect `/wp-login.php` with Basic Auth:**
 ```caddyfile
 # Hash passwords first: `caddy hash-password`
-basicauth /wp-login.php {
+basic_auth /wp-login.php {
     user1 JDJhJDEw$example-hash-value...
     # add more users as needed (one per line)
 }
 ```
-> Caddy requires **hashed** passwords in the Caddyfile.
+> Caddy requires **hashed** passwords in the Caddyfile. Before Caddy 2.8, this directive was named `basicauth`.
 
 **Limit access to `/wp-login.php` by IP:**
 ```caddyfile
-@blacklist {
-    not client_ip forwarded 203.0.113.15 203.0.113.16
+@denied {
+    not client_ip 203.0.113.15 203.0.113.16
     path /wp-login.php
 }
-respond @blacklist "Forbidden" 403 {
+respond @denied "Forbidden" 403 {
     close
 }
 ```
+> If Caddy runs behind a proxy or CDN, set the `trusted_proxies` global option so that `client_ip` matches the visitor's address instead of the proxy's.
 
-**Return 401 for `/wp-admin/*` and serve a custom error page:**
+**Serve a custom error page for 401 and 403 errors:**
 ```caddyfile
-@wpadmin path /wp-admin/*
-respond @wpadmin "Unauthorized" 401
-
-handle_errors {
-    @need401 status 401
-    rewrite @need401 /401.html
+handle_errors 401 403 {
+    rewrite * /{err.status_code}.html
     file_server
 }
 ```
+> This applies to errors such as a failed `basic_auth` login. It does not apply to responses written with `respond`.
 
 **Deny “no‑referrer” POSTs to login/comments (optional, use with caution):**
 ```caddyfile
 # Legitimate clients or privacy tools may omit Referer; test before enforcing.
-@protected path_regexp protected (wp-comments-post|wp-login)\.php$
 @no_referer {
+    path_regexp (wp-comments-post|wp-login)\.php$
     not header Referer https://{host}*
     method POST
 }
 abort @no_referer
 ```
-> Using `abort` immediately drops the connection, which is efficient for bots.
+> Using `abort` immediately drops the connection, which is efficient for bots. Keep the `path_regexp` line: without it, the rule drops every POST without a matching Referer, including REST API and `admin-ajax.php` requests.
 
 For more Caddy discussion and rationale, see: *Using Caddy to deter brute force attacks in WordPress* (community thread).
 
