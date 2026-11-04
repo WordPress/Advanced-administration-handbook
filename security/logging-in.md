@@ -158,7 +158,7 @@ Updating passwords directly in the database is high risk. Back up the database f
 3. Click **Edit** on the user row you want to modify
 4. In the `user_pass` field:
    - Leave the function dropdown empty
-   - Paste the password hash into the value field
+   - Delete the existing value, then paste the password hash in its place
 5. Click **Go** to save
 
 #### Using MySQL Command Line
