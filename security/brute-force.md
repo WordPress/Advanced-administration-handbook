@@ -26,7 +26,7 @@ This is not unique to WordPress—every web application that exposes a login sur
 WordPress shows a strength meter when changing passwords. Encourage unique, long passwords (or passphrases) and the use of password managers. Avoid dictionary words and personal info.
 
 ### Two‑Factor Authentication (2FA) {#2fa}
-Enable 2FA for all administrators and privileged users using a reputable plugin or your identity provider (TOTP app, hardware key, SMS fallback). As of 2025, **WordPress core does not ship 2FA**; it must be added via a plugin or SSO/IdP.
+Enable 2FA for all administrators and privileged users using a reputable plugin or your identity provider (authenticator app, passkey, or hardware security key). Avoid SMS codes where you can: SMS is not a secure channel (see [Two-Step Authentication](https://developer.wordpress.org/advanced-administration/security/mfa/)). As of 2025, **WordPress core does not ship 2FA**; it must be added via a plugin or SSO/IdP.
 
 ### Passkeys (WebAuthn) {#passkeys}
 Passkeys provide phishing‑resistant, passwordless login using platform authenticators (Face ID/Touch ID, Windows Hello, security keys). Add via a maintained plugin that supports WebAuthn/Passkeys and enroll at least two authenticators per admin.
