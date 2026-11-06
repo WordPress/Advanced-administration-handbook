@@ -1,8 +1,8 @@
 # WordPress Multisite Domain Mapping
 
-WordPress multisite subsites may be mapped to a non-network top-level domain. This means a site created as subsite1.example.net can be mapped to show as example.com. This also works for subdirectory sites, so example.net/subsite1 can also appear at example.com. Before setting up domain mapping, make sure your network has been correctly set up, and subsites can be created without issues.
+WordPress multisite subsites may be mapped to a domain outside the network's domain. This means a site created as subsite1.example.net can be mapped to show as example.com. This also works for subdirectory sites, so example.net/subsite1 can also appear at example.com. Before setting up domain mapping, make sure your network has been correctly set up, and subsites can be created without issues.
 
-Before WordPress 4.5, domain mapping requires a domain mapping plugin.
+Before WordPress 4.5, domain mapping required a domain mapping plugin.
 
 In WordPress 4.5+, domain mapping is a native feature.
 
@@ -31,6 +31,8 @@ define( 'COOKIE_DOMAIN', $_SERVER['HTTP_HOST'] ?? '' );
 ```
 
 This is mostly needed on subdomain networks. There, WordPress sets the cookie domain to the network's domain by default, so the login cookie does not work on the mapped domain.
+
+With this line, logging in on a subdomain site does not sign you in on the main domain or on other subdomain sites. Logging in on the main domain still signs you in on all subdomain sites.
 
 ## Related Articles {#related-articles}
 
