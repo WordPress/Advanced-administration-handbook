@@ -27,7 +27,7 @@ On the **Info** tab, in the **Site Address (URL)** field, enter the full URL of 
 If you get an error about cookies being blocked when you try to log in to your network subsite (or log in fails with no error message), open your wp-config.php file and add this line after the other code you added to create the network:
 
 ```php
-define( 'COOKIE_DOMAIN', $_SERVER['HTTP_HOST'] );
+define( 'COOKIE_DOMAIN', $_SERVER['HTTP_HOST'] ?? '' );
 ```
 
 This is mostly needed on subdomain networks. There, WordPress sets the cookie domain to the network's domain by default, so the login cookie does not work on the mapped domain.
