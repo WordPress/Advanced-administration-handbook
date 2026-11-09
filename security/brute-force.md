@@ -112,7 +112,7 @@ basic_auth /wp-login.php {
     # add more users as needed (one per line)
 }
 ```
-> Caddy requires **hashed** passwords in the Caddyfile. Before Caddy 2.8, this directive was named `basicauth`.
+> Caddy requires **hashed** passwords in the Caddyfile. These examples are written for Caddy 2.8 or later, and some Linux distributions package older versions, so check yours with `caddy version`. Before Caddy 2.8, this directive was named `basicauth`.
 
 **Limit access to `/wp-login.php` by IP:**
 ```caddyfile
@@ -124,7 +124,7 @@ respond @denied "Forbidden" 403 {
     close
 }
 ```
-> If Caddy runs behind a proxy or CDN, set the `trusted_proxies` global option so that `client_ip` matches the visitor's address instead of the proxy's.
+> If Caddy runs behind a proxy or CDN, add the proxy's addresses to [`trusted_proxies`](https://caddyserver.com/docs/caddyfile/options#trusted-proxies) inside the `servers` global option, so that `client_ip` matches the visitor's address instead of the proxy's.
 
 **Serve a custom error page for 401 and 403 errors:**
 ```caddyfile
