@@ -26,7 +26,7 @@ This is not unique to WordPress—every web application that exposes a login sur
 WordPress shows a strength meter when changing passwords. Encourage unique, long passwords (or passphrases) and the use of password managers. Avoid dictionary words and personal info.
 
 ### Two‑Factor Authentication (2FA) {#2fa}
-Enable 2FA for all administrators and privileged users using a reputable plugin or your identity provider (TOTP app, hardware key, SMS fallback). As of 2025, **WordPress core does not ship 2FA**; it must be added via a plugin or SSO/IdP.
+Enable 2FA for all administrators and privileged users using a reputable plugin or your identity provider (authenticator app, passkey, or hardware security key). Avoid SMS codes where you can: SMS is not a secure channel (see [Two-Step Authentication](https://developer.wordpress.org/advanced-administration/security/mfa/)). As of 2025, **WordPress core does not ship 2FA**; it must be added via a plugin or SSO/IdP.
 
 ### Passkeys (WebAuthn) {#passkeys}
 Passkeys provide phishing‑resistant, passwordless login using platform authenticators (Face ID/Touch ID, Windows Hello, security keys). Add via a maintained plugin that supports WebAuthn/Passkeys and enroll at least two authenticators per admin.
@@ -107,47 +107,45 @@ error_page 403 /403.html;
 **Password‑protect `/wp-login.php` with Basic Auth:**
 ```caddyfile
 # Hash passwords first: `caddy hash-password`
-basicauth /wp-login.php {
+basic_auth /wp-login.php {
     user1 JDJhJDEw$example-hash-value...
     # add more users as needed (one per line)
 }
 ```
-> Caddy requires **hashed** passwords in the Caddyfile.
+> Caddy requires **hashed** passwords in the Caddyfile. These examples are written for Caddy 2.8 or later, and some Linux distributions package older versions, so check yours with `caddy version`. Before Caddy 2.8, this directive was named `basicauth`.
 
 **Limit access to `/wp-login.php` by IP:**
 ```caddyfile
-@blacklist {
-    not client_ip forwarded 203.0.113.15 203.0.113.16
+@denied {
+    not client_ip 203.0.113.15 203.0.113.16
     path /wp-login.php
 }
-respond @blacklist "Forbidden" 403 {
+respond @denied "Forbidden" 403 {
     close
 }
 ```
+> If Caddy runs behind a proxy or CDN, add the proxy's addresses to [`trusted_proxies`](https://caddyserver.com/docs/caddyfile/options#trusted-proxies) inside the `servers` global option, so that `client_ip` matches the visitor's address instead of the proxy's.
 
-**Return 401 for `/wp-admin/*` and serve a custom error page:**
+**Serve a custom error page for 401 and 403 errors:**
 ```caddyfile
-@wpadmin path /wp-admin/*
-respond @wpadmin "Unauthorized" 401
-
-handle_errors {
-    @need401 status 401
-    rewrite @need401 /401.html
+handle_errors 401 403 {
+    rewrite * /{err.status_code}.html
     file_server
 }
 ```
+> This applies to errors such as a failed `basic_auth` login. It does not apply to responses written with `respond`.
 
 **Deny “no‑referrer” POSTs to login/comments (optional, use with caution):**
 ```caddyfile
 # Legitimate clients or privacy tools may omit Referer; test before enforcing.
-@protected path_regexp protected (wp-comments-post|wp-login)\.php$
 @no_referer {
+    path_regexp (wp-comments-post|wp-login)\.php$
     not header Referer https://{host}*
     method POST
 }
 abort @no_referer
 ```
-> Using `abort` immediately drops the connection, which is efficient for bots.
+> Using `abort` immediately drops the connection, which is efficient for bots. Keep the `path_regexp` line: without it, the rule drops every POST without a matching Referer, including REST API and `admin-ajax.php` requests.
 
 For more Caddy discussion and rationale, see: *Using Caddy to deter brute force attacks in WordPress* (community thread).
 
