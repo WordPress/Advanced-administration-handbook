@@ -140,7 +140,7 @@ The database methods below need a password hash, not the password itself. WordPr
 On any computer with PHP installed, including your own, run:
 
 ```bash
-php -r 'echo password_hash( trim( fgets( STDIN ) ), PASSWORD_BCRYPT ), PHP_EOL;'
+php -r "echo password_hash( trim( fgets( STDIN ) ), PASSWORD_BCRYPT ), PHP_EOL;"
 ```
 
 Type the new password and press Enter. The command prints a hash that starts with `$2y$`. Because PHP reads the password as input instead of as part of the command, the password is not saved in your shell history.
