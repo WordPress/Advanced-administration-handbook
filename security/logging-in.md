@@ -133,35 +133,54 @@ Use `--show-password` with caution. It prints the new password in plain text, wh
 
 See the [WP-CLI user command reference](https://developer.wordpress.org/cli/commands/user/) for additional options.
 
+#### Creating a Password Hash
+
+The database methods below need a password hash, not the password itself. WordPress stores only hashes in the `user_pass` column, so a plain-text password entered there will not work.
+
+On any computer with PHP installed, including your own, run:
+
+```bash
+php -r "echo password_hash( trim( fgets( STDIN ) ), PASSWORD_BCRYPT ), PHP_EOL;"
+```
+
+Type the new password and press Enter. The command prints a hash that starts with `$2y$`. Because PHP reads the password as input instead of as part of the command, the password is not saved in your shell history.
+
+WordPress accepts this hash, and replaces it with its own hash format the next time the user logs in. Do not use an online hash generator, because it sends your password to a third party.
+
 #### Using phpMyAdmin
 
-If you have database access through phpMyAdmin:
+Updating passwords directly in the database is high risk. Back up the database first, verify the table prefix, and make sure you are updating the intended user.
 
 1. Open phpMyAdmin and select your WordPress database
 2. Navigate to the `wp_users` table (your prefix may differ)
 3. Click **Edit** on the user row you want to modify
 4. In the `user_pass` field:
-   - Select **MD5** from the function dropdown
-   - Enter your new password in the value field
+   - Leave the function dropdown empty
+   - Delete the existing value, then paste the password hash in its place
 5. Click **Go** to save
 
-Selecting **MD5** is required for this manual reset method. WordPress stores hashed passwords, so entering plain text directly into `user_pass` without selecting a hashing function will not create a usable password. After the next successful login, WordPress automatically replaces the temporary MD5 hash with a stronger hash.
+**Note:** The `user_pass` field already contains the current hash. If you paste the new hash without deleting the old one first, phpMyAdmin appends it to the old value and stores a hash that will not work.
 
 #### Using MySQL Command Line
 
 Updating passwords directly in the database is high risk and should only be done by experienced database administrators. Back up the database first, verify the table prefix, and make sure you are updating the intended user.
 
-Connect to your database and run:
+Connect to your database, then find the users table and the user's ID:
 
 ```sql
-UPDATE wp_users 
-SET user_pass = MD5('new_password') 
-WHERE user_login = 'admin';
+SHOW TABLES LIKE '%users';
+SELECT ID, user_login FROM wp_users;
 ```
 
-Replace `wp_users` with your actual table prefix, `new_password` with your desired password, and `admin` with the username.
+Then store the password hash:
 
-**Note:** The MD5 method works for initial login. WordPress will automatically rehash the password using a stronger algorithm on next login.
+```sql
+UPDATE wp_users
+SET user_pass = 'PASSWORD_HASH'
+WHERE ID = USER_ID;
+```
+
+Replace `wp_users` with your actual table name, `PASSWORD_HASH` with the hash you created, and `USER_ID` with the user's ID. If you copy these commands, make sure the quotes are straight quotes (`'`), not curly quotes (`‘ ’`), which MySQL rejects.
 
 ## Additional Resources
 
