@@ -159,6 +159,8 @@ Updating passwords directly in the database is high risk. Back up the database f
    - Delete the existing value, then paste the password hash in its place
 5. Click **Go** to save
 
+**Note:** The `user_pass` field already contains the current hash. If you paste the new hash without deleting the old one first, phpMyAdmin appends it to the old value and stores a hash that will not work.
+
 #### Using MySQL Command Line
 
 Updating passwords directly in the database is high risk and should only be done by experienced database administrators. Back up the database first, verify the table prefix, and make sure you are updating the intended user.
