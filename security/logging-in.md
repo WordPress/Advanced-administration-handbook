@@ -147,8 +147,6 @@ Type the new password and press Enter. The command prints a hash that starts wit
 
 WordPress accepts this hash, and replaces it with its own hash format the next time the user logs in. Do not use an online hash generator, because it sends your password to a third party.
 
-This type of hash uses only the first 72 bytes of a password. Use a temporary password no longer than that. Accented letters and characters from non-Latin scripts take more than one byte each. After you log in, change it to a permanent password from **Users > Profile**.
-
 #### Using phpMyAdmin
 
 Updating passwords directly in the database is high risk. Back up the database first, verify the table prefix, and make sure you are updating the intended user.
@@ -181,10 +179,6 @@ WHERE ID = USER_ID;
 ```
 
 Replace `wp_users` with your actual table name, `PASSWORD_HASH` with the hash you created, and `USER_ID` with the user's ID. If you copy these commands, make sure the quotes are straight quotes (`'`), not curly quotes (`‘ ’`), which MySQL rejects.
-
-Run these commands at the `mysql>` prompt. The hash contains `$` characters, which your shell can change if you pass the command to `mysql -e` inside double quotes.
-
-Whichever database method you use, log in with the new password to confirm that it works, for example in a private browser window. Changing the stored hash also signs the user out of any existing sessions.
 
 ## Additional Resources
 
