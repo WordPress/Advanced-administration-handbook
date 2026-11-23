@@ -366,7 +366,7 @@ Increase PHP Memory to 96MB
 define( 'WP_MEMORY_LIMIT', '96M' );
 ```
 
-Administration tasks require may require memory than usual operation. When in the administration area, the memory can be increased or decreased from the WP_MEMORY_LIMIT by defining WP_MAX_MEMORY_LIMIT.
+Administration tasks may require more memory than usual operations. When in the administration area, the memory can be increased or decreased from the WP_MEMORY_LIMIT by defining WP_MAX_MEMORY_LIMIT.
 
 ```
 define( 'WP_MAX_MEMORY_LIMIT', '128M' );
